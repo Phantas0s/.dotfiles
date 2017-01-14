@@ -1,1 +1,3 @@
-# linux_config
+# Terminal config
+
+My personalised terminal config.
