@@ -1,0 +1,106 @@
+#########
+# BASES #
+#########
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls 
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+###########
+# ALIASES #
+###########
+
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+###########
+# STARTUP #
+###########
+
+# tmuxinator
+#https://github.com/tmuxinator/tmuxinator
+
+source ~/tmuxinator.bash
+
+########################
+# ENVIRONMENT VARIABLE #
+########################
+
+export APPLICATION_ENV="development";
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export EDITOR=pluma # editor for tmuxinator
+
+##########
+# PROMPT #
+##########
+
+function git_stashes_count {
+    st_num=$(/usr/bin/git stash list 2> /dev/null | wc -l | tr -d ' ')
+    if [[ $st_num != "0" ]]; then
+        echo "stashes($st_num) "
+    fi
+}
+
+function parse_git_branch {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/{\1}/';
+}
+
+BLUE="\[\e[0;34m\]"
+LIGHT_BLUE="\[\e[1;34m\]"
+RED="\[\e[0;31m\]"
+LIGHT_RED="\[\033[1;31m\]"
+GREEN="\[\e[0;32m\]"
+LIGHT_GREEN="\[\033[1;32m\]"
+WHITE="\[\e[1;37m\]"
+YELLOW="\[\e[0;33m\]"
+LIGH_YELLOW="\[\e[1;33m\]"
+LIGHT_GRAY="\[\e[0;37m\]"
+NO_COLOUR="\[\e[0m\]"
+
+PS1="[$WHITE\u@\h\[\e[m\] $LIGH_YELLOW\t] $LIGHT_BLUE\w $LIGHT_GREEN\$(parse_git_branch) $RED\$(git_stashes_count)$LIGHT_RED\$ \[\e[m\]$LIGHT_GRAY"
+

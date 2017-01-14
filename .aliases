@@ -1,0 +1,75 @@
+###############
+## LINUX APP ##
+###############
+
+# apt
+alias agi='sudo apt-fast install'
+alias agr='sudo apt-fast remove'
+alias agu='sudo apt-fast update'
+alias acs='apt-cache search'
+
+# system
+alias shutdown='sudo shutdown –h now'   
+alias restart='sudo shutdown –r now'      
+alias suspend='sudo pm-suspend'
+alias lock='gnome-screensaver-command --lock'
+
+# ls
+alias ls='ls --color=auto'
+alias ll='ls -lahF'
+alias lls='ls -lahFtr'
+alias la='ls -A'
+alias l='ls -CF'
+
+# grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
+# file manipulation
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -i'
+alias la='ls -alh'
+
+# git
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gdc='git diff --color'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias gl='git log'
+alias glo='git log --pretty="oneline"'
+alias gdf='git diff --color | diff-so-fancy' #Coloration for git diff - https://github.com/so-fancy/diff-so-fancy
+alias glol='git log --graph --oneline --decorate'
+alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" #delete local branch merged with master
+alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'" #git branch logs
+
+# vagrant
+alias vu='vagrant up'
+alias vs='vagrant ssh'
+alias vr='vagrant reload'
+
+##############
+## PROJECTS ##
+##############
+
+# lesara
+alias log='cd /var/www/logistic'
+alias labs='cd /var/www/LabelService'
+
+# symfony
+alias symfcc='php app/console cache:clear --env=prod --no-debug'
+alias symfai='php app/console assets:install --env=prod'
+alias symfad='php app/console assetic:dump --env=prod'
+
+# portoflio
+alias portfolio='cd /usr/share/nginx/html/portfolio/'
+
+# ssh
+alias prod='ssh thanatos@46.101.238.89'
