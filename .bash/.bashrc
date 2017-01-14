@@ -54,26 +54,18 @@ fi
 # ALIASES #
 ###########
 
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+if [ -f ../.aliases ]; then
+    . ../.aliases
 fi
 
-###########
-# STARTUP #
-###########
+##########
+# SOURCE #
+##########
 
-# tmuxinator
-#https://github.com/tmuxinator/tmuxinator
+if [ -f ../.source ]; then
+    . ../.source
+fi
 
-source ~/tmuxinator.bash
-
-########################
-# ENVIRONMENT VARIABLE #
-########################
-
-export APPLICATION_ENV="development";
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export EDITOR=pluma # editor for tmuxinator
 
 ##########
 # PROMPT #

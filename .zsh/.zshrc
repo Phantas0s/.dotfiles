@@ -1,0 +1,4 @@
+**********
+* SOURCE *
+**********
+source $HOME/.source

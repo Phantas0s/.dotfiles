@@ -1,0 +1,17 @@
+###########
+# STARTUP #
+###########
+
+# tmuxinator
+# https://github.com/tmuxinator/tmuxinator
+source ~/.aliases
+
+if [ "$0" = "-bash" ] ; then
+	source .bash/tmuxinator.bash
+fi
+
+if [ "$0" = "zsh" ] ; then
+	source .zsh/bashtmuxinator.zsh
+fi
+
+
