@@ -1,0 +1,2 @@
+source ${ZDOTDIR:-$HOME}/.terminal_config/.source
+
