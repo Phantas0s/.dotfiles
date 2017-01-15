@@ -4,14 +4,18 @@
 
 # tmuxinator
 # https://github.com/tmuxinator/tmuxinator
-source ~/.aliases
 
-if [ "$0" = "-bash" ] ; then
-	source .bash/tmuxinator.bash
-fi
+if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ] ; then
+	SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ "$0" = "zsh" ] ; then
-	source .zsh/bashtmuxinator.zsh
+	source $SCRIPT_PATH/.bash/tmuxinator.bash
+	source $SCRIPT_PATH/.aliases
+else
+	SCRIPT_PATH="${0:A:h}"
+
+ 	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+	source $SCRIPT_PATH/.aliases
+	source $SCRIPT_PATH/.zsh/tmuxinator.zsh
 fi
 
 

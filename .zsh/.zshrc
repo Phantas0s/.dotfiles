@@ -1,4 +1,0 @@
-**********
-* SOURCE *
-**********
-source $HOME/.source
