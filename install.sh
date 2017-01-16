@@ -40,6 +40,8 @@ echo 'Create symlinks for personnal prezto themes'
 
 cd ~/.zprezto/modules/prompt/functions/
 ln -s -f $HOME/$ROOT_CONFIG/.zsh/.zprezto/themes/prompt_sorin2_setup
+ln -s -f $HOME/$ROOT_CONFIG/.zsh/.zprezto/themes/prompt_garrett_setup
+ln -s -f $HOME/$ROOT_CONFIG/.zsh/.zprezto/themes/prompt_garrett2_setup
 
 cd ~/.terminal_config
 
