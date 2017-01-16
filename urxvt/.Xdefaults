@@ -1,0 +1,132 @@
+!!
+!! ~/.Xdefaults
+!!
+
+!!!!!!!!!!!!!!!!!!
+!! rxvt-unicode !!
+!!!!!!!!!!!!!!!!!!
+
+urxvt*font: xft:Inconsolata:size=12
+urxvt*boldFont: xft:Inconsolata:size=12
+!urxvt*italicFont:
+!urxvt*boldItalicFont:
+urxvt*intensityStyles: true
+urxvt*skipBuiltinGlyphs: true
+urxvt*linespace: 0
+
+!urxvt*title:
+!urxvt*iconName:
+urxvt*geometry: 100x30
+urxvt*borderLess: false
+urxvt*externalBorder: 0
+urxvt*internalBorder: 2
+!urxvt*borderColor:
+urxvt*scrollBar: false
+!urxvt*scrollstyle:
+!urxvt*scrollBar_right:
+!urxvt*scrollBar_floating:
+!urxvt*scrollBar_align:
+!urxvt*scrollColor:
+!urxvt*troughColor:
+
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0000/cccc
+!urxvt*background:            #000000
+urxvt*foreground: #c8c8c8
+urxvt*color0: #000000
+urxvt*color1: #b33636
+urxvt*color2: #6ba82a
+urxvt*color3: #deaf40
+urxvt*color4: #5a78ad
+urxvt*color5: #ab4382
+urxvt*color6: #39a0b3
+urxvt*color7: #c8c8c8
+urxvt*color8: #646464
+urxvt*color9: #e61717
+urxvt*color10: #78dc0c
+urxvt*color11: #f1e022
+urxvt*color12: #699dfa
+urxvt*color13: #de2a98
+urxvt*color14: #13d1f3
+urxvt*color15: #ffffff
+!urxvt*colorRV:
+!urxvt*colorBD:
+!urxvt*colorIT:
+!urxvt*colorUL:
+!urxvt*underlineColor:
+!urxvt*highlightColor:
+urxvt*cursorColor: #ffffff
+urxvt*cursorColor2: #000000
+urxvt*cursorBlink: false
+urxvt*reverseVideo: false
+!urxvt*fading:
+!urxvt*fadeColor:
+!urxvt*pointerColor:
+!urxvt*pointerColor2:
+urxvt*pointerBlank: false
+!urxvt*pointerBlankDelay:
+!urxvt*backgroundPixmap:
+!urxvt*path:
+urxvt*inheritPixmap: false
+!urxvt*tintColor:
+!urxvt*shading:
+!urxvt*blendType:
+!urxvt*blurRadius:
+
+urxvt*insecure: false
+urxvt*termName: rxvt-unicode
+urxvt*loginShell: true
+urxvt*hold: false
+urxvt*saveLines: 2048
+urxvt*jumpScroll: true
+urxvt*skipScroll: true
+urxvt*scrollTtyOutput: false
+urxvt*scrollWithBuffer: false
+urxvt*scrollTtyKeypress: true
+urxvt*mouseWheelScrollPage: false
+!urxvt*secondaryScreen:
+!urxvt*secondaryScroll:
+!urxvt*selectstyle:
+urxvt*tripleclickwords: true
+urxvt*cutchars: `'",;@&*=|?()<>[]{}
+urxvt*pastableTabs: false
+urxvt*mapAlert: false
+urxvt*urgentOnBell: false
+urxvt*visualBell: false
+urxvt*utmpInhibit: false
+!urxvt*print-pipe:
+!urxvt*modifier:
+!urxvt*preeditType:
+!urxvt*inputMethod:
+!urxvt*imLocale:
+!urxvt*imFont:
+!urxvt*meta8:
+!urxvt*answerbackString:
+!urxvt*backspacekey:
+!urxvt*deletekey:
+!urxvt*keysym.<keys>:
+
+!! Perl Extensions !!
+!! Available extensions: default, automove-background, block-graphics-to-ascii,
+!! digital-clock, example-refresh-hooks, kuake, macosx-clipboard, matcher,
+!! option-popup, readline, remote-clipboard, searchable-scrollback, selection,
+!! selection-autotransform, selection-pastebin, selection-popup, tabbed,
+!! urxvt-popup, xim-onthespot
+!urxvt*perl-ext-common:
+!urxvt*perl-ext:
+!urxvt*perl-eval:
+!urxvt*perl-lib:
+!urxvt*selection.pattern-<number>:
+!urxvt*selection-autotransform.<number>:
+!urxvt*searchable-scrollback:
+!urxvt*urlLauncher:
+!urxvt*transient-for:
+!urxvt*override-redirect:
+!urxvt*iso14755_52:
+!urxvt*tabbed.tabbar-bg:
+!urxvt*tabbed.tabbar-fg:
+!urxvt*tabbed.tab-bg:
+!urxvt*tabbed.tab-fg:
+!urxvt*matcher.button:
+!urxvt*matcher.pattern.<number>:
+!urxvt*matcher.launcher.<number>:

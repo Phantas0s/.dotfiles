@@ -7,4 +7,4 @@ rm ~/.zshenv
 rm ~/.zshrc
 rm ~/.tmux.conf
 rm ~/.bashrc
-
+rm $HOME/.Xdefaults

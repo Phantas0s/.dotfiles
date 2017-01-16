@@ -35,6 +35,7 @@ echo 'Create symlinks for personnal config...'
 
 ln -s -f $ROOT_CONFIG/.bash/.bashrc .
 ln -s -f $ROOT_CONFIG/.tmux.conf .
+ln -s -f $ROOT_CONFIG/urxvt/.Xdefaults .
 
 echo 'Create symlinks for personnal prezto themes'
 

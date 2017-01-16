@@ -60,7 +60,7 @@ alias vr='vagrant reload'
 ##############
 
 # lesara
-alias log='cd /var/www/logistic'
+alias log='tmuxinator start logistic'
 alias labs='cd /var/www/LabelService'
 
 # symfony
