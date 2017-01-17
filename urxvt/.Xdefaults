@@ -95,6 +95,7 @@ urxvt*urgentOnBell: false
 urxvt*visualBell: false
 urxvt*utmpInhibit: false
 urxvt.perl-ext-common:  default,tabbed
+!URxvt.letterSpace: -1
 !urxvt*print-pipe:
 !urxvt*modifier:
 !urxvt*preeditType:
