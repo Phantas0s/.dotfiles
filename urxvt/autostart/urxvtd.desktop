@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Urxvtd
+GenericName=Urxvt daemon
+Comment=Terminal
+Exec=/usr/bin/urxvtd -q -o
+Terminal=false
+Type=Application
+Icon=urxvt
+Categories=terminal;
+StartupNotify=true

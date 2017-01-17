@@ -36,9 +36,7 @@ echo 'Create symlinks for personnal config...'
 ln -s -f $ROOT_CONFIG/.bash/.bashrc .
 ln -s -f $ROOT_CONFIG/.tmux.conf .
 ln -s -f $ROOT_CONFIG/urxvt/.Xdefaults .
-sudo ln -s -f $HOME/$ROOT_CONFIG/urxvt/init.d/urxvtd /etc/init.d/ 
-sudo chmod +x /etc/init.d/urxvtd 
-sudo update-rc.d urxvtd defaults 
+ln -s ~/.terminal_config/urxvt/autostart/urxvtd.desktop ~/.config/autostart/
 
 echo 'Create symlinks for personnal prezto themes'
 

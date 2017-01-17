@@ -9,13 +9,12 @@ if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ] ; then
 	SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 	source $SCRIPT_PATH/.bash/tmuxinator.bash
-	source $SCRIPT_PATH/.aliases
 else
 	SCRIPT_PATH="${0:A:h}"
 
  	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-	source $SCRIPT_PATH/.aliases
 	source $SCRIPT_PATH/.zsh/tmuxinator.zsh
 fi
 
-
+source $SCRIPT_PATH/.aliases
+source $SCRIPT_PATH/.aliases_projects

@@ -59,10 +59,6 @@ alias vr='vagrant reload'
 ## PROJECTS ##
 ##############
 
-# lesara
-alias log='tmuxinator start logistic'
-alias labs='cd /var/www/LabelService'
-
 # symfony
 alias symfcc='php app/console cache:clear --env=prod --no-debug'
 alias symfai='php app/console assets:install --env=prod'
