@@ -2,7 +2,7 @@
     ui = true
 [user]
     email = <email> 
-    name = Matthieu
+    name = <name>
 [core]
     editor = vim
     pager = diff-so-fancy | less --tabs=4 -RFX

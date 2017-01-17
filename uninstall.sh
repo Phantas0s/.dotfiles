@@ -9,4 +9,4 @@ rm $HOME/.tmux.conf
 rm $HOME/.bashrc
 rm $HOME/.Xdefaults
 rm $HOME/.config/autostart/urxvtd.desktop
-
+rm $HOME/.gitconfig
