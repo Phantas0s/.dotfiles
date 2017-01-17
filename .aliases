@@ -10,7 +10,7 @@ alias acs='apt-cache search'
 
 # system
 alias shutdown='sudo shutdown –h now'   
-alias restart='sudo shutdown –r now'      
+alias restart='sudo reboot'      
 alias suspend='sudo pm-suspend'
 alias lock='gnome-screensaver-command --lock'
 
