@@ -26,6 +26,15 @@ cd $HOME/.zprezto && git pull && git submodule update --init --recursive
 # Create symlinks #
 ###################
 
+echo 'Installing git config...'
+rm $HOME/.terminal_config/git/.gitconfig
+cp $HOME/.terminal_config/git/.gitconfig_template $HOME/.terminal_config/git/.gitconfig
+
+echo -n "What is your email address for this git config?"
+read answer
+
+sed -i -e 's/<email>/'"$answer"'/g' $HOME/.terminal_config/git/.gitconfig
+
 echo 'Create symlinks for Prezto...'
 ln -s -f $HOME/.zprezto/runcoms/zlogin $HOME/.zlogin
 ln -s -f $HOME/.zprezto/runcoms/zlogout $HOME/.zlogout
