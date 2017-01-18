@@ -240,7 +240,7 @@ function prompt_garrett_setup
 	autoload -Uz add-zsh-hook
 	add-zsh-hook preexec prompt_garrett_preexec
 	add-zsh-hook precmd prompt_garrett_precmd
-	add-zsh-hook chpwd prompt_garrett_chpwd
+	#add-zsh-hook chpwd prompt_garrett_chpwd
 
 	#
 	# Colors
