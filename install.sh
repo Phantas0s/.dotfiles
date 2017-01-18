@@ -13,19 +13,9 @@ ROOT_CONFIG=".terminal_config"
 echo 'uninstall...'
 sh $HOME/.terminal_config/uninstall.sh
 
-#########################
-# install diff-so-fancy #
-#########################
-
-npm install -g diff-so-fancy
-
-##################
-# install Prezto #
-##################
-
-git clone git@github.com:sorin-ionescu/prezto ~/.zprezto
-cd $HOME/.zprezto && git pull && git submodule update --init --recursive
-cd -
+# install diff so fancy?
+# install prezto
+. $HOME/$ROOT_CONFIG/install/install-prezto.sh
 
 ###################
 # Create symlinks #
@@ -51,14 +41,6 @@ echo 'Create symlink for gitconfig...'
 
 ln -s -f $HOME/$ROOT_CONFIG/git/gitconfig $HOME/.gitconfig
 
-echo 'Create symlinks for Prezto...'
-ln -s -f $HOME/.zprezto/runcoms/zlogin $HOME/.zlogin
-ln -s -f $HOME/.zprezto/runcoms/zlogout $HOME/.zlogout
-ln -s -f $HOME/$ROOT_CONFIG/zsh/zprezto/config/zpreztorc $HOME/.zpreztorc
-ln -s -f $HOME/.zprezto/runcoms/zprofile $HOME/.zprofile
-ln -s -f $HOME/.zprezto/runcoms/zshenv $HOME/.zshenv
-ln -s -f $HOME/$ROOT_CONFIG/zsh/zprezto/config/zshrc $HOME/.zshrc
-
 echo 'Create symlinks for personnal config...'
 
 ln -s -f $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
@@ -66,4 +48,3 @@ ln -s -f $HOME/$ROOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
 ln -s -f $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
 ln -s -f $HOME/$ROOT_CONFIG/urxvt/autostart/urxvtd.desktop $HOME/.config/autostart/
 
-. $HOME/$ROOT_CONFIG/install-prezto.sh
