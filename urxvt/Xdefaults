@@ -29,6 +29,8 @@ urxvt*scrollBar: false
 !urxvt*scrollColor:
 !urxvt*troughColor:
 
+!!! DESIGN
+
 urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/cccc
 !urxvt*background:            #000000
@@ -72,6 +74,12 @@ urxvt*inheritPixmap: false
 !urxvt*shading:
 !urxvt*blendType:
 !urxvt*blurRadius:
+
+urxvt.tabbed.tabbar-fg: 0 
+urxvt.tabbed.tabbar-bg: rgba:0000/0000/0000/cccc
+urxvt.tabbed.tab-fg: 3
+urxvt.tabbed.tab-bg: 0
+
 
 urxvt*insecure: false
 urxvt*termName: rxvt-unicode
@@ -125,10 +133,10 @@ urxvt.perl-ext-common:  default,tabbed
 !urxvt*transient-for:
 !urxvt*override-redirect:
 !urxvt*iso14755_52:
-!urxvt*tabbed.tabbar-bg:
-!urxvt*tabbed.tabbar-fg:
-!urxvt*tabbed.tab-bg:
-!urxvt*tabbed.tab-fg:
+!urxvt*tabbed.tabbar-bg: #000000
+!urxvt*tabbed.tabbar-fg: #FFFFFF
+!urxvt*tabbed.tab-bg: #000000
+!urxvt*tabbed.tab-fg: #FFFFFF
 !urxvt*matcher.button:
 !urxvt*matcher.pattern.<number>:
 !urxvt*matcher.launcher.<number>:
