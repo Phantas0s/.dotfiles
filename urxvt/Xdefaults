@@ -31,7 +31,7 @@ urxvt*scrollBar: false
 
 !!! DESIGN
 
-urxvt*depth: 32
+!urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/cccc
 !urxvt*background:            #000000
 urxvt*foreground: #c8c8c8
@@ -75,17 +75,11 @@ urxvt*inheritPixmap: false
 !urxvt*blendType:
 !urxvt*blurRadius:
 
-urxvt.tabbed.tabbar-fg: 0 
-urxvt.tabbed.tabbar-bg: rgba:0000/0000/0000/cccc
-urxvt.tabbed.tab-fg: 3
-urxvt.tabbed.tab-bg: 0
-
-
 urxvt*insecure: false
 urxvt*termName: rxvt-unicode
 urxvt*loginShell: true
 urxvt*hold: false
-urxvt*saveLines: 2048
+urxvt*saveLines: 5000
 urxvt*jumpScroll: true
 urxvt*skipScroll: true
 urxvt*scrollTtyOutput: false
@@ -102,8 +96,6 @@ urxvt*mapAlert: false
 urxvt*urgentOnBell: false
 urxvt*visualBell: false
 urxvt*utmpInhibit: false
-urxvt.perl-ext-common:  default,tabbed
-!URxvt.letterSpace: -1
 !urxvt*print-pipe:
 !urxvt*modifier:
 !urxvt*preeditType:
@@ -122,7 +114,7 @@ urxvt.perl-ext-common:  default,tabbed
 !! option-popup, readline, remote-clipboard, searchable-scrollback, selection,
 !! selection-autotransform, selection-pastebin, selection-popup, tabbed,
 !! urxvt-popup, xim-onthespot
-!urxvt*perl-ext-common:
+urxvt*perl-ext-common: default,tabbed
 !urxvt*perl-ext:
 !urxvt*perl-eval:
 !urxvt*perl-lib:
@@ -133,10 +125,16 @@ urxvt.perl-ext-common:  default,tabbed
 !urxvt*transient-for:
 !urxvt*override-redirect:
 !urxvt*iso14755_52:
-!urxvt*tabbed.tabbar-bg: #000000
-!urxvt*tabbed.tabbar-fg: #FFFFFF
-!urxvt*tabbed.tab-bg: #000000
-!urxvt*tabbed.tab-fg: #FFFFFF
+!urxvt*tabbed.tabbar-bg: 0 
+!urxvt*tabbed.tabbar-fg: 0
+!urxvt*tabbed.tab-bg: 0
+!urxvt*tabbed.tab-fg: 0
+URxvt.tabbed.tabbar-fg: 255 
+URxvt.tabbed.tabbar-bg: 0 
+URxvt.tabbed.tab-fg: 75 
+URxvt.tabbed.tab-bg: 0 
+URxvt.tabbed*transparent:true
+
 !urxvt*matcher.button:
 !urxvt*matcher.pattern.<number>:
 !urxvt*matcher.launcher.<number>:

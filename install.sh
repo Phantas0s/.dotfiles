@@ -6,11 +6,18 @@
 
 ROOT_CONFIG=".terminal_config"
 
+############
+# includes #
+############
+
+. $HOME/$ROOT_CONFIG/colors
+
 ########################
 # uninstall everything #
 ########################
 
-echo 'uninstall...'
+echo -e $green"uninstall..."
+
 sh $HOME/.terminal_config/uninstall.sh
 
 # TODO: install diff so fancy?
