@@ -12,15 +12,32 @@ ROOT_CONFIG=".terminal_config"
 
 . $HOME/$ROOT_CONFIG/colors
 
+################
+# presentation #
+################
+
+echo ""
+echo "${light_gray}######################################"
+echo "${light_gray}# Welcome to my installation script! #"
+echo "${light_gray}######################################"
+echo ""
+
+echo "${yellow}!${red}WARNING${yellow}!"
+echo "${light_red}This script will delete all your configuration!"
+echo "${light_red}Use it if you know what you are doing..."
+echo "${light_red}Press a key to continue..."
+read key;
+
 ########################
 # uninstall everything #
 ########################
 
-echo -e $green"uninstall..."
+#TODO: let the choice to backup :D
 
-sh $HOME/.terminal_config/uninstall.sh
+. $HOME/.terminal_config/uninstall.sh
 
 # TODO: install diff so fancy?
+
 # install prezto
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
 
