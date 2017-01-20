@@ -2,6 +2,14 @@ echo ""
 echo "${red}Delete the actual config..."
 
 echo ""
+echo "${red}Delete the i3 config..."
+
+rm -rf $HOME/.config/i3/
+rm -rf $HOME/.i3
+
+echo "${green}...done!"
+
+echo ""
 echo "${red}Delete the zprezto config..."
 
 rm $HOME/.zlogin

@@ -34,7 +34,11 @@ read key;
 
 #TODO: let the choice to backup :D
 
-. $HOME/.terminal_config/uninstall.sh
+. $HOME/$ROOT_CONFIG/uninstall.sh
+
+# install i3 configuration
+
+. $HOME/$ROOT_CONFIG/install/install-i3.sh
 
 # TODO: install diff so fancy?
 
