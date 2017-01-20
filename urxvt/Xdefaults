@@ -34,23 +34,61 @@ urxvt*scrollBar: false
 !urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/cccc
 !urxvt*background:            #000000
-urxvt*foreground: #c8c8c8
-urxvt*color0: #000000
-urxvt*color1: #b33636
-urxvt*color2: #6ba82a
-urxvt*color3: #deaf40
-urxvt*color4: #5a78ad
-urxvt*color5: #ab4382
-urxvt*color6: #39a0b3
-urxvt*color7: #c8c8c8
-urxvt*color8: #646464
-urxvt*color9: #e61717
-urxvt*color10: #78dc0c
-urxvt*color11: #f1e022
-urxvt*color12: #699dfa
-urxvt*color13: #de2a98
-urxvt*color14: #13d1f3
-urxvt*color15: #ffffff
+!urxvt*foreground: #c8c8c8
+!urxvt*color0: #000000
+!urxvt*color1: #b33636
+!urxvt*color2: #6ba82a
+!urxvt*color3: #deaf40
+!urxvt*color4: #5a78ad
+!urxvt*color5: #ab4382
+!urxvt*color6: #39a0b3
+!urxvt*color7: #c8c8c8
+!urxvt*color8: #646464
+!urxvt*color9: #e61717
+!urxvt*color10: #78dc0c
+!urxvt*color11: #f1e022
+!urxvt*color12: #699dfa
+!urxvt*color13: #de2a98
+!urxvt*color14: #13d1f3
+!urxvt*color15: #ffffff
+! special
+urxvt*.foreground:   #c7ccd1
+urxvt*.background:   #2f2f2f
+urxvt*.cursorColor:  #c7ccd1
+
+! black
+urxvt*.color0:       #2f2f2f
+urxvt*.color8:       #747c84
+
+! red
+urxvt*.color1:       #c7ae95
+urxvt*.color9:       #c7ae95
+
+! green
+urxvt*.color2:       #95c7ae
+urxvt*.color10:      #95c7ae
+
+! yellow
+urxvt*.color3:       #aec795
+urxvt*.color11:      #aec795
+
+! blue
+urxvt*.color4:       #ae95c7
+urxvt*.color12:      #ae95c7
+
+! magenta
+urxvt*.color5:       #c795ae
+urxvt*.color13:      #c795ae
+
+! cyan
+urxvt*.color6:       #95aec7
+urxvt*.color14:      #95aec7
+
+! white
+urxvt*.color7:       #c7ccd1
+urxvt*.color15:      #ffffff
+
+
 !urxvt*colorRV:
 !urxvt*colorBD:
 !urxvt*colorIT:
@@ -130,7 +168,7 @@ urxvt*perl-ext-common: default,tabbed
 !urxvt*tabbed.tab-bg: 0
 !urxvt*tabbed.tab-fg: 0
 URxvt.tabbed.tabbar-fg: 255 
-URxvt.tabbed.tabbar-bg: 0 
+URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 75 
 URxvt.tabbed.tab-bg: 0 
 URxvt.tabbed*transparent:true
