@@ -10,6 +10,7 @@ ROOT_CONFIG=".terminal_config"
 # includes #
 ############
 
+. $HOME/$ROOT_CONFIG/install_config
 . $HOME/$ROOT_CONFIG/colors
 
 ################
@@ -52,10 +53,19 @@ read key;
 ## install git config
 . $HOME/$ROOT_CONFIG/install/install-git.sh
 
-echo 'Create symlinks for personnal config...'
+echo ""
+echo "${green}Create symlinks for personnal config..."
+echo ""
 
-ln -s -f $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
-ln -s -f $HOME/$ROOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
-ln -s -f $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
-ln -s -f $HOME/$ROOT_CONFIG/urxvt/autostart/urxvtd.desktop $HOME/.config/autostart/
+ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
+ln -s $HOME/$ROOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
+ln -s $HOME/$ROOT_CONFIG/urxvt/autostart/urxvtd.desktop $HOME/.config/autostart/
 
+# install phpstorm symlink
+
+. $HOME/$ROOT_CONFIG/install/install-phpstorm.sh
+
+# install softwares for i3
+sudo apt-get install arandr
+sudo apt-get install keepassx 

@@ -1,2 +1,2 @@
-source ${ZDOTDIR:-$HOME}/.terminal_config/.source
+source ${ZDOTDIR:-$HOME}/.terminal_config/.startup
 

@@ -160,7 +160,11 @@ bar {
 
 # floating windows
 for_window [class="Keepassx"] floating enable
+for_window [class="Arandr"] floating enable
 
 # lockscreen wallpaper
 bindsym $mod+Control+l exec --no-startup-id i3lock -i ~/.terminal_config/i3/lock_wallpapers/blue_matrix.png -t
 
+# resize correctly in vmware
+exec --no-startup-id vmware-user-suid-wrapper
+exec --no-startup-id vmware-user

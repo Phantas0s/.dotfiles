@@ -207,7 +207,8 @@ function prompt_garrett_precmd
 
 	# Determine the length needed for prompt_garrett_space
 	# NOTE: Be sure not to include the ${(e)prompt_garrett_space} portion or it won't work
-	local prompt_line1="${prompt_garrett_upper_left_corner}( ${prompt_garrett_current_dir}❯ ${git_info[remote_status]}${git_info[prompt_info]}${git_info[local_status]}${git_info[sha]} )( ${ruby_info[version]}${prompt_garrett_location} )${prompt_garrett_upper_right_corner}"
+	local prompt_line1="${prompt_garrett_upper_left_corner}(${prompt_garrett_current_dir}${git_info[remote_status]}${git_info[prompt_info]}${git_info[local_status]})(${ruby_info[version]}${porompr_garrett_location})"
+		local prompr_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
 	local zero='%([BSUbfksu]|([FB]|){*})'
 	local prompt_garrett_width_line1=${#${(S%%)prompt_line1//$~zero/}}
 
@@ -221,7 +222,7 @@ function prompt_garrett_precmd
 
 	# Prompt line 1
 	print
-	print -P '${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_upper_left_corner}( ${ruby_info[version]}${prompt_garrett_location} ❯ ${prompt_garrett_current_dir} ${prompt_garrett_color_prompt})${prompt_garrett_altchar_enter}${(e)prompt_garrett_space}${prompt_garrett_altchar_leave}(${git_info[remote_status]}${git_info[prompt_info]}${git_info[local_status]}${git_info[sha]}${prompt_garrett_color_prompt} )${prompt_garrett_upper_right_corner}'
+	print -P '${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_upper_left_corner}(${ruby_info[version]}${prompt_garrett_location}${prompt_garrett_current_dir}${prompt_garrett_color_prompt})${prompt_garrett_altchar_enter}${(e)prompt_garrett_space}${prompt_garrett_altchar_leave}(${git_info[remote_status]}${git_info[prompt_info]}${git_info[local_status]}${prompt_garrett_color_prompt})'
 }
 
 #
@@ -276,7 +277,8 @@ function prompt_garrett_setup
 		# set style
 		eval prompt_garrett_user='%S${prompt_garrett_color_user}%n%s'
 		eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
-		eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
+		#eval porompr_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
+		eval prompt_garrett_location='' # user@host.name
 
 	elif [[ -n "$SSH_CLIENT" || -n "$SSH2_CLIENT" ]]
 	then # on SSH
@@ -289,19 +291,21 @@ function prompt_garrett_setup
 		# set style
 		eval prompt_garrett_user='%S${prompt_garrett_color_user}%n%s'
 		eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
-		eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
+		#eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
+		eval prompt_garrett_location='' # user@host.name
 
 	else # normal user
 
 		# set colors
-		eval prompt_garrett_color_user=${1:-'${green}'}
-		eval prompt_garrett_color_host=${1:-'${green}'}
-		eval prompt_garrett_color_prompt=${1:-'${grey}'}
+		eval prompt_garrett_color_user=${1:-'${blue}'}
+		eval prompt_garrett_color_host=${1:-'${blue}'}
+		eval prompt_garrett_color_prompt=${1:-'${white}'}
 
 		# set style
 		eval prompt_garrett_user=''
 		eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
-		eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
+		#eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
+		eval prompt_garrett_location='' # user@host.name
 
 	fi
 
@@ -353,7 +357,7 @@ function prompt_garrett_setup
 	# zstyle ':prezto:module:git:info' verbose 'yes'
 
 	# Git prompt info
-	zstyle ':prezto:module:git:info:branch'    format "${cyan} λ${prompt_garrett_color_prompt}:${green}%b"
+	zstyle ':prezto:module:git:info:branch'    format "${cyan}λ${prompt_garrett_color_prompt}:${yellow}%b "
 	zstyle ':prezto:module:git:info:remote'    format ""
 	zstyle ':prezto:module:git:info:action'    format "${yellow} %s"
 	zstyle ':prezto:module:git:info:position'  format "${red} %p"
@@ -365,17 +369,17 @@ function prompt_garrett_setup
 	zstyle ':prezto:module:git:info:behind'    format "${magenta} ⬇"
 	zstyle ':prezto:module:git:info:ahead'     format "${magenta} ⬆"
 	zstyle ':prezto:module:git:info:diverged'  format "${magenta} ⥮"
-	zstyle ':prezto:module:git:info:stashed'   format "${cyan} ✭"
+	zstyle ':prezto:module:git:info:stashed'   format "${red} ✭"
 
 	# Git local status
 	zstyle ':prezto:module:git:info:clean'     format ""
-	zstyle ':prezto:module:git:info:dirty'     format "${prompt_garrett_color_prompt} |"
-	zstyle ':prezto:module:git:info:added'     format "${green} ✚"
-	zstyle ':prezto:module:git:info:deleted'   format "${red} ✗"
-	zstyle ':prezto:module:git:info:modified'  format "${blue} ✱"
-	zstyle ':prezto:module:git:info:renamed'   format "${magenta} ➜"
-	zstyle ':prezto:module:git:info:unmerged'  format "${yellow} ═"
-	zstyle ':prezto:module:git:info:untracked' format "${white} ◼"
+	zstyle ':prezto:module:git:info:dirty'     format "${prompt_garrett_color_prompt}!"
+	zstyle ':prezto:module:git:info:added'     format "${green}✚"
+	zstyle ':prezto:module:git:info:deleted'   format "${red}✗"
+	zstyle ':prezto:module:git:info:modified'  format "${blue}✱"
+	zstyle ':prezto:module:git:info:renamed'   format "${magenta}➜"
+	zstyle ':prezto:module:git:info:unmerged'  format "${yellow}═"
+	zstyle ':prezto:module:git:info:untracked' format "${white}◼"
 
 	# Git prompt styles
 	zstyle ':prezto:module:git:info:keys' format \
@@ -431,12 +435,12 @@ function prompt_garrett_setup
 
 	if (( $SHLVL == 1 ))
 	then
-		export PROMPT='${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}${editor_info[keymap]}'
+		export PROMPT='${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}-${editor_info[keymap]}'
 	else
-		export PROMPT='${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}( ${cyan}$SHLVL ${prompt_garrett_color_prompt}) ${editor_info[keymap]}'
+		export PROMPT='${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}(${cyan}$SHLVL${prompt_garrett_color_prompt})-${editor_info[keymap]}'
 	fi
 
-	export RPROMPT='${editor_info[alternate]}${editor_info[overwrite]}${prompt_garrett_return_code}${prompt_garrett_number_jobs}${prompt_garrett_line_number} ${prompt_garrett_current_time} %(?.${prompt_garrett_color_prompt}.${red})❰${prompt_garrett_color_prompt}${prompt_garrett_lower_right_corner}'
+	export RPROMPT='${editor_info[alternate]}${editor_info[overwrite]}${prompt_garrett_return_code}${prompt_garrett_number_jobs}${prompt_garrett_current_time}%(?.${prompt_garrett_color_prompt}.${red})'
 
 	export PROMPT2='(%_) ${editor_info[keymap]}'
 

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+PHPSTORM_ROOT="$HOME/Software/phpstorm/bin/phpstorm.sh"

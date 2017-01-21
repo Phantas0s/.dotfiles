@@ -5,9 +5,9 @@
 # tmuxinator
 # https://github.com/tmuxinator/tmuxinator
 
+
 if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ] ; then
 	SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
 	source $SCRIPT_PATH/bash/tmuxinator.bash
 else
 	SCRIPT_PATH="${0:A:h}"
@@ -16,6 +16,11 @@ else
 	source $SCRIPT_PATH/zsh/tmuxinator.zsh
 fi
 
+# source startup scripts
 source $SCRIPT_PATH/aliases/aliases
 source $SCRIPT_PATH/aliases/aliases_projects
-source $SCRIPT_PATH/env
+source $SCRIPT_PATH/env  
+
+# start software
+
+
