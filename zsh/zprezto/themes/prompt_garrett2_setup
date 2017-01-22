@@ -435,9 +435,9 @@ function prompt_garrett_setup
 
 	if (( $SHLVL == 1 ))
 	then
-		export PROMPT='${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}-${editor_info[keymap]}'
+		export PROMPT='${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}${editor_info[keymap]}'
 	else
-		export PROMPT='${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}(${cyan}$SHLVL${prompt_garrett_color_prompt})-${editor_info[keymap]}'
+		export PROMPT='${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}(${cyan}$SHLVL${prompt_garrett_color_prompt})${editor_info[keymap]}'
 	fi
 
 	export RPROMPT='${editor_info[alternate]}${editor_info[overwrite]}${prompt_garrett_return_code}${prompt_garrett_number_jobs}${prompt_garrett_current_time}%(?.${prompt_garrett_color_prompt}.${red})'

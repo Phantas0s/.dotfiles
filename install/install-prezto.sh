@@ -5,8 +5,12 @@
 ##################
 
 git clone git@github.com:sorin-ionescu/prezto ~/.zprezto
-cd $HOME/.zprezto && git pull && git submodule update --init --recursive
-cd -
+
+if [ ! -d $HOME/.zprezto]
+  then
+    cd $HOME/.zprezto && git pull && git submodule update --init --recursive
+    cd -
+fi
 
 echo 'Create symlinks for Prezto...'
 ln -s -f $HOME/.zprezto/runcoms/zlogin $HOME/.zlogin

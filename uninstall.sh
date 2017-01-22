@@ -14,7 +14,7 @@ echo "${red}Delete the zprezto config..."
 
 rm $HOME/.zlogin
 rm $HOME/.zlogout
-rm -rf $HOME/.zprezto
+#rm -rf $HOME/.zprezto
 rm $HOME/.zpreztorc
 rm $HOME/.zprofile
 rm $HOME/.zshenv

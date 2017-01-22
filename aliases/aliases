@@ -9,7 +9,7 @@ alias agu='sudo apt-fast update'
 alias acs='apt-cache search'
 
 # system
-alias shutdown='sudo shutdown –h now'   
+alias shutdown='sudo shutdown now'   
 alias restart='sudo reboot'      
 alias suspend='sudo pm-suspend'
 alias lock='gnome-screensaver-command --lock'

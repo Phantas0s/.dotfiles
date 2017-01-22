@@ -1,16 +1,10 @@
 #!/bin/bash
 
-#############
-# variables #
-#############
-
-ROOT_CONFIG=".terminal_config"
-
 ############
 # includes #
 ############
 
-. $HOME/$ROOT_CONFIG/install_config
+. install/install_config
 . $HOME/$ROOT_CONFIG/colors
 
 ################
@@ -29,13 +23,18 @@ echo "${light_red}Use it if you know what you are doing..."
 echo "${light_red}Press a key to continue..."
 read key;
 
-########################
-# uninstall everything #
-########################
+###########
+# INSTALL #
+###########
 
-#TODO: let the choice to backup :D
+# Uninstall everything 
+# TODO: let the choice to backup :D
 
 . $HOME/$ROOT_CONFIG/uninstall.sh
+
+# install fonts
+
+. $HOME/$ROOT_CONFIG/install/install-fonts.sh
 
 # install i3 configuration
 
@@ -45,10 +44,6 @@ read key;
 
 # install prezto
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
-
-###################
-# Create symlinks #
-###################
 
 ## install git config
 . $HOME/$ROOT_CONFIG/install/install-git.sh
@@ -66,6 +61,6 @@ ln -s $HOME/$ROOT_CONFIG/urxvt/autostart/urxvtd.desktop $HOME/.config/autostart/
 
 . $HOME/$ROOT_CONFIG/install/install-phpstorm.sh
 
-# install softwares for i3
+# install tool softwares
 sudo apt-get install arandr
 sudo apt-get install keepassx 

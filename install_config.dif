@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# template for configuring the install script
+ROOT_CONFIG="$HOME/.terminal_config"
+PHPSTORM_ROOT=""
+
+GIT_USER=""
+GIT_EMAIL=""
