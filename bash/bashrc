@@ -54,7 +54,7 @@ fi
 # STARTUP #
 ###########
 
-source ~/.terminal_config/.startup
+source ~/.terminal_config/startup
 
 
 ##########

@@ -53,41 +53,41 @@ urxvt*scrollBar: false
 !urxvt*color15: #ffffff
 
 ! special
-urxvt*.foreground:   #c0c5ce
-urxvt*.background:   #1f2022
-urxvt*.cursorColor:  #c0c5ce
+!urxvt*.foreground:   #c0c5ce
+!urxvt*.background:   #1f2022
+!urxvt*.cursorColor:  #c0c5ce
 
 ! black
-urxvt*.color0:       #2b303b
-urxvt*.color8:       #65737e
+!urxvt*.color0:       #2b303b
+!urxvt*.color8:       #65737e
 
 ! red
-urxvt*.color1:       #bf616a
-urxvt*.color9:       #bf616a
+!urxvt*.color1:       #bf616a
+!urxvt*.color9:       #bf616a
 
 ! green
-urxvt*.color2:       #a3be8c
-urxvt*.color10:      #a3be8c
+!urxvt*.color2:       #a3be8c
+!urxvt*.color10:      #a3be8c
 
 ! yellow
-urxvt*.color3:       #ebcb8b
-urxvt*.color11:      #ebcb8b
+!urxvt*.color3:       #ebcb8b
+!urxvt*.color11:      #ebcb8b
 
 ! blue
-urxvt*.color4:       #8fa1b3
-urxvt*.color12:      #8fa1b3
+!urxvt*.color4:       #8fa1b3
+!urxvt*.color12:      #8fa1b3
 
 ! magenta
-urxvt*.color5:       #b48ead
-urxvt*.color13:      #b48ead
+!urxvt*.color5:       #b48ead
+!urxvt*.color13:      #b48ead
 
 ! cyan
-urxvt*.color6:       #96b5b4
-urxvt*.color14:      #96b5b4
+!urxvt*.color6:       #96b5b4
+!urxvt*.color14:      #96b5b4
 
 ! white
-urxvt*.color7:       #c0c5ce
-urxvt*.color15:      #eff1f5
+!urxvt*.color7:       #c0c5ce
+!urxvt*.color15:      #eff1f5
 
 !urxvt*colorRV:
 !urxvt*colorBD:
@@ -167,10 +167,10 @@ urxvt*perl-ext-common: default,tabbed
 !urxvt*tabbed.tabbar-fg: 0
 !urxvt*tabbed.tab-bg: 0
 !urxvt*tabbed.tab-fg: 0
-URxvt.tabbed.tabbar-fg: 255 
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg: 75 
-URxvt.tabbed.tab-bg: 0 
+URxvt.tabbed.tabbar-fg: 15 
+URxvt.tabbed.tabbar-bg: 235 
+URxvt.tabbed.tab-fg: 9 
+URxvt.tabbed.tab-bg: 235 
 URxvt.tabbed*transparent:true
 
 !urxvt*matcher.button:

@@ -71,4 +71,4 @@ alias portfolio='cd /usr/share/nginx/html/portfolio/'
 alias prod='ssh thanatos@46.101.238.89'
 
 #tmux
-alias tmux='tmux -2'
+alias tmuxk='tmux kill-session -t'

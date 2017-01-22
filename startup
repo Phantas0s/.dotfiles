@@ -18,7 +18,9 @@ fi
 
 if [ -z "$TMUX" ]
   then
-    tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -n$USER -s$USER@$HOSTNAME
+    tmux -2
+    # attach a session if exists automatically but tabs doesnt work anymore
+    #tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -n$USER -s$USER@$HOSTNAME
 fi    
 
 # source startup scripts

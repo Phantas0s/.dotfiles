@@ -55,7 +55,14 @@ echo ""
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
 ln -s $HOME/$ROOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
+
+# TODO see how to startup with i3 - startup ubunut
 ln -s $HOME/$ROOT_CONFIG/urxvt/autostart/urxvtd.desktop $HOME/.config/autostart/
+
+# xressource file - for every x applications
+ln -s $HOME/$ROOT_CONFIG/Xresources $HOME/.Xresources
+
+ln -s $HOME/$ROOT_CONFIG/vim/vimrc $HOME/.vimrc
 
 # install phpstorm symlink
 

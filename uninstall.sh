@@ -43,6 +43,13 @@ rm $HOME/.bashrc
 echo "${green}...done!"
 
 echo ""
+echo "${red}Delete the xressource config..."
+
+rm $HOME/.Xresources
+
+echo "${green}...done!"
+
+echo ""
 echo "${red}Delete the urxvt config..."
 
 rm $HOME/.Xdefaults

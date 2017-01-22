@@ -74,16 +74,22 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+# bindsym $mod+d focus child
 
-# workspace variables
-set $terminal "1: >_"
+#############
+# workspace #
+#############
+
+set $terminal "1: terminal"
+set $phpstorm "2: phpstorm"
+set $browser "3: browser"
+set $sql "4: sql"
 
 # switch to workspace
 bindsym $mod+1 workspace $terminal
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+2 workspace $phpstorm
+bindsym $mod+3 workspace $browser 
+bindsym $mod+4 workspace $sql 
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -93,9 +99,9 @@ bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $terminal
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+2 move container to workspace $phpstorm
+bindsym $mod+Shift+3 move container to workspace $browser
+bindsym $mod+Shift+4 move container to workspace $sql
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -106,14 +112,34 @@ bindsym $mod+Shift+0 move container to workspace 10
 # bind software to workspace
 # can use xprop - WM_CLASS(STRING) = "urxvt", "URxvt"
 
-assign [class="URxvt" instance="urxvt"] → $terminal
+#assign [class="URxvt" instance="urxvt"] → $terminal
+assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → $phpstorm
+assign [class="Firefox" instance="Navigator"] → $browser
+assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
+
+# start software in a workspace
+exec --no-startup-id i3-msg workspace 1:$terminal; exec /usr/bin/urxvt
+
+# assign monitor output to worspace 
+
+#laptop monitor xrandr name
+set $lapmonitor 'Virtual1'
+set $mainMonitor 'Virtual2'
+
+workspace $terminal output $lapmonitor
+workspace $browser output $lapmonitor
+workspace $sql output $lapmonitor
+
+####################
+# restart / reload #
+####################
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -141,16 +167,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-        tray_output primary
-}
-
 # floating windows
 for_window [class="Keepassx"] floating enable
 for_window [class="Arandr"] floating enable
+for_window [class="Gcolor2"] floating enable
 
 # lockscreen wallpaper
 bindsym $mod+Control+l exec --no-startup-id i3lock -i ~/.terminal_config/i3/lock_wallpapers/blue_matrix.png -t
@@ -169,14 +189,71 @@ workspace_auto_back_and_forth yes
 # DESIGN #
 ##########
 
+# hide borders
+hide_edge_borders both
+
 # get color from xressource configuration - variable_name xressource_color fallback
-set_from_resource $black_1 urxvt.color0 #000000
 
-#   class                 border  backgr. text    indicator child_border
-# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-# client.urgent           #2f343a #900000 #ffffff #900000   #900000
-# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# special
+set_from_resource $foreground foreground #000000
+set_from_resource $background background #000000
+set_from_resource $cursorColor cursorColor #000000
 
+# black
+set_from_resource $black1 color0 #000000
+set_from_resource $black2 color8 #000000
+
+# red
+set_from_resource $red1 color1 #000000
+set_from_resource $red2 color9 #000000
+
+# green
+set_from_resource $green1 color2 #000000
+set_from_resource $green2 color10 #000000
+
+# yellow
+set_from_resource $yellow1 color3 #000000
+set_from_resource $yellow2 color11 #000000
+
+# blue
+set_from_resource $blue1 color4 #000000
+set_from_resource $blue2 color12 #000000
+
+# magenta
+set_from_resource $magenta1 color5 #000000
+set_from_resource $magenta2 color13 #000000
+
+# cyan
+set_from_resource $cyan1 color6 #000000
+set_from_resource $cyan2 color14 #000000
+
+# white
+set_from_resource $white1 color7 #000000
+set_from_resource $white2 color15 #000000
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #333333 $white1 $white2 #285577
+client.focused_inactive #333333 $background $foreground #484e50   
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           $red1   $red1   #ffffff $red1     $red1
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3status
+        tray_output primary
+        colors {
+            background $black1
+            statusline #ffffff
+            separator #666666
+
+            #                  border background text
+            focused_workspace  $red2  $red1 $white2 
+            active_workspace   $background $background $foreground 
+            inactive_workspace $background $background $foreground
+            urgent_workspace   #2f343a #900000 #ffffff
+            binding_mode       #2f343a #900000 #ffffff
+        }
+}
 
