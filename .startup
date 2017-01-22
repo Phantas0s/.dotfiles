@@ -6,15 +6,20 @@
 # https://github.com/tmuxinator/tmuxinator
 
 
-if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ] ; then
-	SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-	source $SCRIPT_PATH/bash/tmuxinator.bash
+if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ] 
+  then
+    SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    source $SCRIPT_PATH/bash/tmuxinator.bash
 else
-	SCRIPT_PATH="${0:A:h}"
-
- 	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-	source $SCRIPT_PATH/zsh/tmuxinator.zsh
+    SCRIPT_PATH="${0:A:h}"
+    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+    source $SCRIPT_PATH/zsh/tmuxinator.zsh
 fi
+
+if [ -z "$TMUX" ]
+  then
+    tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -n$USER -s$USER@$HOSTNAME
+fi    
 
 # source startup scripts
 source $SCRIPT_PATH/aliases/aliases

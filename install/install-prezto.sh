@@ -4,10 +4,10 @@
 # install Prezto #
 ##################
 
-git clone git@github.com:sorin-ionescu/prezto ~/.zprezto
 
-if [ ! -d $HOME/.zprezto]
+if [ ! -d $HOME/.zprezto ]
   then
+    git clone git@github.com:sorin-ionescu/prezto ~/.zprezto
     cd $HOME/.zprezto && git pull && git submodule update --init --recursive
     cd -
 fi
