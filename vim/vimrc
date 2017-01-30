@@ -1,23 +1,36 @@
-" escape key assigned to tab key
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
 
-" assign arrows to row keye noremap:
-noremap ; l
-noremap l k
-noremap k j
-noremap j h
+if &compatible
+    set nocompatible
+endif
+" Autoinstall vim-plug {{{
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
 
-" disable arrow key
+inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
+inoremap  <Down>   <esc>ggVGd:call NoArrowInput()<cr>
+inoremap  <Left>   <esc>ggVGd:call NoArrowInput()<cr>
+inoremap  <Right>  <esc>ggVGd:call NoArrowInput()<cr>
+noremap   <Up>     <esc>ggVGd:call NoArrowInput()<cr>
+noremap   <Down>   <esc>ggVGd:call NoArrowInput()<cr>
+noremap   <Left>   <esc>ggVGd:call NoArrowInput()<cr>
+noremap   <Right>  <esc>ggVGd:call NoArrowInput()<cr>
 
-nnoremap <up>    <nop>
-nnoremap <down>  <nop>
-nnoremap <left>  <nop>
-nnoremap <right> <nop>
-inoremap <up>    <nop>
-inoremap <down>  <nop>
-inoremap <left>  <nop>
-inoremap <right> <nop>
+function! NoArrowInput()
+        let l:input = ''
+        echo "type no arrows to return to vim"
+        while l:input !~ 'no arrows'
+                let l:input = input("")
+        endwhile
+        u
+endfunction
+
+set clipboard=unnamedplus
+set number
+syntax on
+set autoindent
+set paste

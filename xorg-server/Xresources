@@ -4,12 +4,12 @@
 *.cursorColor:  #c0c5ce
 
 ! black
-*.color0:       #2b303b
+*.color0:       #2e2e2e
 *.color8:       #454545
 
 ! red
-*.color1:       #ce3a3a
-*.color9:       #ce3a3a
+*.color1:       #d44042
+*.color9:       #cc6666
 
 ! green
 *.color2:       #9AC379 
@@ -24,8 +24,8 @@
 *.color12:      #8fa1b3
 
 ! magenta
-*.color5:       #b48ead
-*.color13:      #b48ead
+*.color5:       #9b8eb4
+*.color13:      #9b8eb4
 
 ! cyan
 *.color6:       #96b5b4

@@ -118,7 +118,7 @@ assign [class="Firefox" instance="Navigator"] → $browser
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
 
 # start software in a workspace
-exec --no-startup-id i3-msg workspace 1:$terminal; exec /usr/bin/urxvt
+exec --no-startup-id i3-msg workspace $terminal; exec /usr/bin/urxvt
 
 # assign monitor output to worspace 
 
@@ -167,10 +167,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# floating pop up automatically
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
 # floating windows
 for_window [class="Keepassx"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Gcolor2"] floating enable
+for_window [class="Keepassx"] floating enable
+for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 
 # lockscreen wallpaper
 bindsym $mod+Control+l exec --no-startup-id i3lock -i ~/.terminal_config/i3/lock_wallpapers/blue_matrix.png -t
@@ -241,7 +247,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3status --config ~/.i3/i3status.conf
         tray_output primary
         colors {
             background $black1
@@ -257,3 +263,20 @@ bar {
         }
 }
 
+set $Locker i3lock && sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Home mode "$mode_system"

@@ -2,11 +2,17 @@
 ## LINUX APP ##
 ###############
 
-# apt
+# apt-get
 alias agi='sudo apt-fast install'
 alias agr='sudo apt-fast remove'
 alias agu='sudo apt-fast update'
 alias acs='apt-cache search'
+
+# pacman
+alias paci='sudo pacman -S'
+alias pacs='sudo pacman -Ss'
+alias pacu='sudo pacman -Syu'
+alias pacr='sudo pacman -R'
 
 # system
 alias shutdown='sudo shutdown now'   
@@ -25,7 +31,6 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
 
 # file manipulation
 alias cp='cp -iv'
@@ -47,13 +52,33 @@ alias gl='git log'
 alias glo='git log --pretty="oneline"'
 alias gdf='git diff --color | diff-so-fancy' #Coloration for git diff - https://github.com/so-fancy/diff-so-fancy
 alias glol='git log --graph --oneline --decorate'
-alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" #delete local branch merged with master
-alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'" #git branch logs
+# delete local branch merged with master
+alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" 
+# git log for each branches
+alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'" 
 
 # vagrant
 alias vu='vagrant up'
 alias vs='vagrant ssh'
 alias vr='vagrant reload'
+
+#tmux
+alias tmuxk='tmux kill-session -t'
+alias tmuxa='tmux attach -t'
+alias tmuxs='tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -s$USER@$HOSTNAME'
+alias tmux="tmux -2"
+
+# tar
+alias tare='tar xzvf'
+# see tar table of content
+alias tars='tar tzf'
+alias tarc='tar cvzf'
+
+# docker
+# display the ip address of a container
+alias dockerip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+# go inside a container
+alias dockerexec='docker exec -t -i'
 
 ##############
 ## PROJECTS ##
@@ -70,5 +95,4 @@ alias portfolio='cd /usr/share/nginx/html/portfolio/'
 # ssh
 alias prod='ssh thanatos@46.101.238.89'
 
-#tmux
-alias tmuxk='tmux kill-session -t'
+

@@ -6,7 +6,10 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-urxvt*font: xft:Inconsolata:size=12
+urxvt*font: xft:Inconsolata:size=12, \
+xft:DejaVu Sans Mono:style=Book:antialias=false:size=13, \
+!xft:WenQuanYi Bitmap Song:size=12, \
+!xft:FreeSerif:style=Regular, \
 urxvt*boldFont: xft:Inconsolata:size=12
 !urxvt*italicFont:
 !urxvt*boldItalicFont:
@@ -169,10 +172,19 @@ urxvt*perl-ext-common: default,tabbed
 !urxvt*tabbed.tab-fg: 0
 URxvt.tabbed.tabbar-fg: 15 
 URxvt.tabbed.tabbar-bg: 235 
-URxvt.tabbed.tab-fg: 9 
+URxvt.tabbed.tab-fg: 110
 URxvt.tabbed.tab-bg: 235 
 URxvt.tabbed*transparent:true
 
 !urxvt*matcher.button:
 !urxvt*matcher.pattern.<number>:
 !urxvt*matcher.launcher.<number>:
+URxvt.letterSpace: -1
+
+Xft.dpi:        96
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.autohint:   false
+Xft.hintstyle:  hintslight
+Xft.antialias:  true
+

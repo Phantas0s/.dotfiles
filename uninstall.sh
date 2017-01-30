@@ -26,6 +26,13 @@ echo "${red}Delete the zsh config..."
 
 rm $HOME/.zshrc
 
+echo ""
+echo "${red}Delete the vim config..."
+
+echo "${green}...done!"
+
+rm $HOME/.vim/vimrc
+
 echo "${green}...done!"
 
 echo ""
@@ -43,9 +50,10 @@ rm $HOME/.bashrc
 echo "${green}...done!"
 
 echo ""
-echo "${red}Delete the xressource config..."
+echo "${red}Delete the xorg-server config..."
 
 rm $HOME/.Xresources
+rm $HOME/.xinitrc
 
 echo "${green}...done!"
 

@@ -4,7 +4,7 @@
 # includes #
 ############
 
-. install/install_config
+. ./install_config
 . $HOME/$ROOT_CONFIG/colors
 
 ################
@@ -45,29 +45,21 @@ read key;
 # install prezto
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
 
-## install git config
+# install git config
 . $HOME/$ROOT_CONFIG/install/install-git.sh
 
+# install vim 
+. $HOME/$ROOT_CONFIG/install/install-vim.sh
+
+# install xressource config
+. $HOME/$ROOT_CONFIG/install/install-xorg-server.sh
+
 echo ""
-echo "${green}Create symlinks for personnal config..."
-echo ""
+echo "${blue}Create symlinks for personnal config..."
 
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
 ln -s $HOME/$ROOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
 
-# TODO see how to startup with i3 - startup ubunut
-ln -s $HOME/$ROOT_CONFIG/urxvt/autostart/urxvtd.desktop $HOME/.config/autostart/
-
-# xressource file - for every x applications
-ln -s $HOME/$ROOT_CONFIG/Xresources $HOME/.Xresources
-
-ln -s $HOME/$ROOT_CONFIG/vim/vimrc $HOME/.vimrc
-
 # install phpstorm symlink
-
 . $HOME/$ROOT_CONFIG/install/install-phpstorm.sh
-
-# install tool softwares
-sudo apt-get install arandr
-sudo apt-get install keepassx 
