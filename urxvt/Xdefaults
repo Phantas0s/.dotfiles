@@ -7,7 +7,7 @@
 !!!!!!!!!!!!!!!!!!
 
 urxvt*font: xft:Inconsolata:size=12, \
-xft:DejaVu Sans Mono:style=Book:antialias=false:size=13, \
+xft:DejaVuSansMono:style=Book:antialias=false:size=13
 !xft:WenQuanYi Bitmap Song:size=12, \
 !xft:FreeSerif:style=Regular, \
 urxvt*boldFont: xft:Inconsolata:size=12
