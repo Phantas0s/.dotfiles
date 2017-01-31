@@ -76,13 +76,9 @@ alias tarc='tar cvzf'
 
 # docker
 # display the ip address of a container
-alias dockip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+alias dockerip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
 # go inside a container
-alias docke='docker exec -i'
-alias dockc='docker-compose'
-# remove ALL images (!)
-alias dockRI='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
-alias dockcr='docker-compose run --rm -u $(id -u):$(id -g)'
+alias dockerexec='docker exec -t -i'
 
 ##############
 ## PROJECTS ##
