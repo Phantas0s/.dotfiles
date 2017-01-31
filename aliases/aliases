@@ -76,10 +76,17 @@ alias tarc='tar cvzf'
 
 # docker
 # display the ip address of a container
-alias dockerip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+alias dockip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
 # go inside a container
-alias dockerexec='docker exec -t -i'
+alias docke='docker exec -t -i'
+# delete every containers / images
+alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
+# stats on images
+alias dockstats='docker stats $(docker ps -q)'
+# execute a command in the container with the current host user
 
+alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
+alias dockce='docker-compose run --rm'
 ##############
 ## PROJECTS ##
 ##############
