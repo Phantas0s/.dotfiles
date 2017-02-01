@@ -36,7 +36,8 @@ set number
 
 syntax on
 set autoindent
-set paste
+" toggle paste mode for passing from clipboard
+set pastetoggle=<F11>
 
 " the copy goes to the clipboard
 set clipboard+=unnamedplus
@@ -52,3 +53,4 @@ augroup END
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
+
