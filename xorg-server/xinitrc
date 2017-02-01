@@ -1,4 +1,4 @@
+setxkbmap -option caps:escape 
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 exec i3
 exec vmware-user-suid-wrapper
-setxkbmap -option caps:escape 
