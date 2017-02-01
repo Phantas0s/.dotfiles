@@ -122,13 +122,11 @@ exec --no-startup-id i3-msg workspace $terminal; exec /usr/bin/urxvt
 
 # assign monitor output to worspace 
 
-#laptop monitor xrandr name
-set $lapmonitor 'Virtual1'
-set $mainMonitor 'Virtual2'
+# set $mainMonitor 'Virtual2'
 
-workspace $terminal output $lapmonitor
-workspace $browser output $lapmonitor
-workspace $sql output $lapmonitor
+# workspace $terminal output $lapmonitor
+# workspace $browser output $lapmonitor
+# workspace $sql output $lapmonitor
 
 ####################
 # restart / reload #
