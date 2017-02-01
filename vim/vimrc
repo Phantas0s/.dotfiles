@@ -4,6 +4,7 @@ if !1 | finish | endif
 if &compatible
     set nocompatible
 endif
+
 " Autoinstall vim-plug {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -11,6 +12,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall
 endif
 
+" prevent for using arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
 inoremap  <Down>   <esc>ggVGd:call NoArrowInput()<cr>
 inoremap  <Left>   <esc>ggVGd:call NoArrowInput()<cr>
@@ -29,8 +31,26 @@ function! NoArrowInput()
         u
 endfunction
 
-set clipboard=unnamedplus
+" set line number
 set number
+
 syntax on
 set autoindent
-set paste
+" toggle paste mode for passing from clipboard
+set pastetoggle=<F11>
+
+" the copy goes to the clipboard
+set clipboard+=unnamedplus
+
+" edit vimrc with f5 and source it automatically
+nmap <silent> <leader><f5> :e $MYVIMRC<CR>
+augroup reload_vimrc
+    autocmd!
+    autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
+augroup END
+
+" set the directory where the swap file will be saved
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+

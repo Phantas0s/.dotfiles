@@ -7,6 +7,21 @@ if [ ! -d $HOME/.vim ]
     mkdir $HOME/.vim
 fi
 
+if [ ! -d $HOME/.vim/backup ]
+  then
+    mkdir $HOME/.vim/backup
+fi
+
+if [ ! -d $HOME/.vim/undo ]
+  then
+    mkdir $HOME/.vim/undo
+fi
+
+if [ ! -d $HOME/.vim/swap ]
+  then
+    mkdir $HOME/.vim/swap
+fi
+
 ln -s $HOME/$ROOT_CONFIG/vim/vimrc $HOME/.vim/vimrc
 
 echo "${green}...done"

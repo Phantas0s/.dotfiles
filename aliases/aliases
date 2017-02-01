@@ -38,6 +38,10 @@ alias mv='mv -iv'
 alias rm='rm -i'
 alias la='ls -alh'
 
+# vim
+# clean the vim swap file
+alias vimc='rm -I ~/.vim/swap/*'
+
 # git
 alias gs='git status '
 alias ga='git add '
@@ -62,7 +66,7 @@ alias vu='vagrant up'
 alias vs='vagrant ssh'
 alias vr='vagrant reload'
 
-#tmux
+# tmux
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
 alias tmuxs='tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -s$USER@$HOSTNAME'
