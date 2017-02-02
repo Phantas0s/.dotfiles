@@ -1,5 +1,13 @@
+# set the keyboard to mac
 setxkbmap us mac
+
+# maps caps lock to escape for vim 
 setxkbmap -option caps:escape 
+
+# merge .Xressources file
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+# exec i3
 exec i3
+# exec vmware tools
 exec vmware-user-suid-wrapper

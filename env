@@ -5,3 +5,5 @@
 # zend framework 1 - lesara logistic
 export APPLICATION_ENV="development";
 export EDITOR="vim"
+export XDG_CONFIG_HOME=$HOME
+

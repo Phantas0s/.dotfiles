@@ -7,6 +7,11 @@ if [ ! -d $HOME/.vim ]
     mkdir $HOME/.vim
 fi
 
+if [ ! -d $HOME/nvim ]
+  then
+    ln -s $HOME/$ROOT_CONFIG/nvim $HOME/nvim
+fi
+
 if [ ! -d $HOME/.vim/backup ]
   then
     mkdir $HOME/.vim/backup
