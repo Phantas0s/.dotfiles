@@ -48,8 +48,8 @@ read key;
 # install git config
 . $HOME/$ROOT_CONFIG/install/install-git.sh
 
-# install vim 
-. $HOME/$ROOT_CONFIG/install/install-vim.sh
+# install neovim 
+. $HOME/$ROOT_CONFIG/install/install-nvim.sh
 
 # install xressource config
 . $HOME/$ROOT_CONFIG/install/install-xorg-server.sh

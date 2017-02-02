@@ -38,8 +38,9 @@ alias mv='mv -iv'
 alias rm='rm -i'
 alias la='ls -alh'
 
-# vim
+# vim && neovim
 # clean the vim swap file
+alias nvimc='rm -I ~/nvim/swap/*'
 alias vimc='rm -I ~/.vim/swap/*'
 
 # git

@@ -16,7 +16,8 @@ endif
 call plug#begin('~/nvim/plugged')
 
 " nerdtree - file explorer
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
+Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
+
 call plug#end()
 
 "=================+

@@ -1,35 +1,30 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
-" Autoinstall vim-plug {{{
-if empty(glob('~/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/nvim/autoload/plug.vim  --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+if &compatible
+    set nocompatible
 endif
 
-"================+
-" install plugin | 
-"================+
+""""""""""""""""""
+" install plugin " 
+""""""""""""""""""
 
-" Make sure you use single quotes
+" install plugin automatically
+" autocmd VimEnter * PlugInstall .
+
 call plug#begin('~/nvim/plugged')
 
 " nerdtree - file explorer
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 call plug#end()
 
-"=================+
-" general mapping | 
-"=================+
+""""""""""""""""""
+" GLOBAL MAPPING "
+""""""""""""""""""
 
 let mapleader = "\<Space>"
 
 nmap <leader>n :NERDTreeToggle<CR>
-
-if &compatible
-    set nocompatible
-endif
 
 " prevent for using arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
@@ -69,7 +64,7 @@ augroup reload_vimrc
 augroup END
 
 " set the directory where the swap file will be saved
-set backupdir=~/nvim/backup//
-set directory=~/nvim/swap//
-set undodir=~/nvim/undo//
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 
