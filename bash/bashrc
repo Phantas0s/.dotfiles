@@ -86,3 +86,5 @@ NO_COLOUR="\[\e[0m\]"
 
 PS1="[$WHITE\u@\h\[\e[m\] $LIGH_YELLOW\t] $LIGHT_BLUE\w $LIGHT_GREEN\$(parse_git_branch) $RED\$(git_stashes_count)$LIGHT_RED\$ \[\e[m\]$LIGHT_GRAY"
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

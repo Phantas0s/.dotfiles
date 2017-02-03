@@ -14,9 +14,17 @@ endif
 
 call plug#begin('~/nvim/plugged')
 
-" nerdtree - file explorer
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
+" icons for many plugins
+Plug 'ryanoasis/vim-devicons' 
+
+" nerdtree - file explorer + extension for git
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" status bar
 Plug 'itchyny/lightline.vim'
+
+" fzf - file searching in go
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
@@ -80,4 +88,16 @@ set clipboard+=unnamedplus
 
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
       \ }
+      \ }
+
+function! MyFiletype()
+	  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+  endfunction
+
+  function! MyFileformat()
+	    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+    endfunction

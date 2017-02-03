@@ -1,2 +1,4 @@
 source ${ZDOTDIR:-$HOME}/.terminal_config/startup
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
