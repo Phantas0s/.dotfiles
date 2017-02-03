@@ -78,6 +78,6 @@ set clipboard+=unnamedplus
 " general theme 
 "----------------
 
-"let g:lightline = {
-"      \ 'colorscheme': 'seoul256',
-"      \ }
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ }
