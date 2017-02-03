@@ -4,6 +4,7 @@
 
 # zend framework 1 - lesara logistic
 export APPLICATION_ENV="development";
-export EDITOR="vim"
+export EDITOR="nvim"
 export XDG_CONFIG_HOME=$HOME
-
+# force tmux to go to 256 color mode with uxrvt
+export TERM="xterm-256color"
