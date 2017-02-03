@@ -1,4 +1,5 @@
 #!/bin/bash
+# see https://github.com/ryanoasis/nerd-fonts#patched-fonts for a lot of fonts
 
 echo ""
 echo "${blue}Install the fonts..."
