@@ -6,11 +6,8 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-urxvt*font: xft:InconsolataForPowerline Nerd Font:size=12
-!xft:DejaVuSansMono:style=Book:antialias=false:size=13
-!xft:WenQuanYi Bitmap Song:size=12
-!xft:FreeSerif:style=Regular 
-!urxvt*boldFont: xft:Inconsolata:size=12
+urxvt*font: xft:Inconsolata Nerd Font:size=12
+urxvt*boldFont: xft:Inconsolata:size=14
 !urxvt*italicFont:
 !urxvt*boldItalicFont:
 urxvt*intensityStyles: true
