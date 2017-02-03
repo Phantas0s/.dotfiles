@@ -4,7 +4,7 @@
     email = <email> 
     name = <name>
 [core]
-    editor = vim
+    editor = nvim
     pager = diff-so-fancy | less --tabs=4 -RFX
 [color "diff-highlight"]
     oldNormal = red bold
