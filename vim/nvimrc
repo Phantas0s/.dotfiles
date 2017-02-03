@@ -25,9 +25,9 @@ Plug 'itchyny/lightline.vim'
 
 " fzf - file searching in go
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
-
 "------------------
 " general binding 
 "------------------
@@ -67,9 +67,9 @@ augroup END
 "-----------------
 
 " set the directory where the swap file will be saved
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-set undodir=~/.vim/undo//
+" set backupdir=~/nvim/backup//
+" set directory=~/nvim/swap//
+set undodir=~/nvim/undo//
 
 " set line number
 set number
