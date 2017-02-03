@@ -6,11 +6,11 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-urxvt*font: xft:Inconsolata:size=12, \
-xft:DejaVuSansMono:style=Book:antialias=false:size=13
-!xft:WenQuanYi Bitmap Song:size=12, \
-!xft:FreeSerif:style=Regular, \
-urxvt*boldFont: xft:Inconsolata:size=12
+urxvt*font: xft:InconsolataForPowerline Nerd Font:size=12
+!xft:DejaVuSansMono:style=Book:antialias=false:size=13
+!xft:WenQuanYi Bitmap Song:size=12
+!xft:FreeSerif:style=Regular 
+!urxvt*boldFont: xft:Inconsolata:size=12
 !urxvt*italicFont:
 !urxvt*boldItalicFont:
 urxvt*intensityStyles: true
@@ -179,7 +179,7 @@ URxvt.tabbed*transparent:true
 !urxvt*matcher.button:
 !urxvt*matcher.pattern.<number>:
 !urxvt*matcher.launcher.<number>:
-URxvt.letterSpace: -1
+!URxvt.letterSpace: -1
 
 Xft.dpi:        96
 Xft.rgba:       rgb
