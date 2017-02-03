@@ -6,7 +6,7 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-urxvt*font: xft:Inconsolata Nerd Font:size=12
+urxvt*font: xft:Inconsolata Nerd Font:size=12:pixelsize=16:antialias=true
 urxvt*boldFont: xft:Inconsolata:size=14
 !urxvt*italicFont:
 !urxvt*boldItalicFont:
