@@ -15,7 +15,7 @@ endif
 call plug#begin('~/nvim/plugged')
 
 " icons for many plugins
-Plug 'ryanoasis/vim-devicons' 
+" Plug 'ryanoasis/vim-devicons' 
 
 " nerdtree - file explorer + extension for git
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -23,11 +23,15 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 
 " status bar
 Plug 'itchyny/lightline.vim'
 
-" fzf - file searching in go
+" fzf - poweful file searching 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" project management for vim
+Plug 'amiorin/vim-project'
+
 call plug#end()
+
 "------------------
 " general binding 
 "------------------
@@ -36,7 +40,30 @@ let mapleader = "\<Space>"
 
 nmap <leader>n :NERDTreeToggle<CR>
 
-" prevent for using arrow keys
+" paste mode in order to paste correctly the formating from the clipboarf
+nnoremap <leader>p :set paste!<CR>
+
+" tabs
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tn :tabnew<CR>" prevent for using arrow keys
+
+" windows management
+
+" windows navigation
+nnoremap <Leader>ww <c-w>w 
+nnoremap <Leader>wh <c-w>h 
+nnoremap <Leader>wj <c-w>j 
+nnoremap <Leader>wk <c-w>k 
+nnoremap <Leader>wl <c-w>l 
+
+" windows creation 
+nnoremap <Leader>wb <c-w>s 
+nnoremap <Leader>wv <c-w>v 
+
+" prevent to use arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
 inoremap  <Down>   <esc>ggVGd:call NoArrowInput()<cr>
 inoremap  <Left>   <esc>ggVGd:call NoArrowInput()<cr>
@@ -54,6 +81,19 @@ function! NoArrowInput()
         endwhile
         u
 endfunction
+
+" restore the position of the cursor when you open a file
+au BufReadPost * call RestorePosition()
+
+func! RestorePosition()
+    if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
+        return
+    endif
+
+    if line("'\"") > 1 && line("'\"") <= line("$")
+        exe "normal! g`\""
+    endif
+endfunc
 
 " edit vimrc with f5 and source it automatically
 nmap <silent> <leader><f5> :e $MYVIMRC<CR>
@@ -74,13 +114,40 @@ set undodir=~/nvim/undo//
 " set line number
 set number
 
-syntax on
 set autoindent
-" toggle paste mode for passing from clipboard
-set pastetoggle=<F11>
 
 " the copy goes to the clipboard
 set clipboard+=unnamedplus
+
+" use 4 spaces instead of tab (to replace existing tab use :retab)
+set expandtab
+set tabstop=4
+
+" display tabs
+set list
+set listchars=tab:>-
+
+
+"----------------
+" plugin config 
+"----------------
+
+" vim project - doesn't work
+let g:project_use_nerdtree = 1
+let g:project_enable_welcome = 1
+
+set rtp+=~/nvim/plugged/vim-project/
+call project#rc()
+
+Project '~/workspace/sharetoall' 
+
+" nerdtree
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeHijackNetrw = 0 
+let g:NERDTreeChDirMode = 2
+let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeShowBookmarks = 0
+let g:NERDTreeCascadeOpenSingleChildDir = 1
 
 "----------------
 " general theme 
@@ -88,16 +155,12 @@ set clipboard+=unnamedplus
 
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
-      \ 'component_function': {
-      \   'filetype': 'MyFiletype',
-      \   'fileformat': 'MyFileformat',
-      \ }
       \ }
 
 function! MyFiletype()
-	  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-  endfunction
+        return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
 
-  function! MyFileformat()
-	    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-    endfunction
+function! MyFileformat()
+        return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction

@@ -104,6 +104,6 @@ alias symfad='php app/console assetic:dump --env=prod'
 alias portfolio='cd /usr/share/nginx/html/portfolio/'
 
 # ssh
-alias prod='ssh thanatos@46.101.238.89'
-
+alias sprod='ssh thanatos@46.101.238.89'
+alias spie='ssh thanatospie@192.168.178.55'
 
