@@ -14,10 +14,6 @@ endif
 
 call plug#begin('~/nvim/plugged')
 
-" icons for many plugins
-" Plug 'ryanoasis/vim-devicons' 
-
-" nerdtree - file explorer + extension for git
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " status bar
@@ -30,6 +26,9 @@ Plug 'junegunn/fzf.vim'
 " project management for vim
 Plug 'amiorin/vim-project'
 
+" nerdtree - file explorer + extension for git
+Plug 'ryanoasis/vim-devicons' 
+
 call plug#end()
 
 "------------------
@@ -38,9 +37,13 @@ call plug#end()
 
 let mapleader = "\<Space>"
 
-nmap <leader>n :NERDTreeToggle<CR>
 
-" paste mode in order to paste correctly the formating from the clipboarf
+" highlight the line which is more than the defined margin (try to write a
+" very long line to test :D)
+highlight ColorColumn ctermbg=red
+call matchadd('ColorColumn', '\%120v', 100)
+
+" paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
 
 " tabs
@@ -123,27 +126,29 @@ set clipboard+=unnamedplus
 set expandtab
 set tabstop=4
 
-" display tabs
-set list
-set listchars=tab:>-
+" display tabs, trailing spaces
 
+exec "set listchars=tab:\uBB\uBB,trail:\uB7"
+set list
 
 "----------------
 " plugin config 
 "----------------
 
 " vim project - doesn't work
-let g:project_use_nerdtree = 1
-let g:project_enable_welcome = 1
+" let g:project_use_nerdtree = 1
+" let g:project_enable_welcome = 1
 
-set rtp+=~/nvim/plugged/vim-project/
-call project#rc()
+" set rtp+=~/nvim/plugged/vim-project/
+" call project#rc()
 
-Project '~/workspace/sharetoall' 
+" Project '~/workspace/sharetoall'
 
 " nerdtree
+nmap <leader>n :NERDTreeToggle<CR>
+
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeHijackNetrw = 0 
+let g:NERDTreeHijackNetrw = 0
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeShowBookmarks = 0
@@ -158,7 +163,7 @@ let g:lightline = {
       \ }
 
 function! MyFiletype()
-        return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+        return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype. ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
 
 function! MyFileformat()
