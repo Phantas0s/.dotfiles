@@ -1,4 +1,4 @@
-! special
+!! special
 *.foreground:   #c0c5ce
 *.background:   #1f2022
 *.cursorColor:  #c0c5ce
@@ -34,3 +34,4 @@
 ! white
 *.color7:       #4a4a4a
 *.color15:      #ffffff
+*.color130:      #ffffff

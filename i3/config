@@ -81,15 +81,15 @@ bindsym $mod+a focus parent
 #############
 
 set $terminal "1: terminal"
-set $phpstorm "2: phpstorm"
-set $browser "3: browser"
-set $sql "4: sql"
+set $browser "2: browser"
+set $sql "3: sql"
+set $phpstorm "4: phpstorm"
 
 # switch to workspace
 bindsym $mod+1 workspace $terminal
-bindsym $mod+2 workspace $phpstorm
-bindsym $mod+3 workspace $browser 
-bindsym $mod+4 workspace $sql 
+bindsym $mod+2 workspace $browser 
+bindsym $mod+3 workspace $sql 
+bindsym $mod+4 workspace $phpstorm
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -99,9 +99,9 @@ bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $terminal
-bindsym $mod+Shift+2 move container to workspace $phpstorm
-bindsym $mod+Shift+3 move container to workspace $browser
-bindsym $mod+Shift+4 move container to workspace $sql
+bindsym $mod+Shift+2 move container to workspace $browser
+bindsym $mod+Shift+3 move container to workspace $sql
+bindsym $mod+Shift+4 move container to workspace $phpstorm
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -175,9 +175,6 @@ for_window [class="Arandr"] floating enable
 for_window [class="Gcolor2"] floating enable
 for_window [class="Keepassx"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
-
-# lockscreen wallpaper
-bindsym $mod+Control+l exec --no-startup-id i3lock -i ~/.terminal_config/i3/lock_wallpapers/blue_matrix.png -t
 
 # resize correctly in vmware
 exec --no-startup-id vmware-user-suid-wrapper
@@ -261,16 +258,19 @@ bar {
         }
 }
 
-set $Locker i3lock && sleep 1
+# lockscreen
+set $i3lockwall i3lock -i ~/.terminal_config/i3/lock_wallpapers/blue_matrix.png -t
+bindsym $mod+Control+l exec --no-startup-id $i3lockwall
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+# shutdown / restart / suspend...
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Ctrl+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym l exec --no-startup-id $i3lockwall, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"

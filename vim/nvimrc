@@ -15,7 +15,11 @@ endif
 call plug#begin('~/nvim/plugged')
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'Nopik/vim-nerdtree-direnter'
+Plug 'jistr/vim-nerdtree-tabs'
 
 " status bar
 Plug 'itchyny/lightline.vim'
@@ -38,7 +42,6 @@ call plug#end()
 
 let mapleader = "\<Space>"
 
-
 " highlight the line which is more than the defined margin (try to write a
 " very long line to test :D)
 highlight ColorColumn ctermbg=red
@@ -47,25 +50,28 @@ call matchadd('ColorColumn', '\%120v', 100)
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
 
+" show registers
+nnoremap <leader>r :reg<CR>
+
 " tabs
-nnoremap th  :tabfirst<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tn :tabnew<CR>" prevent for using arrow keys
+nnoremap th :tabfirst<CR>
+nnoremap tj :tabnext<CR>
+nnoremap tk :tabprev<CR>
+nnoremap tl :tablast<CR>
+nnoremap tn :tabnew<CR>
 
 " windows management
 
 " windows navigation
-nnoremap <Leader>ww <c-w>w 
-nnoremap <Leader>wh <c-w>h 
-nnoremap <Leader>wj <c-w>j 
-nnoremap <Leader>wk <c-w>k 
-nnoremap <Leader>wl <c-w>l 
+nnoremap <Leader>ww <c-w>w
+nnoremap <Leader>wh <c-w>h
+nnoremap <Leader>wj <c-w>j
+nnoremap <Leader>wk <c-w>k
+nnoremap <Leader>wl <c-w>l
 
 " windows creation 
-nnoremap <Leader>wb <c-w>s 
-nnoremap <Leader>wv <c-w>v 
+nnoremap <Leader>wb <c-w>s
+nnoremap <Leader>wv <c-w>v
 
 " prevent to use arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
@@ -111,8 +117,8 @@ augroup END
 "-----------------
 
 " set the directory where the swap file will be saved
-" set backupdir=~/nvim/backup//
-" set directory=~/nvim/swap//
+set backupdir=~/nvim/backup//
+set directory=~/nvim/swap//
 set undodir=~/nvim/undo//
 
 " set line number
@@ -146,7 +152,7 @@ set list
 " Project '~/workspace/sharetoall'
 
 " nerdtree
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeTabsToggle<CR>
 
 " don't display informations (type ? for help and so on)
 let g:NERDTreeMinimalUI = 1
