@@ -87,8 +87,8 @@ set $phpstorm "4: phpstorm"
 
 # switch to workspace
 bindsym $mod+1 workspace $terminal
-bindsym $mod+2 workspace $browser 
-bindsym $mod+3 workspace $sql 
+bindsym $mod+2 workspace $browser
+bindsym $mod+3 workspace $sql
 bindsym $mod+4 workspace $phpstorm
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6

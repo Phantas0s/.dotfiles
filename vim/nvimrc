@@ -18,8 +18,12 @@ call plug#begin('~/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 " Plug 'Nopik/vim-nerdtree-direnter'
 Plug 'jistr/vim-nerdtree-tabs'
+
+" completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " status bar
 Plug 'itchyny/lightline.vim'
@@ -28,13 +32,21 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" project management for vim
-Plug 'amiorin/vim-project'
-
 " nerdtree - file explorer + extension for git
 Plug 'ryanoasis/vim-devicons' 
 
+
+" php autocompletion
+Plug 'shawncplus/phpcomplete.vim'
 call plug#end()
+
+"----------------
+" plugin config 
+"----------------
+
+source ~/nvim/pluggedconf/nerdtree.nvimrc
+source ~/nvim/pluggedconf/deoplete.nvimrc
+source ~/nvim/pluggedconf/lightline.nvimrc
 
 "------------------
 " general binding 
@@ -50,7 +62,7 @@ call matchadd('ColorColumn', '\%120v', 100)
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
 
-" show registers
+" shod registers
 nnoremap <leader>r :reg<CR>
 
 " tabs
@@ -124,8 +136,6 @@ set undodir=~/nvim/undo//
 " set line number
 set number
 
-set autoindent
-
 " the copy goes to the clipboard
 set clipboard+=unnamedplus
 
@@ -134,51 +144,5 @@ set expandtab
 set tabstop=4
 
 " display tabs, trailing spaces
-
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
-
-"----------------
-" plugin config 
-"----------------
-
-" vim project - doesn't work
-" let g:project_use_nerdtree = 1
-" let g:project_enable_welcome = 1
-
-" set rtp+=~/nvim/plugged/vim-project/
-" call project#rc()
-
-" Project '~/workspace/sharetoall'
-
-" nerdtree
-nmap <leader>n :NERDTreeTabsToggle<CR>
-
-" don't display informations (type ? for help and so on)
-let g:NERDTreeMinimalUI = 1
-" don't replace the native vim file explorer
-let g:NERDTreeHijackNetrw = 0
-let g:NERDTreeChDirMode = 2
-let g:NERDTreeAutoDeleteBuffer = 1
-let g:NERDTreeShowBookmarks = 0
-let g:NERDTreeCascadeOpenSingleChildDir = 1
-
-" change the arrows
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
-
-"----------------
-" general theme 
-"----------------
-
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ }
-
-function! MyFiletype()
-        return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype. ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! MyFileformat()
-        return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction

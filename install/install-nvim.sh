@@ -33,4 +33,11 @@ if [ ! -d $HOME/nvim/plugged ]
     mkdir $HOME/nvim/plugged
 fi
 
+if [ ! -d $HOME/nvim/pluggedconf ]
+  then
+    mkdir $HOME/nvim/pluggedconf
+fi
+
+ln -s -f $HOME/$ROOT_CONFIG/vim/pluggedconf/* $HOME/nvim/pluggedconf
+
 echo "${green}...done"
