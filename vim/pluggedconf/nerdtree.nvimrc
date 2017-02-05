@@ -1,5 +1,4 @@
 " nerdtree configuration
-nmap <leader>nt :NERDTreeTabsToggle<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 
 " don't display informations (type ? for help and so on)

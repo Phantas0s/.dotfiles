@@ -14,16 +14,22 @@ endif
 
 call plug#begin('~/nvim/plugged')
 
+" php autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/vimproc'
+Plug 'Shougo/unite.vim'
+" Plug 'shawncplus/phpcomplete.vim'
+" Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
+
+Plug 'm2mdas/phpcomplete-extended'
+
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Plug 'Nopik/vim-nerdtree-direnter'
-Plug 'jistr/vim-nerdtree-tabs'
-
-" completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'jistr/vim-nerdtree-tabs'
 
 " status bar
 Plug 'itchyny/lightline.vim'
@@ -32,27 +38,29 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" the silver searcher plugin
+Plug 'epmatsw/ag.vim'
+
 " nerdtree - file explorer + extension for git
 Plug 'ryanoasis/vim-devicons' 
 
-
-" php autocompletion
-Plug 'shawncplus/phpcomplete.vim'
 call plug#end()
 
 "----------------
 " plugin config 
 "----------------
-
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
+source ~/nvim/pluggedconf/fzf.nvimrc
 
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 "------------------
 " general binding 
 "------------------
 
-let mapleader = "\<Space>"
+let mapleader = "\\"
+nmap <SPACE> <leader>
 
 " highlight the line which is more than the defined margin (try to write a
 " very long line to test :D)
