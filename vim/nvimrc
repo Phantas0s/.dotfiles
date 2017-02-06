@@ -15,13 +15,16 @@ endif
 call plug#begin('~/nvim/plugged')
 
 " php autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/vimproc'
-Plug 'Shougo/unite.vim'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Require padawan-php via composer
+" Plug 'padawan-php/deoplete-padawan'
+
+" Plug 'Shougo/vimproc'
+" Plug 'Shougo/unite.vim'
 " Plug 'shawncplus/phpcomplete.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 
-Plug 'm2mdas/phpcomplete-extended'
+" Plug 'm2mdas/phpcomplete-extended'
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -54,7 +57,7 @@ source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+" autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 "------------------
 " general binding 
 "------------------
