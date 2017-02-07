@@ -151,6 +151,8 @@ augroup END
 "-----------------
 " general config 
 "-----------------
+" colorscheme
+colo hypnos
 
 " set the directory where the swap file will be saved
 set backupdir=~/nvim/backup//
