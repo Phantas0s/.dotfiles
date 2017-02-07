@@ -56,9 +56,9 @@ call plug#end()
 " plugin config 
 "----------------
 
+source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/phpcomplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
-source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 
@@ -83,7 +83,7 @@ call matchadd('ColorColumn', '\%120v', 100)
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
 
-" shod registers
+" show registers
 nnoremap <leader>r :reg<CR>
 
 " show file buffer
