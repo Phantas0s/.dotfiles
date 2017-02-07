@@ -16,12 +16,13 @@ call plug#begin('~/nvim/plugged')
 
 " php autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'shawncplus/phpcomplete.vim'
+
 " Require padawan-php via composer
 " Plug 'padawan-php/deoplete-padawan'
 
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
-Plug 'shawncplus/phpcomplete.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 
 " Plug 'm2mdas/phpcomplete-extended'
@@ -59,50 +60,9 @@ source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 
-nnoremap <leader>a :Ag<space>
-nmap <leader>, :Files<cr>
-nmap <leader><Enter> :History<cr>
-nnoremap <leader>A :exec "Ag ".expand("<cword>")<cr>
 " link phpcomplete and deoplete
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-" hack jan
-function! s:ag_to_qf(line)
-  let parts = split(a:line, ':')
-  return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],
-        \ 'text': join(parts[3:], ':')}
-endfunction
 
-function! s:ag_handler(lines)
-  if len(a:lines) < 2 | return | endif
-
-  let cmd = get({'ctrl-x': 'split',
-               \ 'ctrl-v': 'vertical split',
-               \ 'ctrl-t': 'tabe'}, a:lines[0], 'e')
-  let list = map(a:lines[1:], 's:ag_to_qf(v:val)')
-
-  let first = list[0]
-  execute cmd escape(first.filename, ' %#\')
-  execute first.lnum
-  execute 'normal!' first.col.'|zz'
-
-  if len(list) > 1
-    call setqflist(list)
-    copen
-    wincmd p
-  endif
-endfunction
-autocmd VimEnter * command! -nargs=* Ag call fzf#run({
-\ 'source':  printf('ag --nogroup --column --color "%s"',
-\                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
-\ 'sink*':    function('<sid>ag_handler'),
-\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
-\            '--multi --bind=ctrl-a:select-all,ctrl-d:deselect-all '.
-\            '--color hl:68,hl+:110',
-\ 'down':    '50%'
-\ })
-
-
-" autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 "------------------
 " general binding 
 "------------------
