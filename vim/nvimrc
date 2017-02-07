@@ -18,6 +18,9 @@ call plug#begin('~/nvim/plugged')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'shawncplus/phpcomplete.vim'
 
+" wrapper for git
+Plug 'tpope/vim-fugitive'
+
 " Require padawan-php via composer
 " Plug 'padawan-php/deoplete-padawan'
 
@@ -44,7 +47,6 @@ Plug 'junegunn/fzf.vim'
 
 " the silver searcher plugin
 " Plug 'epmatsw/ag.vim'
-Plug 'tpope/vim-fugitive'
 " nerdtree - file explorer + extension for git
 Plug 'ryanoasis/vim-devicons' 
 
@@ -53,14 +55,14 @@ call plug#end()
 "----------------
 " plugin config 
 "----------------
-au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
 
+source ~/nvim/pluggedconf/phpcomplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 
-" link phpcomplete and deoplete
+" link phpcomplete and deoplete - maybe not necessary
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 "------------------
@@ -69,6 +71,9 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 let mapleader = "\\"
 nmap <SPACE> <leader>
+
+" quick saving
+nmap <leader>w :w<cr>
 
 " highlight the line which is more than the defined margin (try to write a
 " very long line to test :D)
@@ -80,6 +85,9 @@ nnoremap <leader>p :set paste!<CR>
 
 " shod registers
 nnoremap <leader>r :reg<CR>
+
+" show file buffer
+nnoremap <leader>b :buffers<CR>
 
 " tabs
 nnoremap th :tabfirst<CR>
