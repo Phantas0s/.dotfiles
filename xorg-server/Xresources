@@ -9,7 +9,7 @@
 
 ! red
 *.color1:       #d44042
-*.color9:       #cc6666
+*.color9:       #d44042
 
 ! green
 *.color2:       #9AC379 
