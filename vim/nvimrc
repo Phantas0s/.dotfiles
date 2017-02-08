@@ -14,12 +14,32 @@ endif
 
 call plug#begin('~/nvim/plugged')
 
+" wrapper for git
+Plug 'tpope/vim-fugitive'
+
 " php autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'shawncplus/phpcomplete.vim'
 
-" wrapper for git
-Plug 'tpope/vim-fugitive'
+" php quality tools (codesniffer, messdetector...)
+ Plug 'phux/vim-phpqa'
+
+" Nerdtree + modifications: git icons plugin, color filetype plugin
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons' 
+
+" status bar
+Plug 'itchyny/lightline.vim'
+
+" close the buffer
+ Plug 'moll/vim-bbye'
+
+" fzf - poweful file searching 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'jszakmeister/vim-togglecursor'
 
 " Require padawan-php via composer
 " Plug 'padawan-php/deoplete-padawan'
@@ -30,53 +50,32 @@ Plug 'tpope/vim-fugitive'
 
 " Plug 'm2mdas/phpcomplete-extended'
 
-" Nerdtree + modifications: git icons plugin, color filetype plugin
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" Plug 'Nopik/vim-nerdtree-direnter'
-" Plug 'jistr/vim-nerdtree-tabs'
-
-" status bar
-Plug 'itchyny/lightline.vim'
-
-" fzf - poweful file searching 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-" the silver searcher plugin
-" Plug 'epmatsw/ag.vim'
-" nerdtree - file explorer + extension for git
-Plug 'ryanoasis/vim-devicons' 
-
 call plug#end()
 
 "----------------
-" plugin config 
+" plugin config
 "----------------
 
-source ~/nvim/pluggedconf/deoplete.nvimrc
+" close the buffer
+nmap <leader>bd :Bdelete<cr> 
+
 source ~/nvim/pluggedconf/phpcomplete.nvimrc
+source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 
 " link phpcomplete and deoplete - maybe not necessary
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+" autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 "------------------
-" general binding 
+" general binding
 "------------------
 
 let mapleader = "\\"
 nmap <SPACE> <leader>
 
-" quick saving
-nmap <leader>w :w<cr>
-
-" highlight the line which is more than the defined margin (try to write a
-" very long line to test :D)
+" highlight the line which is longer than the defined margin (120)
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
 
@@ -151,6 +150,7 @@ augroup END
 "-----------------
 " general config 
 "-----------------
+
 " colorscheme
 colo hypnos
 
@@ -172,3 +172,6 @@ set tabstop=4
 " display tabs, trailing spaces
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
+" doesn't prompt a warning when opening a file and the current file was
+" written but not saved
+set hidden

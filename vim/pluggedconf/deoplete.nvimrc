@@ -8,9 +8,6 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 let g:deoplete#file#enable_buffer_path = 1
 
-" Generate automatically ctags with the ctags git hook
-au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
-
 " Compatibility with phpcomplete
 let g:deoplete#omni_patterns = {}
 let g:deoplete#omni_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
