@@ -21,6 +21,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'shawncplus/phpcomplete.vim'
 
+Plug 'joonty/vdebug'
 " php quality tools (codesniffer, messdetector...)
  Plug 'phux/vim-phpqa'
 
@@ -56,6 +57,28 @@ call plug#end()
 " plugin config
 "----------------
 
+" vdebug
+
+let g:vdebug_options = {}
+let g:vdebug_options["port"] = 9000
+let g:vdebug_keymap = {
+\    "run" : "<F5>",
+\    "run_to_cursor" : "<F9>",
+\    "step_over" : "<F2>",
+\    "step_into" : "<F3>",
+\    "step_out" : "<F4>",
+\    "close" : "<F6>",
+\    "detach" : "<F7>",
+\    "set_breakpoint" : "<F10>",
+\    "get_context" : "<F11>",
+\    "eval_under_cursor" : "<F12>",
+\    "eval_visual" : "<F8>",
+\}
+
+let g:vdebug_options["path_maps"] = {
+    \       "/var/www/logistic/current": "/var/www/logistic",
+\}
+
 " close the buffer
 nmap <leader>bd :Bdelete<cr> 
 
@@ -64,6 +87,7 @@ source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
+source ~/nvim/pluggedconf/phpqa.nvimrc
 
 " link phpcomplete and deoplete - maybe not necessary
 " autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
