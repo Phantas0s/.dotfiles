@@ -13,7 +13,8 @@ font pango:Inconsolata 12
 floating_modifier $mod
 
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt 
+exec --no-startup-id "urxvtd -q -f -o"
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -118,7 +119,7 @@ assign [class="Firefox" instance="Navigator"] → $browser
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
 
 # start software in a workspace
-exec --no-startup-id i3-msg workspace $terminal; exec /usr/bin/urxvt
+exec --no-startup-id i3-msg workspace $terminal; exec /usr/bin/urxvtc
 
 # assign monitor output to worspace 
 

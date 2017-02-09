@@ -194,8 +194,9 @@ set expandtab
 set tabstop=4
 
 " display tabs, trailing spaces
-exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
+"exec "set listchars=tab:\uBB\uBB,trail:\uB7"
+"let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±,trail:'
 " doesn't prompt a warning when opening a file and the current file was
-" written but not saved
+" written but not saved 
 set hidden
