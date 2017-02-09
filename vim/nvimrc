@@ -22,13 +22,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " php autocompletion engine
 Plug 'shawncplus/phpcomplete.vim'
+
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 
 " general quality tools (codesniffer, messdetector...)
 " Plug 'phux/vim-phpqa'
- Plug 'neomake/neomake'
+Plug 'neomake/neomake'
 
 " debugger
 Plug 'joonty/vdebug'
@@ -37,13 +38,13 @@ Plug 'joonty/vdebug'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons' 
+Plug 'ryanoasis/vim-devicons'
 
 " status bar
 Plug 'itchyny/lightline.vim'
 
 " close the current buffer
- Plug 'moll/vim-bbye'
+Plug 'moll/vim-bbye'
 
 " fzf - poweful file searching 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -52,6 +53,7 @@ Plug 'junegunn/fzf.vim'
 " toggle cursor in neovim / tmux
 Plug 'jszakmeister/vim-togglecursor'
 
+Plug 'ap/vim-css-color'
 " Require padawan-php via composer
 " Plug 'padawan-php/deoplete-padawan'
 
@@ -63,21 +65,20 @@ call plug#end()
 " plugin config
 "----------------
 
-" close the buffer
-nmap <leader>bd :Bdelete<cr> 
-
-source ~/nvim/pluggedconf/phpcomplete.nvimrc
 source ~/nvim/pluggedconf/deoplete.nvimrc
+source ~/nvim/pluggedconf/phpcomplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 source ~/nvim/pluggedconf/vdebug.nvimrc
-
+source ~/nvim/pluggedconf/neomake.nvimrc
 " source ~/nvim/pluggedconf/phpqa.nvimrc
 
-autocmd! BufWritePost * Neomake
-let g:neomake_php_enabled_makers = ['php', 'phpcs']
-let g:neomake_php_phpcs_args_standard = 'PSR2'
+" close the buffer
+nmap <leader>bd :Bdelete<cr>
+
+" map go to definition
+map <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
 
 "------------------
 " general binding
@@ -94,14 +95,16 @@ highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
 
 " paste mode in order to paste correctly the formating from the clipboard
-nnoremap <leader>p :set paste!<CR>
+" nnoremap <leader>p :set paste!<CR>
+
+map <esc> :noh<cr>
 
 " show registers
-nnoremap <leader>r :reg<CR>
+nnoremap <leader>r :reg<cr>
 
 " show file buffer and prepare to type the buffer number + delete the 'more'
-nnoremap <Leader>b :ls<CR>:b<Space>
-nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+nnoremap <Leader>b :ls<cr>:b<Space>
+nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <cr>:b<Space>
 
 " tabs
 nnoremap th :tabfirst<CR>
@@ -172,6 +175,9 @@ colo hypnos
 " set the directory where the swap file will be saved
 set backupdir=~/nvim/backup//
 set directory=~/nvim/swap//
+
+" save undo trees in files
+set undofile
 set undodir=~/nvim/undo//
 
 " set line number

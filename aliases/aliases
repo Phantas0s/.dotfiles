@@ -41,7 +41,7 @@ alias la='ls -alh'
 # vim && neovim
 # clean the vim swap file
 alias nvimc='rm -I ~/nvim/swap/*'
-alias vimc='rm -I ~/.vim/swap/*'
+alias nvimcu='rm -I ~/nvim/undo/*'
 
 # git
 alias gs='git status '

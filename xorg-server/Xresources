@@ -12,7 +12,7 @@
 *.color9:       #d44042
 
 ! green
-*.color2:       #9AC379 
+*.color2:       #9AC379
 *.color10:      #9AC379
 
 ! yellow
@@ -20,7 +20,7 @@
 *.color11:      #fffc6c
 
 ! blue
-*.color4:       #8fa1b3 
+*.color4:       #8fa1b3
 *.color12:      #8fa1b3
 
 ! magenta

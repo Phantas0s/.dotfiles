@@ -6,7 +6,7 @@ echo "${blue} installing neovim configuration..."
 if [ ! -d $HOME/nvim ]
   then
     mkdir $HOME/nvim
-    
+
     curl -fLo ~/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -33,17 +33,17 @@ if [ ! -d $HOME/nvim/plugged ]
     mkdir $HOME/nvim/plugged
 fi
 
-if [ ! -d $HOME/nvim/pluggedconf ]
-  then
-    mkdir $HOME/nvim/pluggedconf
-fi
+#if [ ! -d $HOME/nvim/pluggedconf ]
+#  then
+#    mkdir $HOME/nvim/pluggedconf
+#fi
 
 if [ ! -d $HOME/nvim/colors ]
   then
     mkdir $HOME/nvim/colors
 fi
 
-ln -s -f $HOME/$ROOT_CONFIG/vim/pluggedconf/* $HOME/nvim/pluggedconf
+ln -s -f $HOME/$ROOT_CONFIG/vim/pluggedconf $HOME/nvim/pluggedconf
 ln -s -f $HOME/$ROOT_CONFIG/vim/colors/* $HOME/nvim/colors
 
 echo "${green}...done"
