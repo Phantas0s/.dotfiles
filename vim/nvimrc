@@ -14,17 +14,24 @@ endif
 
 call plug#begin('~/nvim/plugged')
 
-" wrapper for git
-Plug 'tpope/vim-fugitive'
+" wrapper for git and display git diff in the left gutter
+Plug 'tpope/vim-fugitive' | Plug 'airblade/vim-gitgutter'
 
-" php autocompletion
+" General autocomplete system
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'shawncplus/phpcomplete.vim'
 
-Plug 'joonty/vdebug'
-" php quality tools (codesniffer, messdetector...)
+" php autocompletion engine
+Plug 'shawncplus/phpcomplete.vim'
+" Plug 'Shougo/vimproc'
+" Plug 'Shougo/unite.vim'
+" Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
+
+" general quality tools (codesniffer, messdetector...)
 " Plug 'phux/vim-phpqa'
  Plug 'neomake/neomake'
+
+" debugger
+Plug 'joonty/vdebug'
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -35,20 +42,18 @@ Plug 'ryanoasis/vim-devicons'
 " status bar
 Plug 'itchyny/lightline.vim'
 
-" close the buffer
+" close the current buffer
  Plug 'moll/vim-bbye'
 
 " fzf - poweful file searching 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" toggle cursor in neovim / tmux
 Plug 'jszakmeister/vim-togglecursor'
 
 " Require padawan-php via composer
 " Plug 'padawan-php/deoplete-padawan'
-
-" Plug 'Shougo/vimproc'
-" Plug 'Shougo/unite.vim'
-" Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 
 " Plug 'm2mdas/phpcomplete-extended'
 
@@ -58,28 +63,6 @@ call plug#end()
 " plugin config
 "----------------
 
-" vdebug
-
-let g:vdebug_options = {}
-let g:vdebug_options["port"] = 9000
-let g:vdebug_keymap = {
-\    "run" : "<F5>",
-\    "run_to_cursor" : "<F9>",
-\    "step_over" : "<F2>",
-\    "step_into" : "<F3>",
-\    "step_out" : "<F4>",
-\    "close" : "<F6>",
-\    "detach" : "<F7>",
-\    "set_breakpoint" : "<F10>",
-\    "get_context" : "<F11>",
-\    "eval_under_cursor" : "<F12>",
-\    "eval_visual" : "<F8>",
-\}
-
-let g:vdebug_options["path_maps"] = {
-    \       "/var/www/logistic/current": "/var/www/logistic",
-\}
-
 " close the buffer
 nmap <leader>bd :Bdelete<cr> 
 
@@ -88,13 +71,13 @@ source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
+source ~/nvim/pluggedconf/vdebug.nvimrc
+
 " source ~/nvim/pluggedconf/phpqa.nvimrc
 
 autocmd! BufWritePost * Neomake
 let g:neomake_php_enabled_makers = ['php', 'phpcs']
 let g:neomake_php_phpcs_args_standard = 'PSR2'
-" link phpcomplete and deoplete - maybe not necessary
-" autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 "------------------
 " general binding
@@ -102,6 +85,9 @@ let g:neomake_php_phpcs_args_standard = 'PSR2'
 
 let mapleader = "\\"
 nmap <SPACE> <leader>
+
+" easy command
+noremap ; :
 
 " highlight the line which is longer than the defined margin (120)
 highlight ColorColumn ctermbg=red
@@ -113,8 +99,9 @@ nnoremap <leader>p :set paste!<CR>
 " show registers
 nnoremap <leader>r :reg<CR>
 
-" show file buffer
-nnoremap <leader>b :buffers<CR>
+" show file buffer and prepare to type the buffer number + delete the 'more'
+nnoremap <Leader>b :ls<CR>:b<Space>
+nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 
 " tabs
 nnoremap th :tabfirst<CR>
@@ -199,8 +186,9 @@ set tabstop=4
 
 " display tabs, trailing spaces
 set list
-"exec "set listchars=tab:\uBB\uBB,trail:\uB7"
-"let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±,trail:'
+let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
+"let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
+
 " doesn't prompt a warning when opening a file and the current file was
 " written but not saved 
 set hidden
