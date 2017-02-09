@@ -23,8 +23,8 @@ Plug 'shawncplus/phpcomplete.vim'
 
 Plug 'joonty/vdebug'
 " php quality tools (codesniffer, messdetector...)
- Plug 'phux/vim-phpqa'
-" Plug 'neomake/neomake'
+" Plug 'phux/vim-phpqa'
+ Plug 'neomake/neomake'
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -48,7 +48,7 @@ Plug 'jszakmeister/vim-togglecursor'
 
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
- Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
+" Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 
 " Plug 'm2mdas/phpcomplete-extended'
 
@@ -90,7 +90,9 @@ source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 " source ~/nvim/pluggedconf/phpqa.nvimrc
 
-autocmd! BufWritePost,TextChanged * Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_php_enabled_makers = ['php', 'phpcs']
+let g:neomake_php_phpcs_args_standard = 'PSR2'
 " link phpcomplete and deoplete - maybe not necessary
 " autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
