@@ -58,9 +58,6 @@ Plug 'moll/vim-bbye'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" toggle cursor in neovim / tmux
-Plug 'jszakmeister/vim-togglecursor'
-
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
 
@@ -186,6 +183,9 @@ augroup END
 "-----------------
 " general config 
 "-----------------
+
+" change cursor in nvim
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " colorscheme
 colo hypnos
