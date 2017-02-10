@@ -22,8 +22,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " php autocompletion engine
 Plug 'shawncplus/phpcomplete.vim'
-
+Plug '2072/PHP-Indenting-for-VIm'
 Plug 'alvan/vim-php-manual'
+
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
@@ -44,6 +45,12 @@ Plug 'ryanoasis/vim-devicons'
 " status bar
 Plug 'itchyny/lightline.vim'
 
+" undo tree
+Plug 'sjl/gundo.vim'
+
+" registers
+Plug 'vim-scripts/YankRing.vim'
+
 " close the current buffer
 Plug 'moll/vim-bbye'
 
@@ -54,7 +61,9 @@ Plug 'junegunn/fzf.vim'
 " toggle cursor in neovim / tmux
 Plug 'jszakmeister/vim-togglecursor'
 
+" display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
+
 " Require padawan-php via composer
 " Plug 'padawan-php/deoplete-padawan'
 
@@ -98,7 +107,15 @@ call matchadd('ColorColumn', '\%120v', 100)
 " paste mode in order to paste correctly the formating from the clipboard
 " nnoremap <leader>p :set paste!<CR>
 
+" un-highlight when esc is pressed (after search for example)
 map <esc> :noh<cr>
+
+" Enables you to save files with :w!! by using sudo if you forgot to open it as root
+cmap w!! %!sudo tee > /dev/null %" display tabs, trailing spaces
+
+" indent without kill the selection in vmode
+vmap < <gv
+vmap > >gv
 
 " show registers
 nnoremap <leader>r :reg<cr>
@@ -188,10 +205,19 @@ set number
 set clipboard+=unnamedplus
 
 " use 4 spaces instead of tab (to replace existing tab use :retab)
+" copy indent from current line when starting a new line
+set autoindent
 set expandtab
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+" when at 3 spaces, and I hit > ... go to 4, not 7
+set shiftround
 
-" display tabs, trailing spaces
+" Use case insensitive search, except when using capital letters
+set ignorecase
+set smartcase
+
 set list
 let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
 "let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
