@@ -6,7 +6,7 @@ if &compatible
 endif
 
 "-----------------
-" install plugin  
+" install plugin
 "-----------------
 
 " install plugin automatically
@@ -23,6 +23,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " php autocompletion engine
 Plug 'shawncplus/phpcomplete.vim'
 
+Plug 'alvan/vim-php-manual'
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
@@ -75,10 +76,10 @@ source ~/nvim/pluggedconf/neomake.nvimrc
 " source ~/nvim/pluggedconf/phpqa.nvimrc
 
 " close the buffer
-nmap <leader>bd :Bdelete<cr>
+nmap <leader>db :Bdelete<cr>
 
 " map go to definition
-map <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
+map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
 
 "------------------
 " general binding
@@ -103,8 +104,8 @@ map <esc> :noh<cr>
 nnoremap <leader>r :reg<cr>
 
 " show file buffer and prepare to type the buffer number + delete the 'more'
-nnoremap <Leader>b :ls<cr>:b<Space>
-nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <cr>:b<Space>
+nnoremap <leader>b :ls<cr>:b<Space>
+nnoremap <leader>B :ls<cr>:sb<Space>
 
 " tabs
 nnoremap th :tabfirst<CR>
@@ -116,15 +117,15 @@ nnoremap tn :tabnew<CR>
 " windows management
 
 " windows navigation
-nnoremap <Leader>ww <c-w>w
-nnoremap <Leader>wh <c-w>h
-nnoremap <Leader>wj <c-w>j
-nnoremap <Leader>wk <c-w>k
-nnoremap <Leader>wl <c-w>l
+nnoremap <leader>ww <c-w>w
+nnoremap <leader>wh <c-w>h
+nnoremap <leader>wj <c-w>j
+nnoremap <leader>wk <c-w>k
+nnoremap <leader>wl <c-w>l
 
 " windows creation 
-nnoremap <Leader>wb <c-w>s
-nnoremap <Leader>wv <c-w>v
+nnoremap <leader>wb <c-w>s
+nnoremap <leader>wv <c-w>v
 
 " prevent to use arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
