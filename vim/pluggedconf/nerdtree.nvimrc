@@ -1,5 +1,19 @@
 " nerdtree configuration
-nmap <leader>n :NERDTreeToggle<CR>
+
+function! NERDTreeToggleInCurDir()
+  " If NERDTree is open in the current buffer
+  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+    exe ":NERDTreeClose"
+  else
+    if (expand("%:t") != '')
+      exe ":NERDTreeFind"
+    else
+      exe ":NERDTreeToggle"
+    endif
+  endif
+endfunction
+
+nmap <leader>n :call NERDTreeToggleInCurDir()<CR>
 
 " don't display informations (type ? for help and so on)
 let g:NERDTreeMinimalUI = 1

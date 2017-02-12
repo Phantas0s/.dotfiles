@@ -20,28 +20,33 @@ Plug 'tpope/vim-fugitive' | Plug 'airblade/vim-gitgutter'
 " General autocomplete system
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" vim project for one specific vimrc / project + startify for startup cow
+Plug 'amiorin/vim-project'
+Plug 'mhinz/vim-startify'
+
+" general quality tools (codesniffer, messdetector...)
+Plug 'neomake/neomake'
+
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 " php autocompletion engine
 Plug 'shawncplus/phpcomplete.vim'
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'alvan/vim-php-manual'
+
+" php doc autocompletion
+Plug 'tobyS/vmustache'
+Plug 'tobyS/pdv'
 
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 " Plug 'm2mdas/phpcomplete-extended'
 
-" general quality tools (codesniffer, messdetector...)
-" Plug 'phux/vim-phpqa'
-Plug 'neomake/neomake'
-
 " debugger
 Plug 'joonty/vdebug'
-
-"Plug 'vimprj'
-"Plug 'DFrankUtil'
-
-Plug 'amiorin/vim-project'
-Plug 'mhinz/vim-startify'
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -86,6 +91,10 @@ source ~/nvim/projects.nvimrc
 
 " source ~/nvim/pluggedconf/phpqa.nvimrc
 
+" ultisnips
+let g:UltiSnipsExpandTrigger="<C-s>"
+let g:ultisnips_python_style="google"
+
 " close the buffer
 nmap <leader>db :Bdelete<cr>
 
@@ -95,7 +104,12 @@ map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " YankRing - show register
 nnoremap <leader>r :YRShow<cr> 
 
+" Only bookmarks for startify
 let g:startify_list_order = ['bookmarks']
+
+" php docs
+let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
+nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
 
 "------------------
 " general binding
@@ -104,12 +118,11 @@ let g:startify_list_order = ['bookmarks']
 let mapleader = "\\"
 nmap <SPACE> <leader>
 
+" add a line in normal mode
+nmap <leader>o o<esc>
+
 " easy command
 noremap ; :
-
-" highlight the line which is longer than the defined margin (120)
-highlight ColorColumn ctermbg=red
-call matchadd('ColorColumn', '\%120v', 100)
 
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
@@ -147,6 +160,10 @@ nnoremap <leader>wl <c-w>l
 " windows creation 
 nnoremap <leader>wb <c-w>s
 nnoremap <leader>wv <c-w>v
+
+" highlight the line which is longer than the defined margin (120)
+highlight ColorColumn ctermbg=red
+call matchadd('ColorColumn', '\%120v', 100)
 
 " prevent to use arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
