@@ -28,6 +28,7 @@ Plug 'alvan/vim-php-manual'
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
+" Plug 'm2mdas/phpcomplete-extended'
 
 " general quality tools (codesniffer, messdetector...)
 " Plug 'phux/vim-phpqa'
@@ -35,6 +36,12 @@ Plug 'neomake/neomake'
 
 " debugger
 Plug 'joonty/vdebug'
+
+"Plug 'vimprj'
+"Plug 'DFrankUtil'
+
+Plug 'amiorin/vim-project'
+Plug 'mhinz/vim-startify'
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -61,11 +68,6 @@ Plug 'junegunn/fzf.vim'
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
 
-" Require padawan-php via composer
-" Plug 'padawan-php/deoplete-padawan'
-
-" Plug 'm2mdas/phpcomplete-extended'
-
 call plug#end()
 
 "----------------
@@ -79,13 +81,21 @@ source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
 source ~/nvim/pluggedconf/vdebug.nvimrc
 source ~/nvim/pluggedconf/neomake.nvimrc
+source ~/nvim/pluggedconf/project-vim.nvimrc
+source ~/nvim/projects.nvimrc
+
 " source ~/nvim/pluggedconf/phpqa.nvimrc
 
 " close the buffer
 nmap <leader>db :Bdelete<cr>
 
 " map go to definition
-map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
+map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" YankRing - show register
+nnoremap <leader>r :YRShow<cr> 
+
+let g:startify_list_order = ['bookmarks']
 
 "------------------
 " general binding
@@ -102,7 +112,7 @@ highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
 
 " paste mode in order to paste correctly the formating from the clipboard
-" nnoremap <leader>p :set paste!<CR>
+nnoremap <leader>p :set paste!<CR>
 
 " un-highlight when esc is pressed (after search for example)
 map <esc> :noh<cr>
@@ -113,9 +123,6 @@ cmap w!! %!sudo tee > /dev/null %" display tabs, trailing spaces
 " indent without kill the selection in vmode
 vmap < <gv
 vmap > >gv
-
-" show registers
-nnoremap <leader>r :reg<cr>
 
 " show file buffer and prepare to type the buffer number + delete the 'more'
 nnoremap <leader>b :ls<cr>:b<Space>
@@ -219,7 +226,7 @@ set ignorecase
 set smartcase
 
 set list
-let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
+let listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
 "let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
 
 " doesn't prompt a warning when opening a file and the current file was

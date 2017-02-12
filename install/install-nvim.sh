@@ -33,14 +33,15 @@ if [ ! -d $HOME/nvim/plugged ]
     mkdir $HOME/nvim/plugged
 fi
 
-#if [ ! -d $HOME/nvim/pluggedconf ]
-#  then
-#    mkdir $HOME/nvim/pluggedconf
-#fi
-
 if [ ! -d $HOME/nvim/colors ]
   then
     mkdir $HOME/nvim/colors
+fi
+
+if [ ! -f $HOME/nvim/projects.nvimrc ]
+  then
+    echo "${blue} installing template project file for neovim"
+    cp $HOME/$ROOT_CONFIG/vim/projects.nvimrc $HOME/nvim/projects.nvimrc
 fi
 
 ln -s -f $HOME/$ROOT_CONFIG/vim/pluggedconf $HOME/nvim/pluggedconf
