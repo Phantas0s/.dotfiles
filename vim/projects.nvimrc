@@ -7,4 +7,13 @@
 " Project  'project'
 " Callback 'project'                               , 'RemoveTextWidth'
 
-" let g:startify_bookmarks = [ {'c': '~/.vimrc'}, '~/.zshrc' ]
+" function! RemoveTextWidth(...) abort
+" let g:variable = value
+" endfunction
+
+" let g:startify_bookmarks = [ 
+            \ {'l': '/var/www/'},
+            \ {'L': '/var/www/'},
+            \ {'s': '/var/www/'},
+            \ {'.': '~'},
+            \ ]
