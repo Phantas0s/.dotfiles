@@ -17,6 +17,5 @@ let g:vdebug_keymap = {
 \}
 
 " map the project when used in a vagrant / vm | vm path : host past
-" let g:vdebug_options["path_maps"] = {
-"     \       "/var/www/logistic/current": "/var/www/logistic"
-" \}
+let g:vdebug_options["path_maps"] = {
+\}
