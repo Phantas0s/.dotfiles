@@ -118,6 +118,14 @@ URxvt.tabbed*transparent:true
 !urxvt*matcher.launcher.<number>:
 URxvt.letterSpace: -1
 
+urxvt*depth: 32
+urxvt*background: rgba:0031/0032/0034/dddd
+
+urxvt*geometry:      100x30
+urxvt*highlightSelection: true
+urxvt*shading: 10
+urxvt*blurRadius: 5
+
 Xft.dpi:        96
 Xft.rgba:       rgb
 Xft.hinting:    true
