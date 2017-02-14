@@ -91,7 +91,6 @@ source ~/nvim/projects.nvimrc
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
-let g:ultisnips_python_style="google"
 
 " close the buffer
 nmap <leader>db :Bdelete<cr>

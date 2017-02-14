@@ -1,0 +1,46 @@
+snippet ns "namespace declaration" b
+namespace ${1:`!p
+abspath = os.path.abspath(path)
+m = re.search(r'[A-Z].+(?=/)', abspath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+endsnippet
+
+snippet class "Class declaration template" b
+<?php
+
+namespace ${1:`!p
+abspath = os.path.abspath(path)
+m = re.search(r'[A-Z].+(?=/)', abspath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+/**
+ * Class ${1:`!p snip.rv=snip.basename`}
+ */
+class $1
+{
+}
+endsnippet
+
+snippet interface "Interface declaration template" b
+<?php
+
+namespace ${1:`!p
+abspath = os.path.abspath(path)
+m = re.search(r'[A-Z].+(?=/)', abspath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+/**
+ * Interface ${1:`!p snip.rv=snip.basename`}
+ */
+interface $1
+{
+	public function ${3:someFunction}();$4
+	}
+endsnippet
+

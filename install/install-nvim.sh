@@ -38,6 +38,11 @@ if [ ! -d $HOME/nvim/colors ]
     mkdir $HOME/nvim/colors
 fi
 
+if [ ! -d $HOME/nvim/UltiSnips ]
+  then
+    mkdir $HOME/nvim/UltiSnips
+fi
+
 if [ ! -f $HOME/nvim/projects.nvimrc ]
   then
     echo "${blue} installing template project file for neovim"
@@ -46,5 +51,6 @@ fi
 
 ln -s -f $HOME/$ROOT_CONFIG/vim/pluggedconf $HOME/nvim/pluggedconf
 ln -s -f $HOME/$ROOT_CONFIG/vim/colors/* $HOME/nvim/colors
+ln -s -f $HOME/$ROOT_CONFIG/vim/UltiSnips/* $HOME/nvim/UltiSnips
 
 echo "${green}...done"
