@@ -1,18 +1,19 @@
 " Key mapping
 nmap <leader>f :Files<cr>
 nmap <leader>h :History<cr>
+nmap <leader>b :Buffers<cr>
 
 nnoremap <leader>a :Ag<space>
 nnoremap <leader>A :exec "Ag ".expand("<cword>")<cr>
 
-" Ack for ag to work with fzf (from Jan Mollowitz)
+" Ack for ag to work with fzf (from Phux)
 function! s:ag_to_qf(line)
   let parts = split(a:line, ':')
   return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],
         \ 'text': join(parts[3:], ':')}
 endfunction
 
-" Ack for ag to work with fzf (from Jan Mollowitz)
+" Ack for ag to work with fzf (from Phux)
 function! s:ag_handler(lines)
   if len(a:lines) < 2 | return | endif
 
@@ -32,6 +33,7 @@ function! s:ag_handler(lines)
     wincmd p
   endif
 endfunction
+
 autocmd VimEnter * command! -nargs=* Ag call fzf#run({
 \ 'source':  printf('ag --nogroup --column --color "%s"',
 \                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),

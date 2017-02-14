@@ -1,13 +1,17 @@
 # set the keyboard to mac
 setxkbmap us mac
 
+# disable the touchpad when the keyboard is used
+syndaemon -R -k -i 0.5 -d
+
 # maps caps lock to escape for vim 
-#setxkbmap -option caps:escape 
 setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
+
 # merge .Xressources file
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 # exec i3
 exec i3
+
 # exec vmware tools
 exec vmware-user-suid-wrapper

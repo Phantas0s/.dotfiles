@@ -262,11 +262,11 @@ bar {
 }
 
 # lockscreen
-set $i3lockwall i3lock -i ~/.terminal_config/i3/lock_wallpapers/mountain_red_sky.png -t
+set $i3lockwall i3lock -i ~/.terminal_config/i3/lock_wallpapers/lasers-red.png -t
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 #wallpaper and transparency
-exec --no-startup-id feh --bg-scale ~/.terminal_config/i3/lock_wallpapers/mountain_red_sky.png
+exec --no-startup-id feh --bg-scale ~/.terminal_config/i3/lock_wallpapers/DerwentWaterBillCliff.jpg
 exec --no-startup-id compton -b --config /dev/null --backend xrender --vsync opengl
 
 # shutdown / restart / suspend...

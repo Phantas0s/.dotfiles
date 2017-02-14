@@ -89,8 +89,6 @@ source ~/nvim/pluggedconf/neomake.nvimrc
 source ~/nvim/pluggedconf/project-vim.nvimrc
 source ~/nvim/projects.nvimrc
 
-" source ~/nvim/pluggedconf/phpqa.nvimrc
-
 " ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
 let g:ultisnips_python_style="google"
@@ -127,6 +125,7 @@ noremap ; :
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
 
+
 " un-highlight when esc is pressed (after search for example)
 map <esc> :noh<cr>
 
@@ -137,9 +136,11 @@ cmap w!! %!sudo tee > /dev/null %" display tabs, trailing spaces
 vmap < <gv
 vmap > >gv
 
-" show file buffer and prepare to type the buffer number + delete the 'more'
-nnoremap <leader>b :ls<cr>:b<Space>
-nnoremap <leader>B :ls<cr>:sb<Space>
+" Replace easily every occurence of the word under the cursor
+nnoremap <leader>[ :%s/<c-r><c-w>/<c-r><c-w>/g<left><left>
+
+" reformat html -> each tag on own row
+nmap <leader><F3> :%s/<[^>]*>/\r&\r/g<cr>gg=G:g/^$/d<cr><leader>/
 
 " tabs
 nnoremap th :tabfirst<CR>
@@ -249,3 +250,6 @@ let listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
 " doesn't prompt a warning when opening a file and the current file was
 " written but not saved 
 set hidden
+
+" doesn't display the mode status
+set noshowmode

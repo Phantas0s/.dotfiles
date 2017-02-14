@@ -116,10 +116,10 @@ URxvt.tabbed*transparent:true
 !urxvt*matcher.button:
 !urxvt*matcher.pattern.<number>:
 !urxvt*matcher.launcher.<number>:
-URxvt.letterSpace: -1
+!URxvt.letterSpace: -1
 
 urxvt*depth: 32
-urxvt*background: rgba:0031/0032/0034/dddd
+urxvt*background: rgba:0031/0032/0034/ddee
 
 urxvt*geometry:      100x30
 urxvt*highlightSelection: true
