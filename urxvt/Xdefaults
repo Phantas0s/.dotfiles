@@ -6,53 +6,53 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-urxvt*font: xft:Inconsolata Nerd Font:size=14:pixelsize=16:antialias=true
-!urxvt*boldFont: xft:Inconsolata Nerd Font:size=14:pixelsize=16:antialias=true
+URxvt*font: xft:Inconsolata Nerd Font:style=Medium:size=14:pixelsize=16:antialias=true
+!URxvt*boldFont: xft:Inconsolata Nerd Font:style=Bold:size=14:pixelsize=16:antialias=true
 
-urxvt*intensityStyles: true
-urxvt*linespace: 0
+URxvt*intensityStyles: true
+URxvt*linespace: 0
 
-urxvt*geometry: 100x30
-urxvt*borderLess: false
-urxvt*externalBorder: 0
-urxvt*internalBorder: 0
+URxvt*geometry: 100x30
+URxvt*borderLess: false
+URxvt*externalBorder: 0
+URxvt*internalBorder: 0
 
-urxvt*scrollBar: false
+URxvt*scrollBar: false
 
-urxvt*cursorColor: #ffffff
-urxvt*cursorColor2: #000000
-urxvt*cursorBlink: false
-urxvt*reverseVideo: false
+URxvt*cursorColor: #ffffff
+URxvt*cursorColor2: #000000
+URxvt*cursorBlink: false
+URxvt*reverseVideo: false
 
-urxvt*depth: 32
-urxvt*background: rgba:0031/0032/0034/ddee
+URxvt*depth: 32
+URxvt*background: rgba:0031/0032/0034/ddee
 
-urxvt*pointerBlank: false
-urxvt*inheritPixmap: false
+URxvt*pointerBlank: false
+URxvt*inheritPixmap: false
 
-urxvt*insecure: false
-urxvt*termName: rxvt-unicode
-urxvt*loginShell: true
-urxvt*hold: false
-urxvt*saveLines: 5000
-urxvt*jumpScroll: true
-urxvt*skipScroll: true
-urxvt*scrollTtyOutput: false
-urxvt*scrollWithBuffer: false
-urxvt*scrollTtyKeypress: true
-urxvt*mouseWheelScrollPage: false
+URxvt*insecure: false
+URxvt*termName: rxvt-unicode
+URxvt*loginShell: true
+URxvt*hold: false
+URxvt*saveLines: 5000
+URxvt*jumpScroll: true
+URxvt*skipScroll: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+URxvt*scrollTtyKeypress: true
+URxvt*mouseWheelScrollPage: false
 
-urxvt*tripleclickwords: true
-urxvt*cutchars: `'",;@&*=|?()<>[]{}
-urxvt*pastableTabs: false
-urxvt*mapAlert: false
+URxvt*tripleclickwords: true
+URxvt*cutchars: `'",;@&*=|?()<>[]{}
+URxvt*pastableTabs: false
+URxvt*mapAlert: false
 
-urxvt*urgentOnBell: false
-urxvt*visualBell: false
-urxvt*utmpInhibit: false
+URxvt*urgentOnBell: false
+URxvt*visualBell: false
+URxvt*utmpInhibit: false
 
 !! Perl Extensions !!
-urxvt*perl-ext-common: default,tabbed
+URxvt*perl-ext-common: default,tabbed
 
 URxvt.tabbed.tabbar-fg: 15 
 URxvt.tabbed.tabbar-bg: 235 
