@@ -366,10 +366,10 @@ function prompt_garrett_setup
 	zstyle ':prezto:module:git:info:commit'    format "${yellow} %.7c"
 
 	# Git remote status
-	zstyle ':prezto:module:git:info:behind'    format "${magenta} ⬇"
-	zstyle ':prezto:module:git:info:ahead'     format "${magenta} ⬆"
-	zstyle ':prezto:module:git:info:diverged'  format "${magenta} ⥮"
-	zstyle ':prezto:module:git:info:stashed'   format "${red} ✭"
+	zstyle ':prezto:module:git:info:behind'    format "${magenta}⬇"
+	zstyle ':prezto:module:git:info:ahead'     format "${magenta}⬆"
+	zstyle ':prezto:module:git:info:diverged'  format "${magenta}⥮"
+	zstyle ':prezto:module:git:info:stashed'   format "${red}✭"
 
 	# Git local status
 	zstyle ':prezto:module:git:info:clean'     format ""
