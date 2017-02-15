@@ -3,4 +3,7 @@ source ${ZDOTDIR:-$HOME}/.terminal_config/startup
 # Fix bug when prompt has two lines
 bindkey -s '^l' 'clear\n'
 
+# Vi mode
+bindkey -v
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
