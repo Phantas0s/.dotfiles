@@ -15,3 +15,5 @@ exec i3
 
 # exec vmware tools
 exec vmware-user-suid-wrapper
+
+urxvtd -q -f -o
