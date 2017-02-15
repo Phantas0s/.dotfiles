@@ -6,52 +6,29 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-urxvt*font: xft:Inconsolata Nerd Font:size=12:pixelsize=16:antialias=true
-!urxvt*boldFont: xft:Inconsolata:size=14
-!urxvt*italicFont:
-!urxvt*boldItalicFont:
+urxvt*font: xft:Inconsolata Nerd Font:size=14:pixelsize=16:antialias=true
+!urxvt*boldFont: xft:Inconsolata Nerd Font:size=14:pixelsize=16:antialias=true
+
 urxvt*intensityStyles: true
-urxvt*skipBuiltinGlyphs: true
 urxvt*linespace: 0
 
-!urxvt*title:
-!urxvt*iconName:
 urxvt*geometry: 100x30
 urxvt*borderLess: false
 urxvt*externalBorder: 0
-urxvt*internalBorder: 2
-!urxvt*borderColor:
-urxvt*scrollBar: false
-!urxvt*scrollstyle:
-!urxvt*scrollBar_right:
-!urxvt*scrollBar_floating:
-!urxvt*scrollBar_align:
-!urxvt*scrollColor:
-!urxvt*troughColor:
+urxvt*internalBorder: 0
 
-!urxvt*colorRV:
-!urxvt*colorBD:
-!urxvt*colorIT:
-!urxvt*colorUL:
-!urxvt*underlineColor:
-!urxvt*highlightColor:
+urxvt*scrollBar: false
+
 urxvt*cursorColor: #ffffff
 urxvt*cursorColor2: #000000
 urxvt*cursorBlink: false
 urxvt*reverseVideo: false
-!urxvt*fading:
-!urxvt*fadeColor:
-!urxvt*pointerColor:
-!urxvt*pointerColor2:
+
+urxvt*depth: 32
+urxvt*background: rgba:0031/0032/0034/ddee
+
 urxvt*pointerBlank: false
-!urxvt*pointerBlankDelay:
-!urxvt*backgroundPixmap:
-!urxvt*path:
 urxvt*inheritPixmap: false
-!urxvt*tintColor:
-!urxvt*shading:
-!urxvt*blendType:
-!urxvt*blurRadius:
 
 urxvt*insecure: false
 urxvt*termName: rxvt-unicode
@@ -64,72 +41,24 @@ urxvt*scrollTtyOutput: false
 urxvt*scrollWithBuffer: false
 urxvt*scrollTtyKeypress: true
 urxvt*mouseWheelScrollPage: false
-!urxvt*secondaryScreen:
-!urxvt*secondaryScroll:
-!urxvt*selectstyle:
+
 urxvt*tripleclickwords: true
 urxvt*cutchars: `'",;@&*=|?()<>[]{}
 urxvt*pastableTabs: false
 urxvt*mapAlert: false
+
 urxvt*urgentOnBell: false
 urxvt*visualBell: false
 urxvt*utmpInhibit: false
-!urxvt*print-pipe:
-!urxvt*modifier:
-!urxvt*preeditType:
-!urxvt*inputMethod:
-!urxvt*imLocale:
-!urxvt*imFont:
-!urxvt*meta8:
-!urxvt*answerbackString:
-!urxvt*backspacekey:
-!urxvt*deletekey:
-!urxvt*keysym.<keys>:
 
 !! Perl Extensions !!
-!! Available extensions: default, automove-background, block-graphics-to-ascii,
-!! digital-clock, example-refresh-hooks, kuake, macosx-clipboard, matcher,
-!! option-popup, readline, remote-clipboard, searchable-scrollback, selection,
-!! selection-autotransform, selection-pastebin, selection-popup, tabbed,
-!! urxvt-popup, xim-onthespot
 urxvt*perl-ext-common: default,tabbed
-!urxvt*perl-ext:
-!urxvt*perl-eval:
-!urxvt*perl-lib:
-!urxvt*selection.pattern-<number>:
-!urxvt*selection-autotransform.<number>:
-!urxvt*searchable-scrollback:
-!urxvt*urlLauncher:
-!urxvt*transient-for:
-!urxvt*override-redirect:
-!urxvt*iso14755_52:
-!urxvt*tabbed.tabbar-bg: 0 
-!urxvt*tabbed.tabbar-fg: 0
-!urxvt*tabbed.tab-bg: 0
-!urxvt*tabbed.tab-fg: 0
+
 URxvt.tabbed.tabbar-fg: 15 
 URxvt.tabbed.tabbar-bg: 235 
 URxvt.tabbed.tab-fg: 110
 URxvt.tabbed.tab-bg: 235 
 URxvt.tabbed*transparent:true
 
-!urxvt*matcher.button:
-!urxvt*matcher.pattern.<number>:
-!urxvt*matcher.launcher.<number>:
-URxvt.letterSpace: -1
-
-urxvt*depth: 32
-urxvt*background: rgba:0031/0032/0034/ddee
-
-urxvt*geometry:      100x30
-urxvt*highlightSelection: true
-urxvt*shading: 10
-urxvt*blurRadius: 5
-
-Xft.dpi:        96
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.autohint:   false
-Xft.hintstyle:  hintslight
-Xft.antialias:  true
+!URxvt.letterSpace: -1
 
