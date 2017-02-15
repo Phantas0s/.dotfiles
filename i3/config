@@ -140,7 +140,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec i3-msg exit
+bindsym $mod+Shift+F12 exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -178,6 +178,12 @@ for_window [class="Arandr"] floating enable
 for_window [class="Gcolor2"] floating enable
 for_window [class="Keepassx"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
 # resize correctly in vmware
 exec --no-startup-id vmware-user-suid-wrapper
