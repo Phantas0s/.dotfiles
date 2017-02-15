@@ -13,7 +13,6 @@ font pango:Inconsolata 12
 floating_modifier $mod
 
 # bindsym $mod+Return exec i3-sensible-terminal
-exec --no-startup-id "urxvtd -q -f -o"
 bindsym $mod+Return exec urxvtc
 
 # kill focused window
@@ -84,10 +83,6 @@ bindsym $mod+a focus parent
 bindsym $mod+F11 exec amixer -D pulse set Master 5%-
 bindsym $mod+F12 exec amixer -D pulse set Master 5%+
 bindsym $mod+F10 exec amixer -D pulse set Master toggle
-
-# brightness control
-bindsym $mod+F1 exec xbacklight - 10
-bindsym $mod+F2 exec xbacklight + 10
 
 #############
 # workspace #
@@ -193,6 +188,11 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
+
+# Terminal scratchpad
+for_window [title="urxvt_scratchpad"] move to scratchpad
+bindsym $mod+Shift+t [title="urxvt_scratchpad"] scratchpad show
+exec urxvtc -name urxvt_scratchpad
 
 # resize correctly in vmware
 exec --no-startup-id vmware-user-suid-wrapper
