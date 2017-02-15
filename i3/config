@@ -80,6 +80,15 @@ bindsym $mod+a focus parent
 # focus the child container
 # bindsym $mod+d focus child
 
+# volume control
+bindsym $mod+F11 exec amixer -D pulse set Master 5%-
+bindsym $mod+F12 exec amixer -D pulse set Master 5%+
+bindsym $mod+F10 exec amixer -D pulse set Master toggle
+
+# brightness control
+bindsym $mod+F1 exec xbacklight - 10
+bindsym $mod+F2 exec xbacklight + 10
+
 #############
 # workspace #
 #############
