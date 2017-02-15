@@ -20,3 +20,4 @@ fi
 source $SCRIPT_PATH/aliases/aliases
 source $SCRIPT_PATH/aliases/aliases_projects
 source $SCRIPT_PATH/env  
+screenfetch
