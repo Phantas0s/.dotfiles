@@ -48,6 +48,9 @@ Plug 'tobyS/pdv'
 " debugger
 Plug 'joonty/vdebug'
 
+" outline
+Plug 'majutsushi/tagbar'
+
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -252,3 +255,7 @@ set hidden
 
 " doesn't display the mode status
 set noshowmode
+
+" no swap file!
+set noswapfile
+

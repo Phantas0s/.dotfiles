@@ -1,10 +1,10 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
 # set the modifier (Mod4: cmd)
 set $mod Mod4
 
+bindsym $mod+u border none
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Inconsolata 12
@@ -19,7 +19,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn Inconsolata
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -120,7 +120,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # can use xprop - WM_CLASS(STRING) = "urxvt", "URxvt"
 
 #assign [class="URxvt" instance="urxvt"] → $terminal
-assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
+#assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
 assign [class="Firefox" instance="Navigator"] → $browser
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
 
@@ -180,7 +180,6 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="Keepassx"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Gcolor2"] floating enable
-for_window [class="Keepassx"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 
 # Terminal scratchpad

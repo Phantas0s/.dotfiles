@@ -42,6 +42,8 @@ alias la='ls -alh'
 # clean the vim swap file
 alias nvimc='rm -I ~/nvim/swap/*'
 alias nvimcu='rm -I ~/nvim/undo/*'
+alias vim='nvim'
+alias vi='nvim'
 
 # git
 alias gs='git status '
@@ -78,6 +80,9 @@ alias tare='tar xzvf'
 # see tar table of content
 alias tars='tar tzf'
 alias tarc='tar cvzf'
+
+# nemo
+alias nemo='nemo --no-desktop'
 
 # docker
 # display the ip address of a container
