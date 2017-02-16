@@ -115,6 +115,7 @@ nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
 " general binding
 "------------------
 
+" Weird hack for NERDTree to work
 let mapleader = "\\"
 nmap <SPACE> <leader>
 
