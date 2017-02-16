@@ -124,7 +124,7 @@ assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
 assign [class="Firefox" instance="Navigator"] → $browser
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
 
-# start software in a workspace
+# start softwares in workspaces
 exec --no-startup-id i3-msg workspace $terminal; exec /usr/bin/urxvtc
 
 # assign monitor output to worspace 
@@ -184,8 +184,8 @@ for_window [class="Keepassx"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 
 # Terminal scratchpad
-for_window [title="urxvt_scratchpad"] move to scratchpad
-bindsym $mod+Shift+t [title="urxvt_scratchpad"] scratchpad show
+for_window [instance="urxvt_scratchpad"] move to scratchpad, border 1pixel
+bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
 exec urxvtc -name urxvt_scratchpad
 
 # htop scratchpad
