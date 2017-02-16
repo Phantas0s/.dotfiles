@@ -12,10 +12,10 @@ setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
 # merge .Xressources file
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
+# exec vmware tools
+vmware-user-suid-wrapper
+
 # exec i3
 exec i3
-
-# exec vmware tools
-exec vmware-user-suid-wrapper
 
 

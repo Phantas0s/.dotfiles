@@ -220,6 +220,7 @@ set_from_resource $cursorColor cursorColor #000000
 # black
 set_from_resource $black1 color0 #000000
 set_from_resource $black2 color8 #000000
+set $trueblack #000000
 
 # red
 set_from_resource $red1 color1 #000000
@@ -237,10 +238,6 @@ set_from_resource $yellow2 color11 #000000
 set_from_resource $blue1 color4 #000000
 set_from_resource $blue2 color12 #000000
 
-# magenta
-set_from_resource $magenta1 color5 #000000
-set_from_resource $magenta2 color13 #000000
-
 # cyan
 set_from_resource $cyan1 color6 #000000
 set_from_resource $cyan2 color14 #000000
@@ -251,7 +248,7 @@ set_from_resource $white2 color15 #000000
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #333333 $white1 $white2 #285577
-client.focused_inactive #333333 $background $foreground #484e50   
+client.focused_inactive #333333 $background $foreground #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           $red1   $red1   #ffffff $red1     $red1
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -263,15 +260,15 @@ bar {
         tray_output primary
         colors {
             background $black1
-            statusline #ffffff
-            separator #666666
+            statusline $white2
+            separator #bbbbbb
 
             #                  border background text
-            focused_workspace  $red2  $red1 $white2 
+            focused_workspace  $red1 $black2 $white2
             active_workspace   $background $background $foreground 
             inactive_workspace $background $background $foreground
-            urgent_workspace   #2f343a #900000 #ffffff
-            binding_mode       #2f343a #900000 #ffffff
+            urgent_workspace   $background $red1 $white2
+            binding_mode       $background $red2 $white2
         }
 }
 
@@ -285,6 +282,7 @@ exec --no-startup-id compton -b --config /dev/null --backend xrender --vsync ope
 
 # shutdown / restart / suspend...
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Ctrl+s) shutdown
+
 mode "$mode_system" {
     bindsym l exec --no-startup-id $i3lockwall, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
