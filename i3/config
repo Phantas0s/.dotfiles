@@ -183,16 +183,15 @@ for_window [class="Gcolor2"] floating enable
 for_window [class="Keepassx"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 
-# Make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Show the first scratchpad window
-bindsym $mod+minus scratchpad show
-
 # Terminal scratchpad
 for_window [title="urxvt_scratchpad"] move to scratchpad
 bindsym $mod+Shift+t [title="urxvt_scratchpad"] scratchpad show
 exec urxvtc -name urxvt_scratchpad
+
+# htop scratchpad
+for_window [instance="htop_scratchpad"] move to scratchpad, border 1pixel
+bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
+exec urxvtc -name htop_scratchpad -e htop
 
 # resize correctly in vmware
 exec --no-startup-id vmware-user-suid-wrapper

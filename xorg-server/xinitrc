@@ -4,7 +4,7 @@ urxvtd -o -q -f
 setxkbmap us mac
 
 # disable the touchpad when the keyboard is used
-syndaemon -R -k -i 0.5 -d
+# syndaemon -R -k -i 0.5 -d
 
 # maps caps lock to escape for vim 
 setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
