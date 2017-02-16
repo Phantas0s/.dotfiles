@@ -185,7 +185,7 @@ for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 # Terminal scratchpad
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border 1pixel
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad
+exec urxvtc -name urxvt_scratchpad -e 'tmux new -s scratchpad'
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border 1pixel
@@ -272,7 +272,7 @@ bar {
 }
 
 # lockscreen
-set $i3lockwall i3lock -i ~/.terminal_config/i3/lock_wallpapers/lasers-red.png -t
+set $i3lockwall i3lock -i ~/.terminal_config/i3/lock_wallpapers/red_puzzle.png -t
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 #wallpaper and transparency
