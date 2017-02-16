@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'hypnos256',
       \ }
 
 function! MyFiletype()

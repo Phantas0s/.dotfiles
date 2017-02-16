@@ -43,6 +43,12 @@ if [ ! -d $HOME/nvim/UltiSnips ]
     mkdir $HOME/nvim/UltiSnips
 fi
 
+# installing colorscheme for lightline
+if [ ! -f $HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim ]
+  then
+    ln -s $HOME/$ROOT_CONFIG/vim/plugged/lightline.vim/colorscheme/hypnos256.vim $HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim
+fi
+
 if [ ! -f $HOME/nvim/projects.nvimrc ]
   then
     echo "${blue} installing template project file for neovim"
