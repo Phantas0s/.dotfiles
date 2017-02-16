@@ -91,12 +91,13 @@ bindsym $mod+F10 exec amixer -D pulse set Master toggle
 set $terminal "1: terminal"
 set $browser "2: browser"
 set $sql "3: sql"
+set $file_manager "4: files"
 
 # switch to workspace
 bindsym $mod+1 workspace $terminal
 bindsym $mod+2 workspace $browser
 bindsym $mod+3 workspace $sql
-bindsym $mod+4 workspace 4
+bindsym $mod+4 workspace $file_manager
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -108,7 +109,7 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace $terminal
 bindsym $mod+Shift+2 move container to workspace $browser
 bindsym $mod+Shift+3 move container to workspace $sql
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+4 move container to workspace $file_manager
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -123,6 +124,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
 assign [class="Firefox" instance="Navigator"] → $browser
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
+assign [class="Nemo" instance="nemo"] → $file_manager
 
 # start softwares in workspaces
 exec --no-startup-id i3-msg workspace $terminal; exec /usr/bin/urxvtc
@@ -183,12 +185,12 @@ for_window [class="Gcolor2"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 
 # Terminal scratchpad
-for_window [instance="urxvt_scratchpad"] move to scratchpad, border 1pixel
+for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad -e 'tmux new -s scratchpad'
+exec urxvtc -name urxvt_scratchpad -e tmux -2 new-session -A -s scratchpad
 
 # htop scratchpad
-for_window [instance="htop_scratchpad"] move to scratchpad, border 1pixel
+for_window [instance="htop_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
 exec urxvtc -name htop_scratchpad -e htop
 
