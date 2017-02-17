@@ -128,7 +128,6 @@ noremap ; :
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
 
-
 " un-highlight when esc is pressed (after search for example)
 map <esc> :noh<cr>
 
