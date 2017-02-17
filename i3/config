@@ -128,14 +128,14 @@ bindsym $mod+F10 exec amixer -D pulse set Master toggle
 # workspace #
 #############
 
-set $terminal "1: terminal"
-set $browser "2: browser"
+set $terms "1: terms"
+set $web "2: web"
 set $sql "3: sql"
 set $file_manager "4: files"
 
 # switch to workspace
-bindsym $mod+1 workspace $terminal
-bindsym $mod+2 workspace $browser
+bindsym $mod+1 workspace $terms
+bindsym $mod+2 workspace $web
 bindsym $mod+3 workspace $sql
 bindsym $mod+4 workspace $file_manager
 bindsym $mod+5 workspace 5
@@ -146,8 +146,8 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $terminal
-bindsym $mod+Shift+2 move container to workspace $browser
+bindsym $mod+Shift+1 move container to workspace $terms
+bindsym $mod+Shift+2 move container to workspace $web
 bindsym $mod+Shift+3 move container to workspace $sql
 bindsym $mod+Shift+4 move container to workspace $file_manager
 bindsym $mod+Shift+5 move container to workspace 5
@@ -160,21 +160,21 @@ bindsym $mod+Shift+0 move container to workspace 10
 # bind software to workspace
 # can use xprop - WM_CLASS(STRING) = "urxvt", "URxvt"
 
-#assign [class="URxvt" instance="urxvt"] → $terminal
+#assign [class="URxvt" instance="urxvt"] → $terms
 #assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
-assign [class="Firefox" instance="Navigator"] → $browser
+assign [class="Firefox" instance="Navigator"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
 assign [class="Nemo" instance="nemo"] → $file_manager
 
 # start softwares in workspaces
-exec --no-startup-id i3-msg workspace $terminal; exec /usr/bin/urxvtc
+exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc
 
 # assign monitor output to worspace 
 
 # set $mainMonitor 'Virtual2'
 
-# workspace $terminal output $lapmonitor
-# workspace $browser output $lapmonitor
+# workspace $terms output $lapmonitor
+# workspace $web output $lapmonitor
 # workspace $sql output $lapmonitor
 
 ####################
@@ -261,20 +261,20 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/.i3/i3status.conf
-        tray_output primary
-        colors {
-            background $black2
-            statusline $white2
-            separator #bbbbbb
+    status_command i3status --config ~/.i3/i3status.conf
+    tray_output primary
+    colors {
+        background $black2
+        statusline $white2
+        separator #bbbbbb
 
-            #                  border background text
-            focused_workspace  $background $background $red1
-            active_workspace   $black2 $black1 $white2
-            inactive_workspace $black1 $black2 $foreground
-            urgent_workspace   $red1 $red1 $white2
-            binding_mode       $background $red2 $white2
-        }
+        #                  border background text
+        focused_workspace  $background $background $red1
+        active_workspace   $black2 $black1 $white2
+        inactive_workspace $black1 $black2 $foreground
+        urgent_workspace   $red1 $red1 $white2
+        binding_mode       $background $red2 $white2
+    }
 }
 
 # lockscreen
