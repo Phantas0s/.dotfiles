@@ -38,9 +38,6 @@ endfunction
 " enable markers - verification in order of the arguments
 let g:neomake_php_enabled_makers = ['php', 'phpcs']
 
-" standard phpcs config
-let g:neomake_php_phpcs_args_standard = 'PSR2'
-
 " Display the error window if a php syntax error is detected
 function! OpenQfixIfSyntaxError()
     :w

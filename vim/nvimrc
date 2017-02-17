@@ -39,6 +39,7 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'alvan/vim-php-manual'
 Plug 'StanAngeloff/php.vim'
+Plug 'stephpy/vim-php-cs-fixer'
 
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
@@ -219,7 +220,6 @@ augroup reload_vimrc
 augroup END
 
 " Switch between phpunit and classes
-
 function! SwitchBetweenPhpunitAndClasses()
     let f = bufname("%")
     if f =~ '.php'
@@ -243,7 +243,44 @@ function! SwitchBetweenPhpunitAndClasses()
     endif
 endfunction
 
-" switch between phpunit and class for symfony2
+" Parameters:
+"
+" fileExtension: the file extension this script should act on, i.e. 'php'
+" (without dot)
+"
+" firstDirBeginning: a file path that identifies the first type
+" of paths, i.e. 'tests/unit/'
+"
+" secondDirBeginning: a file path pattern that identifies the second type
+" of paths, i.e. 'src/'
+"
+" filenameAddition: string that should be removed from the first filename and
+" added to the second, i.e. 'Test' if your testfile filename has the suffix
+" 'Test' as in /path/MyServiceTest.php
+function! SwitchBetweenFilesSymfony(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition)
+    let f = bufname("%")
+    if f =~ '.'.a:fileExtension
+        if f =~ a:firstDirBeginning && f =~ a:filenameAddition.'\.'.a:fileExtension
+            let filename = substitute(substitute(f, a:firstDirBeginning, 'Bundle/', ''), a:filenameAddition, '', '')
+            if !filereadable(filename)
+                let new_dir = substitute(filename, '/\w\+\.'.a:fileExtension, '', '')
+                exe ":!mkdir -p ".new_dir
+            endif
+            exe ":e ".filename
+        elseif f =~ a:secondDirBeginning && f !~ a:filenameAddition.'\.'.a:fileExtension
+            let filename = substitute(substitute(f, a:secondDirBeginning, a:firstDirBeginning, ''), '.'.a:fileExtension, a:filenameAddition.'.'.a:fileExtension, '')
+            if !filereadable(filename)
+                let new_dir = substitute(filename, '/\w\+'.a:filenameAddition.'\.'.a:fileExtension, '', '')
+                exe ":!mkdir -p ".new_dir
+            endif
+            exe ":e ".filename
+        else
+            echom "Could not switch because needed patterns not matched."
+        endif
+    endif
+endfunction
+
+" switch between phpunit and class for symfony
 function! SymfonySwitchToAlternateFile()
   let l:f = expand('%')
   let l:preceedingDirsToKeep = 2
@@ -273,9 +310,6 @@ function! SymfonySwitchToAlternateFile()
   endif
 
 endfunction
-
-nnoremap <leader>t :call SwitchBetweenPhpunitAndClasses()
-nmap <leader>ta :call SymfonySwitchToAlternateFile()<cr>
 
 "-----------------
 " general config 
