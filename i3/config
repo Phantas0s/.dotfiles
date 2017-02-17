@@ -251,7 +251,6 @@ workspace_auto_back_and_forth yes
 # hide borders
 hide_edge_borders both
 
-
 # class                 border  backgr. text    indicator child_border
 client.focused          #333333 $white1 $white2 #285577
 client.focused_inactive #333333 $background $foreground #484e50
@@ -265,15 +264,15 @@ bar {
         status_command i3status --config ~/.i3/i3status.conf
         tray_output primary
         colors {
-            background $black1
+            background $black2
             statusline $white2
             separator #bbbbbb
 
             #                  border background text
-            focused_workspace  $red1 $black2 $white2
-            active_workspace   $background $background $foreground 
-            inactive_workspace $background $background $foreground
-            urgent_workspace   $background $red1 $white2
+            focused_workspace  $background $background $red1
+            active_workspace   $black2 $black1 $white2
+            inactive_workspace $black1 $black2 $foreground
+            urgent_workspace   $red1 $red1 $white2
             binding_mode       $background $red2 $white2
         }
 }
