@@ -24,8 +24,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'amiorin/vim-project'
 Plug 'mhinz/vim-startify'
 
-" general quality tools (codesniffer, messdetector...)
+" general quality tools 
 Plug 'neomake/neomake'
+
+" comment automatically
+Plug 'scrooloose/nerdcommenter'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -35,10 +38,10 @@ Plug 'honza/vim-snippets'
 Plug 'shawncplus/phpcomplete.vim'
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'alvan/vim-php-manual'
+Plug 'StanAngeloff/php.vim'
 
 " php doc autocompletion
-Plug 'tobyS/vmustache'
-Plug 'tobyS/pdv'
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
@@ -69,7 +72,7 @@ Plug 'vim-scripts/YankRing.vim'
 " close the current buffer
 Plug 'moll/vim-bbye'
 
-" fzf - poweful file searching 
+" fzf - poweful search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -171,6 +174,10 @@ nnoremap <leader>wv <c-w>v
 " highlight the line which is longer than the defined margin (120)
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
+
+" open devdocs.io with firefox
+command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
+au FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>d :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
 " prevent to use arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
@@ -309,7 +316,7 @@ set ignorecase
 set smartcase
 
 set list
-let listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
+let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
 "let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
 
 " doesn't prompt a warning when opening a file and the current file was
