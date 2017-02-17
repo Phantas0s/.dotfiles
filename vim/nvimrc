@@ -211,6 +211,65 @@ augroup reload_vimrc
     autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 augroup END
 
+" Switch between phpunit and classes
+
+function! SwitchBetweenPhpunitAndClasses()
+    let f = bufname("%")
+    if f =~ '.php'
+        if f =~  '/Tests/' && f =~ 'Test\.php'
+            let filename = substitute(substitute(f, '/Tests/', '', ''), 'Test.php', '.php', '')
+            if !filereadable(filename)
+                let new_dir = substitute(filename, '/\w\+\.php', '', '')
+                exe ":!mkdir -p ".new_dir
+            endif
+            exe ":e ".filename
+        elseif f !~ 'Test\.php'
+            let filename = substitute(substitute(f, 'Bundle/', 'Bundle/Tests/', ''), '.php', 'Test.php', '')
+            if !filereadable(filename)
+                let new_dir = substitute(filename, '/\w\+Test\.php', '', '')
+                exe ":!mkdir -p ".new_dir
+            endif
+            exe ":e ".filename
+        else
+            echom "Could not switch because needed patterns not matched."
+        endif
+    endif
+endfunction
+
+" switch between phpunit and class for symfony2
+function! SymfonySwitchToAlternateFile()
+  let l:f = expand('%')
+  let l:preceedingDirsToKeep = 2
+  let l:is_test = expand('%:t') =~ "Test\."
+  if l:is_test
+    " remove phpunit_testroot
+    let l:f = substitute(l:f, 'Tests/','','')
+    " remove 'Test.' from filename
+    let l:f = substitute(l:f,'Test\.','.','')
+  else
+      let l:pathParts = split(expand('%:r'), '/')
+    let l:startingPath = l:pathParts[0:l:preceedingDirsToKeep]
+    let l:endPath = l:pathParts[(l:preceedingDirsToKeep+1):]
+    let l:combinedPath = l:startingPath + ['Tests'] + l:endPath
+    let l:f = join(l:combinedPath, '/') . 'Test.php'
+    if !filereadable(l:f)
+        let l:new_dir = substitute(l:f, '/\w\+\.php', '', '')
+        exe ":!mkdir -p ".l:new_dir
+    endif
+  endif
+  " is there window with complent file open?
+  let win = bufwinnr(l:f)
+  if l:win > 0
+    execute l:win . "wincmd w"
+  else
+    execute ":e " . l:f
+  endif
+
+endfunction
+
+nnoremap <leader>t :call SwitchBetweenPhpunitAndClasses()
+nmap <leader>ta :call SymfonySwitchToAlternateFile()<cr>
+
 "-----------------
 " general config 
 "-----------------
@@ -262,4 +321,6 @@ set noshowmode
 
 " no swap file!
 set noswapfile
+
+
 
