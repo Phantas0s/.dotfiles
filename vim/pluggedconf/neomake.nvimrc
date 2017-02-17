@@ -9,8 +9,6 @@
           \   'texthl': 'NeomakeMessageSign',
           \ }
      let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
-<
-
 
 " update neomake when save file
 autocmd! BufWritePost * Neomake
