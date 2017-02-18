@@ -10,7 +10,7 @@ endif
 "-----------------
 
 " install plugin automatically
-" autocmd VimEnter * PlugInstall .
+autocmd VimEnter * :PlugUpdate .
 
 call plug#begin('~/nvim/plugged')
 
@@ -362,6 +362,3 @@ set noshowmode
 
 " no swap file!
 set noswapfile
-
-
-
