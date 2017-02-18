@@ -9,9 +9,6 @@ endif
 " install plugin
 "-----------------
 
-" install plugin automatically
-autocmd VimEnter * :PlugUpdate .
-
 call plug#begin('~/nvim/plugged')
 
 " wrapper for git and display git diff in the left gutter
@@ -28,7 +25,8 @@ Plug 'mhinz/vim-startify'
 Plug 'neomake/neomake'
 
 " comment automatically
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -44,10 +42,17 @@ Plug 'stephpy/vim-php-cs-fixer'
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
+" autoclose bracket and parenthesis when open
+Plug 'Townk/vim-autoclose'
+
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
 " Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
+
 " Plug 'm2mdas/phpcomplete-extended'
+
+" Outline
+" Plug 'vim-scripts/tabbar'
 
 " debugger
 Plug 'joonty/vdebug'
@@ -95,6 +100,9 @@ source ~/nvim/pluggedconf/vdebug.nvimrc
 source ~/nvim/pluggedconf/neomake.nvimrc
 source ~/nvim/pluggedconf/project-vim.nvimrc
 source ~/nvim/projects.nvimrc
+
+" vim comment
+autocmd FileType php setlocal commentstring=\/\/\ %s
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
@@ -362,3 +370,4 @@ set noshowmode
 
 " no swap file!
 set noswapfile
+
