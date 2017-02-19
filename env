@@ -7,3 +7,6 @@ export APPLICATION_ENV="development";
 export EDITOR="nvim"
 export XDG_CONFIG_HOME=$HOME
 export TERM='rxvt-256color'
+
+# Modifying the path for ruby gems
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
