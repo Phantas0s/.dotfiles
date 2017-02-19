@@ -32,7 +32,7 @@ read key;
 
 . $HOME/$ROOT_CONFIG/uninstall.sh
 
-# install personnal config from cloud (not public)
+# install project config from private cloud
 
 . $HOME/$ROOT_CONFIG/install/install-from-cloud.sh
 
@@ -43,8 +43,6 @@ read key;
 # install i3 configuration
 
 . $HOME/$ROOT_CONFIG/install/install-i3.sh
-
-# TODO: install diff so fancy?
 
 # install prezto
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
