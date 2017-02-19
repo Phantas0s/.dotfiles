@@ -38,7 +38,9 @@ Plug '2072/PHP-Indenting-for-VIm'
 Plug 'alvan/vim-php-manual'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
+Plug 'arnaud-lb/vim-php-namespace'
 
+Plug 'beyondwords/vim-twig'
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
@@ -186,7 +188,7 @@ call matchadd('ColorColumn', '\%120v', 100)
 
 " open devdocs.io with firefox
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
-au FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>d :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
+au FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
 " prevent to use arrow keys
 inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>

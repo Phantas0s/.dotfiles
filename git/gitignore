@@ -1,0 +1,3 @@
+# global gitignore
+.idea
+.php_cs.cache

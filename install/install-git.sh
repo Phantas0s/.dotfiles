@@ -14,7 +14,6 @@ fi
 
 sed -i -e "s/<email>/${GIT_EMAIL}/g" $HOME/.terminal_config/git/gitconfig
 
-
 if [ -z "$GIT_USER" ]
   then
     echo "Git config - Please enter your name \n"
@@ -24,8 +23,8 @@ fi
 
 sed -i -e "s/<name>/${GIT_USER}/g" $HOME/.terminal_config/git/gitconfig
 
-echo 'Create symlink for gitconfig...'
+echo 'Create symlink for gitconfig and global gitignore...'
 
 ln -s -f $HOME/$ROOT_CONFIG/git/gitconfig $HOME/.gitconfig
-
+ln -s -f $HOME/$ROOT_CONFIG/git/gitignore $HOME/.gitignore
 

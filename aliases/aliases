@@ -13,6 +13,8 @@ alias paci='sudo pacman -S'
 alias pacs='sudo pacman -Ss'
 alias pacu='sudo pacman -Syu'
 alias pacr='sudo pacman -R'
+alias pacrr='sudo pacman -Rs'
+
 
 # system
 alias shutdown='sudo shutdown now'   
@@ -102,9 +104,13 @@ alias dockce='docker-compose run --rm'
 ##############
 
 # symfony
-alias symfcc='php app/console cache:clear --env=prod --no-debug'
-alias symfai='php app/console assets:install --env=prod'
-alias symfad='php app/console assetic:dump --env=prod'
+alias osymfcc='php app/console cache:clear'
+alias osymfai='php app/console assets:install'
+alias osymfad='php app/console assetic:dump'
+
+alias symfcc='php bin/console cache:clear'
+alias symfai='php bin/console assets:install'
+alias symfall='symfai && symfcc'
 
 # portoflio
 alias portfolio='cd /usr/share/nginx/html/portfolio/'

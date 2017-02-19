@@ -32,6 +32,10 @@ read key;
 
 . $HOME/$ROOT_CONFIG/uninstall.sh
 
+# install personnal config from cloud (not public)
+
+. $HOME/$ROOT_CONFIG/install/install-from-cloud.sh
+
 # install fonts
 
 . $HOME/$ROOT_CONFIG/install/install-fonts.sh

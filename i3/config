@@ -164,7 +164,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
 assign [class="Firefox" instance="Navigator"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
-assign [class="Nemo" instance="nemo"] → $file_manager
+assign [class="Thunar" instance="thunar"] → $file_manager
 
 # start softwares in workspaces
 exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc

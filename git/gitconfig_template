@@ -6,6 +6,7 @@
 [core]
     editor = nvim
     pager = diff-so-fancy | less --tabs=4 -RFX
+    excludesfile = ~/.gitignore
 [color "diff-highlight"]
     oldNormal = red bold
     oldHighlight = red bold 52
