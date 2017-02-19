@@ -32,7 +32,11 @@ Plug 'tpope/vim-commentary'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" php autocompletion engine
+" markdown 
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" php autocompletion engine and tools
 Plug 'shawncplus/phpcomplete.vim'
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'alvan/vim-php-manual'
@@ -102,6 +106,9 @@ source ~/nvim/pluggedconf/vdebug.nvimrc
 source ~/nvim/pluggedconf/neomake.nvimrc
 source ~/nvim/pluggedconf/project-vim.nvimrc
 source ~/nvim/projects.nvimrc
+
+" markdown
+let g:vim_markdown_folding_disabled = 1
 
 " vim comment
 autocmd FileType php setlocal commentstring=\/\/\ %s
