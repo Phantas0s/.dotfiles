@@ -16,6 +16,10 @@ let g:vdebug_keymap = {
 \    "eval_visual" : "<F8>",
 \}
 
+" redefine the characters
+autocmd VimEnter * sign define breakpt text= texthl=DbgBreakptSign linehl=DbgBreakptLine
+autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=DbgCurrentLine
+
 " map the project when used in a vagrant / vm | vm path : host past
 let g:vdebug_options["path_maps"] = {
 \}

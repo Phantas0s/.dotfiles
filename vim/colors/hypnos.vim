@@ -92,3 +92,9 @@ hi PMenu guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=NONE ctermfg=235 ctermbg=
 "hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
 hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 
+hi DbgCurrentLine ctermfg=White ctermbg=Red guifg=#ffffff guibg=#ff0000
+hi DbgCurrentSign ctermfg=White ctermbg=Red guifg=#ffffff guibg=#ff0000
+hi DbgBreakptLine ctermfg=white ctermbg=236 guifg=#ffffff guibg=#00ff00
+hi DbgBreakptSign ctermfg=9 ctermbg=236 guifg=#ffffff guibg=#00ff00
+
+

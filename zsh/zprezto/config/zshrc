@@ -6,7 +6,8 @@ export KEYTIMEOUT=1
 
 # Fix bug when prompt has two lines
 bindkey -r '^l'
-bindkey -s '^l' 'clear\n'
+bindkey -r '^g'
+bindkey -s '^g' 'clear\n'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
