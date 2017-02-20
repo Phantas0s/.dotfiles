@@ -54,11 +54,11 @@ URxvt*utmpInhibit: false
 !! Perl Extensions !!
 URxvt*perl-ext-common: default,tabbed
 
-URxvt.tabbed.tabbar-fg: 15 
-URxvt.tabbed.tabbar-bg: 235 
+URxvt.tabbed.tabbar-fg: 15
+URxvt.tabbed.tabbar-bg: 236
 URxvt.tabbed.tab-fg: 110
-URxvt.tabbed.tab-bg: 235 
+URxvt.tabbed.tab-bg: 236
 URxvt.tabbed*transparent:true
 
-URxvt.letterSpace: -1
+!URxvt.letterSpace: -1
 
