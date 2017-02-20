@@ -11,6 +11,11 @@ endif
 
 call plug#begin('~/nvim/plugged')
 
+" syntax highlighting for tmux.conf + other cool options
+Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
+" seemless navigation between vim windows / tmux pane
+Plug 'christoomey/vim-tmux-navigator'
+
 " wrapper for git and display git diff in the left gutter
 Plug 'tpope/vim-fugitive' | Plug 'airblade/vim-gitgutter'
 
