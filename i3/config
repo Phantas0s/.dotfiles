@@ -265,11 +265,13 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # finds out, if available)
 bar {
     status_command i3status --config ~/.i3/i3status.conf
-    tray_output primary
+    # Disable all tray icons
+    tray_output none
+    # tray_output primary
     colors {
         background $black2
         statusline $white2
-        separator #bbbbbb
+        separator $white2 
 
         #                  border background text
         focused_workspace  $background $background $red1
