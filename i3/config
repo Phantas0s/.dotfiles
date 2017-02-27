@@ -306,4 +306,4 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Home mode "$mode_system"
+bindsym $mod+BackSpace mode "$mode_system"
