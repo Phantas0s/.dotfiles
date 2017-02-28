@@ -40,6 +40,12 @@ alias mv='mv -iv'
 alias rm='rm -i'
 alias la='ls -alh'
 
+# wifi netctl
+alias wifi='sudo wifi-menu'
+
+# xev (key name)
+# alias xev='xev | awk -F\'[ )]+\' \'/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+
 # vim && neovim
 # clean the vim swap file
 alias nvimc='rm -I ~/nvim/swap/*'
@@ -79,6 +85,7 @@ alias tmuxs='tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tm
 
 # tar
 alias tare='tar xzvf'
+alias stare='sudo tar xzvf'
 # see tar table of content
 alias tars='tar tzf'
 alias tarc='tar cvzf'
