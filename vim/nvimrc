@@ -372,8 +372,8 @@ set ignorecase
 set smartcase
 
 set list
-let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
-"let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
+" let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
+" let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
 
 " doesn't prompt a warning when opening a file and the current file was
 " written but not saved 
