@@ -21,5 +21,8 @@ autocmd VimEnter * sign define breakpt text= texthl=DbgBreakptSign linehl=Dbg
 autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=DbgCurrentLine
 
 " map the project when used in a vagrant / vm | vm path : host past
-let g:vdebug_options["path_maps"] = {
-\}
+" let g:vdebug_options["path_maps"] = {
+" \}
+
+let g:vdebug_options["path_maps"] = { '/vagrant':'/home/hypnos/workspace/jabba'}
+
