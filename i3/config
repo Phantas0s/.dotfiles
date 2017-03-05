@@ -260,6 +260,10 @@ focus_follows_mouse no
 # using the same workspace shortcut will focus on your last 
 workspace_auto_back_and_forth yes
 
+# start owncloud client && keepassx
+exec --no-startup-id owncloud &
+exec --no-startup-id keepassx &
+
 ##########
 # DESIGN #
 ##########
@@ -319,3 +323,4 @@ mode "$mode_system" {
 }
 
 bindsym $mod+BackSpace mode "$mode_system"
+
