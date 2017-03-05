@@ -56,12 +56,15 @@ read key;
 # install xressource config
 . $HOME/$ROOT_CONFIG/install/install-xorg-server.sh
 
-echo ""
+# install tmux config
+. $HOME/$ROOT_CONFIG/install/install-tmux.sh
+
 echo "${blue}Create symlinks for personnal config..."
 
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
-ln -s $HOME/$ROOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
+
+echo "${green} ...done"
 
 # install phpstorm symlink
 . $HOME/$ROOT_CONFIG/install/install-phpstorm.sh
