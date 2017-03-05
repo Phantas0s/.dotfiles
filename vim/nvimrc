@@ -48,10 +48,16 @@ Plug 'alvan/vim-php-manual'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
-
-Plug 'beyondwords/vim-twig'
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
+
+" javascript plugins
+Plug 'pangloss/vim-javascript'
+" need to run npm install in the folder ~/nvim/plugged/tern_for_vim
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'beyondwords/vim-twig'
 
 " autoclose bracket and parenthesis when open
 Plug 'Townk/vim-autoclose'
