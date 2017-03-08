@@ -118,7 +118,7 @@ source ~/nvim/pluggedconf/neomake.nvimrc
 source ~/nvim/pluggedconf/project-vim.nvimrc
 source ~/nvim/projects.nvimrc
 
-autocmd  FileType  php setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 " markdown
 let g:vim_markdown_folding_disabled = 1

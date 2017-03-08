@@ -95,14 +95,15 @@ alias nemo='nemo --no-desktop'
 
 # docker
 # display the ip address of a container
-alias dockip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+alias docki="docker inspect"
 # go inside a container
 alias docke='docker exec -t -i'
 # delete every containers / images
 alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
 # stats on images
 alias dockstats='docker stats $(docker ps -q)'
-# execute a command in the container with the current host user
+# list docker containers
+alias dockls='docker ps'
 
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
 alias dockce='docker-compose run --rm'
@@ -125,4 +126,3 @@ alias portfolio='cd /usr/share/nginx/html/portfolio/'
 # ssh
 alias sprod='ssh thanatos@46.101.238.89'
 alias spie='ssh thanatospie@192.168.178.55'
-
