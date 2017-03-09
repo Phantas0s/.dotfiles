@@ -22,7 +22,8 @@ autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=Dbg
 
 " map the project when used in a vagrant / vm | vm path : host past
 " let g:vdebug_options["path_maps"] = {
-" \}
+  \}
 
-let g:vdebug_options["path_maps"] = { '/vagrant':'/home/hypnos/workspace/jabba'}
-
+let g:vdebug_options["path_maps"] = {
+\       "/vagrant": "/home/hypnos/workspace/jabba",
+\}

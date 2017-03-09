@@ -145,13 +145,14 @@ set $terms "1: terms"
 set $web "2: web"
 set $sql "3: sql"
 set $file_manager "4: files"
+set $mail "5: mails"
 
 # switch to workspace
 bindsym $mod+1 workspace $terms
 bindsym $mod+2 workspace $web
 bindsym $mod+3 workspace $sql
 bindsym $mod+4 workspace $file_manager
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $mail
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -163,7 +164,7 @@ bindsym $mod+Shift+1 move container to workspace $terms
 bindsym $mod+Shift+2 move container to workspace $web
 bindsym $mod+Shift+3 move container to workspace $sql
 bindsym $mod+Shift+4 move container to workspace $file_manager
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $mail
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -178,6 +179,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="Firefox" instance="Navigator"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
 assign [class="Thunar" instance="thunar"] → $file_manager
+assign [class="Thunderbird" instance="Mail"] → $mail
 
 # start softwares in workspaces
 exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc -e tmux -2 new-session -A -s main
