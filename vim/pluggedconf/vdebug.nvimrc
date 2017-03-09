@@ -24,6 +24,3 @@ autocmd VimEnter * sign define current text= texthl=DbgCurrentSign linehl=Dbg
 " let g:vdebug_options["path_maps"] = {
   \}
 
-let g:vdebug_options["path_maps"] = {
-\       "/vagrant": "/home/hypnos/workspace/jabba",
-\}
