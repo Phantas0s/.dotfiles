@@ -35,7 +35,7 @@ function! s:ag_handler(lines)
 endfunction
 
 autocmd VimEnter * command! -nargs=* Ag call fzf#run({
-\ 'source':  printf('ag -t --nogroup --column --color "%s"',
+\ 'source':  printf('ag -U --nogroup --column --color "%s"',
 \                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
 \ 'sink*':    function('<sid>ag_handler'),
 \ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
