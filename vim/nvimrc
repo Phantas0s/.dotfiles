@@ -44,7 +44,6 @@ Plug 'plasticboy/vim-markdown'
 " php autocompletion engine and tools
 Plug 'shawncplus/phpcomplete.vim'
 Plug '2072/PHP-Indenting-for-VIm'
-Plug 'alvan/vim-php-manual'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
