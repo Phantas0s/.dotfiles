@@ -17,6 +17,11 @@ URxvt*borderLess: false
 URxvt*externalBorder: 0
 URxvt*internalBorder: 0
 
+! Bind C--, C-0(=) and C-+ to activate small, medium, and big font size resp.
+! URxvt.keysym.C-minus:                command:\033]710;xft:Liberation Mono:antialias=false:pixelsize=12\007
+! URxvt.keysym.C-0:                command:\033]710;xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true\007
+! URxvt.keysym.C-plus:                command:\033]710;xft:Liberation Mono:antialias=false:pixelsize=20\007
+
 URxvt*scrollBar: false
 
 URxvt*cursorColor: #ffffff
