@@ -115,6 +115,7 @@ source ~/nvim/pluggedconf/fzf.nvimrc
 source ~/nvim/pluggedconf/vdebug.nvimrc
 source ~/nvim/pluggedconf/neomake.nvimrc
 source ~/nvim/pluggedconf/project-vim.nvimrc
+source ~/nvim/pluggedconf/phpnamespace.nvimrc
 source ~/nvim/projects.nvimrc
 
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
