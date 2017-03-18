@@ -11,6 +11,9 @@ endif
 
 call plug#begin('~/nvim/plugged')
 
+" display the result when searching
+Plug 'henrik/vim-indexed-search'
+
 " syntax highlighting for tmux.conf + other cool options
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
 " seemless navigation between vim windows / tmux pane
