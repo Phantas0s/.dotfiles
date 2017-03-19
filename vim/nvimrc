@@ -69,7 +69,7 @@ Plug 'Townk/vim-autoclose'
 
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/unite.vim'
-" Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
+" Plug 'lvht/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 
 " Plug 'm2mdas/phpcomplete-extended'
 
@@ -115,6 +115,7 @@ call plug#end()
 
 source ~/nvim/pluggedconf/deoplete.nvimrc
 source ~/nvim/pluggedconf/phpcomplete.nvimrc
+" source ~/nvim/pluggedconf/phpcomplete_extended.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
@@ -124,8 +125,6 @@ source ~/nvim/pluggedconf/project-vim.nvimrc
 source ~/nvim/pluggedconf/phpnamespace.nvimrc
 source ~/nvim/pluggedconf/php-refactoring-toolbox.nvimrc
 source ~/nvim/projects.nvimrc
-
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
