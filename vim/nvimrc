@@ -150,7 +150,7 @@ let g:startify_list_order = ['bookmarks']
 
 " php docs
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
-nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
+autocmd FileType php noremap <leader>d :call pdv#DocumentWithSnip()<CR>
 
 "------------------
 " general binding
