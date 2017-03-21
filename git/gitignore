@@ -2,3 +2,6 @@
 .idea
 .php_cs.cache
 .ignore
+docker/
+docker-compose-dev.yml
+dumps/
