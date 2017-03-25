@@ -17,8 +17,8 @@ alias pacrr='sudo pacman -Rs'
 
 
 # system
-alias shutdown='sudo shutdown now'   
-alias restart='sudo reboot'      
+alias shutdown='sudo shutdown now'
+alias restart='sudo reboot'
 alias suspend='sudo pm-suspend'
 alias lock='gnome-screensaver-command --lock'
 
@@ -94,7 +94,7 @@ alias tarc='tar cvzf'
 alias nemo='nemo --no-desktop'
 
 # docker
-# display the ip address of a container
+# display the information about a container
 alias docki="docker inspect"
 # go inside a container
 alias docke='docker exec -t -i'
@@ -104,9 +104,13 @@ alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
 alias dockstats='docker stats $(docker ps -q)'
 # list docker containers
 alias dockls='docker ps'
+# list images installed
+alias dockimg='docker images'
 
+# run as the host user
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
 alias dockce='docker-compose run --rm'
+
 ##############
 ## PROJECTS ##
 ##############
