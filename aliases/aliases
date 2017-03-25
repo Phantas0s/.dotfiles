@@ -110,6 +110,7 @@ alias dockimg='docker images'
 # run as the host user
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
 alias dockce='docker-compose run --rm'
+alias docker-compose-dev='docker-compose -f docker-compose-dev.yml'
 
 ##############
 ## PROJECTS ##
