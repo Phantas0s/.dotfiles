@@ -376,10 +376,10 @@ function prompt_garrett_setup
 	zstyle ':prezto:module:git:info:dirty'     format "${prompt_garrett_color_prompt}!"
 	zstyle ':prezto:module:git:info:added'     format "${green}+"
 	zstyle ':prezto:module:git:info:deleted'   format "${red}x"
-	zstyle ':prezto:module:git:info:modified'  format "${blue}✱"
+	zstyle ':prezto:module:git:info:modified'  format "${blue}"
 	zstyle ':prezto:module:git:info:renamed'   format "${magenta}➜"
 	zstyle ':prezto:module:git:info:unmerged'  format "${yellow}═"
-	zstyle ':prezto:module:git:info:untracked' format "${white}"
+	zstyle ':prezto:module:git:info:untracked' format "${white}"
 
 	# Git prompt styles
 	zstyle ':prezto:module:git:info:keys' format \
