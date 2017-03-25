@@ -1,7 +1,9 @@
 " Key mapping
-nmap <leader>f :Files<cr>
 nmap <leader>h :History<cr>
 nmap <leader>b :Buffers<cr>
+
+nmap <leader>f :Files<cr>
+" nnoremap <leader>F :exec "Files ".expand("<cword>")<cr>
 
 nnoremap <leader>a :Ag<space>
 nnoremap <leader>A :exec "Ag ".expand("<cword>")<cr>
