@@ -135,7 +135,7 @@ let g:vim_markdown_folding_disabled = 1
 
 " vim comment
 autocmd FileType php setlocal commentstring=\/\/\ %s
-
+"
 " ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
 
@@ -185,7 +185,10 @@ vmap > >gv
 " Replace easily every occurence of the word under the cursor
 nnoremap <leader>[ :%s/<c-r><c-w>/<c-r><c-w>/g<left><left>
 
-" reformat html -> each tag on own row
+" reformat with external tools
+autocmd FileType xml nnoremap <leader>c :%!xmllint --format - <cr>
+autocmd FileType json nnoremap <leader>c :%!python -m json.tool<cr>
+" html
 nmap <leader><F3> :%s/<[^>]*>/\r&\r/g<cr>gg=G:g/^$/d<cr><leader>/
 
 " tabs
