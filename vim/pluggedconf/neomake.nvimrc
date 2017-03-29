@@ -1,14 +1,17 @@
 " Neomake signs in the gutter
-     let g:neomake_error_sign = {'text': '', 'texthl': 'NeomakeErrorSign'}
-     let g:neomake_warning_sign = {
-         \   'text': '',
-         \   'texthl': 'NeomakeWarningSign',
-         \ }
-     let g:neomake_message_sign = {
-          \   'text': '➤',
-          \   'texthl': 'NeomakeMessageSign',
-          \ }
-     let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+let g:neomake_error_sign = {'text': '', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {
+    \   'text': '',
+    \   'texthl': 'NeomakeWarningSign',
+    \ }
+let g:neomake_message_sign = {
+    \   'text': '➤',
+    \   'texthl': 'NeomakeMessageSign',
+    \ }
+let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+
+" standard phpcs config
+let g:neomake_php_phpcs_args_standard = 'PSR2'
 
 " update neomake when save file
 autocmd! BufWritePost * Neomake
