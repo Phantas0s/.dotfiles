@@ -313,7 +313,7 @@ function prompt_garrett_setup
 	# Report return code
 	#
 
-	eval prompt_garrett_return_code='%(?..${red}%? ⏎  ) '
+	eval prompt_garrett_return_code='%(?..${red}%?  ) '
 
 	#
 	# Report local time
