@@ -56,6 +56,8 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox'
 
+Plug 'lumiliet/vim-twig'
+
 " javascript plugins
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
