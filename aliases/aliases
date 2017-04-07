@@ -42,6 +42,8 @@ alias la='ls -alh'
 
 # wifi netctl
 alias wifi='sudo wifi-menu'
+alias wifi-panta='sudo netctl start wlp3s0-PantaWiFi'
+alias wifi-home='sudo netctl start wlp3s0-FRITZ\!Box\ 7312'
 
 # xev (key name)
 # alias xev='xev | awk -F\'[ )]+\' \'/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
