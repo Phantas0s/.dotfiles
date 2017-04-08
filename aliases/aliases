@@ -42,6 +42,8 @@ alias la='ls -alh'
 
 # wifi netctl
 alias wifi='sudo wifi-menu'
+alias wifi-panta='sudo netctl start wlp3s0-PantaWiFi'
+alias wifi-home='sudo netctl start wlp3s0-FRITZ\!Box\ 7312'
 
 # xev (key name)
 # alias xev='xev | awk -F\'[ )]+\' \'/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
@@ -65,6 +67,7 @@ alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gl='git log'
+alias gls='git remote show'
 alias glo='git log --pretty="oneline"'
 alias gdf='git diff --color | diff-so-fancy' #Coloration for git diff - https://github.com/so-fancy/diff-so-fancy
 alias glol='git log --graph --oneline --decorate'
