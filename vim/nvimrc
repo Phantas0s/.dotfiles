@@ -172,7 +172,7 @@ nmap <SPACE> <leader>
 nmap <leader>o o<esc>
 
 " easy command
-noremap ; :
+" noremap ; :
 
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
