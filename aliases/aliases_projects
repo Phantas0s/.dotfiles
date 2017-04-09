@@ -1,4 +1,0 @@
-# lesara
-alias log='tmuxinator start logistic'
-alias labs='tmuxinator start labelservice'
-   
