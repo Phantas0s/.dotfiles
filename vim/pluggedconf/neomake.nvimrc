@@ -42,15 +42,15 @@ endfunction
 let g:neomake_php_enabled_makers = ['php', 'phpcs']
 
 " Display the error window if a php syntax error is detected
-function! OpenQfixIfSyntaxError()
-    :w
-    :silent setlocal makeprg=php
-    :silent make %
-    if len(getqflist()) > 0
-        :copen
-    else
-        :cclose
-    endif
-endfunction
+" function! OpenQfixIfSyntaxError()
+"     :w
+"     :silent setlocal makeprg=php
+"     :silent make %
+"     if len(getqflist()) > 0
+"         :copen
+"     else
+"         :cclose
+"     endif
+" endfunction
 
-au BufWritePost *.php :call OpenQfixIfSyntaxError()
+" au BufWritePost *.php :call OpenQfixIfSyntaxError()
