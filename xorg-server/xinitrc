@@ -2,6 +2,7 @@ urxvtd -o -q -f
 
 # set the keyboard to mac
 setxkbmap us mac
+xmodmap ~/.Xmodmap
 
 # disable the touchpad when the keyboard is used
 # syndaemon -R -k -i 0.5 -d

@@ -29,19 +29,15 @@ read key;
 
 # Uninstall everything 
 # TODO: let the choice to backup :D
-
 . $HOME/$ROOT_CONFIG/uninstall.sh
 
 # install project config from private cloud
-
 . $HOME/$ROOT_CONFIG/install/install-from-cloud.sh
 
 # install fonts
-
 . $HOME/$ROOT_CONFIG/install/install-fonts.sh
 
 # install i3 configuration
-
 . $HOME/$ROOT_CONFIG/install/install-i3.sh
 
 # install prezto
@@ -63,6 +59,7 @@ echo "${blue}Create symlinks for personnal config..."
 
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
 ln -s $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
+ln -s $HOME/$ROOT_CONFIG/xorg-server/Xmodmap $HOME/.Xmodmap
 
 echo "${green} ...done"
 
