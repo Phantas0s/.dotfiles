@@ -22,6 +22,21 @@ class $1
 }
 endsnippet
 
+snippet classa "Class declaration template with App/ begin namespace" b
+<?php
+
+namespace App/${1:`!p
+abspath = os.path.abspath(path)
+m = re.search(r'[A-Z].+(?=/)', abspath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+class $1
+{
+}
+endsnippet
+
 snippet interface "Interface declaration template" b
 <?php
 
@@ -32,6 +47,9 @@ if m:
 	snip.rv = m.group().replace('/', '\\')
 `};
 
+/**
+ * Interface ${1:`!p snip.rv=snip.basename`}
+ */
 interface $1
 {
 	public function ${3:someFunction}();$4
@@ -39,3 +57,72 @@ interface $1
 }
 endsnippet
 
+snippet pub "Public function" b
+public function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pro "Protected function" b
+protected function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pri "Private function" b
+private function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pubs "Public static function" b
+public static function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pros "Protected static function" b
+protected static function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet pris "Private static function" b
+private static function ${1:name}(${2:$param})
+{
+	${VISUAL}${5:return null;}
+}
+$0
+endsnippet
+
+snippet fu "Function snip" b
+function ${1:name}(${2:$param})
+{
+	${VISUAL}${3:return null;}
+}
+$0
+endsnippet
+
+snippet new "New class instance" b
+$${1:variableName} = new ${2:${1/\w+\s*/\u$0/}}($3);
+$0
+endsnippet
+
+snippet ns "namespace declaration" b
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+endsnippet
