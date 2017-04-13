@@ -241,7 +241,9 @@ highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
 
 " replace a word from 0 register (yank)
-:map gr ciw<C-r>0<ESC>
+:nnoremap griw ciw<C-r>0<ESC>
+:nnoremap grw cw<C-r>0<ESC>
+:nnoremap grW cW<C-r>0<ESC>
 
 " open devdocs.io with firefox
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
