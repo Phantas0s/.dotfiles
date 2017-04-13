@@ -232,9 +232,16 @@ nnoremap <leader>wcc :cclose<cr>
 nnoremap <leader>wb <c-w>s
 nnoremap <leader>wv <c-w>v
 
+" resize the windows
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
 " highlight the line which is longer than the defined margin (120)
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
+
+" replace a word from 0 register (yank)
+:map gr ciw<C-r>0<ESC>
 
 " open devdocs.io with firefox
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
