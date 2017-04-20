@@ -5,7 +5,7 @@ if &compatible
     set nocompatible
 endif
 
-"-----------------
+
 " install plugin
 "-----------------
 
@@ -21,9 +21,10 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " wrapper for git and display git diff in the left gutter
 Plug 'tpope/vim-fugitive' | Plug 'airblade/vim-gitgutter'
-
 " surrounding with whatever you want (paranthesis, quotes...)
 Plug 'tpope/vim-surround'
+" easily search, substitute and abbreviate multiple version of words
+Plug 'tpope/vim-abolish'
 
 " General autocomplete system
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -55,13 +56,13 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'nishigori/vim-php-dictionary'
 Plug 'sahibalejandro/vim-php'
-
-" php doc autocompletion
-Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox'
 
 Plug 'lumiliet/vim-twig'
+
+" php doc autocompletion
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
 " javascript plugins
 Plug 'pangloss/vim-javascript'
@@ -73,12 +74,6 @@ Plug 'beyondwords/vim-twig'
 
 " autoclose bracket and parenthesis when open
 Plug 'Townk/vim-autoclose'
-
-" Plug 'Shougo/vimproc'
-" Plug 'Shougo/unite.vim'
-" Plug 'lvht/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
-
-" Plug 'm2mdas/phpcomplete-extended'
 
 " Outline
 " Plug 'vim-scripts/tabbar'
