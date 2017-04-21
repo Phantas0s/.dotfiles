@@ -55,6 +55,9 @@ read key;
 # install tmux config
 . $HOME/$ROOT_CONFIG/install/install-tmux.sh
 
+# install dunst config
+. $HOME/$ROOT_CONFIG/install/install-dunst.sh
+
 echo "${blue}Create symlinks for personnal config..."
 
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc

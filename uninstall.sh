@@ -71,4 +71,8 @@ echo "${red}Delete the git config..."
 rm $HOME/.gitconfig
 
 echo "${green}...done!"
+echo "${red}Delete the dunst config..."
 
+rm $HOME/dunstrc
+
+echo "${green}...done!"
