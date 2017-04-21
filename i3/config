@@ -256,6 +256,9 @@ for_window [class="URxvt*"] border pixel 1
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id vmware-user
 
+# launch dunst
+exec --no-startup-id dunst -config ~/.dunstrc
+
 # no focus following the mouse
 focus_follows_mouse no
 
