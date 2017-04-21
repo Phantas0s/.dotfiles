@@ -74,5 +74,11 @@ echo "${green}...done!"
 echo "${red}Delete the dunst config..."
 
 rm $HOME/dunstrc
+rm -rf $HOME/.autotest
+
+echo "${green}...done!"
+echo "${red}Delete the Xmodmap config..."
+
+rm $HOME/.Xmodmap
 
 echo "${green}...done!"
