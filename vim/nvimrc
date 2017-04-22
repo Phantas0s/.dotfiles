@@ -62,7 +62,8 @@ Plug 'adoy/vim-php-refactoring-toolbox'
 Plug 'lumiliet/vim-twig'
 
 " php doc autocompletion
-Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
+Plug 'Rican7/php-doc-modded'
+" Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
 " javascript plugins
 Plug 'pangloss/vim-javascript'
@@ -162,8 +163,8 @@ let g:startify_list_order = ['bookmarks']
 
 " php docs
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
-autocmd FileType php noremap <leader>d :call pdv#DocumentWithSnip()<CR>
-
+" autocmd FileType php noremap <leader>d :call pdv#DocumentWithSnip()<CR>
+autocmd FileType php nnoremap <leader>d :call PhpDocSingle()<CR>
 " Using a snippet for documentation?
 " let g:pdv_template_dir = $HOME."/.vim/pdv_templates_snip"
 
