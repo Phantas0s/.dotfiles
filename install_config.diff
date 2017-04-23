@@ -1,9 +1,9 @@
 #!/bin/bash
 # personnal variables - this file need to be copied as install_config and the variables need to be replaced 
-ROOT_CONFIG=".terminal_config"
+ROOT_CONFIG=".dotfiles"
 PHPSTORM_ROOT="$HOME/bin/phpstorm/bin/phpstorm.sh"
-GIT_USER="Matthieu"
-GIT_EMAIL="Matthieu.cneude@gmail.com"
+GIT_USER="Hernest"
+GIT_EMAIL="Hernest@caramail.com"
 
 # personnal cloud storage for private projects config:
 # see install/install-from-cloud.sh
