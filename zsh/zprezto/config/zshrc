@@ -1,4 +1,4 @@
-source ${ZDOTDIR:-$HOME}/.terminal_config/startup
+source ${ZDOTDIR:-$HOME}/.dotfiles/startup
 
 # Vi mode
 bindkey -v
@@ -10,4 +10,3 @@ bindkey -r '^g'
 bindkey -s '^g' 'clear\n'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-

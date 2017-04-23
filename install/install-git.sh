@@ -2,8 +2,8 @@
 
 echo 'Installing git config... \n'
 
-rm $HOME/.terminal_config/git/gitconfig
-cp $HOME/.terminal_config/git/gitconfig_template $HOME/.terminal_config/git/gitconfig
+rm $HOME/$ROOT_CONFIG/git/gitconfig
+cp $HOME/$ROOT_CONFIG/git/gitconfig_template $HOME/$ROOT_CONFIG/git/gitconfig
 
 if [ -z "$GIT_EMAIL" ]
   then
@@ -12,7 +12,7 @@ if [ -z "$GIT_EMAIL" ]
     read GIT_EMAIL
 fi
 
-sed -i -e "s/<email>/${GIT_EMAIL}/g" $HOME/.terminal_config/git/gitconfig
+sed -i -e "s/<email>/${GIT_EMAIL}/g" $HOME/$ROOT_CONFIG/git/gitconfig
 
 if [ -z "$GIT_USER" ]
   then
@@ -21,7 +21,7 @@ if [ -z "$GIT_USER" ]
     read GIT_USER
 fi
 
-sed -i -e "s/<name>/${GIT_USER}/g" $HOME/.terminal_config/git/gitconfig
+sed -i -e "s/<name>/${GIT_USER}/g" $HOME/$ROOT_CONFIG/git/gitconfig
 
 echo 'Create symlink for gitconfig and global gitignore...'
 

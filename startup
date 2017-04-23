@@ -18,3 +18,4 @@ fi
 # source startup scripts
 source $SCRIPT_PATH/aliases/aliases
 source $SCRIPT_PATH/env
+

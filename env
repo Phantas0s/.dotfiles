@@ -5,6 +5,7 @@
 export EDITOR="nvim"
 export XDG_CONFIG_HOME=$HOME
 export TERM='rxvt-256color'
+export ROOT_CONFIG='.dotfiles'
 
 # Modifying the path for ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
