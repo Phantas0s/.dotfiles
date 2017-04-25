@@ -6,3 +6,4 @@ docker/
 docker-compose-dev.yml
 dumps/
 autotest.rb
+.padawan
