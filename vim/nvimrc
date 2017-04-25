@@ -49,7 +49,10 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " php autocompletion engine and tools
-Plug 'shawncplus/phpcomplete.vim'
+" Plug 'shawncplus/phpcomplete.vim'
+Plug 'mkusher/padawan.vim'
+Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
+
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
@@ -58,7 +61,6 @@ Plug 'nishigori/vim-php-dictionary'
 Plug 'sahibalejandro/vim-php'
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox'
-
 Plug 'lumiliet/vim-twig'
 
 " php doc autocompletion
@@ -115,16 +117,13 @@ Plug 'wincent/ferret'
 
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
-
 call plug#end()
-
 "----------------
 " plugin config
 "----------------
-
+let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
 source ~/nvim/pluggedconf/deoplete.nvimrc
-source ~/nvim/pluggedconf/phpcomplete.nvimrc
-" source ~/nvim/pluggedconf/phpcomplete_extended.nvimrc
+" source ~/nvim/pluggedconf/phpcomplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
@@ -167,6 +166,10 @@ let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
 autocmd FileType php nnoremap <leader>d :call PhpDocSingle()<CR>
 " Using a snippet for documentation?
 " let g:pdv_template_dir = $HOME."/.vim/pdv_templates_snip"
+
+" write ctags each time we change a php file
+au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
+au BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 
 "------------------
 " general binding
@@ -266,7 +269,6 @@ endfunction
 
 " restore the position of the cursor when you open a file
 au BufReadPost * call RestorePosition()
-
 func! RestorePosition()
     if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
         return
@@ -284,56 +286,19 @@ augroup reload_vimrc
     autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 augroup END
 
-" Switch between phpunit and classes
-function! SwitchBetweenPhpunitAndClasses()
-    let f = bufname("%")
-    if f =~ '.php'
-        if f =~  '/Tests/' && f =~ 'Test\.php'
-            let filename = substitute(substitute(f, '/Tests/', '', ''), 'Test.php', '.php', '')
-            if !filereadable(filename)
-                let new_dir = substitute(filename, '/\w\+\.php', '', '')
-                exe ":!mkdir -p ".new_dir
-            endif
-            exe ":e ".filename
-        elseif f !~ 'Test\.php'
-            let filename = substitute(substitute(f, 'Bundle/', 'Bundle/Tests/', ''), '.php', 'Test.php', '')
-            if !filereadable(filename)
-                let new_dir = substitute(filename, '/\w\+Test\.php', '', '')
-                exe ":!mkdir -p ".new_dir
-            endif
-            exe ":e ".filename
-        else
-            echom "Could not switch because needed patterns not matched."
-        endif
-    endif
-endfunction
-
-" Parameters:
-"
-" fileExtension: the file extension this script should act on, i.e. 'php'
-" (without dot)
-"
-" firstDirBeginning: a file path that identifies the first type
-" of paths, i.e. 'tests/unit/'
-"
-" secondDirBeginning: a file path pattern that identifies the second type
-" of paths, i.e. 'src/'
-"
-" filenameAddition: string that should be removed from the first filename and
-" added to the second, i.e. 'Test' if your testfile filename has the suffix
-" 'Test' as in /path/MyServiceTest.php
-function! SwitchBetweenFilesSymfony(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition)
+autocmd FileType php nmap <silent> <leader>tu :call SwitchBetweenFiles('php', 'tests/', 'src/', 'Test')<cr>
+function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition)
     let f = bufname("%")
     if f =~ '.'.a:fileExtension
-        if f =~ a:firstDirBeginning && f =~ a:filenameAddition.'\.'.a:fileExtension
-            let filename = substitute(substitute(f, a:firstDirBeginning, 'Bundle/', ''), a:filenameAddition, '', '')
+        if f =~ '\<'.a:firstDirBeginning && f =~ a:filenameAddition.'\.'.a:fileExtension
+            let filename = substitute(substitute(f, a:firstDirBeginning, '', ''), a:filenameAddition, '', '')
             if !filereadable(filename)
                 let new_dir = substitute(filename, '/\w\+\.'.a:fileExtension, '', '')
                 exe ":!mkdir -p ".new_dir
             endif
             exe ":e ".filename
-        elseif f =~ a:secondDirBeginning && f !~ a:filenameAddition.'\.'.a:fileExtension
-            let filename = substitute(substitute(f, a:secondDirBeginning, a:firstDirBeginning, ''), '.'.a:fileExtension, a:filenameAddition.'.'.a:fileExtension, '')
+        elseif f =~ '\<'.a:secondDirBeginning && f !~ a:filenameAddition.'\.'.a:fileExtension
+            let filename = substitute(substitute(f, a:secondDirBeginning, a:firstDirBeginning.a:secondDirBeginning, ''), '.'.a:fileExtension, a:filenameAddition.'.'.a:fileExtension, '')
             if !filereadable(filename)
                 let new_dir = substitute(filename, '/\w\+'.a:filenameAddition.'\.'.a:fileExtension, '', '')
                 exe ":!mkdir -p ".new_dir
@@ -345,38 +310,8 @@ function! SwitchBetweenFilesSymfony(fileExtension, firstDirBeginning, secondDirB
     endif
 endfunction
 
-" switch between phpunit and class for symfony
-function! SymfonySwitchToAlternateFile()
-  let l:f = expand('%')
-  let l:preceedingDirsToKeep = 2
-  let l:is_test = expand('%:t') =~ "Test\."
-  if l:is_test
-    " remove phpunit_testroot
-    let l:f = substitute(l:f, 'Tests/','','')
-    " remove 'Test.' from filename
-    let l:f = substitute(l:f,'Test\.','.','')
-  else
-      let l:pathParts = split(expand('%:r'), '/')
-    let l:startingPath = l:pathParts[0:l:preceedingDirsToKeep]
-    let l:endPath = l:pathParts[(l:preceedingDirsToKeep+1):]
-    let l:combinedPath = l:startingPath + ['Tests'] + l:endPath
-    let l:f = join(l:combinedPath, '/') . 'Test.php'
-    if !filereadable(l:f)
-        let l:new_dir = substitute(l:f, '/\w\+\.php', '', '')
-        exe ":!mkdir -p ".l:new_dir
-    endif
-  endif
-  " is there window with complent file open?
-  let win = bufwinnr(l:f)
-  if l:win > 0
-    execute l:win . "wincmd w"
-  else
-    execute ":e " . l:f
-  endif
-
-endfunction
-
-" FormatPHPLineLength {{{
+" FormatPHPLineLength
+" Make it available for all languages?
 function! FormatPHPLineLength()
     let l:currentLine = getline('.')
     normal! ma
@@ -442,7 +377,6 @@ endfunction
 
 nnoremap <leader>G :call FormatPHPLineLength()<cr>
 
-" }}}
 "-----------------
 " general config 
 "-----------------
@@ -482,7 +416,7 @@ set ignorecase
 set smartcase
 
 set list
-" let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
+let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
 " let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
 
 " doesn't prompt a warning when opening a file and the current file was

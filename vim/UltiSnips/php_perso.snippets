@@ -22,6 +22,22 @@ class ${1:`!p snip.rv=snip.basename`}
 }
 endsnippet
 
+snippet classs "Class declaration template with strict mode" b
+<?php
+declare(strict_types=1);
+
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+class ${1:`!p snip.rv=snip.basename`}
+{
+}
+endsnippet
+
 snippet classa "Class declaration template with App/ begin namespace" b
 <?php
 

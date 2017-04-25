@@ -10,7 +10,10 @@ let g:deoplete#file#enable_buffer_path = 1
 
 " Compatibility with phpcomplete
 let g:deoplete#omni_patterns = {}
-let g:deoplete#omni_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+" let g:deoplete#omni_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+
+let g:deoplete#sources = {}
+let g:deoplete#sources.php = ['padawan', 'ultisnips', 'buffer']
 
 " delay for auto complete and refresh
 let g:deoplete#auto_complete_delay= 75
