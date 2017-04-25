@@ -305,7 +305,7 @@ bar {
 }
 
 # lockscreen
-set $i3lockwall i3lock -i ~/.terminal_config/i3/lock_wallpapers/red_puzzle.png -t
+set $i3lockwall i3lock -i ~/.dotfiles/i3/lock_wallpapers/red_puzzle.png -t
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 #wallpaper and transparency
