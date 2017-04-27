@@ -1,2 +1,2 @@
-nnoremap <leader>k :Ack<space>
-nnoremap <leader>K :exec "Ack ".expand("<cword>")<cr>
+nmap <leader>s <Plug>(FerretAck)
+nmap <leader>S <Plug>(FerretAckWord)

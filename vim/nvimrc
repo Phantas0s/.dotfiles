@@ -50,7 +50,7 @@ Plug 'plasticboy/vim-markdown'
 
 " php autocompletion engine and tools
 " Plug 'shawncplus/phpcomplete.vim'
-Plug 'mkusher/padawan.vim'
+Plug 'mkusher/padawan.vim', {'for': 'php'}
 Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
 
 Plug '2072/PHP-Indenting-for-VIm'
@@ -74,6 +74,8 @@ Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'beyondwords/vim-twig'
+Plug 'posva/vim-vue'
+
 
 " autoclose bracket and parenthesis when open
 Plug 'Townk/vim-autoclose'
@@ -286,12 +288,12 @@ augroup reload_vimrc
     autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 augroup END
 
-autocmd FileType php nmap <silent> <leader>tu :call SwitchBetweenFiles('php', 'tests/', 'src/', 'Test')<cr>
 function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition)
     let f = bufname("%")
     if f =~ '.'.a:fileExtension
         if f =~ '\<'.a:firstDirBeginning && f =~ a:filenameAddition.'\.'.a:fileExtension
             let filename = substitute(substitute(f, a:firstDirBeginning, '', ''), a:filenameAddition, '', '')
+            " let filename = substitute(filename, '/src', '', '')
             if !filereadable(filename)
                 let new_dir = substitute(filename, '/\w\+\.'.a:fileExtension, '', '')
                 exe ":!mkdir -p ".new_dir
@@ -299,6 +301,7 @@ function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginnin
             exe ":e ".filename
         elseif f =~ '\<'.a:secondDirBeginning && f !~ a:filenameAddition.'\.'.a:fileExtension
             let filename = substitute(substitute(f, a:secondDirBeginning, a:firstDirBeginning.a:secondDirBeginning, ''), '.'.a:fileExtension, a:filenameAddition.'.'.a:fileExtension, '')
+            " let filename = substitute(filename, '/src', '', '')
             if !filereadable(filename)
                 let new_dir = substitute(filename, '/\w\+'.a:filenameAddition.'\.'.a:fileExtension, '', '')
                 exe ":!mkdir -p ".new_dir
