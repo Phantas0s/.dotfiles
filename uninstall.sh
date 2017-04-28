@@ -62,3 +62,8 @@ echo ""
 echo "${red}Delete the Xmodmap config..."
 rm $HOME/.Xmodmap
 echo "${green}...done!"
+
+echo ""
+echo "${red}Delete the feh config..."
+rm $HOME/.fehbg
+echo "${green}...done!"

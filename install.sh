@@ -58,6 +58,9 @@ read key;
 # install dunst config
 . $HOME/$ROOT_CONFIG/install/install-dunst.sh
 
+# install feh config
+. $HOME/$ROOT_CONFIG/install/install-feh.sh
+
 echo "${blue}Create symlinks for personnal config..."
 
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc

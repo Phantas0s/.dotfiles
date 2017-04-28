@@ -183,6 +183,7 @@ assign [class="Thunderbird" instance="Mail"] → $mail
 
 # start softwares in workspaces
 exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc -e tmux -2 new-session -A -s main
+exec --no-startup-id xmodmap ~/.Xmodmap
 
 # assign monitor output to worspace 
 
