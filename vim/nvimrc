@@ -50,8 +50,8 @@ Plug 'plasticboy/vim-markdown'
 
 " php autocompletion engine and tools
 " Plug 'shawncplus/phpcomplete.vim'
-Plug 'mkusher/padawan.vim', {'for': 'php'}
-Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
+Plug 'mkusher/padawan.vim'
+Plug 'padawan-php/deoplete-padawan'
 
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'StanAngeloff/php.vim'
@@ -60,12 +60,12 @@ Plug 'arnaud-lb/vim-php-namespace'
 Plug 'nishigori/vim-php-dictionary'
 Plug 'sahibalejandro/vim-php'
 " refactoring options
-Plug 'adoy/vim-php-refactoring-toolbox'
+Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'lumiliet/vim-twig'
 
 " php doc autocompletion
-Plug 'Rican7/php-doc-modded'
-" Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
+" Plug 'Rican7/php-doc-modded'
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
 " javascript plugins
 Plug 'pangloss/vim-javascript'
@@ -164,8 +164,9 @@ let g:startify_list_order = ['bookmarks']
 
 " php docs
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
-" autocmd FileType php noremap <leader>d :call pdv#DocumentWithSnip()<CR>
-autocmd FileType php nnoremap <leader>d :call PhpDocSingle()<CR>
+autocmd FileType php noremap <leader>d :call pdv#DocumentWithSnip()<CR>
+" autocmd FileType php nnoremap <leader>d :call PhpDocSingle()<CR>
+
 " Using a snippet for documentation?
 " let g:pdv_template_dir = $HOME."/.vim/pdv_templates_snip"
 
