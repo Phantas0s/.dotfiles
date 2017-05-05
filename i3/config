@@ -250,6 +250,11 @@ for_window [instance="htop_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
 exec urxvtc -name htop_scratchpad -e htop
 
+# keepass scratchpad
+for_window [class="Keepassx"] move to scratchpad
+bindsym $mod+Shift+a [class="Keepassx"] scratchpad show
+exec keepassx
+
 # configuration of some software
 for_window [class="URxvt*"] border pixel 1
 
@@ -266,9 +271,8 @@ focus_follows_mouse no
 # using the same workspace shortcut will focus on your last 
 workspace_auto_back_and_forth yes
 
-# start owncloud client && keepassx
+# start owncloud client
 exec --no-startup-id owncloud &
-exec --no-startup-id keepassx &
 
 ##########
 # DESIGN #
