@@ -65,5 +65,5 @@ URxvt.tabbed.tab-fg: 110
 URxvt.tabbed.tab-bg: 236
 URxvt.tabbed*transparent:true
 
-URxvt.letterSpace: -1 
+URxvt.letterSpace: -1
 
