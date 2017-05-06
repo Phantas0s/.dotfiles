@@ -308,7 +308,7 @@ function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginnin
         if f =~ '\<'.a:firstDirBeginning && f =~ a:filenameAddition.'\.'.a:fileExtension
             let filename = substitute(substitute(f, a:firstDirBeginning, '', ''), a:filenameAddition, '', '')
 
-            if exists("a:1") && a:1
+            if exists("a:1") && !empty(a:1)
                 let filename = a:1.'/'.filename
             endif
 
@@ -322,7 +322,7 @@ function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginnin
         elseif f =~ '\<'.a:secondDirBeginning && f !~ a:filenameAddition.'\.'.a:fileExtension
             let filename = substitute(substitute(f, a:secondDirBeginning, a:firstDirBeginning.a:secondDirBeginning, ''), '.'.a:fileExtension, a:filenameAddition.'.'.a:fileExtension, '')
 
-            if exists("a:1") && a:1
+            if exists("a:1") && !empty(a:1)
                 let filename = substitute(filename, '/'.a:1, '', '')
             endif
 
