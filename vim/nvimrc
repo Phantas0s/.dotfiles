@@ -25,6 +25,9 @@ Plug 'tpope/vim-fugitive' | Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 " easily search, substitute and abbreviate multiple version of words
 Plug 'tpope/vim-abolish'
+" the . command can repeat whatever you want!
+" http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
+Plug 'tpope/vim-repeat'
 
 " General autocomplete system
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
