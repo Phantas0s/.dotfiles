@@ -291,18 +291,24 @@ augroup END
 
 " firstDirBeginning: test path / secondDirBeginning: source path
 
-" a fifth argument can be add if tests in a src directory
+" a fifth argument can be add if tests in a subdirectory
+" a sixth argument can be added to use a special command to open the file (like vsp)
 " example:
-" autocmd FileType php nmap <silent> <leader>tu :call SwitchBetweenFiles('php', 'src/Tests/', 'src/', 'Test', 'src')<cr>
+" autocmd FileType php nmap <silent> <leader>tu :call SwitchBetweenFiles('php', 'src/Tests/', 'src/', 'Test', 'src', ':sp'  )<cr>
 " src/Tests/Model/ModelTest.php - src/Model/Model.php
 function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition, ...)
     let f = bufname("%")
-    if f =~ '.'.a:fileExtension
+    if exists("a:2")
+        let openFileCommand = a:2
+    else
+        let openFileCommand = ":e"
+    endif
 
+    if f =~ '.'.a:fileExtension
         if f =~ '\<'.a:firstDirBeginning && f =~ a:filenameAddition.'\.'.a:fileExtension
             let filename = substitute(substitute(f, a:firstDirBeginning, '', ''), a:filenameAddition, '', '')
 
-            if exists("a:1")
+            if exists("a:1") && a:1
                 let filename = a:1.'/'.filename
             endif
 
@@ -311,18 +317,20 @@ function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginnin
                 exe ":!mkdir -p ".new_dir
             endif
 
-            exe ":e ".filename
+            exe openFileCommand." ".filename
 
         elseif f =~ '\<'.a:secondDirBeginning && f !~ a:filenameAddition.'\.'.a:fileExtension
             let filename = substitute(substitute(f, a:secondDirBeginning, a:firstDirBeginning.a:secondDirBeginning, ''), '.'.a:fileExtension, a:filenameAddition.'.'.a:fileExtension, '')
-            if exists("a:1")
+
+            if exists("a:1") && a:1
                 let filename = substitute(filename, '/'.a:1, '', '')
             endif
+
             if !filereadable(filename)
                 let new_dir = substitute(filename, '/\w\+'.a:filenameAddition.'\.'.a:fileExtension, '', '')
                 exe ":!mkdir -p ".new_dir
             endif
-            exe ":e ".filename
+            exe openFileCommand." ".filename
         else
             echom "Could not switch because needed patterns not matched."
         endif
