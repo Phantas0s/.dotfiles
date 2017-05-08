@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --image-bg black --bg-center '/home/hypnos/.dotfiles/i3/lock_wallpapers/mountain_red_sky.png' 
+feh  --image-bg black --bg-center '/home/hypnos/.dotfiles/i3/lock_wallpapers/vertical_road.png' 
