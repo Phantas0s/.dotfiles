@@ -177,6 +177,9 @@ autocmd FileType php noremap <leader>d :call pdv#DocumentWithSnip()<CR>
 au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 au BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 
+" Twig
+autocmd BufNewFile,BufRead *.twig set filetype=html.twig
+
 "------------------
 " general binding
 "------------------
