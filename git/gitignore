@@ -2,8 +2,10 @@
 .idea
 .php_cs.cache
 .ignore
-docker/
-docker-compose-dev.yml
 dumps/
 autotest.rb
 .padawan
+
+docker/*-dev/
+docker-compose-dev.yml
+docker-compose.override.yml
