@@ -178,6 +178,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="URxvt" instance="urxvt"] → $terms
 #assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
 assign [class="Firefox" instance="Navigator"] → $web
+assign [class="Chromium" instance="chromium"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
 assign [class="Thunar" instance="thunar"] → $file_manager
 assign [class="Thunderbird" instance="Mail"] → $mail
