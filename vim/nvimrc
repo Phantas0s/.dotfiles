@@ -277,27 +277,29 @@ function! NoArrowInput()
 endfunction
 
 " buffer cleanup {{{
-function! DeleteInactiveBufs()
-    "From tabpagebuflist() help, get a list of all buffers in all tabs
-    let tablist = []
-    for i in range(tabpagenr('$'))
-        call extend(tablist, tabpagebuflist(i + 1))
+function! CloseHiddenBuffers()
+    let visible = {}
+    " Pour chaque onglet...
+    for t in range(1, tabpagenr('$'))
+        " Et pour chacune de ses fenetres...
+        for b in tabpagebuflist(t)
+            " On indique que le buffer est visible.
+            let visible[b] = 1
+        endfor
     endfor
-
-    "Below originally inspired by Hara Krishna Dara and Keith Roberts
-    "http://tech.groups.yahoo.com/group/vim/message/56425
-    let nWipeouts = 0
-    for i in range(1, bufnr('$'))
-        if bufexists(i) && !getbufvar(i,"&mod") && index(tablist, i) == -1
-            "bufno exists AND isn't modified AND isn't in the list of buffers open in windows and tabs
-            silent exec 'bwipeout' i
-            let nWipeouts = nWipeouts + 1
+    " Pour chaque numero de buffer possible...
+    for b in range(1, bufnr('$'))
+        " Si b est un numero de buffer valide et qu'il n'est pas visible, on le
+        " supprime.
+        if bufexists(b) && !has_key(visible, b)
+            " On ferme donc tous les buffers qui ne valent pas 1 dans le tableau et qui
+            " sont pourtant charges en memoire.
+            execute 'bwipeout' b
         endif
     endfor
-    echomsg nWipeouts . ' buffer(s) wiped out'
-endfunction
+endfun
 
-command! Ball :call DeleteInactiveBufs()
+command! Ball :call CloseHiddenBuffers()
 
 " }}}
 
