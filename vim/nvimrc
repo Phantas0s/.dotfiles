@@ -14,6 +14,8 @@ call plug#begin('~/nvim/plugged')
 " display the result when searching
 Plug 'henrik/vim-indexed-search'
 
+Plug 'vim-scripts/ZoomWin'
+
 " syntax highlighting for tmux.conf + other cool options
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
 " seemless navigation between vim windows / tmux pane
@@ -207,6 +209,9 @@ cmap w!! %!sudo tee > /dev/null %" display tabs, trailing spaces
 vmap < <gv
 vmap > >gv
 
+" remap the annoying u in visual mode
+vmap u y
+
 " Replace easily every occurence of the word under the cursor
 nnoremap <leader>[ :%s/<c-r><c-w>/<c-r><c-w>/g<left><left>
 
@@ -258,14 +263,14 @@ command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open htt
 au FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
 " prevent to use arrow keys
-inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
-inoremap  <Down>   <esc>ggVGd:call NoArrowInput()<cr>
-inoremap  <Left>   <esc>ggVGd:call NoArrowInput()<cr>
-inoremap  <Right>  <esc>ggVGd:call NoArrowInput()<cr>
-noremap   <Up>     <esc>ggVGd:call NoArrowInput()<cr>
-noremap   <Down>   <esc>ggVGd:call NoArrowInput()<cr>
-noremap   <Left>   <esc>ggVGd:call NoArrowInput()<cr>
-noremap   <Right>  <esc>ggVGd:call NoArrowInput()<cr>
+" inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
+" inoremap  <Down>   <esc>ggVGd:call NoArrowInput()<cr>
+" inoremap  <Left>   <esc>ggVGd:call NoArrowInput()<cr>
+" inoremap  <Right>  <esc>ggVGd:call NoArrowInput()<cr>
+" noremap   <Up>     <esc>ggVGd:call NoArrowInput()<cr>
+" noremap   <Down>   <esc>ggVGd:call NoArrowInput()<cr>
+" noremap   <Left>   <esc>ggVGd:call NoArrowInput()<cr>
+" noremap   <Right>  <esc>ggVGd:call NoArrowInput()<cr>
 
 function! NoArrowInput()
         let l:input = ''

@@ -189,17 +189,6 @@ assign [instance="evince"] → $documents
 exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc -e tmux -2 new-session -A -s main
 exec --no-startup-id xmodmap ~/.xmodmap
 
-exec --no-startup-id sh ~/config_monitors/default.sh
-exec --no-startup-id sh ~/.fehbg
-
-# assign monitor output to worspace 
-
-# set $mainMonitor 'Virtual2'
-
-# workspace $terms output $lapmonitor
-# workspace $web output $lapmonitor
-# workspace $sql output $lapmonitor
-
 ####################
 # restart / reload #
 ####################

@@ -9,3 +9,4 @@ autotest.rb
 docker/*-dev/
 docker-compose-dev.yml
 docker-compose.override.yml
+xdebug*

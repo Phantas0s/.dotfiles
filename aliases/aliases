@@ -93,9 +93,6 @@ alias stare='sudo tar xzvf'
 alias tars='tar tzf'
 alias tarc='tar cvzf'
 
-# nemo
-alias nemo='nemo --no-desktop'
-
 # docker
 # display the information about a container
 alias docki="docker inspect"
@@ -114,6 +111,9 @@ alias dockimg='docker images'
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
 alias dockce='docker-compose run --rm'
 alias docker-compose-dev='docker-compose -f docker-compose-dev.yml'
+
+#siege
+alias siege1='siege -c=1 --reps=1'
 
 ##############
 ## PROJECTS ##
