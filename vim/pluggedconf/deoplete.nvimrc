@@ -6,11 +6,16 @@ let g:deoplete#enable_at_startup = 1
 " deoplete tab-complete
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+" <CR>: close popup and save indent.
+inoremap <silent> <esc> <C-c>=<SID>closeAndInsert()<CR>
+function! s:closeAndInsert() abort
+    return deoplete#close_popup() . "\<CR>"
+endfunction
+
 let g:deoplete#file#enable_buffer_path = 1
 
 " Compatibility with phpcomplete
 let g:deoplete#omni_patterns = {}
-" let g:deoplete#omni_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 
 let g:deoplete#sources = {}
 let g:deoplete#sources.php = ['padawan', 'ultisnips', 'buffer']
