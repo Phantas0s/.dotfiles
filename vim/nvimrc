@@ -31,6 +31,12 @@ Plug 'tpope/vim-abolish'
 " http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-repeat'
 
+" See man pages in vim
+Plug 'jez/vim-superman'
+
+" Match more stuff with % (html tag, LaTeX...)
+Plug 'tmhedberg/matchit'
+
 " General autocomplete system
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
