@@ -67,6 +67,7 @@ Plug 'sahibalejandro/vim-php'
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'lumiliet/vim-twig'
+Plug 'phpstan/vim-phpstan'
 
 " php doc autocompletion
 " Plug 'Rican7/php-doc-modded'
@@ -141,6 +142,7 @@ source ~/nvim/pluggedconf/phpnamespace.nvimrc
 source ~/nvim/pluggedconf/php-refactoring-toolbox.nvimrc
 source ~/nvim/pluggedconf/php-cs-fixer.nvimrc
 source ~/nvim/pluggedconf/ferret.nvimrc
+source ~/nvim/pluggedconf/phpstan.nvimrc
 source ~/nvim/projects.nvimrc
 
 " markdown
@@ -253,33 +255,22 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
 
-" replace a word from 0 register (yank)
-:nnoremap griw ciw<C-r>0<ESC>
-:nnoremap grw cw<C-r>0<ESC>
-:nnoremap grW cW<C-r>0<ESC>
+" select last paste in visual mode
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " open devdocs.io with firefox
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
 au FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
-" prevent to use arrow keys
-" inoremap  <Up>     <esc>ggVGd:call NoArrowInput()<cr>
-" inoremap  <Down>   <esc>ggVGd:call NoArrowInput()<cr>
-" inoremap  <Left>   <esc>ggVGd:call NoArrowInput()<cr>
-" inoremap  <Right>  <esc>ggVGd:call NoArrowInput()<cr>
-" noremap   <Up>     <esc>ggVGd:call NoArrowInput()<cr>
-" noremap   <Down>   <esc>ggVGd:call NoArrowInput()<cr>
-" noremap   <Left>   <esc>ggVGd:call NoArrowInput()<cr>
-" noremap   <Right>  <esc>ggVGd:call NoArrowInput()<cr>
-
-function! NoArrowInput()
-        let l:input = ''
-        echo "type no arrows to return to vim"
-        while l:input !~ 'no arrows'
-                let l:input = input("")
-        endwhile
-        u
-endfunction
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
 " buffer cleanup {{{
 function! Buflist()
@@ -439,6 +430,16 @@ endfunction
 
 nnoremap <leader>G :call FormatPHPLineLength()<cr>
 
+function! LineNumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <leader>l :call LineNumberToggle()<cr>
+
 "-----------------
 " general config 
 "-----------------
@@ -488,5 +489,10 @@ set hidden
 " doesn't display the mode status
 set noshowmode
 
+" Keep cursor more in middle
+set scrolloff=15
 " no swap file!
 set noswapfile
+
+" write automatically when quitting buffer
+set autowrite

@@ -28,3 +28,9 @@ let g:neomake_php_phpcs_maker = {
             \ '"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]%.%#',
         \ 'postprocess': function('SetWarningType'),
  \ }
+
+let g:neomake_php_phpstan_maker = {
+        \ 'args': ['analyse', '--errorFormat', 'raw'],
+        \ 'errorformat': '%E%f:%l:%m',
+        \ 'postprocess': function('SetWarningType'),
+ \ }
