@@ -31,6 +31,9 @@ Plug 'tpope/vim-abolish'
 " http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-repeat'
 
+" camel case motion
+Plug 'chaoren/vim-wordmotion'
+
 " See man pages in vim
 Plug 'jez/vim-superman'
 
@@ -131,6 +134,7 @@ Plug 'wincent/ferret'
 
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
+
 call plug#end()
 "----------------
 " plugin config
