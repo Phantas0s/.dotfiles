@@ -30,6 +30,8 @@ Plug 'tpope/vim-abolish'
 " the . command can repeat whatever you want!
 " http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-repeat'
+" comment automatically
+Plug 'tpope/vim-commentary'
 
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
@@ -50,9 +52,6 @@ Plug 'mhinz/vim-startify'
 " general quality tools 
 Plug 'neomake/neomake'
 
-" comment automatically
-" Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-commentary'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -154,6 +153,9 @@ source ~/nvim/pluggedconf/php-cs-fixer.nvimrc
 source ~/nvim/pluggedconf/ferret.nvimrc
 source ~/nvim/pluggedconf/phpstan.nvimrc
 source ~/nvim/projects.nvimrc
+
+" vim-wordmotion
+let g:wordmotion_prefix = 'c'
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
