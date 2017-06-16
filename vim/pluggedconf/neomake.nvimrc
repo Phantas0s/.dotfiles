@@ -21,6 +21,11 @@ function! SetWarningType(entry)
   let a:entry.type = 'W'
 endfunction
 
+function! SetErrorType(entry)
+  let a:entry.type = 'E'
+endfunction
+
+
 let g:neomake_php_phpcs_maker = {
         \ 'args': ['--report=csv', '--standard=PSR2'],
         \ 'errorformat':
@@ -32,5 +37,11 @@ let g:neomake_php_phpcs_maker = {
 let g:neomake_php_phpstan_maker = {
         \ 'args': ['analyse', '--errorFormat', 'raw'],
         \ 'errorformat': '%E%f:%l:%m',
+        \ 'postprocess': function('SetWarningType'),
+ \ }
+
+let g:neomake_php_phpmd_maker = {
+        \ 'args': ['%:p', 'text', 'codesize,design,unusedcode,naming'],
+        \ 'errorformat': '%W%f:%l%\s%\s%#%m',
         \ 'postprocess': function('SetWarningType'),
  \ }
