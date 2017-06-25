@@ -202,7 +202,7 @@ autocmd BufNewFile,BufRead *.twig set filetype=html.twig
 
 " Weird hack for NERDTree to work
 let mapleader = "\\"
-nmap <SPACE> <leader>
+map <SPACE> <leader>
 
 " add a line in normal mode
 nmap <leader>o o<esc>
@@ -441,16 +441,6 @@ function! FormatPHPLineLength()
 endfunction
 
 nnoremap <leader>G :call FormatPHPLineLength()<cr>
-
-function! LineNumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunc
-
-nnoremap <leader>l :call LineNumberToggle()<cr>
 
 "-----------------
 " general config 

@@ -19,3 +19,14 @@ autocmd FileType php nnoremap <leader>rlv :call PhpRenameLocalVariable()<CR>
 autocmd FileType php nnoremap <leader>rdu :call PhpDetectUnusedUseStatements()<CR>
 autocmd FileType php vnoremap <leader>raa :call PhpAlignAssigns()<CR>
 autocmd FileType php nnoremap <leader>rsg :call PhpCreateSettersAndGetters()<CR>
+
+vnoremap <leader>e :call PHPExtractVariable()<cr>
+
+function! PHPExtractVariable()
+    let l:name = input("Name of new variable: $")
+    normal! gvx
+    execute "normal! i$".l:name
+    execute "normal! O$".l:name." = "
+    normal! pa;
+endfunction
+
