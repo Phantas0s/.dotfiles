@@ -3,7 +3,7 @@
 ###############
 
 # sh
-alias sh="zsh"
+alias sh='zsh'
 
 # apt-get
 alias agi='sudo apt-fast install'

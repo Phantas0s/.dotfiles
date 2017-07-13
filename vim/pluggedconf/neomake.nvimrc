@@ -41,7 +41,7 @@ let g:neomake_php_phpstan_maker = {
  \ }
 
 let g:neomake_php_phpmd_maker = {
-        \ 'args': ['%:p', 'text', 'codesize,design,unusedcode,naming'],
+        \ 'args': ['%:p', 'text', 'cleancode,codesize,design,unusedcode,naming'],
         \ 'errorformat': '%W%f:%l%\s%\s%#%m',
         \ 'postprocess': function('SetWarningType'),
  \ }
