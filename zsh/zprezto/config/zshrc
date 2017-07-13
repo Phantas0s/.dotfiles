@@ -4,6 +4,9 @@ source ${ZDOTDIR:-$HOME}/.dotfiles/startup
 bindkey -v
 export KEYTIMEOUT=1
 
+# use ripgrep with fzf
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
 # Fix bug when prompt has two lines
 bindkey -r '^l'
 bindkey -r '^g'
