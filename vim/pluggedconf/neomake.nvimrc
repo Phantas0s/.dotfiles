@@ -25,6 +25,10 @@ function! SetErrorType(entry)
   let a:entry.type = 'E'
 endfunction
 
+function! SetMessageType(entry)
+  let a:entry.type = 'M'
+endfunction
+
 
 let g:neomake_php_phpcs_maker = {
         \ 'args': ['--report=csv', '--standard=PSR2'],
@@ -43,5 +47,6 @@ let g:neomake_php_phpstan_maker = {
 let g:neomake_php_phpmd_maker = {
         \ 'args': ['%:p', 'text', 'cleancode,codesize,design,unusedcode,naming'],
         \ 'errorformat': '%W%f:%l%\s%\s%#%m',
-        \ 'postprocess': function('SetWarningType'),
+        \ 'postprocess': function('SetMessageType'),
  \ }
+
