@@ -61,6 +61,9 @@ read key;
 # install feh config
 . $HOME/$ROOT_CONFIG/install/install-feh.sh
 
+# install siege config
+. $HOME/$ROOT_CONFIG/install/install-siege.sh
+
 echo "${blue}Create symlinks for personnal config..."
 
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc

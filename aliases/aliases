@@ -5,6 +5,9 @@
 # sh
 alias sh='zsh'
 
+# ping
+alias pg='ping 8.8.8.8'
+
 # apt-get
 alias agi='sudo apt-fast install'
 alias agr='sudo apt-fast remove'
@@ -114,9 +117,6 @@ alias dockimg='docker images'
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
 alias dockce='docker-compose run --rm'
 alias docker-compose-dev='docker-compose -f docker-compose-dev.yml'
-
-#siege
-alias siege1='siege -c=1 --reps=1'
 
 ##############
 ## PROJECTS ##
