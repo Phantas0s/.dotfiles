@@ -2,6 +2,9 @@
 ## LINUX APP ##
 ###############
 
+# run ssh-agent with x session
+alias startx='ssh-agent startx'
+
 # sh
 alias sh='zsh'
 
