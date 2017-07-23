@@ -188,6 +188,7 @@ assign [instance="evince"] → $documents
 # start softwares and command lines in workspaces
 exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc -e tmux -2 new-session -A -s main
 exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id sh ~/.fehbg
 
 ####################
 # restart / reload #
