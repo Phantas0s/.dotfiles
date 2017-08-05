@@ -1,8 +1,0 @@
-#
-# Siege cookies file. You may edit this file to add cookies
-# manually but comments and formatting will be removed.    
-# All cookies that expire in the future will be preserved. 
-# ---------------------------------------------------------
-140067307333120 | NID=101=gwCfcMemrucIojJCJuh4N0r5LnTFsUdpi9oXT-sxae-H_MR3OIP_0PppMsrjUNVp-h4hX9l2K0RykpdXPDrOPSf-HBTssUazoGgkglRf3zjxLSGpg68Xc7lF4KMnXh_Z; domain=.google.de; path=/; expires=1507801952
-140067307333120 | NID=101=mQ1d36aC4uC0kSOXdp5CPxGj66K3GWHZZXCwpwPIXwWJA48bNgO_rtu2LNPXM-gu4aaDl0fiNzFy7FUCCNccbkng3xELUC_QzOk07lxk4AEHT-_UTDStmGldOSfSiSXQ; domain=.google.de; path=/; expires=1507801972
-140067307333120 | NID=101=rTqbegbfny4xGsqsBiza5e0YZ3HnrCSoTXj8Gz79yzPcArwyhKkh1rHlTU7Fc_pcLZwugLjPdunwRtRgqHgDihyDVgHc814PrDGqUxdJzYadKlZVs9D6AKGda5E2Y7IG; domain=.google.de; path=/; expires=1507801982
