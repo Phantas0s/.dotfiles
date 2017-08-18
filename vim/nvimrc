@@ -1,4 +1,5 @@
 " Note: Skip initialization for vim-tiny or vim-small.
+"
 if !1 | finish | endif
 
 if &compatible
@@ -13,8 +14,6 @@ call plug#begin('~/nvim/plugged')
 
 " display the result when searching
 Plug 'henrik/vim-indexed-search'
-
-Plug 'vim-scripts/ZoomWin'
 
 " syntax highlighting for tmux.conf + other cool options
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -93,9 +92,6 @@ Plug 'posva/vim-vue'
 
 " autoclose bracket and parenthesis when open
 Plug 'Townk/vim-autoclose'
-
-" Outline
-" Plug 'vim-scripts/tabbar'
 
 " debugger
 Plug 'joonty/vdebug'
@@ -441,6 +437,21 @@ function! FormatPHPLineLength()
 endfunction
 
 nnoremap <leader>G :call FormatPHPLineLength()<cr>
+
+" Simple Zoom / Restore window.
+function! s:ZoomToggle() abort
+    if exists('t:zoomed') && t:zoomed
+        execute t:zoom_winrestcmd
+        let t:zoomed = 0
+    else
+        let t:zoom_winrestcmd = winrestcmd()
+        resize
+        vertical resize
+        let t:zoomed = 1
+    endif
+endfunction
+command! ZoomToggle call s:ZoomToggle()
+nnoremap <silent> <Leader>z :ZoomToggle<CR>
 
 "-----------------
 " general config 
