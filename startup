@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ##########################
 # STARTUP FOR BASH / ZSH #
 ##########################
@@ -17,4 +19,10 @@ fi
 
 # source startup scripts
 source $SCRIPT_PATH/aliases/aliases
+
+if [[ -f $HOME/.perso_aliases ]]
+then
+    source $HOME/.perso_aliases
+fi
+
 source $SCRIPT_PATH/env

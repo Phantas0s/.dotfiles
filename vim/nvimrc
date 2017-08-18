@@ -259,6 +259,9 @@ nnoremap <leader>wv <c-w>v
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
+" delete character after cursor in insert mode
+inoremap <C-d> <Del>
+
 " highlight the line which is longer than the defined margin (120)
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
