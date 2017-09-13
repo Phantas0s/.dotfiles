@@ -50,7 +50,7 @@ Plug 'mhinz/vim-startify'
 
 " general quality tools 
 Plug 'neomake/neomake'
-
+Plug 'phpstan/vim-phpstan'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -73,8 +73,9 @@ Plug 'nishigori/vim-php-dictionary'
 Plug 'sahibalejandro/vim-php'
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
+
+" twig
 Plug 'lumiliet/vim-twig'
-Plug 'phpstan/vim-phpstan'
 
 " php doc autocompletion
 " Plug 'Rican7/php-doc-modded'
