@@ -448,6 +448,7 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.php :call DeleteTrailingWS()
 autocmd BufWrite *.js :call DeleteTrailingWS()
+autocmd BufWrite *.vue :call DeleteTrailingWS()
 
 " Simple Zoom / Restore window.
 function! s:ZoomToggle() abort
