@@ -439,8 +439,15 @@ function! FormatPHPLineLength()
         endtry
     endif
 endfunction
-
 nnoremap <leader>G :call FormatPHPLineLength()<cr>
+
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.php :call DeleteTrailingWS()
+autocmd BufWrite *.js :call DeleteTrailingWS()
 
 " Simple Zoom / Restore window.
 function! s:ZoomToggle() abort
