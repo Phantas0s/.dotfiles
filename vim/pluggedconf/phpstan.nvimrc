@@ -1,1 +1,1 @@
-let g:phpstan_analyse_level = 4
+let g:phpstan_analyse_level = 7
