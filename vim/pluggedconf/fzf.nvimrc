@@ -8,32 +8,32 @@ nnoremap <leader>a :Rg<space>
 nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>
 
 " Ack for ag to work with fzf (from Phux)
-function! s:ag_to_qf(line)
-  let parts = split(a:line, ':')
-  return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],
-        \ 'text': join(parts[3:], ':')}
-endfunction
+" function! s:ag_to_qf(line)
+"   let parts = split(a:line, ':')
+"   return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],
+"         \ 'text': join(parts[3:], ':')}
+" endfunction
 
 " Ack for ag to work with fzf (from Phux)
-function! s:ag_handler(lines)
-  if len(a:lines) < 2 | return | endif
+" function! s:ag_handler(lines)
+"   if len(a:lines) < 2 | return | endif
 
-  let cmd = get({'ctrl-x': 'split',
-               \ 'ctrl-v': 'vertical split',
-               \ 'ctrl-t': 'tabe'}, a:lines[0], 'e')
-  let list = map(a:lines[1:], 's:ag_to_qf(v:val)')
+"   let cmd = get({'ctrl-x': 'split',
+"                \ 'ctrl-v': 'vertical split',
+"                \ 'ctrl-t': 'tabe'}, a:lines[0], 'e')
+"   let list = map(a:lines[1:], 's:ag_to_qf(v:val)')
 
-  let first = list[0]
-  execute cmd escape(first.filename, ' %#\')
-  execute first.lnum
-  execute 'normal!' first.col.'|zz'
+"   let first = list[0]
+"   execute cmd escape(first.filename, ' %#\')
+"   execute first.lnum
+"   execute 'normal!' first.col.'|zz'
 
-  if len(list) > 1
-    call setqflist(list)
-    copen
-    wincmd p
-  endif
-endfunction
+"   if len(list) > 1
+"     call setqflist(list)
+"     copen
+"     wincmd p
+"   endif
+" endfunction
 
 autocmd VimEnter * command! -nargs=* Ag call fzf#run({
 \ 'source':  printf('ag -U --nogroup --column --color "%s"',
