@@ -16,6 +16,8 @@ let g:neomake_php_phpcs_args_standard = 'PSR2'
 " update neomake when save file
 autocmd! BufWritePost * Neomake
 
+" call neomake#configure#automake('w')
+
 " display warning for phpcs error
 function! SetWarningType(entry)
   let a:entry.type = 'W'
@@ -39,7 +41,7 @@ let g:neomake_php_phpcs_maker = {
  \ }
 
 let g:neomake_php_phpstan_maker = {
-        \ 'args': ['analyse', '--errorFormat', 'raw'],
+        \ 'args': ['analyse -l 5', '--errorFormat', 'raw'],
         \ 'errorformat': '%E%f:%l:%m',
         \ 'postprocess': function('SetWarningType'),
  \ }
