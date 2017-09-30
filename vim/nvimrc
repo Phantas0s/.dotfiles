@@ -65,12 +65,13 @@ Plug 'plasticboy/vim-markdown'
 Plug 'mkusher/padawan.vim'
 Plug 'padawan-php/deoplete-padawan'
 
-Plug '2072/PHP-Indenting-for-VIm'
+" Plug '2072/PHP-Indenting-for-VIm'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
-Plug 'nishigori/vim-php-dictionary'
-Plug 'sahibalejandro/vim-php'
+" Plug 'nishigori/vim-php-dictionary'
+" Plug 'sahibalejandro/vim-php'
+
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 
@@ -131,6 +132,9 @@ Plug 'wincent/ferret'
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
 
+" Generate tags
+Plug 'ludovicchabant/vim-gutentags'
+
 call plug#end()
 "----------------
 " plugin config
@@ -149,6 +153,7 @@ source ~/nvim/pluggedconf/php-refactoring-toolbox.nvimrc
 source ~/nvim/pluggedconf/php-cs-fixer.nvimrc
 source ~/nvim/pluggedconf/ferret.nvimrc
 source ~/nvim/pluggedconf/phpstan.nvimrc
+source ~/nvim/pluggedconf/gutentag.nvimrc
 source ~/nvim/projects.nvimrc
 
 " vim-wordmotion

@@ -41,7 +41,7 @@ let g:neomake_php_phpcs_maker = {
  \ }
 
 let g:neomake_php_phpstan_maker = {
-        \ 'args': ['analyse -l 5', '--errorFormat', 'raw'],
+        \ 'args': ['analyse', '--level 7', '--errorFormat', 'raw'],
         \ 'errorformat': '%E%f:%l:%m',
         \ 'postprocess': function('SetWarningType'),
  \ }
