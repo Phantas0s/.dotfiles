@@ -65,12 +65,12 @@ Plug 'plasticboy/vim-markdown'
 Plug 'mkusher/padawan.vim'
 Plug 'padawan-php/deoplete-padawan'
 
-Plug '2072/PHP-Indenting-for-VIm'
+" Plug '2072/PHP-Indenting-for-VIm'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
-Plug 'nishigori/vim-php-dictionary'
-Plug 'sahibalejandro/vim-php'
+" Plug 'nishigori/vim-php-dictionary'
+" Plug 'sahibalejandro/vim-php'
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 
@@ -87,6 +87,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+
 Plug 'beyondwords/vim-twig'
 Plug 'posva/vim-vue'
 
@@ -107,7 +108,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'ryanoasis/vim-devicons'
 
 " another tree plugin
-Plug 'easytree.vim'
+" Plug 'easytree.vim'
 
 " status bar
 Plug 'itchyny/lightline.vim'
@@ -441,6 +442,7 @@ function! FormatPHPLineLength()
 endfunction
 nnoremap <leader>G :call FormatPHPLineLength()<cr>
 
+" delete trailing space when saving files
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
@@ -449,6 +451,8 @@ endfunc
 autocmd BufWrite *.php :call DeleteTrailingWS()
 autocmd BufWrite *.js :call DeleteTrailingWS()
 autocmd BufWrite *.vue :call DeleteTrailingWS()
+autocmd BufWrite *.twig :call DeleteTrailingWS()
+autocmd BufWrite *.html :call DeleteTrailingWS()
 
 " Simple Zoom / Restore window.
 function! s:ZoomToggle() abort
