@@ -69,7 +69,7 @@ Plug 'padawan-php/deoplete-padawan'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
-" Plug 'nishigori/vim-php-dictionary'
+Plug 'nishigori/vim-php-dictionary'
 " Plug 'sahibalejandro/vim-php'
 
 " refactoring options
@@ -132,9 +132,6 @@ Plug 'wincent/ferret'
 
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
-
-" Generate tags
-Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 "----------------
