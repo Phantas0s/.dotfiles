@@ -1,12 +1,11 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-"
+" Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
 if &compatible
     set nocompatible
 endif
 
-
+"----------------
 " install plugin
 "-----------------
 
@@ -61,16 +60,13 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " php autocompletion engine and tools
-" Plug 'shawncplus/phpcomplete.vim'
 Plug 'mkusher/padawan.vim'
 Plug 'padawan-php/deoplete-padawan'
 
-" Plug '2072/PHP-Indenting-for-VIm'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'nishigori/vim-php-dictionary'
-" Plug 'sahibalejandro/vim-php'
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
@@ -79,7 +75,6 @@ Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'lumiliet/vim-twig'
 
 " php doc autocompletion
-" Plug 'Rican7/php-doc-modded'
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
 " javascript plugins
@@ -90,8 +85,8 @@ Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 Plug 'beyondwords/vim-twig'
+" Syntax highlighting for vue js framework
 Plug 'posva/vim-vue'
-
 
 " autoclose bracket and parenthesis when open
 Plug 'Townk/vim-autoclose'
@@ -99,7 +94,7 @@ Plug 'Townk/vim-autoclose'
 " debugger
 Plug 'joonty/vdebug'
 
-" outline
+" outliner
 Plug 'majutsushi/tagbar'
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
@@ -107,9 +102,6 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'ryanoasis/vim-devicons'
-
-" another tree plugin
-" Plug 'easytree.vim'
 
 " status bar
 Plug 'itchyny/lightline.vim'
@@ -134,12 +126,16 @@ Plug 'wincent/ferret'
 Plug 'ap/vim-css-color'
 
 call plug#end()
+
+
 "----------------
 " plugin config
 "----------------
+
+" Add composer to the general path
 let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
+
 source ~/nvim/pluggedconf/deoplete.nvimrc
-" source ~/nvim/pluggedconf/phpcomplete.nvimrc
 source ~/nvim/pluggedconf/nerdtree.nvimrc
 source ~/nvim/pluggedconf/lightline.nvimrc
 source ~/nvim/pluggedconf/fzf.nvimrc
@@ -152,6 +148,8 @@ source ~/nvim/pluggedconf/php-cs-fixer.nvimrc
 source ~/nvim/pluggedconf/ferret.nvimrc
 source ~/nvim/pluggedconf/phpstan.nvimrc
 source ~/nvim/pluggedconf/gutentag.nvimrc
+
+" project config - is not on my git repository (but on my personal nextcloud)
 source ~/nvim/projects.nvimrc
 
 " vim-wordmotion
@@ -166,25 +164,21 @@ autocmd FileType php setlocal commentstring=\/\/\ %s
 " ultisnips
 let g:UltiSnipsExpandTrigger="<C-s>"
 
-" easytree
-nmap <leader>e :EasyTree<cr>
-
 " close the buffer
 nmap <leader>db :Bdelete!<cr>
 
-" map go to definition
+" go to definition of a method / class / whatever via Ctags
 map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
-" YankRing - show register
+" YankRing
 nnoremap <leader>r :YRShow<cr> 
 
-" Only bookmarks for startify
+" Startify config
 let g:startify_list_order = ['bookmarks']
 
 " php docs
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
 autocmd FileType php noremap <leader>d :call pdv#DocumentWithSnip()<CR>
-" autocmd FileType php nnoremap <leader>d :call PhpDocSingle()<CR>
 
 " Using a snippet for documentation?
 " let g:pdv_template_dir = $HOME."/.vim/pdv_templates_snip"
@@ -204,11 +198,8 @@ autocmd BufNewFile,BufRead *.twig set filetype=html.twig
 let mapleader = "\\"
 map <SPACE> <leader>
 
-" add a line in normal mode
+" Go to next line and quit insert mode
 nmap <leader>o o<esc>
-
-" easy command
-" noremap ; :
 
 " paste mode in order to paste correctly the formating from the clipboard
 nnoremap <leader>p :set paste!<CR>
@@ -226,16 +217,17 @@ vmap > >gv
 " remap the annoying u in visual mode
 vmap u y
 
-" Replace easily every occurence of the word under the cursor
+" shortcut to substitute current word under cursor
 nnoremap <leader>[ :%s/<c-r><c-w>/<c-r><c-w>/g<left><left>
 
 " reformat with external tools
 autocmd FileType xml nnoremap <leader>c :%!xmllint --format - <cr>
 autocmd FileType json nnoremap <leader>c :%!python -m json.tool<cr>
+
 " html
 nmap <leader><F3> :%s/<[^>]*>/\r&\r/g<cr>gg=G:g/^$/d<cr><leader>/
 
-" tabs
+" tabs - I never use them but well
 nnoremap th :tabfirst<CR>
 nnoremap tj :tabnext<CR>
 nnoremap tk :tabprev<CR>
@@ -256,7 +248,10 @@ nnoremap <leader>wco :only<cr>
 nnoremap <leader>wcc :cclose<cr>
 
 " windows creation
+
+" create window on the bottom
 nnoremap <leader>wb <c-w>s
+" create vertival window
 nnoremap <leader>wv <c-w>v
 
 " resize the windows
@@ -266,18 +261,18 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " delete character after cursor in insert mode
 inoremap <C-d> <Del>
 
-" highlight the line which is longer than the defined margin (120)
+" highlight the line which is longer than the defined margin (120 character)
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
 
 " select last paste in visual mode
 nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
-" open devdocs.io with firefox
+" open devdocs.io with firefox and search the word under the cursor
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
 au FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
-" disable arrow keys
+" disable arrow keys - don't use arrow keys in Vim!
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -287,7 +282,7 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-" buffer cleanup {{{
+" buffer cleanup - delete every buffer except the one open
 function! Buflist()
     redir => bufnames
     silent ls
@@ -307,11 +302,9 @@ function! Bdeleteonly()
     endfor
 endfunction
 
-command! Ball :silent call Bdeleteonly() 
+command! Ball :silent call Bdeleteonly()
 
-" }}}
-
-" restore the position of the cursor when you open a file
+" restore the position of the last cursor when you open a file
 au BufReadPost * call RestorePosition()
 func! RestorePosition()
     if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
@@ -323,17 +316,20 @@ func! RestorePosition()
     endif
 endfunc
 
-" edit vimrc with f5 and source it automatically
+" edit vimrc with f5 and source it automatically when saved
 nmap <silent> <leader><f5> :e $MYVIMRC<CR>
 augroup reload_vimrc
     autocmd!
     autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 augroup END
 
-" firstDirBeginning: test path / secondDirBeginning: source path
+" Create automatically test files / can switch between tests and tested files
+" Super powerful for TDD!!
 
-" a fifth argument can be add if tests in a subdirectory
+" firstDirBeginning: test path / secondDirBeginning: source path
+" a fifth argument can be added if tests is in a subdirectory
 " a sixth argument can be added to use a special command to open the file (like vsp)
+
 " example:
 " autocmd FileType php nmap <silent> <leader>tu :call SwitchBetweenFiles('php', 'src/Tests/', 'src/', 'Test', 'src', ':sp'  )<cr>
 " src/Tests/Model/ModelTest.php - src/Model/Model.php
@@ -378,7 +374,7 @@ function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginnin
     endif
 endfunction
 
-" FormatPHPLineLength
+" FormatPHPLineLength - can split array or list of arguments on multiple lines. Very Handy!
 " Make it available for all languages?
 function! FormatPHPLineLength()
     let l:currentLine = getline('.')
@@ -450,13 +446,14 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
+
 autocmd BufWrite *.php :call DeleteTrailingWS()
 autocmd BufWrite *.js :call DeleteTrailingWS()
 autocmd BufWrite *.vue :call DeleteTrailingWS()
 autocmd BufWrite *.twig :call DeleteTrailingWS()
 autocmd BufWrite *.html :call DeleteTrailingWS()
 
-" Simple Zoom / Restore window.
+" Simple Zoom / Restore window (a bit like Tmux)
 function! s:ZoomToggle() abort
     if exists('t:zoomed') && t:zoomed
         execute t:zoom_winrestcmd
@@ -513,16 +510,16 @@ set list
 let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
 " let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
 
-" doesn't prompt a warning when opening a file and the current file was
-" written but not saved 
+" doesn't prompt a warning when opening a file and the current file was written but not saved 
 set hidden
 
 " doesn't display the mode status
 set noshowmode
 
-" Keep cursor more in middle
+" Keep cursor more in middle when scrolling down / up
 set scrolloff=15
-" no swap file!
+
+" no swap file! This is just annoying
 set noswapfile
 
 " write automatically when quitting buffer
