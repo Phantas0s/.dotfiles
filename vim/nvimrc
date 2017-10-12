@@ -125,6 +125,9 @@ Plug 'wincent/ferret'
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
 
+" easy way to rezise and exchange windows
+Plug 'simeji/winresizer'
+
 call plug#end()
 
 
@@ -144,6 +147,7 @@ source ~/nvim/pluggedconf/neomake.nvimrc
 source ~/nvim/pluggedconf/project-vim.nvimrc
 source ~/nvim/pluggedconf/phpnamespace.nvimrc
 source ~/nvim/pluggedconf/php-refactoring-toolbox.nvimrc
+source ~/nvim/pluggedconf/phpactor.nvimrc
 source ~/nvim/pluggedconf/php-cs-fixer.nvimrc
 source ~/nvim/pluggedconf/ferret.nvimrc
 source ~/nvim/pluggedconf/phpstan.nvimrc

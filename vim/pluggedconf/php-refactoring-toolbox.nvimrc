@@ -20,7 +20,7 @@ autocmd FileType php nnoremap <leader>rdu :call PhpDetectUnusedUseStatements()<C
 autocmd FileType php vnoremap <leader>raa :call PhpAlignAssigns()<CR>
 autocmd FileType php nnoremap <leader>rsg :call PhpCreateSettersAndGetters()<CR>
 
-vnoremap <leader>e :call PHPExtractVariable()<cr>
+vnoremap <leader>rev :call PHPExtractVariable()<cr>
 
 function! PHPExtractVariable()
     let l:name = input("Name of new variable: $")
