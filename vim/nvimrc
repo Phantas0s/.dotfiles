@@ -130,7 +130,6 @@ Plug 'simeji/winresizer'
 
 call plug#end()
 
-
 "----------------
 " plugin config
 "----------------
@@ -172,9 +171,6 @@ nmap <leader>db :Bdelete!<cr>
 
 " go to definition of a method / class / whatever via Ctags
 map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-" YankRing
-nnoremap <leader>r :YRShow<cr> 
 
 " Startify config
 let g:startify_list_order = ['bookmarks']

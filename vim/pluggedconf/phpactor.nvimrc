@@ -8,7 +8,7 @@ nnoremap <leader>raa :call PHPModify("add_missing_assignments")<cr>
 nnoremap <leader>rcc :call PHPModify("complete_constructor")<cr>
 nnoremap <leader>rei :call PHPExtractInterface()<cr>
 
-nnoremap <leader>sr :call PHPShowReferences()<cr>
+nnoremap <leader>src :call PHPShowReferencesClass()<cr>
 
 function! PHPMoveClass()
     let l:oldPath = expand('%')
@@ -18,7 +18,7 @@ function! PHPMoveClass()
     execute "e ". l:newPath
 endfunction
 
-function! PHPShowReferences()
+function! PHPShowReferencesClass()
     execute "!phpactor references:class ".expand('%')
 endfunction
 
