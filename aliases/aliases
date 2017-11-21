@@ -23,6 +23,10 @@ alias pacs='sudo pacman -Ss'
 alias pacu='sudo pacman -Syu'
 alias pacr='sudo pacman -R'
 alias pacrr='sudo pacman -Rs'
+# empty cache from deprecated packages
+alias pacc='sudo pacman -Sc'
+# empty the whole cache
+alias paccc='sudo pacman -Scc'
 
 
 # system
@@ -30,6 +34,8 @@ alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
 alias suspend='sudo pm-suspend'
 alias lock='gnome-screensaver-command --lock'
+# display big files > 50M
+alias bigf= 'find / -xdev -type f -size +50M'
 
 # ls
 alias ls='ls --color=auto'

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --image-bg black --bg-center '/home/hypnos/.dotfiles/i3/lock_wallpapers/hd-beach-wallpaper-full-hd-120.jpg' 
+'feh' '--image-bg' 'black' '--bg-center' '/home/hypnos/.dotfiles/i3/lock_wallpapers/hd-beach-wallpaper-full-hd-120.jpg' 
