@@ -35,7 +35,7 @@ Plug 'tpope/vim-commentary'
 Plug 'wellle/targets.vim'
 
 " Intelligent f / t
-Plug 'rhysd/clever-f.vim'
+" Plug 'rhysd/clever-f.vim'
 
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
@@ -55,7 +55,6 @@ Plug 'mhinz/vim-startify'
 
 " general quality tools 
 Plug 'neomake/neomake'
-Plug 'phpstan/vim-phpstan'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -73,6 +72,7 @@ Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'nishigori/vim-php-dictionary'
+Plug 'phpstan/vim-phpstan'
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
@@ -133,6 +133,7 @@ Plug 'ap/vim-css-color'
 
 " easy way to rezise and exchange windows
 Plug 'simeji/winresizer'
+Plug 'yangmillstheory/vim-snipe'
 
 call plug#end()
 
@@ -156,6 +157,7 @@ source ~/nvim/pluggedconf/phpactor.nvimrc
 source ~/nvim/pluggedconf/php-cs-fixer.nvimrc
 source ~/nvim/pluggedconf/ferret.nvimrc
 source ~/nvim/pluggedconf/phpstan.nvimrc
+source ~/nvim/pluggedconf/vim-snipe.nvimrc
 
 " project config - is not on my git repository (but on my personal nextcloud)
 source ~/nvim/projects.nvimrc
@@ -232,7 +234,10 @@ autocmd FileType json nnoremap <leader>c :%!python -m json.tool<cr>
 " html
 nmap <leader><F3> :%s/<[^>]*>/\r&\r/g<cr>gg=G:g/^$/d<cr><leader>/
 
-" tabs - I never use them but well
+" Change in next bracket
+nmap cinb cib
+
+" tabs
 nnoremap th :tabfirst<CR>
 nnoremap tj :tabnext<CR>
 nnoremap tk :tabprev<CR>

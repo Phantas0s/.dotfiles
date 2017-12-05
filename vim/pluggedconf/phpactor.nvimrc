@@ -2,10 +2,12 @@
 " configuration possibilities
 
 nnoremap <leader>rmc :call PHPMoveClass()<cr>
+nnoremap <leader>rcc :call PHPCopyClass()<cr>
 nnoremap <leader>rmd :call PHPMoveDir()<cr>
 nnoremap <leader>ric :call PHPModify("implement_contracts")<cr>
 nnoremap <leader>raa :call PHPModify("add_missing_assignments")<cr>
-nnoremap <leader>rcc :call PHPModify("complete_constructor")<cr>
+" Fill constructor
+nnoremap <leader>rfc :call PHPModify("complete_constructor")<cr>
 nnoremap <leader>rei :call PHPExtractInterface()<cr>
 
 nnoremap <leader>src :call PHPShowReferencesClass()<cr>
@@ -14,6 +16,14 @@ function! PHPMoveClass()
     let l:oldPath = expand('%')
     let l:newPath = input("New path: ", l:oldPath)
     execute "!phpactor class:move ".l:oldPath.' '.l:newPath
+    execute "bd ".l:oldPath
+    execute "e ". l:newPath
+endfunction
+
+function! PHPCopyClass()
+    let l:oldPath = expand('%')
+    let l:newPath = input("New copy path: ", l:oldPath)
+    execute "!phpactor class:copy ".l:oldPath.' '.l:newPath
     execute "bd ".l:oldPath
     execute "e ". l:newPath
 endfunction
