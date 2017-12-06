@@ -133,6 +133,8 @@ Plug 'ap/vim-css-color'
 
 " easy way to rezise and exchange windows
 Plug 'simeji/winresizer'
+
+" replace f F t T to target easily the motion
 Plug 'yangmillstheory/vim-snipe'
 
 call plug#end()
