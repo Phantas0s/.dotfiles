@@ -11,4 +11,4 @@ DOTFILES_PROJECT_PATH=""
 
 # personnal cloud storage for private config:
 # see install/install-from-cloud.sh
-DOTFILES_COMMON_PATH="$HOME/shares/host/Nextcloud/development/dotfiles_projects/common"
+DOTFILES_COMMON_PATH=""
