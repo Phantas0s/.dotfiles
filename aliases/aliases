@@ -82,6 +82,8 @@ alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gl='git log'
+# rework the last commit - no squary loss
+alias grc='git reset HEAD^'
 alias gls='git remote show'
 alias glo='git log --pretty="oneline"'
 alias gdf='git diff --color | diff-so-fancy' #Coloration for git diff - https://github.com/so-fancy/diff-so-fancy
