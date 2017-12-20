@@ -4,7 +4,6 @@
 # install Prezto #
 ##################
 
-
 if [ ! -d $HOME/.zprezto ]
   then
     git clone git@github.com:sorin-ionescu/prezto ~/.zprezto

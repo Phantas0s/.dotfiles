@@ -61,8 +61,12 @@ read key;
 # install feh config
 . $HOME/$ROOT_CONFIG/install/install-feh.sh
 
+# install jrnl config
+. $HOME/$ROOT_CONFIG/install/install-jrnl.sh
+
 # install siege config
-. $HOME/$ROOT_CONFIG/install/install-siege.sh
+# to fix
+# $HOME/$ROOT_CONFIG/install/install-siege.sh
 
 echo "${blue}Create symlinks for personnal config..."
 
