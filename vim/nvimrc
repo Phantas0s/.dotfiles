@@ -74,6 +74,9 @@ Plug 'arnaud-lb/vim-php-namespace'
 Plug 'nishigori/vim-php-dictionary'
 Plug 'phpstan/vim-phpstan'
 
+" go development
+Plug 'fatih/vim-go'
+
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 
@@ -146,20 +149,10 @@ call plug#end()
 " Add composer to the general path
 let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
 
-source ~/nvim/pluggedconf/deoplete.nvimrc
-source ~/nvim/pluggedconf/nerdtree.nvimrc
-source ~/nvim/pluggedconf/lightline.nvimrc
-source ~/nvim/pluggedconf/fzf.nvimrc
-source ~/nvim/pluggedconf/vdebug.nvimrc
-source ~/nvim/pluggedconf/neomake.nvimrc
-source ~/nvim/pluggedconf/project-vim.nvimrc
-source ~/nvim/pluggedconf/phpnamespace.nvimrc
-source ~/nvim/pluggedconf/php-refactoring-toolbox.nvimrc
-source ~/nvim/pluggedconf/phpactor.nvimrc
-source ~/nvim/pluggedconf/php-cs-fixer.nvimrc
-source ~/nvim/pluggedconf/ferret.nvimrc
-source ~/nvim/pluggedconf/phpstan.nvimrc
-source ~/nvim/pluggedconf/vim-snipe.nvimrc
+" source every plugin configs
+for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
+    exe 'source' file
+endfor
 
 " project config - is not on my git repository (but on my personal nextcloud)
 source ~/nvim/projects.nvimrc
@@ -513,6 +506,9 @@ set softtabstop=4
 set shiftwidth=4
 " when at 3 spaces, and I hit > ... go to 4, not 7
 set shiftround
+
+" tabs for golang
+au FileType go set noexpandtab
 
 " Use case insensitive search, except when using capital letters
 set ignorecase

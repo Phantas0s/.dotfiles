@@ -261,6 +261,9 @@ for_window [class="URxvt*"] border pixel 1
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id vmware-user
 
+# launch redshift
+exec --no-startup-id redshift
+
 # launch dunst
 exec --no-startup-id dunst -config ~/.dunstrc
 
