@@ -10,5 +10,10 @@ export COMPOSER_HOME="$HOME/composer"
 
 # Modifying the path for ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
 # PATH for composer global install
 PATH="$HOME/composer/vendor/bin:$PATH"
+
+# PATH for Go
+export GOPATH="$HOME/workspace/go"
+export GOBIN="$HOME/workspace/go/bin"
