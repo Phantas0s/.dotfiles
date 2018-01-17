@@ -22,3 +22,13 @@ autocmd VimEnter * command! -nargs=* Rgi
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+" ripgrep - ignore the files defined in ignore files (.gitignore...) and
+" doesn't ignore case
+autocmd VimEnter * command! -nargs=* Rgic
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
