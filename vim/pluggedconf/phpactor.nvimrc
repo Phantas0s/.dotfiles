@@ -1,32 +1,23 @@
 " This use a global install of PHPActor and not the Vim plugin for even more
 " configuration possibilities
 
-nnoremap <leader>rmc :call PHPMoveClass()<cr>
-nnoremap <leader>rcc :call PHPCopyClass()<cr>
-nnoremap <leader>rmd :call PHPMoveDir()<cr>
+nnoremap <leader>rmc :call phpactor#MoveFile()<cr>
+nnoremap <leader>rcc :call phpactor#CopyFile()<cr>
+
+nnoremap <leader>rmd :call phpactor#FindReferences()<cr>
+
 nnoremap <leader>ric :call PHPModify("implement_contracts")<cr>
-nnoremap <leader>raa :call PHPModify("add_missing_assignments")<cr>
+nnoremap <leader>rap :call PHPModify("add_missing_properties")<cr>
+
 " Fill constructor
 nnoremap <leader>rfc :call PHPModify("complete_constructor")<cr>
-nnoremap <leader>rei :call PHPExtractInterface()<cr>
 
+" Extract interface
+nnoremap <leader>rei :call phpactor#ClassInflect()<cr>
+
+" Extract method
+nnoremap <leader>rem :call phpactor#mxtractMethod()<cr>
 nnoremap <leader>src :call PHPShowReferencesClass()<cr>
-
-function! PHPMoveClass()
-    let l:oldPath = expand('%')
-    let l:newPath = input("New path: ", l:oldPath)
-    execute "!phpactor class:move ".l:oldPath.' '.l:newPath
-    execute "bd ".l:oldPath
-    execute "e ". l:newPath
-endfunction
-
-function! PHPCopyClass()
-    let l:oldPath = expand('%')
-    let l:newPath = input("New copy path: ", l:oldPath)
-    execute "!phpactor class:copy ".l:oldPath.' '.l:newPath
-    execute "bd ".l:oldPath
-    execute "e ". l:newPath
-endfunction
 
 function! PHPShowReferencesClass()
     execute "!phpactor references:class ".expand('%')

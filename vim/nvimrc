@@ -79,6 +79,7 @@ Plug 'fatih/vim-go'
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
+Plug 'phpactor/phpactor'
 
 " twig
 Plug 'lumiliet/vim-twig'
@@ -145,7 +146,6 @@ call plug#end()
 "----------------
 " plugin config
 "----------------
-
 " Add composer to the general path
 let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
 
@@ -173,7 +173,8 @@ let g:UltiSnipsExpandTrigger="<C-s>"
 nmap <leader>db :Bdelete!<cr>
 
 " go to definition of a method / class / whatever via Ctags
-map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+" map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader>] :call phpactor#GotoDefinition()
 
 " Startify config
 let g:startify_list_order = ['bookmarks']

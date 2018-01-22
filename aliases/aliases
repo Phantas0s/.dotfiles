@@ -66,9 +66,12 @@ alias wifi-home='sudo netctl start wlp3s0home'
 # vim && neovim
 # clean the vim swap file
 alias nvimc='rm -I ~/nvim/swap/*'
+# clean the vim undo
 alias nvimcu='rm -I ~/nvim/undo/*'
 alias vim='nvim'
 alias vi='nvim'
+# log the keys entered via using vim 
+alias nviml='nvim -w ~/.vimlog "$@"'
 
 # git
 alias gs='git status '
