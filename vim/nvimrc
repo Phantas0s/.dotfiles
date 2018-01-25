@@ -80,6 +80,7 @@ Plug 'fatih/vim-go'
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'phpactor/phpactor'
+Plug '2072/php-indenting-for-vim'
 
 " twig
 Plug 'lumiliet/vim-twig'
@@ -149,6 +150,11 @@ call plug#end()
 " Add composer to the general path
 let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
 
+" Fix bug autoclose / deoplete
+" before two escape (one for closing deoplete one for go to normal mode) was
+" needed
+let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
+
 " source every plugin configs
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
@@ -165,9 +171,6 @@ let g:vim_markdown_folding_disabled = 1
 
 " vim comment
 autocmd FileType php setlocal commentstring=\/\/\ %s
-
-" ultisnips
-let g:UltiSnipsExpandTrigger="<C-s>"
 
 " close the buffer
 nmap <leader>db :Bdelete!<cr>

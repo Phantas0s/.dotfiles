@@ -7,24 +7,8 @@ if m:
 `};
 endsnippet
 
-snippet class "Class declaration template" b
-<?php
-
-namespace ${1:`!p
-relpath = os.path.relpath(path)
-m = re.search(r'[A-Z].+(?=/)', relpath)
-if m:
-	snip.rv = m.group().replace('/', '\\')
-`};
-
-class ${1:`!p snip.rv=snip.basename`}
-{
-}
-endsnippet
-
-snippet classs "Class declaration template with strict mode" b
-<?php
-declare(strict_types=1);
+snippet class "Class declaration template with strict mode" b
+<?php declare(strict_types=1);
 
 namespace ${1:`!p
 relpath = os.path.relpath(path)
@@ -76,9 +60,8 @@ endsnippet
 snippet pub "Public function" b
 public function ${1:name}()
 {
-	${VISUAL}${5:return null;}
+	$0${VISUAL}${5:return null;}
 }
-$0
 endsnippet
 
 snippet pro "Protected function" b

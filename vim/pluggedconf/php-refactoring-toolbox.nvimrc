@@ -10,7 +10,7 @@ autocmd FileType php vnoremap <leader>rec :call PhpExtractConst()<CR>
 autocmd FileType php nnoremap <leader>rep :call PhpExtractClassProperty()<CR>
 
 autocmd FileType php nnoremap <leader>rrm :call PhpRenameMethod()<CR>
-autocmd FileType php vnoremap <leader>rem :call PhpExtractMethod()<CR>
+" autocmd FileType php vnoremap <leader>rem :call PhpExtractMethod()<CR>
 
 autocmd FileType php nnoremap <leader>rcp :call PhpCreateProperty()<CR>
 autocmd FileType php nnoremap <leader>rrp :call PhpRenameClassVariable()<CR>
