@@ -179,9 +179,6 @@ let g:startify_list_order = ['bookmarks']
 " php docs
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
 
-" Using a snippet for documentation?
-" let g:pdv_template_dir = $HOME."/.vim/pdv_templates_snip"
-
 " write ctags each time we change a php file
 au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 au BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'

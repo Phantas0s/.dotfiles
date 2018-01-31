@@ -17,26 +17,10 @@ nnoremap <leader>rei :call phpactor#ClassInflect()<cr>
 
 " Extract method
 nnoremap <leader>rem :call phpactor#mxtractMethod()<cr>
-nnoremap <leader>src :call PHPShowReferencesClass()<cr>
-
-function! PHPShowReferencesClass()
-    execute "!phpactor references:class ".expand('%')
-endfunction
-
-function! PHPMoveDir()
-    let l:oldPath = input("old path: ", expand('%:p:h'))
-    let l:newPath = input("New path: ", l:oldPath)
-    execute "!phpactor class:move ".l:oldPath.' '.l:newPath
-endfunction
+nnoremap <leader>src :call phpactor#FindReferences()()<cr>
 
 function! PHPModify(transformer)
     normal! ggdG
     execute "read !phpactor class:transform ".expand('%').' --transform='.a:transformer
     normal! ggdd
-endfunction
-
-function! PHPExtractInterface()
-    let l:interfaceFile = substitute(expand('%'), '.php', 'Interface.php', '')
-    execute "!phpactor class:inflect ".expand('%').' '.l:interfaceFile.' interface'
-    execute "e ". l:interfaceFile
 endfunction

@@ -11,7 +11,7 @@ ln -sf $HOME/$ROOT_CONFIG/vim/plugged/lightline.vim/colorscheme/hypnos256.vim $H
 ln -sf $HOME/$ROOT_CONFIG/vim/pluggedconf $HOME/nvim/pluggedconf
 ln -sf $HOME/$ROOT_CONFIG/vim/colors/* $HOME/nvim/colors
 ln -sf $HOME/$ROOT_CONFIG/vim/UltiSnips/* $HOME/nvim/UltiSnips
-ln -sf $HOME/$ROOT_CONFIG/vim/after $HOME/nvim/after
+ln -sf $HOME/$ROOT_CONFIG/vim/ftplugin $HOME/nvim/ftplugin
 
 if [ ! -d $HOME/nvim ]
   then
