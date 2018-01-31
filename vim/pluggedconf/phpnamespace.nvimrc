@@ -6,5 +6,5 @@ function! IPhpInsertUse()
     call feedkeys('a',  'n')
 endfunction
 
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+autocmd vimrc FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd vimrc FileType php noremap <Leader>u :call PhpInsertUse()<CR>

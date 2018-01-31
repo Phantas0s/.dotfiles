@@ -141,9 +141,15 @@ Plug 'yangmillstheory/vim-snipe'
 
 call plug#end()
 
+" Declare the general config group for autocommand
+augroup vimrc
+  autocmd!
+augroup END
+
 "----------------
 " plugin config
 "----------------
+
 " Add composer to the general path
 let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
 
@@ -179,12 +185,13 @@ let g:startify_list_order = ['bookmarks']
 " php docs
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
 
+
 " write ctags each time we change a php file
-au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
-au BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
+autocmd vimrc BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
+autocmd vimrc BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 
 " Twig
-autocmd BufNewFile,BufRead *.twig set filetype=html.twig
+autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 
 "------------------
 " general binding
@@ -217,8 +224,8 @@ vmap u y
 nnoremap <leader>[ :%s/<c-r><c-w>/<c-r><c-w>/g<left><left>
 
 " reformat with external tools
-autocmd FileType xml nnoremap <leader>c :%!xmllint --format - <cr>
-autocmd FileType json nnoremap <leader>c :%!python -m json.tool<cr>
+autocmd vimrc FileType xml nnoremap <leader>c :%!xmllint --format - <cr>
+autocmd vimrc FileType json nnoremap <leader>c :%!python -m json.tool<cr>
 
 " html
 nmap <leader><F3> :%s/<[^>]*>/\r&\r/g<cr>gg=G:g/^$/d<cr><leader>/
@@ -269,17 +276,17 @@ nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " open devdocs.io with firefox and search the word under the cursor
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
-au FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
+autocmd vimrc FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
 " disable arrow keys - don't use arrow keys in Vim!
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
 
 " buffer cleanup - delete every buffer except the one open
 function! Buflist()
@@ -304,7 +311,7 @@ endfunction
 command! Ball :silent call Bdeleteonly()
 
 " restore the position of the last cursor when you open a file
-au BufReadPost * call RestorePosition()
+autocmd vimrc BufReadPost * call RestorePosition()
 func! RestorePosition()
     if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
         return
@@ -317,10 +324,7 @@ endfunc
 
 " edit vimrc with f5 and source it automatically when saved
 nmap <silent> <leader><f5> :e $MYVIMRC<CR>
-augroup reload_vimrc
-    autocmd!
-    autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
-augroup END
+autocmd vimrc BufWritePost $MYVIMRC nested source $MYVIMRC
 
 " Create automatically test files / can switch between tests and tested files
 " Super powerful for TDD!!
@@ -446,11 +450,11 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 
-autocmd BufWrite *.php :call DeleteTrailingWS()
-autocmd BufWrite *.js :call DeleteTrailingWS()
-autocmd BufWrite *.vue :call DeleteTrailingWS()
-autocmd BufWrite *.twig :call DeleteTrailingWS()
-autocmd BufWrite *.html :call DeleteTrailingWS()
+autocmd vimrc BufWrite *.php :call DeleteTrailingWS()
+autocmd vimrc BufWrite *.js :call DeleteTrailingWS()
+autocmd vimrc BufWrite *.vue :call DeleteTrailingWS()
+autocmd vimrc BufWrite *.twig :call DeleteTrailingWS()
+autocmd vimrc BufWrite *.html :call DeleteTrailingWS()
 
 " Simple Zoom / Restore window (a bit like Tmux)
 function! s:ZoomToggle() abort
@@ -502,7 +506,7 @@ set shiftwidth=4
 set shiftround
 
 " tabs for golang
-au FileType go set noexpandtab
+autocmd vimrc FileType go set noexpandtab
 
 " Use case insensitive search, except when using capital letters
 set ignorecase

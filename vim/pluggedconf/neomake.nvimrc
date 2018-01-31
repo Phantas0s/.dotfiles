@@ -14,7 +14,7 @@ let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 let g:neomake_php_phpcs_args_standard = 'PSR2'
 
 " update neomake when save file
-autocmd! BufWritePost * Neomake
+autocmd vimrc BufWritePost * Neomake
 
 " call neomake#configure#automake('w')
 
