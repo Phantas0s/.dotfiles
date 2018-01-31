@@ -34,9 +34,6 @@ Plug 'tpope/vim-commentary'
 " add new text object (can delete between comma with di, for example)
 Plug 'wellle/targets.vim'
 
-" Intelligent f / t
-" Plug 'rhysd/clever-f.vim'
-
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
 
@@ -48,6 +45,9 @@ Plug 'tmhedberg/matchit'
 
 " General autocomplete system
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Swap two arguments in a function
+Plug 'PeterRincker/vim-argumentative'
 
 " vim project for one specific vimrc / project + startify for startup cow
 Plug 'amiorin/vim-project'
@@ -74,6 +74,9 @@ Plug 'arnaud-lb/vim-php-namespace'
 Plug 'nishigori/vim-php-dictionary'
 Plug 'phpstan/vim-phpstan'
 
+" php doc autocompletion
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
+
 " go development
 Plug 'fatih/vim-go'
 
@@ -85,9 +88,6 @@ Plug '2072/php-indenting-for-vim'
 " twig
 Plug 'lumiliet/vim-twig'
 
-" php doc autocompletion
-Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
-
 " javascript plugins
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
@@ -95,7 +95,6 @@ Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
-Plug 'beyondwords/vim-twig'
 " Syntax highlighting for vue js framework
 Plug 'posva/vim-vue'
 
@@ -110,9 +109,7 @@ Plug 'majutsushi/tagbar'
 
 " Nerdtree + modifications: git icons plugin, color filetype plugin
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
-" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Plug 'ryanoasis/vim-devicons'
 
 " status bar
 Plug 'itchyny/lightline.vim'
@@ -536,3 +533,4 @@ set noswapfile
 
 " write automatically when quitting buffer
 set autowrite
+
