@@ -114,7 +114,7 @@ endfunction
 " Those autocmd are in the private file projects.nvirmc. I source it from my
 " personnal Nextcloud
 
-function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition, ...)
+function! custom#SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition, ...)
     let f = bufname("%")
     if exists("a:2")
         let openFileCommand = a:2
