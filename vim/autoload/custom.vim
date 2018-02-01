@@ -1,3 +1,4 @@
+" Restore position of the cursor when reopening a file
 function! custom#RestorePosition()
     if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
         return
@@ -8,8 +9,7 @@ function! custom#RestorePosition()
     endif
 endfunc
 
-" FormatPHPLineLength - can split array or list of arguments on multiple lines. Very Handy!
-" Make it available for all languages?
+" FormatPHPLineLength - can split array or list of arguments on multiple lines.
 function! custom#FormatPHPLineLength()
     let l:currentLine = getline('.')
     normal! ma
@@ -73,9 +73,97 @@ function! custom#FormatPHPLineLength()
     endif
 endfunction
 
+" delete trailing space when saving files
 function! custom#DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
 
+" buffer cleanup - delete every buffer except the one open
+function! custom#Buflist()
+    redir => bufnames
+    silent ls
+    redir END
+    let list = []
+    for i in split(bufnames, "\n")
+        let buf = split(i, '"' )
+        call add(list, buf[-2])
+|   endfor
+    return list
+endfunction
+
+function! custom#Bdeleteonly()
+    let list = filter(custom#Buflist(), 'v:val != bufname("%")')
+    for buffer in list
+        exec "bdelete ".buffer
+    endfor
+endfunction
+
+" Create automatically test files / can switch between tests and tested files
+" Super powerful for TDD!!
+
+" firstDirBeginning: test path / secondDirBeginning: source path
+" a fifth argument can be added if tests is in a subdirectory
+" a sixth argument can be added to use a special command to open the file (like vsp)
+
+" example:
+" Test filepath: src/Tests/Model/ModelTest.php
+" File tested filepath: src/Model/Model.php
+" Result: autocmd FileType php nmap <silent> <leader>tu :call SwitchBetweenFiles('php', 'src/Tests/', 'src/', 'Test', 'src', ':sp'  )<cr>
+" Those autocmd are in the private file projects.nvirmc. I source it from my
+" personnal Nextcloud
+
+function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition, ...)
+    let f = bufname("%")
+    if exists("a:2")
+        let openFileCommand = a:2
+    else
+        let openFileCommand = ":e"
+    endif
+
+    if f =~ '.'.a:fileExtension
+        if f =~ '\<'.a:firstDirBeginning && f =~ a:filenameAddition.'\.'.a:fileExtension
+            let filename = substitute(substitute(f, a:firstDirBeginning, '', ''), a:filenameAddition, '', '')
+
+            if exists("a:1") && !empty(a:1)
+                let filename = a:1.'/'.filename
+            endif
+
+            if !filereadable(filename)
+                let new_dir = substitute(filename, '/\w\+\.'.a:fileExtension, '', '')
+                exe ":!mkdir -p ".new_dir
+            endif
+
+            exe openFileCommand." ".filename
+
+        elseif f =~ '\<'.a:secondDirBeginning && f !~ a:filenameAddition.'\.'.a:fileExtension
+            let filename = substitute(substitute(f, a:secondDirBeginning, a:firstDirBeginning.a:secondDirBeginning, ''), '.'.a:fileExtension, a:filenameAddition.'.'.a:fileExtension, '')
+
+            if exists("a:1") && !empty(a:1)
+                let filename = substitute(filename, '/'.a:1, '', '')
+            endif
+
+            if !filereadable(filename)
+                let new_dir = substitute(filename, '/\w\+'.a:filenameAddition.'\.'.a:fileExtension, '', '')
+                exe ":!mkdir -p ".new_dir
+            endif
+            exe openFileCommand." ".filename
+        else
+            echom "Could not switch because needed patterns not matched."
+        endif
+    endif
+endfunction
+
+" Simple Zoom / Restore window (like Tmux)
+function! custom#ZoomToggle() abort
+    if exists('t:zoomed') && t:zoomed
+        execute t:zoom_winrestcmd
+        let t:zoomed = 0
+    else
+        let t:zoom_winrestcmd = winrestcmd()
+        resize
+        vertical resize
+        let t:zoomed = 1
+    endif
+endfunction
