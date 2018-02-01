@@ -12,6 +12,7 @@ ln -sf $HOME/$ROOT_CONFIG/vim/pluggedconf $HOME/nvim/pluggedconf
 ln -sf $HOME/$ROOT_CONFIG/vim/colors/* $HOME/nvim/colors
 ln -sf $HOME/$ROOT_CONFIG/vim/UltiSnips/* $HOME/nvim/UltiSnips
 ln -sf $HOME/$ROOT_CONFIG/vim/ftplugin $HOME/nvim/ftplugin
+ln -sf $HOME/$ROOT_CONFIG/vim/autoload/* $HOME/nvim/autoload/
 
 if [ ! -d $HOME/nvim ]
   then

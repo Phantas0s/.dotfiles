@@ -187,7 +187,6 @@ let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
 
 
 " write ctags each time we change a php file
-autocmd vimrc BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 autocmd vimrc BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 
 " Twig
@@ -203,9 +202,6 @@ map <SPACE> <leader>
 
 " Go to next line and quit insert mode
 nmap <leader>o o<esc>
-
-" paste mode in order to paste correctly the formating from the clipboard
-nnoremap <leader>p :set paste!<CR>
 
 " un-highlight when esc is pressed (after search for example)
 map <esc> :noh<cr>
@@ -311,20 +307,13 @@ endfunction
 command! Ball :silent call Bdeleteonly()
 
 " restore the position of the last cursor when you open a file
-autocmd vimrc BufReadPost * call RestorePosition()
-func! RestorePosition()
-    if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
-        return
-    endif
-
-    if line("'\"") > 1 && line("'\"") <= line("$")
-        exe "normal! g`\""
-    endif
-endfunc
+autocmd vimrc BufReadPost * call custom#RestorePosition()
 
 " edit vimrc with f5 and source it automatically when saved
 nmap <silent> <leader><f5> :e $MYVIMRC<CR>
 autocmd vimrc BufWritePost $MYVIMRC nested source $MYVIMRC
+
+autocmd vimrc BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 
 " Create automatically test files / can switch between tests and tested files
 " Super powerful for TDD!!
@@ -377,84 +366,14 @@ function! SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginnin
     endif
 endfunction
 
-" FormatPHPLineLength - can split array or list of arguments on multiple lines. Very Handy!
-" Make it available for all languages?
-function! FormatPHPLineLength()
-    let l:currentLine = getline('.')
-    normal! ma
-
-    let l:isConditional = l:currentLine =~ '\s*&&' || l:currentLine =~ ' and ' || l:currentLine =~ '\s*||' || l:currentLine =~ ' or ' || l:currentLine =~ '\s*?.*:'
-    if l:isConditional
-        :s/\(\s*&&\| and \|\s*||\| or \| ?\| :\)/\r\1/g
-        if getline('.') =~ ') {'
-            exe "normal! $hhi\n"
-        endif
-        normal! =ip
-    endif
-
-    " split params
-    let l:isFunctionCall = len(split(l:currentLine, '(.\+)', 1)) - 1
-    if l:isFunctionCall > 0
-        try
-            s#\((\)\([^)]\+\)\().*\)#\1\r\2\r\3#
-            normal! k
-            if getline('.') =~ ',\s'
-                s/,\s/,\r/g
-            endif
-            normal! j
-            if getline('.') =~ '))'
-                exe "normal! kJa\n"
-            endif
-            normal! =a(
-        catch
-        endtry
-    endif
-
-    " format array
-    let l:isArray = len(split(l:currentLine, '.\+\zs\[.\+\]', 1)) - 1
-    if l:isArray > 0
-        try
-            s/\(\[\)\(.\+\)\(]\)/\1\r\2\r\3
-
-            normal! k
-
-            if l:currentLine =~ ',\s'
-                s/,\s/,\r/g
-            endif
-
-            if getline('.') !~ ',$'
-                normal! A,
-            endif
-
-            normal! =a[
-        catch
-        endtry
-    endif
-
-    " " multiple object operator split - repeatable
-    let l:numOfObjectOperators = len(split(l:currentLine, '->', 1)) - 1
-    if l:numOfObjectOperators > 1
-        try
-            s/.*->.*\zs->/\r->/g
-            normal! ='a
-        catch
-        endtry
-    endif
-endfunction
-nnoremap <leader>G :call FormatPHPLineLength()<cr>
+nnoremap <leader>G :call custom#FormatPHPLineLength()<cr>
 
 " delete trailing space when saving files
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-
-autocmd vimrc BufWrite *.php :call DeleteTrailingWS()
-autocmd vimrc BufWrite *.js :call DeleteTrailingWS()
-autocmd vimrc BufWrite *.vue :call DeleteTrailingWS()
-autocmd vimrc BufWrite *.twig :call DeleteTrailingWS()
-autocmd vimrc BufWrite *.html :call DeleteTrailingWS()
+autocmd vimrc BufWrite *.php :call custom#DeleteTrailingWS()
+autocmd vimrc BufWrite *.js :call custom#DeleteTrailingWS()
+autocmd vimrc BufWrite *.vue :call custom#DeleteTrailingWS()
+autocmd vimrc BufWrite *.twig :call custom#DeleteTrailingWS()
+autocmd vimrc BufWrite *.html :call custom#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (a bit like Tmux)
 function! s:ZoomToggle() abort
