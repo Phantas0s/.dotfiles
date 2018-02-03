@@ -28,3 +28,4 @@ echo 'Create symlink for gitconfig and global gitignore...'
 ln -s -f $HOME/$ROOT_CONFIG/git/gitconfig $HOME/.gitconfig
 ln -s -f $HOME/$ROOT_CONFIG/git/gitignore $HOME/.gitignore
 
+git config --global init.templatedir "$HOME/$ROOT_CONFIG/git/templates"
