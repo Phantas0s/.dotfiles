@@ -1,6 +1,6 @@
 {
   "journals": {
-    "default": "/home/hypnos/nextcloud/journal.txt"
+    "default": "/home/hypnos/shares/host/Nextcloud/journal.txt"
   },
   "editor": "nvim",
   "encrypt": false,
