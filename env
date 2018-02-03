@@ -17,3 +17,6 @@ PATH="$HOME/composer/vendor/bin:$PATH"
 # PATH for Go
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
+
+# PATH for go binaries
+PATH="$GOBIN:$PATH"
