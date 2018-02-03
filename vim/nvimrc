@@ -150,9 +150,6 @@ augroup END
 " plugin config
 "----------------
 
-" commentary add comments
-autocmd vimrc FileType nvimrc setlocal commentstring="\ %s
-"
 " Add composer to the general path
 let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
 
