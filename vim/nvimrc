@@ -62,20 +62,19 @@ Plug 'honza/vim-snippets'
 
 " markdown 
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', {'for': 'md'}
 
 " php autocompletion engine and tools
-Plug 'mkusher/padawan.vim'
-Plug 'padawan-php/deoplete-padawan'
-
-Plug 'StanAngeloff/php.vim'
-Plug 'stephpy/vim-php-cs-fixer'
-Plug 'arnaud-lb/vim-php-namespace'
-Plug 'nishigori/vim-php-dictionary'
-Plug 'phpstan/vim-phpstan'
+Plug 'mkusher/padawan.vim', {'for': 'php'}
+Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
+Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
+Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
+Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
+Plug 'phpstan/vim-phpstan', {'for': 'php'}
 
 " php doc autocompletion
-Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
 " go development
 Plug 'fatih/vim-go', {'for': 'go'}
@@ -83,11 +82,11 @@ Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go'}
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
-Plug 'phpactor/phpactor'
-Plug '2072/php-indenting-for-vim'
+Plug 'phpactor/phpactor', {'for': 'php'}
+Plug '2072/php-indenting-for-vim', {'for': 'php'}
 
 " twig
-Plug 'lumiliet/vim-twig'
+Plug 'lumiliet/vim-twig', {'for': 'twig'}
 
 " javascript plugins
 Plug 'pangloss/vim-javascript'
@@ -151,6 +150,9 @@ augroup END
 " plugin config
 "----------------
 
+" commentary add comments
+autocmd vimrc FileType nvimrc setlocal commentstring="\ %s
+"
 " Add composer to the general path
 let $PATH=$PATH . ':' . expand('~/composer/vendor/bin')
 
