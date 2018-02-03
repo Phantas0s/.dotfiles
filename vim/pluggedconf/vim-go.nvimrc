@@ -8,3 +8,4 @@ let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 
 let g:go_auto_sameids = 1
+

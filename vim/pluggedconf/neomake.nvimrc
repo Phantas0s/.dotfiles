@@ -10,13 +10,15 @@ let g:neomake_message_sign = {
     \ }
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
-" standard phpcs config
-let g:neomake_php_phpcs_args_standard = 'PSR2'
-
 " update neomake when save file
 autocmd vimrc BufWritePost * Neomake
 
-" call neomake#configure#automake('w')
+"----------------
+" PHP
+"-----------------
+
+" standard phpcs config
+let g:neomake_php_phpcs_args_standard = 'PSR2'
 
 " display warning for phpcs error
 function! SetWarningType(entry)
@@ -30,7 +32,6 @@ endfunction
 function! SetMessageType(entry)
   let a:entry.type = 'M'
 endfunction
-
 
 let g:neomake_php_phpcs_maker = {
         \ 'args': ['--report=csv', '--standard=PSR2'],
@@ -52,3 +53,30 @@ let g:neomake_php_phpmd_maker = {
         \ 'postprocess': function('SetMessageType'),
  \ }
 
+
+"----------------
+" Golang
+"-----------------
+let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+let g:neomake_go_gometalinter_maker = {
+  \ 'args': [
+  \   '--tests',
+  \   '--enable-gc',
+  \   '--concurrency=3',
+  \   '--fast',
+  \   '-D', 'aligncheck',
+  \   '-D', 'dupl',
+  \   '-D', 'gocyclo',
+  \   '-D', 'gotype',
+  \   '-E', 'errcheck',
+  \   '-E', 'misspell',
+  \   '-E', 'unused',
+  \   '%:p:h',
+  \ ],
+  \ 'append_file': 0,
+  \ 'errorformat':
+  \   '%E%f:%l:%c:%trror: %m,' .
+  \   '%W%f:%l:%c:%tarning: %m,' .
+  \   '%E%f:%l::%trror: %m,' .
+  \   '%W%f:%l::%tarning: %m'
+\ }

@@ -78,7 +78,8 @@ Plug 'phpstan/vim-phpstan'
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv'
 
 " go development
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go'}
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
@@ -344,8 +345,8 @@ set shiftwidth=4
 " when at 3 spaces, and I hit > ... go to 4, not 7
 set shiftround
 
-" tabs for golang
-autocmd vimrc FileType go set noexpandtab
+" use real tabs in .go files, not spaces
+autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
