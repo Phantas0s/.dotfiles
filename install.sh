@@ -64,6 +64,9 @@ read key;
 # install jrnl config
 . $HOME/$ROOT_CONFIG/install/install-jrnl.sh
 
+# install composer.json
+. $HOME/$ROOT_CONFIG/install/install-composer.sh
+
 # install siege config
 # to fix
 # $HOME/$ROOT_CONFIG/install/install-siege.sh

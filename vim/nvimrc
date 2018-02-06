@@ -37,13 +37,10 @@ Plug 'wellle/targets.vim'
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
 
-" See man pages in vim
-Plug 'jez/vim-superman'
-
 " Match more stuff with % (html tag, LaTeX...)
 Plug 'tmhedberg/matchit'
 
-" General autocomplete system
+" Autocomplete system
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Swap two arguments in a function
@@ -253,19 +250,12 @@ nnoremap <leader>wb <c-w>s
 " create vertival window
 nnoremap <leader>wv <c-w>v
 
-" resize the windows
-nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
-
 " delete character after cursor in insert mode
 inoremap <C-d> <Del>
 
 " highlight the line which is longer than the defined margin (120 character)
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%120v', 100)
-
-" select last paste in visual mode
-nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " open devdocs.io with firefox and search the word under the cursor
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open http://devdocs.io/#q=<args> || firefox -url http://devdocs.io/#q=<args>')
@@ -280,7 +270,6 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
-
 
 " buffer cleanup - delete every buffer except the one open
 command! Ball :silent call custom#Bdeleteonly()

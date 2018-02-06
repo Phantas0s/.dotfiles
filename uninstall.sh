@@ -72,3 +72,8 @@ echo ""
 echo "${red}Delete the jrnl config..."
 rm -rf $HOME/jrnl
 echo "${green}...done!"
+
+echo ""
+echo "${red}Delete the composer json file..."
+rm $COMPOSER_HOME/composer.json
+echo "${green}...done!"
