@@ -1,9 +1,0 @@
-<fileset>
- <include>
-  <directory>foo</directory>
-  <file>bar.phtml</file>
- </include>
- <exclude>bar</exclude>
- <name>*.php</name>
- <notName>*.fail.php</notName>
-</fileset>

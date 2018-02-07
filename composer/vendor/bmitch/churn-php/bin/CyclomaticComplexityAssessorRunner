@@ -1,9 +1,0 @@
-#!/usr/bin/env php
-<?php
-require_once(__DIR__ . '/bootstrap.php');
-
-use Churn\Assessors\CyclomaticComplexity\CyclomaticComplexityAssessor;
-
-$file = $argv[1];
-$assessor = new CyclomaticComplexityAssessor();
-echo $assessor->assess($file);

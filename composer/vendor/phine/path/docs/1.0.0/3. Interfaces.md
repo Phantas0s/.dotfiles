@@ -1,6 +1,0 @@
-Interfaces
-==========
-
-This is a complete list of available interfaces:
-
-- There are no interfaces available.
