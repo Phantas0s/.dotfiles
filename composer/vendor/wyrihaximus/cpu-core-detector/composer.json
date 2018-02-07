@@ -1,0 +1,34 @@
+{
+    "name": "wyrihaximus/cpu-core-detector",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.4||^7.0",
+        "react/child-process": "^0.4.0",
+        "tivie/php-os-detector": "^1.0",
+        "wyrihaximus/ticking-promise": "^1.5",
+        "wyrihaximus/react-child-process-promise": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.0||^5.0",
+        "phake/phake": "~1.0.6",
+        "vectorface/dunit": "~2.0",
+        "squizlabs/php_codesniffer": "^1.5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "WyriHaximus\\CpuCoreDetector\\": "src/"
+        },
+        "files": ["src/functions_include.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WyriHaximus\\CpuCoreDetector\\Tests\\": "tests/"
+        }
+    }
+}

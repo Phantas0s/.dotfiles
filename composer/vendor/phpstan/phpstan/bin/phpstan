@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use PHPStan\Command\AnalyseCommand;
+
+gc_disable(); // performance boost
+
+$autoloaderInWorkingDirectory = getcwd() . '/vendor/autoload.php';
+if (is_file($autoloaderInWorkingDirectory)) {
+	require_once $autoloaderInWorkingDirectory;
+}
+
+if (!class_exists('PHPStan\Command\AnalyseCommand', true)) {
+	$composerAutoloadFile = __DIR__ . '/../vendor/autoload.php';
+	if (!is_file($composerAutoloadFile)) {
+		$composerAutoloadFile = __DIR__ . '/../../../autoload.php';
+	}
+
+	require_once $composerAutoloadFile;
+}
+
+$version = 'Version unknown';
+try {
+	$version = \Jean85\PrettyVersions::getVersion('phpstan/phpstan')->getPrettyVersion();
+} catch (\OutOfBoundsException $e) {
+
+}
+
+$application = new \Symfony\Component\Console\Application(
+	'PHPStan - PHP Static Analysis Tool',
+	$version
+);
+$application->setCatchExceptions(false);
+$application->add(new AnalyseCommand());
+$application->run();

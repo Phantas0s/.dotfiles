@@ -1,0 +1,57 @@
+includes:
+	- config.level2.neon
+
+services:
+	-
+		class: PHPStan\Rules\Arrays\AppendedArrayItemTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Arrays\InvalidKeyInArrayDimFetchRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Arrays\InvalidKeyInArrayItemRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Arrays\IterableInForeachRule
+		arguments:
+			checkUnionTypes: %checkUnionTypes%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\ClosureReturnTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\ReturnTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Methods\ReturnTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\DefaultValueTypesAssignedToPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\TypesAssignedToPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\VariableCloningRule
+		arguments:
+			checkNullables: %checkNullables%
+		tags:
+			- phpstan.rules.rule

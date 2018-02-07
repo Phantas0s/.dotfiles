@@ -1,0 +1,34 @@
+{
+    "name": "indigophp/hash-compat",
+    "description": "Backports hash_* functionality to older PHP versions",
+    "license": "MIT",
+    "keywords": ["hash", "hash_equals", "hash_pbkdf2"],
+    "homepage": "https://indigophp.com",
+    "authors": [
+        {
+            "name": "Márk Sági-Kazár",
+            "email": "mark.sagikazar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.4"
+    },
+    "autoload": {
+        "files": [
+            "src/hash_equals.php",
+            "src/hash_pbkdf2.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-ci": "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.2-dev"
+        }
+    }
+}

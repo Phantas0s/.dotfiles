@@ -1,0 +1,37 @@
+{
+    "name": "phine/exception",
+    "description": "A PHP library for improving the use of exceptions.",
+    "keywords": ["exception"],
+    "homepage": "https://github.com/phine/lib-exception",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Herrera",
+            "email": "kevin@herrera.io",
+            "homepage": "http://kevin.herrera.io"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/phine/lib-exception/issues"
+    },
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "league/phpunit-coverage-listener": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Phine\\Exception": "src/lib"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "src/vendors"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<root>
+    <child attr="abc" id="test">
+        <child attr="other" />
+    </child>
+</root>

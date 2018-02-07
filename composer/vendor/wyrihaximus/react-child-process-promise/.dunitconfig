@@ -1,0 +1,10 @@
+images="
+    vectorface/php5.4
+    vectorface/php5.5
+    vectorface/php5.6
+    vectorface/php-nightly
+    vectorface/hhvm";
+checkSyntax="true";
+syntaxCommand="find /opt/source -type f -name \"*.php\" !  -path \"*/vendor/*\" -print0 | xargs -0 -n 1 -P 8 php -l | grep -v 'No syntax errors'"
+runTests="true";
+unitTestsCommand="/opt/source/vendor/bin/phpunit"

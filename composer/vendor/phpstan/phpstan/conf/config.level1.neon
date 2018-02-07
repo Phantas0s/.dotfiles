@@ -1,0 +1,16 @@
+includes:
+	- config.level0.neon
+
+parameters:
+	checkMaybeUndefinedVariables: true
+
+services:
+	-
+		class: PHPStan\Rules\Constants\ConstantRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\VariableCertaintyInIssetRule
+		tags:
+			- phpstan.rules.rule

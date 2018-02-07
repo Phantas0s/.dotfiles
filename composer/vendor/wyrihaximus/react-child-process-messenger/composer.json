@@ -1,0 +1,96 @@
+{
+    "name": "wyrihaximus/react-child-process-messenger",
+    "description": "Messenger decorator for react/child-process",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com",
+            "homepage": "http://wyrihaximus.net/"
+        }
+    ],
+    "require": {
+        "php": "^5.4||^7.0",
+        "react/child-process": "^0.4",
+        "wyrihaximus/ticking-promise": "^1.4",
+        "doctrine/inflector": "^1.0",
+        "indigophp/hash-compat": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.2",
+        "jakub-onderka/php-console-highlighter": "^0.3.2",
+        "jakub-onderka/php-parallel-lint": "^0.9.2",
+        "phake/phake": "^1.0.6",
+        "phpunit/phpunit": "^4.8.35||^5.0||^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WyriHaximus\\React\\ChildProcess\\Messenger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WyriHaximus\\React\\Tests\\ChildProcess\\Messenger\\": "tests/"
+        },
+        "files": ["examples/prime/Optimus.php"]
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "5.4"
+        }
+    },
+    "scripts": {
+        "ensure-installed": "composer install --ansi -n -q",
+        "cs": [
+            "@ensure-installed",
+            "php-cs-fixer fix --config=.php_cs --ansi --dry-run --diff --verbose --allow-risky=yes --show-progress=estimating"
+        ],
+        "cs-fix": [
+            "@ensure-installed",
+            "php-cs-fixer fix --config=.php_cs --ansi --verbose --allow-risky=yes --show-progress=estimating"
+        ],
+        "unit": [
+            "@ensure-installed",
+            "phpunit --colors=always -c phpunit.xml.dist"
+        ],
+        "unit-coverage": [
+            "@ensure-installed",
+            "phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml"
+        ],
+        "lint-php": [
+            "@ensure-installed",
+            "parallel-lint --exclude vendor ."
+        ],
+        "qa-all": [
+            "@lint-php",
+            "@cs",
+            "@unit"
+        ],
+        "qa-all-coverage": [
+            "@lint-php",
+            "@cs",
+            "@unit-coverage"
+        ],
+        "qa-windows": [
+            "@lint-php",
+            "@cs",
+            "@unit"
+        ],
+        "qa-ci": [
+            "@unit"
+        ],
+        "qa-ci-extended": [
+            "@qa-all-coverage"
+        ],
+        "qa-ci-windows": [
+            "@qa-windows"
+        ],
+        "qa-contrib": [
+            "@qa-all"
+        ],
+        "ci-coverage": [
+            "if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi"
+        ]
+    }
+}

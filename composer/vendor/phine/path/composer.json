@@ -1,0 +1,38 @@
+{
+    "name": "phine/path",
+    "description": "A PHP library for improving the use of file system paths.",
+    "keywords": ["file", "system", "path"],
+    "homepage": "https://github.com/phine/lib-path",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Herrera",
+            "email": "kevin@herrera.io",
+            "homepage": "http://kevin.herrera.io"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/phine/lib-path/issues"
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "phine/exception": "~1.0"
+    },
+    "require-dev": {
+        "league/phpunit-coverage-listener": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Phine\\Path": "src/lib"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "src/vendors"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

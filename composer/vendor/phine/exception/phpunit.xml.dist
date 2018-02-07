@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="src/vendors/autoload.php" colors="true" strict="true">
+  <filter>
+    <whitelist>
+      <directory suffix=".php">src/lib/</directory>
+    </whitelist>
+  </filter>
+  <logging>
+    <log type="coverage-clover" target="/tmp/coverage.xml"/>
+    <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+  </logging>
+  <listeners>
+    <listener class="League\PHPUnitCoverageListener\Listener">
+      <arguments>
+        <array>
+          <element key="namespace">
+            <string>Phine\Exception</string>
+          </element>
+          <element key="repo_token">
+            <string>e5e5f9Os9ygGusWMAvrRRCEKO5cOVxruP</string>
+          </element>
+          <element key="target_url">
+            <string>https://coveralls.io/api/v1/jobs</string>
+          </element>
+          <element key="printer">
+            <object class="League\PHPUnitCoverageListener\Printer\StdOut"/>
+          </element>
+          <element key="hook">
+            <object class="League\PHPUnitCoverageListener\Hook\Travis"/>
+          </element>
+          <element key="coverage_dir">
+            <string>/tmp</string>
+          </element>
+        </array>
+      </arguments>
+    </listener>
+  </listeners>
+  <testsuites>
+    <testsuite name="Phine Exception Test Suite">
+      <directory phpVersion="5.3.3" phpVersionOperator=">=" suffix="Test.php">src/tests/</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

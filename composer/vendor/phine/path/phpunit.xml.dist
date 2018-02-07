@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="src/vendors/autoload.php" colors="true" strict="true">
+  <filter>
+    <whitelist>
+      <directory suffix=".php">src/lib/</directory>
+    </whitelist>
+  </filter>
+  <logging>
+    <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+  </logging>
+  <testsuites>
+    <testsuite name="Phine Path Test Suite">
+      <directory phpVersion="5.3.3" phpVersionOperator=">=" suffix="Test.php">src/tests/</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

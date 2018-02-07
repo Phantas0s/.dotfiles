@@ -1,0 +1,13 @@
+<phpunit bootstrap="test/bootstrap.php">
+    <testsuites>
+        <testsuite name="Linux">
+            <file>test/DetectorLinuxTest.php</file>
+        </testsuite>
+        <testsuite name="Unix">
+            <file>test/DetectorUnixTest.php</file>
+        </testsuite>
+        <testsuite name="Windows">
+            <file>test/DetectorWindowsTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

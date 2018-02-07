@@ -1,0 +1,176 @@
+parameters:
+	customRulesetUsed: false
+
+services:
+	-
+		class: PHPStan\Rules\Arrays\DuplicateKeysInLiteralArraysRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\ClassConstantRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\ExistingClassInInstanceOfRule
+		tags:
+			- phpstan.rules.rule
+		arguments:
+			checkClassCaseSensitivity: %checkClassCaseSensitivity%
+
+	-
+		class: PHPStan\Rules\Classes\ExistingClassesInClassImplementsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\ExistingClassesInInterfaceExtendsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\ExistingClassInClassExtendsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\ExistingClassInTraitUseRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\InstantiationRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\RequireParentConstructCallRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\UnusedConstructorParametersRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Exceptions\CaughtExceptionExistenceRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\CallToFunctionParametersRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\CallToNonExistentFunctionRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\ExistingClassesInClosureTypehintsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\ExistingClassesInTypehintsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\InnerFunctionRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\NonExistentDefinedFunctionRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\PrintfParametersRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\UnusedClosureUsesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Methods\CallMethodsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Methods\CallStaticMethodsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Methods\ExistingClassesInTypehintsRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Namespaces\ExistingNamesInGroupUseRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Namespaces\ExistingNamesInUseRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\AccessPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\AccessStaticPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\ExistingClassesInPropertiesRule
+		tags:
+			- phpstan.rules.rule
+		arguments:
+			checkClassCaseSensitivity: %checkClassCaseSensitivity%
+
+	-
+		class: PHPStan\Rules\Properties\WritingToReadOnlyPropertiesRule
+		arguments:
+			checkThisOnly: %checkThisOnly%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\ReadingWriteOnlyPropertiesRule
+		arguments:
+			checkThisOnly: %checkThisOnly%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\DefinedVariableRule
+		arguments:
+			cliArgumentsVariablesRegistered: %cliArgumentsVariablesRegistered%
+			checkMaybeUndefinedVariables: %checkMaybeUndefinedVariables%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\DefinedVariableInAnonymousFunctionUseRule
+		arguments:
+			checkMaybeUndefinedVariables: %checkMaybeUndefinedVariables%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\ThisVariableRule
+		tags:
+			- phpstan.rules.rule

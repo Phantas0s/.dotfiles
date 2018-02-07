@@ -1,0 +1,243 @@
+parameters:
+	bootstrap: null
+	excludes_analyse: []
+	autoload_directories: []
+	autoload_files: []
+	fileExtensions:
+		- php
+	checkAlwaysTrueCheckTypeFunctionCall: false
+	checkAlwaysTrueInstanceof: false
+	checkClassCaseSensitivity: false
+	checkFunctionArgumentTypes: false
+	checkArgumentsPassedByReference: false
+	checkMaybeUndefinedVariables: false
+	checkNullables: false
+	checkThisOnly: true
+	checkUnionTypes: false
+	polluteScopeWithLoopInitialAssignments: true
+	polluteCatchScopeWithTryAssignments: false
+	ignoreErrors: []
+	internalErrorsCountLimit: 50
+	reportUnmatchedIgnoredErrors: true
+	universalObjectCratesClasses:
+		- stdClass
+		- SimpleXMLElement
+	earlyTerminatingMethodCalls: []
+	memoryLimitFile: %tmpDir%/.memory_limit
+
+services:
+	-
+		class: PhpParser\BuilderFactory
+
+	-
+		class: PhpParser\Lexer
+
+	-
+		class: PhpParser\NodeTraverser
+		setup:
+			- addVisitor(@PhpParser\NodeVisitor\NameResolver)
+
+	-
+		class: PhpParser\NodeVisitor\NameResolver
+
+	-
+		class: PhpParser\Parser\Php7
+
+	-
+		class: PhpParser\PrettyPrinter\Standard
+
+	-
+		class: PHPStan\PhpDocParser\Lexer\Lexer
+
+	-
+		class: PHPStan\PhpDocParser\Parser\TypeParser
+
+	-
+		class: PHPStan\PhpDocParser\Parser\ConstExprParser
+
+	-
+		class: PHPStan\PhpDocParser\Parser\PhpDocParser
+
+	-
+		class: PHPStan\PhpDoc\PhpDocNodeResolver
+
+	-
+		class: PHPStan\PhpDoc\PhpDocStringResolver
+
+	-
+		class: PHPStan\PhpDoc\TypeNodeResolver
+
+	-
+		class: PHPStan\PhpDoc\TypeStringResolver
+
+	-
+		class: PHPStan\Analyser\Analyser
+		arguments:
+			ignoreErrors: %ignoreErrors%
+			reportUnmatchedIgnoredErrors: %reportUnmatchedIgnoredErrors%
+			bootstrapFile: %bootstrap%
+			internalErrorsCountLimit: %internalErrorsCountLimit%
+
+	-
+		class: PHPStan\Analyser\NodeScopeResolver
+		arguments:
+			polluteScopeWithLoopInitialAssignments: %polluteScopeWithLoopInitialAssignments%
+			polluteCatchScopeWithTryAssignments: %polluteCatchScopeWithTryAssignments%
+			earlyTerminatingMethodCalls: %earlyTerminatingMethodCalls%
+
+	-
+		class: PHPStan\Analyser\TypeSpecifier
+
+	-
+		class: PHPStan\Cache\Cache
+		arguments:
+			storage: @cacheStorage
+
+	-
+		class: PHPStan\Command\AnalyseApplication
+		arguments:
+			memoryLimitFile: %memoryLimitFile%
+			fileExtensions: %fileExtensions%
+
+	-
+		class: PHPStan\File\FileHelper
+		arguments:
+			workingDirectory: %currentWorkingDirectory%
+
+	-
+		class: PHPStan\File\FileExcluder
+		arguments:
+			analyseExcludes: %excludes_analyse%
+
+	-
+		class: PHPStan\Parser\CachedParser
+		arguments:
+			originalParser: @directParser
+
+	-
+		class: PHPStan\Parser\FunctionCallStatementFinder
+
+	-
+		implement: PHPStan\Reflection\FunctionReflectionFactory
+
+	-
+		class: PHPStan\Reflection\Annotations\AnnotationsMethodsClassReflectionExtension
+
+	-
+		class: PHPStan\Reflection\Annotations\AnnotationsPropertiesClassReflectionExtension
+
+	-
+		class: PHPStan\Reflection\Php\PhpClassReflectionExtension
+
+	-
+		class: PHPStan\Reflection\PhpDefect\PhpDefectClassReflectionExtension
+
+	-
+		implement: PHPStan\Reflection\Php\PhpMethodReflectionFactory
+
+	-
+		class: PHPStan\Reflection\Php\UniversalObjectCratesClassReflectionExtension
+		tags:
+			- phpstan.broker.propertiesClassReflectionExtension
+		arguments:
+			classes: %universalObjectCratesClasses%
+
+	-
+		class: PHPStan\Rules\ClassCaseSensitivityCheck
+
+	-
+		class: PHPStan\Rules\FunctionCallParametersCheck
+		arguments:
+			checkArgumentTypes: %checkFunctionArgumentTypes%
+			checkArgumentsPassedByReference: %checkArgumentsPassedByReference%
+
+	-
+		class: PHPStan\Rules\FunctionDefinitionCheck
+		arguments:
+			checkClassCaseSensitivity: %checkClassCaseSensitivity%
+			checkThisOnly: %checkThisOnly%
+
+	-
+		class: PHPStan\Rules\FunctionReturnTypeCheck
+
+	-
+		class: PHPStan\Rules\Properties\PropertyDescriptor
+
+	-
+		class: PHPStan\Rules\Properties\PropertyReflectionFinder
+
+	-
+		class: PHPStan\Rules\RegistryFactory
+
+	-
+		class: PHPStan\Rules\RuleLevelHelper
+		arguments:
+			checkNullables: %checkNullables%
+			checkThisOnly: %checkThisOnly%
+			checkUnionTypes: %checkUnionTypes%
+
+	-
+		class: PHPStan\Rules\UnusedFunctionParametersCheck
+
+	-
+		class: PHPStan\Type\FileTypeMapper
+
+	-
+		class: PHPStan\Type\Php\AllArgumentBasedFunctionReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicFunctionReturnTypeExtension
+
+	-
+		class: PHPStan\Type\Php\ArgumentBasedArrayFunctionReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicFunctionReturnTypeExtension
+
+	-
+		class: PHPStan\Type\Php\ArgumentBasedFunctionReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicFunctionReturnTypeExtension
+
+	-
+		class: PHPStan\Type\Php\ArrayFilterFunctionReturnTypeReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicFunctionReturnTypeExtension
+
+	-
+		class: PHPStan\Type\Php\CallbackBasedArrayFunctionReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicFunctionReturnTypeExtension
+
+	-
+		class: PHPStan\Type\Php\CallbackBasedFunctionReturnTypeExtension
+		tags:
+			- phpstan.broker.dynamicFunctionReturnTypeExtension
+
+	broker:
+		class: PHPStan\Broker\Broker
+		factory: @brokerFactory::create
+
+	brokerFactory:
+		class: PHPStan\Broker\BrokerFactory
+
+	cacheStorage:
+		class: PHPStan\Cache\FileCacheStorage
+		arguments:
+			directory: %tmpDir%/cache/PHPStan
+		autowired: no
+
+	directParser:
+		class: PHPStan\Parser\DirectParser
+		autowired: no
+
+	registry:
+		class: PHPStan\Rules\Registry
+		factory: @PHPStan\Rules\RegistryFactory::create
+
+	errorFormatter.raw:
+		class: PHPStan\Command\ErrorFormatter\RawErrorFormatter
+
+	errorFormatter.table:
+		class: PHPStan\Command\ErrorFormatter\TableErrorFormatter
+
+	errorFormatter.checkstyle:
+		class: PHPStan\Command\ErrorFormatter\CheckstyleErrorFormatter

@@ -1,0 +1,18 @@
+// the list of docker images to run against
+images="
+    vectorface/php5.4
+    vectorface/php5.5
+    vectorface/php5.6
+    vectorface/php-nightly
+    vectorface/hhvm";
+
+
+// a flag indicating whether to run the syntax check
+checkSyntax="true";
+// the syntax command to execute
+syntaxCommand="find /opt/source -type f -name \"*.php\" !  -path \"*/vendor/*\" -print0 | xargs -0 -n 1 -P 8 php -l | grep -v 'No syntax errors'"
+
+// a flag indicating whether to run the phpunit test suite
+runTests="true";
+// the phpunit command to execute
+unitTestsCommand="/opt/source/vendor/bin/phpunit"
