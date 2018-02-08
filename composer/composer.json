@@ -10,7 +10,8 @@
         "dephpend/dephpend": "dev-master",
         "bmitch/churn-php": "^0.5.0",
         "phpmd/phpmd": "^2.6",
-        "phpmetrics/phpmetrics": "^2.3"
+        "phpmetrics/phpmetrics": "^2.3",
+        "phploc/phploc": "^4.0"
     },
     "require-dev": {
     }
