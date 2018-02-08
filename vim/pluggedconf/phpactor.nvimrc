@@ -16,7 +16,7 @@ nnoremap <leader>rfc :call PHPModify("complete_constructor")<cr>
 nnoremap <leader>rei :call phpactor#ClassInflect()<cr>
 
 " Extract method
-nnoremap <leader>rem :call phpactor#mxtractMethod()<cr>
+nnoremap <leader>rem :call phpactor#ExtractMethod()<cr>
 nnoremap <leader>src :call phpactor#FindReferences()()<cr>
 
 function! PHPModify(transformer)
