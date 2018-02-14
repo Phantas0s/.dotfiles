@@ -96,7 +96,7 @@ Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'posva/vim-vue'
 
 " autoclose bracket and parenthesis when open
-Plug 'Townk/vim-autoclose'
+" Plug 'Townk/vim-autoclose'
 
 " debugger
 Plug 'joonty/vdebug'
