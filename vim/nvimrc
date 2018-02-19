@@ -41,7 +41,8 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'tmhedberg/matchit'
 
 " Autocomplete system
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'roxma/nvim-completion-manager'
 
 " Swap two arguments in a function
 Plug 'PeterRincker/vim-argumentative'
@@ -62,8 +63,8 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', {'for': 'md'}
 
 " php autocompletion engine and tools
-Plug 'mkusher/padawan.vim', 
-Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
+" Plug 'mkusher/padawan.vim', 
+" Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
@@ -75,11 +76,12 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
 " go development
 Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go'}
+" Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go'}
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
-Plug 'phpactor/phpactor', {'for': 'php'}
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'roxma/ncm-phpactor'
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 
 " twig
@@ -89,7 +91,7 @@ Plug 'lumiliet/vim-twig', {'for': 'twig'}
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Syntax highlighting for vue js framework
