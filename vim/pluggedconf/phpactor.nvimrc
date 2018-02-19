@@ -17,7 +17,11 @@ nnoremap <leader>rei :call phpactor#ClassInflect()<cr>
 
 " Extract method
 vnoremap <leader>rem :call phpactor#ExtractMethod()<cr>
-nnoremap <leader>src :call phpactor#FindReferences()()<cr>
+nnoremap <leader>src :call phpactor#FindReferences()<cr>
+
+" go to definition of a method / class / whatever via Ctags
+" map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader>] :call phpactor#GotoDefinition()<CR>
 
 function! PHPModify(transformer)
     normal! ggdG

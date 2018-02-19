@@ -171,9 +171,6 @@ let g:vim_markdown_folding_disabled = 1
 " close the buffer
 nmap <leader>db :Bdelete!<cr>
 
-" go to definition of a method / class / whatever via Ctags
-" map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-map <leader>] :call phpactor#GotoDefinition()
 
 " Startify config
 let g:startify_list_order = ['bookmarks']
@@ -201,6 +198,10 @@ nmap <leader>o o<esc>
 
 " un-highlight when esc is pressed (after search for example)
 map <esc> :noh<cr>
+
+" surround by quotes - frequently use cases of vim-surround
+map <leader>" ysiw"<cr>
+map <leader>' ysiw'<cr>
 
 " Enables you to save files with :w!! by using sudo if you forgot to open it as root
 cmap w!! %!sudo tee > /dev/null %" display tabs, trailing spaces
@@ -246,7 +247,6 @@ nnoremap <leader>wco :only<cr>
 nnoremap <leader>wcc :cclose<cr>
 
 " windows creation
-
 " create window on the bottom
 nnoremap <leader>wb <c-w>s
 " create vertival window
