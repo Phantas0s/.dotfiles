@@ -20,7 +20,8 @@ Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'christoomey/vim-tmux-navigator'
 
 " wrapper for git and display git diff in the left gutter
-Plug 'tpope/vim-fugitive' | Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify'
+
 " surrounding with whatever you want (paranthesis, quotes...)
 Plug 'tpope/vim-surround'
 " easily search, substitute and abbreviate multiple version of words
@@ -170,7 +171,6 @@ let g:vim_markdown_folding_disabled = 1
 
 " close the buffer
 nmap <leader>db :Bdelete!<cr>
-
 
 " Startify config
 let g:startify_list_order = ['bookmarks']
