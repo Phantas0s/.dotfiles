@@ -64,8 +64,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', {'for': 'md'}
 
 " php autocompletion engine and tools
-" Plug 'mkusher/padawan.vim', 
-" Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
@@ -160,7 +158,10 @@ for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 
-" project config - is not on my git repository (but on my personal nextcloud)
+" Autocompletion with tab
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" project config - is not on my git repository
 source ~/nvim/projects.nvimrc
 
 " vim-wordmotion
@@ -179,8 +180,9 @@ let g:startify_list_order = ['bookmarks']
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
 noremap <leader>d :call pdv#DocumentWithSnip()<CR>
 
-" write ctags each time we change a php file
+" write ctags each time we save files
 autocmd vimrc BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
+autocmd vimrc BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
@@ -264,10 +266,10 @@ command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open htt
 autocmd vimrc FileType python,ruby,rspec,javascript,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
 " disable arrow keys - don't use arrow keys in Vim!
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
+nnoremap <Up> :resize -5<CR>
+nnoremap <Down> :resize +5<CR>
 imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
