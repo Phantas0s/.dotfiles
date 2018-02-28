@@ -158,6 +158,9 @@ for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 
+" Autocompletion with tab
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 " project config - is not on my git repository
 source ~/nvim/projects.nvimrc
 
