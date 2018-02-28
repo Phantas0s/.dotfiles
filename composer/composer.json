@@ -3,7 +3,6 @@
     "prefer-stable": true,
     "require": {
         "hirak/prestissimo": "^0.3",
-        "mkusher/padawan": "dev-master",
         "phpstan/phpstan": "^0.7.0",
         "phpro/grumphp": "^0.12.0",
         "pdepend/pdepend": "^2.5",
