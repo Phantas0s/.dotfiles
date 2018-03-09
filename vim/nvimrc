@@ -20,7 +20,7 @@ Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'christoomey/vim-tmux-navigator'
 
 " wrapper for git and display git diff in the left gutter
-Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' | Plug 'junegunn/gv.vim'
 
 " surrounding with whatever you want (paranthesis, quotes...)
 Plug 'tpope/vim-surround'
