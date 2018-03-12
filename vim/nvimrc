@@ -60,8 +60,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " markdown 
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown', {'for': 'md'}
+" Plug 'godlygeek/tabular'
+" Plug 'plasticboy/vim-markdown', {'for': 'md'}
+Plug 'gabrielelana/vim-markdown'
 
 " Focus
 Plug 'junegunn/goyo.vim'
