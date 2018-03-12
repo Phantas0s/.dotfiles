@@ -49,7 +49,7 @@ let g:neomake_php_php_maker = {
 \ }
 
 let g:neomake_php_phpcs_maker = {
-        \ 'args': ['--report=csv', '--standard=PSR2'],
+        \ 'args': ['--report=csv', '--standard=~/.dotfiles/php/phpcs/Phpcs.xml'],
         \ 'errorformat':
             \ '%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity%.%#,'.
             \ '"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]%.%#',

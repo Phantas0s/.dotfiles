@@ -63,6 +63,9 @@ Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', {'for': 'md'}
 
+" Focus
+Plug 'junegunn/goyo.vim'
+
 " php autocompletion engine and tools
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
