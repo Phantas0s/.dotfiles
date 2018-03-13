@@ -157,6 +157,9 @@ augroup END
 " needed
 let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 
+" disable default mapping for vim-markdown
+let g:markdown_enable_mappings = 0
+
 " source every plugin configs
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file

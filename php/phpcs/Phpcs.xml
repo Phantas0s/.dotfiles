@@ -33,7 +33,7 @@
 
     <rule ref="Generic.PHP.ForbiddenFunctions">
      <properties>
-      <property name="forbiddenFunctions" type="array" value="print=>echo,create_function=>null,var_dump=>print_r" />
+      <property name="forbiddenFunctions" type="array" value="print=>echo,create_function=>null" />
      </properties>
     </rule>
 
@@ -82,8 +82,6 @@
     <rule ref="PSR2.Namespaces.UseDeclaration"/>
 
     <rule ref="Squiz.PHP.CommentedOutCode"/>
-    <rule ref="Squiz.PHP.DisallowComparisonAssignment"/>
-    <rule ref="Squiz.PHP.DisallowInlineIf"/>
     <rule ref="Squiz.PHP.DisallowMultipleAssignments"/>
     <rule ref="Squiz.PHP.DisallowObEndFlush"/>
     <rule ref="Squiz.PHP.EmbeddedPhp"/>
@@ -113,13 +111,6 @@
     <rule ref="Zend.Files.ClosingTag"/>
     <rule ref="Squiz.Classes.ClassFileName"/>
     <rule ref="Squiz.Commenting.VariableComment"/>
-    <rule ref="Squiz.Commenting.InlineComment">
-        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType" />
-        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
-        <exclude name="Squiz.Commenting.InlineComment.NoSpaceBefore" />
-        <exclude name="Squiz.Commenting.InlineComment.NotCapital" />
-        <exclude name="Squiz.Commenting.InlineComment.SpacingAfter" />
-    </rule>
 
     <rule ref="Squiz.Commenting.VariableComment"/>
     <rule ref="Squiz.Commenting.VariableComment.TagNotAllowed">
