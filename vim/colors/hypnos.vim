@@ -9,8 +9,10 @@ hi Visual guifg=#d70000 guibg=#121212 ctermfg=160 ctermbg=233 cterm=bold
 hi Statement guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=NONE
 hi VertSplit guifg=#262626 guibg=#262626 ctermfg=235 ctermbg=235 cterm=bold
 hi PMenu guifg=#262626 guibg=#87afaf ctermfg=235 ctermbg=109 cterm=NONE
+hi CursorLine guifg=NONE guibg=NONE guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=236 cterm=bold
 
 hi SignColumn guifg=#262626 guibg=#303030 ctermfg=235 ctermbg=236 cterm=NONE
+hi Folded guifg=NONE guibg=NONE guisp=#87afaf ctermfg=235 ctermbg=109 cterm=bold
 
 " VDebug plugin
 hi DbgCurrentLine guifg=#ffffff guibg=#ff0000 ctermfg=15 ctermbg=9
@@ -41,11 +43,10 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi CTagsClass -- no settings --
 "hi clear -- no settings --
 "hi IncSearch guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
-"hi WildMenu guifg=NONE guibg=#A1A6A8 guisp=#A1A6A8 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
+" hi WildMenu guifg=NONE guibg=#A1A6A8 guisp=#A1A6A8 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
 "hi SpecialComment guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Typedef guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
 "hi Title guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=bold ctermfg=189 ctermbg=235 cterm=bold
-"hi Folded guifg=#192224 guibg=#A1A6A8 guisp=#A1A6A8 gui=italic ctermfg=235 ctermbg=248 cterm=NONE
 "hi PreCondit guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Include guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi TabLineSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=bold ctermfg=235 ctermbg=1 cterm=bold
@@ -72,7 +73,6 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi Number guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Boolean guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Operator guifg=#8fa1b3 guibg=NONE guisp=NONE gui=bold ctermfg=103 ctermbg=NONE cterm=bold
-"hi CursorLine guifg=NONE guibg=#222E30 guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 "hi TabLineFill guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=235 ctermbg=66 cterm=bold
 "hi WarningMsg guifg=#A1A6A8 guibg=#912C00 guisp=#912C00 gui=NONE ctermfg=248 ctermbg=88 cterm=NONE
 "hi VisualNOS guifg=#192224 guibg=#F9F9FF guisp=#F9F9FF gui=underline ctermfg=235 ctermbg=189 cterm=underline
@@ -103,5 +103,3 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi Underlined guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 "hi TabLine guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=235 ctermbg=66 cterm=bold
 "hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
-
-

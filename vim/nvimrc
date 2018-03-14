@@ -20,7 +20,9 @@ Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'christoomey/vim-tmux-navigator'
 
 " wrapper for git and display git diff in the left gutter
-Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' | Plug 'junegunn/gv.vim'
+Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' 
+" Display commits for project / file
+Plug 'junegunn/gv.vim'
 
 " surrounding with whatever you want (paranthesis, quotes...)
 Plug 'tpope/vim-surround'
@@ -42,7 +44,6 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'tmhedberg/matchit'
 
 " Autocomplete system
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'roxma/nvim-completion-manager'
 
 " Swap two arguments in a function
@@ -59,12 +60,9 @@ Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" markdown 
-" Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown', {'for': 'md'}
+" markdown plugin
 Plug 'gabrielelana/vim-markdown'
-
-" Focus
+" Focus plugin
 Plug 'junegunn/goyo.vim'
 
 " php autocompletion engine and tools
@@ -73,13 +71,11 @@ Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'phpstan/vim-phpstan', {'for': 'php'}
-
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
 " go development
 Plug 'fatih/vim-go', {'for': 'go'}
-" Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go'}
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
@@ -100,16 +96,13 @@ Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 " Syntax highlighting for vue js framework
 Plug 'posva/vim-vue'
 
-" autoclose bracket and parenthesis when open
-" Plug 'Townk/vim-autoclose'
-
 " debugger
 Plug 'joonty/vdebug'
 
 " outliner
 Plug 'majutsushi/tagbar'
 
-" Nerdtree + modifications: git icons plugin, color filetype plugin
+" Nerdtree + modifications 
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -125,7 +118,7 @@ Plug 'vim-scripts/YankRing.vim'
 " close the current buffer
 Plug 'moll/vim-bbye'
 
-" fzf - poweful search
+" fzf - poweful fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
