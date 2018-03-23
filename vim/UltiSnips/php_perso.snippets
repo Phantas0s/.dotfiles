@@ -132,3 +132,20 @@ $this->addSql("
 ");
 endsnippet
 
+snippet classst "Symlex test class declaration" b
+<?php
+
+namespace App\\${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
+use TestTools\TestCase\UnitTestCase;
+
+class ${1:`!p snip.rv=snip.basename`} extends UnitTestCase
+{
+}
+endsnippet
+

@@ -70,7 +70,6 @@ Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
-Plug 'phpstan/vim-phpstan', {'for': 'php'}
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
@@ -89,9 +88,9 @@ Plug 'lumiliet/vim-twig', {'for': 'twig'}
 " javascript plugins
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 " Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
 " Syntax highlighting for vue js framework
 Plug 'posva/vim-vue'
@@ -198,6 +197,8 @@ map <SPACE> <leader>
 " Go to next line and quit insert mode
 nmap <leader>o o<esc>
 
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
 " un-highlight when esc is pressed (after search for example)
 map <esc> :noh<cr>
 
@@ -234,8 +235,6 @@ nnoremap tj :tabnext<CR>
 nnoremap tk :tabprev<CR>
 nnoremap tl :tablast<CR>
 nnoremap tn :tabnew<CR>
-
-" windows management
 
 " windows navigation
 nnoremap <leader>ww <c-w>w
@@ -342,8 +341,6 @@ set ignorecase
 set smartcase
 
 " set list
-" let &listchars="tab:▸,trail:,extends:❯,precedes:❮,nbsp:±"
-" let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,trail:'
 set list listchars=tab:\┆\ ,trail:·,nbsp:±
 
 " doesn't prompt a warning when opening a file and the current file was written but not saved 

@@ -3,16 +3,31 @@
 let g:colors_name = "hypnos"
 
 hi LineNr guifg=#d0d0d0 guibg=#303030 ctermfg=252 ctermbg=236 cterm=NONE
+hi SignColumn guifg=#262626 guibg=#303030 ctermfg=235 ctermbg=236 cterm=NONE
+hi VertSplit guifg=#262626 guibg=#262626 ctermfg=235 ctermbg=235 cterm=bold
+
 hi Search guifg=#ffff87 guibg=#080808 ctermfg=228 ctermbg=232 cterm=bold
 hi PreProc guifg=#ffffff guibg=NONE ctermfg=15 ctermbg=NONE cterm=NONE
 hi Visual guifg=#d70000 guibg=#121212 ctermfg=160 ctermbg=233 cterm=bold
 hi Statement guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=NONE
-hi VertSplit guifg=#262626 guibg=#262626 ctermfg=235 ctermbg=235 cterm=bold
-hi PMenu guifg=#262626 guibg=#87afaf ctermfg=235 ctermbg=109 cterm=NONE
-hi CursorLine guifg=NONE guibg=NONE guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=236 cterm=bold
 
-hi SignColumn guifg=#262626 guibg=#303030 ctermfg=235 ctermbg=236 cterm=NONE
+" Used for autocompletion
+hi PMenu guifg=#262626 guibg=#87afaf ctermfg=235 ctermbg=109 cterm=NONE
+
+hi CursorLine guifg=NONE guibg=#303030 ctermfg=NONE ctermbg=236 cterm=bold
+
+hi Underlined guifg=#d7d7ff guibg=#262626 ctermfg=189 ctermbg=235 cterm=underline
+hi SpellBad guifg=#F9F9FF guibg=#d70000 ctermfg=15 ctermbg=88 cterm=underline
 hi Folded guifg=NONE guibg=NONE guisp=#87afaf ctermfg=235 ctermbg=109 cterm=bold
+
+" Code
+hi Keyword guifg=#5fafaf guibg=NONE ctermfg=73 ctermbg=NONE cterm=NONE
+hi Function guifg=#d7d7ff guibg=NONE ctermfg=189 ctermbg=NONE cterm=NONE
+" hi Operator guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=bold
+
+"---------"
+" PLUGINS "
+"---------"
 
 " VDebug plugin
 hi DbgCurrentLine guifg=#ffffff guibg=#ff0000 ctermfg=15 ctermbg=9
@@ -72,19 +87,16 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi Float guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Number guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Boolean guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
-"hi Operator guifg=#8fa1b3 guibg=NONE guisp=NONE gui=bold ctermfg=103 ctermbg=NONE cterm=bold
 "hi TabLineFill guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=235 ctermbg=66 cterm=bold
 "hi WarningMsg guifg=#A1A6A8 guibg=#912C00 guisp=#912C00 gui=NONE ctermfg=248 ctermbg=88 cterm=NONE
 "hi VisualNOS guifg=#192224 guibg=#F9F9FF guisp=#F9F9FF gui=underline ctermfg=235 ctermbg=189 cterm=underline
 "hi ModeMsg guifg=#F9F9F9 guibg=#192224 guisp=#192224 gui=bold ctermfg=15 ctermbg=235 cterm=bold
 "hi CursorColumn guifg=NONE guibg=#222E30 guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 "hi Define guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
-"hi Function guifg=#9b8eb4 guibg=NONE guisp=NONE gui=bold ctermfg=103 ctermbg=NONE cterm=bold
 "hi FoldColumn guifg=#192224 guibg=#A1A6A8 guisp=#A1A6A8 gui=italic ctermfg=235 ctermbg=248 cterm=NONE
 "hi MoreMsg guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
 "hi SpellCap guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 "hi Exception guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
-"hi Keyword guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
 "hi Type guifg=#8fa1b3 guibg=NONE guisp=NONE gui=bold ctermfg=103 ctermbg=NONE cterm=bold
 "hi Cursor guifg=#192224 guibg=#F9F9F9 guisp=#F9F9F9 gui=NONE ctermfg=235 ctermbg=15 cterm=NONE
 "hi SpellLocal guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
@@ -96,10 +108,8 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi PMenuThumb guifg=NONE guibg=#a4a6a8 guisp=#a4a6a8 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
 "hi MatchParen guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
 "hi Repeat guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
-"hi SpellBad guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 "hi Directory guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
 "hi Structure guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
 "hi Macro guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=ONE cterm=NONE
-"hi Underlined guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 "hi TabLine guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=235 ctermbg=66 cterm=bold
-"hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
+"hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=10 cterm=NONE
