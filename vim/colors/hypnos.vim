@@ -21,9 +21,10 @@ hi SpellBad guifg=#F9F9FF guibg=#d70000 ctermfg=15 ctermbg=88 cterm=underline
 hi Folded guifg=NONE guibg=NONE guisp=#87afaf ctermfg=235 ctermbg=109 cterm=bold
 
 " Code
-hi Keyword guifg=#5fafaf guibg=NONE ctermfg=73 ctermbg=NONE cterm=NONE
-hi Function guifg=#d7d7ff guibg=NONE ctermfg=189 ctermbg=NONE cterm=NONE
-" hi Operator guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=bold
+hi Keyword guifg=#eeeeee guibg=NONE ctermfg=255 ctermbg=NONE cterm=NONE
+hi Function guifg=#afafd7 guibg=NONE ctermfg=146 ctermbg=NONE cterm=NONE
+"hi Operator guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=bold
+hi Comment guifg=#b2b2b2 guibg=NONE guisp=NONE gui=italic ctermfg=249 ctermbg=NONE cterm=NONE
 
 "---------"
 " PLUGINS "
@@ -82,7 +83,6 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi PMenuSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
 "hi Delimiter guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi SpellRare guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
-"hi Comment guifg=#5E6C70 guibg=NONE guisp=NONE gui=italic ctermfg=66 ctermbg=NONE cterm=NONE
 "hi Character guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Float guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Number guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
