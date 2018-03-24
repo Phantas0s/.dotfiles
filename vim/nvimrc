@@ -70,6 +70,7 @@ Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
+
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
@@ -144,18 +145,13 @@ augroup END
 " plugin config
 "----------------
 
-" Fix bug autoclose / deoplete
-" before two escape (one for closing deoplete one for go to normal mode) was
-" needed
-let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
-
-" disable default mapping for vim-markdown
-let g:markdown_enable_mappings = 0
-
 " source every plugin configs
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
+
+" disable default mapping for vim-markdown
+let g:markdown_enable_mappings = 0
 
 " Autocompletion with tab
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
