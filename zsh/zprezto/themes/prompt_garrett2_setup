@@ -357,7 +357,7 @@ function prompt_garrett_setup
 	# zstyle ':prezto:module:git:info' verbose 'yes'
 
 	# Git prompt info
-	zstyle ':prezto:module:git:info:branch'    format "${cyan}λ${prompt_garrett_color_prompt}:${yellow}%b"
+	zstyle ':prezto:module:git:info:branch'    format "${cyan}λ${prompt_garrett_color_prompt}:${red}%b"
 	zstyle ':prezto:module:git:info:remote'    format ""
 	zstyle ':prezto:module:git:info:action'    format "${yellow} %s"
 	zstyle ':prezto:module:git:info:position'  format "${red} %p"
