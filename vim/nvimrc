@@ -295,6 +295,9 @@ autocmd vimrc BufWrite *.html :call custom#DeleteTrailingWS()
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <Leader>z :call custom#ZoomToggle()<CR>
 
+" Open images with feh
+:autocmd vimrc BufEnter *.png,*.jpg,*gif silent! exec "! feh ".expand("%") | :bw
+
 "-----------------
 " general config 
 "-----------------
