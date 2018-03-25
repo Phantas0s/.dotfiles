@@ -36,6 +36,8 @@ alias suspend='sudo pm-suspend'
 alias lock='gnome-screensaver-command --lock'
 # display big files > 50M
 alias bigf= 'find / -xdev -type f -size +50M'
+# for find device - useful to mount devices (name to prefix with "/dev/")
+alias finddev='lsblk -f'
 
 # ls
 alias ls='ls --color=auto'
