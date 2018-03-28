@@ -10,6 +10,7 @@ hi Search guifg=#ffd75f guibg=#080808 ctermfg=221 ctermbg=232 cterm=bold
 hi PreProc guifg=#ffffff guibg=NONE ctermfg=15 ctermbg=NONE cterm=NONE
 hi Visual guifg=#d75f5f guibg=#121212 ctermfg=167 ctermbg=232 cterm=bold
 hi Statement guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=NONE
+hi Delimiter guifg=#afafd7 guibg=NONE guisp=NONE gui=NONE ctermfg=146 ctermbg=NONE cterm=NONE
 
 " Used for autocompletion
 hi PMenu guifg=#262626 guibg=#87afaf ctermfg=235 ctermbg=109 cterm=NONE
@@ -85,7 +86,6 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi StatusLine guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=bold ctermfg=235 ctermbg=1 cterm=bold
 "hi Label guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
 "hi PMenuSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
-"hi Delimiter guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi SpellRare guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 "hi Character guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Float guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
