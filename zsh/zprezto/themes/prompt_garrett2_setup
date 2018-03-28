@@ -400,7 +400,7 @@ function prompt_garrett_setup
 	# Vim mode indicator
 	#
 
-	zstyle ':prezto:module:editor:info:keymap:primary'           format "%B%F{4}>%F{122}>%F{15}>%f%b "
+	zstyle ':prezto:module:editor:info:keymap:primary'           format "%B%F${blue}>%F${magenta}>%F${white}>%f%b "
 	zstyle ':prezto:module:editor:info:keymap:alternate'         format "${red}<%(?.${prompt_garrett_color_prompt}.${red})<< "
 	# zstyle ':prezto:module:editor:info:keymap:primary:insert'    format "${red}I "
 	zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format "${red}♺ "
