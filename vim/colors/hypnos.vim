@@ -6,9 +6,9 @@ hi LineNr guifg=#d0d0d0 guibg=#303030 ctermfg=252 ctermbg=236 cterm=NONE
 hi SignColumn guifg=#262626 guibg=#303030 ctermfg=235 ctermbg=236 cterm=NONE
 hi VertSplit guifg=#262626 guibg=#262626 ctermfg=235 ctermbg=235 cterm=bold
 
-hi Search guifg=#ffff87 guibg=#080808 ctermfg=228 ctermbg=232 cterm=bold
+hi Search guifg=#ffd75f guibg=#080808 ctermfg=221 ctermbg=232 cterm=bold
 hi PreProc guifg=#ffffff guibg=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-hi Visual guifg=#d70000 guibg=#121212 ctermfg=160 ctermbg=233 cterm=bold
+hi Visual guifg=#d75f5f guibg=#121212 ctermfg=167 ctermbg=232 cterm=bold
 hi Statement guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=NONE
 
 " Used for autocompletion
@@ -16,15 +16,19 @@ hi PMenu guifg=#262626 guibg=#87afaf ctermfg=235 ctermbg=109 cterm=NONE
 
 hi CursorLine guifg=NONE guibg=#303030 ctermfg=NONE ctermbg=236 cterm=bold
 
-hi Underlined guifg=#d7d7ff guibg=#262626 ctermfg=189 ctermbg=235 cterm=underline
-hi SpellBad guifg=#F9F9FF guibg=#d70000 ctermfg=15 ctermbg=88 cterm=underline
-hi Folded guifg=NONE guibg=NONE guisp=#87afaf ctermfg=235 ctermbg=109 cterm=bold
+hi Underlined guifg=#afafd7 guibg=#262626 ctermfg=146 ctermbg=235 cterm=underline
+hi SpellBad guifg=#F9F9FF guibg=#870000 ctermfg=15 ctermbg=88 cterm=underline
+hi Folded guifg=#262626 guibg=#87afaf ctermfg=235 ctermbg=109 cterm=bold
 
 " Code
 hi Keyword guifg=#eeeeee guibg=NONE ctermfg=255 ctermbg=NONE cterm=NONE
 hi Function guifg=#afafd7 guibg=NONE ctermfg=146 ctermbg=NONE cterm=NONE
-"hi Operator guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=bold
+hi Operator guifg=#87afaf guibg=NONE ctermfg=109 ctermbg=NONE cterm=NONE
 hi Comment guifg=#b2b2b2 guibg=NONE guisp=NONE gui=italic ctermfg=249 ctermbg=NONE cterm=NONE
+hi LocalVariable guifg=#ffffff guibg=#303030 ctermfg=5 ctermbg=236 cterm=NONE
+hi Float guifg=#d75f5f guibg=NONE ctermfg=167 ctermbg=NONE cterm=NONE
+hi Number guifg=#d75f5f guibg=NONE ctermfg=167 ctermbg=NONE cterm=NONE
+hi Boolean guifg=#d75f5f guibg=NONE ctermfg=167 ctermbg=NONE cterm=NONE
 
 "---------"
 " PLUGINS "
@@ -59,7 +63,7 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi CTagsClass -- no settings --
 "hi clear -- no settings --
 "hi IncSearch guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
-" hi WildMenu guifg=NONE guibg=#A1A6A8 guisp=#A1A6A8 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
+"hi WildMenu guifg=NONE guibg=#A1A6A8 guisp=#A1A6A8 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
 "hi SpecialComment guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Typedef guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
 "hi Title guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=bold ctermfg=189 ctermbg=235 cterm=bold

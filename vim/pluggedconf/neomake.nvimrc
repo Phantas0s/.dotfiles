@@ -69,29 +69,39 @@ let g:neomake_php_phpmd_maker = {
  \ }
 
 
-"----------------
+"-----------------
 " Golang
 "-----------------
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
 let g:neomake_go_gometalinter_maker = {
-  \ 'args': [
-  \   '--tests',
-  \   '--enable-gc',
-  \   '--concurrency=3',
-  \   '--fast',
-  \   '-D', 'aligncheck',
-  \   '-D', 'dupl',
-  \   '-D', 'gocyclo',
-  \   '-D', 'gotype',
-  \   '-E', 'errcheck',
-  \   '-E', 'misspell',
-  \   '-E', 'unused',
-  \   '%:p:h',
-  \ ],
-  \ 'append_file': 0,
-  \ 'errorformat':
-  \   '%E%f:%l:%c:%trror: %m,' .
-  \   '%W%f:%l:%c:%tarning: %m,' .
-  \   '%E%f:%l::%trror: %m,' .
-  \   '%W%f:%l::%tarning: %m'
+ \ 'args': [
+ \   '--tests',
+ \   '--enable-gc',
+ \   '--concurrency=3',
+ \   '--fast',
+ \   '-E', 'deadcode',
+ \   '-E', 'unconvert',
+ \   '-E', 'gocyclo',
+ \   '-E', 'maligned',
+ \   '-E', 'dupl',
+ \   '-E', 'ineffassign',
+ \   '-E', 'goconst',
+ \   '-E', 'interfacer',
+ \   '-E', 'vet',
+ \   '-E', 'structcheck',
+ \   '-E', 'staticcheck',
+ \   '-E', 'varcheck',
+ \   '-E', 'gocyclo',
+ \   '-E', 'errcheck',
+ \   '-E', 'misspell',
+ \   '-E', 'megacheck',
+ \   '-D', 'gotype',
+ \   '%:p:h',
+ \ ],
+ \ 'append_file': 0,
+ \ 'errorformat':
+ \   '%E%f:%l:%c:%trror: %m,' .
+ \   '%W%f:%l:%c:%tarning: %m,' .
+ \   '%E%f:%l::%trror: %m,' .
+ \   '%W%f:%l::%tarning: %m'
 \ }
