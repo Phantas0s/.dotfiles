@@ -75,29 +75,14 @@ let g:neomake_php_phpmd_maker = {
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
 let g:neomake_go_gometalinter_maker = {
  \ 'args': [
+ \   '--enable-all',
+ \   '--disable=lll',
+ \   '--concurrency=8',
  \   '--tests',
- \   '--enable-gc',
- \   '--concurrency=3',
  \   '--fast',
- \   '-E', 'deadcode',
- \   '-E', 'unconvert',
- \   '-E', 'gocyclo',
- \   '-E', 'maligned',
- \   '-E', 'dupl',
- \   '-E', 'ineffassign',
- \   '-E', 'goconst',
- \   '-E', 'interfacer',
- \   '-E', 'vet',
- \   '-E', 'structcheck',
- \   '-E', 'staticcheck',
- \   '-E', 'varcheck',
- \   '-E', 'gocyclo',
- \   '-E', 'errcheck',
- \   '-E', 'misspell',
- \   '-E', 'megacheck',
- \   '-D', 'gotype',
  \   '%:p:h',
  \ ],
+ \ 'cwd': '%:h',
  \ 'append_file': 0,
  \ 'errorformat':
  \   '%E%f:%l:%c:%trror: %m,' .

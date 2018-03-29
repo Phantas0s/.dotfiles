@@ -61,7 +61,7 @@ URxvt*perl-ext-common: default,tabbed
 
 URxvt.tabbed.tabbar-fg: 15
 URxvt.tabbed.tabbar-bg: 236
-URxvt.tabbed.tab-fg: 167
+URxvt.tabbed.tab-fg: 109
 URxvt.tabbed.tab-bg: 236
 URxvt.tabbed*transparent:true
 
