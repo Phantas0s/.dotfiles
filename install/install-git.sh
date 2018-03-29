@@ -23,9 +23,11 @@ fi
 
 sed -i -e "s/<name>/${GIT_USER}/g" $HOME/$ROOT_CONFIG/git/gitconfig
 
-echo 'Create symlink for gitconfig and global gitignore...'
+echo "Create symlink for gitconfig and global gitignore... \n"
 
 ln -s -f $HOME/$ROOT_CONFIG/git/gitconfig $HOME/.gitconfig
 ln -s -f $HOME/$ROOT_CONFIG/git/gitignore $HOME/.gitignore
+
+echo "Set the global hooks - the hooks will be created each time a project is cloned"
 
 git config --global init.templatedir "$HOME/$ROOT_CONFIG/git/templates"
