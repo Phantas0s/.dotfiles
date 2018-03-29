@@ -134,6 +134,10 @@ Plug 'simeji/winresizer'
 " replace f F t T to target easily the motion
 Plug 'yangmillstheory/vim-snipe'
 
+" Split arrays in PHP / struct in Go
+
+Plug 'AndrewRadev/splitjoin.vim'
+
 call plug#end()
 
 " Declare the general config group for autocommand

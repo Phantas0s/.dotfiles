@@ -11,6 +11,9 @@ alias sh='zsh'
 # ping
 alias pg='ping 8.8.8.8'
 
+# calculator bc
+alias calc="bc"
+
 # apt-get
 alias agi='sudo apt-fast install'
 alias agr='sudo apt-fast remove'
