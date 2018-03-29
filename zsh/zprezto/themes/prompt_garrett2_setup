@@ -401,7 +401,7 @@ function prompt_garrett_setup
 	#
 
 	zstyle ':prezto:module:editor:info:keymap:primary'           format "%B%F${white}>%F${blue}>%F${green}>%f%b "
-	zstyle ':prezto:module:editor:info:keymap:alternate'         format "${red}<%(?.${prompt_garrett_color_prompt}.${red})<< "
+	zstyle ':prezto:module:editor:info:keymap:alternate'         format "%B%F${red}<%F${magenta}<%F${yellow}<%f%b "
 	# zstyle ':prezto:module:editor:info:keymap:primary:insert'    format "${red}I "
 	zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format "${red}♺ "
 	zstyle ':prezto:module:editor:info:completing'               format "${red}..."
