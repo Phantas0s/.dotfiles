@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "${blue} installing private projects configuration from the cloud..."
+echo -e "${blue} installing private projects configuration from the cloud..."
 
 if [[ -v DOTFILES_PROJECT_PATH ]]
 then
@@ -10,11 +10,16 @@ then
     # monitor configs with arandr
     ln -sf $DOTFILES_PROJECT_PATH/config_monitors/ $HOME/
 fi
+echo -e "${green} ...done"
 
+echo -e "${blue} Installing personnal aliases from the cloud..."
 if [[ -v DOTFILES_COMMON_PATH ]]
 then
     ln -sf $DOTFILES_COMMON_PATH/perso_aliases $HOME/.perso_aliases
 fi
+echo -e "${green} ...done"
 
-echo ""
-echo "${green} ...done"
+echo -e "${blue} Installing wallpapers from the cloud..."
+ln -s $WALLPAPER ~/wallpapers
+
+echo -e "${green} ...done"

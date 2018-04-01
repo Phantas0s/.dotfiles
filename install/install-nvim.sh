@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "${blue} installing neovim configuration..."
+echo -e "${blue}Installing neovim configuration..."
 
 # install nvim config
 ln -sf $HOME/$ROOT_CONFIG/vim/nvimrc $HOME/nvim/init.vim
@@ -18,14 +18,10 @@ if [ ! -d $HOME/nvim ]
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+# Install all mandatory folders if they don't exist already
 if [ ! -d $HOME/nvim/plugged ]
   then
     mkdir $HOME/nvim/plugged
-fi
-
-if [ ! -d $HOME/nvim/pluggedconf ]
-  then
-    mkdir $HOME/nvim/pluggedconf
 fi
 
 if [ ! -d $HOME/nvim/colors ]
@@ -36,11 +32,6 @@ fi
 if [ ! -d $HOME/nvim/UltiSnips ]
   then
     mkdir $HOME/nvim/UltiSnips
-fi
-
-if [ ! -d $HOME/nvim/ftplugin ]
-  then
-    mkdir $HOME/nvim/ftplugin
 fi
 
 if [ ! -d $HOME/nvim/autoload ]
@@ -64,7 +55,7 @@ if [ ! -d $HOME/nvim/swap ]
 fi
 
 # configuration of different plugins
-ln -sf $HOME/$ROOT_CONFIG/vim/pluggedconf/* $HOME/nvim/pluggedconf/
+ln -sf $HOME/$ROOT_CONFIG/vim/pluggedconf/ $HOME/nvim/pluggedconf
 
 # color schemes
 ln -sf $HOME/$ROOT_CONFIG/vim/colors/* $HOME/nvim/colors/
@@ -73,11 +64,11 @@ ln -sf $HOME/$ROOT_CONFIG/vim/colors/* $HOME/nvim/colors/
 ln -sf $HOME/$ROOT_CONFIG/vim/UltiSnips/* $HOME/nvim/UltiSnips/
 
 # see :help ftplugin
-ln -sf $HOME/$ROOT_CONFIG/vim/ftplugin/* $HOME/nvim/ftplugin/
+ln -sf $HOME/$ROOT_CONFIG/vim/ftplugin/ $HOME/nvim/ftplugin
 
 # see :help autoload
 ln -sf $HOME/$ROOT_CONFIG/vim/autoload/* $HOME/nvim/autoload/
 
 # projects.nvimrc is installed from the cloud
 
-echo "${green}...done"
+echo -e "${green}...done\n"

@@ -76,4 +76,16 @@ echo "${green}...done!"
 echo ""
 echo "${red}Delete the composer json file..."
 rm $COMPOSER_HOME/composer.json
-echo "${green}...done!"
+echo "${green}...done!\n"
+
+echo -e "${red}Delete the wallpaper folder"
+rm $HOME/wallpapers
+echo -e "${green}...done!\n"
+
+echo -e "${red}Delete neovim config..."
+rm $HOME/nvim/pluggedconf
+rm $HOME/nvim/colors/*
+rm $HOME/nvim/UltiSnips/*
+rm $HOME/nvim/ftplugin
+rm $HOME/nvim/autoload/*
+echo -e "${green}...done!\n"
