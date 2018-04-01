@@ -138,6 +138,9 @@ Plug 'yangmillstheory/vim-snipe'
 
 Plug 'AndrewRadev/splitjoin.vim'
 
+" Open man with vim using vman (need to be configured in zsh boot)
+Plug 'jez/vim-superman'
+
 call plug#end()
 
 " Declare the general config group for autocommand
