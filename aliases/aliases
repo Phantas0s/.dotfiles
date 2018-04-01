@@ -43,6 +43,7 @@ alias bigf= 'find / -xdev -type f -size +50M'
 alias fdev='lsblk -f'
 
 # ls
+alias lsl='ls -l --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -lahF'
 alias lls='ls -lahFtr'
