@@ -18,5 +18,9 @@ DOTFILES_PROJECT_PATH=""
 # see install/install-from-cloud.sh
 DOTFILES_COMMON_PATH=""
 
+# wallpaper folder - too big for git
+# see install/feh.sh
+WALLPAPER=""
+
 # Path for your default journal - https://github.com/maebert/jrnl
 JRNL_DEFAULT_PATH""
