@@ -30,7 +30,7 @@ URxvt*cursorBlink: false
 URxvt*reverseVideo: false
 
 URxvt*depth: 32
-URxvt*background: rgba:0031/0032/0034/ddee
+URxvt*background: rgba:0031/0032/0034/edee
 
 URxvt*pointerBlank: false
 URxvt*inheritPixmap: false

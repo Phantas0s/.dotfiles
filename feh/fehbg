@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--image-bg' 'black' '--bg-center' '/home/hypnos/.dotfiles/i3/lock_wallpapers/hd-beach-wallpaper-full-hd-120.jpg' 
+'feh' '--bg-center' '~/wallpapers/matthieu_cneude/india/mysterious-temple.png' 
