@@ -184,7 +184,7 @@ noremap <leader>d :call pdv#DocumentWithSnip()<CR>
 
 " write ctags each time we save files
 autocmd vimrc BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
-autocmd vimrc BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
+" autocmd vimrc BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags'
 
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
