@@ -9,14 +9,14 @@ hi CursorLine guifg=NONE guibg=#303030 ctermfg=NONE ctermbg=236 cterm=bold
 
 hi Search guifg=#ffd75f guibg=#080808 ctermfg=yellow ctermbg=232 cterm=bold
 hi PreProc guifg=#ffffff guibg=NONE ctermfg=white ctermbg=NONE cterm=NONE
-hi Visual guifg=#d75f5f guibg=#121212 ctermfg=red ctermbg=232 cterm=bold
+hi Visual guifg=#d75f5f guibg=#121212 ctermfg=red ctermbg=236 cterm=bold
 hi Statement guifg=#87afaf guibg=NONE ctermfg=blue ctermbg=NONE cterm=NONE
 hi Delimiter guifg=#afafd7 guibg=NONE guisp=NONE gui=NONE ctermfg=magenta ctermbg=NONE cterm=NONE
 
 " tabs
-" hi TabLineSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=bold ctermfg=red ctermbg=red cterm=bold
-" hi TabLineFill guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=red ctermbg=red cterm=bold
-" hi TabLine guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=red ctermbg=red cterm=bold
+hi TabLineSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=bold ctermfg=red ctermbg=red cterm=bold
+hi TabLineFill guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=red ctermbg=red cterm=bold
+hi TabLine guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=red ctermbg=red cterm=bold
 
 " Used for autocompletion
 hi PMenu guifg=#262626 guibg=#87afaf ctermfg=235 ctermbg=blue cterm=NONE

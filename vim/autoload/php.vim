@@ -1,16 +1,5 @@
-" Restore position of the cursor when reopening a file
-function! custom#RestorePosition()
-    if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
-        return
-    endif
-
-    if line("'\"") > 1 && line("'\"") <= line("$")
-        exe "normal! g`\""
-    endif
-endfunc
-
 " FormatPHPLineLength - can split array or list of arguments on multiple lines.
-function! custom#FormatPHPLineLength()
+function! php#FormatPHPLineLength()
     let l:currentLine = getline('.')
     normal! ma
 
@@ -73,33 +62,6 @@ function! custom#FormatPHPLineLength()
     endif
 endfunction
 
-" delete trailing space when saving files
-function! custom#DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-
-" buffer cleanup - delete every buffer except the one open
-function! custom#Buflist()
-    redir => bufnames
-    silent ls
-    redir END
-    let list = []
-    for i in split(bufnames, "\n")
-        let buf = split(i, '"' )
-        call add(list, buf[-2])
-|   endfor
-    return list
-endfunction
-
-function! custom#Bdeleteonly()
-    let list = filter(custom#Buflist(), 'v:val != bufname("%")')
-    for buffer in list
-        exec "bdelete ".buffer
-    endfor
-endfunction
-
 " Create automatically test files / can switch between tests and tested files
 " Super powerful for TDD!!
 
@@ -113,8 +75,7 @@ endfunction
 " Result: autocmd FileType php nmap <silent> <leader>tu :call SwitchBetweenFiles('php', 'src/Tests/', 'src/', 'Test', 'src', ':sp'  )<cr>
 " Those autocmd are in the private file projects.nvirmc. I source it from my
 " personnal Nextcloud
-
-function! custom#SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition, ...)
+function! php#SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirBeginning, filenameAddition, ...)
     let f = bufname("%")
     if exists("a:2")
         let openFileCommand = a:2
@@ -152,18 +113,5 @@ function! custom#SwitchBetweenFiles(fileExtension, firstDirBeginning, secondDirB
         else
             echom "Could not switch because needed patterns not matched."
         endif
-    endif
-endfunction
-
-" Simple Zoom / Restore window (like Tmux)
-function! custom#ZoomToggle() abort
-    if exists('t:zoomed') && t:zoomed
-        execute t:zoom_winrestcmd
-        let t:zoomed = 0
-    else
-        let t:zoom_winrestcmd = winrestcmd()
-        resize
-        vertical resize
-        let t:zoomed = 1
     endif
 endfunction
