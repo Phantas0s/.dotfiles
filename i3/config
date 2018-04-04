@@ -38,8 +38,41 @@ set_from_resource $cyan2 color14 #000000
 set_from_resource $white1 color7 #000000
 set_from_resource $white2 color15 #000000
 
+#---Starting External Scripts---# #
+
+# exec urxvtd daemon
+# urxvtc run via Xinitrc because otherwise the scratchpad don't work (race condition?)
+# exec --no-startup-id ~/.i3/scripts/urxvtc.sh
+
+# resize correctly in vmware
+exec --no-startup-id vmware-user-suid-wrapper
+exec --no-startup-id vmware-user
+
+# start owncloud client
+exec --no-startup-id owncloud &
+
+#wallpaper
+exec --no-startup-id ~/.fehbg
+
+# launch scripts
+exec --no-startup-id /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id ~/.i3/scripts/remaps.sh
+exec --no-startup-id ~/.i3/scripts/xresources.sh
+
+# launch redshift
+exec --no-startup-id redshift
+
+# launch dunst
+exec --no-startup-id dunst -config ~/.dunstrc
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 # i3 config file (v4)
-#
+
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 # set the modifier (Mod4: cmd)
 set $mod Mod4
@@ -119,11 +152,6 @@ bindsym $mod+a focus parent
 # focus the child container
 # bindsym $mod+d focus child
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -177,7 +205,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 # can use xprop - WM_CLASS(STRING) = "urxvt", "URxvt"
 
 #assign [class="URxvt" instance="urxvt"] → $terms
-#assign [class="jetbrains-phpstorm" instance="sun-awt-X11-XFramePeer"] → 4
 assign [class="Firefox" instance="Navigator"] → $web
 assign [class="Chromium" instance="chromium"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
@@ -189,8 +216,6 @@ assign [instance="FreeMind"] → $mindmap
 
 # start softwares and command lines in workspaces
 exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc -e tmux -2 new-session -A -s main
-exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id sh ~/.fehbg
 
 ####################
 # restart / reload #
@@ -257,24 +282,11 @@ exec keepassx
 # configuration of some software
 for_window [class="URxvt*"] border pixel 1
 
-# resize correctly in vmware
-exec --no-startup-id vmware-user-suid-wrapper
-exec --no-startup-id vmware-user
-
-# launch redshift
-exec --no-startup-id redshift
-
-# launch dunst
-exec --no-startup-id dunst -config ~/.dunstrc
-
 # no focus following the mouse
 focus_follows_mouse no
 
 # using the same workspace shortcut will focus on your last 
 workspace_auto_back_and_forth yes
-
-# start owncloud client
-exec --no-startup-id owncloud &
 
 ##########
 # DESIGN #
