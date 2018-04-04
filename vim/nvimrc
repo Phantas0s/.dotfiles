@@ -337,3 +337,6 @@ set noswapfile
 
 " write automatically when quitting buffer
 set autowrite
+
+" number of undo saved in memory
+set undolevels=10000
