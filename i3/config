@@ -58,7 +58,8 @@ exec --no-startup-id ~/.fehbg
 exec --no-startup-id /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id ~/.i3/scripts/remaps.sh
-exec --no-startup-id ~/.i3/scripts/xresources.sh
+# Launched in Xinitrc otherwise the scratchpads don't take it into account (?)
+# exec --no-startup-id ~/.i3/scripts/xresources.sh
 
 # launch redshift
 exec --no-startup-id redshift

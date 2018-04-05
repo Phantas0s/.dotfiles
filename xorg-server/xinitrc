@@ -1,2 +1,8 @@
+# If launch in i3/config the scratchpads are not spawn (race condition?)
 urxvtd -o -q -f
+
+# merge .Xressources file
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+# exec i3
 exec i3
