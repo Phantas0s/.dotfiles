@@ -166,12 +166,6 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " project config - is not on my git repository
 source ~/nvim/projects.nvimrc
 
-" vim-wordmotion
-let g:wordmotion_prefix = 'c'
-
-" markdown
-let g:vim_markdown_folding_disabled = 1
-
 " close the buffer
 nmap <leader>db :Bdelete!<cr>
 
@@ -192,7 +186,7 @@ map <SPACE> <leader>
 " Go to next line and quit insert mode
 nmap <leader>o o<esc>
 
-" un-highlight when esc is pressed (after search for example)
+" un-highlight when esc is pressed
 map <esc> :noh<cr>
 
 " surround by quotes - frequently use cases of vim-surround
@@ -316,6 +310,9 @@ set shiftround
 " use real tabs in .go files, not spaces
 autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 
+" number of undo saved in memory
+set undolevels=10000
+
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
@@ -337,6 +334,3 @@ set noswapfile
 
 " write automatically when quitting buffer
 set autowrite
-
-" number of undo saved in memory
-set undolevels=10000
