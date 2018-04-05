@@ -2,7 +2,9 @@
 urxvtd -o -q -f
 
 # merge .Xressources file
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+# [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xdefaults# merge .Xressources file
 
 # exec i3
 exec i3
