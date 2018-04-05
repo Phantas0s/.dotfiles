@@ -349,3 +349,18 @@ mode "$mode_system" {
 
 bindsym $mod+BackSpace mode "$mode_system"
 
+## Manual management of external displays
+# Set the shortcuts and what they do
+# set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+# mode "$mode_display" {
+#     bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1, mode "default"
+#     bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of LVDS1, mode "default"
+#     bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
+#     bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+
+#     # back to normal: Enter or Escape
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
+# Declare here the shortcut to bring the display selection menu
+# bindsym $mod+x mode "$mode_display"
