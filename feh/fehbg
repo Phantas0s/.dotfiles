@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-center' '/home/hypnos/wallpapers/snow_tree.jpg' 
+'feh' '--bg-fill' '/home/hypnos/.cache/i3lock/dim.png' 

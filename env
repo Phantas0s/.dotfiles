@@ -20,3 +20,6 @@ export GOBIN="$HOME/workspace/go/bin"
 
 # PATH for go binaries
 PATH="$GOBIN:$PATH"
+
+# Override ls colors
+eval "$(dircolors -b ~/.dircolors)"

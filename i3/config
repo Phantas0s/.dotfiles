@@ -57,7 +57,8 @@ exec --no-startup-id ~/.fehbg
 # launch scripts
 exec --no-startup-id /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id ~/.i3/scripts/remaps.sh
+
+# Works on VM, doesn't work on Pantaflix computer, moved to Xinitrc
 # Launched in Xinitrc otherwise the scratchpads don't take it into account (?)
 # exec --no-startup-id ~/.i3/scripts/xresources.sh
 
@@ -330,7 +331,7 @@ bar {
 # In order to cache an image
 # exec --no-startup-id betterlockscreen -u ~/wallpapers/snow_tree.png 
 
-exec --no-startup-id betterlockscreen -w dim
+exec --no-startup-id betterlockscreen -w -l dimblur
 set $i3lockwall exec betterlockscreen --lock
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
@@ -370,3 +371,5 @@ bindsym $mod+BackSpace mode "$mode_system"
 # }
 # Declare here the shortcut to bring the display selection menu
 # bindsym $mod+x mode "$mode_display"
+
+exec --no-startup-id ~/.i3/scripts/remaps.sh
