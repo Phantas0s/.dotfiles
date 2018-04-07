@@ -174,6 +174,7 @@ let g:startify_list_order = ['bookmarks']
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 
+
 "------------------
 " general binding
 "------------------
@@ -252,6 +253,9 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+" Keep the cursor in place while joining lines
+nnoremap J mzJ`z
 
 " buffer cleanup - delete every buffer except the one open
 command! Ball :silent call general#Bdeleteonly()
@@ -336,3 +340,10 @@ set noswapfile
 
 " write automatically when quitting buffer
 set autowrite
+
+" Fold related
+set foldlevelstart=0 " Start with all folds closed
+" set foldcolumn=1 " Set fold column
+"
+" Set foldtext
+set foldtext=general#FoldText()
