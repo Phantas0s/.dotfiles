@@ -80,6 +80,7 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
 " go development
 Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'godoctor/godoctor.vim', {'for': 'go'}
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
@@ -178,6 +179,13 @@ autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 "------------------
 " general binding
 "------------------
+if exists("g:did_load_filetypes")
+  filetype off
+  filetype plugin indent off
+endif
+set rtp+=~/nvim/godoctor.vim
+filetype plugin indent on
+syntax on
 
 " Weird hack for NERDTree to work
 let mapleader = "\\"
