@@ -40,7 +40,7 @@ TERM xterm*
 # Background color codes:
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 # NORMAL 01;31 # no color code at all
-FILE 01;34 # regular file: use no color at all
+FILE 01;34 # regular file
 RESET 0 # reset to "normal" color
 DIR 01;37 # directory
 LINK 01;36 # symbolic link. (If you set this to 'target' instead of a
@@ -56,8 +56,8 @@ MISSING 00 # ... and the files they point to
 SETUID 37;41 # file that is setuid (u+s)
 SETGID 30;43 # file that is setgid (g+s)
 CAPABILITY 30;41 # file with capability
-STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
-OTHER_WRITABLE 01;33 # dir that is other-writable (o+w) and not sticky
+STICKY_OTHER_WRITABLE 01;42 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 01;32 # dir that is other-writable (o+w) and not sticky
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 # This is for files with execute permission:
 EXEC 01;32
