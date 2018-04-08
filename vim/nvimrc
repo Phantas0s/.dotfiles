@@ -146,6 +146,9 @@ Plug 'AndrewRadev/splitjoin.vim'
 " Open man with vim using vman (need to be configured in zsh boot)
 Plug 'jez/vim-superman'
 
+" CSV plugin
+Plug 'chrisbra/csv.vim'
+
 call plug#end()
 
 "----------------
@@ -282,7 +285,7 @@ autocmd vimrc BufWrite *.php,*.js,*.vue,*.twig,*.html :call general#DeleteTraili
 nnoremap <silent> <Leader>z :call general#ZoomToggle()<CR>
 
 " Open images with feh
-:autocmd vimrc BufEnter *.png,*.jpg,*gif silent! exec "! feh ".expand("%") | :bw
+autocmd vimrc BufEnter *.png,*.jpg,*gif silent! exec "! feh ".expand("%") | :bw
 
 " A |Dict| specifies the matcher for filtering and sorting the completion candidates.
 let g:cm_matcher={'module': 'cm_matchers.abbrev_matcher', 'case': 'smartcase'}

@@ -326,13 +326,13 @@ bar {
 }
 
 # lockscreen
-# set $i3lockwall i3lock -i ~/wallpapers/snow_tree.png -t
+set $i3lockwall i3lock -i ~/wallpapers/snow_tree.png -t
 
 # In order to cache an image
 # exec --no-startup-id betterlockscreen -u ~/wallpapers/snow_tree.png 
 
-exec --no-startup-id betterlockscreen -w -l dimblur
-set $i3lockwall exec betterlockscreen --lock
+# exec --no-startup-id betterlockscreen -w
+# set $i3lockwall exec betterlockscreen --lock
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 #wallpaper and transparency

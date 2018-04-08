@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-fill' '/home/hypnos/.cache/i3lock/dim.png' 
+'feh' '--bg-fill' '/home/hypnos/.cache/i3lock/resized.png' 
