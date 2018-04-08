@@ -4,14 +4,16 @@
 ROOT_CONFIG=".dotfiles"
 
 # Git user and email to set up git automatically
-GIT_USER="Hernest"
-GIT_EMAIL="Hernest@caramail.com"
+# GIT_USER=""
+# GIT_EMAIL=""
 
 # personnal cloud storage for private projects config:
 # see install/install-from-cloud.sh
-DOTFILES_PROJECT_PATH=""
-DOTFILES_COMMON_PATH=""
-WALLPAPER=""
+
+# DOTFILES_PROJECT_PATH=""
+# DOTFILES_COMMON_PATH=""
+# WALLPAPER=""
 
 # Path for your default journal - https://github.com/maebert/jrnl
-JRNL_DEFAULT_PATH""
+
+# JRNL_DEFAULT_PATH=""
