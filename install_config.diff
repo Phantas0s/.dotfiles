@@ -7,13 +7,13 @@ ROOT_CONFIG=".dotfiles"
 # GIT_USER=""
 # GIT_EMAIL=""
 
-# personnal cloud storage for private projects config:
-# see install/install-from-cloud.sh
-
-# DOTFILES_PROJECT_PATH=""
-# DOTFILES_COMMON_PATH=""
-# WALLPAPER=""
-
 # Path for your default journal - https://github.com/maebert/jrnl
-
 # JRNL_DEFAULT_PATH=""
+
+### Installation from hosting service (nextcloud / dropbox...) ######
+
+#see install/install-from-cloud.sh
+
+# DOTFILES_PROJECT_PATH="" #neovim configuration of different projects
+# DOTFILES_COMMON_PATH="" #neovim configuration of different projects
+# WALLPAPER="" #wallpaper folder

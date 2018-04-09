@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ############
 # includes #
 ############
@@ -11,16 +10,16 @@
 # presentation #
 ################
 
-echo ""
-echo "${light_gray}######################################"
-echo "${light_gray}# Welcome to my installation script! #"
-echo "${light_gray}######################################"
-echo ""
+echo -e ""
+echo -e "${light_gray}######################################"
+echo -e "${light_gray}# Welcome to my installation script! #"
+echo -e "${light_gray}######################################"
+echo -e ""
 
-echo "${yellow}!${red}WARNING${yellow}!"
-echo "${light_red}This script will delete all your configuration!"
-echo "${light_red}Use it if you know what you are doing..."
-echo "${light_red}Press a key to continue..."
+echo -e "${yellow}!${red}WARNING${yellow}!"
+echo -e "${light_red}This script will delete all your configuration!"
+echo -e "${light_red}Use it for a fresh install or if you only use this set of dotfiles."
+echo -e "${light_red}Press a key to continue..."
 read key;
 
 ###########
@@ -28,23 +27,26 @@ read key;
 ###########
 
 # Uninstall everything 
-
 # TODO: let the choice to backup :D
 
 . $HOME/$ROOT_CONFIG/uninstall.sh
+
+# Install
 . $HOME/$ROOT_CONFIG/install/install-from-cloud.sh
 . $HOME/$ROOT_CONFIG/install/install-fonts.sh
 . $HOME/$ROOT_CONFIG/install/install-i3.sh
-. $HOME/$ROOT_CONFIG/install/install-urxvt.sh
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
-. $HOME/$ROOT_CONFIG/install/install-git.sh
-. $HOME/$ROOT_CONFIG/install/install-nvim.sh
 . $HOME/$ROOT_CONFIG/install/install-xorg-server.sh
-. $HOME/$ROOT_CONFIG/install/install-tmux.sh
-. $HOME/$ROOT_CONFIG/install/install-dunst.sh
-. $HOME/$ROOT_CONFIG/install/install-feh.sh
-. $HOME/$ROOT_CONFIG/install/install-jrnl.sh
-. $HOME/$ROOT_CONFIG/install/install-composer.sh
+
+command -v "urxvt" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-urxvt.sh
+command -v "git" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-git.sh
+command -v "nvim" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-nvim.sh
+command -v "tmux" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-tmux.sh
+command -v "dunst" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-dunst.sh
+command -v "feh" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-feh.sh
+command -v "jrnl" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-jrnl.sh
+command -v "composer" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-composer.sh
+command -v "mycli" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-mycli.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
@@ -53,3 +55,6 @@ echo -e "${green} ...done"
 echo -e "${blue}Create symlinks for Xmodmap key mapping...."
 ln -s $HOME/$ROOT_CONFIG/xorg-server/Xmodmap $HOME/.Xmodmap
 echo -e "${green} ...done"
+
+# Source startup
+source $HOME/$ROOT_CONFIG/startup
