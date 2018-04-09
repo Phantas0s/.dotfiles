@@ -88,14 +88,14 @@ alias gplo='git pull origin'
 alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
-alias gdc='git diff --color'
-# alias go='git checkout '
+alias gco='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gl='git log'
+
 # rework the last commit - no squary loss
-alias grc='git reset HEAD^'
-alias gls='git remote show'
+alias gr='git remote'
+alias grs='git remote show'
 alias glo='git log --pretty="oneline"'
 alias glol='git log --graph --oneline --decorate'
 # delete local branch merged with master
