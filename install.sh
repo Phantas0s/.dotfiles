@@ -40,6 +40,9 @@ read key;
 # install i3 configuration
 . $HOME/$ROOT_CONFIG/install/install-i3.sh
 
+# install urxvt configuration
+. $HOME/$ROOT_CONFIG/install/install-urxvt.sh
+
 # install prezto
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
 
@@ -74,10 +77,6 @@ read key;
 echo "${blue}Create symlinks for personnal config..."
 
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
-ln -s $HOME/$ROOT_CONFIG/urxvt/Xdefaults $HOME/.Xdefaults
 ln -s $HOME/$ROOT_CONFIG/xorg-server/Xmodmap $HOME/.Xmodmap
 
 echo "${green} ...done"
-
-# install phpstorm symlink
-. $HOME/$ROOT_CONFIG/install/install-phpstorm.sh

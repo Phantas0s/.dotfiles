@@ -1,6 +1,6 @@
 " Declare the general config group for autocommand
 augroup js
-  autocmd!
+    autocmd!
 augroup END
 
 " write ctags each time we save files (& for asynchronously)

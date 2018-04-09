@@ -2,9 +2,12 @@
 urxvtd -o -q -f
 
 # merge .Xressources file
-# [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-xrdb -merge ~/.Xresources
-xrdb -merge ~/.Xdefaults# merge .Xressources file
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+# set the keyboard to mac
+# setxkbmap us mac
+# maps caps lock to escape for vim 
+# setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
 
 # exec i3
 exec i3
