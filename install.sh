@@ -28,55 +28,28 @@ read key;
 ###########
 
 # Uninstall everything 
+
 # TODO: let the choice to backup :D
+
 . $HOME/$ROOT_CONFIG/uninstall.sh
-
-# install project config from private cloud
 . $HOME/$ROOT_CONFIG/install/install-from-cloud.sh
-
-# install fonts
 . $HOME/$ROOT_CONFIG/install/install-fonts.sh
-
-# install i3 configuration
 . $HOME/$ROOT_CONFIG/install/install-i3.sh
-
-# install urxvt configuration
 . $HOME/$ROOT_CONFIG/install/install-urxvt.sh
-
-# install prezto
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
-
-# install git config
 . $HOME/$ROOT_CONFIG/install/install-git.sh
-
-# install neovim 
 . $HOME/$ROOT_CONFIG/install/install-nvim.sh
-
-# install xressource config
 . $HOME/$ROOT_CONFIG/install/install-xorg-server.sh
-
-# install tmux config
 . $HOME/$ROOT_CONFIG/install/install-tmux.sh
-
-# install dunst config
 . $HOME/$ROOT_CONFIG/install/install-dunst.sh
-
-# install feh config
 . $HOME/$ROOT_CONFIG/install/install-feh.sh
-
-# install jrnl config
 . $HOME/$ROOT_CONFIG/install/install-jrnl.sh
-
-# install composer.json
 . $HOME/$ROOT_CONFIG/install/install-composer.sh
 
-# install siege config
-# to fix
-# $HOME/$ROOT_CONFIG/install/install-siege.sh
-
-echo "${blue}Create symlinks for personnal config..."
-
+echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
-ln -s $HOME/$ROOT_CONFIG/xorg-server/Xmodmap $HOME/.Xmodmap
+echo -e "${green} ...done"
 
-echo "${green} ...done"
+echo -e "${blue}Create symlinks for Xmodmap key mapping...."
+ln -s $HOME/$ROOT_CONFIG/xorg-server/Xmodmap $HOME/.Xmodmap
+echo -e "${green} ...done"
