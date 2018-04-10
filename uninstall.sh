@@ -33,7 +33,7 @@ echo -e "${green}...done!"
 
 echo -e ""
 echo -e "${red}Delete the ranger config..."
-rm -rf $HOME/ranger/ &>/dev/null
+rm -rf $HOME/ranger &>/dev/null
 echo -e "${green}...done!"
 
 echo -e ""

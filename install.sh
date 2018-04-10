@@ -48,6 +48,7 @@ command -v "jrnl" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-jrnl.sh
 command -v "composer" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-composer.sh
 command -v "mycli" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-mycli.sh
 command -v "ranger" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-ranger.sh
+command -v "go" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-go.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
