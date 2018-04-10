@@ -32,6 +32,11 @@ rm $HOME/.bashrc &>/dev/null
 echo -e "${green}...done!"
 
 echo -e ""
+echo -e "${red}Delete the ranger config..."
+rm -rf $HOME/ranger/ &>/dev/null
+echo -e "${green}...done!"
+
+echo -e ""
 echo -e "${red}Delete the xorg-server config..."
 rm $HOME/.Xresources &>/dev/null
 rm $HOME/.xinitrc &>/dev/null
