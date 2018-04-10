@@ -90,3 +90,10 @@ let g:neomake_go_gometalinter_maker = {
  \   '%E%f:%l::%trror: %m,' .
  \   '%W%f:%l::%tarning: %m'
 \ }
+
+
+"-----------------
+" Yaml
+"-----------------
+
+let g:neomake_yaml_enabled_makers = [ 'yamllint' ]
