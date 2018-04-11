@@ -19,14 +19,14 @@ echo -e ""
 echo -e "${yellow}!${red}WARNING${yellow}!"
 echo -e "${light_red}This script will delete all your configuration!"
 echo -e "${light_red}Use it for a fresh install or if you only use this set of dotfiles."
-echo -e "${light_red}Press a key to continue..."
-read key;
+# echo -e "${light_red}Press a key to continue..."
+# read key;
 
 ###########
 # INSTALL #
 ###########
 
-# Uninstall everything 
+# Uninstall everything
 # TODO: let the choice to backup :D
 
 . $HOME/$ROOT_CONFIG/uninstall.sh
