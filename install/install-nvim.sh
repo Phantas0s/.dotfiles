@@ -83,5 +83,7 @@ ln -sf $HOME/$ROOT_CONFIG/nvim/autoload/* $HOME/nvim/autoload/
 
 # projects.nvimrc is installed from the cloud
 
+# Update all the plugins
+nvim +PlugInstall +qa
 
 echo -e "${green}...done\n"
