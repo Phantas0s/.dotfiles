@@ -12,7 +12,7 @@ alias sh='zsh'
 alias pg='ping 8.8.8.8'
 
 # calculator bc
-alias calc="bc"
+alias bc="bc -q"
 
 # apt-get
 alias agi='sudo apt-fast install'

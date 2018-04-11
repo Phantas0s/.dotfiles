@@ -28,6 +28,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' 
 " Display commits for project / file
 Plug 'junegunn/gv.vim'
+" Use Tig with neovim
+Plug 'codeindulgence/vim-tig'
 
 " surrounding with whatever you want (paranthesis, quotes...)
 Plug 'tpope/vim-surround'
@@ -148,7 +150,6 @@ Plug 'jez/vim-superman'
 
 " CSV plugin
 Plug 'chrisbra/csv.vim'
-
 call plug#end()
 
 "----------------
