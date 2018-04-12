@@ -118,8 +118,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'sjl/gundo.vim'
 
 " registers
-Plug 'vim-scripts/YankRing.vim'
-
+Plug 'bfredl/nvim-miniyank'
 " close the current buffer
 Plug 'moll/vim-bbye'
 
