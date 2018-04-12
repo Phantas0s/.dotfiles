@@ -39,6 +39,9 @@ Plug 'tpope/vim-repeat'
 " comment automatically
 Plug 'tpope/vim-commentary'
 
+" Highlight briefly every yank text
+Plug 'machakann/vim-highlightedyank'
+
 " add new text object (can delete between comma with di, for example)
 Plug 'wellle/targets.vim'
 
