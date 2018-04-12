@@ -10,6 +10,7 @@ if [ -z "$GIT_EMAIL" ]
     echo "Git config - Please enter your email address \n"
     echo "> "
     read GIT_EMAIL
+    echo "GIT_EMAIL=$GIT_EMAIL" >> $HOME/$ROOT_CONFIG/install_config
 fi
 
 sed -i -e "s/<email>/${GIT_EMAIL}/g" $HOME/$ROOT_CONFIG/git/gitconfig
@@ -19,6 +20,7 @@ if [ -z "$GIT_USER" ]
     echo "Git config - Please enter your name \n"
     echo "> "
     read GIT_USER
+    echo "GIT_USER=$GIT_USER" >> $HOME/$ROOT_CONFIG/install_config
 fi
 
 sed -i -e "s/<name>/${GIT_USER}/g" $HOME/$ROOT_CONFIG/git/gitconfig

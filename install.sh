@@ -26,6 +26,13 @@ echo -e "${light_red}Use it for a fresh install or if you only use this set of d
 # INSTALL #
 ###########
 
+# Copy the default config file if not present already
+
+if [ ! -f $HOME/$ROOT_CONFIG/install_config ];
+then
+    cp $HOME/$ROOT_CONFIG/install_config.diff $HOME/ROOT_CONFIG/install_config
+fi
+
 # Uninstall everything
 # TODO: let the choice to backup :D
 
