@@ -357,3 +357,6 @@ set foldlevelstart=0 " Start with all folds closed
 "
 " Set foldtext
 set foldtext=general#FoldText()
+
+" Show live the substitution
+set inccommand=nosplit

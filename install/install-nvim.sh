@@ -55,9 +55,15 @@ if [ ! -d $HOME/nvim/swap ]
 fi
 
 # Install Go tool
-if [ ! -f $HOME/nvim/godoctor.vim ]
+if [ ! -f $HOME/nvim/godoctor.vim ] && [ -v $GOPATH]
   then
     git clone https://github.com/godoctor/godoctor.vim ~/nvim/godoctor.vim
+fi
+
+# If no projects configured create an empty file
+if [ ! -f $HOME/nvim/projects.nvimrc ]
+  then
+    touch $HOME/nvim/projects.nvimrc
 fi
 
 # configuration of different plugins
@@ -77,5 +83,7 @@ ln -sf $HOME/$ROOT_CONFIG/nvim/autoload/* $HOME/nvim/autoload/
 
 # projects.nvimrc is installed from the cloud
 
+# Update all the plugins
+nvim +PlugInstall +qa
 
 echo -e "${green}...done\n"
