@@ -10,6 +10,7 @@
 # presentation #
 ################
 
+#!/bin/bash
 echo -e ""
 echo -e "${light_gray}######################################"
 echo -e "${light_gray}# Welcome to my installation script! #"
@@ -19,8 +20,12 @@ echo -e ""
 echo -e "${yellow}!${red}WARNING${yellow}!"
 echo -e "${light_red}This script will delete all your configuration!"
 echo -e "${light_red}Use it for a fresh install or if you only use this set of dotfiles."
-# echo -e "${light_red}Press a key to continue..."
-# read key;
+
+if [ $# -ne 1 ] || [ "$1" != "-y" ];
+    then
+        echo -e "${light_red}Press a key to continue..."
+        read key;
+fi
 
 ###########
 # INSTALL #

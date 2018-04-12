@@ -56,7 +56,6 @@ exec --no-startup-id ~/.fehbg
 
 # launch scripts
 exec --no-startup-id /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-exec --no-startup-id xmodmap ~/.Xmodmap
 
 # Works on VM, doesn't work on Pantaflix computer, moved to Xinitrc
 # Launched in Xinitrc otherwise the scratchpads don't take it into account (?)
@@ -357,19 +356,21 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 ## Manual management of external displays
-# Set the shortcuts and what they do
-# set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
-# mode "$mode_display" {
-#     bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1, mode "default"
-#     bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of LVDS1, mode "default"
-#     bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
-#     bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+set $mode_display Pantaflix double screen(p) default MAC(d)
 
-#     # back to normal: Enter or Escape
-#     bindsym Return mode "default"
-#     bindsym Escape mode "default"
-# }
-# Declare here the shortcut to bring the display selection menu
-# bindsym $mod+x mode "$mode_display"
+set $default_display = xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1280x800 --pos 0x808 --rotate normal --output DP1 --mode 1920x1080 --pos 1280x0 --rotate left --output HDMI2 --off --output HDMI1 --off --output DP2 --off
+
+mode "$mode_display" {
+    bindsym p exec --no-startup-id $default_display
+    bindsym d exec --no-startup-id xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1280x800 --pos 0x0 --rotate normal --output DP1 --off --output HDMI2 --off --output HDMI1 --off --output DP2 --off
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+x mode "$mode_display"
 
 exec --no-startup-id ~/.i3/scripts/remaps.sh
+exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id $default_display
