@@ -1,16 +1,16 @@
 #!/bin/bash
-
 # Copy the default config file if not present already
-if [ ! -f $HOME/$ROOT_CONFIG/install_config ];
-then
-    cp $HOME/$ROOT_CONFIG/install_config.diff $HOME/ROOT_CONFIG/install_config
-fi
-
 ############
 # includes #
 ############
 
-. $HOME/$ROOT_CONFIG/install_config
+if [ ! -f $HOME/$ROOT_CONFIG/install_config ];
+then
+    cp ./install_config.diff ./install_config
+else
+    . ./install_config
+fi
+
 . $HOME/$ROOT_CONFIG/colors
 
 ################
