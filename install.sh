@@ -1,9 +1,16 @@
 #!/bin/bash
+
+# Copy the default config file if not present already
+if [ ! -f $HOME/$ROOT_CONFIG/install_config ];
+then
+    cp $HOME/$ROOT_CONFIG/install_config.diff $HOME/ROOT_CONFIG/install_config
+fi
+
 ############
 # includes #
 ############
 
-. ./install_config
+. $HOME/$ROOT_CONFIG/install_config
 . $HOME/$ROOT_CONFIG/colors
 
 ################
@@ -30,13 +37,6 @@ fi
 ###########
 # INSTALL #
 ###########
-
-# Copy the default config file if not present already
-
-if [ ! -f $HOME/$ROOT_CONFIG/install_config ];
-then
-    cp $HOME/$ROOT_CONFIG/install_config.diff $HOME/ROOT_CONFIG/install_config
-fi
 
 # Uninstall everything
 # TODO: let the choice to backup :D
