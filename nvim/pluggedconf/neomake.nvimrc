@@ -11,7 +11,7 @@ let g:neomake_message_sign = {
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 " update neomake when save file
-autocmd vimrc BufWritePost * Neomake
+call neomake#configure#automake('w')
 
 "----------------
 " PHP
