@@ -4,12 +4,12 @@
 # includes #
 ############
 
-if [ ! -f $HOME/$ROOT_CONFIG/install_config ];
+if [ ! -f ./install_config ];
 then
     cp ./install_config.diff ./install_config
-else
-    . ./install_config
 fi
+
+. ./install_config
 
 . $HOME/$ROOT_CONFIG/colors
 
