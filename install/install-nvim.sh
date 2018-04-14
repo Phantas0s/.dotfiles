@@ -84,6 +84,7 @@ ln -sf $HOME/$ROOT_CONFIG/nvim/autoload/* $HOME/nvim/autoload/
 nvim +PlugUpdate +qa 2>/dev/null
 
 # installing colorscheme for lightline
-ln -sf $HOME/$ROOT_CONFIG/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim $HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim
+ln -sf $HOME/$ROOT_CONFIG/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim \
+$HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim
 
 echo -e "${green}...done\n"
