@@ -2,12 +2,6 @@
 
 echo -e "${blue}Installing neovim configuration..."
 
-# install nvim config
-ln -sf $HOME/$ROOT_CONFIG/nvim/nvimrc $HOME/nvim/init.vim
-
-# installing colorscheme for lightline
-ln -sf $HOME/$ROOT_CONFIG/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim $HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim
-
 # Create all necessary folder for neovim
 if [ ! -d $HOME/nvim ]
   then
@@ -17,6 +11,12 @@ if [ ! -d $HOME/nvim ]
     curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
+
+# install nvim config
+ln -sf $HOME/$ROOT_CONFIG/nvim/nvimrc $HOME/nvim/init.vim
+
+# installing colorscheme for lightline
+ln -sf $HOME/$ROOT_CONFIG/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim $HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim
 
 # Install all mandatory folders if they don't exist already
 if [ ! -d $HOME/nvim/plugged ]
@@ -55,7 +55,7 @@ if [ ! -d $HOME/nvim/swap ]
 fi
 
 # Install Go tool
-if [ ! -f $HOME/nvim/godoctor.vim ] && [ -v $GOPATH ];
+if [ ! -f $HOME/nvim/godoctor.vim ] && [ ! -v $GOPATH ];
   then
     git clone https://github.com/godoctor/godoctor.vim ~/nvim/godoctor.vim
 fi
