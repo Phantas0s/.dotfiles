@@ -81,7 +81,7 @@ ln -sf $HOME/$ROOT_CONFIG/nvim/autoload/* $HOME/nvim/autoload/
 # projects.nvimrc is installed from the cloud
 
 # Update all the plugins
-nvim +PlugUpdate +qa 2>/dev/null
+nvim --noplugin +PlugUpdate +qa
 
 # installing colorscheme for lightline
 ln -sf $HOME/$ROOT_CONFIG/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim \
