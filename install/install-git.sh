@@ -2,7 +2,7 @@
 
 echo 'Installing git config... \n'
 
-rm $HOME/$ROOT_CONFIG/git/gitconfig
+rm $HOME/$ROOT_CONFIG/git/gitconfig >/dev/null
 cp $HOME/$ROOT_CONFIG/git/gitconfig_template $HOME/$ROOT_CONFIG/git/gitconfig
 
 if [ -z "$GIT_EMAIL" ]
