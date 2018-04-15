@@ -5,8 +5,10 @@ if [ ! -z "$DOTFILES_PROJECT_PATH" ];
 then
     echo -e "${blue} installing private projects configuration from the cloud..."
 
-    #tmuxinator projects
+    #tmuxinator projects - to get rid of
     ln -sf $DOTFILES_PROJECT_PATH/tmuxinator $HOME/.tmuxinator
+    #tmuxp projects
+    ln -sf $DOTFILES_PROJECT_PATH/tmuxp $HOME/.tmuxp
 
     # project relative configuration for neovim
     ln -sf $DOTFILES_PROJECT_PATH/projects.nvimrc $HOME/nvim/
