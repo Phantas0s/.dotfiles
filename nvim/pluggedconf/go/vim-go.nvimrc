@@ -23,5 +23,5 @@ autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
 autocmd FileType go nmap <buffer><leader>gt <plug>(go-test)
 autocmd FileType go nmap <buffer><leader>grn <plug>(go-rename)
 
-autocmd go FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<cWORD>")<cr>
-autocmd go FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
+autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<cWORD>")<cr>
+autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
