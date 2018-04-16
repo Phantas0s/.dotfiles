@@ -52,7 +52,7 @@ if [ ! -d $HOME/nvim/swap ]
 fi
 
 # Install Go tool
-if [ ! -f $HOME/nvim/godoctor.vim ] && [ ! -v $GOPATH ];
+if [ ! -d $HOME/nvim/godoctor.vim ]
   then
     git clone https://github.com/godoctor/godoctor.vim ~/nvim/godoctor.vim
 fi

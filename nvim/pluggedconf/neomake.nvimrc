@@ -75,25 +75,43 @@ let g:neomake_php_phpmd_maker = {
 " Golang
 "-----------------
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+" let g:neomake_go_gometalinter_maker = {
+"  \ 'args': [
+"  \   '--enable-all',
+"  \   '--disable=lll',
+"  \   '--concurrency=8',
+"  \   '--tests',
+"  \   '--fast',
+"  \   '%:p:h',
+"  \ ],
+"  \ 'cwd': '%:h',
+"  \ 'append_file': 0,
+"  \ 'errorformat':
+"  \   '%E%f:%l:%c:%trror: %m,' .
+"  \   '%W%f:%l:%c:%tarning: %m,' .
+"  \   '%E%f:%l::%trror: %m,' .
+"  \   '%W%f:%l::%tarning: %m'
+" \ }
+
 let g:neomake_go_gometalinter_maker = {
- \ 'args': [
- \   '--enable-all',
- \   '--disable=lll',
- \   '--concurrency=8',
- \   '--tests',
- \   '--fast',
- \   '%:p:h',
- \ ],
- \ 'cwd': '%:h',
- \ 'append_file': 0,
- \ 'errorformat':
- \   '%E%f:%l:%c:%trror: %m,' .
- \   '%W%f:%l:%c:%tarning: %m,' .
- \   '%E%f:%l::%trror: %m,' .
- \   '%W%f:%l::%tarning: %m'
+  \ 'exe': 'zb',
+  \ 'args': [
+  \   'lint',
+  \   '--exclude=unexported',
+  \   '--fast',
+  \ ],
+  \ 'cwd': '%:h',
+  \ 'append_file': 0,
+  \ 'errorformat':
+  \   '%E%f:%l:%c:%trror: %m,' .
+  \   '%W%f:%l:%c:%tarning: %m,' .
+  \   '%E%f:%l::%trror: %m,' .
+  \   '%W%f:%l::%tarning: %m'
 \ }
 
-
+  let g:go_fmt_options = {
+    \ 'gofmt': '-s',
+\ }
 "-----------------
 " Yaml
 "-----------------
