@@ -9,8 +9,8 @@ then
     cp ./install_config.diff ./install_config
 fi
 
+. ./env
 . ./install_config
-
 . $HOME/$ROOT_CONFIG/colors
 
 ################
