@@ -171,7 +171,7 @@ bindsym XF86AudioPrev exec playerctl previous
 #############
 
 set $terms "1: terms"
-set $web "2: web"
+set $web "2: web"
 set $sql "3: sql"
 set $file_manager "4: files"
 set $mail "5: mails"
