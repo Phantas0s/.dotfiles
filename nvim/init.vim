@@ -205,6 +205,12 @@ map <esc> :noh<cr>
 map <leader>" ysiw"<cr>
 map <leader>' ysiw'<cr>
 
+" Act like D and C
+nnoremap Y y$
+nnoremap vv V
+nnoremap V v$
+
+
 " Enables you to save files with :w!! by using sudo if you forgot to open it as root
 cmap w!! %!sudo tee > /dev/null %" display tabs, trailing spaces
 

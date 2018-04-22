@@ -13,7 +13,7 @@ if [ ! -d $HOME/nvim ]
 fi
 
 # install nvim config
-ln -sf $HOME/$ROOT_CONFIG/nvim/nvimrc $HOME/nvim/init.vim
+ln -sf $HOME/$ROOT_CONFIG/nvim/init.vim $HOME/nvim/init.vim
 
 # Install all mandatory folders if they don't exist already
 if [ ! -d $HOME/nvim/plugged ]
