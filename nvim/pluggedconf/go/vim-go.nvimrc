@@ -25,7 +25,7 @@ autocmd FileType go nmap <buffer><leader>gr <plug>(go-run)
 autocmd FileType go nmap <buffer><leader>gt <plug>(go-test)
 autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
 autocmd FileType go nmap <buffer><leader>gi <plug>(go-install)
-autocmd FileType go nmap <buffer><leader>ge <plug>(go-coverage-toggle)
+autocmd FileType go nmap <buffer><leader>gc <plug>(go-coverage-toggle)
 
 autocmd FileType go nmap <buffer><leader>gn <plug>(go-rename)
 
