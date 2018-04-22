@@ -7,6 +7,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
+let g:go_metalinter_enabled = [ "gas", "goconst", "gocyclo", "golint", "ineffassign", "interfacer", "maligned", "megacheck", "misspell", "structcheck", "unconvert", "varcheck", "vet"]
 " temporary fix for neovim + guru + vim-go problem - https://github.com/fatih/vim-go/pull/1769
 " let g:go_def_mode = 'godef'
 
@@ -25,7 +26,7 @@ autocmd FileType go nmap <buffer><leader>gi <plug>(go-install)
 
 autocmd FileType go nmap <buffer><leader>gn <plug>(go-rename)
 
-autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<cWORD>")<cr>
+autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
 
 let g:go_fmt_command = "goimports"
