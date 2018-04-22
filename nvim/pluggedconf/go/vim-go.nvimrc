@@ -19,9 +19,11 @@ noremap <buffer><leader>rd :Refactor godoc<cr>
 
 " vim-go mappings
 autocmd FileType go nmap <buffer><leader>gr <plug>(go-run)
-autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
 autocmd FileType go nmap <buffer><leader>gt <plug>(go-test)
-autocmd FileType go nmap <buffer><leader>grn <plug>(go-rename)
+autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
+autocmd FileType go nmap <buffer><leader>gi <plug>(go-install)
+
+autocmd FileType go nmap <buffer><leader>gn <plug>(go-rename)
 
 autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<cWORD>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
