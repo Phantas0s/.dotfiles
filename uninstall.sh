@@ -22,6 +22,11 @@ rm $HOME/.zshrc &>/dev/null
 echo -e "${green}...done!"
 
 echo -e ""
+echo -e "${red}Delete the scripts..."
+rm $HOME/scripts &>/dev/null
+echo -e "${green}...done!"
+
+echo -e ""
 echo -e "${red}Delete the tmux config..."
 rm $HOME/.tmux.conf &>/dev/null
 echo -e "${green}...done!"
