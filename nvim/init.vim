@@ -331,8 +331,6 @@ set shiftwidth=4
 " when at 3 spaces, and I hit > ... go to 4, not 7
 set shiftround
 
-" use real tabs in .go files, not spaces
-autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 
 " number of undo saved in memory
 set undolevels=10000
