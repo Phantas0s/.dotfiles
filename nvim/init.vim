@@ -199,7 +199,7 @@ map <SPACE> <leader>
 nmap <leader>o o<esc>
 
 " un-highlight when esc is pressed
-map <esc> :noh<cr>
+map <!silent><esc> :noh<cr>
 
 " surround by quotes - frequently use cases of vim-surround
 map <leader>" ysiw"<cr>
@@ -366,3 +366,6 @@ set foldtext=general#FoldText()
 
 " Show live the substitution
 set inccommand=nosplit
+
+set wildmenu
+set wildmode=list:longest,full
