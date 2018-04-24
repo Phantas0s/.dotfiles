@@ -92,8 +92,6 @@ alias gco='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gl='git log'
-
-# rework the last commit - no squary loss
 alias gr='git remote'
 alias grs='git remote show'
 alias glo='git log --pretty="oneline"'
