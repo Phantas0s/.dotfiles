@@ -7,7 +7,8 @@ urxvtd -o -q -f
 # set the keyboard to mac
 # setxkbmap us mac
 # maps caps lock to escape for vim 
-# setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
+e setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
+xmodmap ~/.Xmodmap
 
 # exec i3
 exec i3
