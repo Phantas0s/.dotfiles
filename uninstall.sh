@@ -61,7 +61,7 @@ echo -e "${green}...done!"
 echo -e ""
 echo -e "${red}Delete the dunst config..."
 rm $HOME/.dunstrc &>/dev/null
-rm -rf $HOME/.autotest &>/dev/null
+rm -rf $HOME/.testomatic &>/dev/null
 echo -e "${green}...done!"
 
 echo -e ""

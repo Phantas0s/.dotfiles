@@ -1,3 +1,7 @@
+augroup fzf
+  autocmd!
+augroup END
+
 " Key mapping
 nmap <leader>h :History<cr>
 nmap <leader>b :Buffers<cr>
@@ -8,7 +12,7 @@ nnoremap <leader>a :Rgi<space>
 nnoremap <leader>A :exec "Rgi ".expand("<cword>")<cr>
 
 " ripgrep command to search in multiple files
-autocmd vimrc VimEnter * command! -nargs=* Rg
+autocmd fzf VimEnter * command! -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
@@ -16,7 +20,7 @@ autocmd vimrc VimEnter * command! -nargs=* Rg
   \   <bang>0)
 
 " ripgrep - ignore the files defined in ignore files (.gitignore...)
-autocmd vimrc VimEnter * command! -nargs=* Rgi
+autocmd fzf VimEnter * command! -nargs=* Rgi
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
@@ -25,7 +29,7 @@ autocmd vimrc VimEnter * command! -nargs=* Rgi
 
 " ripgrep - ignore the files defined in ignore files (.gitignore...) and
 " doesn't ignore case
-autocmd vimrc VimEnter * command! -nargs=* Rgic
+autocmd fzf VimEnter * command! -nargs=* Rgic
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --fixed-strings --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
