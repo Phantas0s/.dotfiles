@@ -32,5 +32,5 @@ autocmd FileType go nmap <buffer><leader>gn <plug>(go-rename)
 autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
 
-" let g:go_fmt_command = "goimports"
-" let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
