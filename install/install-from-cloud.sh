@@ -16,21 +16,21 @@ then
     # monitor configs with arandr
     ln -sf $DOTFILES_PROJECT_PATH/config_monitors/ $HOME/
 
-    echo -e "${green} ...done"
-fi
-
-if [ ! -z "$DOTFILES_COMMON_PATH" ];
-then
-    if [ ! -d "$HOME/.ssh" ];
+    if [ -d "$DOTFILES_PROJECT_PATH/openssh" ];
     then
-        mkdir $HOME/.ssh > /dev/null
+        if [ ! -d "$HOME/.ssh" ];
+        then
+            mkdir $HOME/.ssh > /dev/null
+        fi
+
+        echo -e "${blue} Installing ssh config from the cloud"
+        cp $DOTFILES_PROJECT_PATH/openssh/config $HOME/.ssh/config
+        chown $USER:$USER $HOME/.ssh/config
+        chmod 700 $HOME/.ssh/config
+        echo -e "${green} ...done"
     fi
 
-    echo -e "${blue} Installing ssh config from the cloud"
-    cp $DOTFILES_COMMON_PATH/openssh/config $HOME/.ssh/config
-    chown $USER:$USER $HOME/.ssh/config
-    chmod 700 $HOME/.ssh/config
-    echo -e "${green} ...done"
+        echo -e "${green} ...done"
 fi
 
 if [ ! -z "$WALLPAPER_PATH" ]
