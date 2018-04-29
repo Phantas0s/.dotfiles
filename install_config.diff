@@ -15,5 +15,4 @@ ROOT_CONFIG=".dotfiles"
 #see install/install-from-cloud.sh
 
 # DOTFILES_PROJECT_PATH="" #neovim configuration of different projects
-# DOTFILES_COMMON_PATH="" #neovim configuration of different projects
 # WALLPAPER="" #wallpaper folder
