@@ -32,9 +32,20 @@ rm $HOME/.tmux.conf &>/dev/null
 echo -e "${green}...done!"
 
 echo -e ""
+echo -e "${red}Delete the tmuxp config..."
+rm $HOME/.tmuxp &>/dev/null
+echo -e "${green}...done!"
+
+echo -e ""
 echo -e "${red}Delete the bashrc config..."
 rm $HOME/.bashrc &>/dev/null
 echo -e "${green}...done!"
+
+echo -e ""
+echo -e "${red}Delete the ssh config..."
+rm $HOME/.ssh/config &>/dev/null
+echo -e "${green}...done!"
+
 
 echo -e ""
 echo -e "${red}Delete the ranger config..."

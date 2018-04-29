@@ -8,7 +8,7 @@ then
     #tmuxinator projects - to get rid of
     ln -sf $DOTFILES_PROJECT_PATH/tmuxinator $HOME/.tmuxinator
     #tmuxp projects
-    ln -sf $DOTFILES_PROJECT_PATH/tmuxp $HOME/.tmuxp
+    ln -sf $DOTFILES_PROJECT_PATH/tmuxp/ $HOME/.tmuxp
 
     # project relative configuration for neovim
     ln -sf $DOTFILES_PROJECT_PATH/projects.nvimrc $HOME/nvim/
@@ -21,8 +21,15 @@ fi
 
 if [ ! -z "$DOTFILES_COMMON_PATH" ];
 then
-    echo -e "${blue} Installing personnal aliases from the cloud..."
-    ln -sf $DOTFILES_COMMON_PATH/perso_aliases $HOME/.perso_aliases
+    if [ ! -d "$HOME/.ssh" ];
+    then
+        mkdir $HOME/.ssh > /dev/null
+    fi
+
+    echo -e "${blue} Installing ssh config from the cloud"
+    cp $DOTFILES_COMMON_PATH/openssh/config $HOME/.ssh/config
+    chown $USER:$USER $HOME/.ssh/config
+    chmod 700 $HOME/.ssh/config
     echo -e "${green} ...done"
 fi
 
