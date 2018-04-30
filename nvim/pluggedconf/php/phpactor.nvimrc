@@ -16,7 +16,7 @@ nnoremap <leader>rfc :call PHPModify("complete_constructor")<cr>
 nnoremap <leader>rei :call phpactor#ClassInflect()<cr>
 
 " Extract method
-vnoremap <silent><Leader>rem :<C-U>call phpactor#ExtractMethod()<CR>
+xnoremap <silent><Leader>rem :<C-U>call phpactor#ExtractMethod()<CR>
 nnoremap <leader>src :call phpactor#FindReferences()<cr>
 
 " go to definition of a method / class / whatever via Ctags

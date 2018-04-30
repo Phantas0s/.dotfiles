@@ -15,7 +15,7 @@ let g:go_metalinter_enabled = [ "gas", "goconst", "gocyclo", "golint", "ineffass
 let g:go_auto_sameids = 1
 
 " vimdoctor 
-vnoremap <buffer><leader>rem :Refactor extract 
+xnoremap <buffer><leader>rem :Refactor extract 
 noremap <buffer><leader>rd :Refactor godoc<cr>
 
 " vim-go mappings
