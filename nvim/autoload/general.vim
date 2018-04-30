@@ -60,3 +60,8 @@ function! general#FoldText()
     let fillcharcount=windowwidth-len(line)-len(foldedlinecount)
     return line.'…'.repeat(' ',fillcharcount).foldedlinecount.'L'.' '
 endfunction
+
+function! general#ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction

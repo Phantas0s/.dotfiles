@@ -296,6 +296,9 @@ autocmd vimrc BufEnter *.png,*.jpg,*gif silent! exec "! feh ".expand("%") | :bw
 " A |Dict| specifies the matcher for filtering and sorting the completion candidates.
 let g:cm_matcher={'module': 'cm_matchers.abbrev_matcher', 'case': 'smartcase'}
 
+" Execute a macro for the all selection
+xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
+
 "-----------------
 " general config 
 "-----------------

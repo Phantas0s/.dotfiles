@@ -64,10 +64,6 @@ rm $HOME/.Xdefaults &>/dev/null
 rm $HOME/.dircolors
 echo -e "${green}...done!"
 
-echo -e ""
-echo -e "${red}Delete the git config..."
-rm $HOME/.gitconfig &>/dev/null
-echo -e "${green}...done!"
 
 echo -e ""
 echo -e "${red}Delete the dunst config..."
