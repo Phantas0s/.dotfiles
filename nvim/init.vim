@@ -50,10 +50,6 @@ Plug 'chaoren/vim-wordmotion'
 
 " Match more stuff with % (html tag, LaTeX...)
 Plug 'tmhedberg/matchit'
-
-" Autocomplete system
-Plug 'roxma/nvim-completion-manager'
-
 " Swap two arguments in a function
 Plug 'PeterRincker/vim-argumentative'
 
@@ -72,8 +68,12 @@ Plug 'gabrielelana/vim-markdown' " markdown plugin
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
+" Autocomplete system
+" Plug 'roxma/nvim-completion-manager'
+
 " php autocompletion engine and tools
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
@@ -88,7 +88,8 @@ Plug 'godoctor/godoctor.vim', {'for': 'go'}
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plug 'roxma/ncm-phpactor',  {'for': 'php'}
+" Plug 'roxma/ncm-phpactor',  {'for': 'php'}
+Plug 'kristijanhusak/deoplete-phpactor'
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 
 " twig
