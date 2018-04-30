@@ -23,6 +23,12 @@ then
             mkdir $HOME/.ssh > /dev/null
         fi
 
+        echo -e ""
+        echo -e "${red}Delete the git config..."
+        rm $HOME/.gitconfig &>/dev/null
+        echo -e "${green}...done!"
+
+        echo -e ""
         echo -e "${blue} Installing ssh config from the cloud"
         cp $DOTFILES_PROJECT_PATH/openssh/config $HOME/.ssh/config
         chown $USER:$USER $HOME/.ssh/config
