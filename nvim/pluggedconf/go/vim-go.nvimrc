@@ -8,8 +8,10 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_metalinter_enabled = [ "gas", "goconst", "gocyclo", "golint", "ineffassign", "interfacer", "maligned", "megacheck", "misspell", "structcheck", "unconvert", "varcheck", "vet"]
-" temporary fix for neovim + guru + vim-go problem - https://github.com/fatih/vim-go/pull/1769
-" let g:go_def_mode = 'godef'
+let g:go_def_mode = 'godef'
+if !exists("g:go_gotags_bin")
+  let g:go_gotags_bin = "gotags"
+endif
 
 " highlight matching identifiers
 let g:go_auto_sameids = 1
@@ -35,3 +37,4 @@ autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<c
 
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
+
