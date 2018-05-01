@@ -22,3 +22,8 @@ vman() {
         echo "No manual entry for $*"
     fi
 }
+
+if [[ "$(tty)" = "/dev/tty1" ]];
+then
+    pgrep i3 || exec startx
+fi
