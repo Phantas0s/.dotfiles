@@ -112,6 +112,7 @@ alias vr='vagrant reload'
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
 alias tmuxs='tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -s$USER@$HOSTNAME'
+alias mux='tmuxp load'
 
 # tar
 alias tare='tar xzvf'
@@ -143,15 +144,15 @@ alias docker-compose-dev='docker-compose -f docker-compose-dev.yml'
 ## PROJECTS ##
 ##############
 
-# symfony
-alias osymfcc='php app/console cache:clear'
-alias osymfai='php app/console assets:install'
-alias osymfad='php app/console assetic:dump'
+# general workspace
+alias work="$HOME/workspace"
+#
+# dotfiles
+alias dot="$HOME/.dotfiles"
 
-alias symfcc='php bin/console cache:clear'
-alias symfai='php bin/console assets:install'
-alias symfall='symfai && symfcc'
-
-# portoflio
-alias portfolio='cd /usr/share/nginx/html/portfolio/'
-
+# golang workspace
+alias gwork="$GOPATH/src/github.com/Phantas0s"
+# golang src
+alias gsrc="$GOPATH/src/"
+# golang gin
+alias gbin="$GOPATH/bin/"
