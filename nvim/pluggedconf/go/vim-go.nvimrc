@@ -34,7 +34,7 @@ autocmd FileType go nmap <buffer><leader>gi <plug>(go-install)
 autocmd FileType go nmap <buffer><leader>gc <plug>(go-coverage-toggle)
 autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
 autocmd FileType go nmap <buffer><leader>gtf <plug>(go-test-func)
-autocmd FileType go nmap <buffer><leader>gn <plug>(go-rename)
+autocmd FileType go nmap <buffer><leader>grn <plug>(go-rename)
 " autocmd FileType go nmap <buffer><leader>gat <plug>(go-add-tags)
 
 autocmd Filetype go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
