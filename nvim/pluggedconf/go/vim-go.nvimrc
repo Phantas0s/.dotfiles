@@ -9,6 +9,11 @@ let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_metalinter_enabled = [ "gas", "goconst", "gocyclo", "golint", "ineffassign", "interfacer", "maligned", "megacheck", "misspell", "structcheck", "unconvert", "varcheck", "vet"]
 let g:go_def_mode = 'godef'
+
+let g:go_addtags_transform = "snakecase"
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
+
 if !exists("g:go_gotags_bin")
   let g:go_gotags_bin = "gotags"
 endif
@@ -29,12 +34,13 @@ autocmd FileType go nmap <buffer><leader>gi <plug>(go-install)
 autocmd FileType go nmap <buffer><leader>gc <plug>(go-coverage-toggle)
 autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
 autocmd FileType go nmap <buffer><leader>gtf <plug>(go-test-func)
-
 autocmd FileType go nmap <buffer><leader>gn <plug>(go-rename)
+" autocmd FileType go nmap <buffer><leader>gat <plug>(go-add-tags)
+
+autocmd Filetype go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
+autocmd Filetype go nmap <buffer><leader>tub <Plug>(go-alternate-split)
+autocmd Filetype go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
 
 autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
-
-let g:go_fmt_command = "goimports"
-let g:go_fmt_autosave = 1
 

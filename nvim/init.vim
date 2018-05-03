@@ -84,6 +84,7 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 " go development
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'godoctor/godoctor.vim', {'for': 'go'}
+Plug 'zchee/deoplete-go', {'for': 'go'}
 
 " refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
