@@ -1,12 +1,13 @@
 # global gitignore
-.idea
 .php_cs.cache
 .ignore
 dumps/
-autotest.rb
-.padawan
-
-docker/*-dev/
-docker-compose-dev.yml
-docker-compose.override.yml
 xdebug*
+
+# Docker
+docker-compose.override.yml
+
+# Automatic testing
+.testomatic
+autotest.rb
+
