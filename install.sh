@@ -50,6 +50,7 @@ fi
 . $HOME/$ROOT_CONFIG/install/install-xorg-server.sh
 . $HOME/$ROOT_CONFIG/install/install-scripts.sh
 
+command -v "lxappearance" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-theme.sh
 command -v "i3" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-i3.sh
 command -v "urxvt" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-urxvt.sh
 command -v "git" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-git.sh

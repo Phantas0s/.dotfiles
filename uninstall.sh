@@ -37,6 +37,11 @@ rm $HOME/.tmuxp &>/dev/null
 echo -e "${green}...done!"
 
 echo -e ""
+echo -e "${red}Delete the theme config..."
+rm $HOME/.gtkrc-2.0 &>/dev/null
+echo -e "${green}...done!"
+
+echo -e ""
 echo -e "${red}Delete the bashrc config..."
 rm $HOME/.bashrc &>/dev/null
 echo -e "${green}...done!"
