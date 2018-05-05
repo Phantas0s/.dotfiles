@@ -359,7 +359,7 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 ## Manual management of external displays
-set $mode_display Default (d)
+set $mode_display Config monitor resolution - Default (1280x800) (d)
 
 mode "$mode_display" {
     bindsym d exec --no-startup-id xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1280x800 --pos 0x0 --rotate normal --output DP1 --off --output HDMI2 --off --output HDMI1 --off --output DP2 --off
