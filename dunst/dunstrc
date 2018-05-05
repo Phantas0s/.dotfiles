@@ -64,7 +64,7 @@
     # geometry = "200x5-10+33"
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
-    transparency = 0
+    transparency = 10
  
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -100,10 +100,10 @@
     separator_height = 2
  
     # padding between text and separator>
-    padding = 16
+    padding = 8 
  
     # horizontal padding
-    horizontal_padding = 2
+    horizontal_padding = 8
  
     # Define a color for the separator.
     # possible values are:
@@ -111,7 +111,7 @@
     #  * foreground: use the same color as the foreground
     #  * frame: use the same color as the frame.
     #  * anything else will be interpreted as a X color
-    separator_color = auto
+    separator_color = "#444444"
  
     # print a notification on startup
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -125,8 +125,8 @@
     browser = /usr/bin/firefox -new-tab
  
 [frame]
-    width = 0
-    color = "#FFFFFF"
+    width = 1
+    color = "#444444"
  
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -150,19 +150,19 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#8fa1b3"
-    foreground = "#ffffff"
-    timeout = 5
+    background = "#303030"
+    foreground = "#87AF87"
+    timeout = 15
  
 [urgency_normal]
-    background = "#9ac379"
-    foreground = "#ffffff"
-    timeout = 5
+    background = "#303030"
+    foreground = "#C6C6C6"
+    timeout = 25
  
 [urgency_critical]
-    background = "#ce3a3a"
-    foreground = "#ffffff"
-    timeout = 10
+    background = "#303030"
+    foreground = "#d75f5f"
+    timeout = 40
  
  
 # Every section that isn't one of the above is interpreted as a rules
