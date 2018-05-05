@@ -13,7 +13,6 @@ augroup END
 "----------------
 " install plugin
 "-----------------
-let g:plug_timeout = 160
 
 call plug#begin('~/nvim/plugged')
 

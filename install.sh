@@ -18,19 +18,17 @@ fi
 ################
 
 #!/bin/bash
-echo -e ""
-echo -e "${light_gray}######################################"
-echo -e "${light_gray}# Welcome to my installation script! #"
-echo -e "${light_gray}######################################"
-echo -e ""
+echo -e "${green}####################################"
+echo -e "${green}# Welcome to Phantas0s's dotfiles! #"
+echo -e "${green}####################################\n"
 
-echo -e "${yellow}!${red}WARNING${yellow}!"
+echo -e "${yellow}!!! ${red}WARNING${yellow} !!!"
 echo -e "${light_red}This script will delete all your configuration!"
-echo -e "${light_red}Use it for a fresh install or if you only use this set of dotfiles."
+echo -e "${light_red}Use it for a fresh install or if you only use this set of dotfiles.\n"
 
 if [ $# -ne 1 ] || [ "$1" != "-y" ];
     then
-        echo -e "${light_red}Press a key to continue..."
+        echo -e "${yellow}Press a key to continue...\n"
         read key;
 fi
 
@@ -66,11 +64,11 @@ command -v "go" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-go.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
-echo -e "${green} ...done"
+echo -e "${green} ...done\n"
 
 echo -e "${blue}Create symlinks for Xmodmap key mapping...."
 ln -s $HOME/$ROOT_CONFIG/xorg-server/Xmodmap $HOME/.Xmodmap
-echo -e "${green} ...done"
+echo -e "${green} ...done\n"
 
 # Source startup
 source $HOME/$ROOT_CONFIG/startup
