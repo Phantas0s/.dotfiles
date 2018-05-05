@@ -13,6 +13,7 @@ augroup END
 "----------------
 " install plugin
 "-----------------
+let g:plug_timeout = 160
 
 call plug#begin('~/nvim/plugged')
 
@@ -229,8 +230,8 @@ nmap cinb cib
 
 " tabs
 nnoremap th :tabfirst<CR>
-nnoremap tj :tabnext<CR>
-nnoremap tk :tabprev<CR>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
 nnoremap tl :tablast<CR>
 nnoremap tn :tabnew<CR>
 
