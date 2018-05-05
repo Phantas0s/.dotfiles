@@ -359,11 +359,9 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 ## Manual management of external displays
-set $mode_display Pantaflix double screen(p) default MAC(d)
+set $mode_display Default (d)
 
 mode "$mode_display" {
-    bindsym p exec --no-startup-id xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1280x800 --pos 0x808 --rotate normal --output DP1 --mode 1920x1080 --pos 1280x0 --rotate left --output HDMI2 --off --output HDMI1 --off --output DP2 --off
-
     bindsym d exec --no-startup-id xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1280x800 --pos 0x0 --rotate normal --output DP1 --off --output HDMI2 --off --output HDMI1 --off --output DP2 --off
 
     # back to normal: Enter or Escape
