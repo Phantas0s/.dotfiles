@@ -8,6 +8,6 @@ xdebug*
 docker-compose.override.yml
 
 # Automatic testing
-.testomatic*
+.testomatic.yml
 autotest.rb
 
