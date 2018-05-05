@@ -85,7 +85,7 @@ alias ga='git add '
 alias gp='git push '
 alias gpo='git push origin'
 # Display remote branch
-alias gpo='git branch -r'
+alias gr='git branch -r'
 alias gplo='git pull origin'
 alias gb='git branch '
 alias gc='git commit'
