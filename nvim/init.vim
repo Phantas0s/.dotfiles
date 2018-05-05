@@ -198,9 +198,6 @@ syntax on
 let mapleader = "\\"
 map <SPACE> <leader>
 
-" Go to next line and quit insert mode
-nmap <leader>o o<esc>
-
 " un-highlight when esc is pressed
 map <silent><esc> :noh<cr>
 

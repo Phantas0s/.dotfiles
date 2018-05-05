@@ -43,4 +43,3 @@ autocmd Filetype go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
 
 autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
-
