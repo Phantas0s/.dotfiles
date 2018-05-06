@@ -15,9 +15,6 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # PATH for composer global install
 PATH="$HOME/composer/vendor/bin:$PATH"
 
-# Personnal scripts path
-PATH="$HOME/scripts:$PATH"
-
 # PATH for Go
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
