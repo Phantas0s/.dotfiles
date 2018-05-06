@@ -176,12 +176,8 @@ source ~/nvim/projects.nvimrc
 " close the buffer
 nmap <leader>db :Bdelete!<cr>
 
-" Startify config
-let g:startify_list_order = ['bookmarks']
-
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
-
 
 "------------------
 " general binding
@@ -208,9 +204,6 @@ map <leader>' ysiw'<cr>
 " Act like D and C
 nnoremap Y y$
 
-" Enables you to save files with :w!! by using sudo if you forgot to open it as root
-cmap w!! %!sudo tee > /dev/null %" display tabs, trailing spaces
-
 " indent without kill the selection in vmode
 vmap < <gv
 vmap > >gv
@@ -223,6 +216,11 @@ nnoremap <leader>[ :%s/<c-r><c-w>/<c-r><c-w>/g<left><left>
 
 " Change in next bracket
 nmap cinb cib
+
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :<C-u>call general#VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 " tabs
 nnoremap th :tabfirst<CR>

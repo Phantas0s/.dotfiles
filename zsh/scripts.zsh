@@ -3,7 +3,7 @@
 
 # screenshot <area> win|scr|area - Compress a folder in tar.gz
 # imgsize <img> - display width / height of an image
-# imgresize <source> <width> - create a new image <source>_<width> and resize it
+# imgresize <source> <width> - resize and create a new image <source>_<width> following aspect ratio
 
 # sshcreate <name> - create a new ssh at ~/.ssh/<name> with chmod 700
 
