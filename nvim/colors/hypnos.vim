@@ -49,10 +49,10 @@ hi Operator guifg=#a8a8a8 guibg=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "---------"
 
 " VDebug plugin
-hi DbgCurrentLine guifg=#ffffff guibg=#ff0000 ctermfg=white ctermbg=9
-hi DbgCurrentSign guifg=#ff0000 guibg=#303030 ctermfg=9 ctermbg=236
+hi DbgCurrentLine guifg=#ffffff guibg=#d75f5f ctermfg=white ctermbg=9
+hi DbgCurrentSign guifg=#d75f5f guibg=#303030 ctermfg=9 ctermbg=236
 hi DbgBreakptLine guifg=#ffffff guibg=#303030 ctermfg=white ctermbg=236
-hi DbgBreakptSign guifg=#ff0000 guibg=#303030 ctermfg=9 ctermbg=236
+hi DbgBreakptSign guifg=#d75f5f guibg=#303030 ctermfg=9 ctermbg=236
 
 " Signify plugin
 hi DiffDelete guifg=#870000 guibg=#303030 ctermfg=88 ctermbg=236 cterm=NONE
