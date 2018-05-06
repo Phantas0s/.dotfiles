@@ -77,11 +77,6 @@ rm -rf $HOME/.testomatic &>/dev/null
 echo -e "${green}...done!"
 
 echo -e ""
-echo -e "${red}Delete the tmuxinator config from the cloud..."
-rm -rf $HOME/.tmuxinator &>/dev/null
-echo -e "${green}...done!"
-
-echo -e ""
 echo -e "${red}Delete the Xmodmap config..."
 rm $HOME/.Xmodmap &>/dev/null
 echo -e "${green}...done!"

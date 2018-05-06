@@ -4,25 +4,17 @@
 # STARTUP FOR BASH / ZSH #
 ##########################
 
-# tmuxinator
-# https://github.com/tmuxinator/tmuxinator
-
 if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ] 
   then
+    # bash sourcing
     SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-    source $SCRIPT_PATH/bash/tmuxinator.bash
 else
+    # zsh sourcing
     SCRIPT_PATH="${0:A:h}"
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-    source $SCRIPT_PATH/zsh/tmuxinator.zsh
+    source $SCRIPT_PATH/zsh/functions.zsh
 fi
 
 # source startup scripts
 source $SCRIPT_PATH/aliases/aliases
-
-if [[ -f $HOME/.perso_aliases ]]
-then
-    source $HOME/.perso_aliases
-fi
-
 source $SCRIPT_PATH/env
