@@ -3,7 +3,9 @@
 
 # screenshot <area> win|scr|area - Compress a folder in tar.gz
 # imgsize <img> - display width / height of an image
-# imgresize <source> <width> - resize and create a new image <source>_<width> following aspect ratio
+# imgresize <source> <width> - resize and create a new image <source>_<width> following aspect ratio    
+
+# gtD <name> - Delete a tag locally AND on the remote origin
 
 # sshcreate <name> - create a new ssh at ~/.ssh/<name> with chmod 700
 
@@ -72,6 +74,11 @@ imgsize() {
 
 imgresize() {
     convert $1 -resize $2 $1_$2
+}
+
+gtD() {
+    git tag -d $1
+    git push origin :refs/tags/$1
 }
 
 sshcreate() {
