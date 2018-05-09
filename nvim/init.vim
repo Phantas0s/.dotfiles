@@ -153,6 +153,9 @@ Plug 'jez/vim-superman'
 " CSV plugin
 Plug 'chrisbra/csv.vim'
 
+" Table plugin
+Plug 'dhruvasagar/vim-table-mode'
+
 call plug#end()
 
 "----------------
