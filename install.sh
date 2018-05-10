@@ -47,6 +47,7 @@ fi
 . $HOME/$ROOT_CONFIG/install/install-prezto.sh
 . $HOME/$ROOT_CONFIG/install/install-xorg-server.sh
 
+command -v "ssh-keygen" >/dev/null && command -v "git" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-projects.sh
 command -v "lxappearance" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-theme.sh
 command -v "i3" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-i3.sh
 command -v "urxvt" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-urxvt.sh
@@ -60,7 +61,6 @@ command -v "composer" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-compose
 command -v "mycli" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-mycli.sh
 command -v "ranger" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-ranger.sh
 command -v "go" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-go.sh
-command -v "ssh-keygen" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-projects.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
