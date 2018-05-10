@@ -3,7 +3,7 @@
 
 # screenshot <area> win|scr|area - Compress a folder in tar.gz
 # imgsize <img> - display width / height of an image
-# imgresize <source> <width> - resize and create a new image <source>_<width> following aspect ratio    
+# imgresize <source> <width> - resize and create a new image <source>_<width> following aspect ratio
 
 # gtD <name> - Delete a tag locally AND on the remote origin
 

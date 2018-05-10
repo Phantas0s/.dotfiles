@@ -62,8 +62,7 @@ alias rm='rm -i'
 alias la='ls -alh'
 
 # wifi netctl
-alias wifi='sudo wifi-menu'
-alias wifi-panta='sudo netctl start wlp3s0-PantaWiFi'
+alias wifi='sudo wifi-menu -o'
 alias wifi-home='sudo netctl start wlp3s0home'
 
 # xev (key name)

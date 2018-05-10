@@ -2,7 +2,7 @@
 # The key have to be created manually of course...
 # Only Phantas0s have access to the repo via SSH :D
 
-if [ ! -f $HOME/.ssh/github ];
+if [ -f $HOME/.ssh/github ];
     then
         mkdir $GOPATH/src/github.com/Phantas0s > /dev/null
 
