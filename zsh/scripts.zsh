@@ -73,7 +73,10 @@ imgsize() {
 }
 
 imgresize() {
-    convert $1 -resize $2 $1_$2
+    filename=${1%\.*}
+    extension="${1##*.}"
+    separator="_"
+    convert $1 -resize $2 "$filename$separator$2.$extension"
 }
 
 gtD() {
