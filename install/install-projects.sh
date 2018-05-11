@@ -37,4 +37,12 @@ if [ -f $HOME/.ssh/github ];
             git clone git@github.com:Phantas0s/go-in-practice.git
             cd -
         fi
+
+        if [ ! -d $HOME/workspace/ArchInstall ];
+        then
+            echo -e "Installing the project ArchInstall in workspace"
+            cd $HOME/workspace
+            git clone git@github.com:Phantas0s/ArchInstall.git
+            cd -
+        fi
 fi
