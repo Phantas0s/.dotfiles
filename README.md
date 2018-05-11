@@ -1,6 +1,6 @@
 #  Doftiles
 
-![Phantas0s rice](/screenshot-20180510-131128.png "Phantas0s rice")
+![Phantas0s rice](screen.png "Phantas0s rice")
 
 ## What's in there?
 
