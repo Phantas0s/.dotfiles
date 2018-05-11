@@ -76,7 +76,7 @@ imgresize() {
     filename=${1%\.*}
     extension="${1##*.}"
     separator="_"
-    convert $1 -resize $2 "$filename$separator$2.$extension"
+    convert $1 -quality 100 -resize $2 "$filename$separator$2.$extension"
 }
 
 gtD() {

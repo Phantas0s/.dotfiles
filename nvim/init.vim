@@ -21,18 +21,22 @@ Plug 'henrik/vim-indexed-search'
 
 " syntax highlighting for tmux.conf + other cool options
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
+
 " seemless navigation between vim windows / tmux pane
 Plug 'christoomey/vim-tmux-navigator'
 
 " wrapper for git and display git diff in the left gutter
 Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' 
+
 " Display commits for project / file
 Plug 'junegunn/gv.vim'
 
 " surrounding with whatever you want (paranthesis, quotes...)
 Plug 'tpope/vim-surround'
+
 " easily search, substitute and abbreviate multiple version of words
 Plug 'tpope/vim-abolish'
+
 " the . command can repeat whatever you want!
 " http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-repeat'
