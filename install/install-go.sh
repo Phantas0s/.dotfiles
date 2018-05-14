@@ -16,6 +16,14 @@ if [ ! -f $GOPATH/bin/guru ];
         cd -
 fi
 
+if [ ! -f $GOPATH/bin/gocode ];
+    then
+        echo -e "Installing gocode for Go"
+        cd $GOPATH/bin
+        go get -u github.com/nsf/gocode
+        cd -
+fi
+
 if [ ! -f $GOPATH/bin/zb ];
     then
         echo -e "Installing zb for Go"
