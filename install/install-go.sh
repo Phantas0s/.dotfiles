@@ -33,4 +33,12 @@ if [ ! -f $GOPATH/bin/zb ];
         cd -
 fi
 
+if [ ! -f $GOPATH/bin/gotags ];
+    then
+        echo -e "Installing gotags for Go"
+        cd $GOPATH/bin
+        go get -u github.com/jstemmer/gotags
+        cd -
+fi
+
 echo -e "${green} ...done"
