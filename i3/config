@@ -359,10 +359,11 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 ## Manual management of external displays
-set $mode_display Config monitor resolution - Default loopline(1600x900) (d)
+set $mode_display Config monitor resolution - Default loopline(1600x900) (d) Loopline triple monitor (t)
 
 mode "$mode_display" {
     bindsym d exec --no-startup-id xrandr --output VGA-1 --off --output eDP-1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-2 --off --output HDMI-1 --off --output DP-2 --off --output DP-1 --off, mode "default"
+    bindsym t exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output eDP-1 --primary --mode 1920x1080 --pos 3840x120 --rotate normal --output HDMI-2 --off --output HDMI-1 --mode 1920x1200 --pos 0x0 --rotate normal --output DP-2 --off --output DP-1 --off, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
