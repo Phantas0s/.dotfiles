@@ -12,9 +12,9 @@ then
     read JRNL_DEFAULT_PATH
 
     echo "JRNL_DEFAULT_PATH=$JRNL_DEFAULT_PATH" >> $HOME/$ROOT_CONFIG/install_config
-    sed -i -e "s~<djrnl>~${JRNL_DEFAULT_PATH}~g" $HOME/$ROOT_CONFIG/jrnl/jrnl
 fi
 
+sed -i -e "s~<djrnl>~${JRNL_DEFAULT_PATH}~g" $HOME/$ROOT_CONFIG/jrnl/jrnl
 
 echo 'Create symlink for jrnl config...'
 

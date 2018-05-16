@@ -41,4 +41,12 @@ if [ ! -f $GOPATH/bin/gotags ];
         cd -
 fi
 
+if [ ! -f $GOPATH/bin/godef ];
+    then
+        echo -e "Installing godef for Go"
+        cd $GOPATH/bin
+        go get -u github.com/rogpeppe/godef
+        cd -
+fi
+
 echo -e "${green} ...done"
