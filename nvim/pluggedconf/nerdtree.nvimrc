@@ -23,7 +23,15 @@ let g:NERDTreeChDirMode = 2
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeShowBookmarks = 0
 let g:NERDTreeCascadeOpenSingleChildDir = 1
+let g:NERDTreeQuitOnOpen = 1
 
 " change the arrows
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+
+" remapping - see nerdtree.txt and search for "NERDTreeMappings"
+let NERDTreeMapOpenSplit = 'b'
+let NERDTreeMapPreviewSplit='gb'
+
+let NERDTreeMapOpenVSplit = 'v'
+let NERDTreeMapPreviewVSplit='gv'
