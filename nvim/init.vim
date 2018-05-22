@@ -107,6 +107,8 @@ Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'd
 " Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 Plug 'leafgarland/typescript-vim'
+" For react
+Plug 'mxw/vim-jsx'
 
 " Syntax highlighting for vue js framework
 Plug 'posva/vim-vue'
