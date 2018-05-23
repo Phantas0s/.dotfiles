@@ -378,3 +378,6 @@ set inccommand=nosplit
 " Better ex autocompletion
 set wildmenu
 set wildmode=list:longest,full
+
+" enable the mouse
+set mouse=a

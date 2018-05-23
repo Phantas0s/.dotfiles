@@ -35,3 +35,4 @@ let NERDTreeMapPreviewSplit='gb'
 
 let NERDTreeMapOpenVSplit = 'v'
 let NERDTreeMapPreviewVSplit='gv'
+let g:NERDTreeMouseMode=3
