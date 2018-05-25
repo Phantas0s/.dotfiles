@@ -2,6 +2,9 @@
 ## LINUX APP ##
 ###############
 
+# source aliases
+alias salias="source ~/.dotfiles/aliases/aliases"
+
 # run ssh-agent with x session
 alias startx='ssh-agent startx'
 
@@ -68,6 +71,9 @@ alias wifi-home='sudo netctl start wlp3s0home'
 # xev (key name)
 # alias xev='xev | awk -F\'[ )]+\' \'/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
+# go tools
+alias gob="go build"
+
 # vim && neovim
 # clean the vim swap file
 alias nvimc='rm -I ~/nvim/swap/*'
@@ -123,7 +129,7 @@ alias tarc='tar cvzf'
 # docker
 # display the information about a container
 alias docki="docker inspect"
-# go inside a container
+# Going inside a container
 alias docke='docker exec -t -i'
 # delete every containers / images
 alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'

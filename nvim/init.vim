@@ -109,6 +109,7 @@ Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 Plug 'leafgarland/typescript-vim'
 " For react
 Plug 'mxw/vim-jsx'
+Plug 'sebdah/vim-delve'
 
 " Syntax highlighting for vue js framework
 Plug 'posva/vim-vue'
