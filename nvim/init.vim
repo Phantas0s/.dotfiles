@@ -381,4 +381,4 @@ set wildmenu
 set wildmode=list:longest,full
 
 " enable the mouse
-set mouse=a
+" set mouse=a
