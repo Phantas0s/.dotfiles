@@ -115,7 +115,7 @@ Plug 'sebdah/vim-delve'
 Plug 'posva/vim-vue'
 
 " debugger
-Plug 'joonty/vdebug'
+" Plug 'joonty/vdebug'
 
 " outliner
 Plug 'majutsushi/tagbar'

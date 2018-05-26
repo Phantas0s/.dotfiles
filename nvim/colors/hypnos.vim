@@ -13,6 +13,8 @@ hi Visual guifg=#d75f5f guibg=#121212 ctermfg=red ctermbg=236 cterm=bold
 hi Statement guifg=#87afaf guibg=NONE ctermfg=blue ctermbg=NONE cterm=NONE
 hi Delimiter guifg=#afafd7 guibg=NONE guisp=NONE gui=NONE ctermfg=magenta ctermbg=NONE cterm=NONE
 
+hi WarningMsg guifg=#d75f5f guibg=#303030 ctermfg=9 ctermbg=236
+
 " tabs
 hi TabLineSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=bold ctermfg=red ctermbg=red cterm=bold
 hi TabLineFill guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=red ctermbg=red cterm=bold
@@ -99,7 +101,6 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi PMenuSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
 "hi SpellRare guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 "hi Character guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
-"hi WarningMsg guifg=#A1A6A8 guibg=#912C00 guisp=#912C00 gui=NONE ctermfg=248 ctermbg=88 cterm=NONE
 "hi VisualNOS guifg=#192224 guibg=#F9F9FF guisp=#F9F9FF gui=underline ctermfg=235 ctermbg=189 cterm=underline
 "hi ModeMsg guifg=#F9F9F9 guibg=#192224 guisp=#192224 gui=bold ctermfg=white ctermbg=235 cterm=bold
 "hi Define guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
