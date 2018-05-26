@@ -175,8 +175,16 @@ for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 
-" disable default mapping for vim-markdown
-let g:markdown_enable_mappings = 0
+if exists("g:did_load_filetypes")
+  filetype off
+  filetype plugin indent off
+endif
+set rtp+=~/nvim/godoctor.vim
+syntax on
+
+" Impossible to put it in vim-delve - to debug
+let g:delve_breakpoint_sign = ""
+let g:delve_tracepoint_sign = ""
 
 " Autocompletion with tab
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -193,13 +201,6 @@ autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 "------------------
 " general binding
 "------------------
-if exists("g:did_load_filetypes")
-  filetype off
-  filetype plugin indent off
-endif
-set rtp+=~/nvim/godoctor.vim
-filetype plugin indent on
-syntax on
 
 " Weird hack for NERDTree to work
 let mapleader = "\\"
