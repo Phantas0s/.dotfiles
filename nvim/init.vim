@@ -180,7 +180,8 @@ if exists("g:did_load_filetypes")
   filetype plugin indent off
 endif
 set rtp+=~/nvim/godoctor.vim
-syntax on
+filetype on
+filetype plugin indent on
 
 " Impossible to put it in vim-delve - to debug
 let g:delve_breakpoint_sign = ""
@@ -201,6 +202,7 @@ autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 "------------------
 " general binding
 "------------------
+syntax on
 
 " Weird hack for NERDTree to work
 let mapleader = "\\"
