@@ -9,6 +9,10 @@
 
 # sshcreate <name> - create a new ssh at ~/.ssh/<name> with chmod 700
 
+# dback <disk source> <disk output>- Disk Backup. Use dd to copy an entire disk to another. Include:
+# - Dialog Message "are you sure?"
+# - Dialog Progress bar
+
 # matrix - Display the MATRIX
 
 extract() {
@@ -92,6 +96,26 @@ sshcreate() {
     fi
 }
 
+dback () {
+    if [ ! -z $1 ] && [ ! -z $2 ];
+    then
+        if [ ! -z $3 ];
+        then
+            BS=$3
+        else
+            BS="512k"
+        fi
+
+        dialog --defaultno --title "Are you sure?" --yesno "This will copy $1 to $2 (bitsize: $BS). Everything on $2 will be deleted.\n\n
+              Are you sure?"  15 60 || exit
+
+        (sudo pv -n $1 | sudo dd of=$2 bs=$BS conv=notrunc,noerror) 2>&1 | dialog --gauge "Backup from disk $1 to disk $2... please wait" 10 70 0
+    else
+        echo "You need to provide an input disk as first argument (i.e /dev/sda) and an output disk as second argument (i.e /dev/sdb)"
+    fi
+
+}
+
 matrix () {
     lines=$(tput lines)
     cols=$(tput cols)
@@ -123,24 +147,4 @@ matrix () {
     echo $lines $cols $(( $RANDOM % $cols)) $(( $RANDOM % 72 ))
     sleep 0.05
     done | awk "$awkscript"
-}
-
-dback () {
-    if [ ! -z $1 ] && [ ! -z $2 ];
-    then
-        if [ ! -z $3 ];
-        then
-            BS=$3
-        else
-            BS="512k"
-        fi
-
-        dialog --defaultno --title "Are you sure?" --yesno "This will copy $1 to $2 (bitsize: $BS). Everything on $2 will be deleted.\n\n
-              Are you sure?"  15 60 || exit
-
-        (sudo pv -n $1 | sudo dd of=$2 bs=$BS conv=notrunc,noerror) 2>&1 | dialog --gauge "Backup from disk $1 to disk $2... please wait" 10 70 0
-    else
-        echo "You need to provide an input disk as first argument (i.e /dev/sda) and an output disk as second argument (i.e /dev/sdb)"
-    fi
-
 }
