@@ -20,7 +20,7 @@ let s:green = [ '#87AF87', 108 ]
 let s:white = [ '#ffffff', 15 ]
 let s:red = [ '#d44042', 167 ]
 
-let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}, 'terminal':{}}
 
 " Normal mode
 let s:p.normal.left = [ [ s:black, s:blue ], [ s:white, s:lightblack ] ]
@@ -31,8 +31,9 @@ let s:p.inactive.right = [ [ s:fg, s:black ], [ s:fg, s:black ] ]
 let s:p.inactive.left = copy(s:p.inactive.right)
 
 let s:p.insert.left = [ [ s:black, s:red ], [ s:white, s:lightblack ] ]
-let s:p.replace.left = [ [ s:black, s:magenta ], [ s:white, s:lightblack ] ]
+let s:p.replace.left = [ [ s:black, s:green ], [ s:white, s:lightblack ] ]
 let s:p.visual.left = [ [ s:black, s:yellow], [ s:white, s:lightblack ] ]
+let s:p.terminal.left = [ [ s:black, s:magenta], [ s:white, s:lightblack ] ]
 
 let s:p.inactive.middle = [ [ s:lightblack, s:black ] ]
 

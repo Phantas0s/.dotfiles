@@ -10,7 +10,7 @@ augroup vimrc
   autocmd!
 augroup END
 
-"----------------
+"-----------------
 " install plugin
 "-----------------
 
@@ -82,6 +82,13 @@ Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 
+" php refactoring options
+Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+" Plug 'roxma/ncm-phpactor',  {'for': 'php'}
+Plug 'kristijanhusak/deoplete-phpactor'
+Plug '2072/php-indenting-for-vim', {'for': 'php'}
+
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
@@ -89,13 +96,8 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'godoctor/godoctor.vim', {'for': 'go'}
 Plug 'zchee/deoplete-go', {'for': 'go'}
+Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 
-" refactoring options
-Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-" Plug 'roxma/ncm-phpactor',  {'for': 'php'}
-Plug 'kristijanhusak/deoplete-phpactor'
-Plug '2072/php-indenting-for-vim', {'for': 'php'}
 
 " twig
 Plug 'lumiliet/vim-twig', {'for': 'twig'}
@@ -109,7 +111,6 @@ Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 Plug 'leafgarland/typescript-vim'
 " For react
 Plug 'mxw/vim-jsx'
-Plug 'sebdah/vim-delve'
 
 " Syntax highlighting for vue js framework
 Plug 'posva/vim-vue'
@@ -343,9 +344,9 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
 " when at 3 spaces, and I hit > ... go to 4, not 7
 set shiftround
-
 
 " number of undo saved in memory
 set undolevels=10000
@@ -374,12 +375,11 @@ set autowrite
 
 " Fold related
 set foldlevelstart=0 " Start with all folds closed
-" set foldcolumn=1 " Set fold column
-"
+
 " Set foldtext
 set foldtext=general#FoldText()
 
-" Show live the substitution
+" Show the substitution LIVE
 set inccommand=nosplit
 
 " Better ex autocompletion
