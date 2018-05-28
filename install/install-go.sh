@@ -57,4 +57,12 @@ if [ ! -f $GOPATH/bin/dlv ];
         cd -
 fi
 
+if [ ! -f $GOPATH/bin/godoctor ];
+    then
+        echo -e "Installing delve for Go"
+        cd $GOPATH/bin
+        go get -u github.com/godoctor/godoctor
+        cd -
+fi
+
 echo -e "${green} ...done"
