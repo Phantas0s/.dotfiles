@@ -81,6 +81,7 @@ imgresize() {
     extension="${1##*.}"
     separator="_"
     convert $1 -quality 100 -resize $2 "$filename$separator$2.$extension"
+    return "$filename$separator$2.$extension"
 }
 
 gtD() {
@@ -114,6 +115,32 @@ dback () {
         echo "You need to provide an input disk as first argument (i.e /dev/sda) and an output disk as second argument (i.e /dev/sdb)"
     fi
 
+}
+
+blimg() {
+    if [ ! -z $1 ] && [ ! -z $2 ] && [ ! -z $3 ];
+    then
+        CYEAR=$(date +'%Y')
+        BASEDIR="${HOME}/workspace/webtechno/static"
+        #Basedir current year
+        BASEDIRY="${HOME}/workspace/webtechno/static/${CYEAR}"
+
+        if [ ! -d $BASEDIRY ]; 
+        then
+            mkdir $BASEDIRY
+        fi
+
+        #basedir current article
+        BASEDIRP="${BASEDIRY}/${2}"
+
+        if [ ! -d $BASEDIRP ]; 
+        then
+            mkdir $BASEDIRP
+        fi
+
+        IMGRESIZED=imgresize "${1} 780"
+        echo $IMGRESIZED
+    fi
 }
 
 matrix () {
