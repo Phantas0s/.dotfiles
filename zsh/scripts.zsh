@@ -61,7 +61,7 @@ screenshot () {
 
     if [[ $# = 0 ]]; then
         # Display a warning if no area defined
-        echo "No screenshot area has been specified. Screenshot not taken."
+        echo "No screenshot area has been specified. Please choose a command: win, scr, area. Screenshot not taken."
         echo "${DATE}: No screenshot area has been defined. Screenshot not taken." >> "${LOG}"
     else
         # Save the screenshot in the directory and edit the log
