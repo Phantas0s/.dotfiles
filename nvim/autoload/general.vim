@@ -33,7 +33,15 @@ function! general#Bdeleteonly()
     let list = filter(general#Buflist(), 'v:val != bufname("%")')
     for buffer in list
         exec "bdelete ".buffer
+        call general#DeleteEmptyBuffers()
     endfor
+endfunction
+
+function! general#DeleteEmptyBuffers()
+    let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val) && empty(bufname(v:val)) && bufwinnr(v:val) < 0 && (getbufline(v:val, 1, "$") == [""])')
+    if !empty(buffers)
+        exe 'bd '.join(buffers, ' ')
+    endif
 endfunction
 
 " Simple Zoom / Restore window (like Tmux)

@@ -65,4 +65,12 @@ if [ ! -f $GOPATH/bin/godoctor ];
         cd -
 fi
 
+if [ ! -f $GOPATH/bin/motion ];
+    then
+        echo -e "Installing motion for Go"
+        cd $GOPATH/bin
+        go get -u github.com/fatih/motion
+        cd -
+fi
+
 echo -e "${green} ...done"
