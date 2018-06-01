@@ -1,7 +1,40 @@
 # functions test
 snippet /^test/ "Main function" r
-func Test${1:Method}(t *testing.T) {
+func Test${1:Func}(t *testing.T) {
 	${0:${VISUAL}}
 }
 endsnippet
 
+snippet tt "table-driven tests"
+func Test${1:Func}(t *testing.T) {
+	testCases := []struct {
+		${2:input} ${3:Type}
+		want ${4:Type} 
+	}{
+		{$2: ${5:""}, want: ${6:""}},${0: // comment}
+	}
+	for _, tc := range testCases {
+		if got := $1(tc.$2); got != tc.want {
+			t.Errorf("$1(%s) = %s; want %s", tc.$2, got, tc.want)
+		}
+	}
+}
+endsnippet
+
+snippet tts "table-drive tests using subtests"
+func Test${1:Func}(t *testing.T) {
+	testCases := []struct {
+		${2:input} ${3:Type}
+		want ${4:Type} 
+	}{
+		{$2: ${5:""}, want: ${6:""}},${0: // comment}
+	}
+	for _, tc := range testCases {
+		t.Run(fmt.Sprintf("%q", tc.$2), func(t *testing.T) {
+			if got := $1(tc.$2); got != tc.want {
+				t.Errorf("got %s; want %s", got, tc.want)
+			}
+		})
+	}
+}
+endsnippet
