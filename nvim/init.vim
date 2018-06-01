@@ -286,7 +286,7 @@ imap <right> <nop>
 nnoremap J mzJ`z
 
 " Quit neovim termial
-tnoremap <C-[> <C-\><C-n>
+tnoremap <C-\> <C-\><C-n>
 
 " buffer cleanup - delete every buffer except the one open
 command! Ball :silent call general#Bdeleteonly()
