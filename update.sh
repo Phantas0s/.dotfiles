@@ -10,5 +10,17 @@ for f in *.sh; do
     sh "$f"
 done
 cd -
+echo -e "${green} ...done\n"
 
+#---------------------------------------
+
+echo -e "${blue} Update neovim plugins..."
+# Update all the plugins
+nvim --noplugin +PlugUpdate +qa
+echo -e "${green} ...done\n"
+
+#---------------------------------------
+
+echo -e "${blue} Update tmux plugins..."
+$HOME/.tmux/plugins/tpm/bin/update_plugins all
 echo -e "${green} ...done\n"

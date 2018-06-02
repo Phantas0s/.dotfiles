@@ -86,7 +86,7 @@ Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 " Plug 'roxma/ncm-phpactor',  {'for': 'php'}
-Plug 'kristijanhusak/deoplete-phpactor'
+Plug 'kristijanhusak/deoplete-phpactor',  {'for': 'php'}
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 
 " php doc autocompletion
