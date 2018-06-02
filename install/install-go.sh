@@ -8,69 +8,43 @@ then
 fi
 
 if [ ! -f $GOPATH/bin/guru ];
-    then
-        echo -e "Installing Guru for Go"
-        cd $GOPATH/bin
-        go get golang.org/x/tools/cmd/guru
-        go build golang.org/x/tools/cmd/guru
-        cd -
+then
+    sh ./go/guru.sh
 fi
 
 if [ ! -f $GOPATH/bin/gocode ];
-    then
-        echo -e "Installing gocode for Go"
-        cd $GOPATH/bin
-        go get -u github.com/nsf/gocode
-        cd -
+then
+    sh ./go/gocode.sh
 fi
 
 if [ ! -f $GOPATH/bin/zb ];
-    then
-        echo -e "Installing zb for Go"
-        cd $GOPATH/bin
-        go get jrubin.io/zb
-        go build jrubin.io/zb
-        cd -
+then
+    sh ./go/zb.sh
 fi
 
 if [ ! -f $GOPATH/bin/gotags ];
-    then
-        echo -e "Installing gotags for Go"
-        cd $GOPATH/bin
-        go get -u github.com/jstemmer/gotags
-        cd -
+then
+    sh ./go/gotags.sh
 fi
 
 if [ ! -f $GOPATH/bin/godef ];
-    then
-        echo -e "Installing godef for Go"
-        cd $GOPATH/bin
-        go get -u github.com/rogpeppe/godef
-        cd -
+then
+    sh ./go/godef.sh
 fi
 
 if [ ! -f $GOPATH/bin/dlv ];
-    then
-        echo -e "Installing delve for Go"
-        cd $GOPATH/bin
-        go get -u github.com/derekparker/delve/cmd/dlv
-        cd -
+then
+    sh ./go/dlv.sh
 fi
 
 if [ ! -f $GOPATH/bin/godoctor ];
-    then
-        echo -e "Installing delve for Go"
-        cd $GOPATH/bin
-        go get -u github.com/godoctor/godoctor
-        cd -
+then
+    sh ./go/godoctor.sh
 fi
 
 if [ ! -f $GOPATH/bin/motion ];
-    then
-        echo -e "Installing motion for Go"
-        cd $GOPATH/bin
-        go get -u github.com/fatih/motion
-        cd -
+then
+    sh ./go/motion.sh
 fi
 
 echo -e "${green} ...done"

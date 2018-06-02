@@ -1,3 +1,4 @@
+# updatesys - Update all go binaries installed via the install script + update via aurman if installed or otherwise pacman
 # extract <archive_file> - Extract the archive depending on its type
 # compress <folder> - Compress a folder in tar.gz
 
@@ -14,6 +15,15 @@
 # - Dialog Progress bar
 
 # matrix - Display the MATRIX
+
+updatesys() {
+    sh ~/$ROOT_CONFIG/update.sh
+    if hash aurman 2>/dev/null; then
+        aurman -Syu
+    else
+        sudo pacman -Syu
+    fi
+}
 
 extract() {
   if [ -f $1 ] ; then
@@ -80,8 +90,9 @@ imgresize() {
     filename=${1%\.*}
     extension="${1##*.}"
     separator="_"
-    convert $1 -quality 100 -resize $2 "$filename$separator$2.$extension"
-    return "$filename$separator$2.$extension"
+    finalName="$filename$separator$2.$extension"
+    convert $1 -quality 100 -resize $2 $finalName
+    echo "$finalName"
 }
 
 gtD() {
@@ -131,7 +142,7 @@ blimg() {
         fi
 
         #basedir current article
-        BASEDIRP="${BASEDIRY}/${2}"
+        BASEDIRC="${BASEDIRY}/${2}"
 
         if [ ! -d $BASEDIRP ]; 
         then
@@ -139,7 +150,7 @@ blimg() {
         fi
 
         IMGRESIZED=imgresize "${1} 780"
-        echo $IMGRESIZED
+        echo "$IMGRESIZED"
     fi
 }
 

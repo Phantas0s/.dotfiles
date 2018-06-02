@@ -24,3 +24,9 @@ PATH="$GOBIN:$PATH"
 
 # Override ls colors
 eval "$(dircolors -b ~/.dircolors)"
+
+# Install of global npm packages
+export NPMPATH="$HOME/.node_modules"
+export NPMBIN="$HOME/.node_modules/bin"
+PATH="$NPMBIN:$PATH"
+export npm_config_prefix=~/.node_modules

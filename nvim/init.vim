@@ -98,7 +98,6 @@ Plug 'godoctor/godoctor.vim', {'for': 'go'}
 Plug 'zchee/deoplete-go', {'for': 'go'}
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 
-
 " twig
 Plug 'lumiliet/vim-twig', {'for': 'twig'}
 
@@ -106,7 +105,7 @@ Plug 'lumiliet/vim-twig', {'for': 'twig'}
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
-" Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 Plug 'leafgarland/typescript-vim'
 " For react
