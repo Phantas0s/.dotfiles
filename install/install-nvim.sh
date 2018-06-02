@@ -12,6 +12,12 @@ if [ ! -d $HOME/nvim ]
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+# install vim session folder
+if [ ! -d $HOME/nvim/sessions ]
+  then
+    mkdir $HOME/nvim/sessions
+fi
+
 # install nvim config
 ln -sf $HOME/$ROOT_CONFIG/nvim/init.vim $HOME/nvim/init.vim
 

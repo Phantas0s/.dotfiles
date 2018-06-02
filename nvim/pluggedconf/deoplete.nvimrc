@@ -8,11 +8,12 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 let g:deoplete#file#enable_buffer_path = 1
 
-" Compatibility with phpcomplete
-" let g:deoplete#omni_patterns = {}
-
-" let g:deoplete#sources = {}
-" let g:deoplete#sources.php = ['padawan', 'ultisnips', 'buffer']
+" For js - doesn't work
+" let g:deoplete#omni#functions = {}
+" let g:deoplete#omni#functions.javascript = [
+"   \ 'tern#Complete',
+"   \ 'jspc#omni'
+" \]
 
 " delay for auto complete and refresh
 let g:deoplete#auto_complete_delay= 75

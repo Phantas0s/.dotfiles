@@ -106,16 +106,14 @@ Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
-Plug 'leafgarland/typescript-vim'
+
+" Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
+
 " For react
 Plug 'mxw/vim-jsx'
 
-" Syntax highlighting for vue js framework
+" For Vue
 Plug 'posva/vim-vue'
-
-" debugger
-" Plug 'joonty/vdebug'
 
 " outliner
 Plug 'majutsushi/tagbar'
@@ -293,12 +291,12 @@ command! Ball :silent call general#Bdeleteonly()
 " restore the position of the last cursor when you open a file
 autocmd vimrc BufReadPost * call general#RestorePosition()
 
-" edit vimrc with f5 and source it automatically when saved
+" edit vimrc with f5 and source it with f6
 nmap <silent> <leader><f5> :e $MYVIMRC<CR>
-autocmd vimrc BufWritePost $MYVIMRC nested source $MYVIMRC
+nmap <silent> <leader><f6> :so $MYVIMRC<CR>
 
 " delete trailing space when saving files
-autocmd vimrc BufWrite *.php,*.js,*.vue,*.twig,*.html,*.sh :call general#DeleteTrailingWS()
+autocmd vimrc BufWrite FileType php,javascript,vue,twig,html,sh :call general#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <Leader>z :call general#ZoomToggle()<CR>
@@ -343,6 +341,11 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+" Save session
+exec 'nnoremap <Leader>ss :mksession! ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
+" Reload session
+exec 'nnoremap <Leader>sl :so ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
 
 " when at 3 spaces, and I hit > ... go to 4, not 7
 set shiftround

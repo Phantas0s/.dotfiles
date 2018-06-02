@@ -70,6 +70,10 @@ let g:neomake_php_phpmd_maker = {
         \ 'postprocess': function('SetMessageType'),
  \ }
 
+"-----------------
+" Javascript
+"-----------------
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 "-----------------
 " Golang
@@ -101,7 +105,6 @@ let g:neomake_go_gometalinter_maker = {
 "-----------------
 
 let g:neomake_yaml_enabled_makers = [ 'yamllint' ]
-
 
 "-----------------
 " Typescript

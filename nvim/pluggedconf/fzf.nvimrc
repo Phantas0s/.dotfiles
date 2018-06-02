@@ -3,10 +3,20 @@ augroup fzf
 augroup END
 
 " Key mapping
-nmap <leader>h :History<cr>
-nmap <leader>b :Buffers<cr>
 
-nmap <leader>f :Files<cr>
+" History of file opened
+nnoremap <leader>h :History<cr>
+
+" Buffers opens
+nnoremap <leader>b :Buffers<cr>
+
+" Files recursively from pwd
+nnoremap <leader>f :Files<cr>
+
+" Ex commands
+nnoremap <leader>c :Commands<cr>
+" Ex command history. <C-e> to modify the command
+nnoremap <leader>: :History:<cr>
 
 nnoremap <leader>a :Rgi<space>
 nnoremap <leader>A :exec "Rgi ".expand("<cword>")<cr>
