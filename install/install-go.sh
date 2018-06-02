@@ -47,4 +47,4 @@ then
     sh ./go/motion.sh
 fi
 
-echo -e "${green} ...done"
+echo -e "${green} ...done\n"

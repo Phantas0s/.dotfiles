@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'Installing git config... \n'
+echo 'Installing git config...'
 
 rm $HOME/$ROOT_CONFIG/git/gitconfig >/dev/null
 cp $HOME/$ROOT_CONFIG/git/gitconfig_template $HOME/$ROOT_CONFIG/git/gitconfig
