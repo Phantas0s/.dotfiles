@@ -75,6 +75,7 @@ alias wifi-home='sudo netctl start wlp3s0home'
 alias gob="go build"
 # delete imported source / binaries (go remove)
 alias gor="go clean -i" #need repository path
+alias gta="go test ./..."
 
 # vim && neovim
 # clean the vim swap file
