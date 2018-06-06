@@ -92,11 +92,13 @@ Plug '2072/php-indenting-for-vim', {'for': 'php'}
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
-" go development
-Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'godoctor/godoctor.vim', {'for': 'go'}
-Plug 'zchee/deoplete-go', {'for': 'go'}
+" golang development
+Plug 'fatih/vim-go', {'for': 'go'} " general plugin
+Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
+Plug 'zchee/deoplete-go', {'for': 'go'} " autocompletion
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
+Plug 'buoto/gotests-vim', {'for': 'go'}
+
 
 " twig
 Plug 'lumiliet/vim-twig', {'for': 'twig'}

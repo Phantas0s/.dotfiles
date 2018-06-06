@@ -9,17 +9,18 @@ snippet tt "table-driven tests"
 func Test${1:Func}(t *testing.T) {
 	testCases := []struct {
 		name string
-		${2:} ${3:}
+		${2:} ${3:} 
+		result ${4:} 
 	}{
 		{
-			name: "${4:Happy case}",
+			name: "${5:Happy case}",
 		},
 	}
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			if tc.2 != thing {
-				t.Errorf("Expected %s, actual %s", tc.want)
+			if tc.{4} != tc.${3} {
+				t.Errorf("Expected %s, actual %s", tc.${4}, tc.${3})
 			}
 		})
 	}
