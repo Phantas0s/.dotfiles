@@ -71,6 +71,7 @@ Plug 'honza/vim-snippets'
 Plug 'gabrielelana/vim-markdown' " markdown plugin
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
+Plug 'Ron89/thesaurus_query.vim' 
 
 " Autocomplete system
 " Plug 'roxma/nvim-completion-manager'
@@ -296,7 +297,7 @@ nmap <silent> <leader><f5> :e $MYVIMRC<CR>
 nmap <silent> <leader><f6> :so $MYVIMRC<CR>
 
 " delete trailing space when saving files
-autocmd vimrc BufWrite FileType php,javascript,vue,twig,html,sh :call general#DeleteTrailingWS()
+autocmd vimrc BufWrite *.php,*.js,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml :call general#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <Leader>z :call general#ZoomToggle()<CR>
