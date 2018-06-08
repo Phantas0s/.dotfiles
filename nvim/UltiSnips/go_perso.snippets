@@ -8,33 +8,45 @@ endsnippet
 snippet tt "table-driven tests"
 func Test${1:Func}(t *testing.T) {
 	testCases := []struct {
-		${2:input} ${3:Type}
-		want ${4:Type} 
+		name string
+		${2:} ${3:} 
+		result ${4:} 
 	}{
-		{$2: ${5:""}, want: ${6:""}},${0: // comment}
+		{
+			name: "${5:Happy case}",
+		},
 	}
-	for _, tc := range testCases {
-		if got := $1(tc.$2); got != tc.want {
-			t.Errorf("$1(%s) = %s; want %s", tc.$2, got, tc.want)
-		}
-	}
-}
-endsnippet
 
-snippet tts "table-drive tests using subtests"
-func Test${1:Func}(t *testing.T) {
-	testCases := []struct {
-		${2:input} ${3:Type}
-		want ${4:Type} 
-	}{
-		{$2: ${5:""}, want: ${6:""}},${0: // comment}
-	}
 	for _, tc := range testCases {
-		t.Run(fmt.Sprintf("%q", tc.$2), func(t *testing.T) {
-			if got := $1(tc.$2); got != tc.want {
-				t.Errorf("got %s; want %s", got, tc.want)
+		t.Run(tc.name, func(t *testing.T) {
+			if tc.{4} != tc.${3} {
+				t.Errorf("Expected %s, actual %s", tc.${4}, tc.${3})
 			}
 		})
 	}
 }
 endsnippet
+
+snippet err "Basic error handling" b
+if err != nil {
+	${1}
+}
+endsnippet
+
+snippet errw "Basic error handling with wrapping" b
+if err != nil {
+	error.wrapf(err, "${1}")
+}
+endsnippet
+
+snippet errw "Gin gonic abort with error" b
+if err != nil {
+	error.wrapf(err, "${1}")
+}
+endsnippet
+
+snippet cabort "Basic abort with error from Gin Context" b
+c.AbortWithError(http.StatusInternalServerError, ${1})
+return
+endsnippet
+
