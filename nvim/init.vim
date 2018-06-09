@@ -74,19 +74,24 @@ Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 Plug 'Ron89/thesaurus_query.vim' 
 
 " Autocomplete system
-" Plug 'roxma/nvim-completion-manager'
 
 " php autocompletion engine and tools
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'kristijanhusak/deoplete-phpactor',  {'for': 'php'}
+" Plug 'zchee/deoplete-go', {'for': 'go'} " autocompletion
+" Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
+
+Plug 'roxma/ncm-phpactor',  {'for': 'php'}
+Plug 'roxma/nvim-completion-manager'
+Plug 'roxma/nvim-cm-tern'
+
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 
 " php refactoring options
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-" Plug 'roxma/ncm-phpactor',  {'for': 'php'}
-Plug 'kristijanhusak/deoplete-phpactor',  {'for': 'php'}
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 
 " php doc autocompletion
@@ -95,7 +100,6 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 " golang development
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
-Plug 'zchee/deoplete-go', {'for': 'go'} " autocompletion
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 Plug 'buoto/gotests-vim', {'for': 'go'}
 
@@ -107,7 +111,6 @@ Plug 'lumiliet/vim-twig', {'for': 'twig'}
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
 " Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
@@ -188,7 +191,8 @@ let g:delve_breakpoint_sign = ""
 let g:delve_tracepoint_sign = ""
 
 " Autocompletion with tab
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " project config - is not on my git repository
 source ~/nvim/projects.nvimrc
@@ -353,7 +357,8 @@ exec 'nnoremap <Leader>sl :so ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
 set shiftround
 
 " number of undo saved in memory
-set undolevels=10000
+set undolevels=10000 " How many undos
+set undoreload=10000 " number of lines to save for undo
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
