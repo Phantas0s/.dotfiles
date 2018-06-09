@@ -83,7 +83,7 @@ Plug 'Ron89/thesaurus_query.vim'
 
 Plug 'roxma/ncm-phpactor',  {'for': 'php'}
 Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/nvim-cm-tern'
+Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
