@@ -1,6 +1,9 @@
 " This use a global install of PHPActor and not the Vim plugin for even more
 " configuration possibilities
 
+" namespace automatic insert
+nnoremap <leader>u :call phpactor#UseAdd()<cr>
+
 nnoremap <leader>rmc :call phpactor#MoveFile()<cr>
 nnoremap <leader>rcc :call phpactor#CopyFile()<cr>
 

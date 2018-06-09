@@ -80,7 +80,6 @@ Plug 'Ron89/thesaurus_query.vim'
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
-Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 
 " php refactoring options
