@@ -78,27 +78,55 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 "-----------------
 " Golang
 "-----------------
+" let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+
+" let g:neomake_go_gometalinter_maker = {
+"   \ 'exe': 'zb',
+"   \ 'args': [
+"   \   'lint',
+"   \   '--exclude=unexported',
+"   \   '--fast',
+"   \ ],
+"   \ 'cwd': '%:h',
+"   \ 'append_file': 0,
+"   \ 'errorformat':
+"   \   '%E%f:%l:%c:%trror: %m,' .
+"   \   '%W%f:%l:%c:%tarning: %m,' .
+"   \   '%E%f:%l::%trror: %m,' .
+"   \   '%W%f:%l::%tarning: %m'
+" \ }
+
+"   let g:go_fmt_options = {
+"     \ 'gofmt': '-s',
+" \ }
+
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-
 let g:neomake_go_gometalinter_maker = {
-  \ 'exe': 'zb',
-  \ 'args': [
-  \   'lint',
-  \   '--exclude=unexported',
-  \   '--fast',
-  \ ],
-  \ 'cwd': '%:h',
-  \ 'append_file': 0,
-  \ 'errorformat':
-  \   '%E%f:%l:%c:%trror: %m,' .
-  \   '%W%f:%l:%c:%tarning: %m,' .
-  \   '%E%f:%l::%trror: %m,' .
-  \   '%W%f:%l::%tarning: %m'
-\ }
-
-  let g:go_fmt_options = {
-    \ 'gofmt': '-s',
-\ }
+        \ 'args': [
+          \ '--disable-all',
+          \ '--enable=gas',
+          \ '--enable=goconst',
+          \ '--enable=golint',
+          \ '--enable=ineffassign',
+          \ '--enable=interfacer',
+          \ '--enable=maligned',
+          \ '--enable=megacheck',
+          \ '--enable=misspell',
+          \ '--enable=structcheck',
+          \ '--enable=unconvert',
+          \ '--enable=varcheck',
+          \ '--enable=vet',
+          \ '--exclude=unexported',
+        \ ],
+        \ 'append_file': 0,
+        \ 'cwd': '%:h',
+        \ 'errorformat':
+            \ '%f:%l:%c:%t%*[^:]: %m,' .
+            \ '%f:%l::%t%*[^:]: %m'
+        \ }
+let g:go_fmt_options = {
+  \ 'gofmt': '-s',
+  \ }
 
 "-----------------
 " Yaml

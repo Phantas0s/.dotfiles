@@ -61,7 +61,7 @@ command -v "composer" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-compose
 command -v "mycli" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-mycli.sh
 command -v "ranger" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-ranger.sh
 command -v "go" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-go.sh
-command -v "npm" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-js.sh
+command -v "npm" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-javascript.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc

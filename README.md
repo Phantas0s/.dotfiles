@@ -31,6 +31,6 @@ You shouldn't use the `install.sh` script. You should only pick whatever you wan
 If you don't have any config for any of the sotfware I list at the beginning of this file, you can run the install script.
 
 You can install the whole config as following:
-* Create your own install_config file. It should follow the install_config.diff rules.
+* Create your own install_config file. It should follow the install_config.dist rules.
 * Run `sh install.sh` in your terminal
 
