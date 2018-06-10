@@ -34,7 +34,6 @@ alias pacc='sudo pacman -Sc'
 # empty the whole cache
 alias paccc='sudo pacman -Scc'
 
-
 # system
 alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
@@ -86,6 +85,11 @@ alias vim='nvim'
 alias vi='nvim'
 # log the keys entered via using vim 
 alias nviml='nvim -w ~/.vimlog "$@"'
+
+# racket
+# racket for SICP
+alias rsicp="racket -i -p neil/sicp -l xrepl"
+
 
 # git
 alias gs='git status '

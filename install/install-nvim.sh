@@ -52,12 +52,11 @@ if [ ! -d $HOME/nvim/undo ]
     mkdir $HOME/nvim/undo
 fi
 
-if [ ! -d $HOME/nvim/swap ]
-  then
-    mkdir $HOME/nvim/swap
-fi
+mkdir -p $HOME/nvim/swap
+mkdir -p $HOME/nvim/after/indent
+mkdir -p $HOME/nvim/lua
 
-# Install Go tool
+# Install Godoctor for vim
 if [ ! -d $HOME/nvim/godoctor.vim ]
   then
     git clone https://github.com/godoctor/godoctor.vim ~/nvim/godoctor.vim
@@ -74,6 +73,12 @@ ln -sf $HOME/$ROOT_CONFIG/nvim/pluggedconf/ $HOME/nvim/pluggedconf
 
 # color schemes
 ln -sf $HOME/$ROOT_CONFIG/nvim/colors/* $HOME/nvim/colors/
+
+# indentation
+ln -sf $HOME/$ROOT_CONFIG/nvim/after/indent/* $HOME/nvim/after/indent/
+
+# lua
+ln -sf $HOME/$ROOT_CONFIG/nvim/lua/* $HOME/nvim/lua/
 
 # snippets
 ln -sf $HOME/$ROOT_CONFIG/nvim/UltiSnips/* $HOME/nvim/UltiSnips/

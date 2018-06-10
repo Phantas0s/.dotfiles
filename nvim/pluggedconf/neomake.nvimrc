@@ -135,6 +135,13 @@ let g:go_fmt_options = {
 let g:neomake_yaml_enabled_makers = [ 'yamllint' ]
 
 "-----------------
-" Typescript
+" Racket (Lisp)
 "-----------------
-let g:neomake_php_enabled_makers = ['tsc']
+let g:neomake_scheme_enabled_makers = ['raco']
+
+let g:neomake_scheme_raco_maker = {
+    \ 'exe': 'raco',
+    \ 'args': ['expand'],
+    \ 'errorformat': '%-G %.%#,%E%f:%l:%c: %m'
+\ }
+
