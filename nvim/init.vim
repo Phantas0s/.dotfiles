@@ -203,6 +203,9 @@ nmap <leader>db :Bdelete!<cr>
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 
+" Yaml
+autocmd vimrc BufNewFile,BufRead *.yml.dist set filetype=yaml.
+
 "------------------
 " general binding
 "------------------
@@ -396,6 +399,6 @@ set wildmode=list:longest,full
 " set mouse=a
 
 " ncm debugging
-let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
-let $NVIM_NCM_LOG_LEVEL="DEBUG"
-let $NVIM_NCM_MULTI_THREAD=0
+" let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
+" let $NVIM_NCM_LOG_LEVEL="DEBUG"
+" let $NVIM_NCM_MULTI_THREAD=0
