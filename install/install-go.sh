@@ -17,6 +17,11 @@ then
     sh ./go/gocode.sh
 fi
 
+if [ ! -f $GOPATH/bin/testomatic ];
+then
+    sh ./install/go/testomatic.sh
+fi
+
 if [ ! -f $GOPATH/bin/zb ];
 then
     sh ./go/zb.sh

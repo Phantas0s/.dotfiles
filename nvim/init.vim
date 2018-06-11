@@ -320,9 +320,6 @@ xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 " general config 
 "-----------------
 
-" change cursor in nvim
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 " colorscheme
 colo hypnos
 
@@ -397,3 +394,8 @@ set wildmode=list:longest,full
 
 " enable the mouse
 " set mouse=a
+
+" ncm debugging
+let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
+let $NVIM_NCM_LOG_LEVEL="DEBUG"
+let $NVIM_NCM_MULTI_THREAD=0
