@@ -9,12 +9,12 @@ fi
 
 if [ ! -f $GOPATH/bin/guru ];
 then
-    sh ./go/guru.sh
+    sh ./install/go/guru.sh
 fi
 
 if [ ! -f $GOPATH/bin/gocode ];
 then
-    sh ./go/gocode.sh
+    sh ./install/go/gocode.sh
 fi
 
 if [ ! -f $GOPATH/bin/testomatic ];
@@ -24,32 +24,37 @@ fi
 
 if [ ! -f $GOPATH/bin/zb ];
 then
-    sh ./go/zb.sh
+    sh ./install/go/zb.sh
+fi
+
+if [ ! -f $GOPATH/bin/gometalinter ];
+then
+    sh ./install/go/gometalinter.sh
 fi
 
 if [ ! -f $GOPATH/bin/gotags ];
 then
-    sh ./go/gotags.sh
+    sh ./install/go/gotags.sh
 fi
 
 if [ ! -f $GOPATH/bin/godef ];
 then
-    sh ./go/godef.sh
+    sh ./install/go/godef.sh
 fi
 
 if [ ! -f $GOPATH/bin/dlv ];
 then
-    sh ./go/dlv.sh
+    sh ./install/go/dlv.sh
 fi
 
 if [ ! -f $GOPATH/bin/godoctor ];
 then
-    sh ./go/godoctor.sh
+    sh ./install/go/godoctor.sh
 fi
 
 if [ ! -f $GOPATH/bin/motion ];
 then
-    sh ./go/motion.sh
+    sh ./install/go/motion.sh
 fi
 
 echo -e "${green} ...done\n"
