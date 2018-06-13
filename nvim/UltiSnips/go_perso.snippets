@@ -19,8 +19,9 @@ func Test${1:Func}(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			if tc.{4} != tc.${3} {
-				t.Errorf("Expected %s, actual %s", tc.${4}, tc.${3})
+			result := false
+			if tc.${4} != result {
+				t.Errorf("Expected %s, actual %s", tc.${4}, result)
 			}
 		})
 	}
@@ -43,4 +44,3 @@ snippet cabort "Basic abort with error from Gin Context" b
 c.AbortWithError(http.StatusInternalServerError, ${1})
 return
 endsnippet
-

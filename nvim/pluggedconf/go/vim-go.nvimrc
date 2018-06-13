@@ -21,10 +21,6 @@ endif
 " highlight matching identifiers
 let g:go_auto_sameids = 1
 
-" vimdoctor 
-xnoremap <buffer><leader>rem :Refactor extract 
-noremap <buffer><leader>rd :Refactor godoc<cr>
-
 " vim-go mappings
 autocmd FileType go nmap <buffer><leader>d :GoDeclsDir<cr>
 
