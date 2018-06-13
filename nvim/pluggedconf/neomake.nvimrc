@@ -122,8 +122,10 @@ let g:neomake_go_gometalinter_maker = {
         \ 'cwd': '%:h',
         \ 'errorformat':
             \ '%f:%l:%c:%t%*[^:]: %m,' .
-            \ '%f:%l::%t%*[^:]: %m'
-        \ }
+            \ '%f:%l::%t%*[^:]: %m',
+        \ 'postprocess': function('SetWarningType')
+\ }
+
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }

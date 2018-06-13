@@ -1,0 +1,3 @@
+echo -e "${blue}Installing / Updating gas for Go"
+go get -u github.com/GoASTScanner/gas/cmd/gas/...
+echo -e "${green}...done\n"

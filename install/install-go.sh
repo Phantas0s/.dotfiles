@@ -17,6 +17,21 @@ then
     sh ./install/go/gocode.sh
 fi
 
+if [ ! -f $GOPATH/bin/gas ];
+then
+    sh ./install/go/gas.sh
+fi
+
+if [ ! -f $GOPATH/bin/golint ];
+then
+    sh ./install/go/golint.sh
+fi
+
+if [ ! -f $GOPATH/bin/goconst ];
+then
+    sh ./install/go/goconst.sh
+fi
+
 if [ ! -f $GOPATH/bin/testomatic ];
 then
     sh ./install/go/testomatic.sh
