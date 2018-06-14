@@ -5,6 +5,7 @@
 # screenshot <area> win|scr|area - Compress a folder in tar.gz
 # imgsize <img> - display width / height of an image
 # imgresize <source> <width> - resize and create a new image <source>_<width> following aspect ratio
+# imgconvjpg <source> - convert source to a jpg image
 
 # gtD <name> - Delete a tag locally AND on the remote origin
 
@@ -94,6 +95,17 @@ imgresize() {
     convert $1 -quality 100 -resize $2 $finalName
     echo "$finalName"
 }
+
+imgconvjpg() {
+    if [ ! -z "$1" ];
+    then
+        filename=${1%\.*}
+        magick convert $1 "${filename}.jpg"
+    else
+        echo -e "You need to precise an image to convert!"
+    fi
+}
+
 
 gtD() {
     git tag -d $1
