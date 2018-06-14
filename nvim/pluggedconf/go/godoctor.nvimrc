@@ -9,4 +9,5 @@
 " vimdoctor 
 xnoremap <buffer><leader>rem :Refactor extract
 xnoremap <buffer><leader>rev :Refactor var
-noremap <buffer><leader>rd :Refactor godoc<cr>
+xnoremap <buffer><leader>ret :Refactor toggle
+noremap <buffer><leader>rgd :Refactor godoc<cr>
