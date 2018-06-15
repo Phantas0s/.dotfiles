@@ -13,53 +13,26 @@ if [ ! -d $HOME/nvim ]
 fi
 
 # install vim session folder
-if [ ! -d $HOME/nvim/sessions ]
-  then
-    mkdir $HOME/nvim/sessions
-fi
+mkdir -p $HOME/nvim/sessions
 
 # install nvim config
 ln -sf $HOME/$ROOT_CONFIG/nvim/init.vim $HOME/nvim/init.vim
 
 # Install all mandatory folders if they don't exist already
-if [ ! -d $HOME/nvim/plugged ]
-  then
-    mkdir $HOME/nvim/plugged
-fi
-
-if [ ! -d $HOME/nvim/colors ]
-  then
-    mkdir $HOME/nvim/colors
-fi
-
-if [ ! -d $HOME/nvim/UltiSnips ]
-  then
-    mkdir $HOME/nvim/UltiSnips
-fi
-
-if [ ! -d $HOME/nvim/autoload ]
-  then
-    mkdir $HOME/nvim/autoload
-fi
-
-if [ ! -d $HOME/nvim/backup ]
-  then
-    mkdir $HOME/nvim/backup
-fi
-
-if [ ! -d $HOME/nvim/undo ]
-  then
-    mkdir $HOME/nvim/undo
-fi
-
+mkdir -p $HOME/nvim/plugged
+mkdir -p $HOME/nvim/colors
+mkdir -p $HOME/nvim/UltiSnips
+mkdir -p $HOME/nvim/autoload
+mkdir -p $HOME/nvim/backup
+mkdir -p $HOME/nvim/undo
 mkdir -p $HOME/nvim/swap
 mkdir -p $HOME/nvim/after/indent
 mkdir -p $HOME/nvim/lua
 
 # Install Godoctor for vim
-if [ ! -d $HOME/nvim/godoctor.vim ]
+if [ ! -f $HOME/nvim/godoctor.vim ]
   then
-    git clone https://github.com/godoctor/godoctor.vim ~/nvim/godoctor.vim
+    git clone https://github.com/godoctor/godoctor.vim $HOME/nvim/godoctor.vim
 fi
 
 # If no projects configured create an empty file

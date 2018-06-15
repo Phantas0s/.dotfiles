@@ -3,7 +3,7 @@
 
 echo -e "${blue} installing Go environement..."
 
-mkdir -d $GOPATH/bin
+mkdir -p $GOPATH/bin
 
 ### Quality tools
 
@@ -18,6 +18,25 @@ if [ ! -f $GOPATH/bin/gocode ];
 then
     sh ./install/go/gocode.sh
 fi
+
+# Detect ineffectual assignments in Go code.
+if [ ! -f $GOPATH/bin/ineffassign ];
+then
+    sh ./install/go/ineffassign.sh
+fi
+
+# megacheck runs staticcheck, gosimple and unused at once.
+if [ ! -f $GOPATH/bin/megacheck ];
+then
+    sh ./install/go/megacheck.sh
+fi
+
+# A linter that suggests interface types.
+if [ ! -f $GOPATH/bin/interfacer ];
+then
+    sh ./install/go/interfacer.sh
+fi
+
 
 # Inspects source code for security problems by scanning the Go AST.
 if [ ! -f $GOPATH/bin/gas ];
