@@ -8,6 +8,7 @@ export TERM='rxvt-256color'
 export ROOT_CONFIG='.dotfiles'
 export COMPOSER_HOME="$HOME/composer"
 export TMUXP_CONFIGDIR="$HOME/.tmuxp"
+export DOTFILES="$HOME/.dotfiles"
 
 # Modifying the path for ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"

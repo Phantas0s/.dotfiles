@@ -5,7 +5,7 @@ echo -e "${green} ...done\n"
 #---------------------------------------
 
 echo -e "${blue} Update go packages..."
-cd install/go
+cd $DOTFILES/install/go
 for f in *.sh; do
     sh "$f"
 done
