@@ -46,6 +46,9 @@ Plug 'tpope/vim-commentary'
 " Highlight briefly every yank text
 Plug 'machakann/vim-highlightedyank'
 
+" swap arguments in parenthesis
+Plug 'machakann/vim-swap'
+
 " add new text object (can delete between comma with di, for example)
 Plug 'wellle/targets.vim'
 
