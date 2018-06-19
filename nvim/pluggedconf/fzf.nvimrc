@@ -46,6 +46,24 @@ autocmd fzf VimEnter * command! -nargs=* Rgic
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
+" ripgrep - ignore the files defined in ignore files (.gitignore...) and
+" doesn't ignore case
+autocmd fzf VimEnter * command! -nargs=* Rgir
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" ripgrep - ignore the files defined in ignore files (.gitignore...) and
+" doesn't ignore case
+autocmd fzf VimEnter * command! -nargs=* Rgr
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --hidden --no-ignore --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],

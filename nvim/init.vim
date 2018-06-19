@@ -377,7 +377,7 @@ set hidden
 set noshowmode
 
 " Keep cursor more in middle when scrolling down / up
-set scrolloff=15
+set scrolloff=999
 
 " no swap file! This is just annoying
 set noswapfile
