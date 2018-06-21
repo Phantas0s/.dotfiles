@@ -12,8 +12,9 @@ let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 " update neomake when save file
 if isdirectory($HOME . "/nvim/plugged/neomake")
-    call neomake#configure#automake('w')
+  call neomake#configure#automake('w')
 endif
+
 
 "----------------
 " PHP
@@ -79,19 +80,27 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
 " Callback for reloading file in buffer when eslint has finished and maybe has
 " autofixed some stuff
-function! s:Neomake_javascript_callback(options)
-  if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
-    let timer = timer_start(100, 
-          \ {->execute('checktime ' . bufname('%')) }, 
-          \ {'repeat': 20})
-  endif
+function! s:Neomake_callback(options)
+    if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
+        execute('edit') 
+    endif
 endfunction
+
+" function! s:Neomake_callback(options)
+"   if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
+"     let timer = timer_start(100, 
+"           \ {->execute('checktime ' . bufname('%')) }, 
+"           \ {'repeat': 20})
+"   endif
+" endfunction
 
 "
 " Call neomake#Make directly instead of the Neomake provided command
+autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function('s:Neomake_callback'))
 
-autocmd vimrc BufWritePost *.js,*.jsx :call neomake#Make(1, [], function('s:Neomake_javascript_callback'))
-
+" if has('nvim')
+  " autocmd Filetype javascript call neomake#Make(1, [], function('s:Neomake_callback'))
+" endif
 "-----------------
 " Golang
 "-----------------
