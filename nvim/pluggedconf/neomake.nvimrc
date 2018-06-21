@@ -82,7 +82,7 @@ let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
 " autofixed some stuff
 function! s:Neomake_callback(options)
     if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
-        execute('edit') 
+        execute('edit')
     endif
 endfunction
 
@@ -140,7 +140,9 @@ let g:neomake_go_gometalinter_maker = {
           \ '--enable=unconvert',
           \ '--enable=varcheck',
           \ '--enable=vet',
-          \ '--exclude=unexported',
+          \ '--enable=unparam',
+          \ '--enable=unused',
+          \ '--disable=unexported',
         \ ],
         \ 'append_file': 0,
         \ 'cwd': '%:h',

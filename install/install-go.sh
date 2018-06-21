@@ -13,6 +13,18 @@ then
     sh ./install/go/guru.sh
 fi
 
+# Find unused params
+if [ ! -f $GOPATH/bin/unparam ];
+then
+    sh ./install/go/unparam.sh
+fi
+
+# Find unused params
+if [ ! -f $GOPATH/bin/unused ];
+then
+    sh ./install/go/unused.sh
+fi
+
 # An autocompletion daemon for the Go programming language
 if [ ! -f $GOPATH/bin/gocode ];
 then
