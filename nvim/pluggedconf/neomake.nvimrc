@@ -74,6 +74,23 @@ let g:neomake_php_phpmd_maker = {
 " Javascript
 "-----------------
 let g:neomake_javascript_enabled_makers = ['eslint']
+" Use the fix option of eslint
+
+let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
+" Callback for reloading file in buffer when eslint has finished and maybe has
+" autofixed some stuff
+function! s:Neomake_javascript_callback(options)
+  if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
+    let timer = timer_start(100, 
+          \ {->execute('checktime ' . bufname('%')) }, 
+          \ {'repeat': 20})
+  endif
+endfunction
+
+"
+" Call neomake#Make directly instead of the Neomake provided command
+
+autocmd vimrc BufWritePost *.js,*.jsx :call neomake#Make(1, [], function('s:Neomake_javascript_callback'))
 
 "-----------------
 " Golang
