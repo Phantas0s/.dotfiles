@@ -5,7 +5,7 @@ let g:neomake_warning_sign = {
     \   'texthl': 'NeomakeWarningSign',
     \ }
 let g:neomake_message_sign = {
-    \   'text': '➤',
+    \   'text': '',
     \   'texthl': 'NeomakeMessageSign',
     \ }
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
@@ -82,6 +82,7 @@ let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
 " autofixed some stuff
 function! s:Neomake_callback(options)
     if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
+        " execute('checktime ' . bufname('%'))
         execute('edit')
     endif
 endfunction
@@ -104,28 +105,6 @@ autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function
 "-----------------
 " Golang
 "-----------------
-" let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-
-" let g:neomake_go_gometalinter_maker = {
-"   \ 'exe': 'zb',
-"   \ 'args': [
-"   \   'lint',
-"   \   '--exclude=unexported',
-"   \   '--fast',
-"   \ ],
-"   \ 'cwd': '%:h',
-"   \ 'append_file': 0,
-"   \ 'errorformat':
-"   \   '%E%f:%l:%c:%trror: %m,' .
-"   \   '%W%f:%l:%c:%tarning: %m,' .
-"   \   '%E%f:%l::%trror: %m,' .
-"   \   '%W%f:%l::%tarning: %m'
-" \ }
-
-"   let g:go_fmt_options = {
-"     \ 'gofmt': '-s',
-" \ }
-
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
 let g:neomake_go_gometalinter_maker = {
         \ 'args': [
@@ -152,6 +131,26 @@ let g:neomake_go_gometalinter_maker = {
         \ 'postprocess': function('SetWarningType')
 \ }
 
+" let g:neomake_go_gometalinter_maker = {
+"   \ 'exe': 'zb',
+"   \ 'args': [
+"   \   'lint',
+"   \   '--exclude=unexported',
+"   \   '--fast',
+"   \ ],
+"   \ 'cwd': '%:h',
+"   \ 'append_file': 0,
+"   \ 'errorformat':
+"   \   '%E%f:%l:%c:%trror: %m,' .
+"   \   '%W%f:%l:%c:%tarning: %m,' .
+"   \   '%E%f:%l::%trror: %m,' .
+"   \   '%W%f:%l::%tarning: %m'
+" \ }
+
+"   let g:go_fmt_options = {
+"     \ 'gofmt': '-s',
+" \ }
+
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }
@@ -159,7 +158,6 @@ let g:go_fmt_options = {
 "-----------------
 " Yaml
 "-----------------
-
 let g:neomake_yaml_enabled_makers = [ 'yamllint' ]
 
 "-----------------
