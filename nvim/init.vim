@@ -46,6 +46,9 @@ Plug 'tpope/vim-commentary'
 " Highlight briefly every yank text
 Plug 'machakann/vim-highlightedyank'
 
+" swap arguments in parenthesis
+Plug 'machakann/vim-swap'
+
 " add new text object (can delete between comma with di, for example)
 Plug 'wellle/targets.vim'
 
@@ -111,6 +114,7 @@ Plug 'lumiliet/vim-twig', {'for': 'twig'}
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
+Plug 'ruanyl/vim-fixmyjs'
 
 " Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
@@ -305,7 +309,7 @@ nmap <silent> <leader><f5> :e $MYVIMRC<CR>
 nmap <silent> <leader><f6> :so $MYVIMRC<CR>
 
 " delete trailing space when saving files
-autocmd vimrc BufWrite *.php,*.js,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml :call general#DeleteTrailingWS()
+autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml :call general#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <Leader>z :call general#ZoomToggle()<CR>
@@ -374,7 +378,7 @@ set hidden
 set noshowmode
 
 " Keep cursor more in middle when scrolling down / up
-set scrolloff=15
+set scrolloff=999
 
 " no swap file! This is just annoying
 set noswapfile

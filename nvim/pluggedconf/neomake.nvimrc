@@ -5,15 +5,16 @@ let g:neomake_warning_sign = {
     \   'texthl': 'NeomakeWarningSign',
     \ }
 let g:neomake_message_sign = {
-    \   'text': '➤',
+    \   'text': '',
     \   'texthl': 'NeomakeMessageSign',
     \ }
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 " update neomake when save file
 if isdirectory($HOME . "/nvim/plugged/neomake")
-    call neomake#configure#automake('w')
+  call neomake#configure#automake('w')
 endif
+
 
 "----------------
 " PHP
@@ -74,11 +75,61 @@ let g:neomake_php_phpmd_maker = {
 " Javascript
 "-----------------
 let g:neomake_javascript_enabled_makers = ['eslint']
+" Use the fix option of eslint
 
+let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
+" Callback for reloading file in buffer when eslint has finished and maybe has
+" autofixed some stuff
+function! s:Neomake_callback(options)
+    if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
+        " execute('checktime ' . bufname('%'))
+        execute('edit')
+    endif
+endfunction
+
+" function! s:Neomake_callback(options)
+"   if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
+"     let timer = timer_start(100, 
+"           \ {->execute('checktime ' . bufname('%')) }, 
+"           \ {'repeat': 20})
+"   endif
+" endfunction
+
+"
+" Call neomake#Make directly instead of the Neomake provided command
+autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function('s:Neomake_callback'))
+
+" if has('nvim')
+  " autocmd Filetype javascript call neomake#Make(1, [], function('s:Neomake_callback'))
+" endif
 "-----------------
 " Golang
 "-----------------
-" let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+let g:neomake_go_gometalinter_maker = {
+        \ 'args': [
+          \ '--disable-all',
+          \ '--enable=gas',
+          \ '--enable=goconst',
+          \ '--enable=golint',
+          \ '--enable=ineffassign',
+          \ '--enable=maligned',
+          \ '--enable=misspell',
+          \ '--enable=structcheck',
+          \ '--enable=unconvert',
+          \ '--enable=varcheck',
+          \ '--enable=vet',
+          \ '--enable=unparam',
+          \ '--enable=unused',
+          \ '--disable=unexported',
+        \ ],
+        \ 'append_file': 0,
+        \ 'cwd': '%:h',
+        \ 'errorformat':
+            \ '%f:%l:%c:%t%*[^:]: %m,' .
+            \ '%f:%l::%t%*[^:]: %m',
+        \ 'postprocess': function('SetWarningType')
+\ }
 
 " let g:neomake_go_gometalinter_maker = {
 "   \ 'exe': 'zb',
@@ -100,30 +151,6 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 "     \ 'gofmt': '-s',
 " \ }
 
-let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-let g:neomake_go_gometalinter_maker = {
-        \ 'args': [
-          \ '--disable-all',
-          \ '--enable=gas',
-          \ '--enable=goconst',
-          \ '--enable=golint',
-          \ '--enable=ineffassign',
-          \ '--enable=maligned',
-          \ '--enable=misspell',
-          \ '--enable=structcheck',
-          \ '--enable=unconvert',
-          \ '--enable=varcheck',
-          \ '--enable=vet',
-          \ '--exclude=unexported',
-        \ ],
-        \ 'append_file': 0,
-        \ 'cwd': '%:h',
-        \ 'errorformat':
-            \ '%f:%l:%c:%t%*[^:]: %m,' .
-            \ '%f:%l::%t%*[^:]: %m',
-        \ 'postprocess': function('SetWarningType')
-\ }
-
 let g:go_fmt_options = {
   \ 'gofmt': '-s',
   \ }
@@ -131,7 +158,6 @@ let g:go_fmt_options = {
 "-----------------
 " Yaml
 "-----------------
-
 let g:neomake_yaml_enabled_makers = [ 'yamllint' ]
 
 "-----------------

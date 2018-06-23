@@ -1,4 +1,5 @@
 # updatesys - Update all go binaries installed via the install script + update via aurman if installed or otherwise pacman
+
 # extract <archive_file> - Extract the archive depending on its type
 # compress <folder> - Compress a folder in tar.gz
 
@@ -197,4 +198,10 @@ matrix () {
     echo $lines $cols $(( $RANDOM % $cols)) $(( $RANDOM % 72 ))
     sleep 0.05
     done | awk "$awkscript"
+}
+
+# Loopline system (my job) related
+thriftgen() {
+    thrift -o . -r --gen php:server -out ./php/gen  ./service.thrift 
+    thrift -o . -r --gen go -out ./go/pkg/gen  ./service.thrift
 }
