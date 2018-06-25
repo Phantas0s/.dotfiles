@@ -40,6 +40,7 @@ Plug 'tpope/vim-abolish'
 " the . command can repeat whatever you want!
 " http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-repeat'
+
 " comment automatically
 Plug 'tpope/vim-commentary'
 

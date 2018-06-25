@@ -32,8 +32,8 @@ endfunction
 function! general#Bdeleteonly()
     let list = filter(general#Buflist(), 'v:val != bufname("%")')
     for buffer in list
-        exec "bdelete ".buffer
         call general#DeleteEmptyBuffers()
+        exec "bdelete ".buffer
     endfor
 endfunction
 
