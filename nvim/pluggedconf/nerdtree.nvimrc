@@ -23,6 +23,7 @@ let g:NERDTreeChDirMode = 2
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeShowBookmarks = 0
 let g:NERDTreeCascadeOpenSingleChildDir = 1
+let g:NERDTreeCascadeSingleChildDir = 0
 let g:NERDTreeQuitOnOpen = 1
 
 " change the arrows

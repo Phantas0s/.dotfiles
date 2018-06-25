@@ -44,3 +44,9 @@ snippet cabort "Basic abort with error from Gin Context" b
 c.AbortWithError(http.StatusInternalServerError, ${1})
 return
 endsnippet
+
+snippet /^package/ "Package declaration" r
+// Package $1 provides ...
+package ${1:main}
+$2
+endsnippet
