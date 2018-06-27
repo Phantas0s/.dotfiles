@@ -175,7 +175,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 set $terms "1: terms"
 set $web "2: web"
-set $sql "3: sql"
+set $db "3: db"
 set $file_manager "4: files"
 set $mail "5: mails"
 set $documents "6: documents"
@@ -184,7 +184,7 @@ set $mindmap "7: mindmap"
 # switch to workspace
 bindsym $mod+1 workspace $terms
 bindsym $mod+2 workspace $web
-bindsym $mod+3 workspace $sql
+bindsym $mod+3 workspace $db
 bindsym $mod+4 workspace $file_manager
 bindsym $mod+5 workspace $mail
 bindsym $mod+6 workspace $documents
@@ -196,7 +196,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $terms
 bindsym $mod+Shift+2 move container to workspace $web
-bindsym $mod+Shift+3 move container to workspace $sql
+bindsym $mod+Shift+3 move container to workspace $db
 bindsym $mod+Shift+4 move container to workspace $file_manager
 bindsym $mod+Shift+5 move container to workspace $mail
 bindsym $mod+Shift+6 move container to workspace $documents
@@ -211,7 +211,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 #assign [class="URxvt" instance="urxvt"] → $terms
 assign [class="Firefox" instance="Navigator"] → $web
 assign [class="Chromium" instance="chromium"] → $web
-assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $sql
+assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $db
 assign [class="Thunar" instance="thunar"] → $file_manager
 assign [class="Thunderbird" instance="Mail"] → $mail
 assign [instance="libreoffice"] → $documents

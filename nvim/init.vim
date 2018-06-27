@@ -85,6 +85,8 @@ Plug 'Ron89/thesaurus_query.vim'
 " Plug 'zchee/deoplete-go', {'for': 'go'} " autocompletion
 " Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
+Plug 'joonty/vdebug'
+
 Plug 'roxma/ncm-phpactor',  {'for': 'php'}
 Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
