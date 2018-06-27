@@ -10,6 +10,7 @@ func Test${1:Func}(t *testing.T) {
 	testCases := []struct {
 		name string
 		${2:} ${3:} 
+		wantErr bool
 		result ${4:} 
 	}{
 		{
@@ -19,7 +20,12 @@ func Test${1:Func}(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			result := false
+			result, err := thingToTest()
+			if (err != nil) != tt.wantErr {
+				t.Errorf("thingToTest error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+
 			if tc.${4} != result {
 				t.Errorf("Expected %s, actual %s", tc.${4}, result)
 			}
