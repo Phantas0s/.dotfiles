@@ -63,6 +63,7 @@ hi DiffAdd guifg=#ffffff guibg=#303030 ctermfg=5 ctermbg=236 cterm=NONE
 
 " Neomake plugin
 hi NeomakeWarningSign ctermfg=yellow ctermbg=236
+hi SpellCap guifg=#303030 guibg=#ffd75f ctermfg=236 ctermbg=yellow cterm=bold
 
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
@@ -93,7 +94,7 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 "hi PMenuSbar guifg=NONE guibg=#848688 guisp=#848688 gui=NONE ctermfg=NONE ctermbg=102 cterm=NONE
 "hi SpecialChar guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Conditional guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
-"hi StorageClass guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
+"hi StorageClass guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 tc=NONE cterm=bold
 "hi Todo guifg=#F9F9FF guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=189 ctermbg=1 cterm=NONE
 "hi Special guifg=#fffd95 guibg=NONE guisp=NONE gui=NONE ctermfg=228 ctermbg=NONE cterm=NONE
 "hi StatusLine guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=bold ctermfg=235 ctermbg=1 cterm=bold

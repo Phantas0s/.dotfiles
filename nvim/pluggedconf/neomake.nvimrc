@@ -38,19 +38,6 @@ endfunction
 
 let g:neomake_php_enabled_makers = ['php', 'phpmd', 'phpcs', 'phpstan']
 
-let g:neomake_php_php_maker = {
-        \ 'args': ['-l', '-d', 'display_errors=1', '-d', 'log_errors=0',
-            \      '-d', 'xdebug.cli_color=0'],
-        \ 'errorformat':
-            \ '%-GNo syntax errors detected in%.%#,'.
-            \ '%EParse error: %#syntax error\, %m in %f on line %l,'.
-            \ '%EParse error: %m in %f on line %l,'.
-            \ '%EFatal error: %m in %f on line %l,'.
-            \ '%-G\s%#,'.
-            \ '%-GErrors parsing %.%#',
-       \ 'postprocess': function('SetErrorType'),
-\ }
-
 let g:neomake_php_phpcs_maker = {
         \ 'args': ['--report=csv', '--standard=PSR2'],
         \ 'errorformat':
