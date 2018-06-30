@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo -e "${red}Delete the javascript config..."
 rm $HOME/.tern-project &>/dev/null
 rm $HOME/.eslintrc.json &>/dev/null
