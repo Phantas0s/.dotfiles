@@ -19,7 +19,7 @@
 # matrix - Display the MATRIX
 
 updatesys() {
-    sh ~/$ROOT_CONFIG/update.sh
+    sh $DOTFILES/update.sh
     if hash aurman 2>/dev/null; then
         aurman -Syu
     else

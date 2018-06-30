@@ -1,7 +1,9 @@
+#!/bin/bash
+
 echo ""
 echo "${blue}Install tmux config..."
 
-ln -s $HOME/$ROOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 
 if [ ! -d $HOME/.tmux ]

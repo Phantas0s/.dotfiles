@@ -11,7 +11,7 @@ fi
 
 . ./env
 . ./install_config
-. $HOME/$ROOT_CONFIG/colors
+. $DOTFILES/colors
 
 ################
 # presentation #
@@ -39,37 +39,37 @@ fi
 # Uninstall everything
 # TODO: let the choice to backup :D
 
-. $HOME/$ROOT_CONFIG/uninstall.sh
+. $DOTFILES/uninstall.sh
 
 # Install
-. $HOME/$ROOT_CONFIG/install/install-from-cloud.sh
-. $HOME/$ROOT_CONFIG/install/install-fonts.sh
-. $HOME/$ROOT_CONFIG/install/install-prezto.sh
-. $HOME/$ROOT_CONFIG/install/install-xorg-server.sh
+. $DOTFILES/install/install-from-cloud.sh
+. $DOTFILES/install/install-fonts.sh
+. $DOTFILES/install/install-prezto.sh
+. $DOTFILES/install/install-xorg-server.sh
 
-command -v "ssh-keygen" >/dev/null && command -v "git" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-projects.sh
-command -v "lxappearance" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-theme.sh
-command -v "i3" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-i3.sh
-command -v "urxvt" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-urxvt.sh
-command -v "git" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-git.sh
-command -v "nvim" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-nvim.sh
-command -v "tmux" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-tmux.sh
-command -v "dunst" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-dunst.sh
-command -v "feh" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-feh.sh
-command -v "jrnl" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-jrnl.sh
-command -v "composer" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-composer.sh
-command -v "mycli" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-mycli.sh
-command -v "ranger" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-ranger.sh
-command -v "go" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-go.sh
-command -v "npm" >/dev/null && . $HOME/$ROOT_CONFIG/install/install-javascript.sh
+command -v "ssh-keygen" >/dev/null && command -v "git" >/dev/null && . $DOTFILES/install/install-projects.sh
+command -v "lxappearance" >/dev/null && . $DOTFILES/install/install-theme.sh
+command -v "i3" >/dev/null && . $DOTFILES/install/install-i3.sh
+command -v "urxvt" >/dev/null && . $DOTFILES/install/install-urxvt.sh
+command -v "git" >/dev/null && . $DOTFILES/install/install-git.sh
+command -v "nvim" >/dev/null && . $DOTFILES/install/install-nvim.sh
+command -v "tmux" >/dev/null && . $DOTFILES/install/install-tmux.sh
+command -v "dunst" >/dev/null && . $DOTFILES/install/install-dunst.sh
+command -v "feh" >/dev/null && . $DOTFILES/install/install-feh.sh
+command -v "jrnl" >/dev/null && . $DOTFILES/install/install-jrnl.sh
+command -v "composer" >/dev/null && . $DOTFILES/install/install-composer.sh
+command -v "mycli" >/dev/null && . $DOTFILES/install/install-mycli.sh
+command -v "ranger" >/dev/null && . $DOTFILES/install/install-ranger.sh
+command -v "go" >/dev/null && . $DOTFILES/install/install-go.sh
+command -v "npm" >/dev/null && . $DOTFILES/install/install-javascript.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
-ln -s $HOME/$ROOT_CONFIG/bash/bashrc $HOME/.bashrc
+ln -s $DOTFILES/bash/bashrc $HOME/.bashrc
 echo -e "${green} ...done\n"
 
 echo -e "${blue}Create symlinks for Xmodmap key mapping...."
-ln -s $HOME/$ROOT_CONFIG/xorg-server/Xmodmap $HOME/.Xmodmap
+ln -s $DOTFILES/xorg-server/Xmodmap $HOME/.Xmodmap
 echo -e "${green} ...done\n"
 
 # Source startup
-source $HOME/$ROOT_CONFIG/startup
+source $DOTFILES/startup

@@ -16,7 +16,7 @@ fi
 mkdir -p $HOME/nvim/sessions
 
 # install nvim config
-ln -sf $HOME/$ROOT_CONFIG/nvim/init.vim $HOME/nvim/init.vim
+ln -sf $DOTFILES/nvim/init.vim $HOME/nvim/init.vim
 
 # Install all mandatory folders if they don't exist already
 mkdir -p $HOME/nvim/plugged
@@ -42,30 +42,30 @@ if [ ! -f $HOME/nvim/projects.nvimrc ]
 fi
 
 # configuration of different plugins
-ln -sf $HOME/$ROOT_CONFIG/nvim/pluggedconf/ $HOME/nvim/pluggedconf
+ln -sf $DOTFILES/nvim/pluggedconf/ $HOME/nvim/pluggedconf
 
 # color schemes
-ln -sf $HOME/$ROOT_CONFIG/nvim/colors/* $HOME/nvim/colors/
+ln -sf $DOTFILES/nvim/colors/* $HOME/nvim/colors/
 
 # indentation
-ln -sf $HOME/$ROOT_CONFIG/nvim/after/indent/* $HOME/nvim/after/indent/
+ln -sf $DOTFILES/nvim/after/indent/* $HOME/nvim/after/indent/
 
 # lua
-ln -sf $HOME/$ROOT_CONFIG/nvim/lua/* $HOME/nvim/lua/
+ln -sf $DOTFILES/nvim/lua/* $HOME/nvim/lua/
 
 # snippets
-ln -sf $HOME/$ROOT_CONFIG/nvim/UltiSnips/* $HOME/nvim/UltiSnips/
+ln -sf $DOTFILES/nvim/UltiSnips/* $HOME/nvim/UltiSnips/
 
 # see :help ftplugin
-ln -sf $HOME/$ROOT_CONFIG/nvim/ftplugin/ $HOME/nvim/ftplugin
+ln -sf $DOTFILES/nvim/ftplugin/ $HOME/nvim/ftplugin
 
 # see :help autoload
-ln -sf $HOME/$ROOT_CONFIG/nvim/autoload/* $HOME/nvim/autoload/
+ln -sf $DOTFILES/nvim/autoload/* $HOME/nvim/autoload/
 
 # projects.nvimrc is installed from the cloud
 
 # installing colorscheme for lightline
-ln -sf $HOME/$ROOT_CONFIG/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim \
+ln -sf $DOTFILES/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim \
 $HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim
 
 echo -e "${green}...done\n"

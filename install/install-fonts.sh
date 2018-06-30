@@ -9,7 +9,7 @@ if [ ! -d $HOME/.fonts ]
     mkdir $HOME/.fonts
 fi
 
-cp -f $HOME/$ROOT_CONFIG/fonts/* $HOME/.fonts
+cp -f $DOTFILES/fonts/* $HOME/.fonts
 
 echo "${green} ...done"
 
