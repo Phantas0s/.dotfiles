@@ -36,21 +36,34 @@ function! SetMessageType(entry)
   let a:entry.type = 'M'
 endfunction
 
-let g:neomake_php_enabled_makers = ['php', 'phpmd', 'phpcs', 'phpstan']
+let g:neomake_php_enabled_makers = ['phpmd', 'phpcs', 'phpstan', 'php']
+let g:neomake_open_list = 2
 
 let g:neomake_php_phpcs_maker = {
         \ 'args': ['--report=csv', '--standard=PSR2'],
         \ 'errorformat':
-            \ '%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity%.%#,'.
+            \ '%M%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity%.%#,'.
             \ '"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]%.%#',
         \ 'postprocess': function('SetWarningType'),
  \ }
 
 let g:neomake_php_phpstan_maker = {
         \ 'args': ['analyse', '--errorFormat', 'raw', '--no-progress', '--level', '7'],
-        \ 'errorformat': '%E%f:%l:%m',
-        \ 'postprocess': function('SetWarningType'),
+        \ 'errorformat': '%W%f:%l:%m',
  \ }
+
+let g:neomake_php_php_maker = {
+\ 'args': ['-l', '-d', 'display_errors=1', '-d', 'log_errors=0',
+    \      '-d', 'xdebug.cli_color=0'],
+\ 'errorformat':
+    \ '%-GNo syntax errors detected in%.%#,'.
+    \ '%EParse error: %#syntax error\, %m in %f on line %l,'.
+    \ '%EParse error: %m in %f on line %l,'.
+    \ '%EFatal error: %m in %f on line %l,'.
+    \ '%-G\s%#,'.
+    \ '%-GErrors parsing %.%#',
+    \ 'output_stream': 'stdout',
+\ }
 
 let g:neomake_php_phpmd_maker = {
         \ 'args': ['%:p', 'text', 'cleancode,codesize,design,unusedcode,naming'],
