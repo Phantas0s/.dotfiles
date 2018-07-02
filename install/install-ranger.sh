@@ -1,6 +1,6 @@
 echo -e ""
 echo -e "${blue}Install ranger config..."
 
-ln -s $HOME/$ROOT_CONFIG/ranger $HOME/ranger
+ln -s $DOTFILES/ranger $HOME/ranger
 
 echo -e "${green} ...done"

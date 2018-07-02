@@ -5,10 +5,10 @@
 ##############
 
 if [ ! -d $HOME/.i3 ]
-  then 
+  then
     mkdir $HOME/.i3
 fi
 
-ln -s $HOME/$ROOT_CONFIG/i3/config /$HOME/.i3/config
-ln -s $HOME/$ROOT_CONFIG/i3/i3status.conf $HOME/.i3/i3status.conf
-ln -s $HOME/$ROOT_CONFIG/i3/scripts/ $HOME/.i3/scripts
+ln -s $DOTFILES/i3/config /$HOME/.i3/config
+ln -s $DOTFILES/i3/i3status.conf $HOME/.i3/i3status.conf
+ln -s $DOTFILES/i3/scripts/ $HOME/.i3/scripts

@@ -2,13 +2,16 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
+# Change this variable if your dotfiles are not in this path!!!
+# Useful for the install scripts
+export DOTFILES="$HOME/.dotfiles"
+
 export EDITOR="nvim"
 export XDG_CONFIG_HOME=$HOME
 export TERM='rxvt-256color'
-export ROOT_CONFIG='.dotfiles'
+
 export COMPOSER_HOME="$HOME/composer"
 export TMUXP_CONFIGDIR="$HOME/.tmuxp"
-export DOTFILES="$HOME/.dotfiles"
 
 # Modifying the path for ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"

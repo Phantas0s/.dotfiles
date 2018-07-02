@@ -2,8 +2,8 @@
 
 echo "${blue} installing jrnl configuration..."
 
-rm $HOME/$ROOT_CONFIG/jrnl/jrnl
-cp $HOME/$ROOT_CONFIG/jrnl/jrnl_template $HOME/$ROOT_CONFIG/jrnl/jrnl
+rm $DOTFILES/jrnl/jrnl
+cp $DOTFILES/jrnl/jrnl_template $DOTFILES/jrnl/jrnl
 
 if [ -z "$JRNL_DEFAULT_PATH" ];
 then
@@ -11,13 +11,13 @@ then
     echo "> "
     read JRNL_DEFAULT_PATH
 
-    echo "JRNL_DEFAULT_PATH=$JRNL_DEFAULT_PATH" >> $HOME/$ROOT_CONFIG/install_config
+    echo "JRNL_DEFAULT_PATH=$JRNL_DEFAULT_PATH" >> $DOTFILES/install_config
 fi
 
-sed -i -e "s~<djrnl>~${JRNL_DEFAULT_PATH}~g" $HOME/$ROOT_CONFIG/jrnl/jrnl
+sed -i -e "s~<djrnl>~${JRNL_DEFAULT_PATH}~g" $DOTFILES/jrnl/jrnl
 
 echo 'Create symlink for jrnl config...'
 
-ln -s -f $HOME/$ROOT_CONFIG/jrnl/jrnl $HOME/jrnl
+ln -s -f $DOTFILES/jrnl/jrnl $HOME/jrnl
 
 echo "${green} ...done"
