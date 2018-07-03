@@ -6,6 +6,7 @@ hi LineNr guifg=#C6C6C6 guibg=#303030 ctermfg=251 ctermbg=236 cterm=NONE
 hi SignColumn guifg=#262626 guibg=#303030 ctermfg=235 ctermbg=236 cterm=NONE
 hi VertSplit guifg=#262626 guibg=#262626 ctermfg=235 ctermbg=235 cterm=bold
 hi CursorLine guifg=NONE guibg=#303030 ctermfg=NONE ctermbg=236 cterm=bold
+hi CursorLineNr guifg=#d75f5f guibg=#121212 ctermfg=red ctermbg=236 cterm=bold
 
 hi Search guifg=#ffd75f guibg=#080808 ctermfg=yellow ctermbg=232 cterm=bold
 hi PreProc guifg=#ffffff guibg=NONE ctermfg=white ctermbg=NONE cterm=NONE

@@ -248,6 +248,13 @@ nmap cinb cib
 vnoremap <silent> * :<C-u>call general#VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
+" location & quickfix window
+nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
+nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
+
+"Toggle between no numbers -> absolute -> relative line number
+nnoremap <C-n> :let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
+
 " tabs
 nnoremap th :tabfirst<CR>
 nnoremap tk :tabnext<CR>
@@ -399,6 +406,15 @@ set inccommand=nosplit
 " Better ex autocompletion
 set wildmenu
 set wildmode=list:longest,full
+
+" relative / hybrid line number switch
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 " enable the mouse
 " set mouse=a

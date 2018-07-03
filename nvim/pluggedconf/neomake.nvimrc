@@ -37,7 +37,7 @@ function! SetMessageType(entry)
 endfunction
 
 let g:neomake_php_enabled_makers = ['phpmd', 'phpcs', 'phpstan', 'php']
-let g:neomake_open_list = 2
+" let g:neomake_open_list = 2
 
 let g:neomake_php_phpcs_maker = {
         \ 'args': ['--report=csv', '--standard=PSR2'],
