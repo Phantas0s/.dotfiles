@@ -253,7 +253,7 @@ nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
 "Toggle between no numbers -> absolute -> relative line number
-nnoremap <C-n> :let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
+nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
 
 " tabs
 nnoremap th :tabfirst<CR>
