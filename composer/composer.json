@@ -16,8 +16,5 @@
         "phpbench/phpbench": "@dev",
         "povils/phpmnd": "^1.1",
         "wapmorgan/php-code-fixer": "^2.0"
-    },
-    "require-dev": {
-        "vimeo/psalm": "^1.0"
     }
 }

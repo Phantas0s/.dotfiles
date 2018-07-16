@@ -4,6 +4,12 @@ echo -e "${green} ...done\n"
 
 #---------------------------------------
 
+echo -e "${blue} Update composer global packages..."
+composer global update
+echo -e "${green} ...done\n"
+
+#---------------------------------------
+
 echo -e "${blue} Update go packages..."
 cd $DOTFILES/install/go
 for f in *.sh; do
