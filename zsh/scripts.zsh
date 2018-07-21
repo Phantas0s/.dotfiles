@@ -103,10 +103,19 @@ imgconvjpg() {
         filename=${1%\.*}
         magick convert $1 "${filename}.jpg"
     else
-        echo -e "You need to precise an image to convert!"
+        echo -e "You need to add an image to convert as param!"
     fi
 }
 
+imgconvpng() {
+    if [ ! -z "$1" ];
+    then
+        filename=${1%\.*}
+        magick convert $1 "${filename}.png"
+    else
+        echo -e "You need to add an image to convert as param!"
+    fi
+}
 
 gtD() {
     git tag -d $1

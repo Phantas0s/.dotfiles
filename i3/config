@@ -328,7 +328,7 @@ bar {
 }
 
 # lockscreen
-set $i3lockwall i3lock -i ~/wallpapers/snow_tree.png -t
+set $i3lockwall i3lock -i ~/wallpapers/forest.png -t
 
 # In order to cache an image
 # exec --no-startup-id betterlockscreen -u ~/wallpapers/snow_tree.png 

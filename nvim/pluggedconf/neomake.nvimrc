@@ -41,7 +41,7 @@ let g:neomake_php_enabled_makers = ['phpmd', 'phpcs', 'phpstan', 'php']
 let g:neomake_php_phpcs_maker = {
         \ 'args': ['--report=csv', '--standard=PSR2'],
         \ 'errorformat':
-            \ '%M%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity%.%#,'.
+            \ '%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity%.%#,'.
             \ '"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]%.%#',
         \ 'postprocess': function('SetWarningType'),
  \ }
