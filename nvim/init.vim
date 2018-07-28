@@ -75,7 +75,8 @@ Plug 'honza/vim-snippets'
 Plug 'gabrielelana/vim-markdown' " markdown plugin
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
-Plug 'Ron89/thesaurus_query.vim' 
+Plug 'SidOfc/mkdx'
+" Plug 'Ron89/thesaurus_query.vim' 
 
 " Autocomplete system
 
