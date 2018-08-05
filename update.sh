@@ -1,4 +1,5 @@
 echo -e "${blue} Update npm packages..."
+npm install -g npm
 npm update -g
 echo -e "${green} ...done\n"
 
