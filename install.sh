@@ -59,6 +59,7 @@ command -v "feh" >/dev/null && . $DOTFILES/install/install-feh.sh
 command -v "jrnl" >/dev/null && . $DOTFILES/install/install-jrnl.sh
 command -v "composer" >/dev/null && . $DOTFILES/install/install-composer.sh
 command -v "mycli" >/dev/null && . $DOTFILES/install/install-mycli.sh
+command -v "pgcli" >/dev/null && . $DOTFILES/install/install-pgcli.sh
 command -v "ranger" >/dev/null && . $DOTFILES/install/install-ranger.sh
 command -v "go" >/dev/null && . $DOTFILES/install/install-go.sh
 command -v "npm" >/dev/null && . $DOTFILES/install/install-javascript.sh

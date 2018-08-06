@@ -108,8 +108,3 @@ rm $HOME/nvim/ftplugin &>/dev/null
 rm $HOME/nvim/autoload/* &>/dev/null
 echo -e "${green}...done!\n"
 
-echo -e ""
-echo -e "${red}Delete the mycli config..."
-rm $HOME/.myclirc &>/dev/null
-echo -e "${green}...done!"
-
