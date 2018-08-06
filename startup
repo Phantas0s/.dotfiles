@@ -13,6 +13,9 @@ else
     SCRIPT_PATH="${0:A:h}"
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
     source $SCRIPT_PATH/zsh/scripts.zsh
+
+    # fzf goodies
+    command -v "fzf" >/dev/null && source $SCRIPT_PATH/zsh/scripts_fzf.zsh
 fi
 
 # source startup scripts

@@ -26,7 +26,6 @@ autocmd FileType go nmap <buffer><leader>d :GoDeclsDir<cr>
 
 autocmd FileType go nmap <buffer><leader>gr <plug>(go-run)
 autocmd FileType go nmap <buffer><leader>gt <plug>(go-test)
-autocmd FileType go nmap <buffer><leader>gi <plug>(go-install)
 autocmd FileType go nmap <buffer><leader>gc <plug>(go-coverage-toggle)
 autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
 autocmd FileType go nmap <buffer><leader>gtf <plug>(go-test-func)
@@ -36,6 +35,8 @@ autocmd FileType go nmap <buffer><leader>grn <plug>(go-rename)
 autocmd Filetype go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
 autocmd Filetype go nmap <buffer><leader>tub <Plug>(go-alternate-split)
 autocmd Filetype go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
+
+autocmd FileType go nmap <buffer><leader>gi <plug>(go-implements)
 
 autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
