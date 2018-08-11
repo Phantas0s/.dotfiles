@@ -78,6 +78,9 @@ Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 Plug 'SidOfc/mkdx'
 " Plug 'Ron89/thesaurus_query.vim' 
 
+" nginx
+Plug 'chr4/nginx.vim'
+
 " Autocomplete system
 
 " php autocompletion engine and tools
@@ -143,6 +146,12 @@ Plug 'sjl/gundo.vim'
 Plug 'bfredl/nvim-miniyank'
 " close the current buffer
 Plug 'moll/vim-bbye'
+
+" systemd syntax and error
+Plug 'wgwoods/vim-systemd-syntax'
+
+" syntax for toml
+Plug 'cespare/vim-toml'
 
 " fzf - poweful fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
