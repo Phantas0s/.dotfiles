@@ -1,20 +1,58 @@
-# updatesys - Update all go binaries installed via the install script + update via aurman if installed or otherwise pacman
+#################
+# DOCUMENTATION #
+#################
 
-# extract <archive_file> - Extract the archive depending on its type
-# compress <folder> - Compress a folder in tar.gz
+# -- SYSTEM -- #
 
-# screenshot <area> win|scr|area - Compress a folder in tar.gz
-# imgsize <img> - display width / height of an image
-# imgresize <source> <width> - resize and create a new image <source>_<width> following aspect ratio
-# imgconvjpg <source> - convert source to a jpg image
+# updatesys 
+# Update all go binaries installed via the install script + update via aurman if installed or otherwise pacman
+
+# dback <disk source> <disk output>
+# Disk Backup. Use dd to copy an entire disk source to another disk output. Ask questions to be sure you know what you are doing :) way safer than using only dd
+
+# sshcreate <name> 
+# Create a new ssh at ~/.ssh/<name> with chmod 700
+
+# -- ARCHIVES -- #
+
+# extract <archive_file>
+# Extract the archive depending on its type
+
+# compress <folder>
+# Compress a folder in tar.gz
+
+# --- DATABASE --- #
+
+# postgdump <table_name> `<user>` `<host>`
+# Create a dump of a database. Include clean up and create dabatase when imported back. WILL OVERWRITE ALL DATA!
+# The file created will be database_name.sql
+# User and host are not mandatory, default `postgres` and `localhost`
+
+# postgimport <table_name> `<user>` `<host>`
+# Import a table. If the file is called `database.sql`, it will try to import into the `database` database
+
+# -- IMAGES ---
+
+# screenshot <area> win|scr|area
+# Take a screenshot of the window / screen / area
+
+# imgsize <img>
+# Display width / height of an image
+
+# imgresize <source> <width>
+# Resize and create a new image <source>_<width> following aspect ratio
+
+# imgconvjpg <source>
+# Convert source to a jpg image
 
 # gtD <name> - Delete a tag locally AND on the remote origin
 
-# sshcreate <name> - create a new ssh at ~/.ssh/<name> with chmod 700
 
-# dback <disk source> <disk output>- Disk Backup. Use dd to copy an entire disk to another. Include:
-# - Dialog Message "are you sure?"
-# - Dialog Progress bar
+# -- LOOPLINE ONLY --
+
+# thriftgen() - Generate thrift config via thrift on local (docker image doesn't work...)
+
+# -- FUN -- #
 
 # matrix - Display the MATRIX
 
@@ -176,6 +214,73 @@ blimg() {
     fi
 }
 
+postgdump() {
+    USER="postgres"
+    HOST="localhost"
+    if [ ! -z $1 ];
+    then
+        if [ -f "${1}.sql" ];
+        then
+            rm -i "${1}.sql"
+        fi
+
+        if [ $# = 1 ];
+        then
+            pg_dump -c -U $USER -h $HOST $1 | pv --progress > "${1}.sql"
+            echo $1
+        fi
+
+        if [ $# = 2 ];
+        then
+            pg_dump -c -U $2 -h $HOST $1 | pv --progress > "${1}.sql"
+            echo $1
+        fi
+
+        if [ $# = 3 ];
+        then
+            pg_dump -c -U $2 -h $3 $1 | pv --progress > "${1}.sql"
+            echo $1
+        fi
+    fi
+
+    if [ $# = 0 ]; 
+    then
+        echo "You need at least to provide the database name"
+    fi
+}
+
+postgimport() {
+    USER="postgres"
+    HOST="localhost"
+    if [ ! -z $1 ];
+    DB=${1%\.*}
+    then
+        # sed -i "1s/^/CREATE DATABASE $DB;\n/" $1
+        if [ $# = 1 ];
+        then
+            pv --progress ${1} | psql -U $USER -h $HOST $1 -d $DB
+            echo $1
+        fi
+
+        if [ $# = 2 ];
+        then
+            pv --progress ${1} | psql -U $1 -h $HOST $1 -d $DB
+            echo $1
+        fi
+
+        if [ $# = 3 ];
+        then
+            pv --progress ${1} | psql -U $1 -h $2 $1 -d $DB
+            echo $1
+        fi
+    fi
+
+    if [ $# = 0 ]; 
+    then
+        echo "You need at least to provide the database name"
+    fi
+}
+
 matrix () {
     lines=$(tput lines)
     cols=$(tput cols)
@@ -207,6 +312,10 @@ matrix () {
     echo $lines $cols $(( $RANDOM % $cols)) $(( $RANDOM % 72 ))
     sleep 0.05
     done | awk "$awkscript"
+}
+
+pgdump() {
+    pg_dump -U postgres -h localhost x_loc_0bdf08de > pulsecheck_service_test.sql 
 }
 
 # Loopline system (my job) related
