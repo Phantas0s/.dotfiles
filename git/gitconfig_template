@@ -26,3 +26,5 @@
   dump = cat-file -p
 [init]
 	templatedir = /home/hypnos/.dotfiles/git/templates
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
