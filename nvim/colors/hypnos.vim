@@ -53,14 +53,15 @@ hi Operator guifg=#a8a8a8 guibg=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 
 " VDebug plugin
 hi DbgCurrentLine guifg=#ffffff guibg=#d75f5f ctermfg=white ctermbg=9
-hi DbgCurrentSign guifg=#d75f5f guibg=#303030 ctermfg=9 ctermbg=236
+hi DbgCurrentSign guifg=#d75f5f guibg=#303030 ctermfg=red ctermbg=236
 hi DbgBreakptLine guifg=#ffffff guibg=#303030 ctermfg=white ctermbg=236
-hi DbgBreakptSign guifg=#d75f5f guibg=#303030 ctermfg=9 ctermbg=236
+hi DbgBreakptSign guifg=#d75f5f guibg=#303030 ctermfg=red ctermbg=236
 
-" Signify plugin
-hi DiffDelete guifg=#870000 guibg=#303030 ctermfg=88 ctermbg=236 cterm=NONE
+" Signify plugin + vim diff
+hi DiffDelete guifg=#d75f5f guibg=#303030 ctermfg=red ctermbg=236 cterm=NONE
 hi DiffChange guifg=#87afaf guibg=#303030 ctermfg=blue ctermbg=236 cterm=NONE
-hi DiffAdd guifg=#ffffff guibg=#303030 ctermfg=5 ctermbg=236 cterm=NONE
+hi DiffAdd guifg=#ffffff guibg=#303030 ctermfg=white ctermbg=236 cterm=NONE
+hi DiffText guifg=#ffd75f guibg=#303030 ctermfg=yellow ctermbg=236 cterm=NONE
 
 " Neomake plugin
 hi NeomakeWarningSign ctermfg=yellow ctermbg=236
@@ -89,7 +90,6 @@ hi SpellCap guifg=#303030 guibg=#ffd75f ctermfg=236 ctermbg=yellow cterm=bold
 "hi Include guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi StatusLineNC guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=235 ctermbg=66 cterm=bold
 "hi NonText guifg=#5E6C70 guibg=NONE guisp=NONE gui=italic ctermfg=66 ctermbg=NONE cterm=NONE
-"hi DiffText guifg=NONE guibg=#492224 guisp=#492224 gui=NONE ctermfg=NONE ctermbg=52 cterm=NONE
 "hi ErrorMsg guifg=#A1A6A8 guibg=#912C00 guisp=#912C00 gui=NONE ctermfg=248 ctermbg=88 cterm=NONE
 "hi Debug guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi PMenuSbar guifg=NONE guibg=#848688 guisp=#848688 gui=NONE ctermfg=NONE ctermbg=102 cterm=NONE
