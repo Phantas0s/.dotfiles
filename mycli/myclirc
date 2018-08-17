@@ -118,9 +118,17 @@ Token.Toolbar.Arg.Text = nobold
 
 # Favorite queries.
 [favorite_queries]
+
+# ADD INDEX
+# $1 table name
+# $2 index name
 ikey = '''ALTER TABLE `$1`
 ADD INDEX `IDX_$1_$2` (`$2` ASC)'''
 
+# ADD FOREIGN KEY
+# $1 table name
+# $2 index name
+# $3 refererance table name name
 fkey = '''ALTER TABLE `$1`
 ADD CONSTRAINT `FK_$1_$2`
   FOREIGN KEY (`$2`)

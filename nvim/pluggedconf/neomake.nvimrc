@@ -150,8 +150,8 @@ let g:neomake_go_gometalinter_maker = {
             \ }
 
 let g:go_fmt_options = {
-            \ 'gofmt': '-s',
-            \ }
+\ 'gofmt': '-s',
+\ }
 
 "-----------------
 " SQL
