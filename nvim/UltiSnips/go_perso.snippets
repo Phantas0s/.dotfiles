@@ -55,3 +55,9 @@ snippet /^package/ "Package declaration" r
 package ${1:main}
 $2
 endsnippet
+
+snippet switcht "Switch type statement" b
+switch ${1:expression}${1/(.+)/ /} := ${2:var}.(Type) {
+case ${0:int}
+}
+endsnippet

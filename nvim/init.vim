@@ -75,6 +75,7 @@ Plug 'honza/vim-snippets'
 Plug 'gabrielelana/vim-markdown' " markdown plugin
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
+Plug 'rhysd/vim-grammarous'
 Plug 'SidOfc/mkdx'
 " Plug 'Ron89/thesaurus_query.vim' 
 
@@ -150,8 +151,8 @@ Plug 'moll/vim-bbye'
 " systemd syntax and error
 Plug 'wgwoods/vim-systemd-syntax'
 
-" syntax for toml
-Plug 'cespare/vim-toml'
+" emmet for html
+Plug 'mattn/emmet-vim'
 
 " fzf - poweful fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -262,7 +263,7 @@ vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
-"Toggle between no numbers -> absolute -> relative line number
+"Toggle between absolute -> relative line number
 nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
 
 " tabs

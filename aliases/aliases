@@ -161,6 +161,8 @@ alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
 alias dockce='docker-compose run --rm'
 alias docker-compose-dev='docker-compose -f docker-compose-dev.yml'
 
+alias sshprodql='ssh -Nf prod -L 3306:localhost:3306'
+
 ##############
 ## PROJECTS ##
 ##############
@@ -177,3 +179,6 @@ alias gwork="$GOPATH/src/github.com/Phantas0s"
 alias gsrc="$GOPATH/src/"
 # golang gin
 alias gbin="$GOPATH/bin/"
+
+
+
