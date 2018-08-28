@@ -19,9 +19,11 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # PATH for composer global install
 PATH="$HOME/composer/vendor/bin:$PATH"
 
-# PATH for Go
+# PATH for Golang
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
+# Activate gocache by default
+export GOCACHE=on
 
 # PATH for go binaries
 PATH="$GOBIN:$PATH"
