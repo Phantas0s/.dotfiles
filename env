@@ -22,8 +22,7 @@ PATH="$HOME/composer/vendor/bin:$PATH"
 # PATH for Golang
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
-# Activate gocache by default
-export GOCACHE=on
+export GOCACHE="$HOME/.cache/go-build"
 
 # PATH for go binaries
 PATH="$GOBIN:$PATH"
