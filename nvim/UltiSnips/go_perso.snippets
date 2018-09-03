@@ -21,12 +21,12 @@ func Test_${1:Func}(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			${7:actual}, err := $1(${5:params})
 			if (err != nil) != tc.wantErr {
-				t.Errorf("Error '%s' even if wantErr is %t", err, tc.wantErr)
+				t.Errorf("Error '%v' even if wantErr is %t", err, tc.wantErr)
 				return
 			}
 
 			if tc.wantErr == false && tc.${6:expected} != $7 {
-				t.Errorf("Expected %s, actual %s", tc.$6, $7)
+				t.Errorf("Expected %v, actual %v", tc.$6, $7)
 			}
 		})
 	}
