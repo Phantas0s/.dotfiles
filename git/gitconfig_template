@@ -28,3 +28,7 @@
 	templatedir = /home/hypnos/.dotfiles/git/templates
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[merge]
+    tool = nvim
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"

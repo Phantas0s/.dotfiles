@@ -73,9 +73,13 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # i3 config file (v4)
 
+
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 # set the modifier (Mod4: cmd)
 set $mod Mod4
+
+# Mouse doesn't jump from one screen to another
+mouse_warping none
 
 bindsym $mod+u border none
 # Font for window titles. Will also be used by the bar unless a different font
