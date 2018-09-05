@@ -82,20 +82,19 @@ Plug 'SidOfc/mkdx'
 " nginx
 Plug 'chr4/nginx.vim'
 
-" Autocomplete system
+" autocompletion
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-ultisnips'
+Plug 'phpactor/ncm2-phpactor'
+Plug 'ncm2/ncm2-go'
+Plug 'ncm2/ncm2-tern'
 
-" php autocompletion engine and tools
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'kristijanhusak/deoplete-phpactor',  {'for': 'php'}
-" Plug 'zchee/deoplete-go', {'for': 'go'} " autocompletion
-" Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
-
+" php
 Plug 'joonty/vdebug'
-
-Plug 'roxma/ncm-phpactor',  {'for': 'php'}
-Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
