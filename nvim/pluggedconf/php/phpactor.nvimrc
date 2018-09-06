@@ -7,7 +7,7 @@ nnoremap <leader>u :call phpactor#UseAdd()<cr>
 nnoremap <leader>rmc :call phpactor#MoveFile()<cr>
 nnoremap <leader>rcc :call phpactor#CopyFile()<cr>
 
-nnoremap <leader>rmd :call phpactor#FindReferences()<cr>
+nnoremap <leader>rmr :call phpactor#FindReferences()<cr>
 
 nnoremap <leader>ric :call PHPModify("implement_contracts")<cr>
 nnoremap <leader>rap :call PHPModify("add_missing_properties")<cr>
