@@ -18,7 +18,7 @@ alias pg='ping 8.8.8.8'
 alias bc="bc -q"
 
 # bat better than cat
-alias cat="bat"
+alias cat='bat'
 
 # apt-get
 alias agi='sudo apt-fast install'
@@ -27,19 +27,19 @@ alias agu='sudo apt-fast update'
 alias acs='apt-cache search'
 
 # pacman
-alias paci='sudo pacman -S' // install
-alias pacs='sudo pacman -Ss' // search
-alias pacu='sudo pacman -Syu' // update
-alias pacr='sudo pacman -R' // remove package but not dependencies
-alias pacrr='sudo pacman -Rs' // remove package with unused dependencies by other softwares
-alias pacrc='sudo pacman -Sc' // remove pacman's cache
+alias paci='sudo pacman -S' # install
+alias pacs='sudo pacman -Ss' # search
+alias pacu='sudo pacman -Syu' # update
+alias pacr='sudo pacman -R' # remove package but not dependencies
+alias pacrr='sudo pacman -Rs' # remove package with unused dependencies by other softwares
+alias pacrc='sudo pacman -Sc' # remove pacman's cache
 
 # aurman
 alias auri='sudo aurman -S'
 alias aurs='sudo aurman -Ss'
 alias auru='sudo aurman -Syu'
 alias aurr='sudo aurman -R'
-alias aurrr='sudo aurman -Rs' 
+alias aurrr='sudo aurman -Rs'
 
 # empty cache from deprecated packages
 alias pacc='sudo pacman -Sc'
@@ -78,9 +78,6 @@ alias la='ls -alh'
 # wifi netctl
 alias wifi='sudo wifi-menu -o'
 alias wifi-home='sudo netctl start wlp3s0home'
-
-# xev (key name)
-# alias xev='xev | awk -F\'[ )]+\' \'/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
 # go tools
 alias gob="go build"
@@ -183,6 +180,3 @@ alias gwork="$GOPATH/src/github.com/Phantas0s"
 alias gsrc="$GOPATH/src/"
 # golang gin
 alias gbin="$GOPATH/bin/"
-
-
-
