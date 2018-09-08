@@ -72,11 +72,13 @@ Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" markdown - writing
 Plug 'gabrielelana/vim-markdown' " markdown plugin
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
-Plug 'rhysd/vim-grammarous'
-Plug 'SidOfc/mkdx'
+Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } 
+Plug 'SidOfc/mkdx', { 'for': 'markdown' }
+Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' } " previews
 " Plug 'Ron89/thesaurus_query.vim' 
 
 " nginx
