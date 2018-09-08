@@ -18,7 +18,7 @@ alias pg='ping 8.8.8.8'
 alias bc="bc -q"
 
 # bat better than cat
-alias cat='bat'
+# alias cat='bat'
 
 # apt-get
 alias agi='sudo apt-fast install'
