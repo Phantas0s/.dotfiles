@@ -76,9 +76,10 @@ Plug 'honza/vim-snippets'
 Plug 'gabrielelana/vim-markdown' " markdown plugin
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
-Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } 
-Plug 'SidOfc/mkdx', { 'for': 'markdown' }
-Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' } " previews
+Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
+Plug 'SidOfc/mkdx', { 'for': 'markdown' } " lot of keystroke for markdown
+Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' } " previews markdown with CTRL+P
+Plug 'reedes/vim-wordy' "veridy quality of writting (see :Wordy)
 " Plug 'Ron89/thesaurus_query.vim' 
 
 " nginx

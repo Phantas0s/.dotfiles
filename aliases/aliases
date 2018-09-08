@@ -17,6 +17,9 @@ alias pg='ping 8.8.8.8'
 # calculator bc
 alias bc="bc -q"
 
+# bat better than cat
+alias cat="bat"
+
 # apt-get
 alias agi='sudo apt-fast install'
 alias agr='sudo apt-fast remove'
