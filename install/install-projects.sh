@@ -58,11 +58,11 @@ then
         cd -
     fi
 
-    if [ ! -d $GOPATH/src/github.com/Phantas0s/playgound ];
+    if [ ! -d $GOPATH/src/github.com/Phantas0s/playground ];
     then
         echo -e "Installing the project Go in practice in workspace for reference"
         cd $HOME/workspace
-        git clone git@github.com:Phantas0s/playgound.git
+        git clone git@github.com:Phantas0s/playground.git
         cd -
     fi
 
