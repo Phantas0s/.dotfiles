@@ -20,6 +20,16 @@ if [ -f $HOME/.ssh/github ];
             cd -
         fi
 
+        if [ ! -d $GOPATH/src/github.com/Phantas0s/devdash ];
+        then
+            echo -e "Installing the project Devdash in workspace"
+            cd $GOPATH/src/github.com/Phantas0s
+            git clone git@github.com:Phantas0s/devdash.git
+            go get ./devdash
+            go install ./devdash
+            cd -
+        fi
+
         if [ ! -d $GOPATH/src/github.com/Phantas0s/testomatic ];
         then
             echo -e "Installing the project Testomatic in workspace"
@@ -30,11 +40,11 @@ if [ -f $HOME/.ssh/github ];
             cd -
         fi
 
-        if [ ! -d $GOPATH/src/github.com/Phantas0s/go-in-practice ];
+        if [ ! -d $GOPATH/src/github.com/Phantas0s/playgound ];
         then
             echo -e "Installing the project Go in practice in workspace for reference"
-            cd $GOPATH/src/github.com/Phantas0s
-            git clone git@github.com:Phantas0s/go-in-practice.git
+            cd $HOME/workspace
+            git clone git@github.com:Phantas0s/playgound.git
             cd -
         fi
 
