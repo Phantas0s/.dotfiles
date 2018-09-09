@@ -29,7 +29,7 @@ vman() {
 
 if [[ "$(tty)" = "/dev/tty1" ]];
 then
-    pgrep i3 || exec startx
+    pgrep i3 || exec ssh-agent startx
 fi
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'

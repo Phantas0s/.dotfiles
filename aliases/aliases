@@ -6,7 +6,7 @@
 alias salias="source ~/.dotfiles/aliases/aliases"
 
 # run ssh-agent with x session
-alias startx='ssh-agent startx'
+# alias startx='ssh-agent startx'
 
 # sh
 alias sh='zsh'

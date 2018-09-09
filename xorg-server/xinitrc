@@ -5,7 +5,7 @@ urxvtd -o -q -f
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 # Run ssh-agent
-trap 'test -n "$SSH_AUTH_SOCK" && eval `/usr/bin/ssh-agent -k`' 0
+# trap 'test -n "$SSH_AUTH_SOCK" && eval `/usr/bin/ssh-agent -k`' 0
 
 # maps caps lock to escape for vim 
 e setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
