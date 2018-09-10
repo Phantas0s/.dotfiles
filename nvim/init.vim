@@ -58,6 +58,8 @@ Plug 'chaoren/vim-wordmotion'
 
 " Match more stuff with % (html tag, LaTeX...)
 Plug 'tmhedberg/matchit'
+" Even more matchup!
+Plug 'andymass/vim-matchup'
 " Swap two arguments in a function
 Plug 'PeterRincker/vim-argumentative'
 
