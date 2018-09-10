@@ -74,26 +74,18 @@ Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" markdown - writing
 Plug 'gabrielelana/vim-markdown' " markdown plugin
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
-Plug 'rhysd/vim-grammarous'
-Plug 'SidOfc/mkdx'
+Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
+Plug 'SidOfc/mkdx', { 'for': 'markdown' } " lot of keystroke for markdown
+Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' } " previews markdown with CTRL+P
+Plug 'reedes/vim-wordy' "veridy quality of writting (see :Wordy)
 " Plug 'Ron89/thesaurus_query.vim' 
 
 " nginx
 Plug 'chr4/nginx.vim'
-
-" autocompletion
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-ultisnips'
-Plug 'phpactor/ncm2-phpactor'
-Plug 'ncm2/ncm2-go'
-Plug 'ncm2/ncm2-tern'
 
 " php
 Plug 'joonty/vdebug'
@@ -108,6 +100,18 @@ Plug '2072/php-indenting-for-vim', {'for': 'php'}
 
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
+
+" autocompletion
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-ultisnips'
+Plug 'phpactor/ncm2-phpactor'
+Plug 'ncm2/ncm2-go'
+Plug 'ncm2/ncm2-tern'
+" Plug 'ncm2/ncm2-tagprefix'
 
 " golang development
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
@@ -435,6 +439,6 @@ augroup END
 " set mouse=a
 
 " ncm debugging
-" let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
-" let $NVIM_NCM_LOG_LEVEL="DEBUG"
-" let $NVIM_NCM_MULTI_THREAD=0
+ " let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
+ " let $NVIM_NCM_LOG_LEVEL="DEBUG"
+ " let $NVIM_NCM_MULTI_THREAD=0

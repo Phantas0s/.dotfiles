@@ -56,6 +56,7 @@ command -v "nvim" >/dev/null && . $DOTFILES/install/install-nvim.sh
 command -v "tmux" >/dev/null && . $DOTFILES/install/install-tmux.sh
 command -v "dunst" >/dev/null && . $DOTFILES/install/install-dunst.sh
 command -v "feh" >/dev/null && . $DOTFILES/install/install-feh.sh
+command -v "fzf" >/dev/null && . $DOTFILES/install/install-fzf.sh
 command -v "jrnl" >/dev/null && . $DOTFILES/install/install-jrnl.sh
 command -v "composer" >/dev/null && . $DOTFILES/install/install-composer.sh
 command -v "mycli" >/dev/null && . $DOTFILES/install/install-mycli.sh

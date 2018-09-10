@@ -14,4 +14,4 @@
 #see install/install-from-cloud.sh
 
 #DOTFILES_CLOUD="$HOME/nextcloud/development/dotfiles_projects/NAME" #private configurations from my personnal cloud
-#WALLPAPER="$HOME/nextcloud/wallpaper" #wallpaper folder
+#WALLPAPER_PATH="$HOME/nextcloud/wallpaper" #wallpaper folder
