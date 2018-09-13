@@ -119,6 +119,8 @@ Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 Plug 'buoto/gotests-vim', {'for': 'go'}
 
+" generate uuid
+Plug 'kburdett/vim-nuuid'
 
 " twig
 Plug 'lumiliet/vim-twig', {'for': 'twig'}
@@ -128,6 +130,7 @@ Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
 " Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
+Plug 'leafgarland/typescript-vim'
 
 " For react
 Plug 'mxw/vim-jsx'
@@ -165,6 +168,7 @@ Plug 'junegunn/fzf.vim'
 
 " allow multisearch in current directory / multi replace as well
 Plug 'wincent/ferret'
+Plug 'brooth/far.vim'
 
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
@@ -198,6 +202,9 @@ call plug#end()
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
+
+" for nuuid
+let g:nuuid_no_mappings = 1
 
 if exists("g:did_load_filetypes")
   filetype off

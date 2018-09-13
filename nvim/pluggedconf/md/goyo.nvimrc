@@ -1,1 +1,1 @@
-nnoremap <buffer><leader>f :Goyo<cr>
+nnoremap <buffer><leader>F :Goyo<cr>
