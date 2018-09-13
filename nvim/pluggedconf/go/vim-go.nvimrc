@@ -34,8 +34,8 @@ autocmd FileType go nmap <buffer><leader>gtc <plug>(go-coverage-toggle)
 
 autocmd FileType go nmap <buffer><leader>grn <plug>(go-rename)
 
-autocmd FileType go nmap <buffer><leader>gat <plug>(go-add-tags)
-autocmd FileType go nmap <buffer><leader>grt <plug>(go-remove-tags)
+autocmd FileType go nmap <buffer><leader>gat :GoAddTags<CR>
+autocmd FileType go nmap <buffer><leader>grt :GoRemoveTags<CR>
 
 autocmd Filetype go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
 autocmd Filetype go nmap <buffer><leader>tub <Plug>(go-alternate-split)
