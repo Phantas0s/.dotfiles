@@ -272,7 +272,7 @@ for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 # Terminal scratchpad
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad -e tmux -2 new-session -d -s scratchpad \; new-window -n vim 'nvim +e /tmp/nvim-tmp' \; attach-session -d -t scratchpad\;
+exec urxvtc -name urxvt_scratchpad -e tmux -2 new-session -d -s scratchpad \; new-window -n vim 'nvim +e /tmp/nvim-tmp.md' \; attach-session -d -t scratchpad\;
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
