@@ -9,6 +9,7 @@ hi CursorLine guifg=NONE guibg=#303030 ctermfg=NONE ctermbg=236 cterm=bold
 hi CursorLineNr guifg=#d75f5f guibg=#121212 ctermfg=red ctermbg=236 cterm=bold
 
 hi Search guifg=#ffd75f guibg=#080808 ctermfg=yellow ctermbg=232 cterm=bold
+hi SpellRare guifg=#ffd75f guibg=#080808 ctermfg=yellow ctermbg=232 cterm=bold
 hi PreProc guifg=#ffffff guibg=NONE ctermfg=white ctermbg=NONE cterm=NONE
 hi Visual guifg=#d75f5f guibg=#121212 ctermfg=red ctermbg=236 cterm=bold
 hi Statement guifg=#87afaf guibg=NONE ctermfg=blue ctermbg=NONE cterm=NONE
@@ -81,7 +82,6 @@ hi SpellCap guifg=#303030 guibg=#ffd75f ctermfg=236 ctermbg=yellow cterm=bold
 "hi LocalVariable -- no settings --
 "hi CTagsClass -- no settings --
 "hi clear -- no settings --
-"hi IncSearch guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
 "hi WildMenu guifg=NONE guibg=#A1A6A8 guisp=#A1A6A8 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
 "hi SpecialComment guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Typedef guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
@@ -101,7 +101,6 @@ hi SpellCap guifg=#303030 guibg=#ffd75f ctermfg=236 ctermbg=yellow cterm=bold
 "hi StatusLine guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=bold ctermfg=235 ctermbg=1 cterm=bold
 "hi Label guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=bold
 "hi PMenuSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
-"hi SpellRare guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 "hi Character guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
 "hi VisualNOS guifg=#192224 guibg=#F9F9FF guisp=#F9F9FF gui=underline ctermfg=235 ctermbg=189 cterm=underline
 "hi ModeMsg guifg=#F9F9F9 guibg=#192224 guisp=#192224 gui=bold ctermfg=white ctermbg=235 cterm=bold

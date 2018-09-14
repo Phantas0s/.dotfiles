@@ -1,9 +1,12 @@
 autocmd FileType markdown nmap <buffer><leader>go <plug>(grammarous-move-to-info-window)
+autocmd FileType markdown nmap <buffer><leader>gc <plug>(grammarous-close-info-window)
+autocmd FileType markdown nmap <buffer><leader>gr <plug>(grammarous-reset)
+
+" <Plug>(grammarous-close-info-window)
 " autocmd FileType markdown nmap <buffer><leader>go <plug>(grammarous-open-info-window)
 " <Plug>(grammarous-reset)
 " <Plug>(grammarous-fixit)
 " <Plug>(grammarous-fixall)
-" <Plug>(grammarous-close-info-window)
 " <Plug>(grammarous-remove-error)
 " <Plug>(grammarous-disable-rule)
 " <Plug>(grammarous-move-to-next-error)
