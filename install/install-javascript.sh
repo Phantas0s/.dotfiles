@@ -25,5 +25,16 @@ fi
 
 ln -s $DOTFILES/javascript/.tern-project $HOME
 ln -s $DOTFILES/javascript/.eslintrc.json $HOME
+echo -e "${green}...done!\n"
 
+echo -e "${blue}Install typescript tools..."
+if [ ! -d ~/.node_modules/lib/node_modules/neovim ];
+then
+    npm i -g neovim
+fi
+
+if [ ! -d ~/.node_modules/lib/node_modules/typescript ];
+then
+    npm i -g typescript
+fi
 echo -e "${green}...done!\n"

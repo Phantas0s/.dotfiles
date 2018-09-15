@@ -76,12 +76,14 @@ Plug 'honza/vim-snippets'
 
 " markdown - writing
 Plug 'gabrielelana/vim-markdown' " markdown plugin
+Plug 'SidOfc/mkdx', { 'for': 'markdown' } " lot of keystroke for markdown
+
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
+
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
-Plug 'SidOfc/mkdx', { 'for': 'markdown' } " lot of keystroke for markdown
-Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' } " previews markdown with CTRL+P
 Plug 'reedes/vim-wordy' "veridy quality of writting (see :Wordy)
+Plug 'reedes/vim-lexical' " dictionnary, thesaurus...
 " Plug 'Ron89/thesaurus_query.vim' 
 
 " nginx
@@ -130,7 +132,9 @@ Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
 " Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
-Plug 'leafgarland/typescript-vim'
+
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " For react
 Plug 'mxw/vim-jsx'
