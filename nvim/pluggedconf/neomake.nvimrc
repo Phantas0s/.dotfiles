@@ -6,7 +6,7 @@ let g:neomake_warning_sign = {
             \ }
 let g:neomake_message_sign = {
             \   'text': '',
-            \   'texthl': 'NeomakeMessageSign',
+            \   'texthl': 'NeomakeWarningSign',
             \ }
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
@@ -133,21 +133,21 @@ let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
 " \ }
 
 let g:neomake_go_gometalinter_maker = {
-            \ 'exe': 'zb',
-            \ 'args': [
-            \   'lint',
-            \   '--exclude=unexported',
-            \   '--fast',
-            \ ],
-            \ 'cwd': '%:h',
-            \ 'append_file': 0,
-            \ 'errorformat':
-            \   '%E%f:%l:%c:%trror: %m,' .
-            \   '%W%f:%l:%c:%tarning: %m,' .
-            \   '%E%f:%l::%trror: %m,' .
-            \   '%W%f:%l::%tarning: %m',
-            \ 'postprocess': function('SetWarningType')
-            \ }
+        \ 'exe': 'zb',
+        \ 'args': [
+        \   'lint',
+        \   '--exclude=unexported',
+        \   '--fast',
+        \ ],
+        \ 'cwd': '%:h',
+        \ 'append_file': 0,
+        \ 'errorformat':
+        \   '%E%f:%l:%c:%trror: %m,' .
+        \   '%W%f:%l:%c:%tarning: %m,' .
+        \   '%E%f:%l::%trror: %m,' .
+        \   '%W%f:%l::%tarning: %m',
+        \ 'postprocess': function('SetWarningType')
+        \ }
 
 let g:go_fmt_options = {
 \ 'gofmt': '-s',
