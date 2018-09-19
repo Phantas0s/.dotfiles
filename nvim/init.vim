@@ -131,10 +131,9 @@ Plug 'lumiliet/vim-twig', {'for': 'twig'}
 Plug 'pangloss/vim-javascript'
 " need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
-" Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
 Plug 'leafgarland/typescript-vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " For react
 Plug 'mxw/vim-jsx'
