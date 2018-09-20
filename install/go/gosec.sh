@@ -1,0 +1,3 @@
+echo -e "${blue}Installing / Updating gosec for Go"
+go get -u github.com/securego/gosec/cmd/gosec/...
+echo -e "${green}...done\n"
