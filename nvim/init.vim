@@ -168,8 +168,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " allow multisearch in current directory / multi replace as well
-" Plug 'wincent/ferret'
-Plug 'brooth/far.vim'
+Plug 'wincent/ferret'
 
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
