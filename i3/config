@@ -220,7 +220,7 @@ assign [instance="evince"] → $documents
 assign [instance="FreeMind"] → $mindmap
 
 # start softwares and command lines in workspaces
-exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc -e tmux -2 new-session -A -s main
+exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc
 
 ####################
 # restart / reload #

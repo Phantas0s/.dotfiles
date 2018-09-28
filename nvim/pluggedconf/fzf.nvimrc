@@ -90,4 +90,5 @@ let g:fzf_colors =
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-b': 'split',
-  \ 'ctrl-v': 'vsplit' }
+  \ 'ctrl-v': 'vsplit' 
+  \ }
