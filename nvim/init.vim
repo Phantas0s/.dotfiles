@@ -57,8 +57,6 @@ Plug 'wellle/targets.vim'
 Plug 'chaoren/vim-wordmotion'
 
 " Match more stuff with % (html tag, LaTeX...)
-Plug 'tmhedberg/matchit'
-" Even more matchup!
 Plug 'andymass/vim-matchup'
 " Swap two arguments in a function
 Plug 'PeterRincker/vim-argumentative'
@@ -170,8 +168,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " allow multisearch in current directory / multi replace as well
-" Plug 'wincent/ferret'
-Plug 'brooth/far.vim'
+Plug 'wincent/ferret'
 
 " display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
@@ -452,3 +449,5 @@ augroup END
  " let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
  " let $NVIM_NCM_LOG_LEVEL="DEBUG"
  " let $NVIM_NCM_MULTI_THREAD=0
+
+inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
