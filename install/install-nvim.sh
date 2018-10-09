@@ -30,7 +30,7 @@ mkdir -p $HOME/nvim/after/indent
 mkdir -p $HOME/nvim/lua
 
 # Install Godoctor for vim
-if [ ! -f $HOME/nvim/godoctor.vim ]
+if [ ! -d $HOME/nvim/godoctor.vim ]
   then
     git clone https://github.com/godoctor/godoctor.vim $HOME/nvim/godoctor.vim
 fi

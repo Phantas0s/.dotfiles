@@ -7,8 +7,6 @@
 !!!!!!!!!!!!!!!!!!
 
 URxvt*font: xft:Inconsolata Nerd Font:style=Medium:size=14:pixelsize=16:antialias=true
-!URxvt*font: xft:Inconsolata Nerd Font:style=Medium:size=14:pixelsize=16:antialias=true, xft:DejaVuSansMono Nerd Font Mono:style=Book
-!URxvt*boldFont: xft:Inconsolata Nerd Font:style=Bold:size=14:pixelsize=16:antialias=true
 
 URxvt*intensityStyles: true
 URxvt*linespace: 0

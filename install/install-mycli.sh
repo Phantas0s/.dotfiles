@@ -1,5 +1,5 @@
 echo -e ""
-echo -e "${red}Delete the mycli config..."
+echo -e "${red}Delete mycli config..."
 rm $HOME/.myclirc &>/dev/null
 echo -e "${green}...done!"
 

@@ -42,6 +42,27 @@ if err != nil {
 }
 endsnippet
 
+snippet rerr "Basic error handling return err" b
+if err != nil {
+	return err
+}
+${1}
+endsnippet
+
+snippet werr "Return wrapped error" b
+if err != nil {
+	return errors.Wrap(err, "${1}")
+}
+${1}
+endsnippet
+
+snippet wferr "Return wrapped format error" b
+if err != nil {
+	return errors.Wrapf(err, "${1}")
+}
+${1}
+endsnippet
+
 snippet errw "Basic error handling with wrapping" b
 if err != nil {
 	error.wrapf(err, "${1}")
@@ -53,7 +74,7 @@ c.AbortWithError(http.StatusInternalServerError, ${1})
 return
 endsnippet
 
-snippet /^package/ "Package declaration" r
+snippet /^package/ "Package declaration" b
 // Package $1 provides ...
 package ${1:main}
 $2
@@ -64,3 +85,4 @@ switch ${1:expression}${1/(.+)/ /} := ${2:var}.(Type) {
 case ${0:int}
 }
 endsnippet
+

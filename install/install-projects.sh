@@ -58,7 +58,7 @@ then
         cd -
     fi
 
-    if [ ! -d $GOPATH/src/github.com/Phantas0s/playground ];
+    if [ ! -d $HOME/workspace/playground ];
     then
         echo -e "Installing the project Go in practice in workspace for reference"
         cd $HOME/workspace
