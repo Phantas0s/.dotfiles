@@ -7,6 +7,7 @@ echo -e "${green} ...done\n"
 
 echo -e "${blue} Update composer global packages..."
 composer global update
+cgr update
 echo -e "${green} ...done\n"
 
 #---------------------------------------

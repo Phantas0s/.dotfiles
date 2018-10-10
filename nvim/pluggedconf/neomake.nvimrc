@@ -49,6 +49,7 @@ let g:neomake_php_phpcs_maker = {
 let g:neomake_php_phpstan_maker = {
             \ 'args': ['analyse', '--errorFormat', 'raw', '--no-progress', '--level', '7'],
             \ 'errorformat': '%W%f:%l:%m',
+            \ 'postprocess': function('SetWarningType'),
             \ }
 
 let g:neomake_php_php_maker = {
@@ -62,6 +63,7 @@ let g:neomake_php_php_maker = {
             \ '%-G\s%#,'.
             \ '%-GErrors parsing %.%#',
             \ 'output_stream': 'stdout',
+            \ 'postprocess': function('SetErrorType'),
             \ }
 
 let g:neomake_php_phpmd_maker = {
@@ -173,5 +175,3 @@ let g:neomake_scheme_raco_maker = {
             \ 'args': ['expand'],
             \ 'errorformat': '%-G %.%#,%E%f:%l:%c: %m'
             \ }
-
-
