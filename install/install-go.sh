@@ -6,6 +6,7 @@ echo -e "${blue} installing Go applications and tools..."
 mkdir -p $GOPATH/bin
 
 cd $DOTFILES/install/go
+
 for f in *.sh; do
     filename=${f%\.*}
     if [ ! -f $GOPATH/bin/$filename ];
@@ -13,4 +14,5 @@ for f in *.sh; do
         echo `./$f`
     fi
 done
+
 cd -
