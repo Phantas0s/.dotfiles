@@ -111,6 +111,7 @@ Plug 'ncm2/ncm2-ultisnips'
 Plug 'phpactor/ncm2-phpactor'
 Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-tern'
+Plug 'ncm2/ncm2-cssomni'
 " Plug 'ncm2/ncm2-tagprefix'
 
 " golang development
@@ -261,7 +262,7 @@ vmap > >gv
 vmap u y
 
 " shortcut to substitute current word under cursor
-nnoremap <leader>[ :%s/<c-r><c-w>/<c-r><c-w>/g<left><left>
+nnoremap <leader>[ :%s/<c-r><c-w>//g<left><left>
 
 " Change in next bracket
 nmap cinb cib
