@@ -1,61 +1,3 @@
-#################
-# DOCUMENTATION #
-#################
-
-# -- SYSTEM -- #
-
-# updatesys 
-# Update all go binaries installed via the install script + update via aurman if installed or otherwise pacman
-
-# dback <disk source> <disk output>
-# Disk Backup. Use dd to copy an entire disk source to another disk output. Ask questions to be sure you know what you are doing :) way safer than using only dd
-
-# sshcreate <name> 
-# Create a new ssh at ~/.ssh/<name> with chmod 700
-
-# -- ARCHIVES -- #
-
-# extract <archive_file>
-# Extract the archive depending on its type
-
-# compress <folder>
-# Compress a folder in tar.gz
-
-# --- DATABASE --- #
-
-# postgdump <table_name> `<user>` `<host>`
-# Create a dump of a database. Include clean up and create dabatase when imported back. WILL OVERWRITE ALL DATA!
-# The file created will be database_name.sql
-# User and host are not mandatory, default `postgres` and `localhost`
-
-# postgimport <table_name> `<user>` `<host>`
-# Import a table. If the file is called `database.sql`, it will try to import into the `database` database
-
-# -- IMAGES ---
-
-# screenshot <area> win|scr|area
-# Take a screenshot of the window / screen / area
-
-# imgsize <img>
-# Display width / height of an image
-
-# imgresize <source> <width>
-# Resize and create a new image <source>_<width> following aspect ratio
-
-# imgconvjpg <source>
-# Convert source to a jpg image
-
-# gtD <name> - Delete a tag locally AND on the remote origin
-
-
-# -- LOOPLINE ONLY --
-
-# thriftgen() - Generate thrift config via thrift on local (docker image doesn't work...)
-
-# -- FUN -- #
-
-# matrix - Display the MATRIX
-
 updatesys() {
     sh $DOTFILES/update.sh
     if hash aurman 2>/dev/null; then
@@ -159,7 +101,12 @@ imgconvpng() {
 
 gtD() {
     git tag -d $1
-    git push origin :refs/tags/$1
+    if [ ! -z "$2" ];
+    then
+        git push $2 :refs/tags/$1
+    else
+        git push origin :refs/tags/$1
+    fi
 }
 
 sshcreate() {
