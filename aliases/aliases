@@ -33,6 +33,7 @@ alias pacu='sudo pacman -Syu' # update
 alias pacr='sudo pacman -R' # remove package but not dependencies
 alias pacrr='sudo pacman -Rs' # remove package with unused dependencies by other softwares
 alias pacrc='sudo pacman -Sc' # remove pacman's cache
+alias pacro='pacman -Rns $(pacman -Qtdq)'
 
 # aurman
 alias auri='sudo aurman -S'
