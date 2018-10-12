@@ -96,6 +96,27 @@ Convert source to a jpg image
 
 Delete a tag locally AND on the remote. `<remote>` argument is not mandatory, default `origin`.
 
+### FZF meets Git
+
+#### Checkout 
+
+`fgco`
+
+Require fzf of course :)
+Checkout local or remote branch via FZF
+
+#### Logs
+
+`fgl`
+
+Simple way to fuzzy search in the log tree.
+
+### Stash
+
+`fstash`
+
+Fuzzy search in the stash list. 
+
 ## Other
 
 `thriftgen`
