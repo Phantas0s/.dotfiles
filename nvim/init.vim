@@ -121,7 +121,7 @@ Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 Plug 'buoto/gotests-vim', {'for': 'go'}
 
 " generate uuid
-Plug 'kburdett/vim-nuuid'
+" Plug 'kburdett/vim-nuuid'
 
 " twig
 Plug 'lumiliet/vim-twig', {'for': 'twig'}
