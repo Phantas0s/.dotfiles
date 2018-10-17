@@ -28,7 +28,8 @@ function notifyosd-precmd() {
                 cmd_time=$(units "$cmd_secs seconds" "centuries;years;months;weeks;days;hours;minutes;seconds" | \
                         sed -e 's/\ +/\,/g' -e s'/\t//')
             else
-                cmd_time="$cmd_secs seconds"
+                cmd_time=$(printf '%dh:%dm:%ds\n' $(($cmd_secs/3600)) $(($cmd_secs%3600/60)) $(($cmd_secs%60)))
+                # cmd_time="$cmd_secs seconds"
             fi
             if [ ! -z $SSH_TTY ] ; then
                 notify-send -i utilities-terminal \
