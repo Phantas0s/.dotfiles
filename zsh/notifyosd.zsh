@@ -1,5 +1,5 @@
 # commands to ignore
-cmdignore=(htop tmux top vim nvim testomatic pgcli bat mux tmuxp)
+cmdignore=(htop tmux top vim nvim testomatic pgcli bat mux tmuxp gc)
 
 # set gt 0 to enable GNU units for time results
 gnuunits=0
