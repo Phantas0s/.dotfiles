@@ -287,15 +287,17 @@ nnoremap tl :tablast<CR>
 nnoremap tn :tabnew<CR>
 
 " move tab to first position
-nnoremap tf :tabm 0<CR>
-nnoremap tm :tabm<CR>
+nnoremap tF :tabm 0<CR>
+nnoremap tL :tabm<CR>
 
 " windows navigation
-nnoremap <leader>ww <c-w>w
-nnoremap <leader>wh <c-w>h
-nnoremap <leader>wj <c-w>j
-nnoremap <leader>wk <c-w>k
-nnoremap <leader>wl <c-w>l
+" use ctrl + hjkl
+
+" nnoremap <leader>ww <c-w>w
+" nnoremap <leader>wh <c-w>h
+" nnoremap <leader>wj <c-w>j
+" nnoremap <leader>wk <c-w>k
+" nnoremap <leader>wl <c-w>l
 
 " close all windows except the current one
 nnoremap <leader>wco :only<cr>
