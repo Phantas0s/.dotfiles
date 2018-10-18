@@ -288,24 +288,24 @@ nnoremap tn :tabnew<CR>
 
 " move tab to first position
 nnoremap tf :tabm 0<CR>
-nnoremap tm :tabm<space>
+nnoremap tm :tabm<CR>
 
 " windows navigation
-nnoremap ww <c-w>w
-nnoremap wh <c-w>h
-nnoremap wj <c-w>j
-nnoremap wk <c-w>k
-nnoremap wl <c-w>l
+nnoremap <leader>ww <c-w>w
+nnoremap <leader>wh <c-w>h
+nnoremap <leader>wj <c-w>j
+nnoremap <leader>wk <c-w>k
+nnoremap <leader>wl <c-w>l
 
 " close all windows except the current one
-nnoremap wco :only<cr>
-nnoremap wcc :cclose<cr>
+nnoremap <leader>wco :only<cr>
+nnoremap <leader>wcc :cclose<cr>
 
 " windows creation
 " create window on the bottom
-nnoremap wb <c-w>s
+nnoremap <leader>wb <c-w>s
 " create vertival window
-nnoremap wv <c-w>v
+nnoremap <leader>wv <c-w>v
 
 " delete character after cursor in insert mode
 inoremap <C-d> <Del>
