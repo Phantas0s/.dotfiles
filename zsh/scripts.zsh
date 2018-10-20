@@ -1,3 +1,11 @@
+screencast() {
+  if [ ! -z $1 ] ; then
+    ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 $1
+  else
+    echo "You need to precise an output past as first argument"
+  fi
+}
+
 updatesys() {
     sh $DOTFILES/update.sh
     if hash aurman 2>/dev/null; then
