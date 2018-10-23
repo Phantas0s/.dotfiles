@@ -45,6 +45,8 @@ Compress a folder - output `tar.gz`
 
 ### Postgres
 
+These commands need `pv` to be installed.
+
 #### Dump
 `postgdump <database> <user> <host>`
 
