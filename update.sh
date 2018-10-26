@@ -7,18 +7,19 @@ echo -e "${green} ...done\n"
 
 echo -e "${blue} Update composer global packages..."
 composer global update
-cgr phpstan/phpstan
-cgr pdepend/pdepend
-cgr dephpend/dephpend
-cgr bmitch/churn-php
-cgr phpmd/phpmd
-cgr phploc/phploc
-cgr squizlabs/php_codesniffer
-cgr friendsofphp/php-cs-fixer
-cgr phpbench/phpbench
-cgr povils/phpmnd
-cgr wapmorgan/php-code-fixer
-cgr phpmetrics/phpmetrics
+cgr update
+# cgr phpstan/phpstan
+# cgr pdepend/pdepend
+# cgr dephpend/dephpend
+# cgr bmitch/churn-php
+# cgr phpmd/phpmd
+# cgr phploc/phploc
+# cgr squizlabs/php_codesniffer
+# cgr friendsofphp/php-cs-fixer
+# cgr phpbench/phpbench
+# cgr povils/phpmnd
+# cgr wapmorgan/php-code-fixer
+# cgr phpmetrics/phpmetrics
 echo -e "${green} ...done\n"
 
 #---------------------------------------

@@ -46,3 +46,5 @@ autocmd FileType go nmap <buffer><leader>gc <plug>(go-callee)
 
 autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
+
+autocmd FileType go nmap <buffer><leader>gfs :exec GoFillStruct<cr>

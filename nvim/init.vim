@@ -452,9 +452,8 @@ augroup END
 " enable the mouse
 " set mouse=a
 
-" ncm debugging
- " let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
- " let $NVIM_NCM_LOG_LEVEL="DEBUG"
- " let $NVIM_NCM_MULTI_THREAD=0
+" No clue what it is :D
+" autocmd VimResized * wincmd =
 
+" hu?
 inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
