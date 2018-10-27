@@ -1,8 +1,16 @@
 screencast() {
   if [ ! -z $1 ] ; then
+    ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -f pulse -i default $1
+  else
+    echo "You need to precise an output file as first argument - eg 'example.mkv'"
+  fi
+}
+
+oscreencast() {
+  if [ ! -z $1 ] ; then
     ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 $1
   else
-    echo "You need to precise an output past as first argument"
+    echo "You need to precise an output file as first argument - eg 'example.mkv'"
   fi
 }
 
