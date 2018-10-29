@@ -118,10 +118,6 @@ Plug 'ncm2/ncm2-cssomni'
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
-Plug 'buoto/gotests-vim', {'for': 'go'}
-
-" generate uuid
-" Plug 'kburdett/vim-nuuid'
 
 " twig
 Plug 'lumiliet/vim-twig', {'for': 'twig'}
