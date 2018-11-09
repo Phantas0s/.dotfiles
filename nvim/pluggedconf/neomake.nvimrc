@@ -109,47 +109,47 @@ autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function
 " Golang
 "-----------------
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-" let g:neomake_go_gometalinter_maker = {
-"         \ 'args': [
-"           \ '--disable-all',
-"           \ '--enable=gas',
-"           \ '--enable=goconst',
-"           \ '--enable=golint',
-"           \ '--enable=ineffassign',
-"           \ '--enable=maligned',
-"           \ '--enable=misspell',
-"           \ '--enable=structcheck',
-"           \ '--enable=unconvert',
-"           \ '--enable=varcheck',
-"           \ '--enable=vet',
-"           \ '--enable=unparam',
-"           \ '--enable=unused',
-"           \ '--disable=unexported',
-"         \ ],
-"         \ 'append_file': 0,
-"         \ 'cwd': '%:h',
-"         \ 'errorformat':
-"             \ '%f:%l:%c:%t%*[^:]: %m,' .
-"             \ '%f:%l::%t%*[^:]: %m',
-"         \ 'postprocess': function('SetWarningType')
-" \ }
-
 let g:neomake_go_gometalinter_maker = {
-        \ 'exe': 'zb',
         \ 'args': [
-        \   'lint',
-        \   '--exclude=unexported',
-        \   '--fast',
+          \ '--disable-all',
+          \ '--enable=gas',
+          \ '--enable=goconst',
+          \ '--enable=golint',
+          \ '--enable=ineffassign',
+          \ '--enable=maligned',
+          \ '--enable=misspell',
+          \ '--enable=structcheck',
+          \ '--enable=unconvert',
+          \ '--enable=varcheck',
+          \ '--enable=vet',
+          \ '--enable=unparam',
+          \ '--enable=unused',
+          \ '--disable=unexported',
         \ ],
-        \ 'cwd': '%:h',
         \ 'append_file': 0,
+        \ 'cwd': '%:h',
         \ 'errorformat':
-        \   '%E%f:%l:%c:%trror: %m,' .
-        \   '%W%f:%l:%c:%tarning: %m,' .
-        \   '%E%f:%l::%trror: %m,' .
-        \   '%W%f:%l::%tarning: %m',
+            \ '%f:%l:%c:%t%*[^:]: %m,' .
+            \ '%f:%l::%t%*[^:]: %m',
         \ 'postprocess': function('SetWarningType')
-        \ }
+\ }
+
+" let g:neomake_go_gometalinter_maker = {
+"         \ 'exe': 'zb',
+"         \ 'args': [
+"         \   'lint',
+"         \   '--exclude=unexported',
+"         \   '--fast',
+"         \ ],
+"         \ 'cwd': '%:h',
+"         \ 'append_file': 0,
+"         \ 'errorformat':
+"         \   '%E%f:%l:%c:%trror: %m,' .
+"         \   '%W%f:%l:%c:%tarning: %m,' .
+"         \   '%E%f:%l::%trror: %m,' .
+"         \   '%W%f:%l::%tarning: %m',
+"         \ 'postprocess': function('SetWarningType')
+"         \ }
 
 let g:go_fmt_options = {
 \ 'gofmt': '-s',
