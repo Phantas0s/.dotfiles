@@ -9,14 +9,14 @@ snippet tt "table-driven tests"
 func Test_${1:Func}(t *testing.T) {
 	testCases := []struct {
 		name string
+		${3}
 		expected ${2}
 		wantErr bool
-		${3}
 	}{
 		{
 			name: "happy case",
+			expected: ${4}
 			wantErr: false,
-			${4}
 		},
 	}
 
@@ -28,8 +28,8 @@ func Test_${1:Func}(t *testing.T) {
 				return
 			}
 
-			if tc.wantErr == false && tc.expected != $7 {
-				t.Errorf("Expected %v, actual %v", tc.expected, $7)
+			if tc.wantErr == false && $7 {
+				t.Errorf("Expected %v, actual %v", tc.expected, actual)
 			}
 		})
 	}
