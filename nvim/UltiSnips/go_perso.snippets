@@ -49,23 +49,16 @@ if err != nil {
 ${1}
 endsnippet
 
-snippet werr "Return wrapped error" b
+snippet errw "Return wrapped error" b
 if err != nil {
 	return errors.Wrap(err, "${1}")
 }
 ${1}
 endsnippet
 
-snippet wferr "Return wrapped format error" b
+snippet errwf "Basic error handling with wrapping" b
 if err != nil {
-	return errors.Wrapf(err, "${1}")
-}
-${1}
-endsnippet
-
-snippet errw "Basic error handling with wrapping" b
-if err != nil {
-	error.wrapf(err, "${1}")
+	return error.wrapf(err, "${1}")
 }
 endsnippet
 
