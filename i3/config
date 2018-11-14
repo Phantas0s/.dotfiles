@@ -55,7 +55,7 @@ exec --no-startup-id owncloud &
 exec --no-startup-id ~/.fehbg
 
 #Hide the mouse after some time 
-exec --no-startup-id unclutter
+# exec --no-startup-id unclutter
 
 # launch scripts
 exec --no-startup-id /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
