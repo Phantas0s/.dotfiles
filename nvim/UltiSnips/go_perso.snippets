@@ -42,7 +42,7 @@ if err != nil {
 }
 endsnippet
 
-snippet rerr "Basic error handling return err" b
+snippet errr "Basic error handling return err" b
 if err != nil {
 	return err
 }
@@ -56,9 +56,9 @@ if err != nil {
 ${1}
 endsnippet
 
-snippet errwf "Basic error handling with wrapping" b
+snippet errwf "Basic error handling with wrapping format" b
 if err != nil {
-	return error.wrapf(err, "${1}")
+	return errors.wrapf(err, "${1}")
 }
 endsnippet
 
