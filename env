@@ -7,6 +7,8 @@
 export DOTFILES="$HOME/.dotfiles"
 
 export EDITOR="nvim"
+export VISUAL="nvim"
+
 export XDG_CONFIG_HOME=$HOME
 export TERM='rxvt-256color'
 
