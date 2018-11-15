@@ -74,7 +74,7 @@ login_path_as_host = False
 
 # Cause result sets to be displayed vertically if they are too wide for the current window,
 # and using normal tabular format otherwise. (This applies to statements terminated by ; or \G.)
-auto_vertical_output = False
+auto_vertical_output = True
 
 # keyword casing preference. Possible values "lower", "upper", "auto"
 keyword_casing = auto
