@@ -64,6 +64,7 @@ command -v "pgcli" >/dev/null && . $DOTFILES/install/install-pgcli.sh
 command -v "ranger" >/dev/null && . $DOTFILES/install/install-ranger.sh
 command -v "go" >/dev/null && . $DOTFILES/install/install-go.sh
 command -v "npm" >/dev/null && . $DOTFILES/install/install-javascript.sh
+command -v "compton" >/dev/null && . $DOTFILES/install/install-compton.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $DOTFILES/bash/bashrc $HOME/.bashrc

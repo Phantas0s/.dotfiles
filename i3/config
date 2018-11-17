@@ -343,7 +343,7 @@ set $i3lockwall i3lock -i ~/wallpapers/forest.png -t
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 #wallpaper and transparency
-exec --no-startup-id compton -b --config /dev/null --backend xrender --vsync opengl
+exec --no-startup-id compton -b --active-opacity 1 --config ~/.compton --backend xrender --vsync opengl
 
 # shutdown / restart / suspend...
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Ctrl+s) shutdown
