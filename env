@@ -37,3 +37,6 @@ export NPMPATH="$HOME/.node_modules"
 export NPMBIN="$HOME/.node_modules/bin"
 PATH="$NPMBIN:$PATH"
 export npm_config_prefix=~/.node_modules
+
+# Useful to ask password for sudo when no terminal is attached (in Vim for :SudoWrite command)
+export SUDO_ASKPASS

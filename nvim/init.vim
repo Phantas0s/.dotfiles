@@ -44,6 +44,9 @@ Plug 'tpope/vim-repeat'
 " comment automatically
 Plug 'tpope/vim-commentary'
 
+" Add sugar on top of Vim
+Plug 'tpope/vim-eunuch'
+
 " Highlight briefly every yank text
 Plug 'machakann/vim-highlightedyank'
 
