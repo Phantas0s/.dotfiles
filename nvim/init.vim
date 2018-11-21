@@ -112,6 +112,7 @@ Plug 'phpactor/ncm2-phpactor'
 Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-cssomni'
+Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
 " Plug 'ncm2/ncm2-tagprefix'
 
 " golang development
