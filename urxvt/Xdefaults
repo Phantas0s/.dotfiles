@@ -58,13 +58,20 @@ URxvt*visualBell: false
 URxvt*utmpInhibit: false
 
 !! Perl Extensions !!
-URxvt*perl-ext-common: default,tabbed
+! URxvt*perl-ext-common: default,tabbed
+! Perl extension config
+URxvt.perl-ext-common: default
+URxvt.perl-ext: tabbed
+! Any scripts placed here will override global ones with the same name
+URxvt.perl-lib: /home/hypnos/.urxvt/
 
 URxvt.tabbed.tabbar-fg: 15
 URxvt.tabbed.tabbar-bg: 236
 URxvt.tabbed.tab-fg: 110
 URxvt.tabbed.tab-bg: 236
 URxvt.tabbed*transparent:true
+
+URxvt.tabbed.new-button: false
 
 !URxvt.letterSpace: -1
 

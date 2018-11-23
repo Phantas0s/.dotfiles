@@ -1,0 +1,656 @@
+#! perl
+# Tabbed perl extension for rxvt-unicode terminal emulator.
+# Modified by Roman Dobosz <gryf73 at gmail do com>
+#
+# 2008-08-22 18:01:55
+# - Modified shortcuts for tab navigation - now it uses shift + left/right
+# arrow to navigate, also creating new shell is changed to CTRL+Shift+n.
+# - Added shortcuts to move tab between others witch CTRL left/right arrow
+# - Added some predefined actions - CTRL+Shift+r for "su -" command and
+# CTRL+Shift+m for "mc" and other like named ssh sessions.
+# - Added labels for custom shells (like "root", "mc" and so on)
+#
+# Please note, I don't know Perl!
+#
+# 2009-11-23 11:11:19
+# - Added shortcuts for apps with Mod4 key (mutt as an example)
+#
+# 2009-11-23 13:25:13
+# - Merged activity indicator from
+# http://mina86.com/2009/05/16/tabbed-urxvt-extension/#more but without
+# changes on tabs (like adding term title just behind all tabs). New resources
+# can be use to change defaults (as in original solution):
+#  - tabbed-timeouts with format:
+#     (<timeout> ":" <character> ":")* <timeout> ":" <character> ":"
+#     default '16:.:8:::4:+'. Asterisk is always present as a first indicator
+#     character, just like in original tabbed extension.
+#  - new-button, default to 'true'. Used to disable [NEW] button.
+#
+# 2009-11-24 23:34:51
+# - Added possibility to quick switch between first ten tabs with predefined
+# combination of CTRL+1..0 keys, which will activate proper tab.
+# - Added possibility to remove numbers from tab names by setting resource
+# tab-numbers to false.
+#
+# 2009-11-25 21:40:30
+# - Added colors for tabs, which have activity on them. First is to be set when
+# first activity (active-fg, defaults to red) appear on inactive tab. Last one
+# (actived-fg, blue by default) is set when there is no more possible timeouts.
+# Third one (actives-fg, purple) is set on all in between of these two.
+#
+# 2010-07-25 13:49:01
+# - Integrated renaming ability for tabs from stepb
+# (http://github.com/stepb/urxvt-tabbedex)
+#
+# 2010-08-12 20:54:46
+# - Added functionality to create definitions of custom shells as a X resource,
+# under common tabcmds name. This functionality also deprecates feature called
+# here as a predefined actions. Without any configuration only simple shell is
+# available under CTRL+SHIFT+N shortcut. After creating first custom shell this
+# default is not available.
+#
+# Let's assume, that one want to mimic previous configuration, that means three
+# kind of custom shells: simple one (default shell in the system), midnight
+# commander and root (namely - su command). Three resources should be created:
+#
+#  URxvt.tabbed.tabcmds.1: N|shell
+#  URxvt.tabbed.tabcmds.2: R|root|su -
+#  URxvt.tabbed.tabcmds.3: M|mc|mc
+#
+# URxvt.tabbed.tabcmds.[number] is a ordinal number, started from 1. There
+# shouldn't be gaps between numbers, otherwise custom shells defined after a gap
+# will not work.
+#
+# Resource values are two or three pipe separated values, which are in order:
+#  - shortcut key, which will be used for invoking custom shell together with
+#  CTRL+SHIFT keys. Mod4 (aka Super or Windows key) are not supported, and most
+#  probably will be removed from script soon, as lots of window managers out
+#  there make a big use of those keys.
+#  Note: There is limitation for characters used as a shortcut. Because some of
+#  them are used for control terminal itself (i.e. CTRL+SHIFT+D may not work), and
+#  also other characters (digits, some special characters etc.). Letters are
+#  case insensitive.
+#  - name of the tab, it could be anything but the pipe.
+#  - optional command. If omitted, simple shell will be launched.
+#
+# 2010-08-28 10:17:02
+# - Removed tab_property_notify hook, because in certain circumstances it
+#   provides memory consumption. It is especially well seen by running
+#   mocp[1] and play internet radio station (i.e digitalgunfire.com, but
+#   there can be others). Observe memory taken by urxvt with top or ps. Also,
+#   original tabbed extension is affected.
+#
+#   This change will affect i.e. dynamic font change - it will not expand window
+#   to reflect size of a font. Switching to next tab and back will rearrange
+#   content of a tab to current window size.
+#
+#   If anyone have a better idea how to fix memory consumption which is taking
+#   place in copy_properties(), please step forward :)
+#
+#   [1] http://moc.daper.net
+#
+# 2011-07-12 21:05:26
+# - Fixed defaults for not defined tabcommands - now it is possible to use
+#   tabbed just as described.
+# - Added some sort of primitive session ability, defined via resource
+#   session, which should contain pipe separated shortcuts defined in tabcmds
+#   resource. If there is no shortcuts (or wrong was defined), plain shell tab
+#   will appear.
+#
+# 2013-11-12 09:23:49
+# - Restored tab_property_notify hook. Whatever was the cause of the memory
+#   consumption is gone or doesn't have anything to do with that function.
+#
+# 2013-11-26 19:31:55
+# - Added parentheses for hook, should work on Debian now.
+
+
+sub tab_activity_mark ($$) {
+   my ($self, $tab) = @_;
+   return ' ' unless defined $tab->{lastActivity};
+   return ' ' if $tab == $self->{cur};
+   if (defined $self->{timeouts}) {
+      my $diff = int urxvt::NOW - $tab->{lastActivity};
+      for my $spec (@{ $self->{timeouts} }) {
+         return $spec->[1] if $diff > $spec->[0];
+      }
+   }
+
+   '*';
+}
+
+sub refresh {
+   my ($self) = @_;
+
+   my $ncol = $self->ncol;
+
+   my $text = " " x $ncol;
+   my $rend = [($self->{rs_tabbar}) x $ncol];
+
+   my ($ofs, $idx, @ofs) = (0, 0);
+
+   if ($self->{new_button}) {
+      substr $text, 0, 7, "[NEW] |";
+      @$rend[0 .. 5] = ($self->{rs_tab}) x 6;
+      push @ofs, [0, 6, -1 ];
+      $ofs = 7;
+   }
+
+   for my $tab (@{ $self->{tabs} }) {
+      $idx++;
+      my $act = $self->tab_activity_mark($tab);
+      my $txt;
+
+      if ($self->{tab_numbers}){
+         $txt = sprintf "%d-%s",  $idx, $tab->{name};
+      }else{
+         $txt = sprintf "%s", $tab->{name};
+      }
+
+      $txt = sprintf "%s%s%s", $act, $txt, $act;
+
+      my $len = length $txt;
+
+      # fill offset in $text with $txt + "|"
+      substr $text, $ofs, $len + 1, "$txt|";
+
+      # find and fill with proper colors
+
+
+      if ($tab == $self->{cur}){
+         @$rend[$ofs .. $ofs + $len - 1] = ($self->{rs_tab}) x $len;
+      }else{
+         if ($act eq "*"){
+            @$rend[$ofs .. $ofs + $len - 1] = ($self->{rs_tab_act}) x $len;
+         }elsif($act eq $self->{timeouts}[0][1]){
+            @$rend[$ofs .. $ofs + $len - 1] = ($self->{rs_tab_acd}) x $len;
+         }elsif($act ne " "){
+            @$rend[$ofs .. $ofs + $len - 1] = ($self->{rs_tab_acs}) x $len;
+         }
+      }
+
+      # sub with make current will activate events with mouse buttons
+      push @ofs, [ $ofs, $ofs + $len, sub { $_[0]->make_current ($tab) } ];
+      $ofs += $len + 1;
+   }
+
+   $self->{tabofs} = \@ofs;
+
+   $self->ROW_t (0, $text, 0, 0, $ncol);
+   $self->ROW_r (0, $rend, 0, 0, $ncol);
+
+   $self->want_refresh;
+}
+
+sub new_tab {
+   my ($self, @argv) = @_;
+
+   my $offset = $self->fheight;
+   my $tab_name = shift @argv;
+
+   # save a backlink to us, make sure tabbed is inactive
+   push @urxvt::TERM_INIT, sub {
+      my ($term) = @_;
+      $term->{parent} = $self;
+
+      for (0 .. urxvt::NUM_RESOURCES - 1) {
+         my $value = $self->{resource}[$_];
+
+         $term->resource ("+$_" => $value)
+            if defined $value;
+      }
+
+      $term->resource (perl_ext_2 => $term->resource ("perl_ext_2") . ",-tabbed");
+   };
+
+   push @urxvt::TERM_EXT, urxvt::ext::tabbed::tab::;
+
+   if(@argv){
+      @argv = split(/\ /, '-e ' . $argv[0]);
+   }
+
+   my $term = new urxvt::term
+      $self->env, $urxvt::RXVTNAME,
+      -embed => $self->parent,
+      @argv,
+   ;
+   # add name to new created tab.
+   $self->{tabs}[-1]->{name} = $tab_name;
+}
+
+sub configure {
+   my ($self) = @_;
+
+   my $tab = $self->{cur};
+
+   # this is an extremely dirty way to force a configurenotify, but who cares
+   $tab->XMoveResizeWindow (
+      $tab->parent,
+      0, $self->{tabheight} + 1,
+      $self->width, $self->height - $self->{tabheight}
+   );
+   $tab->XMoveResizeWindow (
+      $tab->parent,
+      0, $self->{tabheight},
+      $self->width, $self->height - $self->{tabheight}
+   );
+}
+
+# this is needed just to properly resize terminal to fill available space
+# without it Window Maker will make window smaller then required, therefore
+# we'll get ugly border.
+sub on_resize_all_windows {
+   my ($self, $width, $height) = @_;
+
+   1
+}
+
+sub copy_properties {
+   my ($self) = @_;
+   my $tab = $self->{cur};
+
+   my $wm_normal_hints = $self->XInternAtom ("WM_NORMAL_HINTS");
+
+   my $current = delete $self->{current_properties};
+
+   # pass 1: copy over properties different or nonexisting
+   for my $atom ($tab->XListProperties ($tab->parent)) {
+      my ($type, $format, $items) = $self->XGetWindowProperty ($tab->parent, $atom);
+
+      # fix up size hints
+      if ($atom == $wm_normal_hints) {
+         my (@hints) = unpack "l!*", $items;
+
+         $hints[$_] += $self->{tabheight} for (4, 6, 16);
+
+         $items = pack "l!*", @hints;
+      }
+
+      my $cur = delete $current->{$atom};
+
+      # update if changed, we assume empty items and zero type and format will not happen
+      $self->XChangeProperty ($self->parent, $atom, $type, $format, $items)
+         if $cur->[0] != $type or $cur->[1] != $format or $cur->[2] ne $items;
+
+      $self->{current_properties}{$atom} = [$type, $format, $items];
+   }
+
+   # pass 2, delete all extraneous properties
+   $self->XDeleteProperty ($self->parent, $_) for keys %$current;
+}
+
+sub make_current {
+   my ($self, $tab) = @_;
+
+   if (my $cur = $self->{cur}) {
+      delete $cur->{lastActivity};
+      $cur->XUnmapWindow ($cur->parent) if $cur->mapped;
+      $cur->focus_out;
+   }
+
+   $self->{cur} = $tab;
+
+   $self->configure;
+   $self->copy_properties;
+
+   $tab->focus_out; # just in case, should be a nop
+   $tab->focus_in if $self->focus;
+
+   $tab->XMapWindow ($tab->parent);
+   delete $tab->{lastActivity};
+   $self->refresh;
+
+   ()
+}
+
+sub on_focus_in {
+   my ($self, $event) = @_;
+
+   $self->{cur}->focus_in;
+
+   ()
+}
+
+sub on_focus_out {
+   my ($self, $event) = @_;
+
+   $self->{cur}->focus_out;
+
+   ()
+}
+
+sub on_tt_write {
+    my ($self, $octets) = @_;
+
+    $self->{cur}->tt_write ($octets);
+
+    1
+}
+
+sub on_key_press {
+   my ($self, $event) = @_;
+
+   $self->{cur}->key_press ($event->{state}, $event->{keycode}, $event->{time});
+
+   1
+}
+
+sub on_key_release {
+   my ($self, $event) = @_;
+
+   $self->{cur}->key_release ($event->{state}, $event->{keycode}, $event->{time});
+
+   1
+}
+
+sub on_button_press {
+   1
+}
+
+sub on_button_release {
+   my ($self, $event) = @_;
+
+   if ($event->{row} == 0) {
+      for my $button (@{ $self->{tabofs} }) {
+         $button->[2]->($self, $event)
+            if $event->{col} >= $button->[0]
+               && $event->{col} < $button->[1];
+      }
+   }
+
+   1
+}
+
+sub on_motion_notify {
+   1
+}
+
+sub on_init {
+   my ($self) = @_;
+
+   $self->{resource} = [map $self->resource ("+$_"), 0 .. urxvt::NUM_RESOURCES - 1];
+
+   $self->resource (int_bwidth => 0);
+   $self->resource (name => "URxvt.tabbed");
+   $self->resource (pty_fd => -1);
+
+   $self->option ($urxvt::OPTION{scrollBar}, 0);
+
+   my $fg      = $self->x_resource ("tabbar-fg");
+   my $bg      = $self->x_resource ("tabbar-bg");
+   my $tabfg   = $self->x_resource ("tab-fg");
+   my $tabbg   = $self->x_resource ("tab-bg");
+   my $active  = $self->x_resource ("active-fg");
+   my $actives = $self->x_resource ("actives-fg");
+   my $actived = $self->x_resource ("actived-fg");
+
+   defined $fg      or $fg      = 3;
+   defined $bg      or $bg      = 0;
+   defined $tabfg   or $tabfg   = 0;
+   defined $tabbg   or $tabbg   = 1;
+   defined $active  or $active  = 1;
+   defined $actives or $actives = 5;
+   defined $actived or $actived = 4;
+
+   $self->{rs_tabbar}  = urxvt::SET_COLOR (urxvt::DEFAULT_RSTYLE, $fg      + 2, $bg    + 2);
+   $self->{rs_tab}     = urxvt::SET_COLOR (urxvt::DEFAULT_RSTYLE, $tabfg   + 2, $tabbg + 2);
+   $self->{rs_tab_act} = urxvt::SET_COLOR (urxvt::DEFAULT_RSTYLE, $active  + 2, $bg + 2);
+   $self->{rs_tab_acs} = urxvt::SET_COLOR (urxvt::DEFAULT_RSTYLE, $actives + 2, $bg + 2);
+   $self->{rs_tab_acd} = urxvt::SET_COLOR (urxvt::DEFAULT_RSTYLE, $actived + 2, $bg + 2);
+
+   my $timeouts = $self->x_resource ("tabbar-timeouts");
+   $timeouts = '16:.:8:::4:+' unless defined $timeouts;
+   if ($timeouts ne '') {
+      my @timeouts;
+      while ($timeouts =~ /^(\d+):(.)(?::(.*))?$/) {
+         push @timeouts, [ int $1, $2 ];
+         $timeouts = defined $3 ? $3 : '';
+      }
+      if (@timeouts) {
+         $self->{timeouts} = [ sort { $b->[0] <=> $a-> [0] } @timeouts ];
+      }
+   }
+
+   $self->{new_button} =
+      ($self->x_resource ('new-button') or 'true') !~ /^(?:false|0|no)/i;
+
+   $self->{tab_numbers} =
+      ($self->x_resource ('tab-numbers') or 'true') !~ /^(?:false|0|no)/i;
+
+   %{$self->{tabcmds}} = ();
+   for (my $idx = 1; defined (my $res = $self->x_resource("tabcmds.$idx")); $idx++){
+      chomp($res);
+      (my @args) = split('\|', $res);
+      my $key = uc(shift(@args));
+      $self->{tabcmds}{$key} = [ @args ];
+   }
+
+   @{$self->{session}} = split('\|', $self->x_resource("session")) or ();
+
+   ();
+
+}
+
+sub on_start {
+   my ($self) = @_;
+
+   $self->{tabheight} = $self->int_bwidth + $self->fheight + $self->lineSpace;
+
+   $self->cmd_parse ("\033[?25l");
+
+   my @argv = $self->argv;
+
+   do {
+      shift @argv;
+   } while @argv && $argv[0] ne "-e";
+
+   # Ugly as hell ``session'' implementation
+   my $count = 0;
+   if (qx(ps x|grep " urxvt "|grep -v grep|wc -l) < 2 && scalar(@{$self->{session}})){
+      for my $item (@{$self->{session}}){
+         if (exists($self->{tabcmds}{uc($item)})){
+            $self->new_tab(@{$self->{tabcmds}{uc($item)}});
+            $count++;
+         }
+      }
+      if ($count == 0) {
+         # no keys was valid, failsafe shell.
+         $self->new_tab ("shell", @argv);
+      }
+
+   }else{
+      $self->new_tab ("shell", @argv);
+   }
+
+   if (defined $self->{timeouts}) {
+      my $interval = ($self->{timeouts}[@{ $self->{timeouts} } - 1]->[0]);
+      $interval = int($interval / 4);
+      $self->{timer} = urxvt::timer->new
+                                   ->interval($interval < 1 ? 1 : $interval)
+                                   ->cb ( sub { $self->refresh; } );
+   }
+
+   ()
+}
+
+sub on_configure_notify {
+   my ($self, $event) = @_;
+
+   $self->configure;
+   $self->refresh;
+
+   ()
+}
+
+sub on_wm_delete_window {
+   my ($self) = @_;
+
+   $_->destroy for @{ $self->{tabs} };
+
+   1
+}
+
+sub tab_start {
+   my ($self, $tab) = @_;
+
+   $tab->XChangeInput ($tab->parent, urxvt::PropertyChangeMask);
+
+   push @{ $self->{tabs} }, $tab;
+
+#   $tab->{name} ||= scalar @{ $self->{tabs} };
+   $self->make_current ($tab);
+
+   ()
+}
+
+sub tab_destroy {
+   my ($self, $tab) = @_;
+
+   $self->{tabs} = [ grep $_ != $tab, @{ $self->{tabs} } ];
+
+   if (@{ $self->{tabs} }) {
+      if ($self->{cur} == $tab) {
+         delete $self->{cur};
+         $self->make_current ($self->{tabs}[-1]);
+      } else {
+         $self->refresh;
+      }
+   } else {
+      # delay destruction a tiny bit
+      $self->{destroy} = urxvt::iw->new->start->cb (sub { $self->destroy });
+   }
+
+   ()
+}
+
+sub tab_key_press {
+   my ($self, $tab, $event, $keysym, $str) = @_;
+
+   # defaults
+   if ($tab->{is_inputting_name}) {
+      if ($keysym == 0xff0d || $keysym == 0xff8d) { # enter
+         $tab->{name} = $tab->{new_name};
+         $tab->{is_inputting_name} = 0;
+      } elsif ($keysym == 0xff1b) { # escape
+         $tab->{name} = $tab->{old_name};
+         $tab->{is_inputting_name} = 0;
+      } elsif ($keysym == 0xff08) { # backspace
+         substr $tab->{new_name}, -1, 1, "";
+         $tab->{name} = "$tab->{new_name}█";
+      } elsif ($str !~ /[\x00-\x1f\x80-\xaf]/) {
+         $tab->{new_name} .= $str;
+         $tab->{name} = "$tab->{new_name}█";
+      }
+      $self->refresh;
+      return 1;
+   }
+
+   if ($event->{state} & urxvt::ShiftMask) {
+      if ($event->{state} & urxvt::ControlMask) {
+         if(not %{$self->{tabcmds}}){
+            if ($keysym == 0x4e){
+               $self->new_tab("shell");
+               return 1;
+            }
+         }elsif(exists($self->{tabcmds}{chr($keysym)})){
+            $self->new_tab(@{$self->{tabcmds}{chr($keysym)}});
+            return 1;
+         }
+      }elsif ($keysym == 0xff51 || $keysym == 0xff53) {
+         my ($idx) = grep $self->{tabs}[$_] == $tab, 0 .. $#{ $self->{tabs} };
+
+         --$idx if $keysym == 0xff51;
+         ++$idx if $keysym == 0xff53;
+
+         $self->make_current ($self->{tabs}[$idx % @{ $self->{tabs}}]);
+
+         return 1;
+       }elsif ($keysym == 0xff52) {
+         $tab->{is_inputting_name} = 1;
+         $tab->{old_name} = $tab->{name} ? $tab->{name} : "";
+         $tab->{new_name} = "";
+         $tab->{name} = "█";
+         $self->refresh;
+         return 1;
+      }
+   }
+   elsif ($event->{state} & urxvt::ControlMask) {
+      if ($keysym == 0xff51 || $keysym == 0xff53) {
+         # tab movement
+         my ($idx1) = grep $self->{tabs}[$_] == $tab, 0 .. $#{ $self->{tabs} };
+         my  $idx2  = ($idx1 + ($keysym == 0xff51 ? -1 : +1)) % @{ $self->{tabs} };
+
+         ($self->{tabs}[$idx1], $self->{tabs}[$idx2]) =
+            ($self->{tabs}[$idx2], $self->{tabs}[$idx1]);
+
+         $self->make_current ($self->{tabs}[$idx2]);
+
+         return 1;
+      }
+      elsif ($keysym > 0x29 and $keysym < 0x40) {
+         # make ctrl+1...0 switch to proper tab
+         my $num = $keysym - 0x30;
+         if ($num == 0) {
+            $num = 10;
+         }
+         $num--;
+
+         if ($#{$self->{tabs}} >= $num){
+            $self->make_current ($self->{tabs}[$num]);
+         }
+
+         return 1;
+      }
+   }
+
+   # additional applications for use with Super (Windows) keys
+   elsif ($event->{state} & urxvt::Mod4Mask) {
+      if ($keysym == 0x6d){ # SUPER+m
+         $self->new_tab("mail", '-e', 'mutt');
+         return 1;
+      }
+      #
+      #elsif ($keysym == [some_other_key_num]){
+      #  $self->new_tab("tab displayed name", "-e", "application", "arg1", "arg2", "...");
+      #  return 1;
+      #}
+   }
+
+   ()
+}
+
+
+sub tab_add_lines {
+   my ($self, $tab) = @_;
+   my $mark = $self->tab_activity_mark($tab);
+   $tab->{lastActivity} = int urxvt::NOW;
+   $self->refresh if $mark ne $self->tab_activity_mark($tab);
+   ();
+}
+
+sub tab_property_notify {
+   my ($self, $tab, $event) = @_;
+
+   $self->copy_properties
+      if $event->{window} == $tab->parent;
+
+   ()
+}
+
+package urxvt::ext::tabbed::tab;
+
+# helper extension implementing the subwindows of a tabbed terminal.
+# simply proxies all interesting calls back to the tabbed class.
+
+{
+   for my $hook (qw(start destroy key_press add_lines property_notify)) {
+      eval qq{
+         sub on_$hook {
+            my \$parent = \$_[0]{term}{parent}
+               or return;
+            \$parent->tab_$hook (\@_)
+         }
+      };
+      die if $@;
+   }
+}
