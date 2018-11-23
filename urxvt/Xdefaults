@@ -30,7 +30,7 @@ URxvt*reverseVideo: false
 
 URxvt*depth: 32
 
-URxvt.background: [95]#1C1C1C
+URxvt.background: [85]#121212
 !URxvt*background: rgba:0031/0032/0034/ddee
 
 URxvt*pointerBlank: false
@@ -66,5 +66,5 @@ URxvt.tabbed.tab-fg: 110
 URxvt.tabbed.tab-bg: 236
 URxvt.tabbed*transparent:true
 
-URxvt.letterSpace: -1
+!URxvt.letterSpace: -1
 
