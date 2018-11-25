@@ -16,11 +16,6 @@ URxvt*borderLess: false
 URxvt*externalBorder: 0
 URxvt*internalBorder: 0
 
-! Bind C--, C-0(=) and C-+ to activate small, medium, and big font size resp.
-! URxvt.keysym.C-minus:                command:\033]710;xft:Liberation Mono:antialias=false:pixelsize=12\007
-! URxvt.keysym.C-0:                command:\033]710;xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true\007
-! URxvt.keysym.C-plus:                command:\033]710;xft:Liberation Mono:antialias=false:pixelsize=20\007
-
 URxvt*scrollBar: false
 
 URxvt*cursorColor: #ffffff
@@ -58,20 +53,27 @@ URxvt*visualBell: false
 URxvt*utmpInhibit: false
 
 !! Perl Extensions !!
-! URxvt*perl-ext-common: default,tabbed
-! Perl extension config
-URxvt.perl-ext-common: default
-URxvt.perl-ext: tabbed
-! Any scripts placed here will override global ones with the same name
-URxvt.perl-lib: /home/hypnos/.urxvt/
+URxvt*perl-ext-common: default,tabbedex,resize-font
 
-URxvt.tabbed.tabbar-fg: 15
-URxvt.tabbed.tabbar-bg: 236
-URxvt.tabbed.tab-fg: 110
-URxvt.tabbed.tab-bg: 236
-URxvt.tabbed*transparent:true
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
 
-URxvt.tabbed.new-button: false
+URxvt*keysym.Control-Shift-N: perl:tabbedex:new_tab
+URxvt*keysym.Control-Shift-J: perl:tabbedex:next_tab
+URxvt*keysym.Control-Shift-K: perl:tabbedex:prev_tab
+
+! does not work...
+URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
+URxvt.keysym.Control-Shift-L: perl:tabbedex:move_tab_left
+URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_right
+
+URxvt*tabbed.tabbar-fg: 15
+URxvt*tabbed.tabbar-bg: 236
+URxvt*tabbed.tab-fg: 110
+URxvt*tabbed.tab-bg: 236
+URxvt*tabbed.transparent:true
+URxvt*tabbed.new-button: false
 
 URxvt.letterSpace: -1
-
