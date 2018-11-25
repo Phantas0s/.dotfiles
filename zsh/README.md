@@ -131,3 +131,6 @@ Generate thrift config via thrift on local (docker image doesn't work...)
 
 Display... the matrix!
 
+`colorblock` 
+
+Display the terminal colors configured in nice blocks. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorblocks).

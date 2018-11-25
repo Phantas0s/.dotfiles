@@ -288,3 +288,7 @@ thriftgen() {
     thrift -o . -r --gen php:server -out ./php/gen  ./service.thrift 
     thrift -o . -r --gen go -out ./go/pkg/gen  ./service.thrift
 }
+
+colorblocks() {
+    $DOTFILES/bash/scripts/colorblocks.sh
+}
