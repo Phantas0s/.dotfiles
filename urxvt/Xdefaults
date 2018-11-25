@@ -61,13 +61,12 @@ URxvt.keysym.C-equal:     resize-font:reset
 URxvt.keysym.C-question:  resize-font:show
 
 URxvt*keysym.Control-Shift-N: perl:tabbedex:new_tab
-URxvt*keysym.Control-Shift-J: perl:tabbedex:next_tab
-URxvt*keysym.Control-Shift-K: perl:tabbedex:prev_tab
+URxvt*keysym.Control-Shift-K: perl:tabbedex:next_tab
+URxvt*keysym.Control-Shift-J: perl:tabbedex:prev_tab
 
-! does not work...
 URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
-URxvt.keysym.Control-Shift-L: perl:tabbedex:move_tab_left
-URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_right
+URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_left
+URxvt.keysym.Control-Shift-L: perl:tabbedex:move_tab_right
 
 URxvt*tabbed.tabbar-fg: 15
 URxvt*tabbed.tabbar-bg: 236
