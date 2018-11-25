@@ -131,6 +131,15 @@ Generate thrift config via thrift on local (docker image doesn't work...)
 
 Display... the matrix!
 
-`colorblock` 
+`colorblocks` 
 
-Display the terminal colors configured in nice blocks. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorblocks).
+Display the main terminal colors configured, in nice blocks. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorblocks).
+
+`colorpanes` 
+
+Display all the terminal colors configured, in nice panes. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorpanes).
+
+`pipes` 
+
+Remember the OpenGL pipes screensaver on windows 9*? The same in the terminal. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/pipes).
+
