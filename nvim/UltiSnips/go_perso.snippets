@@ -58,7 +58,7 @@ endsnippet
 
 snippet errwf "Basic error handling with wrapping format" b
 if err != nil {
-	return errors.Wrapf(err, "${1}")
+	return errors.Wrapf(err, "${1}", ${2})
 }
 endsnippet
 
