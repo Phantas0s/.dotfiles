@@ -59,6 +59,8 @@ Plug 'wellle/targets.vim'
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
 
+Plug 'PotatoesMaster/i3-vim-syntax'
+
 " Match more stuff with % (html tag, LaTeX...)
 Plug 'andymass/vim-matchup'
 " Swap two arguments in a function
@@ -447,6 +449,8 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " enable the mouse
 " set mouse=a
