@@ -128,7 +128,6 @@ Plug 'lumiliet/vim-twig', {'for': 'twig'}
 
 " javascript plugins
 Plug 'pangloss/vim-javascript'
-" need to run npm install in the folder ~/nvim/plugged/tern_for_vim
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
 
 Plug 'leafgarland/typescript-vim'

@@ -107,6 +107,9 @@ alias gs='git status '
 alias ga='git add '
 alias gp='git push '
 alias gpo='git push origin'
+alias gtd='git tag --delete'
+#Git tag delete remote
+alias gtdr='git tag --delete origin'
 # Display remote branch
 alias gr='git branch -r'
 alias gplo='git pull origin'
