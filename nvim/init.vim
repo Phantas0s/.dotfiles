@@ -88,6 +88,7 @@ Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
 Plug 'reedes/vim-wordy' "veridy quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " dictionnary, thesaurus...
 " Plug 'Ron89/thesaurus_query.vim' 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 
 " nginx
 Plug 'chr4/nginx.vim'
