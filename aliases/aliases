@@ -26,6 +26,9 @@ alias agr='sudo apt-fast remove'
 alias agu='sudo apt-fast update'
 alias acs='apt-cache search'
 
+#rsync
+rsyncdir='rsync -arzv --progress'
+
 # pacman
 alias paci='sudo pacman -S' # install
 alias pacs='sudo pacman -Ss' # search
