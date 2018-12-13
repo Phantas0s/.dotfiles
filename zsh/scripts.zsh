@@ -334,3 +334,9 @@ crypt() {
             rm -rf "${2%.*}" ;;
     esac
 }
+
+mkcd()
+{
+  dir="$*";
+  mkdir -p "$dir" && cd "$dir";
+}

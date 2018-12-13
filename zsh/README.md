@@ -125,6 +125,10 @@ Fuzzy search in the stash list.
 
 Generate thrift config via thrift on local (docker image doesn't work...)
 
+`mkcd`
+
+Create a folder like `mkdir -p` and goes in it.
+
 ## Fun
 
 `matrix`
