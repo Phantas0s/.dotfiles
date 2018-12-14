@@ -129,6 +129,14 @@ Generate thrift config via thrift on local (docker image doesn't work...)
 
 Create a folder like `mkdir -p` and goes in it.
 
+`updatezsh`
+
+Update antibody plugins 
+
+`promptspeed`
+
+Display the time for the prompt to appear when opening a new zsh instance
+
 ## Fun
 
 `matrix`

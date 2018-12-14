@@ -29,16 +29,13 @@ function notifyosd-precmd() {
                         sed -e 's/\ +/\,/g' -e s'/\t//')
             else
                 cmd_time=$(printf '%dh:%dm:%ds\n' $(($cmd_secs/3600)) $(($cmd_secs%3600/60)) $(($cmd_secs%60)))
-                # cmd_time="$cmd_secs seconds"
             fi
             if [ ! -z $SSH_TTY ] ; then
                 notify-send -i utilities-terminal \
-                        -u $urgency "$cmd_basename on `hostname` completed $cmdstat" "\"$cmd\" took $cmd_time"; \
-                        play -q $sndstat
+                        -u $urgency "$cmd_basename on `hostname` completed $cmdstat" "\"$cmd\" took $cmd_time";
             else
                 notify-send -i utilities-terminal \
-                        -u $urgency "$cmd_basename completed $cmdstat" "\"$cmd\" took $cmd_time"; \
-                        play -q $sndstat
+                        -u $urgency "$cmd_basename completed $cmdstat" "\"$cmd\" took $cmd_time";
             fi
         fi
         unset cmd

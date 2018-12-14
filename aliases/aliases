@@ -140,6 +140,7 @@ alias vr='vagrant reload'
 # tmux
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
+alias tmuxl='tmux list-sessions'
 alias tmuxs='tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -s$USER@$HOSTNAME'
 alias mux='tmuxp load'
 

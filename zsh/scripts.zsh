@@ -337,6 +337,16 @@ crypt() {
 
 mkcd()
 {
-  dir="$*";
-  mkdir -p "$dir" && cd "$dir";
+    dir="$*";
+    mkdir -p "$dir" && cd "$dir";
+}
+
+updatezsh() {
+    rm -f $DOTFILES/antibody/plugins.sh
+    antibody bundle < $DOTFILES/antibody/plugins.txt > $DOTFILES/antibody/plugins.sh
+    antibody update
+}
+
+promptspeed() {
+    for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
 }
