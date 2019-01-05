@@ -56,6 +56,9 @@ Plug 'machakann/vim-swap'
 " add new text object (can delete between comma with di, for example)
 Plug 'wellle/targets.vim'
 
+" copy / replace more easily
+Plug 'svermeulen/vim-subversive'
+
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
 
