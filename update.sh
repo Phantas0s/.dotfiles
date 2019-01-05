@@ -6,6 +6,7 @@ echo -e "${green} ...done\n"
 #---------------------------------------
 
 echo -e "${blue} Update composer global packages..."
+composer self-update
 composer global update
 cgr update
 # cgr phpstan/phpstan

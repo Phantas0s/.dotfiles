@@ -237,14 +237,17 @@ autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 " Yaml
 autocmd vimrc BufNewFile,BufRead *.yml.dist set filetype=yaml.
 
-"------------------
-" general binding
-"------------------
+" /*******************/
+" /* general binding */
+" /*******************/
+
 syntax on
 
 " Weird hack for NERDTree to work
 let mapleader = "\\"
 map <SPACE> <leader>
+
+vmap <F2> !boxes <CR>
 
 " un-highlight when esc is pressed
 map <silent><esc> :noh<cr>
