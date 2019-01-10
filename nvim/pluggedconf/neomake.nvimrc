@@ -10,7 +10,7 @@ let g:neomake_message_sign = {
             \ }
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
-update neomake when save file
+" update neomake when save file
 if isdirectory($HOME . "/nvim/plugged/neomake")
     call neomake#configure#automake('w')
 endif
