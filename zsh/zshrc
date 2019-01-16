@@ -16,9 +16,6 @@ bindkey -r '^l'
 bindkey -r '^g'
 bindkey -s '^g' 'clear\n'
 
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # open man page in vim
 vman() {
     nvim -c "SuperMan $*"
@@ -28,6 +25,7 @@ vman() {
     fi
 }
 
+# start directly with startx
 if [[ "$(tty)" = "/dev/tty1" ]];
 then
     pgrep i3 || exec ssh-agent startx
