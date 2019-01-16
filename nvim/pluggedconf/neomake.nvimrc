@@ -109,30 +109,30 @@ autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function
 " Golang
 "-----------------
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-let g:neomake_go_gometalinter_maker = {
-        \ 'args': [
-          \ '--disable-all',
-          \ '--enable=deadcode',
-          \ '--enable=unparam',
-          \ '--enable=unused',
-          \ '--disable=unexported',
-          \ '--enable=goconst',
-          \ '--enable=ineffassign',
-          \ '--enable=maligned',
-          \ '--enable=misspell',
-          \ '--enable=structcheck',
-          \ '--enable=unconvert',
-          \ '--enable=varcheck',
-          \ '--enable=vet',
-          \ '--enable=golint',
-        \ ],
-        \ 'append_file': 0,
-        \ 'cwd': '%:h',
-        \ 'errorformat':
-            \ '%f:%l:%c:%t%*[^:]: %m,' .
-            \ '%f:%l::%t%*[^:]: %m',
-        \ 'postprocess': function('SetWarningType')
-\ }
+" let g:neomake_go_gometalinter_maker = {
+"         \ 'args': [
+"           \ '--disable-all',
+"           \ '--enable=deadcode',
+"           \ '--enable=unparam',
+"           \ '--enable=unused',
+"           \ '--disable=unexported',
+"           \ '--enable=goconst',
+"           \ '--enable=ineffassign',
+"           \ '--enable=maligned',
+"           \ '--enable=misspell',
+"           \ '--enable=structcheck',
+"           \ '--enable=unconvert',
+"           \ '--enable=varcheck',
+"           \ '--enable=vet',
+"           \ '--enable=golint',
+"         \ ],
+"         \ 'append_file': 0,
+"         \ 'cwd': '%:h',
+"         \ 'errorformat':
+"             \ '%f:%l:%c:%t%*[^:]: %m,' .
+"             \ '%f:%l::%t%*[^:]: %m',
+"         \ 'postprocess': function('SetWarningType')
+" \ }
 
 " let g:neomake_go_gometalinter_maker = {
 "         \ 'exe': 'zb',

@@ -15,8 +15,6 @@ else
     source $DOTFILES/antibody/plugins.sh
     source $SCRIPT_PATH/zsh/scripts.zsh
     source $SCRIPT_PATH/zsh/notifyosd.zsh # notify when a long command line is done
-    # FZF
-    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
     # fzf goodies
     command -v "fzf" >/dev/null && source $SCRIPT_PATH/zsh/scripts_fzf.zsh
 fi
