@@ -108,7 +108,7 @@ autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function
 "-----------------
 " Golang
 "-----------------
-let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+let g:neomake_go_enabled_makers = [ 'go' ]
 " let g:neomake_go_gometalinter_maker = {
 "         \ 'args': [
 "           \ '--disable-all',
@@ -121,10 +121,11 @@ let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
 "           \ '--enable=maligned',
 "           \ '--enable=misspell',
 "           \ '--enable=structcheck',
+"           \ '--enable=errcheck',
 "           \ '--enable=unconvert',
 "           \ '--enable=varcheck',
 "           \ '--enable=vet',
-"           \ '--enable=golint',
+"           \ '--disable=golint',
 "         \ ],
 "         \ 'append_file': 0,
 "         \ 'cwd': '%:h',

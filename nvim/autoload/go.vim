@@ -34,3 +34,4 @@ function! go#Settagbar()
           \ }
   endif
 endfunction
+

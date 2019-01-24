@@ -88,12 +88,12 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
-Plug 'reedes/vim-wordy' "veridy quality of writting (see :Wordy)
-Plug 'reedes/vim-lexical' " dictionnary, thesaurus...
+Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
+Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
 " Plug 'Ron89/thesaurus_query.vim' 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 
-" nginx
+" nginx syntax colors
 Plug 'chr4/nginx.vim'
 
 " php
