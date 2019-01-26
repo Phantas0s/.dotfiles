@@ -84,6 +84,12 @@ Display width / height of an image.
 `imgresize <source> <width>`
 Resize and create a new image named `<source>_<width>.<extension>` following aspect ratio.
 
+### Image resize all
+
+`imgresize <extension> <width>`
+Resize every images with the extension `<extention>` in the current folder.
+Use Image resize (see above)
+
 ### Image convert to jpg
 
 `imgconvjpg <source>`

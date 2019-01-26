@@ -95,6 +95,12 @@ imgresize() {
     echo "$finalName"
 }
 
+imgresizeall() {
+    for f in *.${1}; do
+        imgresize "$f" ${2}
+    done
+}
+
 imgconvjpg() {
     if [ ! -z "$1" ];
     then
