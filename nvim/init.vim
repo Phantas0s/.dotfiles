@@ -82,7 +82,6 @@ Plug 'honza/vim-snippets'
 
 " markdown - writing
 Plug 'gabrielelana/vim-markdown' " markdown plugin
-Plug 'SidOfc/mkdx', { 'for': 'markdown' } " lot of keystroke for markdown
 
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
