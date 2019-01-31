@@ -77,6 +77,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # set the modifier (Mod4: cmd)
 set $mod Mod4
 
+# Hide the bar
+# bindsym $mod+h bar mode toggle
+
 # Mouse doesn't jump from one screen to another
 mouse_warping none
 

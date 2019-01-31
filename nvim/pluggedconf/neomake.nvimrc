@@ -108,7 +108,7 @@ autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function
 "-----------------
 " Golang
 "-----------------
-let g:neomake_go_enabled_makers = [ 'go' ]
+let g:neomake_go_enabled_makers = [ 'go', 'golangci' ]
 " let g:neomake_go_gometalinter_maker = {
 "         \ 'args': [
 "           \ '--disable-all',
@@ -134,6 +134,33 @@ let g:neomake_go_enabled_makers = [ 'go' ]
 "             \ '%f:%l::%t%*[^:]: %m',
 "         \ 'postprocess': function('SetWarningType')
 " \ }
+
+let g:neomake_go_golangci_maker = {
+        \ 'exe': 'golangci-lint',
+        \ 'args': [
+            \ 'run',
+        \ ],
+        \ 'append_file': 0,
+        \ 'cwd': '%:h',
+        \ 'postprocess': function('SetWarningType')
+\ }
+
+let g:neomake_go_gometalinter_maker = {
+        \ 'args': [
+          \ '--disable-all',
+          \ '--fast',
+          \ '--enable=deadcode',
+          \ '--enable=unparam',
+          \ '--enable=unused',
+          \ '--enable=errcheck',
+        \ ],
+        \ 'append_file': 0,
+        \ 'cwd': '%:h',
+        \ 'errorformat':
+            \ '%f:%l:%c:%t%*[^:]: %m,' .
+            \ '%f:%l::%t%*[^:]: %m',
+        \ 'postprocess': function('SetWarningType')
+\ }
 
 " let g:neomake_go_gometalinter_maker = {
 "         \ 'exe': 'zb',
