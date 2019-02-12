@@ -194,6 +194,9 @@ Plug 'jez/vim-superman'
 " CSV plugin
 Plug 'chrisbra/csv.vim'
 
+" toml syntax highlighting
+Plug 'cespare/vim-toml'
+
 " Table plugin
 " Plug 'dhruvasagar/vim-table-mode'
 
