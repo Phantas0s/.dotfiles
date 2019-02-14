@@ -121,6 +121,10 @@ function! general#ToggleList(bufname, pfx)
 endfunction
 
 function! general#WordCount()
+    if (&ft!="markdown")
+        return ""
+    endif
+
     let currentmode = mode()
     if !exists("g:lastmode_wc")
         let g:lastmode_wc = currentmode

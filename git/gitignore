@@ -14,3 +14,5 @@ autotest.rb
 # phpactor
 .phpactor.yml
 
+# Golang static analysis
+report-golang-analysis/

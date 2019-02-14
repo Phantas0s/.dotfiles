@@ -139,6 +139,7 @@ let g:neomake_go_golangci_maker = {
         \ 'exe': 'golangci-lint',
         \ 'args': [
             \ 'run',
+            \ '--enable=unparam'
         \ ],
         \ 'append_file': 0,
         \ 'cwd': '%:h',
@@ -162,22 +163,7 @@ let g:neomake_go_gometalinter_maker = {
         \ 'postprocess': function('SetWarningType')
 \ }
 
-" let g:neomake_go_gometalinter_maker = {
-"         \ 'exe': 'zb',
-"         \ 'args': [
-"         \   'lint',
-"         \   '--exclude=unexported',
-"         \   '--fast',
-"         \ ],
-"         \ 'cwd': '%:h',
-"         \ 'append_file': 0,
-"         \ 'errorformat':
-"         \   '%E%f:%l:%c:%trror: %m,' .
-"         \   '%W%f:%l:%c:%tarning: %m,' .
-"         \   '%E%f:%l::%trror: %m,' .
-"         \   '%W%f:%l::%tarning: %m',
-"         \ 'postprocess': function('SetWarningType')
-"         \ }
+autocmd FileType go nmap <buffer><leader>gg :exec Neomake gometalinter<cr>
 
 let g:go_fmt_options = {
 \ 'gofmt': '-s',
