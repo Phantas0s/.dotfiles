@@ -371,6 +371,9 @@ let g:cm_matcher={'module': 'cm_matchers.abbrev_matcher', 'case': 'smartcase'}
 " Execute a macro for the all selection
 xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 
+" Disable anoying ex mode
+nnoremap Q <Nop>
+
 "-----------------
 " general config 
 "-----------------

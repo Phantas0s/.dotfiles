@@ -108,38 +108,24 @@ autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function
 "-----------------
 " Golang
 "-----------------
-let g:neomake_go_enabled_makers = [ 'go', 'golangci' ]
-" let g:neomake_go_gometalinter_maker = {
-"         \ 'args': [
-"           \ '--disable-all',
-"           \ '--enable=deadcode',
-"           \ '--enable=unparam',
-"           \ '--enable=unused',
-"           \ '--disable=unexported',
-"           \ '--enable=goconst',
-"           \ '--enable=ineffassign',
-"           \ '--enable=maligned',
-"           \ '--enable=misspell',
-"           \ '--enable=structcheck',
-"           \ '--enable=errcheck',
-"           \ '--enable=unconvert',
-"           \ '--enable=varcheck',
-"           \ '--enable=vet',
-"           \ '--disable=golint',
-"         \ ],
-"         \ 'append_file': 0,
-"         \ 'cwd': '%:h',
-"         \ 'errorformat':
-"             \ '%f:%l:%c:%t%*[^:]: %m,' .
-"             \ '%f:%l::%t%*[^:]: %m',
-"         \ 'postprocess': function('SetWarningType')
-" \ }
+let g:neomake_go_enabled_makers = [ 'go', 'golangcifast' ]
 
 let g:neomake_go_golangci_maker = {
         \ 'exe': 'golangci-lint',
         \ 'args': [
             \ 'run',
-            \ '--enable=unparam'
+            \ '--enable-all'
+        \ ],
+        \ 'append_file': 0,
+        \ 'cwd': '%:h',
+        \ 'postprocess': function('SetWarningType')
+\ }
+
+let g:neomake_go_golangcifast_maker = {
+        \ 'exe': 'golangci-lint',
+        \ 'args': [
+            \ 'run',
+            \ '--fast',
         \ ],
         \ 'append_file': 0,
         \ 'cwd': '%:h',
@@ -163,11 +149,12 @@ let g:neomake_go_gometalinter_maker = {
         \ 'postprocess': function('SetWarningType')
 \ }
 
-autocmd FileType go nmap <buffer><leader>gg :exec Neomake gometalinter<cr>
-
 let g:go_fmt_options = {
 \ 'gofmt': '-s',
 \ }
+
+nnoremap <leader>gg :Neomake<space>
+autocmd FileType go nmap <buffer><leader>go :exec "Neomake golangci"<cr>
 
 "-----------------
 " SQL
