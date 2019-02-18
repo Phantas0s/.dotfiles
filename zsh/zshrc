@@ -1,5 +1,6 @@
 source ${ZDOTDIR:-$HOME}/.dotfiles/startup
 
+# edit current command line with vim
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
@@ -18,6 +19,8 @@ bindkey -s '^v' 'vim $(fzf);^M'
 bindkey -r '^l'
 bindkey -r '^g'
 bindkey -s '^g' 'clear\n'
+bindkey -r '^p'
+bindkey -s '^p' 'fmux\n'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

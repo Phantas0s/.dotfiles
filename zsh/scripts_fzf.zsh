@@ -47,3 +47,12 @@ fstash() {
     fi
   done
 }
+
+fmux() {
+    set -eu
+    set -o pipefail
+
+    prj=$(find $HOME/.tmuxp/ -execdir sh -c 'printf "%s\n" $(basename "${0%.*}")' {} ';' | sort | uniq | nl | fzf | cut -f 2)
+
+    tmuxp load $prj
+}

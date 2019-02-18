@@ -40,7 +40,7 @@ hi SpellBad ctermfg=white ctermbg=88 cterm=underline
 hi Folded ctermfg=white ctermbg=blue cterm=bold
 
 " Code
-hi Keyword ctermfg=cyan ctermbg=NONE cterm=NONE
+hi Keyword ctermfg=blue ctermbg=NONE cterm=NONE
 hi Function ctermfg=cyan ctermbg=NONE cterm=NONE
 hi Comment ctermfg=249 ctermbg=NONE cterm=NONE
 hi LocalVariable ctermfg=magenta ctermbg=NONE cterm=NONE
