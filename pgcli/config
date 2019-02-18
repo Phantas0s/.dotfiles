@@ -152,6 +152,15 @@ Token.Toolbar.Arg.Text = nobold
 Token.Toolbar.Transaction.Valid = "bg:#222222 #87AF87 bold"
 Token.Toolbar.Transaction.Failed = "bg:#222222 #d75f5f bold"
 
+# not documented
+# see https://github.com/dagwieers/pygments/blob/master/pygments/styles/default.py
+Token.Keyword = "#ansigreen"
+Token.String = "#ansired"
+Token.String.Other = "#ansired"
+Token.Number = "#ansipurple"
+
+# Token.Generic.Inserted = "#ansigreen",
+
 [named queries]
 tenant = SELECT * FROM tenants
 select = SELECT * FROM $1
