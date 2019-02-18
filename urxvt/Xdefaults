@@ -75,4 +75,4 @@ URxvt*tabbed.tab-bg: 236
 URxvt*tabbed.transparent:true
 URxvt*tabbed.new-button: false
 
-!URxvt.letterSpace: -1
+URxvt.letterSpace: -1
