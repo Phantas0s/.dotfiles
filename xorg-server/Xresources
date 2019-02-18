@@ -28,8 +28,8 @@
 *.color13:      #afafd7
 
 ! cyan 75
-*.color6:       #5fafff
-*.color14:      #5fafff
+*.color6:       #afd7ff
+*.color14:      #afd7ff
 
 ! white 239 15
 *.color7:       #4E4E4E

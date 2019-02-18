@@ -1,3 +1,4 @@
+# vi: ft=dosini
 [main]
 
 # Enables context sensitive auto-completion. If this is disabled the all
@@ -107,7 +108,7 @@ on_error = STOP
 row_limit = 1000
 
 # Skip intro on startup and goodbye on exit
-less_chatty = False
+less_chatty = True
 
 # Postgres prompt
 # \t - Current date and time
@@ -130,16 +131,16 @@ multiline_continuation_char = ""
 # The string used in place of a null value.
 null_string = <null>
 [colors]
-Token.Menu.Completions.Completion.Current = "bg:#ffffff #000000"
-Token.Menu.Completions.Completion = "bg:#008888 #ffffff"
-Token.Menu.Completions.Meta.Current = "bg:#44aaaa #000000"
-Token.Menu.Completions.Meta = "bg:#448888 #ffffff"
-Token.Menu.Completions.MultiColumnMeta = "bg:#aaffff #000000"
+Token.Menu.Completions.Completion.Current = "bg:#d75f5f #ffffff"
+Token.Menu.Completions.Completion = "bg:#444444 #C6C6C6"
+Token.Menu.Completions.Meta.Current = "bg:#afafd7 #444444"
+Token.Menu.Completions.Meta = "bg:#444444 #C6C6C6"
+Token.Menu.Completions.MultiColumnMeta = "bg:#444444 #C6C6C6"
 Token.Menu.Completions.ProgressButton = "bg:#003333"
 Token.Menu.Completions.ProgressBar = "bg:#00aaaa"
 Token.SelectedText = "#ffffff bg:#6666aa"
 Token.SearchMatch = "#ffffff bg:#4444aa"
-Token.SearchMatch.Current = "#ffffff bg:#44aa44"
+Token.SearchMatch.Current = "#ffffff bg:#d75f5f"
 Token.Toolbar = "bg:#222222 #aaaaaa"
 Token.Toolbar.Off = "bg:#222222 #888888"
 Token.Toolbar.On = "bg:#222222 #ffffff"
@@ -148,8 +149,8 @@ Token.Toolbar.Search.Text = nobold
 Token.Toolbar.System = noinherit bold
 Token.Toolbar.Arg = noinherit bold
 Token.Toolbar.Arg.Text = nobold
-Token.Toolbar.Transaction.Valid = "bg:#222222 #00ff5f bold"
-Token.Toolbar.Transaction.Failed = "bg:#222222 #ff005f bold"
+Token.Toolbar.Transaction.Valid = "bg:#222222 #87AF87 bold"
+Token.Toolbar.Transaction.Failed = "bg:#222222 #d75f5f bold"
 
 [named queries]
 tenant = SELECT * FROM tenants

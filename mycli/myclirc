@@ -85,8 +85,8 @@ enable_pager = True
 # Custom colors for the completion menu, toolbar, etc.
 [colors]
 # Completion menus.
-Token.Menu.Completions.Completion.Current = "bg:#00aaaa #000000"
-Token.Menu.Completions.Completion = "bg:#87AFAF #303030"
+Token.Menu.Completions.Completion.Current = "bg:#d75f5f #ffffff"
+Token.Menu.Completions.Completion = "bg:#444444 #C6C6C6"
 Token.Menu.Completions.MultiColumnMeta = "bg:#aaffff #000000"
 Token.Menu.Completions.ProgressButton = "bg:#003333"
 Token.Menu.Completions.ProgressBar = "bg:#00aaaa"
