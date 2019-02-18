@@ -9,7 +9,7 @@ hi VertSplit ctermfg=236 ctermbg=236 cterm=bold
 hi CursorLine ctermfg=NONE ctermbg=236 cterm=bold
 hi CursorLineNr ctermfg=red ctermbg=236 cterm=bold
 
-hi Search ctermfg=yellow ctermbg=232 cterm=bold
+hi Search ctermfg=yellow ctermbg=NONE cterm=bold
 hi SpellRare ctermfg=yellow ctermbg=232 cterm=bold
 hi PreProc ctermfg=white ctermbg=NONE cterm=NONE
 hi Visual ctermfg=red ctermbg=236 cterm=bold

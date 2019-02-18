@@ -200,6 +200,8 @@ Plug 'cespare/vim-toml'
 " Table plugin
 " Plug 'dhruvasagar/vim-table-mode'
 
+" Plug 'TaDaa/vimade'
+
 call plug#end()
 
 "----------------
