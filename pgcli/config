@@ -141,16 +141,16 @@ Token.Menu.Completions.ProgressBar = "bg:#ansiteal"
 Token.SelectedText = "#ansiwhite bg:#ansiblue"
 Token.SearchMatch = "#ansiwhite bg:#ansiblue"
 Token.SearchMatch.Current = "#ansiwhite bg:#ansired"
-Token.Toolbar = "bg:#ansiblack #aaaaaa"
-Token.Toolbar.Off = "bg:#ansiblack #888888"
+Token.Toolbar = "#aaaaaa"
+Token.Toolbar.Off = "#888888"
 Token.Toolbar.On = "bg:#ansiblack #ansiwhite"
 Token.Toolbar.Search = noinherit bold
 Token.Toolbar.Search.Text = nobold
 Token.Toolbar.System = noinherit bold
 Token.Toolbar.Arg = noinherit bold
 Token.Toolbar.Arg.Text = nobold
-Token.Toolbar.Transaction.Valid = "bg:#222222 #87AF87 bold"
-Token.Toolbar.Transaction.Failed = "bg:#222222 #d75f5f bold"
+Token.Toolbar.Transaction.Valid = "bg:#ansiblack #ansigreen bold"
+Token.Toolbar.Transaction.Failed = "bg:#ansiblack #ansired bold"
 
 # not documented
 # see https://github.com/dagwieers/pygments/blob/master/pygments/styles/default.py
