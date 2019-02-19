@@ -147,6 +147,9 @@ Plug 'posva/vim-vue'
 " outliner
 Plug 'majutsushi/tagbar'
 
+" yaml
+Plug 'tarekbecker/vim-yaml-formatter'
+
 " Nerdtree + modifications 
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -254,7 +257,7 @@ syntax on
 let mapleader = "\\"
 map <SPACE> <leader>
 
-vmap <F2> !boxes <CR>
+vmap <F2> !boxes -d<space> 
 
 " un-highlight when esc is pressed
 map <silent><esc> :noh<cr>
@@ -468,9 +471,3 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 
 " enable the mouse
 " set mouse=a
-
-" No clue what it is :D
-" autocmd VimResized * wincmd =
-
-" hu?
-inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')

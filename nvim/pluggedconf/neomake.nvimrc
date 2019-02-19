@@ -109,13 +109,9 @@ autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function
 " Golang
 "-----------------
 let g:neomake_go_enabled_makers = [ 'go', 'golangcifast' ]
-
 let g:neomake_go_golangci_maker = {
         \ 'exe': 'golangci-lint',
-        \ 'args': [
-            \ 'run',
-            \ '--enable-all'
-        \ ],
+        \ 'args': [ 'run', '--enable=unparam' ],
         \ 'append_file': 0,
         \ 'cwd': '%:h',
         \ 'postprocess': function('SetWarningType')
@@ -123,10 +119,7 @@ let g:neomake_go_golangci_maker = {
 
 let g:neomake_go_golangcifast_maker = {
         \ 'exe': 'golangci-lint',
-        \ 'args': [
-            \ 'run',
-            \ '--fast',
-        \ ],
+        \ 'args': [ 'run', '--fast', ],
         \ 'append_file': 0,
         \ 'cwd': '%:h',
         \ 'postprocess': function('SetWarningType')

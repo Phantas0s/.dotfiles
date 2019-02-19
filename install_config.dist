@@ -11,7 +11,9 @@
 # JRNL_DEFAULT_PATH=""
 
 ### Installation from hosting service (nextcloud / dropbox...) ######
-#see install/install-from-cloud.sh
+# see install/install-from-cloud.sh
 
-#DOTFILES_CLOUD="$HOME/nextcloud/development/dotfiles_projects/NAME" #private configurations from my personnal cloud
-#WALLPAPER_PATH="$HOME/nextcloud/wallpaper" #wallpaper folder
+#private configurations from my personnal cloud
+# DOTFILES_CLOUD="$HOME/nextcloud/development/dotfiles_projects/ENV"
+#wallpaper folder
+# WALLPAPER_PATH="$HOME/nextcloud/wallpaper" 

@@ -18,13 +18,25 @@ fi
 ################
 
 #!/bin/bash
-echo -e "${green}####################################"
-echo -e "${green}# Welcome to Phantas0s's dotfiles! #"
-echo -e "${green}####################################\n"
+
+echo -e "
+${yellow}
+          _ ._  _ , _ ._
+        (_ ' ( \`  )_  .__)
+      ( (  (    )   \`)  ) _)
+     (__ (_   (_ . _) _) ,__)
+         `~~`\ ' . /`~~`
+         ,::: ;   ; :::,
+        ':::::::::::::::'
+ ____________/_ __ \____________
+|                               |
+| Welcome to Phantas0s dotfiles |
+|_______________________________|
+"
 
 echo -e "${yellow}!!! ${red}WARNING${yellow} !!!"
-echo -e "${light_red}This script will delete all your configuration!"
-echo -e "${light_red}Use it for a fresh install or if you only use this set of dotfiles.\n"
+echo -e "${light_red}This script will delete all your configuration fils!"
+echo -e "${light_red}Use it at your own risks."
 
 if [ $# -ne 1 ] || [ "$1" != "-y" ];
     then
