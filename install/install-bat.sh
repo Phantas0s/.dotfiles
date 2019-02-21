@@ -1,11 +1,13 @@
 #!/bin/bash
 
-echo ""
-echo "${blue}Install bat config..."
 
 BAT_CONFIG_DIR=$(bat --config-dir)
 
+echo -e "${red}Delete the pgcli config..."
+rm -rf $BAT_CONFIG_DIR
+echo -e "${green}...Done!\n"
+
+echo -e "\n${blue}Install bat config..."
 mkdir -p $BAT_CONFIG_DIR
 ln -sf $DOTFILES/bat/* ${BAT_CONFIG_DIR}/
-
-
+echo -e "${green}...Done!\n"

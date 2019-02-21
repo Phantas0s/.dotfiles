@@ -104,6 +104,12 @@ Convert source to a jpg image
 
 Delete a tag locally AND on the remote. `<remote>` argument is not mandatory, default `origin`.
 
+### FZF 
+
+`fmux`
+
+Let you choose a tmuxp config
+
 ### FZF meets Git
 
 #### Checkout 
