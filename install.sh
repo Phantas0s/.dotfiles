@@ -78,6 +78,7 @@ command -v "go" >/dev/null && . $DOTFILES/install/install-go.sh
 command -v "npm" >/dev/null && . $DOTFILES/install/install-javascript.sh
 command -v "compton" >/dev/null && . $DOTFILES/install/install-compton.sh
 command -v "bat" >/dev/null && . $DOTFILES/install/install-bat.sh
+command -v "joplin" >/dev/null && . $DOTFILES/install/install-joplin.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $DOTFILES/bash/bashrc $HOME/.bashrc
