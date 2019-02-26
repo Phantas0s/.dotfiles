@@ -1,1 +1,1 @@
-golangci-lint run -p bugs,unused
+golangci-lint run -p bugs,unused --disable=scopelint
