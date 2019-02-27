@@ -88,63 +88,51 @@ function! s:Neomake_callback(options)
     endif
 endfunction
 
-" function! s:Neomake_callback(options)
-"   if (a:options.name ==? 'eslint') && (a:options.has_next == 0)
-"     let timer = timer_start(100, 
-"           \ {->execute('checktime ' . bufname('%')) }, 
-"           \ {'repeat': 20})
-"   endif
-" endfunction
-
-"
 " Call neomake#Make directly instead of the Neomake provided command
-autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function('s:Neomake_callback'))
-
-" if has('nvim')
-" autocmd Filetype javascript call neomake#Make(1, [], function('s:Neomake_callback'))
-" endif
-
+if has('nvim')
+    autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function('s:Neomake_callback'))
+endif
 
 "-----------------
 " Golang
 "-----------------
 let g:neomake_go_enabled_makers = [ 'go', 'golangcifast' ]
 let g:neomake_go_golangci_maker = {
-        \ 'exe': 'golangci-lint',
-        \ 'args': [ 'run', '--enable=unparam' ],
-        \ 'append_file': 0,
-        \ 'cwd': '%:h',
-        \ 'postprocess': function('SetWarningType')
-\ }
+            \ 'exe': 'golangci-lint',
+            \ 'args': [ 'run', '--enable=unparam' ],
+            \ 'append_file': 0,
+            \ 'cwd': '%:h',
+            \ 'postprocess': function('SetWarningType')
+            \ }
 
 let g:neomake_go_golangcifast_maker = {
-        \ 'exe': 'golangci-lint',
-        \ 'args': [ 'run', '--fast', ],
-        \ 'append_file': 0,
-        \ 'cwd': '%:h',
-        \ 'postprocess': function('SetWarningType')
-\ }
+            \ 'exe': 'golangci-lint',
+            \ 'args': [ 'run', '--fast', ],
+            \ 'append_file': 0,
+            \ 'cwd': '%:h',
+            \ 'postprocess': function('SetWarningType')
+            \ }
 
 let g:neomake_go_gometalinter_maker = {
-        \ 'args': [
-          \ '--disable-all',
-          \ '--fast',
-          \ '--enable=deadcode',
-          \ '--enable=unparam',
-          \ '--enable=unused',
-          \ '--enable=errcheck',
-        \ ],
-        \ 'append_file': 0,
-        \ 'cwd': '%:h',
-        \ 'errorformat':
+            \ 'args': [
+            \ '--disable-all',
+            \ '--fast',
+            \ '--enable=deadcode',
+            \ '--enable=unparam',
+            \ '--enable=unused',
+            \ '--enable=errcheck',
+            \ ],
+            \ 'append_file': 0,
+            \ 'cwd': '%:h',
+            \ 'errorformat':
             \ '%f:%l:%c:%t%*[^:]: %m,' .
             \ '%f:%l::%t%*[^:]: %m',
-        \ 'postprocess': function('SetWarningType')
-\ }
+            \ 'postprocess': function('SetWarningType')
+            \ }
 
 let g:go_fmt_options = {
-\ 'gofmt': '-s',
-\ }
+            \ 'gofmt': '-s',
+            \ }
 
 nnoremap <leader>gg :Neomake<space>
 autocmd FileType go nmap <buffer><leader>go :exec "Neomake golangci"<cr>
@@ -169,3 +157,51 @@ let g:neomake_scheme_raco_maker = {
             \ 'args': ['expand'],
             \ 'errorformat': '%-G %.%#,%E%f:%l:%c: %m'
             \ }
+
+" Spinner??? OMG
+
+let s:spinner_index = 0
+let s:active_spinners = 0
+let s:spinner_states = ['|', '/', '--', '\', '|', '/', '--', '\']
+let s:spinner_states = ['┤', '┘', '┴', '└', '├', '┌', '┬', '┐']
+let s:spinner_states = ['←', '↑', '→', '↓']
+let s:spinner_states = ['d', 'q', 'p', 'b']
+let s:spinner_states = ['■', '□', '▪', '▫', '▪', '□', '■']
+let s:spinner_states = ['→', '↘', '↓', '↙', '←', '↖', '↑', '↗']
+let s:spinner_states = ['.', 'o', 'O', '°', 'O', 'o', '.']
+
+function! StartSpinner()
+    let b:show_spinner = 1
+    let s:active_spinners += 1
+    if s:active_spinners == 1
+        let s:spinner_timer = timer_start(1000 / len(s:spinner_states), 'SpinSpinner', {'repeat': -1})
+    endif
+endfunction
+
+function! StopSpinner()
+    let b:show_spinner = 0
+    let s:active_spinners -= 1
+    if s:active_spinners == 0
+        :call timer_stop(s:spinner_timer)
+    endif
+endfunction
+
+function! SpinSpinner(timer)
+    let s:spinner_index = float2nr(fmod(s:spinner_index + 1, len(s:spinner_states)))
+    redraw
+endfunction
+
+function! SpinnerText()
+    if get(b:, 'show_spinner', 0) == 0
+        return " "
+    endif
+
+    return s:spinner_states[s:spinner_index]
+endfunction
+
+augroup neomake_hooks
+    au!
+    autocmd User NeomakeJobInit :call StartSpinner()
+    autocmd User NeomakeFinished :call StopSpinner()
+    " autocmd User NeomakeFinished :echom "Build complete"
+augroup END

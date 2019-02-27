@@ -19,6 +19,7 @@ alias bc="bc -q"
 
 # bat better than cat
 # alias cat='bat'
+alias batl='bat --paging=never -l log'
 
 # apt-get
 alias agi='sudo apt-fast install'

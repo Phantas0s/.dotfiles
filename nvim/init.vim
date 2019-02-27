@@ -147,9 +147,6 @@ Plug 'posva/vim-vue'
 " outliner
 Plug 'majutsushi/tagbar'
 
-" yaml
-Plug 'tarekbecker/vim-yaml-formatter'
-
 " Nerdtree + modifications 
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -202,8 +199,6 @@ Plug 'cespare/vim-toml'
 
 " Table plugin
 " Plug 'dhruvasagar/vim-table-mode'
-
-" Plug 'TaDaa/vimade'
 
 call plug#end()
 

@@ -131,18 +131,18 @@ multiline_continuation_char = ""
 # The string used in place of a null value.
 null_string = <null>
 [colors]
-Token.Menu.Completions.Completion.Current = "bg:#ansired #ansiwhite"
+Token.Menu.Completions.Completion.Current = "bg:#ansired #ansiwhite bold"
 Token.Menu.Completions.Completion = "bg:#ansidarkgray #C6C6C6"
 Token.Menu.Completions.Meta.Current = "bg:#ansiyellow #ansidarkgray"
 Token.Menu.Completions.Meta = "bg:#ansidarkgray #C6C6C6"
 Token.Menu.Completions.MultiColumnMeta = "bg:#ansidarkgray #C6C6C6"
 Token.Menu.Completions.ProgressButton = "bg:#ansiblack"
-Token.Menu.Completions.ProgressBar = "bg:#ansiteal"
+Token.Menu.Completions.ProgressBar = "bg:#ansiblue"
 Token.SelectedText = "#ansiwhite bg:#ansiblue"
 Token.SearchMatch = "#ansiwhite bg:#ansiblue"
 Token.SearchMatch.Current = "#ansiwhite bg:#ansired"
-Token.Toolbar = "#aaaaaa"
-Token.Toolbar.Off = "#888888"
+Token.Toolbar = "#C6C6C6"
+Token.Toolbar.Off = "#444444"
 Token.Toolbar.On = "bg:#ansiblack #ansiwhite"
 Token.Toolbar.Search = noinherit bold
 Token.Toolbar.Search.Text = nobold
@@ -154,10 +154,10 @@ Token.Toolbar.Transaction.Failed = "bg:#ansiblack #ansired bold"
 
 # not documented
 # see https://github.com/dagwieers/pygments/blob/master/pygments/styles/default.py
-Token.Keyword = "#ansigreen"
+Token.Keyword = "#ansigreen bold"
 Token.String = "#ansired"
 Token.String.Other = "#ansired"
-Token.Number = "#ansipurple"
+Token.Number = "#ansired"
 
 # Token.Generic.Inserted = "#ansigreen",
 

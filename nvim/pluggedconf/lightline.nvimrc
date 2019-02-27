@@ -1,7 +1,7 @@
 let g:lightline = {
       \ 'colorscheme': 'hypnos256',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename','gitbranch', 'modified'] ],
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename','gitbranch', 'modified', 'neospinner'] ],
       \   'right': [ [ 'lineinfo' ], [ 'percent', 'wordcount' ], [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ],
       \ },
       \ 'component': {
@@ -10,6 +10,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'wordcount': 'general#WordCount',
       \   'gitbranch': 'fugitive#head',
+      \   'neospinner': 'SpinnerText',
       \ },
       \ }
 

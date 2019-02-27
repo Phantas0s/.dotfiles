@@ -49,7 +49,7 @@ exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id vmware-user
 
 # start owncloud client
-exec --no-startup-id owncloud &
+exec --no-startup-id nextcloud &
 
 #wallpaper
 exec --no-startup-id ~/.fehbg
