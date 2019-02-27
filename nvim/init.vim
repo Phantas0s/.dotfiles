@@ -10,9 +10,9 @@ augroup vimrc
   autocmd!
 augroup END
 
-"-----------------
-" install plugin
-"-----------------
+" +----------------+
+" | install plugin |
+" +----------------+
 
 call plug#begin('~/nvim/plugged')
 
@@ -31,7 +31,7 @@ Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify'
 " Display commits for project / file
 Plug 'junegunn/gv.vim'
 
-" surrounding with whatever you want (paranthesis, quotes...)
+" surrounding text objects with whatever you want (paranthesis, quotes, html tags...)
 Plug 'tpope/vim-surround'
 
 " easily search, substitute and abbreviate multiple version of words
@@ -41,11 +41,8 @@ Plug 'tpope/vim-abolish'
 " http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-repeat'
 
-" comment automatically
+" keystroke to comment automatically depending on the file you're in
 Plug 'tpope/vim-commentary'
-
-" Add sugar on top of Vim
-Plug 'tpope/vim-eunuch'
 
 " Highlight briefly every yank text
 Plug 'machakann/vim-highlightedyank'
@@ -56,33 +53,27 @@ Plug 'machakann/vim-swap'
 " add new text object (can delete between comma with di, for example)
 Plug 'wellle/targets.vim'
 
-" copy / replace more easily
-Plug 'svermeulen/vim-subversive'
-
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
 
+" colors for i3 config file
 Plug 'PotatoesMaster/i3-vim-syntax'
 
 " Match more stuff with % (html tag, LaTeX...)
 Plug 'andymass/vim-matchup'
-" Swap two arguments in a function
-Plug 'PeterRincker/vim-argumentative'
 
 " vim project for one specific vimrc / project + startify for startup cow
 Plug 'amiorin/vim-project'
 Plug 'mhinz/vim-startify'
 
-" general quality tools 
+" Asynchronous linting for every languages
 Plug 'neomake/neomake'
 
-" snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" snippet engine + snippets
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" markdown - writing
-Plug 'gabrielelana/vim-markdown' " markdown plugin
-
+" markdown
+Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
@@ -121,7 +112,6 @@ Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-cssomni'
 Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
-" Plug 'ncm2/ncm2-tagprefix'
 
 " golang development
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
@@ -184,8 +174,7 @@ Plug 'simeji/winresizer'
 " replace f F t T to target easily the motion
 Plug 'yangmillstheory/vim-snipe'
 
-" Split arrays in PHP / struct in Go
-
+" Split arrays in PHP / struct in Go / other things
 Plug 'AndrewRadev/splitjoin.vim'
 
 " Open man with vim using vman (need to be configured in zsh boot)
@@ -202,17 +191,14 @@ Plug 'cespare/vim-toml'
 
 call plug#end()
 
-"----------------
-" plugin config
-"----------------
+" +---------------+
+" | plugin config |
+" +---------------+
 
 " source every plugin configs
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
     exe 'source' file
 endfor
-
-" for nuuid
-let g:nuuid_no_mappings = 1
 
 if exists("g:did_load_filetypes")
   filetype off
@@ -222,7 +208,7 @@ set rtp+=~/nvim/godoctor.vim
 filetype on
 filetype plugin indent on
 
-" Impossible to put it in vim-delve - to debug
+" Impossible to put it in vim-delve.nvimrc file...
 let g:delve_breakpoint_sign = ""
 let g:delve_tracepoint_sign = ""
 
@@ -230,7 +216,7 @@ let g:delve_tracepoint_sign = ""
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" project config - is not on my git repository
+" project config - personnal file (not on my git repository)
 source ~/nvim/projects.nvimrc
 
 " close the buffer
@@ -239,12 +225,9 @@ nmap <leader>db :Bdelete!<cr>
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 
-" Yaml
-autocmd vimrc BufNewFile,BufRead *.yml.dist set filetype=yaml.
-
-" /*******************/
-" /* general binding */
-" /*******************/
+" +-----------------+
+" | general binding |
+" +-----------------+
 
 syntax on
 
@@ -252,7 +235,7 @@ syntax on
 let mapleader = "\\"
 map <SPACE> <leader>
 
-vmap <F2> !boxes -d<space> 
+vmap <F2> !boxes -d stone
 
 " un-highlight when esc is pressed
 map <silent><esc> :noh<cr>
@@ -374,9 +357,9 @@ xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 " Disable anoying ex mode
 nnoremap Q <Nop>
 
-"-----------------
-" general config 
-"-----------------
+" +----------------+
+" | general config |
+" +----------------+
 
 " colorscheme
 colo hypnos
@@ -464,5 +447,5 @@ augroup END
 
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" enable the mouse
+" enable the mouse - who needs a mouse??
 " set mouse=a

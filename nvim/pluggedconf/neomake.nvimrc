@@ -1,3 +1,7 @@
+" +---------+
+" | General |
+" +---------+
+
 " Neomake signs in the gutter
 let g:neomake_error_sign = {'text': '', 'texthl': 'NeomakeErrorSign'}
 let g:neomake_warning_sign = {
@@ -15,10 +19,9 @@ if isdirectory($HOME . "/nvim/plugged/neomake")
     call neomake#configure#automake('w')
 endif
 
-
-"----------------
-" PHP
-"-----------------
+" +-----+
+" | PHP |
+" +-----+
 
 " standard phpcs config
 let g:neomake_php_phpcs_args_standard = 'PSR2'
@@ -72,9 +75,10 @@ let g:neomake_php_phpmd_maker = {
             \ 'postprocess': function('SetMessageType'),
             \ }
 
-"-----------------
-" Javascript
-"-----------------
+" +------------+
+" | Javascript |
+" +------------+
+
 let g:neomake_javascript_enabled_makers = ['eslint']
 " Use the fix option of eslint
 
@@ -93,9 +97,10 @@ if has('nvim')
     autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function('s:Neomake_callback'))
 endif
 
-"-----------------
-" Golang
-"-----------------
+" +--------+
+" | Golang |
+" +--------+
+
 let g:neomake_go_enabled_makers = [ 'go', 'golangcifast' ]
 let g:neomake_go_golangci_maker = {
             \ 'exe': 'golangci-lint',
