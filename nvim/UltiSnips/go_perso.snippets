@@ -9,8 +9,8 @@ snippet tt "table-driven tests"
 func Test_${1:Func}(t *testing.T) {
 	testCases := []struct {
 		name string
-		${3}
 		expected ${2}
+		${3}
 		wantErr bool
 	}{
 		{
