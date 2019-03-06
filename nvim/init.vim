@@ -27,6 +27,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " wrapper for git and display git diff in the left gutter
 Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' 
+" fugitive for the hub
+Plug 'tpope/vim-rhubarb'
 
 " Display commits for project / file
 Plug 'junegunn/gv.vim'
