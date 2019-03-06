@@ -159,9 +159,9 @@ Display... the matrix!
 
 Display the main terminal colors configured, in nice blocks. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorblocks).
 
-`colorpanes` 
+`colorcards` 
 
-Display all the terminal colors configured, in nice panes. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorpanes).
+Display all the terminal colors configured, in nice panes. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorcards).
 
 `pipes` 
 

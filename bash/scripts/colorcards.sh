@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# ColorPanes - Show off your true colors
+# ColorCards - Show off your true colors
 
 f=3 b=4
 for j in f b; do

@@ -299,8 +299,8 @@ colorblocks() {
     $DOTFILES/bash/scripts/colorblocks.sh
 }
 
-colorpanes() {
-    $DOTFILES/bash/scripts/colorpanes.sh
+colorcards() {
+    $DOTFILES/bash/scripts/colorcards.sh
 }
 
 pipes() {

@@ -56,6 +56,8 @@ hi MatchParen ctermfg=236 ctermbg=yellow cterm=bold
 hi Identifier ctermfg=248 ctermbg=NONE cterm=NONE
 hi Operator ctermfg=248 ctermbg=NONE cterm=NONE
 
+hi ColorColumn ctermfg=244 ctermbg=NONE cterm=NONE
+
 "---------"
 " PLUGINS "
 "---------"

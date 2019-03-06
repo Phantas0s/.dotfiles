@@ -186,6 +186,8 @@ Plug 'chrisbra/csv.vim'
 " toml syntax highlighting
 Plug 'cespare/vim-toml'
 
+Plug 'blueyed/vim-diminactive'
+
 " Table plugin
 " Plug 'dhruvasagar/vim-table-mode'
 
