@@ -310,8 +310,8 @@ nnoremap <leader>wv <c-w>v
 inoremap <C-d> <Del>
 
 " highlight the line which is longer than the defined margin (120 character)
-highlight ColorColumn ctermbg=red
-autocmd vimrc FileType php,js,vue,go call matchadd('ColorColumn', '\%120v', 100)
+highlight MaxLineChar ctermbg=red
+autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
 " open devdocs.io with firefox and search the word under the cursor
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || firefox -url https://devdocs.io/#q=<args>')
