@@ -28,6 +28,8 @@ mkdir -p $HOME/nvim/undo
 mkdir -p $HOME/nvim/swap
 mkdir -p $HOME/nvim/after/indent
 mkdir -p $HOME/nvim/lua
+mkdir -p $HOME/nvim/thesaurus
+mkdir -p $HOME/nvim/spell
 
 # Install Godoctor for vim
 if [ ! -d $HOME/nvim/godoctor.vim ]
@@ -61,6 +63,12 @@ ln -sf $DOTFILES/nvim/ftplugin/ $HOME/nvim/ftplugin
 
 # see :help autoload
 ln -sf $DOTFILES/nvim/autoload/* $HOME/nvim/autoload/
+
+# thesaurus
+ln -sf $DOTFILES/nvim/thesaurus/* $HOME/nvim/thesaurus/
+
+# spell files
+ln -sf $DOTFILES/nvim/spell/* $HOME/nvim/spell/
 
 # projects.nvimrc is installed from the cloud
 
