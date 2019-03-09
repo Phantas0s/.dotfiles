@@ -108,12 +108,14 @@ Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-github'
 Plug 'ncm2/ncm2-ultisnips'
 Plug 'phpactor/ncm2-phpactor'
 Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-cssomni'
 Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
+Plug 'mhartington/nvim-typescript'
 
 " golang development
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
