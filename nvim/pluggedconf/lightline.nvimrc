@@ -9,6 +9,7 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'wordcount': 'general#WordCount',
+      \   'charcount': 'general#CharCount',
       \   'gitbranch': 'fugitive#head',
       \   'neospinner': 'SpinnerText',
       \ },
