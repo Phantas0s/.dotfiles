@@ -195,6 +195,9 @@ Plug 'blueyed/vim-diminactive'
 " Table plugin
 " Plug 'dhruvasagar/vim-table-mode'
 
+" align plugin
+Plug 'godlygeek/tabular'
+
 call plug#end()
 
 " +---------------+
