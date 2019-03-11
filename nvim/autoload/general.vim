@@ -175,9 +175,9 @@ function! general#CharCount()
         else
             let s:split_wc = split(v:statusmsg)
             if index(s:split_wc, "Selected") < 0
-                let b:charcount = str2nr(s:split_wc[17]) - 1
-            else
                 let b:charcount = str2nr(s:split_wc[13]) - 1
+            else
+                let b:charcount = str2nr(s:split_wc[9]) - 1
             endif
             let v:statusmsg = l:old_status
         endif
