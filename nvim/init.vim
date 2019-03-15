@@ -115,7 +115,6 @@ Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-cssomni'
 Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
-Plug 'mhartington/nvim-typescript'
 
 " golang development
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
