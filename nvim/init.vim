@@ -194,6 +194,9 @@ Plug 'blueyed/vim-diminactive'
 " Table plugin
 " Plug 'dhruvasagar/vim-table-mode'
 
+" Write file with sudo
+Plug 'lambdalisue/suda.vim'
+
 " align plugin
 Plug 'godlygeek/tabular'
 
@@ -364,6 +367,9 @@ xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 
 " Disable anoying ex mode
 nnoremap Q <Nop>
+
+" Save files as root
+cnoremap w!! execute ':w suda://%'
 
 " +----------------+
 " | general config |
