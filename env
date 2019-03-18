@@ -25,7 +25,7 @@ PATH="$HOME/composer/vendor/bin:$PATH"
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
 export GOCACHE="$HOME/.cache/go-build"
-export GO111MODULE=on
+# export GO111MODULE=on
 
 # PATH for go binaries
 PATH="$GOBIN:$PATH"
