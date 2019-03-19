@@ -103,18 +103,23 @@ Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
 " autocompletion
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-github'
-Plug 'ncm2/ncm2-ultisnips'
-Plug 'phpactor/ncm2-phpactor'
-Plug 'ncm2/ncm2-go'
-Plug 'ncm2/ncm2-tern'
-Plug 'ncm2/ncm2-cssomni'
-Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
+Plug 'ncm2/ncm2', {'for': 'php'}
+Plug 'roxma/nvim-yarp', {'for': 'php'}
+" Plug 'ncm2/ncm2-bufword'
+" Plug 'ncm2/ncm2-tmux'
+" Plug 'ncm2/ncm2-path'
+" Plug 'ncm2/ncm2-github'
+Plug 'ncm2/ncm2-ultisnips', {'for': 'php'}
+Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
+" Plug 'ncm2/ncm2-go'
+" Plug 'ncm2/ncm2-tern'
+" Plug 'ncm2/ncm2-cssomni'
+" Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
+
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': 'yarn install'}
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " golang development
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
@@ -235,6 +240,22 @@ nmap <leader>db :Bdelete!<cr>
 
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
+
+" Coc extensions
+let g:coc_global_extensions = [
+    \ 'coc-json', 
+    \ 'coc-css', 
+    \ 'coc-tsserver',
+    \ 'coc-emoji', 
+    \ 'coc-html',
+    \ 'coc-ultisnips',
+    \ 'coc-yaml',
+    \]
+
+" \ 'coc-highlight',
+" \ 'coc-dictionary',
+" \ 'coc-syntax', 
+" \ 'coc-syntax', 
 
 " +-----------------+
 " | general binding |

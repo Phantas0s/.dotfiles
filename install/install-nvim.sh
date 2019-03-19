@@ -46,6 +46,9 @@ fi
 # configuration of different plugins
 ln -sf $DOTFILES/nvim/pluggedconf/ $HOME/nvim/pluggedconf
 
+# configuration of coc
+ln -sf $DOTFILES/nvim/coc-settings.json $HOME/nvim/coc-settings.json
+
 # color schemes
 ln -sf $DOTFILES/nvim/colors/* $HOME/nvim/colors/
 
