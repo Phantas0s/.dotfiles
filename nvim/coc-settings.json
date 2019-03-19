@@ -1,0 +1,31 @@
+{
+    "languageserver": {
+        "golang": {
+            "command": "bingo",
+            "args": [
+                "--diagnostics-style=none",
+                "--format-style=goimports"
+            ],
+            "rootPatterns": [
+                "go.mod",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "filetypes": [
+                "go"
+            ]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        }
+    },
+    "suggest.snippetIndicator": " ►",
+    "diagnostic.enable": false,
+    "coc.preferences.formatOnSaveFiletypes": ["go", "json"],
+    "coc.preferences.hoverTarget": "float",
+    "html.format.enable": true
+}

@@ -38,6 +38,7 @@ alias pacr='sudo pacman -R' # remove package but not dependencies
 alias pacrr='sudo pacman -Rs' # remove package with unused dependencies by other softwares
 alias pacrc='sudo pacman -Sc' # remove pacman's cache
 alias pacro='pacman -Rns $(pacman -Qtdq)'
+alias pacrl='rm /var/lib/pacman/db.lck' # pacman remove locks
 
 # aurman
 alias auri='sudo aurman -S'
@@ -95,12 +96,20 @@ alias gia="go install ./..."
 alias hugostart="hugo server -DEF --ignoreCache"
 
 # vim && neovim
-# clean the vim swap file
-alias nvimc='rm -I ~/nvim/swap/*'
-# clean the vim undo
-alias nvimcu='rm -I ~/nvim/undo/*'
+# +---------------+
+# | vim && neovim |
+# +---------------+
+
 alias vim='nvim'
 alias vi='nvim'
+alias svim='sudoedit'
+
+# clean the vim swap file
+alias nvimc='rm -I ~/nvim/swap/*'
+
+# clean the vim undo
+alias nvimcu='rm -I ~/nvim/undo/*'
+
 # log the keys entered via using vim 
 alias nviml='nvim -w ~/.vimlog "$@"'
 

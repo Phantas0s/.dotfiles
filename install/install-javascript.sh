@@ -37,4 +37,10 @@ if [ ! -d ~/.node_modules/lib/node_modules/typescript ];
 then
     npm i -g typescript
 fi
+
+if [ ! -d ~/.node_modules/lib/node_modules/bash-language-server ];
+then
+    npm i -g bash-language-server
+fi
+
 echo -e "${green}...done!\n"

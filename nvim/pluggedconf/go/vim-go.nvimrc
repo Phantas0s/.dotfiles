@@ -42,10 +42,10 @@ autocmd Filetype go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
 autocmd Filetype go nmap <buffer><leader>tub <Plug>(go-alternate-split)
 autocmd Filetype go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
 
-autocmd FileType go nmap <buffer><leader>gim <plug>(go-implements)
+" autocmd FileType go nmap <buffer><leader>gim <plug>(go-implements)
 autocmd FileType go nmap <buffer><leader>gc <plug>(go-callee)
 
-autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
+" autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
 autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
 
 autocmd FileType go nmap <buffer><leader>gfs :exec "GoFillStruct"<cr>
