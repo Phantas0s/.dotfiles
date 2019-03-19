@@ -91,6 +91,9 @@ alias gor="go clean -i" #need repository path
 alias gta="go test ./..."
 alias gia="go install ./..."
 
+# Hugo website generator
+alias hugostart="hugo server -DEF --ignoreCache"
+
 # vim && neovim
 # clean the vim swap file
 alias nvimc='rm -I ~/nvim/swap/*'
