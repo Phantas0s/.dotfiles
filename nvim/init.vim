@@ -482,5 +482,12 @@ augroup END
 
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" hack for coc to be disabled only for PHP
+let g:coc_disabled_filetype = ['php']
+augroup coc_activation
+    au!
+    au BufEnter * if index(g:coc_disabled_filetype, &filetype) != -1 | :exec "CocDisable" | else | :exec "CocEnable" | endif
+augroup end
+
 " enable the mouse - who needs a mouse??
 " set mouse=a
