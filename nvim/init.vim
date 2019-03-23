@@ -197,7 +197,7 @@ Plug 'cespare/vim-toml'
 Plug 'blueyed/vim-diminactive'
 
 " Table plugin
-" Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 
 " Write file with sudo
 Plug 'lambdalisue/suda.vim'
