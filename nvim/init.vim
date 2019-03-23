@@ -75,7 +75,10 @@ Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " markdown
-Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
+Plug 'godlygeek/tabular' " align plugin
+" Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
+" Plug 'tpope/vim-markdown'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
@@ -194,16 +197,15 @@ Plug 'chrisbra/csv.vim'
 " toml syntax highlighting
 Plug 'cespare/vim-toml'
 
+" Plug to dim not-focused windows
 Plug 'blueyed/vim-diminactive'
 
 " Table plugin
-Plug 'dhruvasagar/vim-table-mode'
+" Plug 'dhruvasagar/vim-table-mode'
 
 " Write file with sudo
 Plug 'lambdalisue/suda.vim'
 
-" align plugin
-Plug 'godlygeek/tabular'
 
 call plug#end()
 
@@ -257,6 +259,7 @@ let g:coc_global_extensions = [
 " \ 'coc-syntax', 
 " \ 'coc-syntax', 
 
+let g:vim_markdown_folding_disabled = 1
 " +-----------------+
 " | general binding |
 " +-----------------+
@@ -344,6 +347,9 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 " open devdocs.io with firefox and search the word under the cursor
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || firefox -url https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
+
+" Markdown
+autocmd vimrc BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " arrow keys resize windows
 nnoremap <Left> :vertical resize -10<CR>

@@ -57,6 +57,9 @@ hi Identifier ctermfg=248 ctermbg=NONE cterm=NONE
 hi Operator ctermfg=248 ctermbg=NONE cterm=NONE
 
 hi ColorColumn ctermfg=244 ctermbg=NONE cterm=NONE
+hi markdownH1 ctermfg=red ctermbg=NONE cterm=NONE
+hi markdownH2 ctermfg=yellow ctermbg=NONE cterm=NONE
+hi markdownH3 ctermfg=magenta ctermbg=NONE cterm=NONE
 
 "---------"
 " PLUGINS "
