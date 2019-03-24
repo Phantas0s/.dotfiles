@@ -76,9 +76,9 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " markdown
 Plug 'godlygeek/tabular' " align plugin
-" Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
-" Plug 'tpope/vim-markdown'
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" Plug 'gabrielelana/vimimarkdown', { 'for': 'markdown' }
+Plug 'tpope/vim-markdown', {'for': 'markdown'},
+" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
@@ -200,12 +200,11 @@ Plug 'cespare/vim-toml'
 " Plug to dim not-focused windows
 Plug 'blueyed/vim-diminactive'
 
-" Table plugin
-" Plug 'dhruvasagar/vim-table-mode'
-
 " Write file with sudo
 Plug 'lambdalisue/suda.vim'
 
+" Display register values on " and @
+Plug 'junegunn/vim-peekaboo'
 
 call plug#end()
 
