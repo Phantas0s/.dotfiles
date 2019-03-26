@@ -339,7 +339,7 @@ bar {
 }
 
 # lockscreen
-set $i3lockwall i3lock -i ~/wallpapers/forest.png -t
+set $i3lockwall i3lock -i ~/wallpapers/2016-04-07-09.34-Village-in-the-sky.png -t
 
 # In order to cache an image
 # exec --no-startup-id betterlockscreen -u ~/wallpapers/snow_tree.png 
