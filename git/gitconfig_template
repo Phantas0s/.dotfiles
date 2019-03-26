@@ -28,3 +28,5 @@
   cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [rebase]
 	autosquash = true
+[status]
+  showUntrackedFiles = all
