@@ -74,8 +74,10 @@ Plug 'neomake/neomake'
 " snippet engine + snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
+" Align plugin
+Plug 'godlygeek/tabular'
+
 " markdown
-Plug 'godlygeek/tabular' " align plugin
 " Plug 'gabrielelana/vimimarkdown', { 'for': 'markdown' }
 Plug 'tpope/vim-markdown', {'for': 'markdown'},
 " Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -255,7 +257,6 @@ let g:coc_global_extensions = [
 
 " \ 'coc-highlight',
 " \ 'coc-dictionary',
-" \ 'coc-syntax', 
 " \ 'coc-syntax', 
 
 let g:vim_markdown_folding_disabled = 1
