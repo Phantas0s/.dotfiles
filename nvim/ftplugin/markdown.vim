@@ -9,6 +9,7 @@ for file in split(glob("~/nvim/pluggedconf/md/*.nvimrc"), '\n')
 endfor
 
 set number norelativenumber
+set spell
 
 " cancel the number toggled defined in init file
 augroup mdnumbertoggle
