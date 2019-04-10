@@ -108,14 +108,14 @@ Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
 " autocompletion
-Plug 'ncm2/ncm2', {'for': 'php'}
-Plug 'roxma/nvim-yarp', {'for': 'php'}
+" Plug 'ncm2/ncm2', {'for': 'php'}
+" Plug 'roxma/nvim-yarp', {'for': 'php'}
 " Plug 'ncm2/ncm2-bufword'
 " Plug 'ncm2/ncm2-tmux'
 " Plug 'ncm2/ncm2-path'
 " Plug 'ncm2/ncm2-github'
-Plug 'ncm2/ncm2-ultisnips', {'for': 'php'}
-Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
+" Plug 'ncm2/ncm2-ultisnips', {'for': 'php'}
+" Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
 " Plug 'ncm2/ncm2-go'
 " Plug 'ncm2/ncm2-tern'
 " Plug 'ncm2/ncm2-cssomni'
@@ -139,7 +139,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
 
 Plug 'leafgarland/typescript-vim'
-" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " For react
 Plug 'mxw/vim-jsx'
@@ -487,13 +486,6 @@ augroup numbertoggle
 augroup END
 
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" hack for coc to be disabled only for PHP
-let g:coc_disabled_filetype = ['php']
-augroup coc_activation
-    au!
-    au BufEnter * if index(g:coc_disabled_filetype, &filetype) != -1 | :exec "CocDisable" | else | :exec "CocEnable" | endif
-augroup end
 
 " enable the mouse - who needs a mouse??
 " set mouse=a

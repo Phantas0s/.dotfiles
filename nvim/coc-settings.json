@@ -21,7 +21,12 @@
             "args": ["start"],
             "filetypes": ["sh"],
             "ignoredRootPaths": ["~"]
-        }
+        },
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"]
+        }    
     },
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,
