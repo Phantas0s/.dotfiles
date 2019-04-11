@@ -259,6 +259,7 @@ let g:coc_global_extensions = [
 " \ 'coc-syntax', 
 
 let g:vim_markdown_folding_disabled = 1
+
 " +-----------------+
 " | general binding |
 " +-----------------+

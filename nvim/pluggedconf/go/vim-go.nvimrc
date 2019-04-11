@@ -8,6 +8,8 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_auto_type_info = 1
+let g:go_gocode_propose_source=0
+
 let g:go_metalinter_enabled = [ "gosec", "goconst", "gocyclo", "golint", "ineffassign", "interfacer", "maligned", "megacheck", "misspell", "structcheck", "unconvert", "varcheck", "vet"]
 let g:go_def_mode = 'godef'
 
