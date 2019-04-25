@@ -30,7 +30,7 @@
     },
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,
-    "coc.preferences.formatOnSaveFiletypes": ["go", "json"],
+    "coc.preferences.formatOnSaveFiletypes": ["go"],
     "coc.preferences.hoverTarget": "float",
     "html.format.enable": true
 }
