@@ -80,9 +80,10 @@ let g:neomake_php_phpmd_maker = {
 " +------------+
 
 let g:neomake_javascript_enabled_makers = ['eslint']
-" Use the fix option of eslint
 
+" Use the fix option of eslint
 let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
+
 " Callback for reloading file in buffer when eslint has finished and maybe has
 " autofixed some stuff
 function! s:Neomake_callback(options)

@@ -29,7 +29,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' 
 " fugitive for the hub
 Plug 'tpope/vim-rhubarb'
-
 " Display commits for project / file
 Plug 'junegunn/gv.vim'
 
@@ -148,6 +147,7 @@ Plug 'posva/vim-vue'
 
 " outliner
 Plug 'majutsushi/tagbar'
+Plug 'liuchengxu/vista.vim'
 
 " Nerdtree + modifications 
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
