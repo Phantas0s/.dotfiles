@@ -91,6 +91,11 @@ function! AliasGoImport()
         execute l:cmd
     endif
 
-    normal! A.
-    startinsert!
+    normal! a.
+    if col('.') == col('$') - 1
+        startinsert!
+    else
+        normal! l
+        startinsert
+    end
 endfunction
