@@ -157,7 +157,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'itchyny/lightline.vim'
 
 " undo tree
-Plug 'sjl/gundo.vim'
+" Plug 'sjl/gundo.vim'
+Plug 'simnalamburt/vim-mundo'
 
 " registers
 Plug 'bfredl/nvim-miniyank'
