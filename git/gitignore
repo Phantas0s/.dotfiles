@@ -16,3 +16,6 @@ autotest.rb
 
 # Golang static analysis
 report-golang-analysis/
+
+# Devdash config for each projects
+.devdash
