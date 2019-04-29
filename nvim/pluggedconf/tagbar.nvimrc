@@ -1,1 +1,1 @@
-" nnoremap <leader>o :TagbarToggle<CR>
+nnoremap <leader>o :TagbarToggle<CR>
