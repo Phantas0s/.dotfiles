@@ -120,6 +120,9 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 " Plug 'ncm2/ncm2-cssomni'
 " Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
 
+" Add tmux completion for COC
+Plug 'wellle/tmux-complete.vim'
+
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': 'yarn install'}
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
