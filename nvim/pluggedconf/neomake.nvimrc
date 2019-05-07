@@ -165,7 +165,6 @@ let g:neomake_scheme_raco_maker = {
             \ }
 
 " Spinner??? OMG
-
 let s:spinner_index = 0
 let s:active_spinners = 0
 let s:spinner_states = ['|', '/', '--', '\', '|', '/', '--', '\']
