@@ -131,6 +131,15 @@ gtD() {
     fi
 }
 
+gtd() {
+    if [ ! -z "$2" ];
+    then
+        git push $2 :refs/tags/$1
+    else
+        git push origin :refs/tags/$1
+    fi
+}
+
 sshcreate() {
     if [ ! -z "$1" ];
     then
