@@ -49,7 +49,7 @@ syntax_style = default
 key_bindings = vi
 
 # Enabling this option will show the suggestions in a wider menu. Thus more items are suggested.
-wider_completion_menu = False
+wider_completion_menu = True
 
 # MySQL prompt
 # \D - The full current date
@@ -86,36 +86,33 @@ enable_pager = True
 # Custom colors for the completion menu, toolbar, etc.
 [colors]
 # Completion menus.
-Token.Menu.Completions.Completion.Current = "bg:#ansired #ansiwhite"
-Token.Menu.Completions.Completion = "bg:#444444 #C6C6C6"
-Token.Menu.Completions.MultiColumnMeta = "bg:#aaffff #000000"
-Token.Menu.Completions.ProgressButton = "bg:#003333"
-Token.Menu.Completions.ProgressBar = "bg:#00aaaa"
-
-Token.String.Symbol = "noinherit #d75f5f"
-# Query results
-Token.Output.Header = bold
-Token.Output.OddRow = ""
-Token.Output.EvenRow = ""
-
-# Selected text.
-Token.SelectedText = "#ffffff bg:#6666aa"
-
-# Search matches. (reverse-i-search)
-Token.SearchMatch = "#ffffff bg:#4444aa"
-Token.SearchMatch.Current = "#ffffff bg:#44aa44"
-
-# The bottom toolbar.
-Token.Toolbar = "bg:#222222 #aaaaaa"
-Token.Toolbar.Off = "bg:#222222 #888888"
-Token.Toolbar.On = "bg:#222222 #ffffff"
-
-# Search/arg/system toolbars.
+Token.Menu.Completions.Completion.Current = "bg:ansired ansiwhite bold"
+Token.Menu.Completions.Completion = "bg:ansigray ansiwhite"
+Token.Menu.Completions.Meta.Current = "bg:ansiyellow ansigray"
+Token.Menu.Completions.Meta = "bg:ansigray ansiwhite"
+Token.Menu.Completions.MultiColumnMeta = "bg:ansigray ansiwhite"
+Token.Menu.Completions.ProgressButton = "bg:ansiblack"
+Token.Menu.Completions.ProgressBar = "bg:ansiblue"
+Token.SelectedText = "ansiwhite bg:ansiblue"
+Token.SearchMatch = "ansiwhite bg:ansiblue"
+Token.SearchMatch.Current = "ansiwhite bg:ansired"
+Token.Toolbar = "ansiwhite"
+Token.Toolbar.Off = "ansigray"
+Token.Toolbar.On = "bg:ansiblack ansiwhite"
 Token.Toolbar.Search = noinherit bold
 Token.Toolbar.Search.Text = nobold
 Token.Toolbar.System = noinherit bold
 Token.Toolbar.Arg = noinherit bold
 Token.Toolbar.Arg.Text = nobold
+Token.Toolbar.Transaction.Valid = "bg:ansiblack ansigreen bold"
+Token.Toolbar.Transaction.Failed = "bg:ansiblack ansired bold"
+
+# not documented
+# see https://github.com/dagwieers/pygments/blob/master/pygments/styles/default.py
+Token.Keyword = "ansigreen bold"
+Token.String = "ansired"
+Token.String.Other = "ansired"
+Token.Number = "ansired"
 
 # Favorite queries.
 [favorite_queries]

@@ -29,7 +29,7 @@ expand = False
 auto_expand = True
 
 # If set to True, table suggestions will include a table alias
-generate_aliases = False
+generate_aliases = true
 
 # log_file location.
 # In Unix/Linux: ~/.config/pgcli/log
@@ -131,35 +131,33 @@ multiline_continuation_char = ""
 # The string used in place of a null value.
 null_string = <null>
 [colors]
-Token.Menu.Completions.Completion.Current = "bg:#ansired #ansiwhite bold"
-Token.Menu.Completions.Completion = "bg:#ansidarkgray #C6C6C6"
-Token.Menu.Completions.Meta.Current = "bg:#ansiyellow #ansidarkgray"
-Token.Menu.Completions.Meta = "bg:#ansidarkgray #C6C6C6"
-Token.Menu.Completions.MultiColumnMeta = "bg:#ansidarkgray #C6C6C6"
-Token.Menu.Completions.ProgressButton = "bg:#ansiblack"
-Token.Menu.Completions.ProgressBar = "bg:#ansiblue"
-Token.SelectedText = "#ansiwhite bg:#ansiblue"
-Token.SearchMatch = "#ansiwhite bg:#ansiblue"
-Token.SearchMatch.Current = "#ansiwhite bg:#ansired"
-Token.Toolbar = "#C6C6C6"
-Token.Toolbar.Off = "#444444"
-Token.Toolbar.On = "bg:#ansiblack #ansiwhite"
+Token.Menu.Completions.Completion.Current = "bg:ansired ansiwhite bold"
+Token.Menu.Completions.Completion = "bg:ansigray ansiwhite"
+Token.Menu.Completions.Meta.Current = "bg:ansiyellow ansigray"
+Token.Menu.Completions.Meta = "bg:ansigray ansiwhite"
+Token.Menu.Completions.MultiColumnMeta = "bg:ansigray ansiwhite"
+Token.Menu.Completions.ProgressButton = "bg:ansiblack"
+Token.Menu.Completions.ProgressBar = "bg:ansiblue"
+Token.SelectedText = "ansiwhite bg:ansiblue"
+Token.SearchMatch = "ansiwhite bg:ansiblue"
+Token.SearchMatch.Current = "ansiwhite bg:ansired"
+Token.Toolbar = "ansiwhite"
+Token.Toolbar.Off = "ansigray"
+Token.Toolbar.On = "bg:ansiblack ansiwhite"
 Token.Toolbar.Search = noinherit bold
 Token.Toolbar.Search.Text = nobold
 Token.Toolbar.System = noinherit bold
 Token.Toolbar.Arg = noinherit bold
 Token.Toolbar.Arg.Text = nobold
-Token.Toolbar.Transaction.Valid = "bg:#ansiblack #ansigreen bold"
-Token.Toolbar.Transaction.Failed = "bg:#ansiblack #ansired bold"
+Token.Toolbar.Transaction.Valid = "bg:ansiblack ansigreen bold"
+Token.Toolbar.Transaction.Failed = "bg:ansiblack ansired bold"
 
 # not documented
 # see https://github.com/dagwieers/pygments/blob/master/pygments/styles/default.py
-Token.Keyword = "#ansigreen bold"
-Token.String = "#ansired"
-Token.String.Other = "#ansired"
-Token.Number = "#ansired"
-
-# Token.Generic.Inserted = "#ansigreen",
+Token.Keyword = "ansigreen bold"
+Token.String = "ansired"
+Token.String.Other = "ansired"
+Token.Number = "ansired"
 
 [named queries]
 tenant = SELECT * FROM tenants
