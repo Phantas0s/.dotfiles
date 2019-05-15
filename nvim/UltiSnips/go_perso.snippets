@@ -68,9 +68,19 @@ if err != nil {
 }
 endsnippet
 
-snippet cabort "Basic abort with error from Gin Context" b
-c.AbortWithError(http.StatusInternalServerError, ${1})
-return
+snippet errab "Basic abort with error from Gin Context" b
+if err != nil {
+	c.AbortWithError(http.StatusInternalServerError, err)
+	return
+}
+endsnippet
+
+snippet errabwf "Basic abort with error from Gin Context" b
+if err != nil {
+	err =  errors.Wrapf(err, "${1}", ${2})
+	c.AbortWithError(http.StatusInternalServerError, err)
+	return
+}
 endsnippet
 
 snippet /^package/ "Package declaration" b

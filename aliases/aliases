@@ -177,6 +177,7 @@ alias dockstats='docker stats $(docker ps -q)'
 alias dockls='docker ps'
 # list images installed
 alias dockimg='docker images'
+alias dockprune='docker system prune -a'
 
 # run as the host user
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
