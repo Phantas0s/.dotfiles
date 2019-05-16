@@ -70,7 +70,7 @@ endsnippet
 
 snippet errab "Basic abort with error from Gin Context" b
 if err != nil {
-	c.AbortWithError(http.StatusInternalServerError, err)
+	_ = c.AbortWithError(http.StatusInternalServerError, err)
 	return
 }
 endsnippet
