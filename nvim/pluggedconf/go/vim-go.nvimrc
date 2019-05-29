@@ -53,4 +53,4 @@ autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<c
 autocmd FileType go nmap <buffer><leader>gfs :exec "GoFillStruct"<cr>
 
 " Require vim-go
-inoremap <silent><buffer> . <esc>:call go#AliasGoImport()<cr>
+" inoremap <silent><buffer> . <esc>:call go#AliasGoImport()<cr>

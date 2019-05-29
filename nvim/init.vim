@@ -256,6 +256,7 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-ultisnips',
     \ 'coc-yaml',
+    \ 'coc-git',
     \]
 
 " \ 'coc-highlight',
@@ -494,3 +495,5 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 
 " enable the mouse - who needs a mouse??
 " set mouse=a
+
+nmap <leader>ngs <Plug>(coc-git-chunkinfo)
