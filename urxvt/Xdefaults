@@ -55,8 +55,8 @@ URxvt*utmpInhibit: false
 !! Perl Extensions !!
 URxvt*perl-ext-common: default,tabbedex,resize-font
 
-URxvt.keysym.C-minus:     resize-font:smaller
-URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-Down:     resize-font:smaller
+URxvt.keysym.C-Up:      resize-font:bigger
 URxvt.keysym.C-equal:     resize-font:reset
 URxvt.keysym.C-question:  resize-font:show
 
