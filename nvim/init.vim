@@ -256,7 +256,6 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-ultisnips',
     \ 'coc-yaml',
-    \ 'coc-git',
     \]
 
 " \ 'coc-highlight',
