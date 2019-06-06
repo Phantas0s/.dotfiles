@@ -252,7 +252,6 @@ let g:coc_global_extensions = [
     \ 'coc-json', 
     \ 'coc-css', 
     \ 'coc-tsserver',
-    \ 'coc-emoji', 
     \ 'coc-html',
     \ 'coc-ultisnips',
     \ 'coc-yaml',
@@ -260,6 +259,8 @@ let g:coc_global_extensions = [
 
 " \ 'coc-highlight',
 " \ 'coc-dictionary',
+" \ 'coc-emoji',
+" \ 'coc-github',
 " \ 'coc-syntax', 
 
 let g:vim_markdown_folding_disabled = 1
