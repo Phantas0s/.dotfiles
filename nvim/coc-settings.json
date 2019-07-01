@@ -3,8 +3,7 @@
         "golang": {
             "command": "bingo",
             "args": [
-                "--diagnostics-style=none",
-                "--format-style=goimports"
+                "--diagnostics-style=none"
             ],
             "rootPatterns": [
                 "go.mod",

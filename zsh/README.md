@@ -65,6 +65,14 @@ Import a database. If the file is called `database.sql`, it will try to import i
 
 **THE OPERATION WILL OVERWRITE ALL DATA!**
 
+## Network
+
+### Ports
+
+`ports`
+
+List of port opens, fuzzy searchable via fzf
+
 ## Images
 
 ### Screenshot 

@@ -247,6 +247,8 @@ nmap <leader>db :Bdelete!<cr>
 " Twig
 autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
 
+autocmd vimrc BufNewFile,BufRead *.mod set filetype=gomod
+
 " Coc extensions
 let g:coc_global_extensions = [
     \ 'coc-json', 

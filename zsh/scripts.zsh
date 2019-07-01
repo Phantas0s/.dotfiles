@@ -131,15 +131,6 @@ gtD() {
     fi
 }
 
-gtd() {
-    if [ ! -z "$2" ];
-    then
-        git push $2 :refs/tags/$1
-    else
-        git push origin :refs/tags/$1
-    fi
-}
-
 sshcreate() {
     if [ ! -z "$1" ];
     then
@@ -364,4 +355,8 @@ updatezsh() {
 
 promptspeed() {
     for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
+}
+
+ports() {
+    sudo netstat -tulpn | grep LISTEN | fzf;
 }
