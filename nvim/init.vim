@@ -392,6 +392,7 @@ nnoremap <silent> <Leader>z :call general#ZoomToggle()<CR>
 
 " Open images with feh
 autocmd vimrc BufEnter *.png,*.jpg,*gif silent! exec "! feh ".expand("%") | :bw
+autocmd vimrc BufNewFile,BufRead *.yml.dist set filetype=yaml.
 
 " A |Dict| specifies the matcher for filtering and sorting the completion candidates.
 let g:cm_matcher={'module': 'cm_matchers.abbrev_matcher', 'case': 'smartcase'}

@@ -13,7 +13,6 @@ setlocal indentexpr=yaml#GetYamlIndent()
 setlocal indentkeys=o,O,*<Return>,!^F
 
 autocmd yaml FileType yaml setlocal ai ts=2 sw=2 et colorcolumn=1,3,5,7,9,11,13 nu
-autocmd yaml BufNewFile,BufRead *.yml.dist set filetype=yaml.
 
 let g:tagbar_type_ansible = {
 	\ 'ctagstype' : 'ansible',
