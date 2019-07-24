@@ -26,7 +26,7 @@
     sort = yes
  
     # Show how many messages are currently hidden (because of geometry)
-    indicate_hidden = yes
+    indicate_hidden = no
  
     # alignment of message text.
     # Possible values are "left", "center" and "right"
@@ -152,17 +152,17 @@
     # Otherwise the '#' and following  would be interpreted as a comment.
     background = "#303030"
     foreground = "#87AF87"
-    timeout = 5
+    timeout = 10
  
 [urgency_normal]
     background = "#303030"
     foreground = "#C6C6C6"
-    timeout = 7
+    timeout = 15 
  
 [urgency_critical]
     background = "#303030"
     foreground = "#d75f5f"
-    timeout = 10
+    timeout = 30
  
  
 # Every section that isn't one of the above is interpreted as a rules
