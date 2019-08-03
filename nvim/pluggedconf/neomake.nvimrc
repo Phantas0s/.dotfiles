@@ -102,7 +102,7 @@ endif
 " | Golang |
 " +--------+
 
-let g:neomake_go_enabled_makers = [ 'go', 'golangcifast' ]
+let g:neomake_go_enabled_makers = [ 'go']
 let g:neomake_go_golangci_maker = {
             \ 'exe': 'golangci-lint',
             \ 'args': [ 'run', '--enable=unparam' ],
