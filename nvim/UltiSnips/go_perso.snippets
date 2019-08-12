@@ -11,24 +11,51 @@ func Test_${1:Func}(t *testing.T) {
 		name string
 		expected ${2}
 		${3}
+	}{
+		{
+			name: "happy case",
+			expected: ${4},
+			${5},
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			actual := ${7}$1(${6:params})
+
+			if $8 {
+				t.Errorf("Expected %v, actual %v", tc.expected, actual)
+			}
+		})
+	}
+}
+endsnippet
+
+snippet tte "table-driven tests with errors"
+func Test_${1:Func}(t *testing.T) {
+	testCases := []struct {
+		name string
+		expected ${2}
+		${3}
 		wantErr bool
 	}{
 		{
 			name: "happy case",
 			expected: ${4}
+			${5},
 			wantErr: false,
 		},
 	}
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			actual, err := ${6}$1(${5:params})
+			actual, err := ${7}$1(${6:params})
 			if (err != nil) != tc.wantErr {
 				t.Errorf("Error '%v' even if wantErr is %t", err, tc.wantErr)
 				return
 			}
 
-			if tc.wantErr == false && $7 {
+			if tc.wantErr == false && $8 {
 				t.Errorf("Expected %v, actual %v", tc.expected, actual)
 			}
 		})
