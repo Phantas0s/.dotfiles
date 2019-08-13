@@ -7,7 +7,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 let g:go_gocode_propose_source=0
 
 let g:go_metalinter_enabled = [ "gosec", "goconst", "gocyclo", "golint", "ineffassign", "interfacer", "maligned", "megacheck", "misspell", "structcheck", "unconvert", "varcheck", "vet"]
@@ -44,7 +44,7 @@ autocmd Filetype go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
 autocmd Filetype go nmap <buffer><leader>tub <Plug>(go-alternate-split)
 autocmd Filetype go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
 
-" autocmd FileType go nmap <buffer><leader>gim <plug>(go-implements)
+autocmd FileType go nmap <buffer><leader>gim <plug>(go-implements)
 autocmd FileType go nmap <buffer><leader>gc <plug>(go-callee)
 
 " autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
