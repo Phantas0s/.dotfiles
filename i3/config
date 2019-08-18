@@ -214,7 +214,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # can use xprop - WM_CLASS(STRING) = "urxvt", "URxvt"
 
 #assign [class="URxvt" instance="urxvt"] → $terms
-assign [class="Firefox" instance="Navigator"] → $web
+assign [class="firefox" instance="Navigator"] → $web
 assign [class="Min" instance="min"] → $web
 assign [class="Chromium" instance="chromium"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $db
