@@ -92,6 +92,22 @@ Display width / height of an image.
 `imgresize <source> <width>`
 Resize and create a new image named `<source>_<width>.<extension>` following aspect ratio.
 
+`imgresizeall <extension> <width>`
+Resize every images with the same extension in the current folder
+
+`imgoptimize <file>`
+Optimize the image (conv -strip -interlace Plane -quality 85%) and create a new image
+
+`Imgoptimize <file>`
+Optimize the image (conv -strip -interlace Plane -quality 85%) and *replace* the image
+
+`imgoptimizeall <extension>`
+Optimize the images with same extension in current folder(conv -strip -interlace Plane -quality 85%) and create new images
+
+`Imgoptimizeall *.<extension>`
+Optimize the images with same extension in current folder(conv -strip -interlace Plane -quality 85%) and *replace* them
+
+
 ### Image resize all
 
 `imgresize <extension> <width>`

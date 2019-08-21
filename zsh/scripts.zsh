@@ -101,6 +101,38 @@ imgresizeall() {
     done
 }
 
+imgoptimize() {
+    filename=${1%\.*}
+    extension="${1##*.}"
+    separator="_"
+    suffix="optimized"
+    finalName="$filename$separator$suffix.$extension"
+    convert $1 -strip -interlace Plane -quality 85% $finalName
+    echo "$finalName created"
+}
+
+Imgoptimize() {
+    filename=${1%\.*}
+    extension="${1##*.}"
+    separator="_"
+    suffix="optimized"
+    finalName="$filename$separator$suffix.$extension"
+    convert $1 -strip -interlace Plane -quality 85% $1
+    echo "$1 created"
+}
+
+imgoptimizeall() {
+    for f in *.${1}; do
+        imgoptimize "$f"
+    done
+}
+
+Imgoptimizeall() {
+    for f in *.${1}; do
+        Imgoptimize "$f"
+    done
+}
+
 imgconvjpg() {
     if [ ! -z "$1" ];
     then
