@@ -20,6 +20,7 @@ cgr update
 # cgr povils/phpmnd
 # cgr wapmorgan/php-code-fixer
 # cgr phpmetrics/phpmetrics
+# cgr psalm/psalm
 echo -e "${green} ...done\n"
 
 #---------------------------------------

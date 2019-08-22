@@ -39,7 +39,7 @@ function! SetMessageType(entry)
     let a:entry.type = 'M'
 endfunction
 
-let g:neomake_php_enabled_makers = ['phpmd', 'phpcs', 'phpstan', 'php']
+let g:neomake_php_enabled_makers = ['phpmd', 'phpcs', 'phpstan', 'php', 'psalm']
 
 let g:neomake_php_phpcs_maker = {
             \ 'args': ['--report=csv', '--standard=PSR2'],
@@ -74,6 +74,14 @@ let g:neomake_php_phpmd_maker = {
             \ 'errorformat': '%W%f:%l%\s%\s%#%m',
             \ 'postprocess': function('SetMessageType'),
             \ }
+
+let g:neomake_php_psalm_maker = {
+        \ 'args': [
+            \ '--output-format=pylint'
+        \ ],
+        \ 'errorformat': '%A%f:%l:%\s[%t%n]%\s%m',
+        \ 'postprocess': function('SetWarningType'),
+        \ }
 
 " +------------+
 " | Javascript |
