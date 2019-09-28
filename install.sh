@@ -17,8 +17,6 @@ fi
 # presentation #
 ################
 
-#!/bin/bash
-
 echo -e "
 ${yellow}
           _ ._  _ , _ ._

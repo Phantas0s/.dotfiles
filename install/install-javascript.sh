@@ -23,6 +23,11 @@ then
    npm i -g eslint
 fi
 
+if [ ! -f $HOME/.node_modules/bin/bars ];
+then
+   npm i -g https://github.com/jez/bars.git
+fi
+
 ln -s $DOTFILES/javascript/.tern-project $HOME
 ln -s $DOTFILES/javascript/.eslintrc.json $HOME
 echo -e "${green}...done!\n"

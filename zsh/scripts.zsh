@@ -327,6 +327,10 @@ thriftgen() {
     thrift -o . -r --gen go -out ./go/pkg/gen  ./service.thrift
 }
 
+git-heatmap() {
+    $DOTFILES/bash/scripts/heatmap.sh
+}
+
 colorblocks() {
     $DOTFILES/bash/scripts/colorblocks.sh
 }
@@ -392,3 +396,5 @@ promptspeed() {
 ports() {
     sudo netstat -tulpn | grep LISTEN | fzf;
 }
+
+

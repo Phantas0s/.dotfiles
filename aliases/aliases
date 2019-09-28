@@ -95,7 +95,6 @@ alias gia="go install ./..."
 # Hugo website generator
 alias hugostart="hugo server -DEF --ignoreCache"
 
-# vim && neovim
 # +---------------+
 # | vim && neovim |
 # +---------------+
@@ -103,6 +102,9 @@ alias hugostart="hugo server -DEF --ignoreCache"
 alias vim='nvim'
 alias vi='nvim'
 alias svim='sudoedit'
+
+# nvim with default config
+alias dvim="vim -u /usr/share/nvim/archlinux.vim"
 
 # clean the vim swap file
 alias nvimc='rm -I ~/nvim/swap/*'
@@ -113,10 +115,8 @@ alias nvimcu='rm -I ~/nvim/undo/*'
 # log the keys entered via using vim 
 alias nviml='nvim -w ~/.vimlog "$@"'
 
-# racket
 # racket for SICP
 alias rsicp="racket -i -p neil/sicp -l xrepl"
-
 
 # git
 alias gs='git status '
