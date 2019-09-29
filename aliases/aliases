@@ -95,6 +95,8 @@ alias gia="go install ./..."
 # Hugo website generator
 alias hugostart="hugo server -DEF --ignoreCache"
 
+alias deadlink="muffet"
+
 # +---------------+
 # | vim && neovim |
 # +---------------+
