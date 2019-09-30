@@ -95,7 +95,11 @@ alias gia="go install ./..."
 # Hugo website generator
 alias hugostart="hugo server -DEF --ignoreCache"
 
+# Scrapperto find dead links 
 alias deadlink="muffet"
+
+# See if a port is used
+alias port="netstat -tulpn | grep"
 
 # +---------------+
 # | vim && neovim |

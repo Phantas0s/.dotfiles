@@ -211,6 +211,8 @@ Plug 'lambdalisue/suda.vim'
 " Display register values on " and @
 Plug 'junegunn/vim-peekaboo'
 
+Plug 'phux/vim-hardtime'
+
 call plug#end()
 
 " +---------------+
@@ -258,12 +260,6 @@ let g:coc_global_extensions = [
     \ 'coc-ultisnips',
     \ 'coc-yaml',
     \]
-
-" \ 'coc-highlight',
-" \ 'coc-dictionary',
-" \ 'coc-emoji',
-" \ 'coc-github',
-" \ 'coc-syntax', 
 
 let g:vim_markdown_folding_disabled = 1
 
@@ -500,3 +496,4 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 " set mouse=a
 
 nmap <leader>ngs <Plug>(coc-git-chunkinfo)
+

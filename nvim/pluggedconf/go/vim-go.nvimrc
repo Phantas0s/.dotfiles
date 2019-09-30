@@ -17,6 +17,8 @@ let g:go_addtags_transform = "snakecase"
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 
+let g:go_doc_popup_window = 1
+
 if !exists("g:go_gotags_bin")
   let g:go_gotags_bin = "gotags"
 endif
