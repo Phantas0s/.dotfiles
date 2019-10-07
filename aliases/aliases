@@ -96,7 +96,7 @@ alias gia="go install ./..."
 alias hugostart="hugo server -DEF --ignoreCache"
 
 # Scrapperto find dead links 
-alias deadlink="muffet"
+alias deadlink="muffet -t 20"
 
 # See if a port is used
 alias port="netstat -tulpn | grep"
