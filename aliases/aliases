@@ -32,6 +32,7 @@ rsyncdir='rsync -arzv --progress'
 
 # pacman
 alias paci='sudo pacman -S' # install
+alias pachi='sudo pacman -Ql' # pacman has installed - what files where installed in a package
 alias pacs='sudo pacman -Ss' # search
 alias pacu='sudo pacman -Syu' # update
 alias pacr='sudo pacman -R' # remove package but not dependencies
