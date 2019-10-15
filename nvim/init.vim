@@ -324,19 +324,13 @@ nnoremap tL :tabm<CR>
 " windows navigation
 " use ctrl + hjkl
 
-" nnoremap <leader>ww <c-w>w
-" nnoremap <leader>wh <c-w>h
-" nnoremap <leader>wj <c-w>j
-" nnoremap <leader>wk <c-w>k
-" nnoremap <leader>wl <c-w>l
-
 " close all windows except the current one
 nnoremap <leader>wco :only<cr>
 nnoremap <leader>wcc :cclose<cr>
 
 " windows creation
-" create window on the bottom
-nnoremap <leader>wb <c-w>s
+" create horizontal window
+nnoremap <leader>wh <c-w>s
 " create vertival window
 nnoremap <leader>wv <c-w>v
 
