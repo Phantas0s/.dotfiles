@@ -153,6 +153,10 @@ imgconvpng() {
     fi
 }
 
+imgwebp() {
+    for F in *.jpg; do cwebp $F -o `basename ${F%.jpg}`.webp; done
+}
+
 gtD() {
     git tag -d $1
     if [ ! -z "$2" ];

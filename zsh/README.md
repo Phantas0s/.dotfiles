@@ -122,6 +122,10 @@ Require imagemagick.
 
 Convert source to a jpg image
 
+### Convert all jpg image in the current folder to webp (by copy)
+
+`immgwebp`
+
 ## Git 
 
 `gtD <tag_name> <remote>`
