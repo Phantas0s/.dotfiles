@@ -154,7 +154,7 @@ imgconvpng() {
 }
 
 imgwebp() {
-    for F in *.jpg; do cwebp $F -o `basename ${F%.jpg}`.webp; done
+    for F in *.jpg; do cwebp -q 100 $F -o `basename ${F%.jpg}`.webp; done
 }
 
 gtD() {
