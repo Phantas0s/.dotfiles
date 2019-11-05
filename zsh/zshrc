@@ -48,7 +48,7 @@ if [[ ! -n $TMUX ]]; then
     tmux new-session
   fi
   create_new_session="Create New Session"
-  ID="$ID\n${create_new_session}:"
+  ID="${create_new_session}\n$ID"
   ID="`echo $ID | fzf | cut -d: -f1`"
   if [[ "$ID" = "${create_new_session}" ]]; then
     tmux new-session
