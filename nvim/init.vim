@@ -106,6 +106,21 @@ Plug '2072/php-indenting-for-vim', {'for': 'php'}
 " php doc autocompletion
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
 
+" Clojure
+Plug 'guns/vim-sexp', {'for': 'clojure'}
+Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
+
+Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
+Plug 'guns/vim-clojure-static', {'for': 'clojure'}
+" Plug 'kien/rainbow_parentheses.vim', {'for': 'clojure'}
+Plug 'venantius/vim-cljfmt', {'for': 'clojure'} "Formatting
+" Linter
+Plug 'venantius/vim-eastwood', {'for': 'clojure'}
+" Plug 'SevereOverfl0w/clojure-check', {'do': './install'}
+
+Plug 'tpope/vim-fireplace', {'for': 'clojure'}
+Plug 'tpope/vim-salve', {'for': 'clojure'}
+
 " autocompletion
 " Plug 'ncm2/ncm2', {'for': 'php'}
 " Plug 'roxma/nvim-yarp', {'for': 'php'}
@@ -488,6 +503,3 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 
 " enable the mouse - who needs a mouse??
 " set mouse=a
-
-nmap <leader>ngs <Plug>(coc-git-chunkinfo)
-

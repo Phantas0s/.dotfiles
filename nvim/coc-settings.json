@@ -1,5 +1,15 @@
 {
     "languageserver": {
+        "clojure-lsp": {
+            "command": "bash",
+            "args": ["-c", "clojure-lsp"],
+            "filetypes": ["clojure"],
+            "rootPatterns": ["project.clj"],
+            "additionalSchemes": ["jar", "zipfile"],
+            "trace.server": "verbose",
+            "initializationOptions": {
+            }
+        },
         "golang": {
             "command": "bingo",
             "args": [
@@ -25,7 +35,7 @@
             "command": "intelephense",
             "args": ["--stdio"],
             "filetypes": ["php"]
-        }    
+        }
     },
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,

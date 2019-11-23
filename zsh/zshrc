@@ -1,4 +1,10 @@
 source ${ZDOTDIR:-$HOME}/.dotfiles/startup
+source $SCRIPT_PATH/aliases/aliases
+source $SCRIPT_PATH/env
+
+# Source zgen - zsh plugin manager
+source $SCRIPT_PATH/zsh/scripts.zsh
+source $SCRIPT_PATH/zsh/notifyosd.zsh # notify when a long command line is done
 
 # edit current command line with vim
 zle -N edit-command-line
@@ -7,10 +13,6 @@ bindkey -M vicmd v edit-command-line
 # Vi mode
 bindkey -v
 export KEYTIMEOUT=1
-
-# use ripgrep with fzf
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Search with fzf and open selected file with Vim
 bindkey -s '^v' 'vim $(fzf);^M'
@@ -42,4 +44,4 @@ fi
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 # Display all possible tmuxp session when opening terminal
-ftmuxp
+# ftmuxp

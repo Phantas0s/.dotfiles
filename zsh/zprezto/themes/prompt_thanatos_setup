@@ -13,6 +13,9 @@ pmodload 'helper'
 
 function prompt_thanatos_pwd
 {
+    # Tell prezto we can manage this prompt
+    zstyle ':prezto:module:prompt' managed 'yes'
+
 	local pwd="${PWD/#$HOME/~}"
 
 	if [[ "$pwd" == (#m)[/~] ]]

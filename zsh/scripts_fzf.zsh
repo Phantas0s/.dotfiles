@@ -71,6 +71,7 @@ ftmuxp() {
         if [[ "$ID" = "${create_new_session}" ]]; then
             tmux new-session
         elif [[ -n "$ID" ]]; then
+            printf '\033]777;tabbedx;set_tab_name;%s\007' "$ID"
             tmuxp load "$ID"
         else
             :  # Start terminal normally

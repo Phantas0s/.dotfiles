@@ -172,7 +172,14 @@ let g:neomake_scheme_raco_maker = {
             \ 'errorformat': '%-G %.%#,%E%f:%l:%c: %m'
             \ }
 
-" Spinner??? OMG
+
+"-----------------
+" Clojure (Lisp)
+"-----------------
+
+"-----------------
+" Spinner!!!
+"-----------------
 let s:spinner_index = 0
 let s:active_spinners = 0
 let s:spinner_states = ['|', '/', '--', '\', '|', '/', '--', '\']

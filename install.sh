@@ -23,7 +23,7 @@ ${yellow}
         (_ ' ( \`  )_  .__)
       ( (  (    )   \`)  ) _)
      (__ (_   (_ . _) _) ,__)
-         `~~`\ ' . /`~~`
+           ~~\ ' . /~~
          ,::: ;   ; :::,
         ':::::::::::::::'
  ____________/_ __ \____________
@@ -71,13 +71,13 @@ command -v "jrnl" >/dev/null && . $DOTFILES/install/install-jrnl.sh
 command -v "composer" >/dev/null && . $DOTFILES/install/install-composer.sh
 command -v "mycli" >/dev/null && . $DOTFILES/install/install-mycli.sh
 command -v "pgcli" >/dev/null && . $DOTFILES/install/install-pgcli.sh
-command -v "ranger" >/dev/null && . $DOTFILES/install/install-ranger.sh
 command -v "go" >/dev/null && . $DOTFILES/install/install-go.sh
 command -v "npm" >/dev/null && . $DOTFILES/install/install-javascript.sh
 command -v "compton" >/dev/null && . $DOTFILES/install/install-compton.sh
 command -v "bat" >/dev/null && . $DOTFILES/install/install-bat.sh
 command -v "joplin" >/dev/null && . $DOTFILES/install/install-joplin.sh
 command -v "vifm" >/dev/null && . $DOTFILES/install/install-vifm.sh
+command -v "lein" >/dev/null && . $DOTFILES/install/install-clojure-lein.sh
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $DOTFILES/bash/bashrc $HOME/.bashrc
