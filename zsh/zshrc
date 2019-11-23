@@ -44,4 +44,4 @@ fi
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 # Display all possible tmuxp session when opening terminal
-# ftmuxp
+ftmuxp
