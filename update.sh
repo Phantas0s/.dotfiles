@@ -8,6 +8,10 @@ echo -e "${green} ...done\n"
 echo -e "${blue} Update composer global packages..."
 composer self-update
 cgr update
+
+# To install cgr + packages
+# TODO - make the install automatic
+# composer global require consolidation/cgr
 # cgr phpstan/phpstan
 # cgr pdepend/pdepend
 # cgr dephpend/dephpend
