@@ -78,7 +78,7 @@ Plug 'godlygeek/tabular'
 
 " markdown
 " Plug 'gabrielelana/vimimarkdown', { 'for': 'markdown' }
-Plug 'tpope/vim-markdown', {'for': 'markdown'},
+" Plug 'tpope/vim-markdown', {'for': 'markdown'},
 " Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing

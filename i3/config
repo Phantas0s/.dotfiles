@@ -5,38 +5,42 @@
 # get color from xressource configuration - variable_name xressource_color fallback
 
 # special
-set_from_resource $foreground foreground #000000
-set_from_resource $background background #000000
-set_from_resource $cursorColor cursorColor #000000
+set_from_resource $foreground foreground #C6C6C6
+set_from_resource $background background #1C1C1C
+set_from_resource $cursorColor cursorColor #C6C6C6
 
 # black
-set_from_resource $black1 color0 #000000
-set_from_resource $black2 color8 #000000
+set_from_resource $black1 color0 #303030
+set_from_resource $black2 color8 #444444
 set $trueblack #000000
 
 # red
-set_from_resource $red1 color1 #000000
-set_from_resource $red2 color9 #000000
+set_from_resource $red1 color1 #d75f5f
+set_from_resource $red2 color9 #d75f5f
 
 # green
-set_from_resource $green1 color2 #000000
-set_from_resource $green2 color10 #000000
+set_from_resource $green1 color2 #87AF87
+set_from_resource $green2 color10 #87AF87
 
 # yellow
-set_from_resource $yellow1 color3 #000000
-set_from_resource $yellow2 color11 #000000
+set_from_resource $yellow1 color3 #ffd75f
+set_from_resource $yellow2 color11 #ffd75f
 
 # blue
-set_from_resource $blue1 color4 #000000
-set_from_resource $blue2 color12 #000000
+set_from_resource $blue1 color4 #87afd7
+set_from_resource $blue2 color12 #87afd7
+
+# magenta
+set_from_resource $cyan1 color5 #afafd7
+set_from_resource $cyan2 color13 #afafd7
 
 # cyan
-set_from_resource $cyan1 color6 #000000
-set_from_resource $cyan2 color14 #000000
+set_from_resource $cyan1 color6 #afd7ff
+set_from_resource $cyan2 color14 #afd7ff
 
 # white
-set_from_resource $white1 color7 #000000
-set_from_resource $white2 color15 #000000
+set_from_resource $white1 color7 #4E4E4E
+set_from_resource $white2 color15 #ffffff
 
 #---Starting External Scripts---# #
 
