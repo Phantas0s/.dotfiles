@@ -318,8 +318,8 @@ hide_edge_borders both
 client.focused          #333333 $white1 $white2 #285577
 client.focused_inactive #333333 $background $foreground #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           $red1   $red1   #ffffff $red1     $red1
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.urgent           $red1   $red1   $white2 $red1     $red1
+client.placeholder      #000000 #0c0c0c $white2 #000000   #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
