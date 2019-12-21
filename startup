@@ -11,7 +11,7 @@ if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ]
 else
     # zsh sourcing
     SCRIPT_PATH="${0:A:h}"
-    # export ZGEN_PREZTO_LOAD_DEFAULT=0
+
     # source $HOME/.zgen/zgen.zsh
     # source $SCRIPT_PATH/zgen/zgen.zsh
 

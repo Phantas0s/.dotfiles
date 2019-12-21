@@ -5,38 +5,42 @@
 # get color from xressource configuration - variable_name xressource_color fallback
 
 # special
-set_from_resource $foreground foreground #000000
-set_from_resource $background background #000000
-set_from_resource $cursorColor cursorColor #000000
+set_from_resource $foreground foreground #C6C6C6
+set_from_resource $background background #1C1C1C
+set_from_resource $cursorColor cursorColor #C6C6C6
 
 # black
-set_from_resource $black1 color0 #000000
-set_from_resource $black2 color8 #000000
+set_from_resource $black1 color0 #303030
+set_from_resource $black2 color8 #444444
 set $trueblack #000000
 
 # red
-set_from_resource $red1 color1 #000000
-set_from_resource $red2 color9 #000000
+set_from_resource $red1 color1 #d75f5f
+set_from_resource $red2 color9 #d75f5f
 
 # green
-set_from_resource $green1 color2 #000000
-set_from_resource $green2 color10 #000000
+set_from_resource $green1 color2 #87AF87
+set_from_resource $green2 color10 #87AF87
 
 # yellow
-set_from_resource $yellow1 color3 #000000
-set_from_resource $yellow2 color11 #000000
+set_from_resource $yellow1 color3 #ffd75f
+set_from_resource $yellow2 color11 #ffd75f
 
 # blue
-set_from_resource $blue1 color4 #000000
-set_from_resource $blue2 color12 #000000
+set_from_resource $blue1 color4 #87afd7
+set_from_resource $blue2 color12 #87afd7
+
+# magenta
+set_from_resource $cyan1 color5 #afafd7
+set_from_resource $cyan2 color13 #afafd7
 
 # cyan
-set_from_resource $cyan1 color6 #000000
-set_from_resource $cyan2 color14 #000000
+set_from_resource $cyan1 color6 #afd7ff
+set_from_resource $cyan2 color14 #afd7ff
 
 # white
-set_from_resource $white1 color7 #000000
-set_from_resource $white2 color15 #000000
+set_from_resource $white1 color7 #4E4E4E
+set_from_resource $white2 color15 #ffffff
 
 #---Starting External Scripts---# #
 
@@ -129,17 +133,17 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+Ctrl+h move workspace to output left
-bindsym $mod+Ctrl+l move workspace to output right
+# bindsym $mod+Ctrl+h move workspace to output left
+# bindsym $mod+Ctrl+l move workspace to output right
 
 bindsym $mod+Ctrl+j workspace next
 bindsym $mod+Ctrl+k workspace prev
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+Ctrl+h split v
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Ctrl+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -314,8 +318,8 @@ hide_edge_borders both
 client.focused          #333333 $white1 $white2 #285577
 client.focused_inactive #333333 $background $foreground #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           $red1   $red1   #ffffff $red1     $red1
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.urgent           $red1   $red1   $white2 $red1     $red1
+client.placeholder      #000000 #0c0c0c $white2 #000000   #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

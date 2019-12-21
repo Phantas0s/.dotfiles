@@ -1,4 +1,4 @@
-icon="$HOME/.i3/lock.png"
+# icon="$HOME/.i3/lock.png"
 img=/tmp/i3lock.png
 
 scrot $img
