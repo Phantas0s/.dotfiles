@@ -17,3 +17,6 @@
 # DOTFILES_CLOUD="$HOME/nextcloud/development/dotfiles_projects/ENV"
 #wallpaper folder
 # WALLPAPER_PATH="$HOME/nextcloud/wallpaper" 
+
+# Small or extended
+# I3_STATUS_BAR="small"
