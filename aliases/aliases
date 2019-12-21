@@ -59,6 +59,7 @@ alias lock='gnome-screensaver-command --lock'
 alias bigf= 'find / -xdev -type f -size +50M'
 # for find device - useful to mount devices (name to prefix with "/dev/")
 alias fdev='lsblk -f'
+alias xpropc='xprop | grep WM_CLASS'
 
 # ls
 alias lsl='ls -l --color=auto'
