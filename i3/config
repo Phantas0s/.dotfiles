@@ -185,17 +185,16 @@ bindsym XF86AudioPrev exec playerctl previous
 set $terms "1: terms"
 set $web "2: web"
 set $multimedia "3: multi"
-set $db "4: db"
-set $mail "5: mails"
-set $office "6: office"
-set $mindmap "7: mindmap"
+set $mail "4: mails"
+set $documents "5: office"
+set $mindmap "6: mindmap"
 
 # switch to workspace
 bindsym $mod+1 workspace $terms
 bindsym $mod+2 workspace $web
 bindsym $mod+3 workspace $multimedia
 bindsym $mod+4 workspace $mail
-bindsym $mod+5 workspace $office
+bindsym $mod+5 workspace $documents
 bindsym $mod+6 workspace $mindmap
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -207,7 +206,7 @@ bindsym $mod+Shift+1 move container to workspace $terms
 bindsym $mod+Shift+2 move container to workspace $web
 bindsym $mod+Shift+3 move container to workspace $multimedia
 bindsym $mod+Shift+4 move container to workspace $mail
-bindsym $mod+Shift+5 move container to workspace $office
+bindsym $mod+Shift+5 move container to workspace $documents
 bindsym $mod+Shift+6 move container to workspace $mindmap
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -224,9 +223,10 @@ assign [class="Chromium" instance="chromium"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $db
 assign [class="mpv" instance="gl"] → $multimedia
 assign [instance="nomacs"] → $multimedia
+assign [class="Easytag" instance="easytag"] → $multimedia
 assign [class="Thunderbird" instance="Mail"] → $mail
-assign [instance="libreoffice"] → $office
-assign [class="Joplin" instance="joplin"] → $office
+assign [instance="libreoffice"] → $documents
+assign [class="Joplin" instance="joplin"] → $documents
 assign [class="calibre" instance="calibre-gui"] → $mindmap
 assign [class="calibre" instance="calibre-ebook-viewer"] → $mindmap
 assign [instance="FreeMind"] → $mindmap
