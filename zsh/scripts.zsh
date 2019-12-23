@@ -401,4 +401,16 @@ ports() {
     sudo netstat -tulpn | grep LISTEN | fzf;
 }
 
+mnt() {
+    FILE="/mnt/external"
+    if [ ! -z $1 ];
+    then
+        sudo mount "$1" "$FILE" -o rw
+        echo "Device in read/write mounted in $FILE"
+    fi
 
+    if [ $# = 0 ]; 
+    then
+        echo "You need to provide the device (/dev/sd*) - use lsblk"
+    fi
+}

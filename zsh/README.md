@@ -28,6 +28,10 @@ Way safer than using pure dd without any warning message...
 Create a new ssh key at `~/.ssh/<name>` with permission 700.
 The name will be put as comment in the key as well.
 
+### Mount device with read/write permissions
+
+`mnt <device>`
+
 ## Archives
 
 ### Extraction
