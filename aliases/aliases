@@ -37,13 +37,19 @@ alias pacrr='sudo pacman -Rs' # remove package with unused dependencies by other
 alias pacrc='sudo pacman -Sc' # remove pacman's cache
 alias pacro='pacman -Rns $(pacman -Qtdq)'
 alias pacrl='rm /var/lib/pacman/db.lck' # pacman remove locks
+alias pacls="sudo pacman -Qe"
 
-# aurman
-alias auri='sudo aurman -S'
-alias aurs='sudo aurman -Ss'
-alias auru='sudo aurman -Syu'
-alias aurr='sudo aurman -R'
-alias aurrr='sudo aurman -Rs'
+# yay
+
+alias yayi='yay -S' # install
+alias yayhi='yay -Ql' # pacman has installed - what files where installed in a package
+alias yays='yay -Ss' # search
+alias yayu='yay -Syu' # update
+alias yayr='yay -R' # remove package but not dependencies
+alias yayrr='yay -Rs' # remove package with unused dependencies by other softwares
+alias yayrc='yay -Sc' # remove pacman's cache
+alias yayro='yay -Rns $(pacman -Qtdq)'
+alias yayls="yay -Qe"
 
 # empty cache from deprecated packages
 alias pacc='sudo pacman -Sc'
