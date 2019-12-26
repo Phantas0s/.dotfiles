@@ -37,6 +37,8 @@ extract() {
       *.tbz2)     tar xjf $1      ;;
       *.tgz)      tar xzf $1      ;;
       *.zip)      unzip $1        ;;
+      *.7z)       7z x $1         ;; # require p7zip
+      *.iso)      7z x $1         ;; # require p7zip
       *.Z)        uncompress $1   ;;
       *)          echo "'$1' cannot be extracted" ;;
     esac
@@ -403,6 +405,11 @@ ports() {
 
 mnt() {
     FILE="/mnt/external"
+    if [ ! -z $2 ];
+    then
+        FILE=$2
+    fi
+
     if [ ! -z $1 ];
     then
         sudo mount "$1" "$FILE" -o rw
@@ -413,4 +420,13 @@ mnt() {
     then
         echo "You need to provide the device (/dev/sd*) - use lsblk"
     fi
+}
+
+umnt() {
+    DIRECTORY="/mnt/"
+    if [ ! -z $1 ];
+    then
+        DIRECTORY=$1
+    fi
+    sudo umount $(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
 }
