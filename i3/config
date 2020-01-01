@@ -65,7 +65,7 @@ exec --no-startup-id ~/.fehbg
 exec --no-startup-id /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
 # launch redshift
-exec --no-startup-id redshift
+exec --no-startup-id redshift &
 
 # launch dunst
 exec --no-startup-id dunst -config ~/.dunstrc
@@ -156,6 +156,10 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
+# Size of floating windows
+floating_minimum_size 75 x 50
+floating_maximum_size 800 x 600
+
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
@@ -184,20 +188,19 @@ bindsym XF86AudioPrev exec playerctl previous
 
 set $terms "1: terms"
 set $web "2: web"
-set $db "3: db"
-set $file_manager "4: files"
-set $mail "5: mails"
-set $documents "6: documents"
-set $mindmap "7: mindmap"
+set $multimedia "3: multi"
+set $mail "4: mails"
+set $documents "5: office"
+set $mindmap "6: mindmap"
 
 # switch to workspace
 bindsym $mod+1 workspace $terms
 bindsym $mod+2 workspace $web
-bindsym $mod+3 workspace $db
-bindsym $mod+4 workspace $file_manager
-bindsym $mod+5 workspace $mail
-bindsym $mod+6 workspace $documents
-bindsym $mod+7 workspace $mindmap
+bindsym $mod+3 workspace $multimedia
+bindsym $mod+4 workspace $mail
+bindsym $mod+5 workspace $documents
+bindsym $mod+6 workspace $mindmap
+bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
@@ -205,11 +208,11 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $terms
 bindsym $mod+Shift+2 move container to workspace $web
-bindsym $mod+Shift+3 move container to workspace $db
-bindsym $mod+Shift+4 move container to workspace $file_manager
-bindsym $mod+Shift+5 move container to workspace $mail
-bindsym $mod+Shift+6 move container to workspace $documents
-bindsym $mod+Shift+7 move container to workspace $mindmap
+bindsym $mod+Shift+3 move container to workspace $multimedia
+bindsym $mod+Shift+4 move container to workspace $mail
+bindsym $mod+Shift+5 move container to workspace $documents
+bindsym $mod+Shift+6 move container to workspace $mindmap
+bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
@@ -222,10 +225,14 @@ assign [class="firefox" instance="Navigator"] → $web
 assign [class="Min" instance="min"] → $web
 assign [class="Chromium" instance="chromium"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $db
-assign [class="Thunar" instance="thunar"] → $file_manager
+assign [class="mpv" instance="gl"] → $multimedia
+assign [instance="nomacs"] → $multimedia
+assign [class="Easytag" instance="easytag"] → $multimedia
 assign [class="Thunderbird" instance="Mail"] → $mail
-assign [instance="libreoffice"] → $documents
-assign [instance="evince"] → $documents
+assign [class="libreoffice"] → $documents
+assign [class="Joplin" instance="joplin"] → $documents
+assign [class="calibre" instance="calibre-gui"] → $mindmap
+assign [class="calibre" instance="calibre-ebook-viewer"] → $mindmap
 assign [instance="FreeMind"] → $mindmap
 
 # start softwares and command lines in workspaces
@@ -281,7 +288,11 @@ for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 # Terminal scratchpad
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad -e tmux -2 new-session -d -s scratchpad \; new-window -n vim 'nvim +e /tmp/nvim-tmp.md' \; new-window -n trans 'trans -I' \; attach-session -d -t scratchpad\;
+exec urxvtc -name urxvt_scratchpad -e tmux -2 new-session -d -s scratchpad \;\
+new-window -n vim 'nvim +e /tmp/nvim-tmp.md' \;\
+new-window -n trans 'trans -I' \;\
+new-window -n vpn ''\;\
+attach-session -d -t scratchpad\;
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none

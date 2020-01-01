@@ -78,6 +78,7 @@ command -v "bat" >/dev/null && . $DOTFILES/install/install-bat.sh
 command -v "joplin" >/dev/null && . $DOTFILES/install/install-joplin.sh
 command -v "vifm" >/dev/null && . $DOTFILES/install/install-vifm.sh
 command -v "lein" >/dev/null && . $DOTFILES/install/install-clojure-lein.sh
+# TODO add freemind config
 
 echo -e "${blue}Create symlinks for .bashrc config..."
 ln -s $DOTFILES/bash/bashrc $HOME/.bashrc
