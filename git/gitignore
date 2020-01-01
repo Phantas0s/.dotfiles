@@ -19,3 +19,6 @@ report-golang-analysis/
 
 # Devdash config for each projects
 .devdash
+
+# lsp files
+.lsp
