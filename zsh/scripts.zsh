@@ -52,7 +52,7 @@ compress() {
 }
 
 screenshot () {
-    DIR="${HOME}/documents/images/screenshots"
+    DIR="${HOME}/Documents/images/screenshots"
     DATE="$(date +%Y%m%d-%H%M%S)"
     NAME="${DIR}/screenshot-${DATE}.png"
     LOG="${DIR}/screenshots.log"
@@ -73,7 +73,7 @@ screenshot () {
 
     if [[ $# = 0 ]]; then
         # Display a warning if no area defined
-        echo "No screenshot area has been specified. Please choose a command: win, scr, area. Screenshot not taken."
+        echo "No screenshot area has been specified. Please choose between: win, scr, area. Screenshot not taken."
         echo "${DATE}: No screenshot area has been defined. Screenshot not taken." >> "${LOG}"
     else
         # Save the screenshot in the directory and edit the log
@@ -94,7 +94,7 @@ imgresize() {
     separator="_"
     finalName="$filename$separator$2.$extension"
     convert $1 -quality 100 -resize $2 $finalName
-    echo "$finalName"
+    echo "$finalName resized to $2"
 }
 
 imgresizeall() {
@@ -424,9 +424,12 @@ mnt() {
 
 umnt() {
     DIRECTORY="/mnt/"
+    MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
     if [ ! -z $1 ];
     then
         DIRECTORY=$1
     fi
-    sudo umount $(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
+    cd DIRECTORY
+    sudo umount $MOUNTED
+    echo "$MOUNTED unmounted"
 }
