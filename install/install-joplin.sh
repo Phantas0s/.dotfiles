@@ -2,11 +2,7 @@
 
 JOPLIN_CONFIG_DIR=$HOME/.config/joplin/
 
-if [ ! -d JOPLIN_CONFIG_DIR ]
-  then
-    mkdir JOPLIN_CONFIG_DIR
-fi
-
+mkdir -p JOPLIN_CONFIG_DIR
 
 echo -e "${red}Delete the keymap for Joplin..."
 rm -rf $JOPLIN_CONFIG_DIR/keymap.json
