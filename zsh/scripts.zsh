@@ -433,3 +433,13 @@ umnt() {
     sudo umount $MOUNTED
     echo "$MOUNTED unmounted"
 }
+
+dlplaylist() {
+    if [ ! -z $1 ];
+    then
+        youtube-dl -o "%(autonumber)s-%(title)s.%(ext)s" "$1"
+    else
+        echo "You need to specify a playlist url as argument between double quotes"
+    fi
+    
+}
