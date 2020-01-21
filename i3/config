@@ -285,7 +285,7 @@ for_window [class="Arandr"] floating enable
 for_window [class="Gcolor2"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
 
-# Terminal scratchpad
+# Terminal scratchpad with tmux and three windows: 1.term / 2.vim (on a temp file) / 3.translation CLI
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
 exec urxvtc -name urxvt_scratchpad -e tmux -2 new-session -d -s scratchpad \; new-window -n vim 'nvim +e /tmp/nvim-tmp.md' \; new-window -n trans 'trans -I' \; new-window -n vpn 'cd ~/.vpn' \; attach-session -d -t scratchpad\;
