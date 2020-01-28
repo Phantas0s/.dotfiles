@@ -422,6 +422,25 @@ mnt() {
     fi
 }
 
+mntmtp() {
+    FILE="/mnt/external"
+    if [ ! -z $2 ];
+    then
+        FILE=$2
+    fi
+
+    if [ ! -z $1 ];
+    then
+        sudo simple-mtpfs --device "$1" "$FILE"
+        echo "MTPFS device in read/write mounted in $FILE"
+    fi
+
+    if [ $# = 0 ]; 
+    then
+        echo "You need to provide the device number - use simple-mtpfs -l"
+    fi
+}
+
 umnt() {
     DIRECTORY="/mnt/"
     MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)

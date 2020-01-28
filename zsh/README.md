@@ -32,6 +32,10 @@ The name will be put as comment in the key as well.
 
 `mnt <device> <folder="/mnt/external">`
 
+### Mount mtp filesystem 
+
+`mntmtp <device_number> <folder="/mnt/external">`
+
 ### Unmount every devices in a specific folder recursively
 
 `umnt <folder="/mnt/">`
