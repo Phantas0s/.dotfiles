@@ -422,25 +422,6 @@ mnt() {
     fi
 }
 
-mntmtp() {
-    FILE="/mnt/external"
-    if [ ! -z $2 ];
-    then
-        FILE=$2
-    fi
-
-    if [ ! -z $1 ];
-    then
-        sudo simple-mtpfs --device "$1" "$FILE"
-        echo "MTPFS device in read/write mounted in $FILE"
-    fi
-
-    if [ $# = 0 ]; 
-    then
-        echo "You need to provide the device number - use simple-mtpfs -l"
-    fi
-}
-
 umnt() {
     DIRECTORY="/mnt/"
     MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
@@ -451,6 +432,42 @@ umnt() {
     cd DIRECTORY
     sudo umount $MOUNTED
     echo "$MOUNTED unmounted"
+}
+
+mntmtp() {
+    DIRECTORY="$HOME/mnt/"
+    if [ ! -z $2 ];
+    then
+        DIRECTORY=$2
+    fi
+    if [ ! -d $DIRECTORY ]; 
+    then
+        mkdir $DIRECTORY
+    fi
+
+    if [ ! -z $1 ];
+    then
+        simple-mtpfs --device "$1" "$DIRECTORY"
+        echo "MTPFS device in read/write mounted in $DIRECTORY"
+    fi
+
+    if [ $# = 0 ]; 
+    then
+        echo "You need to provide the device number - use simple-mtpfs -l"
+    fi
+}
+
+
+umntmtp() {
+    DIRECTORY="$HOME/mnt/"
+    MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
+    if [ ! -z $1 ];
+    then
+        DIRECTORY=$1
+    fi
+    cd DIRECTORY
+    umount $MOUNTED
+    echo "$MOUNTED with mtp filesystem unmounted"
 }
 
 dlplaylist() {
