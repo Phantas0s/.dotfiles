@@ -459,15 +459,14 @@ mntmtp() {
 
 
 umntmtp() {
-    DIRECTORY="$HOME/mnt/"
-    MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
+    DIRECTORY="$HOME/mnt"
     if [ ! -z $1 ];
     then
         DIRECTORY=$1
     fi
-    cd DIRECTORY
-    umount $MOUNTED
-    echo "$MOUNTED with mtp filesystem unmounted"
+    cd $HOME
+    umount $DIRECTORY
+    echo "$DIRECTORY with mtp filesystem unmounted"
 }
 
 dlplaylist() {
