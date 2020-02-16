@@ -42,6 +42,10 @@ set_from_resource $cyan2 color14 #afd7ff
 set_from_resource $white1 color7 #4E4E4E
 set_from_resource $white2 color15 #ffffff
 
+###########
+# general #
+###########
+
 #---Starting External Scripts---# #
 
 # exec urxvtd daemon
@@ -182,6 +186,12 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# no focus following the mouse
+focus_follows_mouse no
+
+# using the same workspace shortcut will focus on your last 
+workspace_auto_back_and_forth yes
+
 #############
 # workspace #
 #############
@@ -190,7 +200,7 @@ set $terms "1: terms"
 set $web "2: web"
 set $multimedia "3: multi"
 set $mail "4: mails"
-set $documents "5: office"
+set $office "5: office"
 set $mindmap "6: mindmap"
 
 # switch to workspace
@@ -198,7 +208,7 @@ bindsym $mod+1 workspace $terms
 bindsym $mod+2 workspace $web
 bindsym $mod+3 workspace $multimedia
 bindsym $mod+4 workspace $mail
-bindsym $mod+5 workspace $documents
+bindsym $mod+5 workspace $office
 bindsym $mod+6 workspace $mindmap
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -210,7 +220,7 @@ bindsym $mod+Shift+1 move container to workspace $terms
 bindsym $mod+Shift+2 move container to workspace $web
 bindsym $mod+Shift+3 move container to workspace $multimedia
 bindsym $mod+Shift+4 move container to workspace $mail
-bindsym $mod+Shift+5 move container to workspace $documents
+bindsym $mod+Shift+5 move container to workspace $office
 bindsym $mod+Shift+6 move container to workspace $mindmap
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -229,14 +239,12 @@ assign [class="mpv" instance="gl"] → $multimedia
 assign [instance="nomacs"] → $multimedia
 assign [class="Easytag" instance="easytag"] → $multimedia
 assign [class="Thunderbird" instance="Mail"] → $mail
-assign [class="libreoffice"] → $documents
-assign [class="Joplin" instance="joplin"] → $documents
-assign [class="calibre" instance="calibre-gui"] → $documents
+assign [class="libreoffice"] → $office
+assign [class="Joplin" instance="joplin"] → $office
+assign [class="calibre" instance="calibre-gui"] → $office
 assign [class="calibre" instance="calibre-ebook-viewer"] → $mindmap
+assign [class="okular" instance="okular"] → $office
 assign [instance="FreeMind"] → $mindmap
-
-# start softwares and command lines in workspaces
-exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc
 
 ####################
 # restart / reload #
@@ -308,11 +316,9 @@ exec urxvtc -name bc_scratchpad -e bc
 # configuration of some software
 for_window [class="URxvt*"] border pixel 1
 
-# no focus following the mouse
-focus_follows_mouse no
-
-# using the same workspace shortcut will focus on your last 
-workspace_auto_back_and_forth yes
+# start softwares and command lines in workspaces
+exec --no-startup-id i3-msg workspace $office; exec joplin-desktop
+exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc
 
 ##########
 # DESIGN #

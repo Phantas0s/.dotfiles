@@ -476,5 +476,4 @@ dlplaylist() {
     else
         echo "You need to specify a playlist url as argument between double quotes"
     fi
-    
 }
