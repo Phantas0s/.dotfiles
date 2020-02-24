@@ -424,12 +424,12 @@ mnt() {
 
 umnt() {
     DIRECTORY="/mnt/"
-    MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
     if [ ! -z $1 ];
     then
         DIRECTORY=$1
     fi
-    cd DIRECTORY
+    MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
+    cd "/mnt/"
     sudo umount $MOUNTED
     echo "$MOUNTED unmounted"
 }
