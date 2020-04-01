@@ -35,7 +35,7 @@ Plug 'junegunn/gv.vim'
 " surrounding text objects with whatever you want (paranthesis, quotes, html tags...)
 Plug 'tpope/vim-surround'
 
-" easily search, substitute and abbreviate multiple version of words
+" easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-abolish'
 
 " the . command can repeat whatever you want!
@@ -73,15 +73,15 @@ Plug 'neomake/neomake'
 " snippet engine + snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" Align plugin
+" Align plugin (useful for markdown tables for example)
 Plug 'godlygeek/tabular'
 
-" markdown
-" Plug 'gabrielelana/vimimarkdown', { 'for': 'markdown' }
-" Plug 'tpope/vim-markdown', {'for': 'markdown'},
-" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" markdown / writting
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
+
+" Titlecase with gt
+Plug 'christoomey/vim-titlecase'
 
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
@@ -250,6 +250,9 @@ filetype plugin indent on
 " Impossible to put it in vim-delve.nvimrc file...
 let g:delve_breakpoint_sign = ""
 let g:delve_tracepoint_sign = ""
+
+" For Clojure format (cljfmt) - too slow while saving
+let g:clj_fmt_autosave = 0
 
 " Autocompletion with tab
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

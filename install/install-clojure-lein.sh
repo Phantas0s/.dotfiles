@@ -1,6 +1,6 @@
 echo -e ""
 echo -e "${red}Delete clojure lein config..."
-rm $HOME/.lein &>/dev/null
+rm -rf $HOME/.lein &>/dev/null
 echo -e "${green}...done!"
 
 echo -e "${blue} Installing clojure lein config..."

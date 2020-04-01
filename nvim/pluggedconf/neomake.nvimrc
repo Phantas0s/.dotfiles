@@ -177,6 +177,14 @@ let g:neomake_scheme_raco_maker = {
 " Clojure (Lisp)
 "-----------------
 
+let g:neomake_clojure_enabled_makers = ['kondo']
+
+let g:neomake_clojure_kondo_maker = {
+    \ 'exe': 'clj-kondo',
+    \ 'args': ['--lint', '%'],
+    \ 'errorformat': '%f:%l:%c:\ Parse\ %t%*[^:]:\ %m,%f:%l:%c:\ %t%*[^:]:\ %m',
+    \ }
+
 "-----------------
 " Spinner!!!
 "-----------------
