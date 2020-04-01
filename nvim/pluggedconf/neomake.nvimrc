@@ -185,6 +185,12 @@ let g:neomake_clojure_kondo_maker = {
     \ 'errorformat': '%f:%l:%c:\ Parse\ %t%*[^:]:\ %m,%f:%l:%c:\ %t%*[^:]:\ %m',
     \ }
 
+let g:neomake_clojure_joker_maker = {
+    \ 'exe': 'joker',
+    \ 'args': ['--lint', '%'],
+    \ 'errorformat': '\v^[a-zA-Z]?:?[^:]+:(\d+):(\d+):? ((Read error|Parse error|Parse warning|Exception): ?(.+))$',
+    \ }
+
 "-----------------
 " Spinner!!!
 "-----------------
