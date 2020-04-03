@@ -38,10 +38,10 @@ then
         cd -
     fi
 
-    if [ ! -d $GOPATH/src/github.com/Phantas0s/devdash ];
+    if [ ! -d $HOME/workspace/devdash ];
     then
         echo -e "Installing the project Devdash in workspace"
-        cd $GOPATH/src/github.com/Phantas0s
+        cd $HOME/workspace
         git clone git@github.com:Phantas0s/devdash.git
         go get ./devdash
         go install ./devdash
