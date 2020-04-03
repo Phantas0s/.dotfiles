@@ -20,6 +20,7 @@ else
     source $DOTFILES/antibody/plugins.sh
     ###
     # source <(antibody init)
+    # TODO - need to be executed once... get rid of antibody?
     # antibody bundle < $DOTFILES/antibody/plugins.txt
     ###
     # source "${HOME}/.zgen/zgen.zsh"

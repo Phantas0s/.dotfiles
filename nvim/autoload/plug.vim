@@ -182,6 +182,11 @@ function! s:define_commands()
   \ && (&shell =~# 'cmd\.exe' || &shell =~# 'powershell\.exe')
     return s:err('vim-plug does not support shell, ' . &shell . ', when shellslash is set.')
   endif
+  if !has('nvim')
+    \ && (has('win32') || has('win32unix'))
+    \ && !has('multi_byte')
+    return s:err('Vim needs +multi_byte feature on Windows to run shell commands. Enable +iconv for best results.')
+  endif
   command! -nargs=* -bar -bang -complete=customlist,s:names PlugInstall call s:install(<bang>0, [<f-args>])
   command! -nargs=* -bar -bang -complete=customlist,s:names PlugUpdate  call s:update(<bang>0, [<f-args>])
   command! -nargs=0 -bar -bang PlugClean call s:clean(<bang>0)
@@ -246,7 +251,7 @@ endfunction
 
 function! plug#end()
   if !exists('g:plugs')
-    return s:err('Call plug#begin() first')
+    return s:err('plug#end() called without calling plug#begin() first')
   endif
 
   if exists('#PlugLOD')
@@ -396,17 +401,18 @@ if s:is_win
 
   " Copied from fzf
   function! s:wrap_cmds(cmds)
-    let use_chcp = executable('sed')
-    return map([
+    let cmds = [
       \ '@echo off',
       \ 'setlocal enabledelayedexpansion']
-    \ + (use_chcp ? [
-      \ 'for /f "usebackq" %%a in (`chcp ^| sed "s/[^0-9]//gp"`) do set origchcp=%%a',
-      \ 'chcp 65001 > nul'] : [])
     \ + (type(a:cmds) == type([]) ? a:cmds : [a:cmds])
-    \ + (use_chcp ? ['chcp !origchcp! > nul'] : [])
-    \ + ['endlocal'],
-    \ 'v:val."\r"')
+    \ + ['endlocal']
+    if has('iconv')
+      if !exists('s:codepage')
+        let s:codepage = libcallnr('kernel32.dll', 'GetACP', 0)
+      endif
+      return map(cmds, printf('iconv(v:val."\r", "%s", "cp%d")', &encoding, s:codepage))
+    endif
+    return map(cmds, 'v:val."\r"')
   endfunction
 
   function! s:batchfile(cmd)
@@ -1332,9 +1338,10 @@ function! s:bar()
 endfunction
 
 function! s:logpos(name)
-  for i in range(4, line('$'))
+  let max = line('$')
+  for i in range(4, max > 4 ? max : 4)
     if getline(i) =~# '^[-+x*] '.a:name.':'
-      for j in range(i + 1, line('$'))
+      for j in range(i + 1, max > 5 ? max : 5)
         if getline(j) !~ '^ '
           return [i, j - 1]
         endif
@@ -2482,7 +2489,9 @@ function! s:diff()
     call s:append_ul(2, origin ? 'Pending updates:' : 'Last update:')
     for [k, v] in plugs
       let range = origin ? '..origin/'.v.branch : 'HEAD@{1}..'
-      let cmd = 'git log --graph --color=never '.join(map(['--pretty=format:%x01%h%x01%d%x01%s%x01%cr', range], 'plug#shellescape(v:val)'))
+      let cmd = 'git log --graph --color=never '
+      \ . (s:git_version_requirement(2, 10, 0) ? '--no-show-signature ' : '')
+      \ . join(map(['--pretty=format:%x01%h%x01%d%x01%s%x01%cr', range], 'plug#shellescape(v:val)'))
       if has_key(v, 'rtp')
         let cmd .= ' -- '.plug#shellescape(v.rtp)
       endif
