@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# To Phantas0s:
+# THIS FILE IS ALREADY AVAILABLE ON THE PERSONAL CLOUD (NEXTCLOUD) - $HOME/<cloud-folder>/development/dotfiles_projects/ENV
+# Normally, only need to create a symbolic link here
+
+# --------------------------------------------------------------------------------------------------------------------------
+
 # personnal variables - this file need to be copied as install_config and the variables need to be replaced 
 # you might need to change variables in env files as well
 

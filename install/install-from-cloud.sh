@@ -47,3 +47,10 @@ then
     ln -s $WALLPAPER_PATH ~/wallpapers
     echo -e "${green} ...done"
 fi
+
+if [ ! -z "$CLOUD" ];
+then
+    # vpn config
+    rm $HOME/vpn/ &>/dev/null
+    ln -sf $CLOUD/vpn $HOME/.vpn
+fi
