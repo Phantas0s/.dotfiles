@@ -9,4 +9,5 @@ echo -e "${green}...Done!\n"
 echo -e "\n${blue}Install bat config..."
 mkdir -p $BAT_CONFIG_DIR
 ln -sf $DOTFILES/bat/* ${BAT_CONFIG_DIR}/
+bat cache --build
 echo -e "${green}...Done!\n"
