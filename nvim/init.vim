@@ -287,9 +287,10 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
 " open devdocs.io with firefox and search the word under the cursor
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || firefox -url https://devdocs.io/#q=<args>')
-" same but with clojuredocs
-command! -nargs=? ClojureDoc :call system('type -p open >/dev/null 2>&1 && open https://clojuredocs.org/search?q=<args> || firefox -url https://clojuredocs.org/search?q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
+
+" same but with clojuredocs
+command! -nargs=? ClojureDoc :call system('type -p open >/dev/null 2>&1 && open https://clojuredocs.org/search\?q=<args> || firefox -url https://clojuredocs.org/search\?q=<args>')
 autocmd vimrc FileType clojure nmap <buffer> <leader>D :exec "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
 
 " set filetypes
