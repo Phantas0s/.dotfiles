@@ -5,8 +5,6 @@ echo "${blue}Install tmux config..."
 
 ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
-
-
 if [ ! -d $HOME/.tmux ]
   then
     mkdir $HOME/.tmux
@@ -14,7 +12,7 @@ if [ ! -d $HOME/.tmux ]
     $HOME/.tmux/plugins/tpm/bin/install_plugins
 fi
 
-if [ ! -d $HOME/.tmux/plugins/tmp ]
+if [ ! -d $HOME/.tmux/plugins/tpm ]
 then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi

@@ -84,7 +84,7 @@ let g:neomake_php_psalm_maker = {
         \ }
 
 " +------------+
-" | Javascript |
+" | JavaScript |
 " +------------+
 
 let g:neomake_javascript_enabled_makers = ['eslint']

@@ -43,7 +43,7 @@
     ],
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,
-    "coc.preferences.formatOnSaveFiletypes": ["go", "clojure"],
+    "coc.preferences.formatOnSaveFiletypes": ["go", "clojure", "php"],
     "coc.preferences.hoverTarget": "float",
 
     "html.format.enable": true
