@@ -21,14 +21,11 @@ Plug 'henrik/vim-indexed-search'
 
 " syntax highlighting for tmux.conf + other cool options
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
-
 " seemless navigation between vim windows / tmux pane
 Plug 'christoomey/vim-tmux-navigator'
 
 " wrapper for git and display git diff in the left gutter
-Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' 
-" fugitive for the hub
-Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify'
 " Display commits for project / file
 Plug 'junegunn/gv.vim'
 
@@ -57,152 +54,106 @@ Plug 'wellle/targets.vim'
 " camel case motion
 Plug 'chaoren/vim-wordmotion'
 
-" colors for i3 config file
-Plug 'PotatoesMaster/i3-vim-syntax'
+" Close the current buffer
+Plug 'moll/vim-bbye'
 
 " Match more stuff with % (html tag, LaTeX...)
 Plug 'andymass/vim-matchup'
 
 " vim project for one specific vimrc / project + startify for startup cow
-Plug 'amiorin/vim-project'
-Plug 'mhinz/vim-startify'
+Plug 'amiorin/vim-project' | Plug 'mhinz/vim-startify'
 
 " Asynchronous linting for every languages
 Plug 'neomake/neomake'
 
-" snippet engine + snippets
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" Align plugin (useful for markdown tables for example)
-Plug 'godlygeek/tabular'
+" snippets
+Plug 'honza/vim-snippets'
 
 " markdown / writting
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
-
-" Titlecase with gt
-Plug 'christoomey/vim-titlecase'
-
+Plug 'godlygeek/tabular' " Align plugin (useful for markdown tables for example)
+Plug 'christoomey/vim-titlecase' " itlecase with gt
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
-" Plug 'Ron89/thesaurus_query.vim' 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
 
+" colors for i3 config file
+Plug 'PotatoesMaster/i3-vim-syntax'
 " nginx syntax colors
 Plug 'chr4/nginx.vim'
-
-" php
-" Plug 'joonty/vdebug'
-Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
-Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
-
-" php refactoring options
-Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plug '2072/php-indenting-for-vim', {'for': 'php'}
-
-" php doc autocompletion
-Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'}
-
-" Clojure
-Plug 'guns/vim-sexp', {'for': 'clojure'}
-Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
-
-Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
-Plug 'guns/vim-clojure-static', {'for': 'clojure'}
-" Plug 'kien/rainbow_parentheses.vim', {'for': 'clojure'}
-Plug 'venantius/vim-cljfmt', {'for': 'clojure'} "Formatting
-" Linter
-Plug 'venantius/vim-eastwood', {'for': 'clojure'}
-" Plug 'SevereOverfl0w/clojure-check', {'do': './install'}
-
-Plug 'tpope/vim-fireplace', {'for': 'clojure'}
-Plug 'tpope/vim-salve', {'for': 'clojure'}
-
-" autocompletion
-" Plug 'ncm2/ncm2', {'for': 'php'}
-" Plug 'roxma/nvim-yarp', {'for': 'php'}
-" Plug 'ncm2/ncm2-bufword'
-" Plug 'ncm2/ncm2-tmux'
-" Plug 'ncm2/ncm2-path'
-" Plug 'ncm2/ncm2-github'
-" Plug 'ncm2/ncm2-ultisnips', {'for': 'php'}
-" Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
-" Plug 'ncm2/ncm2-go'
-" Plug 'ncm2/ncm2-tern'
-" Plug 'ncm2/ncm2-cssomni'
-" Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
-
-" Add tmux completion for COC
-Plug 'wellle/tmux-complete.vim'
-
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': 'yarn install'}
-Plug 'Shougo/neco-vim'
-Plug 'neoclide/coc-neco'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-
-" golang development
-Plug 'fatih/vim-go', {'for': 'go'} " general plugin
-Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
-Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
-
-" twig
-Plug 'lumiliet/vim-twig', {'for': 'twig'}
-
-" javascript plugins
-Plug 'pangloss/vim-javascript'
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx', 'vue'], 'do': 'npm install'}
-
-Plug 'leafgarland/typescript-vim'
-
-" For react
-Plug 'mxw/vim-jsx'
-
-" For Vue
-Plug 'posva/vim-vue'
-
-" outliner
-Plug 'majutsushi/tagbar'
-Plug 'liuchengxu/vista.vim'
-
-" Nerdtree + modifications 
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" status bar
-Plug 'itchyny/lightline.vim'
-
-" undo tree
-" Plug 'sjl/gundo.vim'
-Plug 'simnalamburt/vim-mundo'
-
-" registers
-Plug 'bfredl/nvim-miniyank'
-" close the current buffer
-Plug 'moll/vim-bbye'
-
-" systemd syntax and error
+" systemd unit file syntax highlighting
 Plug 'wgwoods/vim-systemd-syntax'
+" toml syntax highlighting
+Plug 'cespare/vim-toml'
 
-" emmet for html
-Plug 'mattn/emmet-vim'
+" LSP
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install() }, 'branch': 'release'}, 
 
 " fzf - poweful fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" allow multisearch in current directory / multi replace as well
+" PHP
+" Plug 'joonty/vdebug'
+Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
+Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
+Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
+Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug '2072/php-indenting-for-vim', {'for': 'php'}
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion 
+
+" Clojure
+Plug 'guns/vim-sexp', {'for': 'clojure'}
+Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
+Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
+Plug 'guns/vim-clojure-static', {'for': 'clojure'}
+Plug 'tpope/vim-fireplace', {'for': 'clojure'}
+Plug 'tpope/vim-salve', {'for': 'clojure'}
+
+" Add tmux completion for COC
+" Plug 'wellle/tmux-complete.vim'
+
+" Golang
+Plug 'fatih/vim-go', {'for': 'go'} " general plugin
+Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
+Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
+
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx' " For react
+Plug 'posva/vim-vue' " For Vue
+
+" Outliners
+Plug 'majutsushi/tagbar'
+Plug 'liuchengxu/vista.vim' " Use LSP
+
+" Nerdtree + modifications 
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Status bar
+Plug 'itchyny/lightline.vim'
+
+" Undo tree display
+Plug 'simnalamburt/vim-mundo'
+
+" Register management
+Plug 'bfredl/nvim-miniyank'
+
+" Allow multisearch in current directory / multi replace as well
 Plug 'wincent/ferret'
 
-" display the hexadecimal colors - useful for css and color config
+" Display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
 
-" easy way to rezise and exchange windows
+" Easy way to rezise and exchange windows
 Plug 'simeji/winresizer'
 
-" replace f F t T to target easily the motion
+" replace f F t T - don't work well with dot
 Plug 'yangmillstheory/vim-snipe'
 
 " Split arrays in PHP / struct in Go / other things
@@ -214,19 +165,11 @@ Plug 'jez/vim-superman'
 " CSV plugin
 Plug 'chrisbra/csv.vim'
 
-" toml syntax highlighting
-Plug 'cespare/vim-toml'
-
-" Plug to dim not-focused windows
+" Plug to dim colors of not-focused windows
 Plug 'blueyed/vim-diminactive'
 
 " Write file with sudo
 Plug 'lambdalisue/suda.vim'
-
-" Display register values on " and @
-Plug 'junegunn/vim-peekaboo'
-
-Plug 'phux/vim-hardtime'
 
 call plug#end()
 
@@ -251,31 +194,19 @@ filetype plugin indent on
 let g:delve_breakpoint_sign = ""
 let g:delve_tracepoint_sign = ""
 
-" For Clojure format (cljfmt) - too slow while saving
-let g:clj_fmt_autosave = 0
-
-" Autocompletion with tab
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " project config - personnal file (not on my git repository)
 source ~/nvim/projects.nvimrc
 
 " close the buffer
 nmap <leader>db :Bdelete!<cr>
 
-" Twig
-autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
-
-autocmd vimrc BufNewFile,BufRead *.mod set filetype=gomod
-
 " Coc extensions
 let g:coc_global_extensions = [
+    \ 'coc-snippets',
     \ 'coc-json', 
     \ 'coc-css', 
     \ 'coc-tsserver',
     \ 'coc-html',
-    \ 'coc-ultisnips',
     \ 'coc-yaml',
     \]
 
@@ -287,10 +218,11 @@ let g:vim_markdown_folding_disabled = 1
 
 syntax on
 
-" Weird hack for NERDTree to work
+" weird hack for nerdtree to work
 let mapleader = "\\"
 map <SPACE> <leader>
 
+" to create boxes!!
 vmap <F2> !boxes -d stone
 
 " un-highlight when esc is pressed
@@ -310,14 +242,8 @@ vmap > >gv
 " remap the annoying u in visual mode
 vmap u y
 
-" shortcut to substitute current word under cursor
-nnoremap <leader>[ :%s/<c-r><c-w>//g<left><left>
-
-" Change in next bracket
-nmap cinb cib
-
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
+" visual mode pressing * or # searches for the current selection
+" super useful! from an idea by michael naumann
 vnoremap <silent> * :<C-u>call general#VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
@@ -325,7 +251,7 @@ vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
-"Toggle between absolute -> relative line number
+"toggle between absolute -> relative line number
 nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
 
 " tabs
@@ -363,18 +289,21 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || firefox -url https://devdocs.io/#q=<args>')
 " same but with clojuredocs
 command! -nargs=? ClojureDoc :call system('type -p open >/dev/null 2>&1 && open https://clojuredocs.org/search?q=<args> || firefox -url https://clojuredocs.org/search?q=<args>')
-
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 autocmd vimrc FileType clojure nmap <buffer> <leader>D :exec "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
 
-" Markdown
+" set filetypes
 autocmd vimrc BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+autocmd vimrc BufNewFile,BufRead *.yml.dist set filetype=yaml.
+autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
+autocmd vimrc BufNewFile,BufRead *.mod set filetype=gomod
 
 " arrow keys resize windows
 nnoremap <Left> :vertical resize -10<CR>
 nnoremap <Right> :vertical resize +10<CR>
 nnoremap <Up> :resize -10<CR>
 nnoremap <Down> :resize +10<CR>
+
 imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
@@ -383,7 +312,7 @@ imap <right> <nop>
 " Keep the cursor in place while joining lines
 nnoremap J mzJ`z
 
-" Quit neovim termial
+" Quit neovim terminal
 tnoremap <C-\> <C-\><C-n>
 
 " buffer cleanup - delete every buffer except the one open
@@ -397,14 +326,13 @@ nmap <silent> <leader><f5> :e $MYVIMRC<CR>
 nmap <silent> <leader><f6> :so $MYVIMRC<CR>
 
 " delete trailing space when saving files
-autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml :call general#DeleteTrailingWS()
+autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc :call general#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <Leader>z :call general#ZoomToggle()<CR>
 
 " Open images with feh
 autocmd vimrc BufEnter *.png,*.jpg,*gif silent! exec "! feh ".expand("%") | :bw
-autocmd vimrc BufNewFile,BufRead *.yml.dist set filetype=yaml.
 
 " A |Dict| specifies the matcher for filtering and sorting the completion candidates.
 let g:cm_matcher={'module': 'cm_matchers.abbrev_matcher', 'case': 'smartcase'}
@@ -452,7 +380,7 @@ exec 'nnoremap <Leader>ss :mksession! ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS>
 " Reload session
 exec 'nnoremap <Leader>sl :so ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
 
-" when at 3 spaces, and I hit > ... go to 4, not 7
+" when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround
 
 " number of undo saved in memory
@@ -469,6 +397,15 @@ set list listchars=tab:\┆\ ,trail:·,nbsp:±
 " doesn't prompt a warning when opening a file and the current file was written but not saved 
 set hidden
 
+" avoid delay
+set updatetime=300
+
+" always show signcolumns
+set signcolumn=yes
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
 " doesn't display the mode status
 set noshowmode
 
@@ -482,10 +419,10 @@ set noswapfile
 set autowrite
 
 " Fold related
-set foldlevelstart=0 " Start with all folds closed
+" set foldlevelstart=0 " Start with all folds closed
 
 " Set foldtext
-set foldtext=general#FoldText()
+" set foldtext=general#FoldText()
 
 " Show the substitution LIVE
 set inccommand=nosplit
@@ -507,6 +444,3 @@ augroup numbertoggle
 augroup END
 
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" enable the mouse - who needs a mouse??
-" set mouse=a

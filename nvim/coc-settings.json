@@ -37,9 +37,14 @@
             "filetypes": ["php"]
         }
     },
+    "snippets.ultisnips.directories": [
+        "UltiSnips",
+        "gosnippets/UltiSnips"
+    ],
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,
-    "coc.preferences.formatOnSaveFiletypes": ["go"],
+    "coc.preferences.formatOnSaveFiletypes": ["go", "clojure"],
     "coc.preferences.hoverTarget": "float",
+
     "html.format.enable": true
 }
