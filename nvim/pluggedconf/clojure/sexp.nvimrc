@@ -43,7 +43,7 @@ let g:sexp_mappings = {
     \ 'sexp_curly_tail_wrap_element':   '',
     \ 'sexp_insert_at_list_head':       '',
     \ 'sexp_insert_at_list_tail':       '',
-    \ 'sexp_splice_list':               '', " dse
+    \ 'sexp_splice_list':               '',
     \ 'sexp_convolute':                 '<LocalLeader>?',
     \ 'sexp_raise_list':                '<LocalLeader>o',
     \ 'sexp_raise_element':             '<LocalLeader>O',
