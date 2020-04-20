@@ -153,7 +153,7 @@ Plug 'ap/vim-css-color'
 " Easy way to rezise and exchange windows
 Plug 'simeji/winresizer'
 
-" replace f F t T - don't work well with dot
+" replace f F t T - don't work well with dot though :'(
 Plug 'yangmillstheory/vim-snipe'
 
 " Split arrays in PHP / struct in Go / other things

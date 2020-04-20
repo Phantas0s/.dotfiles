@@ -230,20 +230,24 @@ bindsym $mod+Shift+0 move container to workspace 10
 # bind software to workspace
 # can use xprop - WM_CLASS(STRING) = "urxvt", "URxvt"
 
-#assign [class="URxvt" instance="urxvt"] → $terms
 assign [class="firefox" instance="Navigator"] → $web
 assign [class="Min" instance="min"] → $web
 assign [class="Chromium" instance="chromium"] → $web
+
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $db
+
 assign [class="mpv" instance="gl"] → $multimedia
 assign [instance="nomacs"] → $multimedia
 assign [class="Easytag" instance="easytag"] → $multimedia
+
 assign [class="Thunderbird" instance="Mail"] → $mail
+
 assign [class="libreoffice"] → $office
 assign [class="Joplin" instance="joplin"] → $office
 assign [class="calibre" instance="calibre-gui"] → $office
-assign [class="calibre" instance="calibre-ebook-viewer"] → $mindmap
 assign [class="okular" instance="okular"] → $office
+
+assign [class="calibre" instance="calibre-ebook-viewer"] → $mindmap
 assign [instance="FreeMind"] → $mindmap
 
 ####################

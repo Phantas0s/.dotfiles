@@ -2,6 +2,8 @@ let g:fireplace_cljs_repl = "(adzerk.boot-cljs-repl/repl-env)"
 
 " Eval anything under the cursor
 autocmd FileType clojure nmap <buffer><leader>E :exec "Eval ".expand("<cword>")<cr>
+autocmd FileType clojure vmap <buffer><leader>E :exec "Eval ".expand("<cword>")<cr>
+
 " Eval s-expression under the cursor
 autocmd FileType clojure nmap <buffer><leader>X cpp
 
