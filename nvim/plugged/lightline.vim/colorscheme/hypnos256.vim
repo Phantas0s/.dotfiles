@@ -15,7 +15,7 @@ let s:bg = [ '#1C1C1C', 234 ]
 
 let s:yellow = [ '#ffd75f', 221 ]
 let s:magenta = [ '#afafd7', 103 ]
-let s:blue = [ '87afd7', 110 ]
+let s:blue = [ '#87afd7', 110 ]
 let s:green = [ '#87AF87', 108 ]
 let s:white = [ '#ffffff', 15 ]
 let s:red = [ '#d75f5f', 167 ]

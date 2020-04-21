@@ -209,6 +209,8 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-yaml',
     \]
+" \ 'coc-markmap',
+" \ 'coc-sh',
 
 let g:vim_markdown_folding_disabled = 1
 
