@@ -21,7 +21,7 @@ ln -sf $DOTFILES/nvim/init.vim $HOME/nvim/init.vim
 # Install all mandatory folders if they don't exist already
 mkdir -p $HOME/nvim/plugged
 mkdir -p $HOME/nvim/colors
-mkdir -p $HOME/nvim/UltiSnips
+mkdir -p $HOME/nvim/ultisnips
 mkdir -p $HOME/nvim/autoload
 mkdir -p $HOME/nvim/backup
 mkdir -p $HOME/nvim/undo
@@ -59,7 +59,7 @@ ln -sf $DOTFILES/nvim/after/indent/* $HOME/nvim/after/indent/
 ln -sf $DOTFILES/nvim/lua/* $HOME/nvim/lua/
 
 # snippets
-ln -sf $DOTFILES/nvim/UltiSnips/* $HOME/nvim/UltiSnips/
+ln -sf $DOTFILES/nvim/ultisnips/* $HOME/nvim/ultisnips/
 
 # see :help ftplugin
 ln -sf $DOTFILES/nvim/ftplugin/ $HOME/nvim/ftplugin

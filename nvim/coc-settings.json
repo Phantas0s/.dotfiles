@@ -32,6 +32,7 @@
         "UltiSnips",
         "gosnippets/UltiSnips"
     ],
+    "snippets.userSnippetsDirectory": "$VIMCONFIG/ultisnips",
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,
     "coc.preferences.formatOnSaveFiletypes": ["go", "clojure", "php"],

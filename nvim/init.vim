@@ -200,7 +200,7 @@ let g:delve_tracepoint_sign = ""
 source ~/nvim/projects.nvimrc
 
 " close the buffer
-nmap <leader>db :Bdelete!<cr>
+nnoremap <leader>db :Bdelete!<cr>
 
 " Coc extensions
 let g:coc_global_extensions = [
@@ -224,7 +224,8 @@ syntax on
 
 " weird hack for nerdtree to work
 let mapleader = "\\"
-map <SPACE> <leader>
+map <space> <leader>
+let maplocalleader = "<space>"
 
 " to create boxes!!
 vmap <F2> !boxes -d stone
@@ -291,11 +292,11 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
 " open devdocs.io with firefox and search the word under the cursor
 command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || firefox -url https://devdocs.io/#q=<args>')
-autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nmap <buffer> <leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
+autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nnoremap <buffer><leader>D :exec "DevDocs " . fnameescape(expand('<cword>'))<CR>
 
 " same but with clojuredocs
 command! -nargs=? ClojureDoc :call system('type -p open >/dev/null 2>&1 && open https://clojuredocs.org/search\?q=<args> || firefox -url https://clojuredocs.org/search\?q=<args>')
-autocmd vimrc FileType clojure nmap <buffer> <leader>D :exec "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
+autocmd vimrc FileType clojure nnoremap <buffer><leader>D :exec "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
 
 " set filetypes
 autocmd vimrc BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
@@ -327,14 +328,14 @@ command! Ball :silent call general#Bdeleteonly()
 autocmd vimrc BufReadPost * call general#RestorePosition()
 
 " edit vimrc with f5 and source it with f6
-nmap <silent> <leader><f5> :e $MYVIMRC<CR>
-nmap <silent> <leader><f6> :so $MYVIMRC<CR>
+nnoremap <silent> <leader><f5> :vsplit $MYVIMRC<CR>
+nnoremap <silent> <leader><f6> :source $MYVIMRC<CR>
 
 " delete trailing space when saving files
 autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc :call general#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (like Tmux)
-nnoremap <silent> <Leader>z :call general#ZoomToggle()<CR>
+nnoremap <silent><leader>z :call general#ZoomToggle()<CR>
 
 " Open images with feh
 autocmd vimrc BufEnter *.png,*.jpg,*gif silent! exec "! feh ".expand("%") | :bw
@@ -378,9 +379,9 @@ set softtabstop=4
 set shiftwidth=4
 
 " Save session
-exec 'nnoremap <Leader>ss :mksession! ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
+exec 'nnoremap <leader>ss :mksession! ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
 " Reload session
-exec 'nnoremap <Leader>sl :so ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
+exec 'nnoremap <leader>sl :so ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>'
 
 " when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround
