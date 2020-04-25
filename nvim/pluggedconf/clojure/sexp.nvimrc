@@ -29,8 +29,8 @@ let g:sexp_mappings = {
     \ 'sexp_select_next_element':       ']e',
     \ 'sexp_indent':                    '==',
     \ 'sexp_indent_top':                '=-',
-    \ 'sexp_round_head_wrap_list':      '<LocalLeader>i',
-    \ 'sexp_round_tail_wrap_list':      '<LocalLeader>I',
+    \ 'sexp_round_head_wrap_list':      '<LocalLeader>(',
+    \ 'sexp_round_tail_wrap_list':      '<LocalLeader>)',
     \ 'sexp_square_head_wrap_list':     '<LocalLeader>[',
     \ 'sexp_square_tail_wrap_list':     '<LocalLeader>]',
     \ 'sexp_curly_head_wrap_list':      '<LocalLeader>{',
@@ -56,3 +56,4 @@ let g:sexp_mappings = {
     \ 'sexp_capture_prev_element':      '<M-S-h>',
     \ 'sexp_capture_next_element':      '<M-S-l>',
     \ }
+

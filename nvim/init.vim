@@ -5,11 +5,13 @@ if &compatible
     set nocompatible
 endif
 
-" Declare the general config group for autocommand
+" Declare group for autocmd for whole init.vim, and clear it
+" Otherwise every autocmd will be added to group each time vimrc sourced!
 augroup vimrc
   autocmd!
 augroup END
 
+" Install Plugins ---------------------- {{{
 " +----------------+
 " | install plugin |
 " +----------------+
@@ -108,7 +110,7 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompleti
 
 " Clojure
 Plug 'guns/vim-sexp', {'for': 'clojure'}
-Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
+" Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
 Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
 Plug 'guns/vim-clojure-static', {'for': 'clojure'}
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
@@ -143,6 +145,7 @@ Plug 'simnalamburt/vim-mundo'
 
 " Register management
 Plug 'bfredl/nvim-miniyank'
+Plug 'junegunn/vim-peekaboo'
 
 " Allow multisearch in current directory / multi replace as well
 Plug 'wincent/ferret'
@@ -174,6 +177,8 @@ Plug 'lambdalisue/suda.vim'
 Plug 'ActivityWatch/aw-watcher-vim'
 
 call plug#end()
+" }}}
+" Plugin Config ---------------------- {{{
 
 " +---------------+
 " | plugin config |
@@ -181,7 +186,7 @@ call plug#end()
 
 " source every plugin configs
 for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
-    exe 'source' file
+    execute 'source' file
 endfor
 
 if exists("g:did_load_filetypes")
@@ -215,6 +220,8 @@ let g:coc_global_extensions = [
 " \ 'coc-sh',
 
 let g:vim_markdown_folding_disabled = 1
+" }}}
+" General Bindings ---------------------- {{{
 
 " +-----------------+
 " | general binding |
@@ -224,8 +231,9 @@ syntax on
 
 " weird hack for nerdtree to work
 let mapleader = "\\"
+let maplocalleader = "\\"
 map <space> <leader>
-let maplocalleader = "<space>"
+map <space> <localleader>
 
 " to create boxes!!
 vmap <F2> !boxes -d stone
@@ -234,9 +242,6 @@ vmap <F2> !boxes -d stone
 map <silent><esc> :noh<cr>
 
 " surround by quotes - frequently use cases of vim-surround
-map <leader>" ysiw"<cr>
-map <leader>' ysiw'<cr>
-
 " Act like D and C
 nnoremap Y y$
 
@@ -348,10 +353,12 @@ nnoremap Q <Nop>
 
 " Save files as root
 cnoremap w!! execute ':w suda://%'
+" }}}
+" Set options ---------------------- {{{
 
-" +----------------+
-" | general config |
-" +----------------+
+" +--------------+
+" | Set  options |
+" +--------------+
 
 " colorscheme
 colo hypnos
@@ -447,3 +454,4 @@ augroup numbertoggle
 augroup END
 
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" }}}
