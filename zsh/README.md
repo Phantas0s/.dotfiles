@@ -179,6 +179,14 @@ Simple way to fuzzy search in the log tree.
 
 Fuzzy search in the stash list. 
 
+## Programming Languages
+
+### Clojure
+
+`initKondo`
+
+Init kondo-clj for a clojure project with boot.
+
 ## Other
 
 `thriftgen`

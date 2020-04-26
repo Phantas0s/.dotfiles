@@ -22,3 +22,6 @@ report-golang-analysis/
 
 # lsp files
 .lsp
+
+# Clojure
+.clj-kondo

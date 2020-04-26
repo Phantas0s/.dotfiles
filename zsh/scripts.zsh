@@ -477,3 +477,8 @@ dlplaylist() {
         echo "You need to specify a playlist url as argument between double quotes"
     fi
 }
+
+initKondo() {
+    mkdir .clj-kondo
+    clj-kondo --lint "$(boot with-cp -w -f -)"
+}
