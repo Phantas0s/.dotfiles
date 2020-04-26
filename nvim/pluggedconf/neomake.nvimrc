@@ -151,19 +151,22 @@ let g:go_fmt_options = {
 nnoremap <leader>gg :Neomake<space>
 autocmd FileType go nmap <buffer><leader>go :exec "Neomake golangci"<cr>
 
-"-----------------
-" SQL
-"-----------------
+" +-----+
+" | SQL |
+" +-----+
+
 let g:neomake_sql_enabled_makers = ['sqlint']
 
-"-----------------
-" Yaml
-"-----------------
+" +------+
+" | Yaml |
+" +------+
+
 let g:neomake_yaml_enabled_makers = [ 'yamllint' ]
 
-"-----------------
-" Racket (Lisp)
-"-----------------
+" +---------------+
+" | Racket (Lisp) |
+" +---------------+
+
 let g:neomake_scheme_enabled_makers = ['raco']
 
 let g:neomake_scheme_raco_maker = {
@@ -173,9 +176,9 @@ let g:neomake_scheme_raco_maker = {
             \ }
 
 
-"-----------------
-" Clojure (Lisp)
-"-----------------
+" +----------------+
+" | Clojure (Lisp) |
+" +----------------+
 
 let g:neomake_clojure_enabled_makers = ['kondo']
 
@@ -190,6 +193,12 @@ let g:neomake_clojure_joker_maker = {
     \ 'args': ['--lint', '%'],
     \ 'errorformat': '\v^[a-zA-Z]?:?[^:]+:(\d+):(\d+):? ((Read error|Parse error|Parse warning|Exception): ?(.+))$',
     \ }
+
+" +-----------+
+" | VimScript |
+" +-----------+
+
+let g:neomake_vim_enabled_makers = ['vint']
 
 "-----------------
 " Spinner!!!

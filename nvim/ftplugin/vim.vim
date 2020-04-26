@@ -10,3 +10,5 @@ endfor
 set foldmethod=marker
 set foldlevelstart=0
 
+" Eval selected vimscript
+vmap <leader>E "xy:@x<CR>

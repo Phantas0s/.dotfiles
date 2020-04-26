@@ -176,6 +176,8 @@ Plug 'lambdalisue/suda.vim'
 
 Plug 'ActivityWatch/aw-watcher-vim'
 
+Plug 'tpope/vim-scriptease'
+
 call plug#end()
 " }}}
 " Plugin Config ---------------------- {{{

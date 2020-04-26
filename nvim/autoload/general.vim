@@ -25,7 +25,7 @@ function! general#Buflist()
     for i in split(bufnames, "\n")
         let buf = split(i, '"' )
         call add(list, buf[-2])
-|   endfor
+    endfor
     return list
 endfunction
 
