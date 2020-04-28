@@ -1,6 +1,6 @@
 source ${ZDOTDIR:-$HOME}/.dotfiles/startup
-source $SCRIPT_PATH/aliases/aliases
 source $SCRIPT_PATH/env
+source $SCRIPT_PATH/aliases/aliases
 
 # Source zgen - zsh plugin manager
 source $SCRIPT_PATH/zsh/scripts.zsh

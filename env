@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ###############################
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
@@ -42,3 +44,9 @@ export npm_config_prefix=~/.node_modules
 
 # See gitconfig
 export REVIEW_BASE=master
+
+# Make dotfile config available in the whole system
+if [ -f $DOTFILES/install_config ]
+    then
+        source $DOTFILES/install_config
+fi

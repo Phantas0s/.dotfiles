@@ -12,20 +12,15 @@ else
     # zsh sourcing
     SCRIPT_PATH="${0:A:h}"
 
-    # source $HOME/.zgen/zgen.zsh
-    # source $SCRIPT_PATH/zgen/zgen.zsh
-
-    ###
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
     source $DOTFILES/antibody/plugins.sh
-    ###
+
     # source <(antibody init)
-    # TODO - need to be executed once... get rid of antibody?
+    # TODO - need to be executed once after installing... get rid of antibody?
     # antibody bundle < $DOTFILES/antibody/plugins.txt
     ###
     # source "${HOME}/.zgen/zgen.zsh"
     ###
-
 
     # Config file
     # fzf goodies
