@@ -19,7 +19,7 @@ autocmd vimrc FileType php nnoremap <buffer><leader>rdu :call PhpDetectUnusedUse
 autocmd vimrc FileType php xnoremap <buffer><leader>raa :call PhpAlignAssigns()<CR>
 autocmd vimrc FileType php nnoremap <buffer><leader>rsg :call PhpCreateSettersAndGetters()<CR>
 
-xnoremap <leader>rev :call PHPExtractVariable()<cr>
+xnoremap <buffer><leader>rev :call PHPExtractVariable()<cr>
 
 function! PHPExtractVariable()
     let l:name = input("Name of new variable: $")

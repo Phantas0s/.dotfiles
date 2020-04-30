@@ -13,7 +13,7 @@ autocmd php BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/
 
 " php docs
 let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
-noremap <leader>d :call pdv#DocumentWithSnip()<CR>
+noremap <buffer><leader>d :call pdv#DocumentWithSnip()<CR>
 
 " FormatPHPLineLength - can split array or list of arguments on multiple lines.
-nnoremap <leader>G :call php#FormatPHPLineLength()<cr>
+nnoremap <buffer><leader>G :call php#FormatPHPLineLength()<cr>

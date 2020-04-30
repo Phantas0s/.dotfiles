@@ -11,6 +11,6 @@ set foldmethod=marker
 set foldlevelstart=0
 
 " Eval selection
-vnoremap <leader>E "xy:@x<CR>
+vnoremap <buffer><leader>E "xy:@x<CR>
 " Eval current line
-nnoremap <leader>X "xy$:@x<CR>
+nnoremap <buffer><leader>X "xy$:@x<CR>

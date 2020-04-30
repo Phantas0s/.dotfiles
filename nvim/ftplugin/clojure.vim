@@ -8,4 +8,4 @@ for file in split(glob("~/nvim/pluggedconf/clojure/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 
-map <leader>su ysi
+map <buffer><leader>su ysi

@@ -31,9 +31,10 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
 " remapping - see nerdtree.txt and search for "NERDTreeMappings"
-let NERDTreeMapOpenSplit = 'b'
-let NERDTreeMapPreviewSplit='gb'
+let NERDTreeMapOpenSplit = 'h'
+let NERDTreeMapPreviewSplit='gh'
 
 let NERDTreeMapOpenVSplit = 'v'
 let NERDTreeMapPreviewVSplit='gv'
+
 let g:NERDTreeMouseMode=3
