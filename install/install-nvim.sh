@@ -61,8 +61,11 @@ ln -sf $DOTFILES/nvim/lua/* $HOME/nvim/lua/
 # snippets
 ln -sf $DOTFILES/nvim/ultisnips/* $HOME/nvim/ultisnips/
 
-# see :help ftplugin
+# :help ftplugin
 ln -sf $DOTFILES/nvim/ftplugin/ $HOME/nvim/ftplugin
+
+# :help ftdetect
+ln -sf $DOTFILES/nvim/ftdetect/ $HOME/nvim/ftdetect
 
 # see :help autoload
 ln -sf $DOTFILES/nvim/autoload/* $HOME/nvim/autoload/

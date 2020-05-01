@@ -178,6 +178,8 @@ Plug 'ActivityWatch/aw-watcher-vim'
 
 Plug 'tpope/vim-scriptease'
 
+Plug '~/nvim/plugged/potion'
+
 call plug#end()
 " }}}
 " Plugin Config ---------------------- {{{
@@ -306,12 +308,6 @@ autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,ham
 " same but with clojuredocs
 command! -nargs=? ClojureDoc :call system('type -p open >/dev/null 2>&1 && open https://clojuredocs.org/search\?q=<args> || firefox -url https://clojuredocs.org/search\?q=<args>')
 autocmd vimrc FileType clojure nnoremap <buffer><leader>D :execute "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
-
-" set filetypes
-autocmd vimrc BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-autocmd vimrc BufNewFile,BufRead *.yml.dist set filetype=yaml.
-autocmd vimrc BufNewFile,BufRead *.twig set filetype=html.twig
-autocmd vimrc BufNewFile,BufRead *.mod set filetype=gomod
 
 " arrow keys resize windows
 nnoremap <Left> :vertical resize -10<CR>
