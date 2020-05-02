@@ -110,11 +110,12 @@ Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompleti
 
 " Clojure
 Plug 'guns/vim-sexp', {'for': 'clojure'}
-" Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
+Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
 Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
 Plug 'guns/vim-clojure-static', {'for': 'clojure'}
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 Plug 'tpope/vim-salve', {'for': 'clojure'}
+Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
 " Add tmux completion for COC
 " Plug 'wellle/tmux-complete.vim'
@@ -179,6 +180,7 @@ Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'tpope/vim-scriptease'
 
 Plug '~/nvim/plugged/potion'
+Plug 'Phantas0s/go-analyzer.vim'
 
 call plug#end()
 " }}}
@@ -263,6 +265,8 @@ vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><
 
 " search with very magic mode on
 nnoremap <leader>/ /\v
+" search with no magic
+nnoremap <leader>? /\M
 
 " location & quickfix window
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
@@ -429,10 +433,8 @@ set noswapfile
 set autowrite
 
 " Fold related
-" set foldlevelstart=0 " Start with all folds closed
-
-" Set foldtext
-" set foldtext=general#FoldText()
+set foldlevelstart=0 " Start with all folds closed
+set foldtext=general#FoldText()
 
 " Show the substitution LIVE
 set inccommand=nosplit

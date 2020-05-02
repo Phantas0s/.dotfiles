@@ -1,2 +1,1 @@
-"F for Focus
-nnoremap <buffer><leader>F :Goyo<cr>
+nnoremap <buffer><leader>N :Goyo<cr>

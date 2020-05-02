@@ -11,7 +11,9 @@ nnoremap <leader>h :History<cr>
 nnoremap <leader>b :Buffers<cr>
 
 " Files recursively from pwd
-nnoremap <leader>f :Files<cr>
+" Everything except gitignore files
+nnoremap <leader>f :GFiles --cached --others --exclude-standard<cr>
+nnoremap <leader>F :Files<cr>
 
 " Ex commands
 nnoremap <leader>c :Commands<cr>
