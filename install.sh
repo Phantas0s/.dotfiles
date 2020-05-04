@@ -72,6 +72,7 @@ command -v "composer" >/dev/null && . $DOTFILES/install/install-composer.sh
 command -v "mycli" >/dev/null && . $DOTFILES/install/install-mycli.sh
 command -v "pgcli" >/dev/null && . $DOTFILES/install/install-pgcli.sh
 command -v "go" >/dev/null && . $DOTFILES/install/install-go.sh
+command -v "php" >/dev/null && . $DOTFILES/install/install-php.sh
 command -v "npm" >/dev/null && . $DOTFILES/install/install-javascript.sh
 command -v "compton" >/dev/null && . $DOTFILES/install/install-compton.sh
 command -v "bat" >/dev/null && . $DOTFILES/install/install-bat.sh
