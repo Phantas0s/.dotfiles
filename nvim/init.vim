@@ -104,7 +104,7 @@ Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion 
 
@@ -158,7 +158,7 @@ Plug 'ap/vim-css-color'
 Plug 'simeji/winresizer'
 
 " replace f F t T - don't work well with dot though :'(
-Plug 'yangmillstheory/vim-snipe'
+" Plug 'yangmillstheory/vim-snipe'
 
 " Split arrays in PHP / struct in Go / other things
 Plug 'AndrewRadev/splitjoin.vim'
@@ -179,8 +179,8 @@ Plug 'ActivityWatch/aw-watcher-vim'
 
 Plug 'tpope/vim-scriptease'
 
-Plug '~/nvim/plugged/potion'
-Plug 'Phantas0s/go-analyzer.vim'
+" Custom plugin - working on it
+Plug '~/workspace/vim-plugins/go-analyzer.vim'
 
 call plug#end()
 " }}}
@@ -244,6 +244,9 @@ map <space> <localleader>
 " to create boxes!!
 vmap <F2> !boxes -d stone
 
+" to create ascii art!!
+vmap <f3> !figlet
+
 " un-highlight when esc is pressed
 map <silent><esc> :noh<cr>
 
@@ -262,6 +265,12 @@ vmap u y
 " super useful! from an idea by michael naumann
 vnoremap <silent> * :<C-u>call general#VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+
+" Create tags for help text
+nnoremap <leader>H execute "helptags" expand("%:h")
+
+" Uppercase the word after the cursor
+inoremap <C-u> <esc>mzgUiw`za
 
 " search with very magic mode on
 nnoremap <leader>/ /\v
