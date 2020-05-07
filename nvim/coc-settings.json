@@ -22,10 +22,15 @@
             "filetypes": ["sh"],
             "ignoredRootPaths": ["~"]
         },
-        "intelephense": {
-            "command": "intelephense",
-            "args": ["--stdio"],
-            "filetypes": ["php"]
+        "phpactor": {
+            "trace.server": "verbose",
+            "command": "~/nvim/plugged/phpactor/bin/phpactor",
+            "args": ["language-server"],
+            "filetypes": ["php","cucumber"],
+            "initializationOptions": {
+            },
+            "settings": {
+            }
         }
     },
     "snippets.ultisnips.directories": [
