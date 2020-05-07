@@ -50,10 +50,10 @@ then
     npm i -g bash-language-server
 fi
 
-echo -e "${blue}Install language server for PHP..."
-if [ ! -f $HOME/.node_modules/bin/intelephense ];
-then
-   npm i -g intelephense
-fi
+# echo -e "${blue}Install language server for PHP..."
+# if [ ! -f $HOME/.node_modules/bin/intelephense ];
+# then
+#    npm i -g intelephense
+# fi
 
 echo -e "${green}...done!\n"

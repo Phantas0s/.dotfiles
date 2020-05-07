@@ -223,8 +223,6 @@ Arguments:
 2. Number of minutes
 3. (optional) Duration of one pomodoro (default: 25 min)
 
-
-
 ## Fun
 
 ### Term displays
