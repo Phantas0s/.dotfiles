@@ -16,9 +16,7 @@ oscreencast() {
 
 updatesys() {
     sh $DOTFILES/update.sh
-    if hash aurman 2>/dev/null; then
-        aurman -Syu
-    elif hash yay 2>/dev/null; then
+    if hash yay 2>/dev/null; then
         yay -Syu
     else
         sudo pacman -Syu
@@ -481,4 +479,13 @@ dlplaylist() {
 initKondo() {
     mkdir .clj-kondo
     clj-kondo --lint "$(boot with-cp -w -f -)"
+}
+
+pom() {
+    POMODORO_DURATION=25
+    if [ ! -z $3 ];
+    then
+        POMODORO_DURATION=$3
+    fi
+    echo "(($1 * 60) + $2) / $POMODORO_DURATION" | bc
 }

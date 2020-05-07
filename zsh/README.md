@@ -189,27 +189,56 @@ Init kondo-clj for a clojure project with boot.
 
 ## Other
 
-`thriftgen`
-
-Generate thrift config via thrift on local (docker image doesn't work...)
+### File system
 
 `mkcd`
 
 Create a folder like `mkdir -p` and goes in it.
 
+### File system
+
 `updatezsh`
 
+### Antibody 
+
 Update antibody plugins 
+
+### Prompt Performance
 
 `promptspeed`
 
 Display the time for the prompt to appear when opening a new zsh instance
 
+``
+
+### Productivity
+
+`pom`
+
+Calculate number of pomodoro done for a specific duration.
+
+Arguments:
+
+1. Number of hours
+2. Number of minutes
+3. (optional) Duration of one pomodoro (default: 25 min)
+
+
+
 ## Fun
+
+### Term displays
 
 `matrix`
 
 Display... the matrix!
+
+`pipes` 
+
+Remember the OpenGL pipes screensaver on windows 9*? The same in the terminal. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/pipes).
+
+
+### Term Colors
 
 `colorblocks` 
 
@@ -218,8 +247,4 @@ Display the main terminal colors configured, in nice blocks. [source](https://gi
 `colorcards` 
 
 Display all the terminal colors configured, in nice panes. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorcards).
-
-`pipes` 
-
-Remember the OpenGL pipes screensaver on windows 9*? The same in the terminal. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/pipes).
 
