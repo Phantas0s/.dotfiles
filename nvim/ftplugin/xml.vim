@@ -2,7 +2,7 @@ augroup xml
   autocmd!
 augroup END
 
-autocmd xml BufNewFile,BufRead *.tmTheme set filetype=xml
+autocmd xml BufNewFile,BufRead *.tmTheme, *.mm set filetype=xml
 
 " reformat with external tools
-autocmd xml nnoremap <buffer><leader>g :%!xmllint --format - <cr>
+autocmd xml nmap <buffer><leader>g :%!xmllint --format - <cr>
