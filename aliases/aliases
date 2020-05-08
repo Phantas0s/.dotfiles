@@ -126,9 +126,6 @@ alias nvimcu='rm -I ~/nvim/undo/*'
 # log the keys entered via using vim 
 alias nviml='nvim -w ~/.vimlog "$@"'
 
-# racket for SICP
-alias rsicp="racket -i -p neil/sicp -l xrepl"
-
 # git
 alias gs='git status '
 alias ga='git add '

@@ -281,6 +281,9 @@ nnoremap <leader>? /\M
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
+" open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
+nnoremap gF :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
+
 "toggle between absolute -> relative line number
 nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
 
