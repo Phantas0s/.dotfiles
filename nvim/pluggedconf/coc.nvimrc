@@ -21,10 +21,10 @@ inoremap <silent><expr> <A-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Remap keys for gotos
-nmap <silent><leader>cgd <Plug>(coc-definition)
-nmap <silent><leader>cgtd <Plug>(coc-type-definition)
-nmap <silent><leader>cgi <Plug>(coc-implementation)
-nmap <silent><leader>cgr <Plug>(coc-references)
+nmap <silent><leader>] <Plug>(coc-definition)
+nmap <silent><leader>]t <Plug>(coc-type-definition)
+nmap <silent><leader>]i <Plug>(coc-implementation)
+nmap <silent><leader>]r <Plug>(coc-references)
 
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

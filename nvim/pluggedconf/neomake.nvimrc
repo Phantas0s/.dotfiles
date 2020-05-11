@@ -184,7 +184,7 @@ let g:neomake_clojure_enabled_makers = ['kondo']
 
 let g:neomake_clojure_kondo_maker = {
     \ 'exe': 'clj-kondo',
-    \ 'args': ['--lint', '%', '--config', '{:linters {:invalid-arity {:level :off}}}'],
+    \ 'args': ['--lint', '%'],
     \ 'errorformat': '%f:%l:%c:\ Parse\ %t%*[^:]:\ %m,%f:%l:%c:\ %t%*[^:]:\ %m',
     \ }
 

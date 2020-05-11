@@ -8,7 +8,7 @@ autocmd FileType clojure vmap <buffer><leader>E :exec "Eval ".expand("<cword>")<
 autocmd FileType clojure nmap <buffer><leader>X cpp
 
 " TODO doesn't seem to work with bREPL
-autocmd FileType clojure nmap <buffer>K :exec "Doc ".expand("<cword>")<cr>
+autocmd FileType clojure nmap <buffer><leader>K :exec "Doc ".expand("<cword>")<cr>
 " autocmd FileType clojure nmap <buffer><leader>S :exec "Source ".expand("<cword>")<cr>
 
 " Start REPL for clojurescript

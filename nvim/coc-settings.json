@@ -8,6 +8,9 @@
             "additionalSchemes": ["jar", "zipfile"],
             "trace.server": "verbose",
             "initializationOptions": {
+                "project-specs": [{
+                    "project-path": "deps.edn",
+                    "classpath-cmd": ["clj", "-Spath"]}]
             }
         },
         "golang": {

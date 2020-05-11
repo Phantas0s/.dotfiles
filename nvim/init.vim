@@ -114,7 +114,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
 Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
 Plug 'guns/vim-clojure-static', {'for': 'clojure'}
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
-Plug 'tpope/vim-salve', {'for': 'clojure'}
+" Plug 'tpope/vim-salve', {'for': 'clojure'}
 Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
 " Add tmux completion for COC

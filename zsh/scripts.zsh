@@ -167,7 +167,7 @@ gtD() {
     fi
 }
 
-sshcreate() {
+ssh-create() {
     if [ ! -z "$1" ];
     then
         ssh-keygen -f $HOME/.ssh/$1 -t rsa -N '' -C "$1"
