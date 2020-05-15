@@ -1,5 +1,8 @@
 let g:fireplace_cljs_repl = "(adzerk.boot-cljs-repl/repl-env)"
 
+command! PiggieClj :Piggieback (figwheel.main.api/repl-env "dev")
+command! PiggieBoot :Piggieback (adzerk.boot-cljs-repl/repl-env)
+
 " Eval anything under the cursor
 autocmd FileType clojure nmap <buffer><leader>E :exec "Eval ".expand("<cword>")<cr>
 autocmd FileType clojure vmap <buffer><leader>E :exec "Eval ".expand("<cword>")<cr>
@@ -15,4 +18,3 @@ autocmd FileType clojure nmap <buffer><leader>K :exec "Doc ".expand("<cword>")<c
 autocmd FileType clojure nmap <buffer><leader>r :exec "Piggieback"<cr>
 " Kill REPL 
 autocmd FileType clojure nmap <buffer><leader>kr :exec "Piggieback!"<cr>
-
