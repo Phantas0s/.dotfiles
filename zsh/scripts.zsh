@@ -154,7 +154,12 @@ imgconvpng() {
 }
 
 imgwebp() {
-    for F in *.jpg; do cwebp -q 100 $F -o `basename ${F%.jpg}`.webp; done
+    IMG_EXT="jpg"
+    if [ ! -z $1 ];
+    then
+        IMG_EXT=$1
+    fi
+    for F in *.$IMG_EXT; do cwebp -q 100 $F -o `basename ${F%.$IMG_EXT}`.webp; done
 }
 
 gtD() {
@@ -323,12 +328,6 @@ matrix () {
 
 pgdump() {
     pg_dump -U postgres -h localhost x_loc_0bdf08de > pulsecheck_service_test.sql 
-}
-
-# Loopline system (my job) related
-thriftgen() {
-    thrift -o . -r --gen php:server -out ./php/gen  ./service.thrift 
-    thrift -o . -r --gen go -out ./go/pkg/gen  ./service.thrift
 }
 
 git-heatmap() {
