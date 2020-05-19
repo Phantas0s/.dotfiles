@@ -38,6 +38,16 @@ then
         cd -
     fi
 
+    if [ ! -d $HOME/workspace/ottosocial ];
+    then
+        echo -e "Installing the project ottosocial in workspace"
+        cd $HOME/workspace
+        git clone git@github.com:Phantas0s/ottosocial.git
+        go get ./ottosocial
+        go install ./ottosocial
+        cd -
+    fi
+
     if [ ! -d $HOME/workspace/devdash ];
     then
         echo -e "Installing the project Devdash in workspace"

@@ -19,6 +19,11 @@
             "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
             "filetypes": ["go"]
         },
+        "godot": {
+            "host": "127.0.0.1",
+            "filetypes": ["gd", "gdscript3"],
+            "port": 6008
+        },
         "bash": {
             "command": "bash-language-server",
             "args": ["start"],

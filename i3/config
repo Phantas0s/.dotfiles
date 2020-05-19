@@ -315,7 +315,7 @@ exec keepassx
 # bc scratchpad
 for_window [instance="bc_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+b [instance="bc_scratchpad"] scratchpad show
-exec urxvtc -name bc_scratchpad -e bc
+exec urxvtc -name bc_scratchpad -e bc -l
 
 # configuration of some software
 for_window [class="URxvt*"] border pixel 1

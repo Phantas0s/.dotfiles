@@ -138,9 +138,13 @@ Require imagemagick.
 
 Convert source to a jpg image
 
-### Convert all jpg image in the current folder to webp (by copy)
+### Image convert to Webp
 
-`imgwebp`
+`imgwebp <image_extension>`
+
+Require cwebp
+
+Convert all images with specific extension in the current folder to webp (by copy). `<image_extension>` is not manddatory, default `jpg`.
 
 ## Git 
 

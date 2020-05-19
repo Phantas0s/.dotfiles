@@ -79,7 +79,7 @@ Plug 'christoomey/vim-titlecase' " itlecase with gt
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " colors for i3 config file
 Plug 'PotatoesMaster/i3-vim-syntax'
@@ -130,6 +130,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx' " For react
 Plug 'posva/vim-vue' " For Vue
+
+" GDScript (Godot Game Engine)
+Plug 'calviken/vim-gdscript3'
 
 " Outliners
 Plug 'majutsushi/tagbar'
@@ -221,6 +224,7 @@ let g:coc_global_extensions = [
     \ 'coc-tsserver',
     \ 'coc-html',
     \ 'coc-yaml',
+    \ 'coc-godot',
     \]
 " \ 'coc-markmap',
 " \ 'coc-sh',
