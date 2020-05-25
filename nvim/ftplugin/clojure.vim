@@ -8,4 +8,8 @@ for file in split(glob("~/nvim/pluggedconf/clojure/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 
+for file in split(glob("~/nvim/pluggedconf/lisp/*.nvimrc"), '\n')
+    exe 'source' file
+endfor
+
 map <buffer><leader>su ysi

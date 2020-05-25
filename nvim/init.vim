@@ -108,9 +108,11 @@ Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion 
 
+" LISP
+Plug 'guns/vim-sexp', { 'for': ['clojure', 'scheme'] }
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': ['clojure', 'scheme'] }
+
 " Clojure
-Plug 'guns/vim-sexp', {'for': 'clojure'}
-Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'}
 Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
 Plug 'guns/vim-clojure-static', {'for': 'clojure'}
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
