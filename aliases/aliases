@@ -202,14 +202,11 @@ alias sshprodql='ssh -Nf prod -L 3306:localhost:3306'
 alias work="$HOME/workspace"
 # dotfiles
 alias dot="$HOME/.dotfiles"
-# Knowledge base
-alias know="$CLOUD/knowledge_base"
+
 # Freebrain
 alias freebrain="freemind $CLOUD/knowledge_base/_BRAINSTORMING/* &"
 
-# golang workspace
-alias gwork="$GOPATH/src/github.com/Phantas0s"
 # golang src
-alias gsrc="$GOPATH/src/"
+alias gosrc="$GOPATH/src/"
 # golang gin
-alias gbin="$GOPATH/bin/"
+alias gobin="$GOPATH/bin/"
