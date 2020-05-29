@@ -48,9 +48,11 @@ function dot_red_mes() {
     echo -e "${red} ${1}"
 }
 
-function dot_red_mes() {
-    echo -e "${red} ${1}"
+function dot_warn_mes() {
+    echo -e "${red}/!\  ${1} /!\ "
 }
+
+dot_warn_mes "Please generate a 'gitlab' ssh-key"
 
 function dot_install() {
     echo -e "${blue}-> Installing ${1} config"
@@ -101,9 +103,7 @@ dot_is_installed vifm && dot_install vifm
 dot_is_installed lein && dot_install clojure-lein
 dot_is_installed freemind && dot_install freemind
 dot_is_installed redshift && dot_install redshift
-
-rm $HOME/.Xmodmap &>/dev/null
-ln -s $DOTFILES/xorg-server/Xmodmap $HOME/.Xmodmap
+dot_is_installed xmodmap && dot_install xmodmap
 
 # Source startup
 source $DOTFILES/startup

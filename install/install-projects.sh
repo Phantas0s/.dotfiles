@@ -8,12 +8,6 @@ mes "HELLO"
 
 if [ -f $HOME/.ssh/gitlab ];
 then
-    if [ ! -d $HOME/workspace/sharetoall ];
-    then
-        cd $HOME/workspace
-        git clone git@gitlab.com:Phantas0s/sharetoall.git
-        cd -
-    fi
     if [ ! -d $HOME/workspace/webtechno ];
     then
         cd $HOME/workspace
@@ -21,7 +15,7 @@ then
         cd -
     fi
 else
-    dot_warn_mes "NO SSH KEY GITLAB"
+dot_warn_mes "Please generate a 'gitlab' ssh-key"
 fi
 
 # TODO put all of that its in own file
@@ -76,5 +70,5 @@ then
         cd -
     fi
 else
-    dot_warn_mes "NO SSH KEY GITHUB"
+    dot_warn_mes "Please generate a 'github' ssh-key"
 fi
