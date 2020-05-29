@@ -1,28 +1,22 @@
 #!/bin/bash
 
-##########################
-# STARTUP FOR BASH / ZSH #
-##########################
+###################
+# STARTUP FOR ZSH #
+###################
 
-if [ "$0" = "bash" ] || [ "$0" = "-bash" ] || [ "$0" = "/bin/bash" ] 
-  then
-    # bash sourcing
-    SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-else
-    # zsh sourcing
-    SCRIPT_PATH="${0:A:h}"
+# zsh sourcing
+SCRIPT_PATH="${0:A:h}"
 
-    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-    source $DOTFILES/antibody/plugins.sh
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source $DOTFILES/antibody/plugins.sh
 
-    # source <(antibody init)
-    # TODO - need to be executed once after installing... get rid of antibody?
-    # antibody bundle < $DOTFILES/antibody/plugins.txt
-    ###
-    # source "${HOME}/.zgen/zgen.zsh"
-    ###
+# source <(antibody init)
+# TODO - need to be executed once after installing... get rid of antibody?
+# antibody bundle < $DOTFILES/antibody/plugins.txt
+###
+# source "${HOME}/.zgen/zgen.zsh"
+###
 
-    # Config file
-    # fzf goodies
-    command -v "fzf" >/dev/null && source $SCRIPT_PATH/zsh/scripts_fzf.zsh
-fi
+# Config file
+# fzf goodies
+command -v "fzf" >/dev/null && source $SCRIPT_PATH/zsh/scripts_fzf.zsh

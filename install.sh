@@ -48,11 +48,17 @@ function dot_red_mes() {
     echo -e "${red} ${1}"
 }
 
+function dot_mes() {
+    echo -e "${1} ${2}"
+}
+
+function dot_mes_install() {
+    dot_mes ${green} "--> Installing ${1}"
+}
+
 function dot_warn_mes() {
     echo -e "${red}/!\  ${1} /!\ "
 }
-
-dot_warn_mes "Please generate a 'gitlab' ssh-key"
 
 function dot_install() {
     echo -e "${blue}-> Installing ${1} config"
@@ -61,7 +67,6 @@ function dot_install() {
 
 function dot_sub_install() {
     echo -e "${green}--> Installing ${1}"
-    . $DOTFILES/install/install-${1}.sh
 }
 
 
