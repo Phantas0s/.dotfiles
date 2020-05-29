@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "${blue} installing jrnl configuration..."
+rm -rf $HOME/jrnl &>/dev/null
 
 rm $DOTFILES/jrnl/jrnl
 cp $DOTFILES/jrnl/jrnl_template $DOTFILES/jrnl/jrnl
@@ -15,9 +15,4 @@ then
 fi
 
 sed -i -e "s~<djrnl>~${JRNL_DEFAULT_PATH}~g" $DOTFILES/jrnl/jrnl
-
-echo 'Create symlink for jrnl config...'
-
 ln -s -f $DOTFILES/jrnl/jrnl $HOME/jrnl
-
-echo "${green} ...done"

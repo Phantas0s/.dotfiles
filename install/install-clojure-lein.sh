@@ -1,8 +1,5 @@
-echo -e ""
-echo -e "${red}Delete clojure lein config..."
-rm -rf $HOME/.lein &>/dev/null
-echo -e "${green}...done!"
+#!/bin/bash
 
-echo -e "${blue} Installing clojure lein config..."
+rm -rf $HOME/.lein &>/dev/null
+
 ln -s $DOTFILES/clojure/lein $HOME/.lein
-echo -e "${green} ...done"

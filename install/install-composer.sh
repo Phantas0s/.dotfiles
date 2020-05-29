@@ -1,5 +1,3 @@
 #!/bin/bash
-
-echo -e "\n${blue}Install composer global json file..."
+rm $COMPOSER_HOME/composer.json &>/dev/null
 ln -s $DOTFILES/composer/composer.json $COMPOSER_HOME/composer.json
-echo -e "${green}Done."

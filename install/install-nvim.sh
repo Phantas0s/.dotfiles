@@ -1,6 +1,10 @@
 #!/bin/bash
 
-echo -e "${blue}Installing neovim configuration..."
+rm $HOME/nvim/pluggedconf &>/dev/null
+rm $HOME/nvim/colors/* &>/dev/null
+rm $HOME/nvim/ftplugin &>/dev/null
+rm $HOME/nvim/autoload/* &>/dev/null
+
 
 # Create all necessary folder for neovim
 if [ ! -d $HOME/nvim ]
@@ -67,7 +71,7 @@ ln -sf $DOTFILES/nvim/ftplugin/ $HOME/nvim/ftplugin
 # :help ftdetect
 ln -sf $DOTFILES/nvim/ftdetect/ $HOME/nvim/ftdetect
 
-# see :help autoload
+# :help autoload
 ln -sf $DOTFILES/nvim/autoload/* $HOME/nvim/autoload/
 
 # thesaurus
@@ -81,5 +85,3 @@ ln -sf $DOTFILES/nvim/spell/* $HOME/nvim/spell/
 # installing colorscheme for lightline
 ln -sf $DOTFILES/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim \
 $HOME/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim
-
-echo -e "${green}...done\n"

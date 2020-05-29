@@ -1,7 +1,4 @@
 #!/bin/bash
-# TODO to refactor - parsing a list instead of those if everywhere...
-
-echo -e "${blue} installing Go applications and tools..."
 
 mkdir -p $GOPATH/bin
 

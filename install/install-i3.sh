@@ -1,8 +1,7 @@
 #!/bin/bash
 
-##############
-# install i3 #
-##############
+rm -rf $HOME/.config/i3/ &>/dev/null
+rm -rf $HOME/.i3 &>/dev/null
 
 if [ ! -d $HOME/.i3 ]
   then

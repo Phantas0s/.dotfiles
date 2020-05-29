@@ -1,10 +1,7 @@
-echo ""
-echo "${blue}Install dunst..."
+#!/bin/bash
+rm $HOME/.dunstrc &>/dev/null
+rm -rf $HOME/.testomatic &>/dev/null
 
 ln -s $DOTFILES/dunst/dunstrc $HOME/.dunstrc
-
-# Useful for autotest.rb
 ln -s $DOTFILES/dunst/testomatic $HOME/.testomatic
-
-echo "${green} ...done"
 

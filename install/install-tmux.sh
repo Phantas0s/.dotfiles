@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo ""
-echo "${blue}Install tmux config..."
-
+rm $HOME/.tmux.conf &>/dev/null
 ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 if [ ! -d $HOME/.tmux ]
@@ -16,6 +14,3 @@ if [ ! -d $HOME/.tmux/plugins/tpm ]
 then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
-
-echo "${green} ...done"
-

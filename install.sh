@@ -1,5 +1,6 @@
 #!/bin/bash
 # Copy the default config file if not present already
+
 ############
 # includes #
 ############
@@ -33,7 +34,7 @@ ${yellow}
 "
 
 echo -e "${yellow}!!! ${red}WARNING${yellow} !!!"
-echo -e "${light_red}This script will delete all your configuration fils!"
+echo -e "${light_red}This script will delete all your configuration files!"
 echo -e "${light_red}Use it at your own risks."
 
 if [ $# -ne 1 ] || [ "$1" != "-y" ];
@@ -42,14 +43,33 @@ if [ $# -ne 1 ] || [ "$1" != "-y" ];
         read key;
 fi
 
+#TODO put that somewhere else
+function dot_red_mes() {
+    echo -e "${red} ${1}"
+}
+
+function dot_red_mes() {
+    echo -e "${red} ${1}"
+}
+
+function dot_install() {
+    echo -e "${blue}-> Installing ${1} config"
+    . $DOTFILES/install/install-${1}.sh
+}
+
+function dot_sub_install() {
+    echo -e "${green}--> Installing ${1}"
+    . $DOTFILES/install/install-${1}.sh
+}
+
+
+function dot_is_installed() {
+    command -v $1 >/dev/null
+}
+
 ###########
 # INSTALL #
 ###########
-
-# Uninstall everything
-# TODO: let the choice to backup :D
-
-. $DOTFILES/uninstall.sh
 
 # Install
 . $DOTFILES/install/install-from-cloud.sh
@@ -57,38 +77,33 @@ fi
 . $DOTFILES/install/install-prezto.sh
 . $DOTFILES/install/install-xorg-server.sh
 
-command -v "ssh-keygen" >/dev/null && command -v "git" >/dev/null && . $DOTFILES/install/install-projects.sh
-command -v "lxappearance" >/dev/null && . $DOTFILES/install/install-theme.sh
-command -v "i3" >/dev/null && . $DOTFILES/install/install-i3.sh
-command -v "urxvt" >/dev/null && . $DOTFILES/install/install-urxvt.sh
-command -v "git" >/dev/null && . $DOTFILES/install/install-git.sh
-command -v "nvim" >/dev/null && . $DOTFILES/install/install-nvim.sh
-command -v "tmux" >/dev/null && . $DOTFILES/install/install-tmux.sh
-command -v "dunst" >/dev/null && . $DOTFILES/install/install-dunst.sh
-command -v "feh" >/dev/null && . $DOTFILES/install/install-feh.sh
-command -v "fzf" >/dev/null && . $DOTFILES/install/install-fzf.sh
-command -v "jrnl" >/dev/null && . $DOTFILES/install/install-jrnl.sh
-command -v "composer" >/dev/null && . $DOTFILES/install/install-composer.sh
-command -v "mycli" >/dev/null && . $DOTFILES/install/install-mycli.sh
-command -v "pgcli" >/dev/null && . $DOTFILES/install/install-pgcli.sh
-command -v "go" >/dev/null && . $DOTFILES/install/install-go.sh
-command -v "php" >/dev/null && . $DOTFILES/install/install-php.sh
-command -v "npm" >/dev/null && . $DOTFILES/install/install-javascript.sh
-command -v "compton" >/dev/null && . $DOTFILES/install/install-compton.sh
-command -v "bat" >/dev/null && . $DOTFILES/install/install-bat.sh
-command -v "joplin" >/dev/null && . $DOTFILES/install/install-joplin.sh
-command -v "vifm" >/dev/null && . $DOTFILES/install/install-vifm.sh
-command -v "lein" >/dev/null && . $DOTFILES/install/install-clojure-lein.sh
-command -v "freemind" >/dev/null && . $DOTFILES/install/install-freemind.sh
-command -v "redshift" >/dev/null && . $DOTFILES/install/install-redshift.sh
+dot_is_installed ssh_keygen && dot_is_installed git && dot_install projects
+dot_is_installed lxappearance && dot_install theme
+dot_is_installed i3 && dot_install i3
+dot_is_installed urxvt && dot_install urxvt
+dot_is_installed git && dot_install git
+dot_is_installed nvim && dot_install nvim
+dot_is_installed tmux && dot_install tmux
+dot_is_installed dunst && dot_install dunst
+dot_is_installed feh && dot_install feh
+dot_is_installed fzf && dot_install fzf
+dot_is_installed jrnl && dot_install jrnl
+dot_is_installed composer && dot_install composer
+dot_is_installed mycli && dot_install mycli
+dot_is_installed pgcli && dot_install pgcli
+dot_is_installed go && dot_install go
+dot_is_installed php && dot_install php
+dot_is_installed npm && dot_install javascript
+dot_is_installed compton && dot_install compton
+dot_is_installed bat && dot_install bat
+dot_is_installed joplin && dot_install joplin
+dot_is_installed vifm && dot_install vifm
+dot_is_installed lein && dot_install clojure-lein
+dot_is_installed freemind && dot_install freemind
+dot_is_installed redshift && dot_install redshift
 
-echo -e "${blue}Create symlinks for .bashrc config..."
-ln -s $DOTFILES/bash/bashrc $HOME/.bashrc
-echo -e "${green} ...done\n"
-
-echo -e "${blue}Create symlinks for Xmodmap key mapping...."
+rm $HOME/.Xmodmap &>/dev/null
 ln -s $DOTFILES/xorg-server/Xmodmap $HOME/.Xmodmap
-echo -e "${green} ...done\n"
 
 # Source startup
 source $DOTFILES/startup

@@ -1,7 +1,5 @@
-echo ""
-echo "${blue}Install feh desktop background..."
+#!/bin/bash
 
+rm $HOME/.fehbg &>/dev/null
 ln -s $DOTFILES/feh/fehbg $HOME/.fehbg
-
-echo "${green} ...done"
 

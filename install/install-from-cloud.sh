@@ -1,10 +1,11 @@
 #!/bin/bash
 
+#TODO separate all of that
+
+rm $HOME/.tmuxp &>/dev/null
 
 if [ ! -z "$DOTFILES_CLOUD" ];
 then
-    echo -e "${blue} installing private projects configuration from the cloud..."
-
     #tmuxp projects
     ln -sf $DOTFILES_CLOUD/tmuxp/ $HOME/.tmuxp
 
@@ -27,25 +28,19 @@ then
             mkdir $HOME/.ssh > /dev/null
         fi
 
-        echo -e "\n"
-        echo -e "${red}Delete the git config..."
-        rm $HOME/.gitconfig &>/dev/null
-        echo -e "${green}...done!"
+        rm $HOME/.ssh/config &>/dev/null
 
-        echo -e "\n"
-        echo -e "${blue} Installing ssh config from the cloud"
         cp $DOTFILES_CLOUD/openssh/config $HOME/.ssh/config
-        chown $USER:$USER $HOME/.ssh/config
+        # chown $USER:$USER $HOME/.ssh/config
         chmod 700 $HOME/.ssh/config
-        echo -e "${green} ...done"
     fi
 fi
 
+rm -rf $HOME/wallpapers
+
 if [ ! -z "$WALLPAPER_PATH" ]
 then
-    echo -e "${blue} Installing wallpapers from the cloud..."
     ln -s $WALLPAPER_PATH ~/wallpapers
-    echo -e "${green} ...done"
 fi
 
 if [ ! -z "$CLOUD" ];

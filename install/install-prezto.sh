@@ -1,8 +1,11 @@
 #!/bin/bash
 
-##################
-# install Prezto #
-##################
+rm $HOME/.zlogin &>/dev/null
+rm $HOME/.zlogout &>/dev/null
+rm $HOME/.zpreztorc &>/dev/null
+rm $HOME/.zprofile &>/dev/null
+rm $HOME/.zshenv &>/dev/null
+rm $HOME/.zshrc &>/dev/null
 
 if [ ! -d $HOME/.zprezto ]
   then
@@ -11,7 +14,6 @@ if [ ! -d $HOME/.zprezto ]
     cd -
 fi
 
-echo 'Create symlinks for Prezto...'
 # ln -s -f $HOME/.zprezto/runcoms/zlogin $HOME/.zlogin
 # ln -s -f $HOME/.zprezto/runcoms/zlogout $HOME/.zlogout
 ln -s -f $DOTFILES/zsh/zprezto/config/zpreztorc $HOME/.zpreztorc
@@ -19,5 +21,4 @@ ln -s -f $DOTFILES/zsh/zprezto/config/zpreztorc $HOME/.zpreztorc
 # ln -s -f $HOME/.zprezto/runcoms/zshenv $HOME/.zshenv
 ln -s -f $DOTFILES/zsh/zshrc $HOME/.zshrc
 
-echo 'Create symlinks for personnal prezto themes'
 ln -s -f $DOTFILES/zsh/zprezto/themes/prompt_thanatos_setup $HOME/.zprezto/modules/prompt/functions/
