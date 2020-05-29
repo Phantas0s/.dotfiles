@@ -84,7 +84,7 @@ function dot_is_installed() {
 . $DOTFILES/install/install-prezto.sh
 . $DOTFILES/install/install-xorg-server.sh
 
-dot_is_installed ssh_keygen && dot_is_installed git && dot_install projects
+dot_is_installed git && dot_install projects
 dot_is_installed lxappearance && dot_install theme
 dot_is_installed i3 && dot_install i3
 dot_is_installed urxvt && dot_install urxvt

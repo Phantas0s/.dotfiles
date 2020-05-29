@@ -27,8 +27,6 @@ binaries=(
     github.com/fatih/motion
     github.com/raviqqe/muffet
     golang.org/x/tools/cmd/gopls
-    github.com/Phantas0s/testomatic
-    github.com/Phantas0s/devdash
 )
 
 for item in "${binaries[@]}"; do

@@ -4,33 +4,26 @@
 
 mkdir -p $GOPATH/src/github.com/Phantas0s > /dev/null
 
-mes "HELLO"
-
 if [ -f $HOME/.ssh/gitlab ];
 then
-    if [ ! -d $HOME/workspace/webtechno ];
-    then
+    if [ ! -d $HOME/workspace/webtechno ]; then
+        CURRENT=$(pwd)
         cd $HOME/workspace
         git clone --recursive git@gitlab.com:Phantas0s/webtechno.git
-        cd -
+        cd $HOME/workspace/webtechno
+        if [ -d $HOME/workspace/webtechno/githooks ]; then
+            cd .git/hooks/
+            ln -s ../../githooks/* .
+        fi
+        cd $CURRENT
     fi
 else
-dot_warn_mes "Please generate a 'gitlab' ssh-key"
+    dot_warn_mes "Please generate a 'gitlab' ssh-key"
 fi
 
 # TODO put all of that its in own file
-if [ -f $HOME/.ssh/github ];
-then
-    if [ ! -d $GOPATH/src/github.com/Phantas0s/watcher ];
-    then
-        cd $GOPATH/src/github.com/Phantas0s
-        git clone git@github.com:Phantas0s/watcher.git
-        go get ./watcher
-        cd -
-    fi
-
-    if [ ! -d $HOME/workspace/ottosocial ];
-    then
+if [ -f $HOME/.ssh/github ]; then
+    if [ ! -d $HOME/workspace/ottosocial ]; then
         cd $HOME/workspace
         git clone git@github.com:Phantas0s/ottosocial.git
         go get ./ottosocial
@@ -38,8 +31,7 @@ then
         cd -
     fi
 
-    if [ ! -d $HOME/workspace/devdash ];
-    then
+    if [ ! -d $HOME/workspace/devdash ]; then
         cd $HOME/workspace
         git clone git@github.com:Phantas0s/devdash.git
         go get ./devdash
@@ -47,8 +39,7 @@ then
         cd -
     fi
 
-    if [ ! -d $GOPATH/src/github.com/Phantas0s/testomatic ];
-    then
+    if [ ! -d $GOPATH/src/github.com/Phantas0s/testomatic ]; then
         cd $GOPATH/src/github.com/Phantas0s
         git clone git@github.com:Phantas0s/testomatic.git
         go get ./testomatic
@@ -56,15 +47,13 @@ then
         cd -
     fi
 
-    if [ ! -d $HOME/workspace/playground ];
-    then
+    if [ ! -d $HOME/workspace/playground ]; then
         cd $HOME/workspace
         git clone git@github.com:Phantas0s/playground.git
         cd -
     fi
 
-    if [ ! -d $HOME/workspace/ArchInstall ];
-    then
+    if [ ! -d $HOME/workspace/ArchInstall ]; then
         cd $HOME/workspace
         git clone git@github.com:Phantas0s/ArchInstall.git
         cd -
