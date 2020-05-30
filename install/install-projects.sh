@@ -8,6 +8,7 @@ if [ -f $HOME/.ssh/gitlab ];
 then
     if [ ! -d $HOME/workspace/webtechno ]; then
         CURRENT=$(pwd)
+
         cd $HOME/workspace
         git clone --recursive git@gitlab.com:Phantas0s/webtechno.git
         cd $HOME/workspace/webtechno
@@ -21,7 +22,6 @@ else
     dot_warn_mes "Please generate a 'gitlab' ssh-key"
 fi
 
-# TODO put all of that its in own file
 if [ -f $HOME/.ssh/github ]; then
     if [ ! -d $HOME/workspace/ottosocial ]; then
         cd $HOME/workspace
