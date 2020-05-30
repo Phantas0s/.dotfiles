@@ -16,7 +16,7 @@ augroup END
 " | install plugin |
 " +----------------+
 
-call plug#begin('~/nvim/plugged')
+call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
 
 " display the result when searching
 Plug 'henrik/vim-indexed-search'

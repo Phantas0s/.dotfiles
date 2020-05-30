@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm $HOME/.fehbg &>/dev/null
-ln -s $DOTFILES/feh/fehbg $HOME/.fehbg
+rm $XDG_CONFIG_HOME/.fehbg &>/dev/null
+ln -s $DOTFILES/feh/fehbg $XDG_CONFIG_HOME/.fehbg
 

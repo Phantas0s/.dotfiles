@@ -15,8 +15,8 @@ export VIMCONFIG="$HOME/nvim"
 export XDG_CONFIG_HOME=$HOME
 export TERM='rxvt-256color'
 
-export COMPOSER_HOME="$HOME/composer"
-export TMUXP_CONFIGDIR="$HOME/.tmuxp"
+export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
+export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/.tmuxp"
 
 # Modifying the path for ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"

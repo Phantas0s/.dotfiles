@@ -1,3 +1,3 @@
-rm $HOME/pgcli/config &>/dev/null
-mkdir -p $HOME/pgcli
-ln -s $DOTFILES/pgcli/config $HOME/pgcli/config
+rm $XDG_CONFIG_HOME/pgcli/config &>/dev/null
+mkdir -p $XDG_CONFIG_HOME/pgcli
+ln -s $DOTFILES/pgcli/config $XDG_CONFIG_HOME/pgcli/config

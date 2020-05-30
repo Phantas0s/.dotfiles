@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -f $HOME/.fzf.zsh ];
+if [ ! -f $XDG_CONFIG_HOME/.fzf.zsh ];
 then
-    sh $HOME/.fzf/install > /dev/null
+    sh $XDG_CONFIG_HOME/.fzf/install > /dev/null
 fi

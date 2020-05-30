@@ -1,4 +1,4 @@
-rm $HOME/.Xdefaults &>/dev/null
-ln -s $DOTFILES/urxvt/Xdefaults $HOME/.Xdefaults
+rm $XDG_CONFIG_HOME/.Xdefaults &>/dev/null
+ln -s $DOTFILES/urxvt/Xdefaults $XDG_CONFIG_HOME/.Xdefaults
 rm $HOME/.dircolors
-ln -s $DOTFILES/urxvt/dircolors $HOME/.dircolors
+ln -s $DOTFILES/urxvt/dircolors $XDG_CONFIG_HOME/.dircolors

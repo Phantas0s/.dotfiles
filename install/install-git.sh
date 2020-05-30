@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm $HOME/.gitconfig &>/dev/null
+rm $XDG_CONFIG_HOME/.gitconfig &>/dev/null
 rm $DOTFILES/git/gitconfig >/dev/null
 cp $DOTFILES/git/gitconfig_template $DOTFILES/git/gitconfig
 
@@ -24,8 +24,8 @@ fi
 
 sed -i -e "s/<name>/${GIT_USER}/g" $DOTFILES/git/gitconfig
 
-ln -s -f $DOTFILES/git/gitconfig $HOME/.gitconfig
-ln -s -f $DOTFILES/git/gitignore $HOME/.gitignore
+ln -s -f $DOTFILES/git/gitconfig $XDG_CONFIG_HOME/.gitconfig
+ln -s -f $DOTFILES/git/gitignore $XDG_CONFIG_HOME/.gitignore
 
 # Set the global hooks
 git config --global init.templatedir "$DOTFILES/git/templates"

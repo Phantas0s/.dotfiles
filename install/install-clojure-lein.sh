@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm -rf $HOME/.lein &>/dev/null
+rm -rf $XDG_CONFIG_HOME/.lein &>/dev/null
 
 ln -s $DOTFILES/clojure/lein $HOME/.lein

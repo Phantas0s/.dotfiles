@@ -1,16 +1,17 @@
 #!/bin/bash
 
-rm $HOME/.tmux.conf &>/dev/null
-ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+rm $XDG_CONFIG_HOME/.tmux.conf &>/dev/null
+rm $XDG_CONFIG_HOME/.tmux.conf &>/dev/null
+ln -s $DOTFILES/tmux/tmux.conf $XDG_CONFIG_HOME/.tmux.conf
 
-if [ ! -d $HOME/.tmux ]
+if [ ! -d $XDG_CONFIG_HOME/.tmux ]
   then
-    mkdir $HOME/.tmux
-    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-    $HOME/.tmux/plugins/tpm/bin/install_plugins
+    mkdir $XDG_CONFIG_HOME/.tmux
+    git clone https://github.com/tmux-plugins/tpm $XDG_CONFIG_HOME/.tmux/plugins/tpm
+    $XDG_CONFIG_HOME/.tmux/plugins/tpm/bin/install_plugins
 fi
 
-if [ ! -d $HOME/.tmux/plugins/tpm ]
+if [ ! -d $XDG_CONFIG_HOME/.tmux/plugins/tpm ]
 then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi

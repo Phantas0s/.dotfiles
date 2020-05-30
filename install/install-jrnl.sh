@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf $HOME/jrnl &>/dev/null
+rm -rf $XDG_CONFIG_HOME/jrnl &>/dev/null
 
 rm $DOTFILES/jrnl/jrnl
 cp $DOTFILES/jrnl/jrnl_template $DOTFILES/jrnl/jrnl
@@ -15,4 +15,4 @@ then
 fi
 
 sed -i -e "s~<djrnl>~${JRNL_DEFAULT_PATH}~g" $DOTFILES/jrnl/jrnl
-ln -s -f $DOTFILES/jrnl/jrnl $HOME/jrnl
+ln -s -f $DOTFILES/jrnl/jrnl $XDG_CONFIG_HOME/jrnl

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ ! -d $HOME/vifm ]
+if [ ! -d $XDG_CONFIG_HOME/vifm ]
   then
-    mkdir $HOME/vifm
+    mkdir $XDG_CONFIG_HOME/vifm
 fi
 
-rm -rf $HOME/vifm/vifmrc
-ln -s $DOTFILES/vifm/vifmrc $HOME/vifm/vifmrc
+rm -rf $XDG_CONFIG_HOME/vifm/vifmrc
+ln -s $DOTFILES/vifm/vifmrc $XDG_CONFIG_HOME/vifm/vifmrc

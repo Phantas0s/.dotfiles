@@ -2,18 +2,18 @@
 
 #TODO separate all of that
 
-rm $HOME/.tmuxp &>/dev/null
+rm $XDG_CONFIG_HOME/.tmuxp &>/dev/null
 
 if [ ! -z "$DOTFILES_CLOUD" ];
 then
     #tmuxp projects
-    ln -sf $DOTFILES_CLOUD/tmuxp/ $HOME/.tmuxp
+    ln -sf $DOTFILES_CLOUD/tmuxp/ $XDG_CONFIG_HOME/.tmuxp
 
     # project relative configuration for neovim
-    ln -sf $DOTFILES_CLOUD/projects.nvimrc $HOME/nvim/
+    ln -sf $DOTFILES_CLOUD/projects.nvimrc $XDG_CONFIG_HOME/nvim/
 
     # monitor configs with arandr
-    ln -sf $DOTFILES_CLOUD/config_monitors/ $HOME/
+    ln -sf $DOTFILES_CLOUD/config_monitors/ $XDG_CONFIG_HOME/
 
     if [ -f "$DOTFILES_CLOUD/zsh/.zhistory" ];
     then
@@ -46,6 +46,6 @@ fi
 if [ ! -z "$CLOUD" ];
 then
     # vpn config
-    rm $HOME/vpn/ &>/dev/null
-    ln -sf $CLOUD/vpn $HOME/.vpn
+    rm $XDG_CONFIG_HOME/vpn/ &>/dev/null
+    ln -sf $CLOUD/vpn $XDG_CONFIG_HOME/.vpn
 fi
