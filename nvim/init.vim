@@ -94,7 +94,7 @@ Plug 'cespare/vim-toml'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install() }, 'branch': 'release'}, 
 
 " fzf - poweful fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '$XDG_CONFIG_HOME/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " PHP
@@ -185,7 +185,7 @@ Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'tpope/vim-scriptease'
 
 " Custom plugin - working on it
-Plug '~/workspace/vim-plugins/go-analyzer.vim'
+Plug '$XDG_CONFIG_HOME/workspace/vim-plugins/go-analyzer.vim'
 
 call plug#end()
 " }}}
@@ -196,7 +196,7 @@ call plug#end()
 " +---------------+
 
 " source every plugin configs
-for file in split(glob("~/nvim/pluggedconf/*.nvimrc"), '\n')
+for file in split(glob("$XDG_CONFIG_HOME/nvim/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
 endfor
 
@@ -204,7 +204,7 @@ if exists("g:did_load_filetypes")
   filetype off
   filetype plugin indent off
 endif
-set rtp+=~/nvim/godoctor.vim
+set rtp+=$XDG_CONFIG_HOME/nvim/godoctor.vim
 filetype on
 filetype plugin indent on
 
@@ -213,7 +213,7 @@ let g:delve_breakpoint_sign = ""
 let g:delve_tracepoint_sign = ""
 
 " project config - personnal file (not on my git repository)
-source ~/nvim/projects.nvimrc
+source $XDG_CONFIG_HOME/nvim/projects.nvimrc
 
 " close the buffer
 nnoremap <leader>db :Bdelete!<cr>
@@ -386,12 +386,12 @@ cnoremap w!! execute ':w suda://%'
 colo hypnos
 
 " set the directory where the swap file will be saved
-set backupdir=~/nvim/backup//
-set directory=~/nvim/swap//
+set backupdir=$XDG_CONFIG_HOME/nvim/backup//
+set directory=$XDG_CONFIG_HOME/nvim/swap//
 
 " save undo trees in files
 set undofile
-set undodir=~/nvim/undo//
+set undodir=$XDG_CONFIG_HOME/nvim/undo//
 
 " set line number
 set number
@@ -408,9 +408,9 @@ set softtabstop=4
 set shiftwidth=4
 
 " Save session
-nnoremap <leader>ss :mksession! ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
+nnoremap <leader>ss :mksession! $XDG_CONFIG_HOME/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
 " Reload session
-nnoremap <leader>sl :so ~/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
+nnoremap <leader>sl :so $XDG_CONFIG_HOME/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
 
 " when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround

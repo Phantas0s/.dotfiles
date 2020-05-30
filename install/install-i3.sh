@@ -1,7 +1,6 @@
 #!/bin/bash
 
-rm -rf $HOME/.config/i3/ &>/dev/null
-rm -rf $XDG_CONFIG_HOME/.i3 &>/dev/null
+rm -rf $XDG_CONFIG_HOME/i3/ &>/dev/null
 
 if [ ! -d $XDG_CONFIG_HOME/.i3 ]
   then
