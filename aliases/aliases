@@ -3,7 +3,7 @@
 ###############
 
 # source aliases
-alias salias="source ~/.dotfiles/aliases/aliases"
+alias salias="source $DOTFILES/aliases/aliases"
 
 # sh
 alias sh='zsh'
@@ -118,13 +118,13 @@ alias svim='sudoedit'
 alias dvim="vim -u /usr/share/nvim/archlinux.vim"
 
 # clean the vim swap file
-alias nvimc='rm -I ~/nvim/swap/*'
+alias nvimc='rm -I $XDG_CONFIG_HOMEO/nvim/swap/*'
 
 # clean the vim undo
-alias nvimcu='rm -I ~/nvim/undo/*'
+alias nvimcu='rm -I $XDG_CONFIG_HOME/nvim/undo/*'
 
 # log the keys entered via using vim 
-alias nviml='nvim -w ~/.vimlog "$@"'
+alias nviml='nvim -w $XDG_CONFIG_HOME/.vimlog "$@"'
 
 # git
 alias gs='git status '
