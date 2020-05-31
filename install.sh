@@ -10,9 +10,9 @@ then
     cp ./install_config.diff ./install_config
 fi
 
-. ./env
-. ./install_config
-. $DOTFILES/colors
+source ./env
+source ./install_config
+source $DOTFILES/colors
 source install_functions.sh
 
 ################

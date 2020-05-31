@@ -364,7 +364,7 @@ bar {
 set $i3lockwall sh $I3_CONFIG/scripts/lock.sh
 
 # In order to cache an image
-# exec --no-startup-id betterlockscreen -u $HOME/wallpapers/snow_tree.png 
+# exec --no-startup-id betterlockscreen -u $I3_CONFIG/wallpapers/snow_tree.png 
 
 # exec --no-startup-id betterlockscreen -w
 # set $i3lockwall exec betterlockscreen --lock
