@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf $I3_CONFIG/ &>/dev/null
+rm -rf $I3_CONFIG &>/dev/null
 
 if [ ! -d $I3_CONFIG/ ]
   then

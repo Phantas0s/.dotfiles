@@ -341,7 +341,7 @@ client.placeholder      #000000 #0c0c0c $white2 #000000   #0c0c0c
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3status --config $XDG_CONFIG_HOME/.i3/i3status.conf
+    status_command i3status --config $I3_CONFIG/i3status.conf
     # Disable all tray icons
     tray_output none
     # tray_output primary
@@ -360,11 +360,11 @@ bar {
 }
 
 # lockscreen
-# set $i3lockwall i3lock -i $XDG_CONFIG_HOME/wallpapers/2016-04-07-09.34-Village-in-the-sky.png -t
-set $i3lockwall sh $XDG_CONFIG_HOME/.i3/scripts/lock.sh
+# set $i3lockwall i3lock -i $I3_CONFIG/wallpapers/2016-04-07-09.34-Village-in-the-sky.png -t
+set $i3lockwall sh $I3_CONFIG/scripts/lock.sh
 
 # In order to cache an image
-# exec --no-startup-id betterlockscreen -u $XDG_CONFIG_HOME/wallpapers/snow_tree.png 
+# exec --no-startup-id betterlockscreen -u $HOME/wallpapers/snow_tree.png 
 
 # exec --no-startup-id betterlockscreen -w
 # set $i3lockwall exec betterlockscreen --lock
@@ -406,4 +406,4 @@ mode "$mode_display" {
 
 bindsym $mod+x mode "$mode_display"
 
-exec --no-startup-id $XDG_CONFIG_HOME/.i3/scripts/remaps.sh
+exec --no-startup-id $I3_CONFIG/scripts/remaps.sh

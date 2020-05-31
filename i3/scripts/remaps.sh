@@ -8,4 +8,4 @@ setxkbmap us mac
 # maps caps lock to escape for vim (and ctrl)
 setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
 
-xmodmap ~/.Xmodmap
+xmodmap $XDG_HOME_CONFIG/.Xmodmap
