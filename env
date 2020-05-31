@@ -18,6 +18,8 @@ export TERM='rxvt-256color'
 export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
 export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/.tmuxp"
 
+export I3_CONFIG="$XDG_CONFIG_HOME/.i3"
+
 # Modifying the path for ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 

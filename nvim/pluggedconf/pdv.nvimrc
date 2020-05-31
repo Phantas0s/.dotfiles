@@ -1,3 +1,3 @@
 " php docs
-let g:pdv_template_dir = $HOME ."/nvim/plugged/pdv/templates_snip"
+let g:pdv_template_dir = $XDG_CONFIG_HOME ."/nvim/plugged/pdv/templates"
 

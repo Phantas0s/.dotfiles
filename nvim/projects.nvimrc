@@ -1,3 +1,3 @@
 let g:startify_bookmarks = [ 
-            \ {'.': '~/.dotfiles/install.sh'},
+            \ {'.': "$DOTFILES/install.sh"},
             \]

@@ -2,7 +2,7 @@ let g:lightline = {
       \ 'colorscheme': 'hypnos256',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename','gitbranch', 'modified', 'neospinner'] ],
-      \   'right': [ [ 'lineinfo' ], [ 'percent', 'wordcount', 'charcount' ], [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ],
+      \   'right': [ [ 'lineinfo' ], [ 'percent', 'wordcount', 'charcount' ], [ 'fileencoding', 'filetype', 'charvaluehex' ] ],
       \ },
       \ 'component': {
       \   'charvaluehex': '0x%B'

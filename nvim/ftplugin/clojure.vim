@@ -4,11 +4,11 @@ augroup clojure
 augroup END
 
 " source every plugin configs
-for file in split(glob("~/nvim/pluggedconf/clojure/*.nvimrc"), '\n')
+for file in split(glob($XDG_CONFIG_HOME . "/nvim/pluggedconf/clojure/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 
-for file in split(glob("~/nvim/pluggedconf/lisp/*.nvimrc"), '\n')
+for file in split(glob($XDG_CONFIG_HOME . "/nvim/pluggedconf/lisp/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 
