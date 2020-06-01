@@ -141,7 +141,7 @@ Plug 'majutsushi/tagbar'
 Plug 'liuchengxu/vista.vim' " Use LSP
 
 " Nerdtree + modifications 
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
 
 " Status bar
 Plug 'itchyny/lightline.vim'

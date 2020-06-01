@@ -27,8 +27,10 @@ let g:NERDTreeCascadeSingleChildDir = 0
 let g:NERDTreeQuitOnOpen = 1
 
 " change the arrows
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+" let g:NERDTreeDirArrowExpandable = ''
+" let g:NERDTreeDirArrowCollapsible = ''
+
+" change the arrows
 
 " remapping - see nerdtree.txt and search for "NERDTreeMappings"
 let NERDTreeMapOpenSplit = 'h'
