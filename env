@@ -10,15 +10,16 @@ export DOTFILES="$HOME/.dotfiles"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
-export VIMCONFIG="$HOME/nvim"
 
 export XDG_CONFIG_HOME=$HOME/.config
 export TERM='rxvt-256color'
 
-export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
-export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/.tmuxp"
+# Variable for software config
 
+export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/.tmuxp"
+export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
 export I3_CONFIG="$XDG_CONFIG_HOME/i3"
+export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 
 # Modifying the path for ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"

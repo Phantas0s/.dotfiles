@@ -10,7 +10,7 @@ then
     ln -sf $DOTFILES_CLOUD/tmuxp/ $XDG_CONFIG_HOME/.tmuxp
 
     # project relative configuration for neovim
-    ln -sf $DOTFILES_CLOUD/projects.nvimrc $XDG_CONFIG_HOME/nvim/
+    ln -sf $DOTFILES_CLOUD/projects.nvimrc $VIMCONFIG/
 
     # monitor configs with arandr
     ln -sf $DOTFILES_CLOUD/config_monitors/ $XDG_CONFIG_HOME/

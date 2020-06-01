@@ -121,7 +121,7 @@ alias dvim="vim -u /usr/share/nvim/archlinux.vim"
 alias nvimc='rm -I $XDG_CONFIG_HOMEO/nvim/swap/*'
 
 # clean the vim undo
-alias nvimcu='rm -I $XDG_CONFIG_HOME/nvim/undo/*'
+alias nvimcu='rm -I $VIMCONFIG/undo/*'
 
 # log the keys entered via using vim 
 alias nviml='nvim -w $XDG_CONFIG_HOME/.vimlog "$@"'

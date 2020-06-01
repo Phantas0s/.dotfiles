@@ -16,7 +16,7 @@ augroup END
 " | install plugin |
 " +----------------+
 
-call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
+call plug#begin("$VIMCONFIG/plugged")
 
 " display the result when searching
 Plug 'henrik/vim-indexed-search'
@@ -196,7 +196,7 @@ call plug#end()
 " +---------------+
 
 " source every plugin configs
-for file in split(glob("$XDG_CONFIG_HOME/nvim/pluggedconf/*.nvimrc"), '\n')
+for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
 endfor
 
@@ -204,7 +204,7 @@ if exists("g:did_load_filetypes")
   filetype off
   filetype plugin indent off
 endif
-set rtp+=$XDG_CONFIG_HOME/nvim/godoctor.vim
+set rtp+=$VIMCONFIG/godoctor.vim
 filetype on
 filetype plugin indent on
 
@@ -213,7 +213,7 @@ let g:delve_breakpoint_sign = ""
 let g:delve_tracepoint_sign = ""
 
 " project config - personnal file (not on my git repository)
-source $XDG_CONFIG_HOME/nvim/projects.nvimrc
+source $VIMCONFIG/projects.nvimrc
 
 " close the buffer
 nnoremap <leader>db :Bdelete!<cr>
@@ -386,12 +386,12 @@ cnoremap w!! execute ':w suda://%'
 colo hypnos
 
 " set the directory where the swap file will be saved
-set backupdir=$XDG_CONFIG_HOME/nvim/backup//
-set directory=$XDG_CONFIG_HOME/nvim/swap//
+set backupdir=$VIMCONFIG/backup//
+set directory=$VIMCONFIG/swap//
 
 " save undo trees in files
 set undofile
-set undodir=$XDG_CONFIG_HOME/nvim/undo//
+set undodir=$VIMCONFIG/undo//
 
 " set line number
 set number
@@ -408,9 +408,9 @@ set softtabstop=4
 set shiftwidth=4
 
 " Save session
-nnoremap <leader>ss :mksession! $XDG_CONFIG_HOME/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
+nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
 " Reload session
-nnoremap <leader>sl :so $XDG_CONFIG_HOME/nvim/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
+nnoremap <leader>sl :so $VIMCONFIG/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
 
 " when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround
