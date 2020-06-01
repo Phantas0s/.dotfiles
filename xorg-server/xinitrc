@@ -2,14 +2,15 @@
 urxvtd -o -q -f
 
 # merge .Xressources file
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+[[ -f $XDG_CONFIG_HOME/.Xresources ]] && xrdb -merge -I$XDG_CONFIG_HOME $XDG_CONFIG_HOME/.Xresources
 
 # Run ssh-agent
 # trap 'test -n "$SSH_AUTH_SOCK" && eval `/usr/bin/ssh-agent -k`' 0
 
 # maps caps lock to escape for vim 
 e setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
-# personnalized keyboard keys for sound
-xmodmap ~/.Xmodmap
+
+# personnalized keyboard keys
+[[ -f $XDG_CONFIG_HOME/.Xmodmap ]] && xmodmap $XDG_CONFIG_HOME/.Xmodmap
 
 exec i3

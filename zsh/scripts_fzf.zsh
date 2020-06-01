@@ -52,7 +52,7 @@ fmux() {
     set -eu
     set -o pipefail
 
-    prj=$(find $HOME/.tmuxp/ -execdir sh -c 'printf "%s\n" $(basename "${0%.*}")' {} ';' | sort | uniq | nl | fzf | cut -f 2)
+    prj=$(find $XDG_CONFIG_HOME/.tmuxp/ -execdir sh -c 'printf "%s\n" $(basename "${0%.*}")' {} ';' | sort | uniq | nl | fzf | cut -f 2)
 
     tmuxp load $prj
 }
@@ -61,7 +61,7 @@ fmux() {
 ftmuxp() {
     if [[ ! -n $TMUX ]]; then
         # get the IDs
-        ID="`ls $HOME/.tmuxp | sed -e 's/\.yml$//'`"
+        ID="`ls $XDG_CONFIG_HOME/.tmuxp | sed -e 's/\.yml$//'`"
         if [[ -z "$ID" ]]; then
             tmux new-session
         fi
