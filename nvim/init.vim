@@ -180,7 +180,7 @@ Plug 'blueyed/vim-diminactive'
 " Write file with sudo
 Plug 'lambdalisue/suda.vim'
 
-Plug 'ActivityWatch/aw-watcher-vim'
+" Plug 'ActivityWatch/aw-watcher-vim'
 
 Plug 'tpope/vim-scriptease'
 
