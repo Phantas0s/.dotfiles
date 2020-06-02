@@ -25,7 +25,7 @@ bindkey -r '^p'
 bindkey -s '^p' 'fmux\n'
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.config/.fzf.zsh ] && source ~/.config/.fzf.zsh
 
 # open man page in vim
 vman() {
