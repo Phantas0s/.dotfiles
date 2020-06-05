@@ -11,8 +11,11 @@ export DOTFILES="$HOME/.dotfiles"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-export XDG_CONFIG_HOME=$HOME/.config
 export TERM='rxvt-256color'
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$XDG_CONFIG_HOME/local/share
+export XDG_CACHE_HOME=$XDG_CONFIG_HOME/cache
 
 # Variable for software config
 

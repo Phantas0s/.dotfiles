@@ -92,6 +92,7 @@ Plug 'cespare/vim-toml'
 
 " LSP
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install() }, 'branch': 'release'}, 
+Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 
 " fzf - poweful fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '$XDG_CONFIG_HOME/.fzf', 'do': './install --all' }
@@ -119,8 +120,6 @@ Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 " Plug 'tpope/vim-salve', {'for': 'clojure'}
 Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
-" Add tmux completion for COC
-" Plug 'wellle/tmux-complete.vim'
 
 " Golang
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
