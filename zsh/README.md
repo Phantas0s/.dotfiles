@@ -52,6 +52,10 @@ The name will be put as comment in the key as well.
 
 Extract any archive automatically. Require `tar` and `unzip`.
 
+`mkextract <archive_file>`
+
+Create a folder with the name of the archive, extract the archive in.
+
 ### Compression
 `compress <folder>`
 
