@@ -28,7 +28,7 @@ export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # PATH for composer global install
-PATH="$HOME/composer/vendor/bin:$PATH"
+PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 
 # PATH for Golang
 export GOPATH="$HOME/workspace/go"

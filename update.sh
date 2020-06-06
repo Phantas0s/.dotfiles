@@ -1,35 +1,28 @@
-sudo echo "Activate sudo"
-echo -e "${blue} Update npm packages..."
+source $DOTFILES/colors
+source $DOTFILES/install_functions.sh
+
+dot_mes_warn "Activate sudo"
+sudo echo "Sudo activated!"
+
+dot_mes_update "npm packages"
 npm install -g npm
 npm update -g
-echo -e "${green} ...done\n"
 
-#---------------------------------------
-
-echo -e "${blue} Update composer global packages..."
+dot_mes_update "composer packages"
 sudo composer self-update
 cgr update
-echo -e "${green} ...done\n"
 
 #---------------------------------------
 
-echo -e "${blue} Update go packages..."
-cd $DOTFILES/install/go
-for f in *.sh; do
-    sh "$f"
-done
-cd -
-echo -e "${green} ...done\n"
+dot_mes_update "composer packages"
+dot_install_func go update_go_binaries
 
 #---------------------------------------
 
-echo -e "${blue} Update neovim plugins..."
-# Update all the plugins
+dot_mes_update "Neovim plugins"
 nvim --noplugin +PlugUpdate +qa
-echo -e "${green} ...done\n"
 
 #---------------------------------------
 
-echo -e "${blue} Update tmux plugins..."
+dot_mes_update "tmux plugins"
 $HOME/.tmux/plugins/tpm/bin/update_plugins all
-echo -e "${green} ...done\n"

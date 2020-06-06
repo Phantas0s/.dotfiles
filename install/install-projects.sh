@@ -19,7 +19,7 @@ then
         cd $CURRENT
     fi
 else
-    dot_warn_mes "Please generate a 'gitlab' ssh-key"
+    dot_mes_warn "Please generate a 'gitlab' ssh-key"
 fi
 
 if [ -f $HOME/.ssh/github ]; then
@@ -59,5 +59,5 @@ if [ -f $HOME/.ssh/github ]; then
         cd -
     fi
 else
-    dot_warn_mes "Please generate a 'github' ssh-key"
+    dot_mes_warn "Please generate a 'github' ssh-key"
 fi

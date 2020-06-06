@@ -12,7 +12,7 @@ fi
 
 source ./env
 source ./install_config
-source $DOTFILES/colors
+source ./colors
 source install_functions.sh
 
 ################
@@ -70,7 +70,7 @@ dot_is_installed jrnl && dot_install jrnl
 dot_is_installed composer && dot_install composer
 dot_is_installed mycli && dot_install mycli
 dot_is_installed pgcli && dot_install pgcli
-dot_is_installed go && dot_install go
+dot_is_installed go && dot_install_func go install_go_binaries
 dot_is_installed php && dot_install php
 dot_is_installed npm && dot_install javascript
 dot_is_installed compton && dot_install compton
