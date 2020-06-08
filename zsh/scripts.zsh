@@ -118,14 +118,22 @@ imgresize() {
     filename=${1%\.*}
     extension="${1##*.}"
     separator="_"
-    finalName="$filename$separator$2.$extension"
+    if [ ! -z $3 ]; then
+        finalName="$filename.$extension"
+    else
+        finalName="$filename$separator$2.$extension"
+    fi
     convert $1 -quality 100 -resize $2 $finalName
     echo "$finalName resized to $2"
 }
 
 imgresizeall() {
     for f in *.${1}; do
+    if [ ! -z $3 ]; then
+        imgresize "$f" ${2} t
+    else
         imgresize "$f" ${2}
+    fi
     done
 }
 
