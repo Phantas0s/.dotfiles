@@ -162,7 +162,7 @@ Plug 'ap/vim-css-color'
 Plug 'simeji/winresizer'
 
 " replace f F t T - don't work well with dot though :'(
-" Plug 'yangmillstheory/vim-snipe'
+Plug 'yangmillstheory/vim-snipe'
 
 " Split arrays in PHP / struct in Go / other things
 Plug 'AndrewRadev/splitjoin.vim'
