@@ -543,41 +543,42 @@
 #
 
 # vim like key binding
-def_key "/"
-    find
-def_key "?"
-    find_item_forward
+def_key "f"
+  find_item_forward
+
+#def_key "?"
+#  find_item_backward
 
 def_key "j"
-    scroll_down
+  scroll_down
 def_key "k"
-    scroll_up
+  scroll_up
 
 def_key "ctrl-u"
-    page_up
+  page_up
 #push_characters "kkkkkkkkkkkkkkk"
 def_key "ctrl-d"
-    page_down
+  page_down
 #push_characters "jjjjjjjjjjjjjjj"
 
 def_key "h"
-    previous_column
+  previous_column
 def_key "l"
-    next_column
+  next_column
 
-def_key "k"
-    show_lyrics
+def_key "K"
+  show_lyrics
 
 def_key "n"
     next_found_item
 def_key "N"
-    previous_found_item
+  previous_found_item
 
 # not used but bound
 def_key "J"
-    move_sort_order_down
+  move_sort_order_down
 def_key "K"
-    move_sort_order_up
+  move_sort_order_up
 
 def_key "g"
   move_home
@@ -599,3 +600,36 @@ def_key "down"
 
 def_key "up"
  volume_up
+
+# Views
+
+def_key "3"
+  show_browser
+
+def_key "3"
+  change_browse_mode
+
+def_key "4"
+  show_search_engine
+
+def_key "4"
+  reset_search_engine
+
+def_key "5"
+  show_media_library
+
+def_key "5"
+  toggle_media_library_columns_mode
+
+def_key "2"
+  show_playlist_editor
+
+def_key "6"
+  show_tag_editor
+
+def_key "7"
+  show_outputs
+
+def_key "8"
+  show_visualizer
+

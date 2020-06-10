@@ -13,6 +13,9 @@ e setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
 # personnalized keyboard keys
 [[ -f $XDG_CONFIG_HOME/.Xmodmap ]] && xmodmap $XDG_CONFIG_HOME/.Xmodmap
 
+# mpd
+[ ! -s ~/.config/mpd/pid ] && mpd
+
 udiskie &
 
 exec i3

@@ -202,6 +202,7 @@ alias sshprodql='ssh -Nf prod -L 3306:localhost:3306'
 alias work="$HOME/workspace"
 # dotfiles
 alias dot="$HOME/.dotfiles"
+alias media="/run/media/hypnos/"
 
 # Freebrain
 alias freebrain="freemind $CLOUD/knowledge_base/_BRAINSTORMING/* &"
