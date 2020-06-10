@@ -1,7 +1,7 @@
 ! special 251 234 251
 *.foreground:   #C6C6C6
 *.background:   #1C1C1C
-*.cursorColor:  #C6C6C6
+*.cursorColor:  #444444
 
 ! black 236 238
 *.color0:       #303030
@@ -32,5 +32,5 @@
 *.color14:      #afd7ff
 
 ! white 239 15
-*.color7:       #4E4E4E
+*.color7:       #e4e4e4
 *.color15:      #ffffff

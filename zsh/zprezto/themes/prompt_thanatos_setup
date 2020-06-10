@@ -231,7 +231,7 @@ function prompt_thanatos_setup
 		# set colors
 		eval prompt_thanatos_color_user=${1:-'${blue}'}
 		eval prompt_thanatos_color_host=${1:-'${blue}'}
-		eval prompt_thanatos_color_prompt=${1:-'${white}'}
+		eval prompt_thanatos_color_prompt=${1:-'${black}'}
 
 		# set style
 		eval prompt_thanatos_user=''
