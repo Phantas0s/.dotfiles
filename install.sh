@@ -81,6 +81,7 @@ dot_is_installed lein && dot_install clojure-lein
 dot_is_installed freemind && dot_install freemind
 dot_is_installed redshift && dot_install redshift
 dot_is_installed xmodmap && dot_install xmodmap
+dot_is_installed mpd && dot_is_installed ncmpcpp && dot_install mpd
 
 # Source startup
 source $DOTFILES/startup
