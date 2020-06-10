@@ -6,9 +6,6 @@ rm $XDG_CONFIG_HOME/.tmuxp &>/dev/null
 
 if [ ! -z "$DOTFILES_CLOUD" ];
 then
-    #tmuxp projects
-    ln -sf $DOTFILES_CLOUD/tmuxp/ $XDG_CONFIG_HOME/.tmuxp
-
     # project relative configuration for neovim
     ln -sf $DOTFILES_CLOUD/projects.nvimrc $VIMCONFIG/
 

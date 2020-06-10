@@ -22,3 +22,10 @@ ln -s -f $DOTFILES/zsh/zprezto/config/zpreztorc $HOME/.zpreztorc
 ln -s -f $DOTFILES/zsh/zshrc $HOME/.zshrc
 
 ln -s -f $DOTFILES/zsh/zprezto/themes/prompt_thanatos_setup $HOME/.zprezto/modules/prompt/functions/
+
+# From cloud
+if [ -f "$DOTFILES_CLOUD/zsh/.zhistory" ];
+then
+    rm $HOME/.zhistory
+    ln -sf $DOTFILES_CLOUD/zsh/.zhistory $HOME/
+fi

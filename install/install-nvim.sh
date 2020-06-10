@@ -16,6 +16,9 @@ if [ ! -d $VIMCONFIG ]
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+# From Cloud
+ln -sf $DOTFILES_CLOUD/projects.nvimrc $VIMCONFIG/
+
 # install vim session folder
 mkdir -p $VIMCONFIG/sessions
 
