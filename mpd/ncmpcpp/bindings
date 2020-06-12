@@ -593,7 +593,7 @@ def_key "d"
   delete_browser_items
 
 def_key "space"
- play_item
+ pause
 
 def_key "down"
  volume_down
