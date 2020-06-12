@@ -1,17 +1,17 @@
 screencast() {
-  if [ ! -z $1 ] ; then
-    ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -f pulse -i default $1
-  else
-    echo "You need to precise an output file as first argument - eg 'example.mkv'"
-  fi
+    if [ ! -z $1 ] ; then
+        ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -f pulse -i default $1
+    else
+        echo "You need to precise an output file as first argument - eg 'example.mkv'"
+    fi
 }
 
 oscreencast() {
-  if [ ! -z $1 ] ; then
-    ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 $1
-  else
-    echo "You need to precise an output file as first argument - eg 'example.mkv'"
-  fi
+    if [ ! -z $1 ] ; then
+        ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 $1
+    else
+        echo "You need to precise an output file as first argument - eg 'example.mkv'"
+    fi
 }
 
 updatesys() {
@@ -24,53 +24,46 @@ updatesys() {
 }
 
 extract() {
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)  tar xjf $1      ;;
-      *.tar.gz)   tar xzf $1      ;;
-      *.bz2)      bunzip2 $1      ;;
-      *.gz)       gunzip $1       ;;
-      *.tar)      tar xf $1       ;;
-      *.tbz2)     tar xjf $1      ;;
-      *.tgz)      tar xzf $1      ;;
-      *.zip)      unzip $1        ;;
-      *.7z)       7z x $1         ;; # require p7zip
-      *.rar)      7z x $1         ;; # require p7zip
-      *.iso)      7z x $1         ;; # require p7zip
-      *.Z)        uncompress $1   ;;
-      *)          echo "'$1' cannot be extracted" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
+    if [ -f $1 ] ; then
+        ex $1
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 mkextract() {
-  if [ -f $1 ] ; then
-    filename=${1%\.*}
-    mkdir -p $filename
-    cp $1 $filename
-    cd $filename
+    for file in "$@"
+    do
+        if [ -f $file ] ; then
+            filename=${file%\.*}
+            mkdir -p $filename
+            cp $file $filename
+            cd $filename
+            ex $file
+            rm -f $file
+            cd -
+        else
+            echo "'$1' is not a valid file"
+        fi
+    done
+}
+
+ex() {
     case $1 in
-      *.tar.bz2)  tar xjf $1      ;;
-      *.tar.gz)   tar xzf $1      ;;
-      *.bz2)      bunzip2 $1      ;;
-      *.gz)       gunzip $1       ;;
-      *.tar)      tar xf $1       ;;
-      *.tbz2)     tar xjf $1      ;;
-      *.tgz)      tar xzf $1      ;;
-      *.zip)      unzip $1        ;;
-      *.7z)       7z x $1         ;; # require p7zip
-      *.rar)      7z x $1         ;; # require p7zip
-      *.iso)      7z x $1         ;; # require p7zip
-      *.Z)        uncompress $1   ;;
-      *)          echo "'$1' cannot be extracted" ;;
+        *.tar.bz2)  tar xjf $1      ;;
+        *.tar.gz)   tar xzf $1      ;;
+        *.bz2)      bunzip2 $1      ;;
+        *.gz)       gunzip $1       ;;
+        *.tar)      tar xf $1       ;;
+        *.tbz2)     tar xjf $1      ;;
+        *.tgz)      tar xzf $1      ;;
+        *.zip)      unzip $1        ;;
+        *.7z)       7z x $1         ;; # require p7zip
+        *.rar)      7z x $1         ;; # require p7zip
+        *.iso)      7z x $1         ;; # require p7zip
+        *.Z)        uncompress $1   ;;
+        *)          echo "'$1' cannot be extracted" ;;
     esac
-    rm -f $1
-    cd -
-  else
-    echo "'$1' is not a valid file"
-  fi
 }
 
 compress() {
@@ -129,11 +122,11 @@ imgresize() {
 
 imgresizeall() {
     for f in *.${1}; do
-    if [ ! -z $3 ]; then
-        imgresize "$f" ${2} t
-    else
-        imgresize "$f" ${2}
-    fi
+        if [ ! -z $3 ]; then
+            imgresize "$f" ${2} t
+        else
+            imgresize "$f" ${2}
+        fi
     done
 }
 
@@ -209,11 +202,11 @@ gtD() {
 }
 
 ssh-create() {
-    if [ ! -z "$1" ];
-    then
-        ssh-keygen -f $HOME/.ssh/$1 -t rsa -N '' -C "$1"
-        chmod 700 $HOME/.ssh/$1*
-    fi
+if [ ! -z "$1" ];
+then
+    ssh-keygen -f $HOME/.ssh/$1 -t rsa -N '' -C "$1"
+    chmod 700 $HOME/.ssh/$1*
+fi
 }
 
 dback () {
@@ -227,7 +220,7 @@ dback () {
         fi
 
         dialog --defaultno --title "Are you sure?" --yesno "This will copy $1 to $2 (bitsize: $BS). Everything on $2 will be deleted.\n\n
-              Are you sure?"  15 60 || exit
+        Are you sure?"  15 60 || exit
 
         (sudo pv -n $1 | sudo dd of=$2 bs=$BS conv=notrunc,noerror) 2>&1 | dialog --gauge "Backup from disk $1 to disk $2... please wait" 10 70 0
     else
@@ -301,7 +294,7 @@ postgimport() {
     USER="postgres"
     HOST="localhost"
     if [ ! -z $1 ];
-    DB=${1%\.*}
+        DB=${1%\.*}
     then
         # sed -i "1s/^/CREATE DATABASE $DB;\n/" $1
         if [ $# = 1 ];
@@ -342,24 +335,24 @@ matrix () {
         letter=substr(letters,c,1)
         cols[random_col]=0;
         for (col in cols) {
-        line=cols[col];
-        cols[col]=cols[col]+1;
-        printf "\033[%s;%sH\033[2;32m%s", line, col, letter;
-        printf "\033[%s;%sH\033[1;37m%s\033[0;0H", cols[col], col, letter;
-        if (cols[col] >= lines) {
-            cols[col]=0;
-        }
-        }
+            line=cols[col];
+            cols[col]=cols[col]+1;
+            printf "\033[%s;%sH\033[2;32m%s", line, col, letter;
+            printf "\033[%s;%sH\033[1;37m%s\033[0;0H", cols[col], col, letter;
+            if (cols[col] >= lines) {
+                cols[col]=0;
+            }
     }
-    '
+}
+'
 
-    echo -e "\e[1;40m"
-    clear
+echo -e "\e[1;40m"
+clear
 
-    while :; do
+while :; do
     echo $lines $cols $(( $RANDOM % $cols)) $(( $RANDOM % 72 ))
     sleep 0.05
-    done | awk "$awkscript"
+done | awk "$awkscript"
 }
 
 pgdump() {
@@ -367,7 +360,7 @@ pgdump() {
 }
 
 git-heatmap() {
-    $DOTFILES/bash/scripts/heatmap.sh
+$DOTFILES/bash/scripts/heatmap.sh
 }
 
 colorblocks() {
@@ -386,47 +379,47 @@ crypt() {
     [ $# -eq 1 ] && set -- "--encrypt" "$1"
 
     usage() { >&2 echo "Usage: crypt {-c,-d} <path>" 
-            exit 1 ; }
+        exit 1 ; }
 
-    case "$1" in
-        --encrypt|-c) 
-            if [ -d "$2" ] ; then
-                dash ${HOME}/bin/pack "$2"
-                set 2 "${2%/}".tar.xz
-            elif [ -f "$2" ] ; then
-                xz -9 "$2"
-                set 2 "$2".xz
-            else 
-                usage
-            fi
-            opts="-salt -e" ;;
-        --decrypt|-d) 
-            [ ! -e "$2" ] && usage
-            opts="-d" ;;
-        *) usage
-    esac
+        case "$1" in
+            --encrypt|-c) 
+                if [ -d "$2" ] ; then
+                    dash ${HOME}/bin/pack "$2"
+                    set 2 "${2%/}".tar.xz
+                elif [ -f "$2" ] ; then
+                    xz -9 "$2"
+                    set 2 "$2".xz
+                else 
+                    usage
+                fi
+                opts="-salt -e" ;;
+            --decrypt|-d) 
+                [ ! -e "$2" ] && usage
+                opts="-d" ;;
+            *) usage
+        esac
 
-    cat "$2" | openssl aes-256-cbc $opts -a -out "$2" &&
+        cat "$2" | openssl aes-256-cbc $opts -a -out "$2" &&
 
-    case "$1" in
-        --decrypt|-d) 
-            xz -d "$2" 2> /dev/null &&
-            tar xf "${2%.*}" 2> /dev/null && 
-            rm -rf "${2%.*}" ;;
-    esac
-}
+            case "$1" in
+                --decrypt|-d) 
+                    xz -d "$2" 2> /dev/null &&
+                        tar xf "${2%.*}" 2> /dev/null && 
+                        rm -rf "${2%.*}" ;;
+                esac
+            }
 
-mkcd()
-{
-    dir="$*";
-    mkdir -p "$dir" && cd "$dir";
-}
+        mkcd()
+        {
+            dir="$*";
+            mkdir -p "$dir" && cd "$dir";
+        }
 
-updatezsh() {
-    rm -f $DOTFILES/antibody/plugins.sh
-    antibody bundle < $DOTFILES/antibody/plugins.txt > $DOTFILES/antibody/plugins.sh
-    antibody update
-}
+    updatezsh() {
+        rm -f $DOTFILES/antibody/plugins.sh
+        antibody bundle < $DOTFILES/antibody/plugins.txt > $DOTFILES/antibody/plugins.sh
+        antibody update
+    }
 
 promptspeed() {
     for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
