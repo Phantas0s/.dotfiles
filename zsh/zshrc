@@ -1,6 +1,9 @@
-# From zprezto
+source ${ZDOTDIR:-$HOME}/.dotfiles/env
 
-setopt AUTO_CD              # Auto changes to a directory without typing cd.
+# +------------+
+# | NAVIGATION |
+# +------------+
+
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
@@ -10,22 +13,36 @@ setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
-#
-# Aliases
-#
+# +---------+
+# | HISTORY |
+# +---------+
 
-# Use zsh stacks
-alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing non-existent history.
 
-#################
+HISTFILE="${HISTFILE:-${ZDOTDIR:-$HOME}/.zhistory}"  # The path to the history file.
+HISTSIZE=10000                   # The maximum number of events to save in the internal history.
+SAVEHIST=10000                   # The maximum number of events to save in the history file.
 
-source ${ZDOTDIR:-$HOME}/.dotfiles/startup
-source $SCRIPT_PATH/env
-source $SCRIPT_PATH/aliases/aliases
+# +---------+
+# | GENERAL |
+# +---------+
 
-source $SCRIPT_PATH/zsh/scripts.zsh # Scripts
-source $SCRIPT_PATH/zsh/notifyosd.zsh # Send notification when command line done
+source $DOTFILES/aliases/aliases
+
+source $DOTFILES/zsh/scripts.zsh # Scripts
+command -v "fzf" >/dev/null && source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
+source $DOTFILES/zsh/notifyosd.zsh # Send notification when command line done
+source $DOTFILES/zsh/bd.zsh # No more ../../../..
 
 # edit current command line with vim (CTRL then v)
 autoload edit-command-line; zle -N edit-command-line
@@ -34,13 +51,28 @@ bindkey -M vicmd v edit-command-line
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
+setopt menu_complete
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # With hidden files
 
-# Display git branch
-# RPROMPT=\$vcs_info_msg_0_
-# PROMPT=\$vcs_info_msg_0_'%# '
+# +--------+
+# | PLUGIN |
+# +--------+
+
+source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $DOTFILES/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
+
+# PROMPT
+source $DOTFILES/zsh/prompt/git.zsh
+source $DOTFILES/zsh/prompt/purity.zsh
+prompt_purity_setup()
+
+
+# +-----+
+# | VIM |
+# +-----+
+
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
@@ -52,14 +84,10 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v
 export KEYTIMEOUT=1
 
-# PROMPT
-source $SCRIPT_PATH/zsh/prompt/git.zsh
-source $SCRIPT_PATH/zsh/prompt/purity.zsh
-prompt_purity_setup()
-
 # Search with fzf and open selected file with Vim
 bindkey -s '^v' 'vim $(fzf);^M'
 
+# TODO to look at that
 # Fix bug when prompt has two lines
 bindkey -r '^l'
 bindkey -r '^g'
@@ -91,4 +119,5 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 # Display all possible tmuxp session when opening terminal
 ftmuxp
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
