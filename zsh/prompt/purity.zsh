@@ -58,21 +58,9 @@ prompt_purity_precmd() {
     # shows the full path in the title
     # print -Pn '\e]0;%~\a'
 
-    # local prompt_purity_preprompt="%c$(git_prompt_info) $(git_prompt_status)"
-    print -P ' %F{yellow}`prompt_purity_cmd_exec_time`%f'
-
-    # check async if there is anything to pull
-    (( ${PURITY_GIT_PULL:-1} )) && {
-        # check if we're in a git repo
-        command git rev-parse --is-inside-work-tree &>/dev/null &&
-        # check check if there is anything to pull
-        command git fetch &>/dev/null &&
-        # check if there is an upstream configured for this branch
-        command git rev-parse --abbrev-ref @'{u}' &>/dev/null &&
-        (( $(command git rev-list --right-only --count HEAD...@'{u}' 2>/dev/null) > 0 )) &&
-        # some crazy ansi magic to inject the symbol into the previous line
-        print -Pn "%F{cyan}⇣%f"
-    } &!
+    # local prompt_purity_preprompt="%c$(git_prompt_behind) $(git_prompt_info) $(git_prompt_status)"
+    # print -P ' %F{yellow}`prompt_purity_cmd_exec_time`%f'
+    print -P ''
 
     # reset value since `preexec` isn't always triggered
     unset cmd_timestamp
@@ -121,6 +109,7 @@ prompt_purity_setup() {
     ZSH_THEME_GIT_PROMPT_UNMERGED="%F{yellow}═%f "
     ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{white}%f "
     ZSH_THEME_GIT_PROMPT_STASHED="%B%F{red}!S!%f%b "
+    ZSH_THEME_GIT_PROMPT_BEHIND="%B%F{yellow}%f%b "
 
     RPROMPT='$(git_prompt_info) $(git_prompt_status)'
     zle -N zle-line-init
