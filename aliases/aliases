@@ -8,6 +8,10 @@ alias salias="source $DOTFILES/aliases/aliases"
 # sh
 alias sh='zsh'
 
+# zsh directory stack
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
 # ping
 alias pg='ping 8.8.8.8'
 
