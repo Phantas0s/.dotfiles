@@ -53,7 +53,7 @@ fi
 # Install
 . $DOTFILES/install/install-from-cloud.sh
 . $DOTFILES/install/install-fonts.sh
-. $DOTFILES/install/install-prezto.sh
+. $DOTFILES/install/install-zsh.sh
 . $DOTFILES/install/install-xorg-server.sh
 
 dot_is_installed git && dot_install projects
