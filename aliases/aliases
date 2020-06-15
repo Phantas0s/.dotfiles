@@ -8,9 +8,14 @@ alias salias="source $DOTFILES/aliases/aliases"
 # sh
 alias sh='zsh'
 
-# zsh directory stack
+# zsh 
+
+# directory stack
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+# history stats
+alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
 
 # ping
 alias pg='ping 8.8.8.8'
