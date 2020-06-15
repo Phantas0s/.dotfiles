@@ -1,3 +1,5 @@
+#!/bin/sh
+
 screencast() {
     if [ ! -z $1 ] ; then
         ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -f pulse -i default $1
@@ -35,7 +37,7 @@ mkextract() {
     for file in "$@"
     do
         if [ -f $file ] ; then
-            filename=${file%\.*}
+            local filename=${file%\.*}
             mkdir -p $filename
             cp $file $filename
             cd $filename
@@ -71,10 +73,10 @@ compress() {
 }
 
 screenshot () {
-    DIR="${HOME}/Documents/images/screenshots"
-    DATE="$(date +%Y%m%d-%H%M%S)"
-    NAME="${DIR}/screenshot-${DATE}.png"
-    LOG="${DIR}/screenshots.log"
+    local DIR="${HOME}/Documents/images/screenshots"
+    local DATE="$(date +%Y%m%d-%H%M%S)"
+    local NAME="${DIR}/screenshot-${DATE}.png"
+    local LOG="${DIR}/screenshots.log"
 
     # Check if the dir to store the screenshots exists, else create it:
     if [ ! -d "${DIR}" ]; then mkdir -p "${DIR}"; fi
@@ -101,20 +103,20 @@ screenshot () {
 }
 
 imgsize() {
-    width=$(identify -format "%w" "$1")> /dev/null
-    height=$(identify -format "%h" "$1")> /dev/null
+    local width=$(identify -format "%w" "$1")> /dev/null
+    local height=$(identify -format "%h" "$1")> /dev/null
 
     echo -e "Size of $1: $width*$height"
 }
 
 imgresize() {
-    filename=${1%\.*}
-    extension="${1##*.}"
-    separator="_"
+    local filename=${1%\.*}
+    local extension="${1##*.}"
+    local separator="_"
     if [ ! -z $3 ]; then
-        finalName="$filename.$extension"
+        local finalName="$filename.$extension"
     else
-        finalName="$filename$separator$2.$extension"
+        local finalName="$filename$separator$2.$extension"
     fi
     convert $1 -quality 100 -resize $2 $finalName
     echo "$finalName resized to $2"
@@ -131,22 +133,21 @@ imgresizeall() {
 }
 
 imgoptimize() {
-    filename=${1%\.*}
-    extension="${1##*.}"
-    separator="_"
-    suffix="optimized"
-    finalName="$filename$separator$suffix.$extension"
+    local filename=${1%\.*}
+    local extension="${1##*.}"
+    local separator="_"
+    local suffix="optimized"
+    local finalName="$filename$separator$suffix.$extension"
     convert $1 -strip -interlace Plane -quality 85% $finalName
     echo "$finalName created"
 }
 
 Imgoptimize() {
-    filename=${1%\.*}
-    extension="${1##*.}"
-    separator="_"
-    suffix="optimized"
-    finalName="$filename$separator$suffix.$extension"
-    convert $1 -strip -interlace Plane -quality 85% $1
+    local filename=${1%\.*}
+    local extension="${1##*.}"
+    local separator="_"
+    local suffix="optimized"
+    local convert $1 -strip -interlace Plane -quality 85% $1
     echo "$1 created"
 }
 
@@ -165,7 +166,7 @@ Imgoptimizeall() {
 imgconvjpg() {
     if [ ! -z "$1" ];
     then
-        filename=${1%\.*}
+        local filename=${1%\.*}
         magick convert $1 "${filename}.jpg"
     else
         echo -e "You need to add an image to convert as param!"
@@ -175,7 +176,7 @@ imgconvjpg() {
 imgconvpng() {
     if [ ! -z "$1" ];
     then
-        filename=${1%\.*}
+        local filename=${1%\.*}
         magick convert $1 "${filename}.png"
     else
         echo -e "You need to add an image to convert as param!"
@@ -183,7 +184,7 @@ imgconvpng() {
 }
 
 imgwebp() {
-    IMG_EXT="jpg"
+    local IMG_EXT="jpg"
     if [ ! -z $1 ];
     then
         IMG_EXT=$1
@@ -226,16 +227,15 @@ dback () {
     else
         echo "You need to provide an input disk as first argument (i.e /dev/sda) and an output disk as second argument (i.e /dev/sdb)"
     fi
-
 }
 
 blimg() {
     if [ ! -z $1 ] && [ ! -z $2 ] && [ ! -z $3 ];
     then
-        CYEAR=$(date +'%Y')
-        BASEDIR="${HOME}/workspace/webtechno/static"
+        local CYEAR=$(date +'%Y')
+        local BASEDIR="${HOME}/workspace/webtechno/static"
         #Basedir current year
-        BASEDIRY="${HOME}/workspace/webtechno/static/${CYEAR}"
+        local BASEDIRY="${HOME}/workspace/webtechno/static/${CYEAR}"
 
         if [ ! -d $BASEDIRY ]; 
         then
@@ -243,21 +243,21 @@ blimg() {
         fi
 
         #basedir current article
-        BASEDIRC="${BASEDIRY}/${2}"
+        local BASEDIRC="${BASEDIRY}/${2}"
 
         if [ ! -d $BASEDIRP ]; 
         then
             mkdir $BASEDIRP
         fi
 
-        IMGRESIZED=imgresize "${1} 780"
+        local IMGRESIZED=imgresize "${1} 780"
         echo "$IMGRESIZED"
     fi
 }
 
 postgdump() {
-    USER="postgres"
-    HOST="localhost"
+    local USER="postgres"
+    local HOST="localhost"
     if [ ! -z $1 ];
     then
         if [ -f "${1}.sql" ];
@@ -291,8 +291,8 @@ postgdump() {
 }
 
 postgimport() {
-    USER="postgres"
-    HOST="localhost"
+    local USER="postgres"
+    local HOST="localhost"
     if [ ! -z $1 ];
         DB=${1%\.*}
     then
@@ -323,7 +323,7 @@ postgimport() {
 }
 
 matrix () {
-    lines=$(tput lines)
+    local lines=$(tput lines)
     cols=$(tput cols)
 
     awkscript='
@@ -376,50 +376,50 @@ pipes() {
 }
 
 crypt() {
-    [ $# -eq 1 ] && set -- "--encrypt" "$1"
+[ $# -eq 1 ] && set -- "--encrypt" "$1"
 
-    usage() { >&2 echo "Usage: crypt {-c,-d} <path>" 
-        exit 1 ; }
+usage() { >&2 echo "Usage: crypt {-c,-d} <path>" 
+exit 1 ; }
 
-        case "$1" in
-            --encrypt|-c) 
-                if [ -d "$2" ] ; then
-                    dash ${HOME}/bin/pack "$2"
-                    set 2 "${2%/}".tar.xz
-                elif [ -f "$2" ] ; then
-                    xz -9 "$2"
-                    set 2 "$2".xz
-                else 
-                    usage
-                fi
-                opts="-salt -e" ;;
-            --decrypt|-d) 
-                [ ! -e "$2" ] && usage
-                opts="-d" ;;
-            *) usage
-        esac
+case "$1" in
+    --encrypt|-c) 
+        if [ -d "$2" ] ; then
+            dash ${HOME}/bin/pack "$2"
+            set 2 "${2%/}".tar.xz
+        elif [ -f "$2" ] ; then
+            xz -9 "$2"
+            set 2 "$2".xz
+        else 
+            usage
+        fi
+        opts="-salt -e" ;;
+    --decrypt|-d) 
+        [ ! -e "$2" ] && usage
+        opts="-d" ;;
+    *) usage
+esac
 
-        cat "$2" | openssl aes-256-cbc $opts -a -out "$2" &&
+cat "$2" | openssl aes-256-cbc $opts -a -out "$2" &&
 
-            case "$1" in
-                --decrypt|-d) 
-                    xz -d "$2" 2> /dev/null &&
-                        tar xf "${2%.*}" 2> /dev/null && 
-                        rm -rf "${2%.*}" ;;
-                esac
-            }
+    case "$1" in
+        --decrypt|-d) 
+            xz -d "$2" 2> /dev/null &&
+                tar xf "${2%.*}" 2> /dev/null && 
+                rm -rf "${2%.*}" ;;
+    esac
+}
 
-        mkcd()
-        {
-            dir="$*";
-            mkdir -p "$dir" && cd "$dir";
-        }
+mkcd()
+{
+    dir="$*";
+    mkdir -p "$dir" && cd "$dir";
+}
 
-    updatezsh() {
-        rm -f $DOTFILES/antibody/plugins.sh
-        antibody bundle < $DOTFILES/antibody/plugins.txt > $DOTFILES/antibody/plugins.sh
-        antibody update
-    }
+updatezsh() {
+    rm -f $DOTFILES/antibody/plugins.sh
+    antibody bundle < $DOTFILES/antibody/plugins.txt > $DOTFILES/antibody/plugins.sh
+    antibody update
+}
 
 promptspeed() {
     for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
@@ -430,7 +430,7 @@ ports() {
 }
 
 mnt() {
-    FILE="/mnt/external"
+    local FILE="/mnt/external"
     if [ ! -z $2 ];
     then
         FILE=$2
@@ -449,7 +449,7 @@ mnt() {
 }
 
 umnt() {
-    DIRECTORY="/mnt/"
+    local DIRECTORY="/mnt/"
     if [ ! -z $1 ];
     then
         DIRECTORY=$1
@@ -461,10 +461,10 @@ umnt() {
 }
 
 mntmtp() {
-    DIRECTORY="$HOME/mnt/"
+    local DIRECTORY="$HOME/mnt/"
     if [ ! -z $2 ];
     then
-        DIRECTORY=$2
+        local DIRECTORY=$2
     fi
     if [ ! -d $DIRECTORY ]; 
     then
@@ -485,7 +485,7 @@ mntmtp() {
 
 
 umntmtp() {
-    DIRECTORY="$HOME/mnt"
+    local DIRECTORY="$HOME/mnt"
     if [ ! -z $1 ];
     then
         DIRECTORY=$1
@@ -510,7 +510,7 @@ initKondo() {
 }
 
 pom() {
-    POMODORO_DURATION=25
+    local POMODORO_DURATION=25
     if [ ! -z $3 ];
     then
         POMODORO_DURATION=$3
