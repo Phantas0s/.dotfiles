@@ -16,7 +16,7 @@ fi
 
 # ln -s -f $HOME/.zprezto/runcoms/zlogin $HOME/.zlogin
 # ln -s -f $HOME/.zprezto/runcoms/zlogout $HOME/.zlogout
-ln -s -f $DOTFILES/zsh/zprezto/config/zpreztorc $HOME/.zpreztorc
+# ln -s -f $DOTFILES/zsh/zprezto/config/zpreztorc $HOME/.zpreztorc
 # ln -s -f $HOME/.zprezto/runcoms/zprofile $HOME/.zprofile
 # ln -s -f $HOME/.zprezto/runcoms/zshenv $HOME/.zshenv
 ln -s -f $DOTFILES/zsh/zshrc $HOME/.zshrc
