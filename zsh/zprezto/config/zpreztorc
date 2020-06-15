@@ -25,12 +25,12 @@
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'history' \
-  'directory' \
+  # 'directory' \
   'utility' \
   'git' \
   'history-substring-search' \
   'completion' \
-  'prompt' \
+  # 'prompt' \
 
 #
 # Autosuggestions
