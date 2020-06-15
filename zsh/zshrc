@@ -60,6 +60,7 @@ _comp_options+=(globdots) # With hidden files
 # | PLUGIN |
 # +--------+
 
+source $DOTFILES/zsh/completion.zsh
 source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $DOTFILES/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 
@@ -120,4 +121,3 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 ftmuxp
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
