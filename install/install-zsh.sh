@@ -1,7 +1,9 @@
 #!/bin/bash
 
 rm $HOME/.zshrc &>/dev/null
+rm $HOME/.zshenv &>/dev/null
 
+ln -s -f $DOTFILES/zsh/zshenv $HOME/.zshenv
 ln -s -f $DOTFILES/zsh/zshrc $HOME/.zshrc
 
 # From cloud

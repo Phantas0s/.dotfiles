@@ -1,4 +1,4 @@
-source $DOTFILES/colors
+source $DOTFILES/colors.sh
 source $DOTFILES/install_functions.sh
 
 dot_mes_warn "Activate sudo"

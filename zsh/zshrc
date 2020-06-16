@@ -1,4 +1,4 @@
-source ${ZDOTDIR:-$HOME}/.dotfiles/env
+#!/bin/zsh
 
 # +------------+
 # | NAVIGATION |

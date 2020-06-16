@@ -10,9 +10,7 @@ then
     cp ./install_config.diff ./install_config
 fi
 
-source ./env
-source ./install_config
-source ./colors
+source colors.sh
 source install_functions.sh
 
 ################
@@ -44,16 +42,14 @@ if [ $# -ne 1 ] || [ "$1" != "-y" ];
         read key;
 fi
 
-#TODO put that somewhere else
-
 ###########
 # INSTALL #
 ###########
 
 # Install
+. $DOTFILES/install/install-zsh.sh
 . $DOTFILES/install/install-from-cloud.sh
 . $DOTFILES/install/install-fonts.sh
-. $DOTFILES/install/install-zsh.sh
 . $DOTFILES/install/install-xorg-server.sh
 
 dot_is_installed git && dot_install projects
@@ -82,6 +78,3 @@ dot_is_installed freemind && dot_install freemind
 dot_is_installed redshift && dot_install redshift
 dot_is_installed xmodmap && dot_install xmodmap
 dot_is_installed mpd && dot_is_installed ncmpcpp && dot_install mpd
-
-# Source startup
-source $DOTFILES/startup
