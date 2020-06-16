@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 ###############################
 # EXPORT ENVIRONMENT VARIABLE #
@@ -8,10 +8,10 @@
 # Useful for the install scripts
 export DOTFILES="$HOME/.dotfiles"
 
+export TERM='rxvt-256color'
+
 export EDITOR="nvim"
 export VISUAL="nvim"
-
-export TERM='rxvt-256color'
 
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$XDG_CONFIG_HOME/local/share
@@ -34,7 +34,6 @@ PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
 export GOCACHE="$HOME/.cache/go-build"
-# export GO111MODULE=on
 
 # PATH for go binaries
 PATH="$GOBIN:$PATH"
@@ -49,10 +48,10 @@ PATH="$NPMBIN:$PATH"
 export npm_config_prefix=$XDG_CONFIG_HOME/.node_modules
 
 # See gitconfig
-export REVIEW_BASE=master
+export GIT_REVIEW_BASE=master
 
 # Make dotfile config available in the whole system
-if [ -f $DOTFILES/install_config ]
+if [ -f $DOTFILES/install_config ];
     then
         source $DOTFILES/install_config
 fi
