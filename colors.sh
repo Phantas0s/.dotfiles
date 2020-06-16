@@ -1,3 +1,5 @@
+#!/bin/bash
+
 default="\033[39m"
 black="\033[30m"
 red="\033[0;31m"
