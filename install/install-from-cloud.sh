@@ -12,12 +12,6 @@ then
     # monitor configs with arandr
     ln -sf $DOTFILES_CLOUD/config_monitors/ $XDG_CONFIG_HOME/
 
-    if [ -f "$DOTFILES_CLOUD/zsh/.zhistory" ];
-    then
-        rm $HOME/.zhistory
-        ln -sf $DOTFILES_CLOUD/zsh/.zhistory $HOME/
-    fi
-
     if [ -d "$DOTFILES_CLOUD/openssh" ];
     then
         if [ ! -d "$HOME/.ssh" ];

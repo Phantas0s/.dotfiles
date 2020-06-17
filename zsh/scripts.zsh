@@ -18,11 +18,6 @@ oscreencast() {
 
 updatesys() {
     sh $DOTFILES/update.sh
-    if hash yay 2>/dev/null; then
-        yay -Syu
-    else
-        sudo pacman -Syu
-    fi
 }
 
 extract() {

@@ -4,20 +4,20 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
-# Change this variable if your dotfiles are not in this path!!!
-# Useful for the install scripts
-export DOTFILES="$HOME/.dotfiles"
-
-export TERM='rxvt-256color'
-
-export EDITOR="nvim"
-export VISUAL="nvim"
-
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$XDG_CONFIG_HOME/local/share
 export XDG_CACHE_HOME=$XDG_CONFIG_HOME/cache
 
-# Variable for software config
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+export DOTFILES="$HOME/.dotfiles"
+
+export TERM='rxvt-256color'
+
+# Variable for some software config
 
 export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/tmuxp"
 export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
@@ -33,7 +33,7 @@ PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 # PATH for Golang
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
-export GOCACHE="$HOME/.cache/go-build"
+export GOCACHE="$XDG_CACHE_HOME/go-build"
 
 # PATH for go binaries
 PATH="$GOBIN:$PATH"

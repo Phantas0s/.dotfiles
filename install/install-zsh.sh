@@ -1,14 +1,12 @@
 #!/bin/bash
 
 rm $HOME/.zshrc &>/dev/null
-rm $HOME/.zshenv &>/dev/null
+rm -rf $ZDOTDIR &>/dev/null
+
+mkdir $ZDOTDIR;
+
+[ -f "$DOTFILES_CLOUD/zsh/.zhistory" ] && ln -sf $DOTFILES_CLOUD/zsh/.zhistory $ZDOTDIR/.zhistory;
 
 ln -s -f $DOTFILES/zsh/zshenv $HOME/.zshenv
-ln -s -f $DOTFILES/zsh/zshrc $HOME/.zshrc
+ln -s -f $DOTFILES/zsh/zshrc $ZDOTDIR/.zshrc
 
-# From cloud
-if [ -f "$DOTFILES_CLOUD/zsh/.zhistory" ];
-then
-    rm $HOME/.zhistory
-    ln -sf $DOTFILES_CLOUD/zsh/.zhistory $HOME/
-fi
