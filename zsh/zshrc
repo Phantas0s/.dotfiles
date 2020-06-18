@@ -7,11 +7,11 @@
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
-setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
+# setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
-unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
+# unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
 # +---------+
 # | HISTORY |
@@ -37,16 +37,18 @@ SAVEHIST=10000                   # The maximum number of events to save in the h
 # | GENERAL |
 # +---------+
 
+# Source system env variable available
+if [ -f $DOTFILES/install_config ];
+    then
+        source $DOTFILES/install_config
+fi
+
 source $DOTFILES/aliases/aliases
 
 source $DOTFILES/zsh/scripts.zsh # Scripts
 command -v "fzf" >/dev/null && source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
 source $DOTFILES/zsh/notifyosd.zsh # Send notification when command line done
 source $DOTFILES/zsh/bd.zsh # No more ../../../..
-
-# edit current command line with vim (CTRL then v)
-autoload edit-command-line; zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -69,11 +71,9 @@ source $DOTFILES/zsh/prompt/git.zsh
 source $DOTFILES/zsh/prompt/purity.zsh
 prompt_purity_setup()
 
-
 # +-----+
 # | VIM |
 # +-----+
-
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char

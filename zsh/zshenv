@@ -49,9 +49,3 @@ export npm_config_prefix=$XDG_CONFIG_HOME/.node_modules
 
 # See gitconfig
 export GIT_REVIEW_BASE=master
-
-# Make dotfile config available in the whole system
-if [ -f $DOTFILES/install_config ];
-    then
-        source $DOTFILES/install_config
-fi
