@@ -10,6 +10,7 @@ then
     cp ./install_config.diff ./install_config
 fi
 
+source install_config
 source colors.sh
 source install_functions.sh
 
