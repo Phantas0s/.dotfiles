@@ -409,4 +409,6 @@ mode "$mode_display" {
 
 bindsym $mod+x mode "$mode_display"
 
+bindsym $mod+z exec "setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &"
+
 exec --no-startup-id $I3_CONFIG/scripts/remaps.sh
