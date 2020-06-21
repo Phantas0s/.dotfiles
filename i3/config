@@ -199,7 +199,7 @@ workspace_auto_back_and_forth yes
 set $terms "1: terms"
 set $web "2: web"
 set $multimedia "3: multi"
-set $mail "4: mails"
+set $design "4: design"
 set $office "5: office"
 set $mindmap "6: mindmap"
 
@@ -207,7 +207,7 @@ set $mindmap "6: mindmap"
 bindsym $mod+1 workspace $terms
 bindsym $mod+2 workspace $web
 bindsym $mod+3 workspace $multimedia
-bindsym $mod+4 workspace $mail
+bindsym $mod+4 workspace $design
 bindsym $mod+5 workspace $office
 bindsym $mod+6 workspace $mindmap
 bindsym $mod+7 workspace 7
@@ -219,7 +219,7 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace $terms
 bindsym $mod+Shift+2 move container to workspace $web
 bindsym $mod+Shift+3 move container to workspace $multimedia
-bindsym $mod+Shift+4 move container to workspace $mail
+bindsym $mod+Shift+4 move container to workspace $design
 bindsym $mod+Shift+5 move container to workspace $office
 bindsym $mod+Shift+6 move container to workspace $mindmap
 bindsym $mod+Shift+7 move container to workspace 7
@@ -240,7 +240,10 @@ assign [class="mpv" instance="gl"] → $multimedia
 assign [instance="nomacs"] → $multimedia
 assign [class="Easytag" instance="easytag"] → $multimedia
 
-assign [class="Thunderbird" instance="Mail"] → $mail
+assign [class="Thunderbird" instance="Mail"] → $office
+
+assign [class="Gimp" instance="gimp"] → $design
+assign [class="Inkscape" instance="org.inkscape.Inkscape"] → $design
 
 assign [class="libreoffice"] → $office
 assign [class="Joplin" instance="joplin"] → $office
