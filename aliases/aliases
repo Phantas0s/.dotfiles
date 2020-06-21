@@ -5,10 +5,9 @@
 # source aliases
 alias salias="source $DOTFILES/aliases/aliases"
 
-# sh
-alias sh='zsh'
-
 # zsh 
+
+alias sh='zsh'
 
 # directory stack
 alias d='dirs -v'
@@ -74,6 +73,7 @@ alias lock='gnome-screensaver-command --lock'
 alias bigf= 'find / -xdev -type f -size +50M'
 # for find device - useful to mount devices (name to prefix with "/dev/")
 alias fdev='lsblk -f'
+# xprop class
 alias xpropc='xprop | grep WM_CLASS'
 
 # ls
