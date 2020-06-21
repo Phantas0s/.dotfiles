@@ -40,9 +40,6 @@ export GOCACHE="$XDG_CACHE_HOME/go-build"
 # PATH for go binaries
 PATH="$GOBIN:$PATH"
 
-# Override ls colors
-eval "$(dircolors -b $XDG_CONFIG_HOME/.dircolors)"
-
 # Install of global npm packages
 export NPMPATH="$HOME/.node_modules"
 export NPMBIN="$HOME/.node_modules/bin"

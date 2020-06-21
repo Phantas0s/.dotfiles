@@ -43,6 +43,10 @@ if [ -f $DOTFILES/install_config ];
         source $DOTFILES/install_config
 fi
 
+
+# Override ls colors
+eval "$(dircolors -b $XDG_CONFIG_HOME/.dircolors)"
+
 source $DOTFILES/aliases/aliases
 
 source $DOTFILES/zsh/scripts.zsh # Scripts
