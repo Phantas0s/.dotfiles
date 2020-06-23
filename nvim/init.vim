@@ -30,6 +30,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify'
 " Display commits for project / file
 Plug 'junegunn/gv.vim'
+Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
 
 " surrounding text objects with whatever you want (paranthesis, quotes, html tags...)
 Plug 'tpope/vim-surround'
