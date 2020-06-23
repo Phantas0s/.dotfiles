@@ -7,11 +7,10 @@
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
-# setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
+setopt CORRECT
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
-# unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
 # +---------+
 # | HISTORY |
@@ -43,7 +42,6 @@ if [ -f $DOTFILES/install_config ];
         source $DOTFILES/install_config
 fi
 
-
 # Override ls colors
 eval "$(dircolors -b $XDG_CONFIG_HOME/.dircolors)"
 
@@ -52,34 +50,45 @@ source $DOTFILES/aliases/aliases
 source $DOTFILES/zsh/scripts.zsh # Scripts
 command -v "fzf" >/dev/null && source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
 source $DOTFILES/zsh/notifyosd.zsh # Send notification when command line done
-source $DOTFILES/zsh/bd.zsh # No more ../../../..
 
-# Basic auto/tab complete:
-autoload -U compinit
-zstyle ':completion:*' menu select
-setopt menu_complete
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots) # With hidden files
+# +---------------------+
+# | SYNTAX HIGHLIGHTING |
+# +---------------------+
 
-# +--------+
-# | PLUGIN |
-# +--------+
-
-source $DOTFILES/zsh/completion.zsh
 source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $DOTFILES/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 
-# PROMPT
-source $DOTFILES/zsh/prompt/git.zsh
-source $DOTFILES/zsh/prompt/purity.zsh
-prompt_purity_setup()
+# +--------+
+# | PROMPT |
+# +--------+
+
+fpath=($DOTFILES/zsh/prompt $fpath)
+autoload -Uz prompt_purity_setup
+prompt_purity_setup
+
+# +-----------+
+# | PROFILING |
+# +-----------+
+
+zmodload zsh/zprof
+
+# +------------+
+# | COMPLETION |
+# +------------+
+
+# Automatic loading via #compdef in each files (see https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org)
+fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
+
+autoload -U compinit && compinit
+zmodload zsh/complist
+zstyle ':completion:*' menu select
+_comp_options+=(globdots) # With hidden files
+source $DOTFILES/zsh/completion.zsh
 
 # +-----+
 # | VIM |
 # +-----+
 
-# Use vim keys in tab complete menu:
+# Use vim keys in tab complete menu
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
