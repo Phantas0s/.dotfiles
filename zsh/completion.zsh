@@ -6,12 +6,12 @@
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 setopt ALWAYS_TO_END       # Move cursor to the end of a completed word.
 setopt PATH_DIRS           # Perform path search even on command names with slashes.
-setopt AUTO_MENU           # Show completion menu on a successive tab press.
+# setopt AUTO_MENU           # Show completion menu on a successive tab press.
 setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 setopt AUTO_PARAM_SLASH    # If completed parameter is a directory, add a trailing slash.
 setopt EXTENDED_GLOB       # Needed for file modification glob modifiers with compinit
-unsetopt MENU_COMPLETE     # Do not autoselect the first completion entry.
-unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
+setopt MENU_COMPLETE     # Do not autoselect the first completion entry.
+# unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
 
 # Use caching to make completion for commands such as dpkg and apt usable.
 zstyle ':completion::complete:*' use-cache on
@@ -61,12 +61,6 @@ zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
 zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
 zstyle ':completion:*' squeeze-slashes true
 
-# History
-zstyle ':completion:*:history-words' stop yes
-zstyle ':completion:*:history-words' remove-all-dups yes
-zstyle ':completion:*:history-words' list false
-zstyle ':completion:*:history-words' menu yes
-
 # Environment Variables
 zstyle ':completion::*:(-command-|export):*' fake-parameters ${${${_comps[(I)-value-*]#*,}%%,*}:#-*-}
 
@@ -90,34 +84,11 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
   rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs '_*'
 
 # ... unless we really want to.
-zstyle '*' single-ignored show
+# zstyle '*' single-ignored show
 
 # Ignore multiple entries.
 zstyle ':completion:*:(rm|kill|diff):*' ignore-line other
 zstyle ':completion:*:rm:*' file-patterns '*:all-files'
-
-# Kill
-zstyle ':completion:*:*:*:*:processes' command 'ps -u $LOGNAME -o pid,user,command -w'
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;36=0=01'
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:*:kill:*' force-list always
-zstyle ':completion:*:*:kill:*' insert-ids single
-
-# Man
-zstyle ':completion:*:manuals' separate-sections true
-zstyle ':completion:*:manuals.(^1*)' insert-sections true
-
-# Media Players
-zstyle ':completion:*:*:mpg123:*' file-patterns '*.(mp3|MP3):mp3\ files *(-/):directories'
-zstyle ':completion:*:*:mpg321:*' file-patterns '*.(mp3|MP3):mp3\ files *(-/):directories'
-zstyle ':completion:*:*:ogg123:*' file-patterns '*.(ogg|OGG|flac):ogg\ files *(-/):directories'
-zstyle ':completion:*:*:mocp:*' file-patterns '*.(wav|WAV|mp3|MP3|ogg|OGG|flac):ogg\ files *(-/):directories'
-
-# Mutt
-if [[ -s "$HOME/.mutt/aliases" ]]; then
-  zstyle ':completion:*:*:mutt:*' menu yes select
-  zstyle ':completion:*:mutt:*' users ${${${(f)"$(<"$HOME/.mutt/aliases")"}#alias[[:space:]]}%%[[:space:]]*}
-fi
 
 # SSH/SCP/RSYNC
 zstyle ':completion:*:(ssh|scp|rsync):*' tag-order 'hosts:-host:host hosts:-domain:domain hosts:-ipaddr:ip\ address *'
