@@ -96,8 +96,7 @@ prompt_git_branch() {
 }
 
 git_prompt_info() {
-    ref=$vcs_info_msg_0_
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    [ ! -z "$vcs_info_msg_0_" ] && echo "$ZSH_THEME_GIT_PROMPT_PREFIX$vcs_info_msg_0_$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 change_cursor_vim() {
