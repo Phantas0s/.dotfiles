@@ -44,6 +44,14 @@ The name will be put as comment in the key as well.
 
 `umntmtp <folder="~/mnt/">`
 
+## Neovim
+
+`vman`
+
+Open man with neovim.
+
+Need the plugin 'jez/vim-superman' installed in Neovim.
+
 ## Archives
 
 ### Extraction

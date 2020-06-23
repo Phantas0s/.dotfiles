@@ -512,3 +512,13 @@ pom() {
     fi
     echo "(($1 * 60) + $2) / $POMODORO_DURATION" | bc
 }
+
+# open man page in vim
+vman() {
+    nvim -c "SuperMan $*"
+
+    if [ "$?" != "0" ]; then
+        echo "No manual entry for $*"
+    fi
+}
+
