@@ -69,8 +69,7 @@ source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # +--------+
 
 fpath=($DOTFILES/zsh/prompt $fpath)
-autoload -Uz prompt_purity_setup
-prompt_purity_setup
+autoload -Uz prompt_purification_setup && prompt_purification_setup
 
 # +-----------+
 # | PROFILING |
