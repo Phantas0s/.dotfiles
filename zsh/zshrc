@@ -96,6 +96,10 @@ source $DOTFILES/zsh/plugins/completion.zsh
 bindkey -v
 export KEYTIMEOUT=1
 
+# Change cursor
+fpath=($DOTFILES/zsh/ $fpath)
+autoload -Uz cursor_mode && cursor_mode
+
 # Use vim keys in tab complete menu
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
