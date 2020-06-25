@@ -10,10 +10,11 @@ screenres() {
 }
 
 screencast() {
-    local screen=1
+    # Record screen 2 by default
+    local screen=2
     local offset=""
-    local height=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`) | sort -n | line 1
-    local bigger_height=$(echo $height | sed "s/ /\n/" | sort -rg | line 1)
+    local heights=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`) | sort -n | line 1
+    local bigger_height=$(echo $heights | sed "s/ /\n/" | sort -rg | line 1)
 
     if [ ! -z $2 ]; then
         screen=$2
