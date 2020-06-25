@@ -23,10 +23,10 @@ cursor_mode() {
     zle -N zle-line-init
 
     # Use beam shape cursor for each new prompt.
-    preexec() {
-        echo -ne $cursor_beam
-    } 
-    echo -ne $cursor_beam # startup
+    #preexec() {
+    #    echo -ne $cursor_beam
+    #} 
+    #echo -ne $cursor_beam # startup
 
 }
 
