@@ -2,13 +2,22 @@
 
 Doc for my zsh scripts (`scripts.zsh`).
 
+## Helpers
+
+`line <line_number> <file>`
+
+With one argument, can be piped to display the line number of the output.
+With two arguments, 
+
+It uses `sed` under the hood.
+
 ## System
 
 ### Update system
 
 `updatesys`
 
-Update:
+Call a bash script and update:
 * Go binaries
 * Composer global install
 * Official Arch linux packages (via Aurman or yay if installed ; otherwise pacman)
@@ -27,6 +36,14 @@ Way safer than using pure dd without any warning message...
 
 Create a new ssh key at `~/.ssh/<name>` with permission 700.
 The name will be put as comment in the key as well.
+
+### Screen
+
+`screenres <screen_number>`
+
+Display screen resolution.
+
+Each of your screen has a number. That's what `<screen_number>` is.
 
 ### Mount device with read/write permissions
 
@@ -100,6 +117,14 @@ Import a database. If the file is called `database.sql`, it will try to import i
 `ports`
 
 List of port opens, fuzzy searchable via fzf
+
+## Video
+
+`screencast <output_file> <screen_number>`
+
+Take a screencast and save it in the `<output_file>`. 
+
+The choice of screen with `<screen_number>` is very much tailored for my own needs, with a small screen as first screen and big screen as second.
 
 ## Images
 

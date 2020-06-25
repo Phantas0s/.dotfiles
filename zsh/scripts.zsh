@@ -1,11 +1,35 @@
 #!/bin/sh
 
+line() {
+    [ ! -z $1 ] && sed -n "${1}p" && return
+    [ ! -z $1 ] && [ ! -z $2 ] && sed -n $2 "${1}p" && return
+}
+
+screenres() {
+    [ ! -z $1 ] && xrandr --current | grep '*' | awk '{print $1}' | line $1
+}
+
 screencast() {
-    if [ ! -z $1 ] ; then
-        ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -f pulse -i default $1
-    else
+    local screen=1
+    local offset=""
+    local height=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`) | sort -n | line 1
+    local bigger_height=$(echo $height | sed "s/ /\n/" | sort -rg | line 1)
+
+    if [ ! -z $2 ]; then
+        screen=$2
+    fi
+
+    if [ ! -z $1 ]; then
+       [ $screen -eq 1 ] && offset="+0,$(( $bigger_height -  $(screenres 1 | awk -Fx '{print $2}')))"
+       [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
+       ffmpeg -f x11grab -s $(screenres $screen) -i :0.0$offset -f pulse -i default $1
+    else 
         echo "You need to precise an output file as first argument - eg 'example.mkv'"
     fi
+}
+
+all_screencast() {
+    [ ! -z $1 ] && ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -f pulse -i default $1 && return
 }
 
 oscreencast() {
