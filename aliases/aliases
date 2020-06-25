@@ -90,9 +90,9 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # file manipulation
-# alias cp='cp -iv'
-# alias mv='mv -iv'
-# alias rm='rm -i'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -i'
 alias la='ls -alh'
 
 # wifi netctl
