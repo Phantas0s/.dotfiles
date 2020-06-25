@@ -4,22 +4,29 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
+export TERM='rxvt-256color'
+
+export DOTFILES="$HOME/.dotfiles"
+
+# XDG
+
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$XDG_CONFIG_HOME/local/share
 export XDG_CACHE_HOME=$XDG_CONFIG_HOME/cache
 
-export MOUNT=/run/media/$USER
+# editor
 
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+# zsh
+
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file
 
-export DOTFILES="$HOME/.dotfiles"
-
-export TERM='rxvt-256color'
-
-# Variable for some software config
+# other software
 
 export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/tmuxp"
 export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
@@ -27,24 +34,27 @@ export I3_CONFIG="$XDG_CONFIG_HOME/i3"
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 
 # Modifying the path for ruby gems
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+# PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
-# PATH for composer global install
-PATH="$COMPOSER_HOME/vendor/bin:$PATH"
+# golang
 
-# PATH for Golang
 export GOPATH="$HOME/workspace/go"
 export GOBIN="$HOME/workspace/go/bin"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
-# PATH for go binaries
+# npm
+
+export NPM_PATH="$XDG_CONFIG_HOME/node_modules"
+export NPM_BIN="$XDG_CONFIG_HOME/node_modules/bin"
+# export npm_config_prefix=$XDG_CONFIG_HOME/node_modules
+
+# git
+export GIT_REVIEW_BASE=master # See gitconfig
+
+# PATH
+
+PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 PATH="$GOBIN:$PATH"
+PATH="$NPM_BIN:$PATH"
 
-# Install of global npm packages
-export NPMPATH="$HOME/.node_modules"
-export NPMBIN="$HOME/.node_modules/bin"
-PATH="$NPMBIN:$PATH"
-export npm_config_prefix=$XDG_CONFIG_HOME/.node_modules
 
-# See gitconfig
-export GIT_REVIEW_BASE=master

@@ -126,6 +126,8 @@ Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
+Plug 'Phantas0s/go-analyzer.vim' " Custom plugin 
+" Plug '$XDG_CONFIG_HOME/workspace/vim-plugins/go-analyzer.vim'
 
 " Javascript
 Plug 'pangloss/vim-javascript'
@@ -184,8 +186,6 @@ Plug 'lambdalisue/suda.vim'
 
 Plug 'tpope/vim-scriptease'
 
-" Custom plugin - working on it
-Plug '$XDG_CONFIG_HOME/workspace/vim-plugins/go-analyzer.vim'
 
 call plug#end()
 " }}}
