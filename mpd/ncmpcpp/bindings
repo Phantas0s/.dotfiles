@@ -214,14 +214,6 @@
 #def_key "space"
 #  toggle_visualization_type
 #
-#def_key "delete"
-#  delete_playlist_items
-#
-#def_key "delete"
-#  delete_browser_items
-#
-#def_key "delete"
-#  delete_stored_playlist
 #
 #def_key "right"
 #  next_column
@@ -591,6 +583,9 @@ def_key "d"
 
 def_key "d"
   delete_browser_items
+
+def_key "d"
+  delete_stored_playlist
 
 def_key "space"
  pause
