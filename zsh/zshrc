@@ -7,7 +7,8 @@
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
-setopt CORRECT              # Spelling correctin
+
+setopt CORRECT              # Spelling correction
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 
@@ -51,12 +52,6 @@ command -v "fzf" >/dev/null && source $DOTFILES/zsh/scripts_fzf.zsh # fzf Script
 # +--------------------+
 
 source $DOTFILES/zsh/plugins/notifyosd.zsh # Send notification when command line done
-
-# +---------------------+
-# | SYNTAX HIGHLIGHTING |
-# +---------------------+
-
-source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # +--------+
 # | PROMPT |
@@ -134,3 +129,9 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 # Display all possible tmuxp session when opening terminal
 ftmuxp
+
+# +---------------------+
+# | SYNTAX HIGHLIGHTING |
+# +---------------------+
+
+source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
