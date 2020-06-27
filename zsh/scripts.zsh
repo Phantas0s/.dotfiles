@@ -23,9 +23,10 @@ screencast() {
     if [ ! -z $1 ]; then
        [ $screen -eq 1 ] && offset="+0,$(( $bigger_height -  $(screenres 1 | awk -Fx '{print $2}')))"
        [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
-       ffmpeg -f x11grab -s $(screenres $screen) -i :0.0$offset -f pulse -i default $1
-       # -c:a libfdk_aac -ac 2 -b:a 96k \
-       # -c:v libx264 -preset ultrafast
+       ffmpeg -f x11grab -s $(screenres $screen) -i :0.0$offset -f pulse -i default -c:v libx264 -preset ultrafast -c:a aac $1
+
+       # Other codecs
+       # -c:v ffvhuff   # lossless but HUGE
     else 
         echo "You need to precise an output file as first argument - eg 'example.mkv'"
     fi
