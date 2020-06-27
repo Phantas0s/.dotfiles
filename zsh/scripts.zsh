@@ -13,7 +13,7 @@ screencast() {
     # Record screen 2 by default
     local screen=2
     local offset=""
-    local heights=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`) | sort -n | line 1
+    local heights=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`)
     local bigger_height=$(echo $heights | sed "s/ /\n/" | sort -rg | line 1)
 
     if [ ! -z $2 ]; then
@@ -24,6 +24,8 @@ screencast() {
        [ $screen -eq 1 ] && offset="+0,$(( $bigger_height -  $(screenres 1 | awk -Fx '{print $2}')))"
        [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
        ffmpeg -f x11grab -s $(screenres $screen) -i :0.0$offset -f pulse -i default $1
+       # -c:a libfdk_aac -ac 2 -b:a 96k \
+       # -c:v libx264 -preset ultrafast
     else 
         echo "You need to precise an output file as first argument - eg 'example.mkv'"
     fi
