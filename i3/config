@@ -242,6 +242,8 @@ assign [class="Easytag" instance="easytag"] → $multimedia
 
 assign [class="Thunderbird" instance="Mail"] → $office
 
+assign [class="digikam" instance="digikam"] → $design
+assign [class="Darktable" instance="darktable"] → $design
 assign [class="Gimp" instance="gimp"] → $design
 assign [class="Inkscape" instance="org.inkscape.Inkscape"] → $design
 
