@@ -76,7 +76,7 @@ Plug 'honza/vim-snippets'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 Plug 'godlygeek/tabular' " Align plugin (useful for markdown tables for example)
-Plug 'christoomey/vim-titlecase' " itlecase with gt
+Plug 'christoomey/vim-titlecase' " Titlecase with gt
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
