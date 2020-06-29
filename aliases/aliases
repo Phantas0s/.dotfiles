@@ -2,18 +2,15 @@
 ## LINUX APP ##
 ###############
 
-# source aliases
-alias salias="source $DOTFILES/aliases/aliases"
-
-# zsh 
-
+# Make sure I use zsh when calling a script with sh
+# zsh
 alias sh='zsh'
 
 # directory stack
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
-# history stats
+# commands I use the most often
 alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
 
 # ping
@@ -22,63 +19,46 @@ alias pg='ping 8.8.8.8'
 # calculator bc
 alias bc="bc -q"
 
-# bat better than cat
-# alias cat='bat'
+# bat
 alias batl='bat --paging=never -l log'
 
-# apt-get
-alias agi='sudo apt-fast install'
-alias agr='sudo apt-fast remove'
-alias agu='sudo apt-fast update'
-alias acs='apt-cache search'
-
-#rsync
-rsyncdir='rsync -arzv --progress'
-
 # pacman
-alias paci='sudo pacman -S' # install
-alias pachi='sudo pacman -Ql' # pacman has installed - what files where installed in a package
-alias pacs='sudo pacman -Ss' # search
-alias pacu='sudo pacman -Syu' # update
-alias pacr='sudo pacman -R' # remove package but not dependencies
-alias pacrr='sudo pacman -Rs' # remove package with unused dependencies by other softwares
-alias pacrc='sudo pacman -Sc' # remove pacman's cache
+alias paci='sudo pacman -S'               # install
+alias pachi='sudo pacman -Ql'             # Pacman Has Installed - what files where installed in a package
+alias pacs='sudo pacman -Ss'              # search
+alias pacu='sudo pacman -Syu'             # update
+alias pacr='sudo pacman -R'               # remove package but not dependencies
+alias pacrr='sudo pacman -Rs'             # remove package with unused dependencies by other softwares
+alias pacrc='sudo pacman -Sc'             # remove pacman's cache
 alias pacro='pacman -Rns $(pacman -Qtdq)'
-alias pacrl='rm /var/lib/pacman/db.lck' # pacman remove locks
+alias pacrl='rm /var/lib/pacman/db.lck'   # pacman remove locks
 alias pacls="sudo pacman -Qe"
+alias pacc='sudo pacman -Sc'
+alias paccc='sudo pacman -Scc'            # empty the whole cache
 
 # yay
-
-alias yayi='yay -S' # install
-alias yayhi='yay -Ql' # pacman has installed - what files where installed in a package
-alias yays='yay -Ss' # search
-alias yayu='yay -Syu' # update
-alias yayr='yay -R' # remove package but not dependencies
-alias yayrr='yay -Rs' # remove package with unused dependencies by other softwares
-alias yayrc='yay -Sc' # remove pacman's cache
-alias yayro='yay -Rns $(pacman -Qtdq)'
+alias yayi='yay -S'     # install
+alias yayhi='yay -Ql'   # Yay Has Installed - what files where installed in a package
+alias yays='yay -Ss'    # search
+alias yayu='yay -Syu'   # update
+alias yayr='yay -R'     # remove package but not dependencies
+alias yayrr='yay -Rs'   # remove package with unused dependencies by other softwares
+alias yayrc='yay -Sc'   # remove yay's cache
 alias yayls="yay -Qe"
 
-# empty cache from deprecated packages
-alias pacc='sudo pacman -Sc'
-# empty the whole cache
-alias paccc='sudo pacman -Scc'
 
 # system
 alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
 alias suspend='sudo pm-suspend'
 alias lock='gnome-screensaver-command --lock'
-# display big files > 50M
-alias bigf= 'find / -xdev -type f -size +50M'
-# for find device - useful to mount devices (name to prefix with "/dev/")
-alias fdev='lsblk -f'
-# xprop class
-alias xpropc='xprop | grep WM_CLASS'
+# display big files > 500M
+alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
+alias xpropc='xprop | grep WM_CLASS'            # xprop class
 
 # ls
-alias lsl='ls -l --color=auto'
 alias ls='ls --color=auto'
+alias lsl='ls -l'
 alias ll='ls -lahF'
 alias lls='ls -lahFtr'
 alias la='ls -A'
@@ -97,19 +77,19 @@ alias la='ls -alh'
 
 # wifi netctl
 alias wifi='sudo wifi-menu -o'
-alias wifi-home='sudo netctl start wlp3s0home'
 
 # go tools
 alias gob="go build"
 # delete imported source / binaries (go remove)
-alias gor="go clean -i" #need repository path
+alias gor="go run" 
+alias goc="go clean -i" #need repository path
 alias gta="go test ./..."
 alias gia="go install ./..."
 
 # Hugo website generator
 alias hugostart="hugo server -DEF --ignoreCache"
 
-# Scrapperto find dead links 
+# Scrapperto find dead links
 alias deadlink="muffet -t 20"
 
 # See if a port is used
@@ -132,7 +112,7 @@ alias nvimc='rm -I $XDG_CONFIG_HOMEO/nvim/swap/*'
 # clean the vim undo
 alias nvimcu='rm -I $VIMCONFIG/undo/*'
 
-# log the keys entered via using vim 
+# log the keys entered via using vim
 alias nviml='nvim -w $XDG_CONFIG_HOME/.vimlog "$@"'
 
 # git
@@ -141,10 +121,8 @@ alias ga='git add '
 alias gp='git push '
 alias gpo='git push origin'
 alias gtd='git tag --delete'
-#Git tag delete remote
 alias gtdr='git tag --delete origin'
-# Display remote branch
-alias gr='git branch -r'
+alias gr='git branch -r' # Display remote branch
 alias gplo='git pull origin'
 alias gb='git branch '
 alias gc='git commit'
@@ -158,67 +136,44 @@ alias grs='git remote show'
 alias glo='git log --pretty="oneline"'
 alias glol='git log --graph --oneline --decorate'
 # delete local branch merged with master
-alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" 
+alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 # git log for each branches
-alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'" 
+alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 # pull submodules
 alias gsub="git submodule update --remote"
-
-# vagrant
-alias vu='vagrant up'
-alias vs='vagrant ssh'
-alias vr='vagrant reload'
 
 # tmux
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
 alias tmuxl='tmux list-sessions'
-alias tmuxs='tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -s$USER@$HOSTNAME'
+
+# tmuxp
 alias mux='tmuxp load'
 
-# tar
-alias tare='tar xzvf'
-alias stare='sudo tar xzvf'
-# see tar table of content
-alias tars='tar tzf'
-alias tarc='tar cvzf'
-
 # docker
-# display the information about a container
-alias docki="docker inspect"
-# Going inside a container
-alias docke='docker exec -t -i'
-# delete every containers / images
-alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
-# stats on images
-alias dockstats='docker stats $(docker ps -q)'
-# list docker containers
-alias dockls='docker ps'
-# list images installed
-alias dockimg='docker images'
-alias dockprune='docker system prune -a'
-
-# run as the host user
-alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'
+alias docki="docker inspect"                                                    # display the information about a container
+alias docke='docker exec -t -i'                                                 # going inside a container
+alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
+alias dockstats='docker stats $(docker ps -q)'                                  # stats on images
+alias dockls='docker ps'                                                        # list docker containers
+alias dockimg='docker images'                                                   # list images installed
+alias dockprune='docker system prune -a'                                        # prune everything
+alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
 alias dockce='docker-compose run --rm'
-alias docker-compose-dev='docker-compose -f docker-compose-dev.yml'
 
-alias sshprodql='ssh -Nf prod -L 3306:localhost:3306'
+# docker-compose
+alias docker-compose-dev='docker-compose -f docker-compose-dev.yml' # run a different config file than the default one
 
 ##############
 ## PROJECTS ##
 ##############
 
-# general workspace
-alias work="$HOME/workspace"
-# dotfiles
-alias dot="$HOME/.dotfiles"
-alias media="/run/media/hypnos/"
+alias work="$HOME/workspace"        # general workspace
+alias dot="$HOME/.dotfiles"         # dotfiles
+alias media="/run/media/$USER"
 
 # Freebrain
 alias freebrain="freemind $CLOUD/knowledge_base/_BRAINSTORMING/* &"
 
-# golang src
-alias gosrc="$GOPATH/src/"
-# golang gin
-alias gobin="$GOPATH/bin/"
+alias gosrc="$GOPATH/src/" # golang src
+alias gobin="$GOPATH/bin/" # golang gin
