@@ -241,6 +241,7 @@ assign [instance="nomacs"] → $multimedia
 assign [class="Easytag" instance="easytag"] → $multimedia
 
 assign [class="Thunderbird" instance="Mail"] → $office
+assign [class="Thunderbird" instance="Msgcompose"] → $office
 
 assign [class="digikam" instance="digikam"] → $design
 assign [class="Darktable" instance="darktable"] → $design
