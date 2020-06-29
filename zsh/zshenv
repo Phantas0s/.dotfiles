@@ -45,8 +45,8 @@ export GOCACHE="$XDG_CACHE_HOME/go-build"
 
 # npm
 
-export NPM_PATH="$XDG_CONFIG_HOME/node_modules"
-export NPM_BIN="$XDG_CONFIG_HOME/node_modules/bin"
+export NPM_PATH="$XDG_CONFIG_HOME/.node_modules"
+export NPM_BIN="$XDG_CONFIG_HOME/.node_modules/bin"
 # export npm_config_prefix=$XDG_CONFIG_HOME/node_modules
 
 # git
