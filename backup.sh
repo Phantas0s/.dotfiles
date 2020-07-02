@@ -14,7 +14,7 @@ backup() {
     [ ! -d $BACKUP ] && echo "The directory $MEDIA/BACKUP doesn't exist" && return
 
     declare -A folders=(
-        $MEDIA/test test-test/test
+        # $MEDIA/test test-test/test
         $HOME/Documents home/Documents
         $HOME/Nextcloud home/nextcloud
         $MEDIA/assets assets
