@@ -23,6 +23,7 @@ backup() {
         $MEDIA/Install install
         $MEDIA/MAO mao
         $MEDIA/Music music
+        $MEDIA/Photos photos
         $MEDIA/Video video
     )
 
