@@ -1,8 +1,12 @@
 #!/bin/zsh
 
+fpath=($DOTFILES/zsh/plugins $fpath)
+
 # +------------+
 # | NAVIGATION |
 # +------------+
+
+setopt AUTO_CD              # Go to folder path without using cd.
 
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
@@ -12,7 +16,6 @@ setopt CORRECT              # Spelling correction
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 
-fpath=($DOTFILES/zsh/plugins $fpath)
 autoload -Uz bd; bd
 
 # +---------+
@@ -88,7 +91,6 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Change cursor
-fpath=($DOTFILES/zsh/ $fpath)
 autoload -Uz cursor_mode && cursor_mode
 
 # Use vim keys in tab complete menu
