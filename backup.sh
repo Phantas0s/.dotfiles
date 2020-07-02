@@ -11,7 +11,7 @@ done
 
 backup() {
     local BACKUP="$MEDIA/BACKUP"
-    [ ! -d $BACKUP ] && echo "The directory $MEDIA/BACKUP doesn't exist" && return
+    [ ! -d $BACKUP ] && echo "ABORT - The directory $MEDIA/BACKUP doesn't exist" && return
 
     declare -A folders=(
         # $MEDIA/test test-test/test
