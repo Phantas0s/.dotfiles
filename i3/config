@@ -233,6 +233,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="firefox" instance="Navigator"] → $web
 assign [class="Min" instance="min"] → $web
 assign [class="Chromium" instance="chromium"] → $web
+assign [class="Slack" instance="slack"] → $web
 
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $db
 
