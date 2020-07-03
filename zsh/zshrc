@@ -50,7 +50,6 @@ source $DOTFILES/aliases/aliases
 # +---------+
 
 source $DOTFILES/zsh/scripts.zsh # Scripts
-command -v "fzf" >/dev/null && source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
 
 # +--------------------+
 # | TIME NOTIFICATIONS |
@@ -117,7 +116,10 @@ bindkey -s '^p' 'fmux\n'
 # | FZF |
 # +-----+
 
-source $XDG_CONFIG_HOME/.fzf.zsh
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+
+command -v "fzf" >/dev/null && source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
 
 # Search with fzf and open selected file with Vim
 bindkey -s '^v' 'vim $(fzf);^M'
