@@ -53,7 +53,6 @@ fi
 dot_is_installed git && dot_install projects
 dot_is_installed lxappearance && dot_install theme
 dot_is_installed i3 && dot_install i3
-dot_is_installed urxvt && dot_install urxvt
 dot_is_installed git && dot_install git
 dot_is_installed nvim && dot_install nvim
 dot_is_installed tmux && dot_install tmux

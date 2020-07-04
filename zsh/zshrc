@@ -37,7 +37,7 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +--------+
 
 # Override colors
-eval "$(dircolors -b $XDG_CONFIG_HOME/.dircolors)"
+eval "$(dircolors -b $ZDOTDIR/dircolors)"
 
 # +---------+
 # | ALIASES |

@@ -2,13 +2,13 @@
 urxvtd -o -q -f
 
 # merge .Xressources file
-[[ -f $XDG_CONFIG_HOME/X11/Xresources ]] && xrdb -merge -I$XDG_CONFIG_HOME/X11 $XDG_CONFIG_HOME/X11/Xresources
+[[ -f $XDG_CONFIG_HOME/X11/xresources ]] && xrdb -merge -I$XDG_CONFIG_HOME/X11 $XDG_CONFIG_HOME/X11/xresources
 
 # maps caps lock to escape for vim 
 setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
 
 # personnalized keyboard keys
-[[ -f $XDG_CONFIG_HOME/X11/Xmodmap ]] && xmodmap $XDG_CONFIG_HOME/X11/Xmodmap
+[[ -f $XDG_CONFIG_HOME/X11/xmodmap ]] && xmodmap $XDG_CONFIG_HOME/X11/xmodmap
 
 # mpd
 [ ! -s ~/.config/mpd/pid ] && mpd

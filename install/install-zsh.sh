@@ -10,3 +10,6 @@ mkdir $ZDOTDIR;
 ln -s -f $DOTFILES/zsh/zshenv $HOME/.zshenv
 ln -s -f $DOTFILES/zsh/zshrc $ZDOTDIR/.zshrc
 
+rm -f $ZDOTDIR/dircolors
+ln -s $DOTFILES/zsh/dircolors $ZDOTDIR/dircolors
+
