@@ -106,10 +106,10 @@ bindkey -M vicmd v edit-command-line
 
 # TODO to look at that
 # Fix bug when prompt has two lines
-bindkey -r '^l'
-bindkey -r '^g'
-bindkey -s '^g' 'clear\n'
-bindkey -r '^p'
+# bindkey -r '^l'
+# bindkey -r '^g'
+# bindkey -s '^g' 'clear\n'
+# bindkey -r '^p'
 bindkey -s '^p' 'fmux\n'
 
 # +-----+
