@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm $XDG_CONFIG_HOME/git/config &>/dev/null
+rm -f $XDG_CONFIG_HOME/git/config &>/dev/null
 rm $DOTFILES/git/gitconfig >/dev/null
 cp $DOTFILES/git/gitconfig_template $DOTFILES/git/gitconfig
 
@@ -23,6 +23,8 @@ if [ -z "$GIT_USER" ]
 fi
 
 sed -i -e "s/<name>/${GIT_USER}/g" $DOTFILES/git/gitconfig
+
+[ ! -d $XDG_CONFIG_HOME/git/config ] && mkdir -p $XDG_CONFIG_HOME/git/
 
 ln -s -f $DOTFILES/git/gitconfig $XDG_CONFIG_HOME/git/config
 ln -s -f $DOTFILES/git/gitignore $XDG_CONFIG_HOME/git/ignore
