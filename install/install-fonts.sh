@@ -1,9 +1,9 @@
 #!/bin/bash
-# see https://github.com/ryanoasis/nerd-fonts#patched-fonts for a lot of fonts
+# see https://github.com/ryanoasis/nerd-fonts#patched-fonts for many fonts
 
-if [ ! -d $XDG_CONFIG_HOME/.fonts ]
+if [ ! -d $XDG_DATA_HOME/fonts ]
   then
-    mkdir $XDG_CONFIG_HOME/.fonts
+    mkdir $XDG_DATA_HOME/fonts
 fi
 
-cp -f $DOTFILES/fonts/* $XDG_CONFIG_HOME/.fonts
+cp -f $DOTFILES/fonts/* $XDG_DATA_HOME/fonts
