@@ -58,7 +58,6 @@ dot_is_installed nvim && dot_install nvim
 dot_is_installed tmux && dot_install tmux
 dot_is_installed dunst && dot_install dunst
 dot_is_installed feh && dot_install feh
-dot_is_installed fzf && dot_install fzf
 dot_is_installed jrnl && dot_install jrnl
 dot_is_installed composer && dot_install composer
 dot_is_installed mycli && dot_install mycli
