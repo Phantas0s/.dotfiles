@@ -34,6 +34,10 @@ export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
 export I3_CONFIG="$XDG_CONFIG_HOME/i3"
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 
+# x11
+
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
 # golang
 
 export GOPATH="$HOME/workspace/go"

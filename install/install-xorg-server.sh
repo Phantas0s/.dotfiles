@@ -1,11 +1,13 @@
 #!/bin/bash
 
-rm $XDG_CONFIG_HOME/.Xresources &>/dev/null
-ln -s $DOTFILES/xorg-server/Xresources $XDG_CONFIG_HOME/.Xresources
+rm -rf $XDG_CONFIG_HOME/X11
+mkdir -p $XDG_CONFIG_HOME/X11
 
-rm $HOME/.xinitrc &>/dev/null
-ln -s $DOTFILES/xorg-server/xinitrc $HOME/.xinitrc
+ln -s $DOTFILES/xorg-server/Xresources $XDG_CONFIG_HOME/X11/Xresources
+ln -s $DOTFILES/xorg-server/xinitrc $XINITRC
+ln -s $DOTFILES/xorg-server/Xmodmap $XDG_CONFIG_HOME/X11/Xmodmap
 
 # monitor configs with arandr
 rm -rf $XDG_CONFIG_HOME/config_monitors
 ln -sf $DOTFILES_CLOUD/config_monitors $XDG_CONFIG_HOME/config_monitors
+
