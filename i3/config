@@ -238,12 +238,12 @@ assign [class="Slack" instance="slack"] → $web
 assign [class="Mysql-workbench-bin" instance="mysql-workbench-bin"] → $db
 
 assign [class="mpv" instance="gl"] → $multimedia
-assign [instance="nomacs"] → $multimedia
 assign [class="Easytag" instance="easytag"] → $multimedia
 
 assign [class="Thunderbird" instance="Mail"] → $office
 assign [class="Thunderbird" instance="Msgcompose"] → $office
 
+assign [instance="nomacs"] → $design
 assign [class="digikam" instance="digikam"] → $design
 assign [class="Darktable" instance="darktable"] → $design
 assign [class="Gimp" instance="gimp"] → $design
