@@ -121,7 +121,6 @@ Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 " Plug 'tpope/vim-salve', {'for': 'clojure'}
 Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
-
 " Golang
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
@@ -153,7 +152,7 @@ Plug 'simnalamburt/vim-mundo'
 
 " Register management
 Plug 'bfredl/nvim-miniyank'
-Plug 'junegunn/vim-peekaboo'
+" Plug 'junegunn/vim-peekaboo'
 
 " Allow multisearch in current directory / multi replace as well
 Plug 'wincent/ferret'
