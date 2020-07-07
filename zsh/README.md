@@ -230,21 +230,7 @@ Fuzzy search in the stash list.
 
 Init kondo-clj for a clojure project with boot.
 
-## Other
-
-### File system
-
-`mkcd`
-
-Create a folder like `mkdir -p` and goes in it.
-
-### File system
-
-`updatezsh`
-
-### Antibody 
-
-Update antibody plugins 
+## Shell
 
 ### Prompt Performance
 
@@ -253,6 +239,23 @@ Update antibody plugins
 Display the time for the prompt to appear when opening a new zsh instance
 
 ``
+
+### Auto completed commands in Zsh
+
+`zshcomp`
+
+Display all autocompleted command in zsh.
+
+First column: command name
+Second column: completion function
+
+## Other
+
+### File system
+
+`mkcd`
+
+Create a folder like `mkdir -p` and goes in it.
 
 ### Productivity
 
