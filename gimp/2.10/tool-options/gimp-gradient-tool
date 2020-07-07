@@ -1,0 +1,8 @@
+# GIMP gimp-gradient-tool options
+
+(gradient "FG to BG (Hardedge)")
+(brush-size 51)
+(brush-hardness 0.5)
+(dither no)
+
+# end of gimp-gradient-tool options

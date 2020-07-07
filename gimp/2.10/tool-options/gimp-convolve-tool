@@ -1,0 +1,11 @@
+# GIMP gimp-convolve-tool options
+
+(brush "2. Hardness 025")
+(dynamics "Dynamics Off")
+(palette "Color History")
+(brush-size 317)
+(brush-spacing 0.050000000000000003)
+(brush-hardness 0.25)
+(brush-link-size no)
+
+# end of gimp-convolve-tool options
