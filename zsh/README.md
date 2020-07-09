@@ -261,7 +261,15 @@ Display the command more often used in the shell
 
 `mkcd`
 
-Create a folder like `mkdir -p` and goes in it.
+Similar to cd. Create a folder like `mkdir -p` and goes in it.
+
+`mkmv`
+
+Similar to mv. Move a file or a folder, and create the filepath if it doesn't exist
+
+`mkmv`
+
+Similar to cp. Copy a file or a folder, and create the filepath if it doesn't exist
 
 ### Productivity
 

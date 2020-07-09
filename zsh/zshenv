@@ -33,6 +33,7 @@ export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/tmuxp"
 export COMPOSER_HOME="$XDG_CONFIG_HOME/composer"
 export I3_CONFIG="$XDG_CONFIG_HOME/i3"
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
+export GIMP_VERSION="2.10"
 
 # x11
 

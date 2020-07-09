@@ -438,12 +438,21 @@ mkcd() {
 }
 
 mkcp() {
-    mkdir -p $2 && cp $1 $2
+    dir="$2"
+    tmp="$2"; tmp="${tmp: -1}"
+    [ "$tmp" != "/" ] && dir="$(dirname "$2")"
+    [ -d "$dir" ] ||
+    mkdir -p "$dir" &&
+    cp -r "$@"
 }
 
 mkmv() {
-    dir="$*";
-    mkdir -p $dir && mv $dir
+    dir="$2"
+    tmp="$2"; tmp="${tmp: -1}"
+    [ "$tmp" != "/" ] && dir="$(dirname "$2")"
+    [ -d "$dir" ] ||
+    mkdir -p "$dir" &&
+    mv "$@"
 }
 
 historystat() {
