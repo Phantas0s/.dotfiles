@@ -1,8 +1,0 @@
-# GIMP gimp-text-tool options
-
-(palette "Color History")
-(font "Anime Ace")
-(font-size 260)
-(justify center)
-
-# end of gimp-text-tool options

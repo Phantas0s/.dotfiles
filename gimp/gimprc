@@ -12,6 +12,7 @@
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (layer-new-name "bottom")
+(path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
     (antialias yes)
@@ -23,14 +24,14 @@
     (feather no)
     (feather-radius 10)
     (method line)
-    (width 1)
+    (width 2)
     (unit pixels)
     (cap-style butt)
     (join-style miter)
     (miter-limit 10)
     (dash-offset 0)
     (dash-info 0)
-    (emulate-brush-dynamics no))
+    (emulate-brush-dynamics yes))
 
 
 # end of gimprc
