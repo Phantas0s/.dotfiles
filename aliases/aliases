@@ -1,28 +1,72 @@
-###############
-## LINUX APP ##
-###############
+# +--------+
+# | System |
+# +--------+
 
-# Make sure I use zsh when calling a script with sh
-# zsh
-alias sh='zsh'
+alias shutdown='sudo shutdown now'
+alias restart='sudo reboot'
+alias suspend='sudo pm-suspend'
 
-# directory stack
+alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
+alias xpropc='xprop | grep WM_CLASS'            # xprop class
+
+# +-----+
+# | Zsh |
+# +-----+
+
+alias sh='zsh'                                                # Make sure I use zsh when calling a script with sh
 alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
+for index ({1..9}) alias "$index"="cd +${index}"; unset index # directory stack
 
-# commands I use the most often
-alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
+# +----+
+# | ls |
+# +----+
 
-# ping
+alias ls='ls --color=auto'
+alias lsl='ls -l'
+alias ll='ls -lahF'
+alias lls='ls -lahFtr'
+alias la='ls -A'
+alias l='ls -CF'
+
+# +----+
+# | cp |
+# +----+
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -i'
+alias la='ls -alh'
+
+# +------+
+# | grep |
+# +------+
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# +------+
+# | ping |
+# +------+
+
 alias pg='ping 8.8.8.8'
 
-# calculator bc
+# +----+
+# | bc |
+# +----+
+
 alias bc="bc -q"
 
-# bat
+# +-----+
+# | bat |
+# +-----+
+
 alias batl='bat --paging=never -l log'
 
-# pacman
+# +--------+
+# | pacman |
+# +--------+
+
 alias paci='sudo pacman -S'               # install
 alias pachi='sudo pacman -Ql'             # Pacman Has Installed - what files where installed in a package
 alias pacs='sudo pacman -Ss'              # search
@@ -36,7 +80,10 @@ alias pacls="sudo pacman -Qe"
 alias pacc='sudo pacman -Sc'
 alias paccc='sudo pacman -Scc'            # empty the whole cache
 
-# yay
+# +-----+
+# | yay |
+# +-----+
+
 alias yayi='yay -S'     # install
 alias yayhi='yay -Ql'   # Yay Has Installed - what files where installed in a package
 alias yays='yay -Ss'    # search
@@ -46,111 +93,92 @@ alias yayrr='yay -Rs'   # remove package with unused dependencies by other softw
 alias yayrc='yay -Sc'   # remove yay's cache
 alias yayls="yay -Qe"
 
+# +--------+
+# | netctl |
+# +--------+
 
-# system
-alias shutdown='sudo shutdown now'
-alias restart='sudo reboot'
-alias suspend='sudo pm-suspend'
-alias lock='gnome-screensaver-command --lock'
-# display big files > 500M
-alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
-alias xpropc='xprop | grep WM_CLASS'            # xprop class
-
-# ls
-alias ls='ls --color=auto'
-alias lsl='ls -l'
-alias ll='ls -lahF'
-alias lls='ls -lahFtr'
-alias la='ls -A'
-alias l='ls -CF'
-
-# grep
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# file manipulation
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias rm='rm -i'
-alias la='ls -alh'
-
-# wifi netctl
 alias wifi='sudo wifi-menu -o'
 
-# go tools
-alias gob="go build"
-# delete imported source / binaries (go remove)
-alias gor="go run" 
-alias goc="go clean -i" #need repository path
-alias gta="go test ./..."
-alias gia="go install ./..."
+# +--------+
+# | Golang |
+# +--------+
 
-# Hugo website generator
+alias gob="go build"
+alias gor="go run" 
+alias goc="go clean -i"
+alias gta="go test ./..."       # go test all
+alias gia="go install ./..."    # go install all
+
+# +------+
+# | Hugo |
+# +------+
+
 alias hugostart="hugo server -DEF --ignoreCache"
 
-# Scrapperto find dead links
+# +--------+
+# | muffet |
+# +--------+
+
 alias deadlink="muffet -t 20"
 
-# See if a port is used
+# +---------+
+# | netstat |
+# +---------+
+
 alias port="netstat -tulpn | grep"
 
-# +---------------+
-# | vim && neovim |
-# +---------------+
+# +--------+
+# | Neovim |
+# +--------+
 
 alias vim='nvim'
 alias vi='nvim'
 alias svim='sudoedit'
-
-# nvim with default config
-alias dvim="vim -u /usr/share/nvim/archlinux.vim"
-
-# clean the vim swap file
-alias nvimc='rm -I $XDG_CONFIG_HOMEO/nvim/swap/*'
-
-# clean the vim undo
-alias nvimcu='rm -I $VIMCONFIG/undo/*'
-
-# log the keys entered via using vim
-alias nviml='nvim -w $XDG_CONFIG_HOME/.vimlog "$@"'
+alias dvim="vim -u /usr/share/nvim/archlinux.vim" # nvim with default config
+alias nvimc='rm -I $VIMCONFIG/swap/*'             # clean nvim swap file
+alias nvimcu='rm -I $VIMCONFIG/undo/*'            # clean the vim undo
+alias nviml='nvim -w $VIMCONFIG/vimlog "$@"'      # log the keystrokes 
 
 # git
-alias gs='git status '
-alias ga='git add '
-alias gp='git push '
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
 alias gpo='git push origin'
 alias gtd='git tag --delete'
 alias gtdr='git tag --delete origin'
-alias gr='git branch -r' # Display remote branch
+alias gr='git branch -r'                                                                           # display remote branch
 alias gplo='git pull origin'
 alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias gco='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
 alias gl='git log'
 alias gr='git remote'
 alias grs='git remote show'
 alias glo='git log --pretty="oneline"'
 alias glol='git log --graph --oneline --decorate'
-# delete local branch merged with master
-alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
-# git log for each branches
-alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
-# pull submodules
-alias gsub="git submodule update --remote"
+alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" # Delete local branch merged with master
+alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"                                                              # git log for each branches
+alias gsub="git submodule update --remote"                                                        # pull submodules
 
-# tmux
+# +------+
+# | tmux |
+# +------+
+
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
 alias tmuxl='tmux list-sessions'
 
-# tmuxp
+# +-------+
+# | tmuxp |
+# +-------+
+
 alias mux='tmuxp load'
 
-# docker
+# +--------+
+# | docker |
+# +--------+
+
 alias docki="docker inspect"                                                    # display the information about a container
 alias docke='docker exec -t -i'                                                 # going inside a container
 alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
@@ -161,18 +189,19 @@ alias dockprune='docker system prune -a'                                        
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
 alias dockce='docker-compose run --rm'
 
-# docker-compose
+# +----------------+
+# | docker-compose |
+# +----------------+
+
 alias docker-compose-dev='docker-compose -f docker-compose-dev.yml' # run a different config file than the default one
 
-##############
-## PROJECTS ##
-##############
+# +----------+
+# | Personal |
+# +----------+
 
 alias work="$HOME/workspace"        # general workspace
 alias dot="$HOME/.dotfiles"         # dotfiles
 alias media="/run/media/$USER"
-
-# Freebrain
 alias freebrain="freemind $CLOUD/knowledge_base/_BRAINSTORMING/* &"
 
 alias gosrc="$GOPATH/src/" # golang src
