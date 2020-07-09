@@ -249,6 +249,12 @@ Display all autocompleted command in zsh.
 First column: command name
 Second column: completion function
 
+### Command History
+
+`historystat`
+
+Display the command more often used in the shell
+
 ## Other
 
 ### File system

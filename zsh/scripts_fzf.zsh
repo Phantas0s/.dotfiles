@@ -11,7 +11,7 @@ fpacsearch() {
 }
 
 # git log browser with FZF
-fgl() {
+fglog() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
   fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \

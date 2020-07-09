@@ -432,10 +432,22 @@ cat "$2" | openssl aes-256-cbc $opts -a -out "$2" &&
     esac
 }
 
-mkcd()
-{
+mkcd() {
     dir="$*";
     mkdir -p "$dir" && cd "$dir";
+}
+
+mkcp() {
+    mkdir -p $2 && cp $1 $2
+}
+
+mkmv() {
+    dir="$*";
+    mkdir -p $dir && mv $dir
+}
+
+historystat() {
+    history 0 | awk '{print $2}' | sort | uniq -c | sort -n -r | head
 }
 
 updatezsh() {
