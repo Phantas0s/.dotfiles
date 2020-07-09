@@ -54,8 +54,6 @@ export GIT_REVIEW_BASE=master # See gitconfig
 
 # PATH
 
-PATH="$COMPOSER_HOME/vendor/bin:$PATH"
-PATH="$GOBIN:$PATH"
-PATH="$NPM_BIN:$PATH"
-
-
+export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
+export PATH="$GOBIN:$PATH"
+export PATH="$NPM_BIN:$PATH"
