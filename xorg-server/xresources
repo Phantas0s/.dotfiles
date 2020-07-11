@@ -47,7 +47,7 @@ URxvt*linespace: 0
 URxvt*geometry: 100x30
 URxvt*borderLess: false
 URxvt*externalBorder: 0
-URxvt*internalBorder: 0
+URxvt*internalBorder: 4
 
 URxvt*scrollBar: false
 
@@ -101,11 +101,11 @@ URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
 URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_left
 URxvt.keysym.Control-Shift-L: perl:tabbedex:move_tab_right
 
-URxvt*tabbed.tabbar-fg: 15
-URxvt*tabbed.tabbar-bg: 236
-URxvt*tabbed.tab-fg: 110
-URxvt*tabbed.tab-bg: 236
-URxvt*tabbed.transparent:true
-URxvt*tabbed.new-button: false
+URxvt*tabbedex.tabbar-fg: 15
+URxvt*tabbedex.tabbar-bg: 236
+URxvt*tabbedex.tab-fg: 110
+URxvt*tabbedex.tab-bg: 236
+URxvt*tabbedex.transparent:true
+URxvt*tabbedex.new-button: false
 
 URxvt.letterSpace: -1
