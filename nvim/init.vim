@@ -271,6 +271,9 @@ vmap u y
 vnoremap <silent> * :<C-u>call general#VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
+" contents of any register are inserted literally (prevent clipboard hacking)
+inoremap <C-r> <C-r><C-o>
+
 " Create tags for help text
 nnoremap <leader>H execute "helptags" expand("%:h")
 
