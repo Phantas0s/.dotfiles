@@ -577,3 +577,36 @@ zshcomp() {
         printf "%-32s %s\n" $command $completion
     done | sort
 }
+
+
+
+## TODO - TO REWORK
+## Replace _ with underscore for filenames
+
+# SOURCE=$1
+# FILE_LIST="/tmp/find_list"
+
+# if [[ ! -e "$SOURCE" ]]; # First check if the target does exist in the file system
+# then
+# 	echo "Target does not exist."
+# 	exit 1
+# fi
+
+# if [[ -d $SOURCE ]]; # Checking if target is a directory
+# then
+# 	pushd "$SOURCE"
+# 	find . -maxdepth 1 -type f -name "*" -printf %f"\n" > "$FILE_LIST"
+# 	while read -r FILE
+# 	do
+# 		if [[ ! -z $FILE ]]; then
+# 			rename 's/ /_/g' "$FILE"
+# 		fi
+# 	done < "$FILE_LIST"
+# 	rm "$FILE_LIST"
+#         popd
+# 	exit 0
+# elif [[ ! -d $SOURCE ]]; 
+# then
+# 	echo "Error! Please enter directory as input."
+# 	exit 1
+# fi	
