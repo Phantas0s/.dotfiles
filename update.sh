@@ -15,8 +15,8 @@ dot_mes_warn "Activate sudo"
 sudo echo "Sudo activated!"
 
 dot_mes_update "npm packages"
-npm install -g npm
-npm update -g
+sudo npm install -g npm
+sudo npm update -g
 
 dot_mes_update "composer packages"
 sudo composer self-update
