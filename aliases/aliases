@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # +--------+
 # | System |
 # +--------+
@@ -7,7 +9,12 @@ alias restart='sudo reboot'
 alias suspend='sudo pm-suspend'
 
 alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
-alias xpropc='xprop | grep WM_CLASS'            # xprop class
+
+# +-----+
+# | X11 |
+# +-----+
+
+alias xpropc='xprop | grep WM_CLASS' # display xprop class
 
 # +-----+
 # | Zsh |
