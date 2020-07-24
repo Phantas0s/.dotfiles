@@ -19,6 +19,8 @@ if isdirectory($VIMCONFIG . "/plugged/neomake")
     call neomake#configure#automake('w')
 endif
 
+command! -bang -nargs=* -complete=file Make NeomakeProject <args>
+
 " +-----+
 " | PHP |
 " +-----+
@@ -200,6 +202,7 @@ let g:neomake_clojure_joker_maker = {
 
 let g:neomake_vim_enabled_makers = ['vint']
 
+
 "-----------------
 " Spinner!!!
 "-----------------
@@ -248,3 +251,4 @@ augroup neomake_hooks
     autocmd User NeomakeFinished :call StopSpinner()
     " autocmd User NeomakeFinished :echom "Build complete"
 augroup END
+
