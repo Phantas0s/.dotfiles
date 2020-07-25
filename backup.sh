@@ -17,6 +17,7 @@ backup() {
         # $MEDIA/test test-test/test
         $HOME/Documents home/Documents
         $HOME/Nextcloud home/nextcloud
+        $HOME/workspace home/workspace
         $MEDIA/assets assets
         $MEDIA/Documentaries documentaries
         $MEDIA/Ebooks ebooks
