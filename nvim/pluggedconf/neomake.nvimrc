@@ -202,10 +202,16 @@ let g:neomake_clojure_joker_maker = {
 
 let g:neomake_vim_enabled_makers = ['vint']
 
+" +----------+
+" | Markdown |
+" +----------+
 
-"-----------------
-" Spinner!!!
-"-----------------
+let g:neomake_markdown_enabled_makers = ['proselint'] 
+
+" +-------------+
+" | Spinner !!! |
+" +-------------+
+
 let s:spinner_index = 0
 let s:active_spinners = 0
 let s:spinner_states = ['|', '/', '--', '\', '|', '/', '--', '\']
