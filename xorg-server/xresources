@@ -41,10 +41,10 @@
 
 URxvt*font: xft:Inconsolata Nerd Font:style=Medium:size=14:pixelsize=16:antialias=true
 
-URxvt*intensityStyles: true
-URxvt*linespace: 0
+! URxvt*intensityStyles: true
+! URxvt*linespace: 0
 
-URxvt*geometry: 100x30
+! URxvt*geometry: 100x30
 URxvt*borderLess: false
 URxvt*externalBorder: 0
 URxvt*internalBorder: 4
@@ -52,38 +52,44 @@ URxvt*internalBorder: 4
 URxvt*scrollBar: false
 
 URxvt*cursorColor: #ffffff
-URxvt*cursorColor2: #000000
-URxvt*cursorBlink: false
-URxvt*reverseVideo: false
+! URxvt*cursorColor2: #000000
+! URxvt*cursorBlink: false
+! URxvt*reverseVideo: false
 
+! Useful for transparency
 URxvt*depth: 32
-
 URxvt.background: [85]#181815
-!URxvt*background: rgba:0031/0032/0034/ddee
 
-URxvt*pointerBlank: false
-URxvt*inheritPixmap: false
+! URxvt*pointerBlank: false
+! DEPRECATED - might be used by transparency - use URxvt*transparent: true
+!URxvt*inheritPixmap: false
 
-URxvt*insecure: false
+! Might be used by tmux
 URxvt*termName: rxvt-unicode
-URxvt*loginShell: true
-URxvt*hold: false
+
+! Might be used by tmux?
+! We don't need to source zprofile each time terminal is open
+! URxvt*loginShell: true
+
+! URxvt*hold: false
 URxvt*saveLines: 5000
-URxvt*jumpScroll: true
-URxvt*skipScroll: true
-URxvt*scrollTtyOutput: false
-URxvt*scrollWithBuffer: false
-URxvt*scrollTtyKeypress: true
-URxvt*mouseWheelScrollPage: false
 
-URxvt*tripleclickwords: true
-URxvt*cutchars: ()*,<>[]{}|`""''
-URxvt*pastableTabs: false
-URxvt*mapAlert: false
+! +--------+
+! | Scroll |
+! +--------+
 
-URxvt*urgentOnBell: false
-URxvt*visualBell: false
-URxvt*utmpInhibit: false
+! URxvt*jumpScroll: true
+! URxvt*skipScroll: true
+! URxvt*scrollTtyOutput: false
+! URxvt*scrollWithBuffer: false
+! URxvt*scrollTtyKeypress: true
+
+! URxvt*tripleclickwords: true
+! URxvt*cutchars: ()*,<>[]{}|`""''
+
+! For tabs
+! URxvt*pastableTabs: false
+! URxvt*mapAlert: false
 
 !! Perl Extensions !!
 URxvt*perl-ext-common: default,tabbedex,resize-font
@@ -108,4 +114,4 @@ URxvt*tabbedex.tab-bg: 236
 URxvt*tabbedex.transparent:true
 URxvt*tabbedex.new-button: false
 
-URxvt.letterSpace: -1
+URxvt*letterSpace: -1
