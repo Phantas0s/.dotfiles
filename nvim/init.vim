@@ -385,15 +385,21 @@ cnoremap w!! execute ':w suda://%'
 " +--------------+
 
 " colorscheme
-colo hypnos
+colorscheme hypnos
 
+" no swap file
+set noswapfile
 " set the directory where the swap file will be saved
-set backupdir=$VIMCONFIG/backup//
-set directory=$VIMCONFIG/swap//
+set backupdir=$VIMCONFIG/backup
+set directory=$VIMCONFIG/swap
 
 " save undo trees in files
 set undofile
-set undodir=$VIMCONFIG/undo//
+set undodir=$VIMCONFIG/undo
+
+" number of undo saved
+set undolevels=10000 " How many undos
+set undoreload=10000 " number of lines to save for undo
 
 " set line number
 set number
@@ -416,10 +422,6 @@ nnoremap <leader>sl :so $VIMCONFIG/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
 
 " when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround
-
-" number of undo saved in memory
-set undolevels=10000 " How many undos
-set undoreload=10000 " number of lines to save for undo
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -445,9 +447,6 @@ set noshowmode
 
 " Keep cursor more in middle when scrolling down / up
 set scrolloff=999
-
-" no swap file! This is just annoying
-set noswapfile
 
 " write automatically when quitting buffer
 set autowrite
