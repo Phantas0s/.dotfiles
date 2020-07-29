@@ -37,7 +37,11 @@ export GIMP_VERSION="2.10"
 
 # X11
 
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+
+# Racket
+
+export PLTUSERHOME="$XDG_DATA_HOME"/racket
 
 # golang
 

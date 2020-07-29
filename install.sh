@@ -48,7 +48,7 @@ fi
 . $DOTFILES/install/install-zsh.sh
 . $DOTFILES/install/install-from-cloud.sh
 . $DOTFILES/install/install-fonts.sh
-. $DOTFILES/install/install-xorg.sh
+. $DOTFILES/install/install-X11.sh
 
 dot_is_installed git && dot_install projects
 dot_is_installed lxappearance && dot_install theme
