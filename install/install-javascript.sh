@@ -1,44 +1,19 @@
 #!/bin/bash
 
-rm $HOME/.tern-project &>/dev/null
-rm $HOME/.eslintrc.json &>/dev/null
-
-ln -s $DOTFILES/javascript/.tern-project $HOME
-ln -s $DOTFILES/javascript/.eslintrc.json $HOME
+ln -sf $DOTFILES/javascript/.tern-project $HOME
+ln -sf $DOTFILES/javascript/.eslintrc.json $HOME
 
 # Works better than eslint for React
-if [ ! -d $NPM_PATH/lib/node_modules/babel-eslint ];
-then
-    npm i -g babel-eslint
-fi
+[ ! -d $NPM_PATH/lib/node_modules/babel-eslint ] && npm i -g babel-eslint
 
-if [ ! -d $NPM_PATH/lib/node_modules/eslint-plugin-html ];
-then
-    npm i -g eslint-plugin-html
-fi
+[ ! -d $NPM_PATH/lib/node_modules/eslint-plugin-html ] && npm i -g eslint-plugin-html
 
-if [ ! -f $NPM_PATH/bin/eslint ];
-then
-   npm i -g eslint
-fi
+[ ! -f $NPM_PATH/bin/eslint ] && npm i -g eslint
 
-if [ ! -f $NPM_PATH/bin/bars ];
-then
-   npm i -g https://github.com/jez/bars.git
-fi
+[ ! -f $NPM_PATH/bin/bars ] && npm i -g https://github.com/jez/bars.git
 
+[ ! -d $NPM_PATH/lib/node_modules/neovim ] && npm i -g neovim
 
-if [ ! -d $NPM_PATH/lib/node_modules/neovim ];
-then
-    npm i -g neovim
-fi
+[ ! -d $NPM_PATH/lib/node_modules/typescript ] && npm i -g typescript
 
-if [ ! -d $NPM_PATH/lib/node_modules/typescript ];
-then
-    npm i -g typescript
-fi
-
-if [ ! -d $NPM_PATH/lib/node_modules/bash-language-server ];
-then
-    npm i -g bash-language-server
-fi
+[ ! -d $NPM_PATH/lib/node_modules/bash-language-server ]  && npm i -g bash-language-server

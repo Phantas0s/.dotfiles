@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #TODO separate all of that
+#TODO from cloud shouldn't exist
 
 rm $XDG_CONFIG_HOME/.tmuxp &>/dev/null
 

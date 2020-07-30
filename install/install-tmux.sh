@@ -1,7 +1,5 @@
 #!/bin/bash
 
-rm $XDG_CONFIG_HOME/tmux/tmux.conf &>/dev/null
-
 # From cloud
 ln -sf $DOTFILES_CLOUD/tmuxp $XDG_CONFIG_HOME/tmuxp
 
@@ -12,7 +10,7 @@ if [ ! -d $XDG_CONFIG_HOME/tmux ]
     $XDG_CONFIG_HOME/tmux/plugins/tpm/bin/install_plugins
 fi
 
-ln -s $DOTFILES/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
+ln -sf $DOTFILES/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
 
 if [ ! -d $XDG_CONFIG_HOME/tmux/plugins/tpm ]
 then

@@ -1,6 +1,5 @@
 #!/bin/bash
 FREEMIND_CONFIG_DIR=$HOME/.freemind
 
-rm -rf $FREEMIND_CONDIG_DIR
 mkdir -p $FREEMIND_CONFIG_DIR
 ln -sf $DOTFILES/freemind/* $FREEMIND_CONFIG_DIR/

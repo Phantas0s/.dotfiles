@@ -1,9 +1,8 @@
 #!/bin/bash
-rm $COMPOSER_HOME/composer.json &>/dev/null
 
 # TODO experienced one crash here - might help?
 # [ ! -d $COMPOSER_HOME ] && mkdir -p $COMPOSER_HOME
-ln -s $DOTFILES/composer/composer.json $COMPOSER_HOME/composer.json
+ln -sf $DOTFILES/composer/composer.json $COMPOSER_HOME/composer.json
 
 if [ ! -f $COMPOSER_HOME/vendor/bin/cgr ]
 then
