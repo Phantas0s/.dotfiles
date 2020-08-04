@@ -185,6 +185,7 @@ Plug 'lambdalisue/suda.vim'
 
 Plug 'tpope/vim-scriptease'
 
+Plug 'lpinilla/vim-codepainter'
 
 call plug#end()
 " }}}

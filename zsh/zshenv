@@ -51,8 +51,9 @@ export GOCACHE="$XDG_CACHE_HOME/go-build"
 
 # NPM
 
-export NPM_PATH="$XDG_CONFIG_HOME/.node_modules"
-export NPM_BIN="$XDG_CONFIG_HOME/.node_modules/bin"
+export NPM_PATH="$XDG_CONFIG_HOME/node_modules"
+export NPM_BIN="$XDG_CONFIG_HOME/node_modules/bin"
+export NPM_CONFIG_PREFIX="$XDG_CONFIG_HOME/node_modules"
 
 # git
 export GIT_REVIEW_BASE=master # See gitconfig

@@ -22,8 +22,8 @@ screencast() {
 
     if [ ! -z $1 ]; then
        [ $screen -eq 1 ] && offset="+0,$(( $bigger_height -  $(screenres 1 | awk -Fx '{print $2}')))"
-       [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
-       ffmpeg -f x11grab -s $(screenres $screen) -i :0.0$offset -f pulse -sample_rate 44100 -i default -c:v libx264 -preset ultrafast -c:a aac $1
+       # [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
+       ffmpeg -f x11grab -framerate 60 -s $(screenres $screen) -i :0.0$offset -f pulse -sample_rate 44100 -i default -c:v libx264 -preset ultrafast -c:a aac $1
 
        # Other codecs
        # -c:v ffvhuff   # lossless but HUGE
