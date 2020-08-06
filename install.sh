@@ -1,15 +1,17 @@
 #!/bin/bash
+
 # Copy the default config file if not present already
 
 ############
 # includes #
 ############
 
-[ ! -f ./install_config ] && cp ./install_config.diff ./install_config
+[ ! -f install_config ] && cp install_config.dist install_config
 
 source ./install_config
 source ./colors.sh
 source ./install_functions.sh
+source ./zsh/zshenv
 
 ################
 # presentation #
