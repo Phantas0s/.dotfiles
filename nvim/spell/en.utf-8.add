@@ -56,3 +56,9 @@ htop
 scratchpad
 urxvtc
 bindsym
+plugins
+IDE
+Plugin
+plugin
+fzf
+quickfix
