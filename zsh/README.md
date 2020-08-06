@@ -185,6 +185,18 @@ Require cwebp
 
 Convert all images with specific extension in the current folder to webp (by copy). `<image_extension>` is not manddatory, default `jpg`.
 
+## Download
+
+### Youtube dl
+
+`ydl <video_url>`
+
+Download a video with best quality from Youtube.
+
+`ydlp <playlist_url>`
+
+Download a playlist from Youtube.
+
 ## Git 
 
 `gtD <tag_name> <remote>`

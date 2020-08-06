@@ -543,12 +543,21 @@ umntmtp() {
     echo "$DIRECTORY with mtp filesystem unmounted"
 }
 
-dlplaylist() {
+ydlp() {
     if [ ! -z $1 ];
     then
         youtube-dl -o "%(autonumber)s-%(title)s.%(ext)s" "$1"
     else
-        echo "You need to specify a playlist url as argument between double quotes"
+        echo "You need to specify a playlist url as argument"
+    fi
+}
+
+ydl() {
+    if [ ! -z $1 ];
+    then
+        youtube-dl -f 22 "$1"
+    else
+        echo "You need to specify a video url as argument"
     fi
 }
 
