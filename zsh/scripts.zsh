@@ -497,19 +497,19 @@ mnt() {
 }
 
 umnt() {
-    local DIRECTORY="/mnt/"
+    local DIRECTORY="/mnt"
     if [ ! -z $1 ];
     then
         DIRECTORY=$1
     fi
     MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
-    cd "/mnt/"
+    cd "/mnt"
     sudo umount $MOUNTED
     echo "$MOUNTED unmounted"
 }
 
 mntmtp() {
-    local DIRECTORY="$HOME/mnt/"
+    local DIRECTORY="$HOME/mnt"
     if [ ! -z $2 ];
     then
         local DIRECTORY=$2

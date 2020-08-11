@@ -72,7 +72,7 @@ exec --no-startup-id /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 exec --no-startup-id redshift &
 
 # launch dunst
-exec --no-startup-id dunst -config $XDG_CONFIG_HOME/.dunstrc
+exec --no-startup-id dunst
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume

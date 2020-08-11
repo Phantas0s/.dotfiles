@@ -96,7 +96,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install() }, 'branch'
 Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 
 " fzf - poweful fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '$XDG_CONFIG_HOME/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '$XDG_CONFIG_HOME/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " PHP

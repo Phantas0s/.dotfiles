@@ -115,19 +115,20 @@ bindkey -s '^p' 'fmux\n'
 # | FZF |
 # +-----+
 
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+if [ $(command -v "fzf") ]; then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+    source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
 
-command -v "fzf" >/dev/null; source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
-
-# Search with fzf and open selected file with Vim
-bindkey -s '^v' 'vim $(fzf);^M'
+    # Search with fzf and open selected file with Vim
+    bindkey -s '^v' 'vim $(fzf);^M'
+fi
 
 # Startup
 if [[ "$(tty)" = "/dev/tty1" ]];
 then
-    pgrep ssh-agent || ssh-agent
     pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/xinitrc"
+    pgrep ssh-agent || eval `ssh-agent`
 fi
 
 # Display all possible tmuxp session when opening terminal
@@ -139,4 +140,4 @@ ftmuxp
 
 source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

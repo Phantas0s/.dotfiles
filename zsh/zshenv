@@ -59,7 +59,6 @@ export NPM_CONFIG_PREFIX="$XDG_CONFIG_HOME/node_modules"
 export GIT_REVIEW_BASE=master # See gitconfig
 
 # PATH
-
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"                       # COMPOSER
 export PATH="$GOBIN:$PATH"                                          # GOBIN
 export PATH="$NPM_BIN:$PATH"                                        # NPM
