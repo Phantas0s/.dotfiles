@@ -92,7 +92,8 @@ URxvt*saveLines: 5000
 ! URxvt*mapAlert: false
 
 !! Perl Extensions !!
-URxvt*perl-ext-common: default,tabbedex,resize-font
+!! URxvt*perl-ext-common: default,tabbedex,resize-font
+ URxvt*perl-ext-common: tabbedex,resize-font
 
 URxvt.keysym.C-Down:     resize-font:smaller
 URxvt.keysym.C-Up:      resize-font:bigger
