@@ -26,6 +26,7 @@ nmap <silent><leader>]t <Plug>(coc-type-definition)
 nmap <silent><leader>]i <Plug>(coc-implementation)
 nmap <silent><leader>]r <Plug>(coc-references)
 
+
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -40,6 +41,8 @@ endfunction
 " Remap for rename current word
 nmap <leader>crn <Plug>(coc-rename)
 nmap <leader>cac  <Plug>(coc-codeaction)
+
+nnoremap <leader>cpr :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 augroup coc
   autocmd!

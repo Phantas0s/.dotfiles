@@ -155,7 +155,7 @@ Plug 'bfredl/nvim-miniyank'
 " Plug 'junegunn/vim-peekaboo'
 
 " Allow multisearch in current directory / multi replace as well
-Plug 'wincent/ferret'
+Plug 'stefandtw/quickfix-reflector.vim'
 
 " Display the hexadecimal colors - useful for css and color config
 Plug 'ap/vim-css-color'
@@ -476,4 +476,9 @@ augroup numbertoggle
 augroup END
 
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+if executable("rg") 
+    set grepprg=rg\ --vimgrep
+endif
+
 " }}}
