@@ -6,4 +6,4 @@
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "zsh/prompt"]
 	path = zsh/prompt
-	url = git@github.com:Phantas0s/purification
+	url = https://github.com/Phantas0s/purification
