@@ -1,7 +1,6 @@
 #  Doftiles
 
 [![Phantas0s rice](screen_780.png)](screen.png)
-*Click for the bigger version.*
 
 ## What's in there?
 
