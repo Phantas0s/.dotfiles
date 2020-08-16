@@ -32,15 +32,23 @@ screencast() {
     fi
 }
 
-all_screencast() {
-    [ ! -z $1 ] && ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -f pulse -i default $1 && return
-}
-
 oscreencast() {
     if [ ! -z $1 ] ; then
         ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 $1
     else
         echo "You need to precise an output file as first argument - eg 'example.mkv'"
+    fi
+}
+
+vidvolup() {
+    output=output.mkv
+    if [ ! -z $3 ] ; then
+        output=$3
+    fi
+    if [ ! -z $1 ] && [ ! -z $2 ] ; then
+        ffmpeg -i $1 -vol $(echo "256 + ((256 * $2) / 100)" | bc) -vcodec copy $output
+    else 
+        echo "You need to precise an output file as first argument and percentage of vol up as secong - eg 'example.mkv 100' to double the volume"
     fi
 }
 

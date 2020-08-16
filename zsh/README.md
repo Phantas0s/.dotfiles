@@ -126,6 +126,10 @@ Take a screencast and save it in the `<output_file>`.
 
 The choice of screen with `<screen_number>` is very much tailored for my own needs, with a small screen as first screen and big screen as second.
 
+`vidvolup <input_file> <percentage_volume_increase> <output_file=output.mkv`
+
+Increase the volume of a video and save the new video as <output_file>. For example, `vidvolup input.mkv 100 output.mkv` will increase the volume of 100% and output the result as output.mkv. In fact, the volume will be doubled.
+
 ## Images
 
 ### Screenshot 
