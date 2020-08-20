@@ -32,7 +32,7 @@
         },
         "phpactor": {
             "trace.server": "verbose",
-            "command": "$VIMCONFIG/plugged/phpactor/bin/phpactor",
+            "command": "~/.config/nvim/plugged/phpactor/bin/phpactor",
             "args": ["language-server"],
             "filetypes": ["php","cucumber"],
             "initializationOptions": {

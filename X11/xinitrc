@@ -2,7 +2,6 @@
 urxvtd -o -q -f
 
 # merge .Xressources file
-# [[ -f $XDG_CONFIG_HOME/X11/xresources ]] && xrdb -merge -I$XDG_CONFIG_HOME/X11 $XDG_CONFIG_HOME/X11/xresources
 [[ -f $XDG_CONFIG_HOME/X11/xresources ]] && xrdb -merge $XDG_CONFIG_HOME/X11/xresources
 
 # maps caps lock to escape for vim 
