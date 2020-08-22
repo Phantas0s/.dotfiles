@@ -143,6 +143,7 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 
 " Nerdtree + modifications 
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
+" Plug 'vifm/vifm.vim'
 
 " Status bar
 Plug 'itchyny/lightline.vim'
@@ -185,7 +186,7 @@ Plug 'lambdalisue/suda.vim'
 
 Plug 'tpope/vim-scriptease'
 
-Plug 'lpinilla/vim-codepainter'
+" Plug 'lpinilla/vim-codepainter'
 
 call plug#end()
 " }}}
@@ -204,7 +205,7 @@ if exists("g:did_load_filetypes")
   filetype off
   filetype plugin indent off
 endif
-set rtp+=$VIMCONFIG/godoctor.vim
+set runtimepath+=$VIMCONFIG/godoctor.vim
 filetype on
 filetype plugin indent on
 

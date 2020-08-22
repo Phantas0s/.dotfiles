@@ -153,6 +153,12 @@ let g:go_fmt_options = {
 nnoremap <leader>gg :Neomake<space>
 autocmd FileType go nmap <buffer><leader>go :exec "Neomake golangci"<cr>
 
+" +----+
+" | sh |
+" +----+
+
+let g:neomake_sh_enabled_makers = ['shellcheck']
+
 " +-----+
 " | SQL |
 " +-----+
