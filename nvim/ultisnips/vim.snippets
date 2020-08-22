@@ -25,3 +25,7 @@ endsnippet
 snippet <l "leader"
 <leader>${1}
 endsnippet
+
+snippet plug "vim-plug Paste Plugin" b
+Plug '${1:`!v substitute(@+, '\([^\/]*\/\/[^\/]*\/\)\([^/]*\/[^/]*\)\(.*\)', '\2', '' )`}'
+endsnippet
