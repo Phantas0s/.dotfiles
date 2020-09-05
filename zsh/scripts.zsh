@@ -390,8 +390,8 @@ pgdump() {
     pg_dump -U postgres -h localhost x_loc_0bdf08de > pulsecheck_service_test.sql 
 }
 
-git-heatmap() {
-$DOTFILES/bash/scripts/heatmap.sh
+githeat() {
+    $DOTFILES/bash/scripts/heatmap.sh
 }
 
 colorblocks() {
@@ -597,6 +597,23 @@ zshcomp() {
     do
         printf "%-32s %s\n" $command $completion
     done | sort
+}
+
+wavflac() {
+    for file in "$@"; do
+        local filename=${file%\.*}
+        local extension="${file##*.}"
+        ffmpeg -i "$filename.wav" -af aformat=s32:176000 "$filename.flac"
+    done
+}
+
+rmwavflac() {
+    for file in "$@"; do
+        local filename=${file%\.*}
+        local extension="${file##*.}"
+        ffmpeg -i "$filename.wav" -af aformat=s32:176000 "$filename.flac"
+        rm -f $file
+    done
 }
 
 touchfree() {

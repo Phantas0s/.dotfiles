@@ -252,9 +252,7 @@ assign [class="Inkscape" instance="org.inkscape.Inkscape"] → $design
 assign [class="libreoffice"] → $office
 assign [class="Joplin" instance="joplin"] → $office
 assign [class="calibre" instance="calibre-gui"] → $office
-# assign [class="okular" instance="okular"] → $office
 
-assign [class="calibre" instance="calibre-ebook-viewer"] → $mindmap
 assign [instance="FreeMind"] → $mindmap
 
 ####################

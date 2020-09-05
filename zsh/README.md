@@ -155,17 +155,16 @@ If `<overwrite>` argument has a value, the image won't be rename and will overwr
 Resize every images with the same extension in the current folder
 
 `imgoptimize <file>`
-Optimize the image (conv -strip -interlace Plane -quality 85%) and create a new image
+Optimize the image (`conv -strip -interlace Plane -quality 85%`) and create a new image
 
 `Imgoptimize <file>`
-Optimize the image (conv -strip -interlace Plane -quality 85%).
+Optimize the image (`conv -strip -interlace Plane -quality 85%`).
 
 `imgoptimizeall <extension>`
-Optimize the images with same extension in current folder(conv -strip -interlace Plane -quality 85%) and create new images
+Optimize the images with same extension in current folder(`conv -strip -interlace Plane -quality 85%`) and create new images
 
 `Imgoptimizeall *.<extension>`
-Optimize the images with same extension in current folder(conv -strip -interlace Plane -quality 85%) and *replace* them
-
+Optimize the images with same extension in current folder(`conv -strip -interlace Plane -quality 85%`) and *replace* them
 
 ### Image resize all
 
@@ -189,6 +188,18 @@ Require cwebp
 
 Convert all images with specific extension in the current folder to webp (by copy). `<image_extension>` is not manddatory, default `jpg`.
 
+## Music
+
+`wavflac <args>`
+
+Get one or more argument. Convert a wav file into a flac file using ffmpeg.
+
+`rmwavflac <args>`
+
+Get one or more argument. Convert a wav file into a flac file using ffmpeg.
+
+Delete the wav file when conversion done.
+
 ## Download
 
 ### Youtube dl
@@ -210,6 +221,10 @@ Delete a tag locally AND on the remote. `<remote>` argument is not mandatory, de
 `gtd <tag_name> <remote>`
 
 Delete a tag ONLY on the remote. `<remote>` argument is not mandatory, default `origin`.
+
+`githeat`
+
+Display a git heatmap
 
 ### FZF 
 
