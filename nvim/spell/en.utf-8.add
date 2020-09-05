@@ -63,3 +63,5 @@ plugin
 fzf
 quickfix
 distro
+pacman
+microservices
