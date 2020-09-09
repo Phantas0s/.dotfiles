@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # checkout git branch (including remote branches) with FZF
 fgco() {
   local branches=$(git branch --all | grep -v HEAD) &&
@@ -67,15 +69,15 @@ ftmuxp() {
     fi
 
     # get the IDs
-    ID="`ls $XDG_CONFIG_HOME/tmuxp | sed -e 's/\.yml$//'`"
+    ID="$(ls $XDG_CONFIG_HOME/tmuxp | sed -e 's/\.yml$//')"
     if [[ -z "$ID" ]]; then
         tmux new-session
     fi
 
-    local create_new_session="Create New Session"
+    create_new_session="Create New Session"
 
     ID="${create_new_session}\n$ID"
-    ID="`echo $ID | fzf | cut -d: -f1`"
+    ID="$(echo $ID | fzf | cut -d: -f1)"
 
     if [[ "$ID" = "${create_new_session}" ]]; then
         tmux new-session
