@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # icon="$HOME/.i3/lock.png"
 img=/tmp/i3lock.png
 

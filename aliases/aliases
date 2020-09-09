@@ -20,7 +20,6 @@ alias xpropc='xprop | grep WM_CLASS' # display xprop class
 # | Zsh |
 # +-----+
 
-alias sh='zsh'                                                # Make sure I use zsh when calling a script with sh
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index # directory stack
 

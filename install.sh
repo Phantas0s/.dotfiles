@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Copy the default config file if not present already
 
