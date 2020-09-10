@@ -432,7 +432,7 @@ set smartcase
 " set list
 set list listchars=tab:\┆\ ,trail:·,nbsp:±
 
-" doesn't prompt a warning when opening a file and the current file was written but not saved 
+" doesn't prompt a warning when opening a file and the current file was modified but not saved 
 set hidden
 
 " avoid delay

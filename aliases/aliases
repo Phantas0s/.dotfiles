@@ -205,14 +205,17 @@ alias docker-compose-dev='docker-compose -f docker-compose-dev.yml' # run a diff
 # | Personal |
 # +----------+
 
-alias work="$HOME/workspace"        # general workspace
-alias dot="$HOME/.dotfiles"         # dotfiles
-alias media="/run/media/$USER"
+# Folders
+alias work="$HOME/workspace"
+alias doc="$HOME/Documents"
+alias dow="$HOME/Downloads"
+alias dot="$HOME/.dotfiles"
 
-# My personal mindmaps
+# Mindmaps
 alias freebrain="freemind $CLOUD/knowledge_base/_BRAINSTORMING/*.mm &"
 alias freelists="freemind $CLOUD/knowledge_base/_LISTS/*.mm &"
 alias freepain="freemind $CLOUD/knowledge_base/_PROBLEMS/*.mm &"
 
+# Golang
 alias gosrc="$GOPATH/src/" # golang src
-alias gobin="$GOPATH/bin/" # golang gin
+alias gobin="$GOPATH/bin/" # golang bin
