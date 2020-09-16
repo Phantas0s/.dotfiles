@@ -311,15 +311,8 @@ nnoremap tL :tabm<CR>
 " windows navigation
 " use ctrl + hjkl
 
-" close all windows except the current one
-nnoremap <leader>wco :only<cr>
-nnoremap <leader>wcc :cclose<cr>
-
-" windows creation
 " create horizontal window
-nnoremap <leader>wh <c-w>s
-" create vertival window
-nnoremap <leader>wv <c-w>v
+nnoremap <c-w>h <c-w>s
 
 " delete character after cursor in insert mode
 inoremap <C-d> <Del>
