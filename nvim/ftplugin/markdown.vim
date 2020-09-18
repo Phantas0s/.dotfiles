@@ -34,6 +34,4 @@ let g:tagbar_type_markdown = {
 setlocal number norelativenumber
 setlocal spell
 setlocal spelllang=en_us
-setlocal formatoptions=t1
-setlocal textwidth=80
 setlocal noautoindent
