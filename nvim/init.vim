@@ -21,56 +21,71 @@ call plug#begin("$VIMCONFIG/plugged")
 " display the result when searching
 Plug 'henrik/vim-indexed-search'
 
-" syntax highlighting for tmux.conf + other cool options
-Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
-" seemless navigation between vim windows / tmux pane
-Plug 'christoomey/vim-tmux-navigator'
+" general
+Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
+Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
+Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
+Plug 'tpope/vim-commentary' " keystroke to comment automatically
 
-" wrapper for git and display git diff in the left gutter
-Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify'
-" Display commits for project / file
-Plug 'junegunn/gv.vim'
-Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
+Plug 'wellle/targets.vim' " add new text object (can delete between comma with di, for example)
+Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text
+Plug 'machakann/vim-swap' " swap arguments in parenthesis
+Plug 'chaoren/vim-wordmotion' " camel case motion
+Plug 'honza/vim-snippets' " snippets
+Plug 'itchyny/lightline.vim' " Status bar
+Plug 'bfredl/nvim-miniyank' " Register management
+Plug 'stefandtw/quickfix-reflector.vim' " Allow multisearch in current directory / multi replace as well
+Plug 'lambdalisue/suda.vim' " Write file with sudo
+Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
+Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
+Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
+Plug 'AndrewRadev/splitjoin.vim' " Split arrays in PHP / struct in Go / other things
+" Plug 'lpinilla/vim-codepainter'
 
-" surrounding text objects with whatever you want (paranthesis, quotes, html tags...)
-Plug 'tpope/vim-surround'
+" undo tree
+Plug 'simnalamburt/vim-mundo' " Undo tree display
 
-" easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
-Plug 'tpope/vim-abolish'
+" outliners
+Plug 'majutsushi/tagbar'
+Plug 'liuchengxu/vista.vim' " Use LSP
 
-" the . command can repeat whatever you want!
-" http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
-Plug 'tpope/vim-repeat'
+" navigation
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
+" Plug 'vifm/vifm.vim'
+Plug 'moll/vim-bbye' " Close the current buffer
+Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
+" replace f F t T - don't work well with dot though :'(
+" Plug 'yangmillstheory/vim-snipe'
+Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 
-" keystroke to comment automatically depending on the file you're in
-Plug 'tpope/vim-commentary'
+" tmux
+Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
+Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
 
-" Highlight briefly every yank text
-Plug 'machakann/vim-highlightedyank'
+" project management
+Plug 'amiorin/vim-project' | Plug 'mhinz/vim-startify' " vim project for one specific vimrc / project + startify for startup cow
 
-" swap arguments in parenthesis
-Plug 'machakann/vim-swap'
-
-" add new text object (can delete between comma with di, for example)
-Plug 'wellle/targets.vim'
-
-" camel case motion
-Plug 'chaoren/vim-wordmotion'
-
-" Close the current buffer
-Plug 'moll/vim-bbye'
-
-" Match more stuff with % (html tag, LaTeX...)
-Plug 'andymass/vim-matchup'
-
-" vim project for one specific vimrc / project + startify for startup cow
-Plug 'amiorin/vim-project' | Plug 'mhinz/vim-startify'
-
-" Asynchronous linting for every languages
+" compiler
 Plug 'neomake/neomake'
 
-" snippets
-Plug 'honza/vim-snippets'
+" git
+Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' " wrapper for git and display git diff in the left gutter
+Plug 'junegunn/gv.vim' " Display commits for project / file
+Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
+
+" syntax highlighting
+Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
+Plug 'chr4/nginx.vim' " nginx 
+Plug 'wgwoods/vim-systemd-syntax' " systemd 
+Plug 'cespare/vim-toml' " toml 
+
+" lsp
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install() }, 'branch': 'release'}, 
+Plug 'neoclide/coc.nvim',
+Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
+
+" fzf
+Plug 'junegunn/fzf.vim'
 
 " markdown / writting
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
@@ -81,23 +96,6 @@ Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
-" colors for i3 config file
-Plug 'PotatoesMaster/i3-vim-syntax'
-" nginx syntax colors
-Plug 'chr4/nginx.vim'
-" systemd unit file syntax highlighting
-Plug 'wgwoods/vim-systemd-syntax'
-" toml syntax highlighting
-Plug 'cespare/vim-toml'
-
-" LSP
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install() }, 'branch': 'release'}, 
-Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
-
-" fzf - poweful fuzzy finder
-" Plug 'junegunn/fzf', { 'dir': '$XDG_CONFIG_HOME/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 
 " PHP
 " Plug 'joonty/vdebug'
@@ -137,56 +135,12 @@ Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
 " GDScript (Godot Game Engine)
 " Plug 'calviken/vim-gdscript3'
 
-" Outliners
-Plug 'majutsushi/tagbar'
-Plug 'liuchengxu/vista.vim' " Use LSP
-
-" Nerdtree + modifications 
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
-" Plug 'vifm/vifm.vim'
-
-" Status bar
-Plug 'itchyny/lightline.vim'
-
-" Undo tree display
-Plug 'simnalamburt/vim-mundo'
-
-" Register management
-Plug 'bfredl/nvim-miniyank'
-" Plug 'junegunn/vim-peekaboo'
-
-" Allow multisearch in current directory / multi replace as well
-Plug 'stefandtw/quickfix-reflector.vim'
-
-" Display the hexadecimal colors - useful for css and color config
-Plug 'ap/vim-css-color'
-
-" Easy way to rezise and exchange windows
-Plug 'simeji/winresizer'
-
-" replace f F t T - don't work well with dot though :'(
-" Plug 'yangmillstheory/vim-snipe'
-
-" Split arrays in PHP / struct in Go / other things
-Plug 'AndrewRadev/splitjoin.vim'
-
-" Open man with vim using vman (need to be configured in zsh boot)
-Plug 'jez/vim-superman'
-
-" CSV plugin
+" CSV 
 Plug 'chrisbra/csv.vim'
 
-" Plug to dim colors of not-focused windows
-Plug 'blueyed/vim-diminactive'
+" VimScript
+Plug 'tpope/vim-scriptease' " Debug vimscript
 
-" Write file with sudo
-Plug 'lambdalisue/suda.vim'
-
-" Plug 'ActivityWatch/aw-watcher-vim'
-
-Plug 'tpope/vim-scriptease'
-
-" Plug 'lpinilla/vim-codepainter'
 
 call plug#end()
 " }}}
