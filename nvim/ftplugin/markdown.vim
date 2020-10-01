@@ -33,5 +33,3 @@ let g:tagbar_type_markdown = {
 " Write mode
 setlocal number norelativenumber
 setlocal spell
-setlocal spelllang=en_us
-setlocal noautoindent

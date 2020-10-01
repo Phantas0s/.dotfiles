@@ -141,6 +141,9 @@ Plug 'chrisbra/csv.vim'
 " VimScript
 Plug 'tpope/vim-scriptease' " Debug vimscript
 
+" Agda
+Plug 'derekelkins/agda-vim'
+
 
 call plug#end()
 " }}}
