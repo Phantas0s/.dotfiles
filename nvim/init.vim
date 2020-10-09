@@ -22,7 +22,9 @@ call plug#begin("$VIMCONFIG/plugged")
 Plug 'henrik/vim-indexed-search'
 
 " general
-Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
+
+" Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
+Plug 'machakann/vim-sandwich' 
 Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-commentary' " keystroke to comment automatically
