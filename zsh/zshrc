@@ -127,8 +127,7 @@ fi
 # Startup
 if [[ "$(tty)" = "/dev/tty1" ]];
 then
-    pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/xinitrc"
-    pgrep ssh-agent || eval `ssh-agent`
+    pgrep i3 || exec ssh-agent startx "$XDG_CONFIG_HOME/X11/xinitrc"
 fi
 
 # Display all possible tmuxp session when opening terminal
