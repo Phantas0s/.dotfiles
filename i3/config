@@ -312,6 +312,11 @@ for_window [instance="htop_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
 exec urxvtc -name htop_scratchpad -e htop
 
+# Attempt to create a launcher using URxvt
+# for_window [instance="fzf_menu"] move to scratchpad, border none
+# bindsym $mod+Shift+d [instance="fzf_menu"] scratchpad show
+# exec urxvtc -name fzf_menu -e fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1
+
 # keepass scratchpad
 for_window [class="Keepassx"] move to scratchpad
 bindsym $mod+Shift+a [class="Keepassx"] scratchpad show
