@@ -616,7 +616,7 @@ rmwavflac() {
     done
 }
 
-touchfree() {
+freetouch() {
 touch $1.mm
 cat <<EOF > $1.mm
 <map version="1.0.1">
