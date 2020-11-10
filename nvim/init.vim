@@ -57,7 +57,7 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug '
 Plug 'moll/vim-bbye' " Close the current buffer
 Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
 " replace f F t T - don't work well with dot though :'(
-" Plug 'yangmillstheory/vim-snipe'
+Plug 'yangmillstheory/vim-snipe'
 Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 
 " tmux
