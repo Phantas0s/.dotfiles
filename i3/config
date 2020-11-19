@@ -408,10 +408,11 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 ## Manual management of external displays
-set $mode_display Config monitor resolution - Home Setup (h)
+set $mode_display Config monitor resolution - Home Setup (h) - Without monitor (d)
 
 mode "$mode_display" {
     bindsym h exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/home.sh && sh $XDG_CONFIG_HOME/.fehbg
+    bindsym d exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/default.sh && sh $XDG_CONFIG_HOME/.fehbg
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
