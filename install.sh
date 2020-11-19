@@ -70,7 +70,7 @@ dot_is_installed compton && dot_install compton
 dot_is_installed bat && dot_install bat
 dot_is_installed joplin && dot_install joplin
 dot_is_installed vifm && dot_install vifm
-dot_is_installed lein && dot_install clojure-lein
+dot_is_installed clojure && dot_install clojure
 dot_is_installed freemind && dot_install freemind
 dot_is_installed redshift && dot_install redshift
 dot_is_installed mpd && dot_is_installed ncmpcpp && dot_install mpd

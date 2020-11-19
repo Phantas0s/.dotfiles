@@ -1,6 +1,0 @@
-exit
-    (bit-shift-right 16 4)
-    (bit-shift-right 32 4)
-    (bit-shift-right 32 5)
-    (bit-shift-right 32 3)
-(/ 32 8)

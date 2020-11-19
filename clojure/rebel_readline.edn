@@ -1,0 +1,1 @@
+{:key-map :viins}
