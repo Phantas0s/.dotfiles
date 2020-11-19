@@ -1,3 +1,5 @@
+" TODO to test all of that
+
 function! Expand(exp) abort
     let l:result = expand(a:exp)
     return l:result ==# '' ? '' : "file://" . l:result
