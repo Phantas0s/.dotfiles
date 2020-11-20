@@ -87,11 +87,11 @@ enable_pager = True
 [colors]
 # Completion menus.
 Token.Menu.Completions.Completion.Current = "bg:ansired ansiwhite bold"
-Token.Menu.Completions.Completion = "bg:ansigray ansiwhite"
-Token.Menu.Completions.Meta.Current = "bg:ansiyellow ansigray"
-Token.Menu.Completions.Meta = "bg:ansigray ansiwhite"
-Token.Menu.Completions.MultiColumnMeta = "bg:ansigray ansiwhite"
-Token.Menu.Completions.ProgressButton = "bg:ansiblack"
+Token.Menu.Completions.Completion = "bg:ansiblack ansiwhite"
+Token.Menu.Completions.Meta.Current = "bg:ansiyellow ansiblack"
+Token.Menu.Completions.Meta = "bg:ansiblack ansiwhite"
+Token.Menu.Completions.MultiColumnMeta = "bg:ansiblack ansiwhite"
+Token.Menu.Completions.ProgressButton = "bg:ansiwhite"
 Token.Menu.Completions.ProgressBar = "bg:ansiblue"
 Token.SelectedText = "ansiwhite bg:ansiblue"
 Token.SearchMatch = "ansiwhite bg:ansiblue"

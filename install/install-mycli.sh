@@ -1,3 +1,4 @@
 #!/bin/bash
 
-ln -sf $DOTFILES/mycli/myclirc $XDG_CONFIG_HOME/.myclirc
+# XDG_CONFIG_HOME doesn't seem to be supported...
+ln -sf $DOTFILES/mycli/myclirc $HOME/.myclirc
