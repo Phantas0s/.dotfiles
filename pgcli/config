@@ -158,6 +158,7 @@ Token.Keyword = "ansigreen bold"
 Token.String = "ansired"
 Token.String.Other = "ansired"
 Token.Number = "ansired"
+Token.Operator = "ansired"
 
 [named queries]
 tenant = SELECT * FROM tenants
