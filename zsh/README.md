@@ -214,13 +214,9 @@ Download a playlist from Youtube.
 
 ## Git 
 
-`gtD <tag_name> <remote>`
+`gtrm <tag_name> <remote>`
 
 Delete a tag locally AND on the remote. `<remote>` argument is not mandatory, default `origin`.
-
-`gtd <tag_name> <remote>`
-
-Delete a tag ONLY on the remote. `<remote>` argument is not mandatory, default `origin`.
 
 `githeat`
 

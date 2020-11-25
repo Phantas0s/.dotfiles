@@ -223,7 +223,7 @@ imgwebp() {
     for F in *.$IMG_EXT; do cwebp -q 100 $F -o `basename ${F%.$IMG_EXT}`.webp; done
 }
 
-gtD() {
+gtrm() {
     git tag -d $1
     if [ ! -z "$2" ];
     then
