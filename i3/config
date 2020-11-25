@@ -166,7 +166,7 @@ bindsym $mod+Shift+space floating toggle
 
 # Size of floating windows
 floating_minimum_size 75 x 50
-floating_maximum_size 800 x 600
+floating_maximum_size 1600 x 1200
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -247,6 +247,8 @@ assign [class="Easytag" instance="easytag"] → $multimedia
 assign [class="Thunderbird" instance="Mail"] → $office
 assign [class="Thunderbird" instance="Msgcompose"] → $office
 
+assign [class="Thunar" instance="thunar"] → $office
+
 assign [instance="nomacs"] → $design
 assign [class="digikam" instance="digikam"] → $design
 assign [class="Darktable" instance="darktable"] → $design
@@ -306,6 +308,7 @@ for_window [class="Keepassx"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Gcolor2"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
+for_window [instance="Thunar" class="Thunar"] floating enable
 
 # Terminal scratchpad with tmux and three windows: 1.term / 2.vim (on a temp file) / 3.translation CLI
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
