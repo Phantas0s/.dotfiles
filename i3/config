@@ -165,17 +165,17 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # Size of floating windows
-floating_minimum_size 75 x 50
+floating_minimum_size 400 x 300
 floating_maximum_size 1600 x 1200
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
-# bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
