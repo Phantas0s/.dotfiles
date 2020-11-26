@@ -260,6 +260,7 @@ assign [class="scribus" instance="scribus"] → $design
 assign [class="Inkscape" instance="org.inkscape.Inkscape"] → $design
 
 assign [class="libreoffice"] → $office
+assign [class="Doublecmd" instance="doublecmd"] → $office
 assign [class="Joplin" instance="joplin"] → $office
 assign [class="calibre" instance="calibre-gui"] → $office
 
