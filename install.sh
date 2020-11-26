@@ -77,3 +77,4 @@ dot_is_installed mpd && dot_is_installed ncmpcpp && dot_install mpd
 dot_is_installed gimp && dot_install gimp
 dot_is_installed zathura && dot_install zathura
 dot_is_installed doublecmd && dot_install doublecmd
+dot_install gtk
