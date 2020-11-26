@@ -104,10 +104,10 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>80</Left>
-      <Top>48</Top>
+      <Left>0</Left>
+      <Top>22</Top>
       <Width>1920</Width>
-      <Height>1133</Height>
+      <Height>1155</Height>
       <PixelsPerInch>97</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
@@ -128,7 +128,16 @@
                   <Path Filename="..">/run/media/hypnos/Video/18_Science/</Path>
                   <Path Filename="~ PERSO">/run/media/hypnos/Video/</Path>
                   <Path Filename="..">/run/media/hypnos/Video/~ PERSO/</Path>
-                  <Path Filename="~ PERSO">/run/media/hypnos/Video/</Path>
+                  <Path Filename="..">/run/media/hypnos/Video/</Path>
+                  <Path Filename="..">/run/media/hypnos/</Path>
+                  <Path Filename="..">/run/media/</Path>
+                  <Path Filename="..">/run/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="..">/run/media/hypnos/Video/</Path>
+                  <Path Filename="02. Manga">/run/media/hypnos/Show/</Path>
+                  <Path Filename="02. Anime">/run/media/hypnos/Show/02. Manga/</Path>
+                  <Path Filename="fullmetal_alchemist">/run/media/hypnos/Show/02. Manga/02. Anime/</Path>
+                  <Path Filename="[Moozzi2] Fullmetal Alchemist Brotherhood - 08 (BD 1920x1080 x.264 Flac).mkv">/run/media/hypnos/Show/02. Manga/02. Anime/fullmetal_alchemist/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -242,7 +251,7 @@
   <Fonts>
     <Main>
       <Name>Open Sans</Name>
-      <Size>10</Size>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
@@ -510,7 +519,7 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>16</Size>
+    <Size>32</Size>
     <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <Exclude>False</Exclude>
