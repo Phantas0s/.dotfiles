@@ -244,6 +244,7 @@ assign [class="Slack" instance="slack"] → $web
 assign [class="mpv" instance="gl"] → $multimedia
 assign [class="Easytag" instance="easytag"] → $multimedia
 assign [class="Steam" instance="Steam"] → $multimedia
+assign [class="Lutris" instance="lutris"] → $multimedia
 
 assign [class="Thunderbird" instance="Mail"] → $office
 assign [class="Thunderbird" instance="Msgcompose"] → $office

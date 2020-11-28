@@ -9,6 +9,6 @@ mkdir -p "$HOME/.icons"
 
 if [ ! -d "$HOME/.icons/Flatery-Yellow" ]; then
     rm -rf /tmp/Flatery
-    git clone https://github.com/cbrnix/Flatery /tmp/Flatery
+    git clone https://github.com/Phantas0s/Flatery /tmp/Flatery
     mv /tmp/Flatery/Flatery-Yellow "$HOME/.icons"
 fi
