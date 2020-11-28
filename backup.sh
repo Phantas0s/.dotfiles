@@ -18,6 +18,7 @@ backup() {
         $HOME/Documents home/Documents
         $HOME/Nextcloud home/nextcloud
         $HOME/workspace home/workspace
+        $HOME/Games/scummvm home/Games/scummvm
         $MEDIA/assets assets
         $MEDIA/Documentaries documentaries
         $MEDIA/Ebooks ebooks
