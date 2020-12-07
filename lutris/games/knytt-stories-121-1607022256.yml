@@ -1,0 +1,7 @@
+game:
+  exe: /home/hypnos/Games/internet/knytt-stories/drive_c/Program Files/Knytt Stories/Knytt
+    Stories.exe
+  prefix: /home/hypnos/Games/internet/knytt-stories
+system: {}
+wine:
+  version: lutris-5.7-11-x86_64

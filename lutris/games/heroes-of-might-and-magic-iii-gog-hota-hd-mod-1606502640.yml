@@ -1,0 +1,5 @@
+game:
+  exe: drive_c/GOG Games/HoMM 3 Complete/HD_Launcher.exe
+  prefix: /home/hypnos/Games/gog/heroes-of-might-and-magic-iii
+wine:
+  version: lutris-5.7-11-x86_64

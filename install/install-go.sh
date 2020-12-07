@@ -26,7 +26,6 @@ binaries=(
     mvdan.cc/unparam
     github.com/fatih/motion
     github.com/raviqqe/muffet
-    golang.org/x/tools/cmd/gopls
 )
 
 

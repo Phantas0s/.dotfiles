@@ -1,0 +1,6 @@
+system: {}
+wine:
+  Desktop: false
+  WineDesktop: 1920x1200
+  dxvk: false
+  esync: false

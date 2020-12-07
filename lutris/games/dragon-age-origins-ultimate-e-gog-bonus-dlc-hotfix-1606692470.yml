@@ -1,0 +1,9 @@
+game:
+  exe: drive_c/GOG Games/Dragon Age Origins/DAOriginsLauncher.exe
+  prefix: /home/hypnos/Games/gog/dragon-age-origins-ultimate-edition
+system: {}
+wine:
+  Desktop: false
+  WineDesktop: 1920x1080
+  dxvk: false
+  version: lutris-5.7-11-x86_64

@@ -1,0 +1,9 @@
+game:
+  arch: auto
+  exe: /home/hypnos/Games/internet/hyper-princess-pitch/pitch gm5.exe
+  working_dir: ~/Games/internet/hyper-princess-pitch
+system: {}
+wine:
+  Desktop: true
+  WineDesktop: 1920x1080
+  version: lutris-5.7-11-x86_64

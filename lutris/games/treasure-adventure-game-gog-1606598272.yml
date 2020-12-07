@@ -1,0 +1,6 @@
+game:
+  exe: drive_c/GOG Games/Treasure Adventure Game/treasure_adventure_game_1.0.exe
+  prefix: /home/hypnos/Games/gog/treasure-adventure-game
+wine:
+  Desktop: true
+  version: lutris-5.7-11-x86_64

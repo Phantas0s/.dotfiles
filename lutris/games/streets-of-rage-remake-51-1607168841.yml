@@ -1,0 +1,10 @@
+game:
+  arch: win32
+  exe: SORRv5.1/SorR.exe
+  prefix: /home/hypnos/Games/internet/streets-of-rage-remake
+system: {}
+wine:
+  d9vk: true
+  dxvk: false
+  esync: false
+  version: lutris-5.7-11-x86_64

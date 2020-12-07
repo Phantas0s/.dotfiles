@@ -1,0 +1,7 @@
+game:
+  arch: win64
+  exe: drive_c/GOG Games/Rayman Origins/Rayman Origins.exe
+  prefix: /home/hypnos/Games/gog/rayman-origins
+wine:
+  Desktop: true
+  version: lutris-5.7-11-x86_64

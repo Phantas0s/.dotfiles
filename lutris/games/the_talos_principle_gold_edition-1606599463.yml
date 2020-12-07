@@ -1,0 +1,8 @@
+game:
+  exe: /home/hypnos/Games/gog/the-talos-principle-gold-edition/drive_c/GOG Games/The
+    Talos Principle/Bin/x64/Talos.exe
+system: {}
+wine:
+  Desktop: true
+  WineDesktop: 1920x1080
+  version: Proton 5.13

@@ -1,0 +1,5 @@
+game:
+  exe: ''
+system: {}
+wine:
+  version: lutris-5.7-11-x86_64

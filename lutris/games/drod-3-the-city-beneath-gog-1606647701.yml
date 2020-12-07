@@ -1,0 +1,4 @@
+game:
+  exe: start.sh
+linux: {}
+system: {}

@@ -1,0 +1,6 @@
+dosbox: {}
+game:
+  config_file: /home/hypnos/Games/gog/tyrian-2000/dosboxT2K.conf
+  game_id: tyrian-2000
+  main_file: /home/hypnos/Games/gog/tyrian-2000/dosboxT2K_single.conf
+system: {}

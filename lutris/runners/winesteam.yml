@@ -1,0 +1,5 @@
+system: {}
+winesteam:
+  show_debug: ''
+  steam_path: ''
+  version: Proton 5.13

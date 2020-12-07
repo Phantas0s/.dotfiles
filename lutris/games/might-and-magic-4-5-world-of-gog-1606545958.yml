@@ -1,0 +1,6 @@
+dosbox:
+  fullscreen: true
+game:
+  config_file: /home/hypnos/Games/gog/might-and-magic-world-of-xeen/DOSBOX/dosboxMM4-5.conf
+  main_file: /home/hypnos/Games/gog/might-and-magic-world-of-xeen/DOSBOX/dosboxMM4-5_single.conf
+system: {}

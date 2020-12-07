@@ -1,0 +1,6 @@
+game:
+  appid: '13230'
+steam:
+  quit_steam_on_exit: true
+  steam_native_runtime: false
+system: {}
