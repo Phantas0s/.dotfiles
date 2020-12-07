@@ -83,7 +83,7 @@ Plug 'cespare/vim-toml' " toml
 
 " lsp
 " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install() }, 'branch': 'release'}, 
-Plug 'neoclide/coc.nvim',
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 
 " fzf
@@ -181,14 +181,13 @@ nnoremap <leader>db :Bdelete!<cr>
 " Coc extensions
 let g:coc_global_extensions = [
     \ 'coc-snippets',
-    \ 'coc-json',
     \ 'coc-css', 
     \ 'coc-html',
-    \ 'coc-yaml',
-    \ 'coc-godot',
+    \ 'coc-json', 
+    \ 'coc-yaml', 
+    \ 'coc-godot', 
     \]
 
-" \ 'coc-json', 
 " \ 'coc-markmap',
 " \ 'coc-sh',
 

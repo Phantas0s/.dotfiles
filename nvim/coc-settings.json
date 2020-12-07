@@ -15,8 +15,8 @@
         },
         "golang": {
             "command": "gopls",
-            "args": [],
             "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "trace.server": "verbose",
             "filetypes": ["go"]
         },
         "godot": {
@@ -45,7 +45,7 @@
         "UltiSnips",
         "gosnippets/UltiSnips"
     ],
-    "snippets.userSnippetsDirectory": "$VIMCONFIG/ultisnips",
+    "snippets.userSnippetsDirectory": "~/.config/nvim/ultisnips",
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,
     "coc.preferences.formatOnSaveFiletypes": ["go", "clojure", "php"],
