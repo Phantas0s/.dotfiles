@@ -57,11 +57,14 @@ updatesys() {
 }
 
 extract() {
-    if [ -f $1 ] ; then
-        ex $1
-    else
-        echo "'$1' is not a valid file"
-    fi
+    for file in "$@"
+    do
+        if [ -f $file ] ; then
+            ex $file
+        else
+            echo "'$file' is not a valid file"
+        fi
+    done
 }
 
 mkextract() {
