@@ -1,7 +1,0 @@
-game:
-  exe: /home/hypnos/Games/internet/within_a_deep_forest/Withinadeepforest/Within A
-    Deep Forest.exe
-system: {}
-wine:
-  Desktop: false
-  WineDesktop: 1024x768

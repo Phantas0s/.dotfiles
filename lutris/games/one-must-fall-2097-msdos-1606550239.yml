@@ -1,6 +1,0 @@
-dosbox: {}
-game:
-  config_file: /home/hypnos/Games/internet/one-must-fall-2097/dosbox.conf
-  exe: OMF21.EXE
-  main_file: /home/hypnos/Games/internet/one-must-fall-2097/OMF/OMF.EXE
-system: {}

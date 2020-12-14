@@ -1,6 +1,0 @@
-game:
-  exe: /home/hypnos/Games/gog/total-annihilation/drive_c/GOG Games/Total Annihilation/TotalA.exe
-  gogid: '1207658880'
-  prefix: /home/hypnos/Games/gog/total-annihilation
-wine:
-  version: lutris-5.7-11-x86_64

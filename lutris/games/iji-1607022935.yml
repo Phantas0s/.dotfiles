@@ -1,8 +1,0 @@
-game:
-  arch: auto
-  exe: /home/hypnos/Games/internet/iji/iji.exe
-  working_dir: /home/hypnos/Games/internet/iji
-system: {}
-wine:
-  Desktop: false
-  WineDesktop: 1920x1080
