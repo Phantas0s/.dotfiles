@@ -205,10 +205,11 @@ workspace_layout stacking
 
 set $terms "1: terms"
 set $web "2: web"
-set $multimedia "3: multi"
+set $multimedia "3: multi"
 set $design "4: design"
 set $office "5: office"
 set $mindmap "6: mindmap"
+set $vm "7: VM"
 
 # switch to workspace
 bindsym $mod+1 workspace $terms
@@ -217,7 +218,7 @@ bindsym $mod+3 workspace $multimedia
 bindsym $mod+4 workspace $design
 bindsym $mod+5 workspace $office
 bindsym $mod+6 workspace $mindmap
-bindsym $mod+7 workspace 7
+bindsym $mod+7 workspace $vm
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
@@ -229,7 +230,7 @@ bindsym $mod+Shift+3 move container to workspace $multimedia
 bindsym $mod+Shift+4 move container to workspace $design
 bindsym $mod+Shift+5 move container to workspace $office
 bindsym $mod+Shift+6 move container to workspace $mindmap
-bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+7 move container to workspace $vm
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
@@ -264,6 +265,9 @@ assign [class="Joplin" instance="joplin"] → $office
 assign [class="calibre" instance="calibre-gui"] → $office
 
 assign [instance="FreeMind"] → $mindmap
+
+assign [class="VirtualBox Manager" instance="virtualBox Manager"] → $vm
+assign [class="VirtualBox Machine" instance="virtualBox Machine"] → $vm
 
 ####################
 # restart / reload #
