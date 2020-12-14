@@ -311,7 +311,7 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # floating windows
-for_window [class="Keepassx"] floating enable
+for_window [class="KeePassXC"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Gcolor2"] floating enable
 for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
@@ -333,9 +333,9 @@ exec urxvtc -name htop_scratchpad -e htop
 # exec urxvtc -name fzf_menu -e fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1
 
 # keepass scratchpad
-for_window [class="Keepassx"] move to scratchpad
-bindsym $mod+Shift+a [class="Keepassx"] scratchpad show
-exec keepassx
+for_window [class="KeePassXC"] move to scratchpad
+bindsym $mod+Shift+a [class="KeePassXC"] scratchpad show
+exec keepassxc
 
 # bc scratchpad
 for_window [instance="bc_scratchpad"] move to scratchpad, border none
