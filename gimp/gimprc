@@ -8,7 +8,7 @@
 
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable")
 (monitor-xresolution 94)
-(monitor-yresolution 94)
+(monitor-yresolution 95)
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (layer-new-name "bottom")
@@ -24,7 +24,7 @@
     (feather no)
     (feather-radius 10)
     (method line)
-    (width 2)
+    (width 4)
     (unit pixels)
     (cap-style butt)
     (join-style miter)
