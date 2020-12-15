@@ -111,6 +111,8 @@ bindkey -s '^g' 'clear\n'
 bindkey -r '^p'
 bindkey -s '^p' 'fmux\n'
 
+source $DOTFILES/zsh/plugins/vim-mode
+
 # +-----+
 # | FZF |
 # +-----+
