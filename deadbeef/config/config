@@ -68,6 +68,59 @@ mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
 mainwin.geometry.y 22
+musical_spectrum.alignment 2
+musical_spectrum.amp_max 0
+musical_spectrum.amp_min -60
+musical_spectrum.bar_delay 100
+musical_spectrum.bar_falloff 100
+musical_spectrum.bar_w 0
+musical_spectrum.channel 262143
+musical_spectrum.color.background 0 0 0
+musical_spectrum.color.black_keys 0 0 0
+musical_spectrum.color.gradient_00 65535 0 0
+musical_spectrum.color.gradient_01 65535 32896 0
+musical_spectrum.color.gradient_02 58853 42405 2570
+musical_spectrum.color.gradient_03 63222 54227 11565
+musical_spectrum.color.gradient_04 63736 58596 23644
+musical_spectrum.color.gradient_05 65535 65535 65535
+musical_spectrum.color.hgrid 21845 21845 21845
+musical_spectrum.color.ogrid 42148 0 0
+musical_spectrum.color.peaks 42148 0 0
+musical_spectrum.color.text 65535 65535 65535
+musical_spectrum.color.vgrid 21845 21845 21845
+musical_spectrum.color.white_keys 10240 10240 10240
+musical_spectrum.draw_style 0
+musical_spectrum.enable_amp 0
+musical_spectrum.enable_bar_mode 0
+musical_spectrum.enable_black_keys 0
+musical_spectrum.enable_bottom_labels 1
+musical_spectrum.enable_hgrid 1
+musical_spectrum.enable_left_labels 1
+musical_spectrum.enable_ogrid 0
+musical_spectrum.enable_peaks 1
+musical_spectrum.enable_peaks_color 0
+musical_spectrum.enable_right_labels 1
+musical_spectrum.enable_tooltip 1
+musical_spectrum.enable_top_labels 0
+musical_spectrum.enable_vgrid 1
+musical_spectrum.enable_white_keys 1
+musical_spectrum.fft_size 8192
+musical_spectrum.fill_spectrum 1
+musical_spectrum.font Sans 7
+musical_spectrum.font_tooltip Sans 9
+musical_spectrum.gaps 1
+musical_spectrum.gradient_orientation 0
+musical_spectrum.interpolate 1
+musical_spectrum.note_max 125
+musical_spectrum.note_min 0
+musical_spectrum.num_colors 6
+musical_spectrum.peak_delay 500
+musical_spectrum.peak_falloff 50
+musical_spectrum.pitch 440
+musical_spectrum.refresh_interval 25
+musical_spectrum.spacing 1
+musical_spectrum.transpose 0
+musical_spectrum.window 1
 network.proxy.port 8080
 output_plugin alsa
 playback.loop 1
