@@ -24,7 +24,7 @@ filebrowser.showicons 1
 filebrowser.sidebar_width 200
 filebrowser.sort_treeview 1
 filebrowser.treelines 1
-gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Artist / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"36","align":"1","color_override":"0","color":"#ff000000"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"269","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"538","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.609734 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.158333 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1610 {} } } hsplitter locked=0 ratio=0.876042 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.statusbar.visible 1
@@ -77,12 +77,12 @@ musical_spectrum.bar_w 0
 musical_spectrum.channel 262143
 musical_spectrum.color.background 0 0 0
 musical_spectrum.color.black_keys 0 0 0
-musical_spectrum.color.gradient_00 65535 0 0
-musical_spectrum.color.gradient_01 65535 32896 0
-musical_spectrum.color.gradient_02 58853 42405 2570
-musical_spectrum.color.gradient_03 63222 54227 11565
-musical_spectrum.color.gradient_04 63736 58596 23644
-musical_spectrum.color.gradient_05 65535 65535 65535
+musical_spectrum.color.gradient_00 49344 7196 10280
+musical_spectrum.color.gradient_01 57568 6939 9252
+musical_spectrum.color.gradient_02 57568 6939 9252
+musical_spectrum.color.gradient_03 59110 24929 0
+musical_spectrum.color.gradient_04 65535 30840 0
+musical_spectrum.color.gradient_05 58853 42405 2570
 musical_spectrum.color.hgrid 21845 21845 21845
 musical_spectrum.color.ogrid 42148 0 0
 musical_spectrum.color.peaks 42148 0 0
@@ -142,30 +142,30 @@ streamer.samplerate 44100
 streamer.samplerate_mult_44 44100
 streamer.samplerate_mult_48 48000
 waveform.bg_alpha 65535
-waveform.bg_color_b 50000
-waveform.bg_color_g 50000
-waveform.bg_color_r 50000
+waveform.bg_color_b 17990
+waveform.bg_color_g 14392
+waveform.bg_color_r 15677
 waveform.border_width 1
 waveform.cache_enabled 1
 waveform.cursor_width 3
 waveform.display_rms 1
 waveform.fg_alpha 65535
-waveform.fg_color_b 20000
-waveform.fg_color_g 20000
-waveform.fg_color_r 20000
+waveform.fg_color_b 25700
+waveform.fg_color_g 23644
+waveform.fg_color_r 24158
 waveform.fg_rms_alpha 65535
-waveform.fg_rms_color_b 5000
-waveform.fg_rms_color_g 5000
-waveform.fg_rms_color_r 5000
+waveform.fg_rms_color_b 31611
+waveform.fg_rms_color_g 30326
+waveform.fg_rms_color_r 30583
 waveform.font_size 18
 waveform.log_enabled 0
 waveform.max_file_length 180
 waveform.mix_to_mono 0
 waveform.num_samples 2048
-waveform.pb_alpha 20000
-waveform.pb_color_b 0
-waveform.pb_color_g 65535
-waveform.pb_color_r 0
+waveform.pb_alpha 29652
+waveform.pb_color_b 16383
+waveform.pb_color_g 16383
+waveform.pb_color_r 49151
 waveform.refresh_interval 33
 waveform.render_method 2
 waveform.scroll_enabled 1
