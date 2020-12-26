@@ -16,12 +16,14 @@ backup() {
     declare -A folders=(
         # $MEDIA/test test-test/test
         $HOME/Documents home/Documents
+        $HOME/Videos home/Videos
         $HOME/Nextcloud home/nextcloud
         $HOME/workspace home/workspace
         $HOME/Games/scummvm home/Games/scummvm
         $HOME/Games/internet home/Games/internet
         $HOME/Games/dosbox home/Games/dosbox
-        $HOME/Games/emulators home/Games/emulators
+        "$HOME/Games/emulators" "home/Games/emulators"
+        "$HOME/.local/share" "home/.local/share"
         $MEDIA/assets assets
         $MEDIA/Documentaries documentaries
         $MEDIA/Ebooks ebooks
