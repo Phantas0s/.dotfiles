@@ -146,6 +146,8 @@ Plug 'tpope/vim-scriptease' " Debug vimscript
 " Agda
 Plug 'derekelkins/agda-vim'
 
+" cheat.sh
+Plug 'dbeniamine/cheat.sh-vim'
 
 call plug#end()
 " }}}
@@ -176,7 +178,7 @@ let g:delve_tracepoint_sign = ""
 source $VIMCONFIG/projects.nvimrc
 
 " close the buffer
-nnoremap <leader>db :Bdelete!<cr>
+nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr> 
 
 " Coc extensions
 let g:coc_global_extensions = [
@@ -252,8 +254,6 @@ nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap gF :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
-
-nnoremap <silent> <leader>bb <cmd>bp <bar>bd #<cr> 
 
 "toggle between absolute -> relative line number
 nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
