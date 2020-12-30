@@ -78,4 +78,5 @@ dot_is_installed gimp && dot_install gimp
 dot_is_installed zathura && dot_install zathura
 dot_is_installed doublecmd && dot_install doublecmd
 dot_is_installed deadbeef && dot_install deadbeef
+dot_is_installed darktable && dot_install darktable
 dot_install gtk
