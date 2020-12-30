@@ -385,6 +385,7 @@
       <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
+        <Param>trashcan=reversesetting</Param>
         <Control>Files Panel</Control>
       </Hotkey>
       <Hotkey>
