@@ -54,7 +54,7 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 " navigation
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
 " Plug 'vifm/vifm.vim'
-Plug 'moll/vim-bbye' " Close the current buffer
+" Plug 'moll/vim-bbye' " Close the current buffer
 Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
 " replace f F t T - don't work well with dot though :'(
 Plug 'yangmillstheory/vim-snipe'
@@ -252,6 +252,8 @@ nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap gF :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
+
+nnoremap <silent> <leader>bb <cmd>bp <bar>bd #<cr> 
 
 "toggle between absolute -> relative line number
 nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
