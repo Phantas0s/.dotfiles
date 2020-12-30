@@ -554,10 +554,11 @@ umntmtp() {
     echo "$DIRECTORY with mtp filesystem unmounted"
 }
 
+# --restrict-filenames replace special characters like spaces in filenames.
 ydlp() {
     if [ ! -z $1 ];
     then
-        youtube-dl -f 22 -o "%(autonumber)s-%(title)s.%(ext)s" "$1"
+        youtube-dl --restrict-filenames -f 22 -o "%(autonumber)s-%(title)s.%(ext)s" "$1"
     else
         echo "You need to specify a playlist url as argument"
     fi
@@ -566,7 +567,7 @@ ydlp() {
 ydl() {
     if [ ! -z $1 ];
     then
-        youtube-dl -f 22 "$1"
+        youtube-dl --restrict-filenames -f 22 -o "%(title)s.%(ext)s" "$1"
     else
         echo "You need to specify a video url as argument"
     fi
