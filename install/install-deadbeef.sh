@@ -2,8 +2,8 @@
 rm -rf "$HOME/.local/lib/deadbeef" && ln -sf "$DOTFILES/deadbeef/plugins" "$HOME/.local/lib/deadbeef"
 
 # Config
-ln -sf "$DOTFILES/deadbeef/config/config" "$XDG_CONFIG_HOME/deadbeef/config"
-ln -sf "$DOTFILES/deadbeef/config/dspconfig" "$XDG_CONFIG_HOME/deadbeef/dspconfig"
+# Can't only synchronize the files - deadbeef automatically delete the symbolic link and create a proper file.
+rm -rf "$XDG_CONFIG_HOME/deadbeef" && ln -sf "$DOTFILES/deadbeef/config" "$XDG_CONFIG_HOME/deadbeef"
 
 # Playlists
 rm -rf "$XDG_CONFIG_HOME/deadbeef/playlists" && ln -sf "$CLOUD/multimedia/music/deadbeef/playlists" "$XDG_CONFIG_HOME/deadbeef/playlists"
