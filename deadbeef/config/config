@@ -9,7 +9,7 @@ filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows 
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Compilations file:///run/media/hypnos/Music/Movies file:///run/media/hypnos/Music/Movies/OST
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
@@ -24,11 +24,23 @@ filebrowser.showicons 1
 filebrowser.sidebar_width 200
 filebrowser.sort_treeview 1
 filebrowser.treelines 1
-gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"36","align":"1","color_override":"0","color":"#ff000000"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"269","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"538","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.609734 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.158333 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1610 {} } } hsplitter locked=0 ratio=0.876042 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.color.tabstrip_selected_text 65535 65535 65535
+gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"88","align":"1","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"269","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"328","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
+gtkui.embolden_current_track 1
+gtkui.embolden_selected_tracks 0
+gtkui.font.tabstrip_text Open Sans 11
+gtkui.hide_remove_from_disk 1
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.158333 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1610 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
+gtkui.override_listview_colors 0
+gtkui.override_tabstrip_colors 0
 gtkui.statusbar.visible 1
+gtkui.statusbar_seltime 0
 gtkui.tabscroll 0
+gtkui.tabstrip_embolden_playing 0
+gtkui.tabstrip_embolden_selected 0
+gtkui.tabstrip_italic_playing 0
+gtkui.tabstrip_italic_selected 0
 gtkui.titlebar_playing_tf %artist% - %title% - DeaDBeeF-%_deadbeef_version%
 gtkui.titlebar_stopped_tf DeaDBeeF-%_deadbeef_version%
 gui_plugin GTK3
@@ -43,36 +55,36 @@ hotkey.key08 "Ctrl j" 0 0 jump_to_current_track
 hotkey.key09 "F1" 0 0 help
 hotkey.key10 "Delete" 1 0 remove_from_playlist
 hotkey.key11 "Ctrl w" 0 0 remove_current_playlist
-hotkey.key13 "Alt Return" 1 0 track_properties
-hotkey.key14 "Return" 0 0 play
-hotkey.key15 "Ctrl p" 0 0 toggle_pause
-hotkey.key16 "Alt 1" 0 0 playlist1
-hotkey.key17 "Alt 2" 0 0 playlist2
-hotkey.key18 "Alt 3" 0 0 playlist3
-hotkey.key19 "Alt 4" 0 0 playlist4
-hotkey.key20 "Alt 5" 0 0 playlist5
-hotkey.key21 "Alt 6" 0 0 playlist6
-hotkey.key22 "Alt 7" 0 0 playlist7
-hotkey.key23 "Alt 8" 0 0 playlist8
-hotkey.key24 "Alt 9" 0 0 playlist9
-hotkey.key25 "Alt 0" 0 0 playlist10
-hotkey.key26 z 0 0 prev
-hotkey.key27 x 0 0 play
-hotkey.key28 c 0 0 toggle_pause
-hotkey.key29 v 0 0 stop
-hotkey.key30 b 0 0 next
-hotkey.key31 n 0 0 playback_random
-hotkey.key32 "Ctrl k" 0 0 toggle_stop_after_album
+hotkey.key12 "Alt Return" 1 0 track_properties
+hotkey.key13 "Return" 0 0 play
+hotkey.key14 "Ctrl p" 0 0 toggle_pause
+hotkey.key15 "Alt 1" 0 0 playlist1
+hotkey.key16 "Alt 2" 0 0 playlist2
+hotkey.key17 "Alt 3" 0 0 playlist3
+hotkey.key18 "Alt 4" 0 0 playlist4
+hotkey.key19 "Alt 5" 0 0 playlist5
+hotkey.key20 "Alt 6" 0 0 playlist6
+hotkey.key21 "Alt 7" 0 0 playlist7
+hotkey.key22 "Alt 8" 0 0 playlist8
+hotkey.key23 "Alt 9" 0 0 playlist9
+hotkey.key24 "Alt 0" 0 0 playlist10
+hotkey.key25 "z" 0 0 prev
+hotkey.key26 "x" 0 0 play
+hotkey.key27 "space" 0 0 toggle_pause
+hotkey.key28 "v" 0 0 stop
+hotkey.key29 "b" 0 0 next
+hotkey.key30 "n" 0 0 playback_random
+hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
-mainwin.geometry.h 1155
+mainwin.geometry.h 1133
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
-mainwin.geometry.y 22
+mainwin.geometry.y 44
 musical_spectrum.alignment 2
 musical_spectrum.amp_max 0
-musical_spectrum.amp_min -60
-musical_spectrum.bar_delay 100
-musical_spectrum.bar_falloff 100
+musical_spectrum.amp_min -50
+musical_spectrum.bar_delay 40
+musical_spectrum.bar_falloff 26
 musical_spectrum.bar_w 0
 musical_spectrum.channel 262143
 musical_spectrum.color.background 0 0 0
@@ -91,7 +103,7 @@ musical_spectrum.color.vgrid 21845 21845 21845
 musical_spectrum.color.white_keys 10240 10240 10240
 musical_spectrum.draw_style 0
 musical_spectrum.enable_amp 0
-musical_spectrum.enable_bar_mode 0
+musical_spectrum.enable_bar_mode 1
 musical_spectrum.enable_black_keys 0
 musical_spectrum.enable_bottom_labels 1
 musical_spectrum.enable_hgrid 1
@@ -114,30 +126,52 @@ musical_spectrum.interpolate 1
 musical_spectrum.note_max 125
 musical_spectrum.note_min 0
 musical_spectrum.num_colors 6
-musical_spectrum.peak_delay 500
-musical_spectrum.peak_falloff 50
+musical_spectrum.peak_delay 115
+musical_spectrum.peak_falloff 20
 musical_spectrum.pitch 440
 musical_spectrum.refresh_interval 25
 musical_spectrum.spacing 1
 musical_spectrum.transpose 0
-musical_spectrum.window 1
+musical_spectrum.window 2
 network.proxy.port 8080
-output_plugin alsa
+output_plugin pulseaudio
 playback.loop 1
-playback.volume 0.0000000
-playlist.current 0
-playlist.cursor.0 -1
-playlist.scroll.0 0
+playback.volume -2.577595
+playlist.current 2
+playlist.cursor.0 16
+playlist.cursor.1 37
+playlist.cursor.2 211
+playlist.cursor.3 9
+playlist.cursor.4 12
+playlist.cursor.5 0
+playlist.cursor.6 0
+playlist.scroll.0 324
+playlist.scroll.1 319
+playlist.scroll.2 4161
+playlist.scroll.3 -24
+playlist.scroll.4 162
+playlist.scroll.5 0
+playlist.scroll.6 0
 playlist.scroll.cursorfollowplayback 1
-playlist.tab.00000 Default
+playlist.tab.00000 **Main Playlist**
+playlist.tab.00001 Good old days
+playlist.tab.00002 Techtrance
+playlist.tab.00003 Metal
+playlist.tab.00004 Chill
+playlist.tab.00005 New Playlist
+playlist.tab.00006 New Playlist (1)
 prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 632
 prefwin.geometry.y 330
-resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.paused 1
+resume.playlist 3
+resume.position 46.115005
+resume.track 24
+searchwin.geometry.h 300
+searchwin.geometry.w 450
+searchwin.geometry.x 733
+searchwin.geometry.y 426
 streamer.samplerate 44100
 streamer.samplerate_mult_44 44100
 streamer.samplerate_mult_48 48000
