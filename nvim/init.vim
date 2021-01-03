@@ -308,6 +308,7 @@ tnoremap <C-\> <C-\><C-n>
 
 " buffer cleanup - delete every buffer except the one open
 command! Ball :silent call general#Bdeleteonly()
+command! Jrnl call general#MakeJournalEntry()
 
 " restore the position of the last cursor when you open a file
 autocmd vimrc BufReadPost * call general#RestorePosition()

@@ -11,9 +11,9 @@ endfunc
 
 " delete trailing space when saving files
 function! general#DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
+    exe "normal mz"
+    %s/\s\+$//ge
+    exe "normal `z"
 endfunc
 
 " buffer cleanup - delete every buffer except the one open
@@ -70,54 +70,54 @@ function! general#FoldText()
 endfunction
 
 function! general#ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal @".nr2char(getchar())
+    echo "@".getcmdline()
+    execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
 " For use with pressing * or # in visual mode to search for current selection
 function! general#VisualSelection(direction, extra_filter) range
-  let l:saved_reg = @"
-  execute 'normal! vgvy'
+    let l:saved_reg = @"
+    execute 'normal! vgvy'
 
-  let l:pattern = escape(@", "\\/.*'$^~[]")
-  let l:pattern = substitute(l:pattern, "\n$", '', '')
+    let l:pattern = escape(@", "\\/.*'$^~[]")
+    let l:pattern = substitute(l:pattern, "\n$", '', '')
 
-  if a:direction is# 'gv'
-    call CmdLine("Ack '" . l:pattern . "' " )
-  elseif a:direction is# 'replace'
-    call CmdLine('%s' . '/'. l:pattern . '/')
-  endif
+    if a:direction is# 'gv'
+        call CmdLine("Ack '" . l:pattern . "' " )
+    elseif a:direction is# 'replace'
+        call CmdLine('%s' . '/'. l:pattern . '/')
+    endif
 
-  let @/ = l:pattern
-  let @" = l:saved_reg
+    let @/ = l:pattern
+    let @" = l:saved_reg
 endfunction
 
 " to toggle quickfix list and location list
 function! general#GetBufferList()
-  redir =>buflist
-  silent! ls!
-  redir END
-  return buflist
+    redir =>buflist
+    silent! ls!
+    redir END
+    return buflist
 endfunction
 
 function! general#ToggleList(bufname, pfx)
-  let buflist = general#GetBufferList()
-  for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
-    if bufwinnr(bufnum) != -1
-      exec(a:pfx.'close')
-      return
+    let buflist = general#GetBufferList()
+    for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
+        if bufwinnr(bufnum) != -1
+            exec(a:pfx.'close')
+            return
+        endif
+    endfor
+    if a:pfx == 'l' && len(getloclist(0)) == 0
+        echohl ErrorMsg
+        echo "Location List is Empty."
+        return
     endif
-  endfor
-  if a:pfx == 'l' && len(getloclist(0)) == 0
-      echohl ErrorMsg
-      echo "Location List is Empty."
-      return
-  endif
-  let winnr = winnr()
-  exec(a:pfx.'open')
-  if winnr() != winnr
-    wincmd p
-  endif
+    let winnr = winnr()
+    exec(a:pfx.'open')
+    if winnr() != winnr
+        wincmd p
+    endif
 endfunction
 
 function! general#WordCount()
@@ -186,4 +186,17 @@ function! general#CharCount()
     else
         return b:charcount
     endif
+endfunction
+
+" simply visit a dedicated file and prepare for writing it with markdown.
+function! general#MakeJournalEntry()
+    let fname = $CLOUD. '/journal/' . strftime('%d_%m_%Y.md')
+    execute 'edit ' . fname
+    if filereadable(fname) ==? v:false
+        execute 'normal I# ' . strftime('%A, the %d of %B %Y')
+        write
+    endif
+    execute 'normal! Go## ' . strftime('%H:%M')
+    normal! o
+    startinsert
 endfunction
