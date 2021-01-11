@@ -345,8 +345,8 @@ exec urxvtc -name bc_scratchpad -e bc -l
 for_window [class="URxvt*"] border pixel 1
 
 # start softwares and command lines in workspaces
-exec --no-startup-id i3-msg workspace $office; exec joplin-desktop
-exec --no-startup-id i3-msg workspace $terms; exec /usr/bin/urxvtc
+exec i3-msg workspace $office; exec joplin-desktop
+exec i3-msg workspace $terms; exec /usr/bin/urxvtc
 
 ##########
 # DESIGN #
@@ -399,15 +399,20 @@ bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 exec --no-startup-id compton -b --active-opacity 1 --config $XDG_CONFIG_HOME/.compton --backend xrender
 
 # shutdown / restart / suspend...
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Ctrl+s) shutdown
+set $mode_system \
+System (l) lock, (e) logout, (s) suspend, \
+(h) hibernate, (r) reboot, (Ctrl+s) shutdown
 
 mode "$mode_system" {
     bindsym l exec --no-startup-id $i3lockwall, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, \
+    mode "default"
+    bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, \
+    mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"
+    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, \
+    mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -420,8 +425,8 @@ bindsym $mod+BackSpace mode "$mode_system"
 set $mode_display Config monitor resolution - Home Setup (h) - Without monitor (d)
 
 mode "$mode_display" {
-    bindsym h exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/home.sh && sh $XDG_CONFIG_HOME/.fehbg
-    bindsym d exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/default.sh && sh $XDG_CONFIG_HOME/.fehbg
+    bindsym h exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/home.sh && sh $XDG_CONFIG_HOME/.fehbg, mode "default"
+    bindsym d exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/default.sh && sh $XDG_CONFIG_HOME/.fehbg, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
