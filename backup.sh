@@ -22,8 +22,8 @@ backup() {
         $HOME/Games/scummvm home/Games/scummvm
         $HOME/Games/internet home/Games/internet
         $HOME/Games/dosbox home/Games/dosbox
-        "$HOME/Games/emulators" "home/Games/emulators"
-        "$HOME/.local/share" "home/.local/share"
+        $HOME/Games/emulators home/Games/emulators
+        $HOME/.local/share home/.local/share
         $MEDIA/assets assets
         $MEDIA/Documentaries documentaries
         $MEDIA/Ebooks ebooks

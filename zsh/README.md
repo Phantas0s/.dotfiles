@@ -190,11 +190,11 @@ Convert all images with specific extension in the current folder to webp (by cop
 
 ## Music
 
-`wavflac <args>`
+`wav2flac <args>`
 
 Get one or more argument. Convert a wav file into a flac file using ffmpeg.
 
-`rmwavflac <args>`
+`rmwav2flac <args>`
 
 Get one or more argument. Convert a wav file into a flac file using ffmpeg.
 
@@ -321,7 +321,6 @@ Display... the matrix!
 `pipes` 
 
 Remember the OpenGL pipes screensaver on windows 9*? The same in the terminal. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/pipes).
-
 
 ### Term Colors
 

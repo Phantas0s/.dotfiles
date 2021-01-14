@@ -413,6 +413,10 @@ pipes() {
     $DOTFILES/bash/scripts/pipes.sh
 }
 
+sntw() {
+    sudo $DOTFILES/bash/scripts/sntw.sh $@
+}
+
 crypt() {
 [ $# -eq 1 ] && set -- "--encrypt" "$1"
 
@@ -603,7 +607,7 @@ zshcomp() {
     done | sort
 }
 
-wavflac() {
+wav2flac() {
     for file in "$@"; do
         local filename=${file%\.*}
         local extension="${file##*.}"
@@ -611,7 +615,7 @@ wavflac() {
     done
 }
 
-rmwavflac() {
+rmwav2flac() {
     for file in "$@"; do
         local filename=${file%\.*}
         local extension="${file##*.}"
