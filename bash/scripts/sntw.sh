@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Block social networks for you to focus on more important tasks.
+# You can put this script in your PATH (/usr/bin/sntw for example). Don't forget to change the permissions (sudo chmod 755 /usr/bin/sntw)
+
+# To block social network: sudo sntw lock
+# To unblock social media: sudo sntw unlock
+
+# Add here the social network you're addicted to:
 social_networks=(
     twitter.com
     www.twitter.com
@@ -32,7 +39,7 @@ elif [[ $1 == "unlock" ]]; then
         sed -i "/^$localhost $i$/d" /etc/hosts
     done
 else
-    echo "Please run this script with 'lock' or 'unlock' as argument and feel the productivity!"
+    echo "Please run this script with 'lock' or 'unlock' as argument and feel the intense productivity!"
 fi
 
 
