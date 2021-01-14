@@ -413,8 +413,8 @@ pipes() {
     $DOTFILES/bash/scripts/pipes.sh
 }
 
-sntw() {
-    sudo $DOTFILES/bash/scripts/sntw.sh $@
+smedia() {
+    sudo $DOTFILES/bash/scripts/smedia.sh $@
 }
 
 crypt() {
