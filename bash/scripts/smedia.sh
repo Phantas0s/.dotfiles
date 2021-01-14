@@ -15,6 +15,8 @@ social_media=(
     www.facebook.com
     indiehackers.com
     www.indiehackers.com
+    linkedin.com
+    www.linkedin.com
 )
 
 if [[ ! -f /etc/hosts ]]; then
