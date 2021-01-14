@@ -31,12 +31,12 @@ localhost=127.0.0.1
 
 if [[ $1 == "block" ]]; then
     for i in "${social_media[@]}"; do
-        sed -i "/^$localhost $i$/d" /etc/hosts
+        sed -i "/^$localhost $i/d" /etc/hosts
         echo "$localhost $i" >> /etc/hosts;
     done
 elif [[ $1 == "unblock" ]]; then
     for i in "${social_media[@]}"; do
-        sed -i "/^$localhost $i$/d" /etc/hosts
+        sed -i "/^$localhost $i/d" /etc/hosts
     done
 else
     echo "Please run this script with 'block' or 'unblock' as argument and feel the intense productivity!"
