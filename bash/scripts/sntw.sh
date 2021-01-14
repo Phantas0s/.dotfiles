@@ -2,9 +2,12 @@
 
 social_networks=(
     twitter.com
+    www.twitter.com
     api.twitter.com
     facebook.com
+    www.facebook.com
     indiehackers.com
+    www.indiehackers.com
 )
 
 if [[ ! -f /etc/hosts ]]; then
