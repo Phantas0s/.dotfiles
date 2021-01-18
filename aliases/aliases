@@ -181,10 +181,16 @@ alias tmuxl='tmux list-sessions'
 
 alias mux='tmuxp load'
 
+
+# +------+
+# | lynx |
+# +------+
+
+alias lynx="lynx --vikeys "
+
 # +--------+
 # | docker |
 # +--------+
-
 alias docki="docker inspect"                                                    # display the information about a container
 alias docke='docker exec -t -i'                                                 # going inside a container
 alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
