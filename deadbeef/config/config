@@ -9,7 +9,7 @@ filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Video%20Games/OST
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Video%20Games/OST file:///run/media/hypnos/Music/Artiste
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
@@ -76,10 +76,10 @@ hotkey.key29 "b" 0 0 next
 hotkey.key30 "n" 0 0 playback_random
 hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
-mainwin.geometry.h 1133
+mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
-mainwin.geometry.y 44
+mainwin.geometry.y 22
 musical_spectrum.alignment 2
 musical_spectrum.amp_max 0
 musical_spectrum.amp_min -50
@@ -137,20 +137,20 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -5.972156
-playlist.current 5
+playlist.current 2
 playlist.cursor.0 16
-playlist.cursor.1 37
-playlist.cursor.2 109
+playlist.cursor.1 25
+playlist.cursor.2 85
 playlist.cursor.3 24
-playlist.cursor.4 1257
-playlist.cursor.5 43
+playlist.cursor.4 1267
+playlist.cursor.5 60
 playlist.cursor.6 0
 playlist.scroll.0 324
-playlist.scroll.1 319
-playlist.scroll.2 2244
+playlist.scroll.1 -25
+playlist.scroll.2 -74
 playlist.scroll.3 375
-playlist.scroll.4 30371
-playlist.scroll.5 -43
+playlist.scroll.4 -1267
+playlist.scroll.5 -60
 playlist.scroll.6 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 **Main Playlist**
@@ -164,9 +164,9 @@ prefwin.geometry.w 656
 prefwin.geometry.x 632
 prefwin.geometry.y 330
 resume.paused 1
-resume.playlist 5
-resume.position 72.400131
-resume.track 43
+resume.playlist 2
+resume.position 201.08569
+resume.track 74
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 733

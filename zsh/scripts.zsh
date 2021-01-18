@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 line() {
     [ ! -z $1 ] && sed -n "${1}p" && return
