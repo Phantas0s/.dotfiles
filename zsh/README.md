@@ -200,6 +200,12 @@ Get one or more argument. Convert a wav file into a flac file using ffmpeg.
 
 Delete the wav file when conversion done.
 
+## Internet
+
+`duckduckgo <search>`
+
+Search on duckduckgo using the text-based browser lynx.
+
 ## Download
 
 ### Youtube dl

@@ -633,3 +633,9 @@ cat <<EOF > $1.mm
 </map>
 EOF
 }
+
+# Query duckduckgo with lynx
+duckduckgo()
+{
+  lynx -vikeys -accept-accept_all_cookies "https://lite.duckduckgo.com/lite/?q='$@'"
+}
