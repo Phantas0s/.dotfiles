@@ -2,6 +2,10 @@
 
 Doc for my zsh scripts (`scripts.zsh`). 
 
+The arguments are indicated between `<>`, for example `<arg>`. 
+
+If the argument has a value, it's the default (and therefore the argument is not mandatory). For example: `<arg=default>`.
+
 ## Helpers
 
 * `line <line_number> <file>`
