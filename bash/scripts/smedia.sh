@@ -20,6 +20,8 @@ social_media=(
     reddit.com
     www.reddit.com
     api.reddit.com
+    dev.to
+    www.dev.to
 )
 
 if [[ ! -f /etc/hosts ]]; then
