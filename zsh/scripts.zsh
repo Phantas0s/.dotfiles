@@ -634,8 +634,12 @@ cat <<EOF > $1.mm
 EOF
 }
 
-# Query duckduckgo with lynx
 duckduckgo()
 {
-  lynx -vikeys -accept-accept_all_cookies "https://lite.duckduckgo.com/lite/?q='$@'"
+  lynx -vikeys -accept_all_cookies "https://lite.duckduckgo.com/lite/?q='$@'"
+}
+
+wikipedia()
+{
+  lynx -vikeys -accept_all_cookies "https://en.wikipedia.org/wiki/$@"
 }

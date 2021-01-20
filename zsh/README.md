@@ -1,10 +1,10 @@
 # Scripts for zsh
 
-Doc for my zsh scripts (`scripts.zsh`).
+Doc for my zsh scripts (`scripts.zsh`). 
 
 ## Helpers
 
-`line <line_number> <file>`
+* `line <line_number> <file>`
 
 With one argument, can be piped to display the line number of the output.
 With two arguments, 
@@ -15,31 +15,31 @@ It uses `sed` under the hood.
 
 ### Update system
 
-`updatesys`
+* `updatesys`
 
 Call a bash script and update:
-* Go binaries
-* Composer global install
-* Official Arch linux packages (via Aurman or yay if installed ; otherwise pacman)
-* AUR packages (via Aurman or yay if installed)
+* Go binaries.
+* Composer global install.
+* Official Arch linux packages.
+* AUR packages using Yay.
 
 ### Disk backup
 
-`dback <disk source> <disk output>`
+* `dback <disk source> <disk output>`
 
 Use dd to copy an entire hard disk to another disk output. Ask questions to be sure you know what you are doing :)
-Way safer than using pure dd without any warning message...
+Way safer than using pure dd without any warning message... (and its weird syntax!).
 
 ### Create ssh key
 
-`sshcreate <name>`
+* `sshcreate <name>`
 
 Create a new ssh key at `~/.ssh/<name>` with permission 700.
 The name will be put as comment in the key as well.
 
 ### Screen
 
-`screenres <screen_number>`
+* `screenres <screen_number>`
 
 Display screen resolution.
 
@@ -47,23 +47,23 @@ Each of your screen has a number. That's what `<screen_number>` is.
 
 ### Mount device with read/write permissions
 
-`mnt <device> <folder="/mnt/external">`
+* `mnt <device> <folder="/mnt/external">`
 
 ### Unmount every devices in a specific folder recursively
 
-`umnt <folder="/mnt/">`
+* `umnt <folder="/mnt/">`
 
 ### Mount mtp filesystem
 
-`mntmtp <device_number> <folder="~/mnt/">`
+* `mntmtp <device_number> <folder="~/mnt/">`
 
 ### Umount mtp filesystem
 
-`umntmtp <folder="~/mnt/">`
+* `umntmtp <folder="~/mnt/">`
 
 ## Neovim
 
-`vman`
+* `vman`
 
 Open man with neovim.
 
@@ -73,16 +73,16 @@ Need the plugin 'jez/vim-superman' installed in Neovim.
 
 ### Extraction
 
-`extract <archive_file>`
+* `extract <archive_file>`
 
 Extract any archive automatically. Require `tar` and `unzip`.
 
-`mkextract <archive_file>`
+* `mkextract <archive_file>`
 
 Create a folder with the name of the archive, extract the archive in.
 
 ### Compression
-`compress <folder>`
+* `compress <folder>`
 
 Compress a folder - output `tar.gz`
 
@@ -93,40 +93,38 @@ Compress a folder - output `tar.gz`
 These commands need `pv` to be installed.
 
 #### Dump
-`postgdump <database> <user> <host>`
+
+* `postgdump <database> <user=postgres> <host=localhost>`
 
 Create a dump of a database. Include clean up and create dabatase when imported back.
 
 The file created will be `<database>`.sql
 
-`<user>` and `<host>` are not mandatory, default `postgres` and `localhost`.
-
 #### Import 
-`postgimport <table_name> <user> <host>`
+
+* `postgimport <table_name> <user=postgres> <host=localhost>`
 
 Import a database. If the file is called `database.sql`, it will try to import into the database named `database`.
 
-`<user>` and `<host>` are not mandatory, default `postgres` and `localhost`.
-
-**THE OPERATION WILL OVERWRITE ALL DATA!**
+**THIS OPERATION WILL OVERWRITE ALL DATA!**
 
 ## Network
 
 ### Ports
 
-`ports`
+* `ports`
 
 List of port opens, fuzzy searchable via fzf
 
 ## Video
 
-`screencast <output_file> <screen_number>`
+* `screencast <output_file> <screen_number>`
 
 Take a screencast and save it in the `<output_file>`. 
 
 The choice of screen with `<screen_number>` is very much tailored for my own needs, with a small screen as first screen and big screen as second.
 
-`vidvolup <input_file> <percentage_volume_increase> <output_file=output.mkv`
+* `vidvolup <input_file> <percentage_volume_increase> <output_file=output.mkv`
 
 Increase the volume of a video and save the new video as <output_file>. For example, `vidvolup input.mkv 100 output.mkv` will increase the volume of 100% and output the result as output.mkv. In fact, the volume will be doubled.
 
@@ -134,47 +132,47 @@ Increase the volume of a video and save the new video as <output_file>. For exam
 
 ### Screenshot 
 
-`screenshot <win|scr|area>`
+* `screenshot <win|scr|area>`
 
 Take a screenshot of the window / screen / area respectively.
 
 ### Image size
 
-`imgsize <img>`
+* `imgsize <img>`
 
 Display width / height of an image.
 
 ### Image resize 
 
-`imgresize <source> <width> <overwrite>`
+* `imgresize <source> <width> <overwrite>`
 Resize and create a new image, named `<source>_<width>.<extension>` following aspect ratio.
 
 If `<overwrite>` argument has a value, the image won't be rename and will overwrite the original.
 
-`imgresizeall <extension> <width>`
+* `imgresizeall <extension> <width>`
 Resize every images with the same extension in the current folder
 
-`imgoptimize <file>`
+* `imgoptimize <file>`
 Optimize the image (`conv -strip -interlace Plane -quality 85%`) and create a new image
 
-`Imgoptimize <file>`
+* `Imgoptimize <file>`
 Optimize the image (`conv -strip -interlace Plane -quality 85%`).
 
-`imgoptimizeall <extension>`
+* `imgoptimizeall <extension>`
 Optimize the images with same extension in current folder(`conv -strip -interlace Plane -quality 85%`) and create new images
 
-`Imgoptimizeall *.<extension>`
+* `Imgoptimizeall *.<extension>`
 Optimize the images with same extension in current folder(`conv -strip -interlace Plane -quality 85%`) and *replace* them
 
 ### Image resize all
 
-`imgresize <extension> <width>`
+* `imgresize <extension> <width>`
 Resize every images with the extension `<extention>` in the current folder.
 Use Image resize (see above)
 
 ### Image convert to jpg
 
-`imgconvjpg <source>`
+* `imgconvjpg <source>`
 
 Require imagemagick.
 
@@ -182,19 +180,19 @@ Convert source to a jpg image
 
 ### Image convert to Webp
 
-`imgwebp <image_extension>`
+* `imgwebp <image_extension=jpg>`
 
 Require cwebp
 
-Convert all images with specific extension in the current folder to webp (by copy). `<image_extension>` is not manddatory, default `jpg`.
+Convert all images with specific extension in the current folder to webp (by copy).
 
 ## Music
 
-`wav2flac <args>`
+* `wav2flac <args>`
 
 Get one or more argument. Convert a wav file into a flac file using ffmpeg.
 
-`rmwav2flac <args>`
+* `rmwav2flac <args>`
 
 Get one or more argument. Convert a wav file into a flac file using ffmpeg.
 
@@ -202,35 +200,39 @@ Delete the wav file when conversion done.
 
 ## Internet
 
-`duckduckgo <search>`
+* `duckduckgo <search>`
 
 Search on duckduckgo using the text-based browser lynx.
+
+* `wikipedia <search>`
+
+Search on wikipedia using the text-based browser lynx.
 
 ## Download
 
 ### Youtube dl
 
-`ydl <video_url>`
+* `ydl <video_url>`
 
 Download a video with best quality from Youtube.
 
-`ydlp <playlist_url>`
+* `ydlp <playlist_url>`
 
 Download a playlist from Youtube.
 
 ## Git 
 
-`gtrm <tag_name> <remote>`
+* `gtrm <tag_name> <remote=origin>`
 
-Delete a tag locally AND on the remote. `<remote>` argument is not mandatory, default `origin`.
+Delete a tag locally AND on the remote.
 
-`githeat`
+* `githeat`
 
 Display a git heatmap
 
 ### FZF 
 
-`fmux`
+* `fmux`
 
 Let you choose a tmuxp config
 
@@ -238,20 +240,20 @@ Let you choose a tmuxp config
 
 #### Checkout 
 
-`fgco`
+* `fgco`
 
 Require fzf of course :)
 Checkout local or remote branch via FZF
 
 #### Logs
 
-`fgl`
+* `fgl`
 
 Simple way to fuzzy search in the log tree.
 
 ### Stash
 
-`fstash`
+* `fstash`
 
 Fuzzy search in the stash list. 
 
@@ -259,7 +261,7 @@ Fuzzy search in the stash list.
 
 ### Clojure
 
-`initKondo`
+* `initKondo`
 
 Init kondo-clj for a clojure project with boot.
 
@@ -267,15 +269,15 @@ Init kondo-clj for a clojure project with boot.
 
 ### Prompt Performance
 
-`promptspeed`
+* `promptspeed`
 
 Display the time for the prompt to appear when opening a new zsh instance
 
-``
+* ``
 
 ### Auto completed commands in Zsh
 
-`zshcomp`
+* `zshcomp`
 
 Display all autocompleted command in zsh.
 
@@ -284,7 +286,7 @@ Second column: completion function
 
 ### Command History
 
-`historystat`
+* `historystat`
 
 Display the command more often used in the shell
 
@@ -292,49 +294,43 @@ Display the command more often used in the shell
 
 ### File system
 
-`mkcd`
+* `mkcd`
 
 Similar to cd. Create a folder like `mkdir -p` and goes in it.
 
-`mkmv`
+* `mkmv`
 
 Similar to mv. Move a file or a folder, and create the filepath if it doesn't exist
 
-`mkmv`
+* `mkmv`
 
 Similar to cp. Copy a file or a folder, and create the filepath if it doesn't exist
 
 ### Productivity
 
-`pom`
+* `pom <hours> <minutes> <duration=25>`
 
-Calculate number of pomodoro done for a specific duration.
-
-Arguments:
-
-1. Number of hours
-2. Number of minutes
-3. (optional) Duration of one pomodoro (default: 25 min)
+Calculate number of pomodoro done for a specific time in hour(s) and minute(s).
 
 ## Fun
 
 ### Term displays
 
-`matrix`
+* `matrix`
 
 Display... the matrix!
 
-`pipes` 
+* `pipes` 
 
 Remember the OpenGL pipes screensaver on windows 9*? The same in the terminal. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/pipes).
 
 ### Term Colors
 
-`colorblocks` 
+* `colorblocks` 
 
 Display the main terminal colors configured, in nice blocks. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorblocks).
 
-`colorcards` 
+* `colorcards` 
 
 Display all the terminal colors configured, in nice panes. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorcards).
 
