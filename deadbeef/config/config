@@ -140,14 +140,14 @@ playback.volume -5.972156
 playlist.current 2
 playlist.cursor.0 16
 playlist.cursor.1 25
-playlist.cursor.2 85
+playlist.cursor.2 104
 playlist.cursor.3 24
 playlist.cursor.4 1267
 playlist.cursor.5 60
 playlist.cursor.6 0
 playlist.scroll.0 324
 playlist.scroll.1 -25
-playlist.scroll.2 -74
+playlist.scroll.2 -104
 playlist.scroll.3 375
 playlist.scroll.4 -1267
 playlist.scroll.5 -60
@@ -165,8 +165,8 @@ prefwin.geometry.x 632
 prefwin.geometry.y 330
 resume.paused 1
 resume.playlist 2
-resume.position 201.08569
-resume.track 74
+resume.position 396.59967
+resume.track 104
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 733

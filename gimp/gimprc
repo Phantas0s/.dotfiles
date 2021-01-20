@@ -12,7 +12,6 @@
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (layer-new-name "bottom")
-(layer-new-fill-type foreground)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
@@ -25,7 +24,7 @@
     (feather no)
     (feather-radius 10)
     (method line)
-    (width 4)
+    (width 1)
     (unit pixels)
     (cap-style butt)
     (join-style miter)
