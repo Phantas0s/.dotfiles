@@ -21,14 +21,14 @@ screencast() {
     fi
 
     if [ ! -z $1 ]; then
-       [ $screen -eq 1 ] && offset="+0,$(( $bigger_height -  $(screenres 1 | awk -Fx '{print $2}')))"
-       # [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
-       ffmpeg -f x11grab -framerate 60 -s $(screenres $screen) -i :0.0$offset -f pulse -sample_rate 44100 -i default -c:v libx264 -preset ultrafast -c:a aac $1
+        [ $screen -eq 1 ] && offset="+0,$(( $bigger_height -  $(screenres 1 | awk -Fx '{print $2}')))"
+        # [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
+        ffmpeg -f x11grab -framerate 60 -s $(screenres $screen) -i :0.0$offset -f pulse -sample_rate 44100 -i default -c:v libx264 -preset ultrafast -c:a aac $1
 
        # Other codecs
        # -c:v ffvhuff   # lossless but HUGE
-    else 
-        echo "You need to precise an output file as first argument - eg 'example.mkv'"
+   else 
+       echo "You need to precise an output file as first argument - eg 'example.mkv'"
     fi
 }
 
@@ -417,40 +417,6 @@ smedia() {
     sudo $DOTFILES/bash/scripts/smedia.sh $@
 }
 
-crypt() {
-[ $# -eq 1 ] && set -- "--encrypt" "$1"
-
-usage() { >&2 echo "Usage: crypt {-c,-d} <path>" 
-exit 1 ; }
-
-case "$1" in
-    --encrypt|-c) 
-        if [ -d "$2" ] ; then
-            dash ${HOME}/bin/pack "$2"
-            set 2 "${2%/}".tar.xz
-        elif [ -f "$2" ] ; then
-            xz -9 "$2"
-            set 2 "$2".xz
-        else 
-            usage
-        fi
-        opts="-salt -e" ;;
-    --decrypt|-d) 
-        [ ! -e "$2" ] && usage
-        opts="-d" ;;
-    *) usage
-esac
-
-cat "$2" | openssl aes-256-cbc $opts -a -out "$2" &&
-
-    case "$1" in
-        --decrypt|-d) 
-            xz -d "$2" 2> /dev/null &&
-                tar xf "${2%.*}" 2> /dev/null && 
-                rm -rf "${2%.*}" ;;
-    esac
-}
-
 mkcd() {
     dir="$*";
     mkdir -p "$dir" && cd "$dir";
@@ -461,18 +427,18 @@ mkcp() {
     tmp="$2"; tmp="${tmp: -1}"
     [ "$tmp" != "/" ] && dir="$(dirname "$2")"
     [ -d "$dir" ] ||
-    mkdir -p "$dir" &&
-    cp -r "$@"
-}
+        mkdir -p "$dir" &&
+        cp -r "$@"
+    }
 
 mkmv() {
     dir="$2"
     tmp="$2"; tmp="${tmp: -1}"
     [ "$tmp" != "/" ] && dir="$(dirname "$2")"
     [ -d "$dir" ] ||
-    mkdir -p "$dir" &&
-    mv "$@"
-}
+        mkdir -p "$dir" &&
+        mv "$@"
+    }
 
 historystat() {
     history 0 | awk '{print $2}' | sort | uniq -c | sort -n -r | head
@@ -625,8 +591,8 @@ rmwav2flac() {
 }
 
 freetouch() {
-touch $1.mm
-cat <<EOF > $1.mm
+    touch $1.mm
+    cat <<EOF > $1.mm
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node TEXT="Title"/>
@@ -636,10 +602,10 @@ EOF
 
 duckduckgo()
 {
-  lynx -vikeys -accept_all_cookies "https://lite.duckduckgo.com/lite/?q='$@'"
+    lynx -vikeys -accept_all_cookies "https://lite.duckduckgo.com/lite/?q='$@'"
 }
 
 wikipedia()
 {
-  lynx -vikeys -accept_all_cookies "https://en.wikipedia.org/wiki/$@"
+    lynx -vikeys -accept_all_cookies "https://en.wikipedia.org/wiki/$@"
 }
