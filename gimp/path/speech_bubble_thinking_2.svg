@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    id="svg548"
+    inkscape:version="0.48.3.1 r9886"
+    viewBox="0 0 503.16 418.92"
+    sodipodi:version="0.32"
+    version="1.1"
+    inkscape:output_extension="org.inkscape.output.svg.inkscape"
+    sodipodi:docname="_svgclean2.svg"
+  >
+  <defs
+      id="defs550"
+    >
+    <filter
+        id="filter3736"
+        inkscape:collect="always"
+        color-interpolation-filters="sRGB"
+      >
+      <feGaussianBlur
+          id="feGaussianBlur3738"
+          stdDeviation="6.4057155"
+          inkscape:collect="always"
+      />
+    </filter
+    >
+  </defs
+  >
+  <sodipodi:namedview
+      id="base"
+      inkscape:window-width="674"
+      inkscape:window-x="0"
+      inkscape:window-y="0"
+      inkscape:window-maximized="0"
+      inkscape:zoom="0.7725"
+      showgrid="false"
+      inkscape:current-layer="svg548"
+      inkscape:cx="449.09618"
+      inkscape:cy="-424.31343"
+      inkscape:window-height="645"
+  />
+  <path
+      id="path680"
+      style="filter:url(#filter3736);fill-rule:evenodd;stroke-width:1.25;fill:#000000;fill-opacity:.49804"
+      inkscape:connector-curvature="0"
+      d="m254.49 19.685c-116.56 3.221-233.7 64.446-236.8 184.1 1.609 56.82 33.53 97.26 79.88 122.43-21.021 5.06-37.886 16.56-38.484 34.63 0.299 8.26 4.6 14.85 11.399 19.81-8.494 0.76-16.473 4.76-16.7 12.35 0.492 15.02 36.492 13.49 37.23-1.41-0.007-0.82-0.167-1.55-0.368-2.28 35.783 8.86 89.383-2.88 91.003-32.6-0.01-1.14-0.15-2.22-0.3-3.31 133.46 20.96 300.83-38.93 306.44-169.87-0.77-112.3-116.75-167.08-233.3-163.86z"
+  />
+  <path
+      id="path975"
+      inkscape:connector-curvature="0"
+      sodipodi:nodetypes="ccc"
+      style="stroke-linejoin:round;fill-rule:evenodd;stroke:#000000;stroke-width:10;fill:#ffffff"
+      d="m475.09 168.96c-9.3 217.2-463.89 239.29-470.09 20.24 6.204-239.29 468.54-244.81 470.09-20.24z"
+  />
+  <path
+      id="path976"
+      inkscape:connector-curvature="0"
+      sodipodi:nodetypes="ccc"
+      style="stroke-linejoin:round;fill-rule:evenodd;stroke:#000000;stroke-width:10;fill:#ffffff"
+      d="m168.96 342.15c-2.43 44.38-120.95 48.9-122.57 4.14 1.62-48.9 122.16-50.02 122.57-4.14z"
+  />
+  <path
+      id="path977"
+      inkscape:connector-curvature="0"
+      sodipodi:nodetypes="ccc"
+      style="stroke-linejoin:round;fill-rule:evenodd;stroke:#000000;stroke-width:10;fill:#ffffff"
+      d="m78.322 377.03c-0.738 14.9-36.745 16.42-37.236 1.39 0.491-16.41 37.113-16.79 37.236-1.39z"
+  />
+  <metadata
+      id="metadata11"
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

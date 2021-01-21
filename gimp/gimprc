@@ -7,10 +7,11 @@
 # Preferences dialog.
 
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable")
-(monitor-xresolution 94)
-(monitor-yresolution 95)
+(monitor-xresolution 125)
+(monitor-yresolution 125)
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
+(color-profile-policy keep)
 (layer-new-name "bottom")
 (path-import-path "${gimp_dir}/path")
 (fill-options
