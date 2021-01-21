@@ -600,12 +600,15 @@ freetouch() {
 EOF
 }
 
-duckduckgo()
-{
+duckduckgo() {
     lynx -vikeys -accept_all_cookies "https://lite.duckduckgo.com/lite/?q='$@'"
 }
 
-wikipedia()
-{
+wikipedia() {
     lynx -vikeys -accept_all_cookies "https://en.wikipedia.org/wiki/$@"
 }
+
+ecosia() {
+    lynx -vikeys -accept_all_cookies "https://www.ecosia.org/search?q='$@'"
+}
+
