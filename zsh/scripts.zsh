@@ -612,3 +612,11 @@ ecosia() {
     lynx -vikeys -accept_all_cookies "https://www.ecosia.org/search?q='$@'"
 }
 
+# Count number 
+blogwc() {
+    DATE=$(date +"%Y")
+    if [ ! -z $1 ]; then
+        DATE=$1
+    fi
+    cd ~/workspace/webtechno/content/post && grep -l "date = \"$DATE" *.md | xargs wc && cd -
+}
