@@ -136,7 +136,7 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -5.972156
+playback.volume -13.05421
 playlist.current 2
 playlist.cursor.0 16
 playlist.cursor.1 25
