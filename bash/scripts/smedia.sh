@@ -22,6 +22,7 @@ social_media=(
     api.reddit.com
     dev.to
     www.dev.to
+    tweetdeck.twitter.com
 )
 
 if [[ ! -f /etc/hosts ]]; then
