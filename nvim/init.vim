@@ -433,7 +433,7 @@ augroup END
 
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-if executable("rg") 
+if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
 

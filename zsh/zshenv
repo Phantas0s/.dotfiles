@@ -35,6 +35,10 @@ export I3_CONFIG="$XDG_CONFIG_HOME/i3"
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 export GIMP_VERSION="2.10"
 
+# fzf
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # X11
 
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
