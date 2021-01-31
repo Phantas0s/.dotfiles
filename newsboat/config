@@ -1,0 +1,9 @@
+auto-reload yes
+
+reload-time 30
+reload-threads 100
+
+bind-key j down
+bind-key k up
+bind-key ^U pageup
+bind-key ^D pagedown
