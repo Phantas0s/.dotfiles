@@ -79,4 +79,5 @@ dot_is_installed doublecmd && dot_install doublecmd
 dot_is_installed deadbeef && dot_install deadbeef
 dot_is_installed darktable && dot_install darktable
 dot_is_installed digikam && dot_install digikam
+dot_is_installed newsboat && dot_install newsboat
 dot_install gtk
