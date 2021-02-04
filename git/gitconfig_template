@@ -10,8 +10,8 @@
 [color "diff-highlight"]
     oldNormal = red bold
     oldHighlight = yellow bold 52
-    newNormal = red bold
-    newHighlight = yellow bold 22
+    newNormal = green bold
+    newHighlight = cyan bold 22
 [color "diff"]
     meta = 11
     frag = magenta bold
