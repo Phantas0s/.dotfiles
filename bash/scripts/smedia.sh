@@ -23,6 +23,7 @@ social_media=(
     dev.to
     www.dev.to
     tweetdeck.twitter.com
+    recurse.zulipchat.com
 )
 
 if [[ ! -f /etc/hosts ]]; then
