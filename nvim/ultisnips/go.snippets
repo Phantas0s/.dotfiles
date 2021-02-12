@@ -76,11 +76,19 @@ if err != nil {
 ${1}
 endsnippet
 
-snippet errr, "Basic error handling return err with another return" b
+snippet errrr, "Basic error handling return err with another return" b
 if err != nil {
 	return ${1:nil}, err
 }
 endsnippet
+
+snippet errp, "Basic error handling with panic" b
+if err != nil {
+	panic(err)
+}
+${1}
+endsnippet
+
 
 snippet errw "Return wrapped error" b
 if err != nil {
