@@ -89,10 +89,19 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+
+" CTRL-A CTRL-Q to select all and build quickfix list
+" https://github.com/junegunn/fzf.vim/issues/185
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
 let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
-  \ 'ctrl-h': 'split',
-  \ 'ctrl-v': 'vsplit' 
-  \ }
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
 nmap <leader><tab> <plug>(fzf-maps-n)

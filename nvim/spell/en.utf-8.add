@@ -2,7 +2,7 @@ codebase
 MySQL
 mycli
 config
-Github
+GitHub
 AUR
 yay
 Ubuntu
@@ -74,3 +74,8 @@ filesystem
 subshell
 terraforming
 impostorism
+symlinks
+Wiki
+OpenSSH
+GitHub
+GitLab
