@@ -90,7 +90,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 
-" CTRL-A CTRL-Q to select all and build quickfix list
+" ALT-A CTRL-Q to select all and build quickfix list
 " https://github.com/junegunn/fzf.vim/issues/185
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
