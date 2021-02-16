@@ -13,7 +13,6 @@
 (icon-size medium)
 (color-profile-policy keep)
 (layer-new-name "bottom")
-(layer-new-fill-type foreground)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
