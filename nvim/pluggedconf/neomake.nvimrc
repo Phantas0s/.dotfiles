@@ -212,7 +212,8 @@ let g:neomake_vim_enabled_makers = ['vint']
 " | Markdown |
 " +----------+
 
-let g:neomake_markdown_enabled_makers = ['proselint'] 
+" Crash too often
+" let g:neomake_markdown_enabled_makers = ['proselint'] 
 
 " +-------------+
 " | Spinner !!! |
