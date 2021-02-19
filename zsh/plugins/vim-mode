@@ -408,246 +408,246 @@ if [[ $VIM_MODE_TRACK_KEYMAP != no ]]; then
         esac
     }
 
-    # Editing mode indicator - Prompt string {{{1
+    ## Editing mode indicator - Prompt string {{{1
 
-    # Unique prefix to tag the mode indicator text in the prompt.
-    # If ZLE_RPROMPT_INDENT is < 1, zle gets confused if $RPS1 isn't empty but
-    # printing it doesn't move the cursor.
-    (( ${ZLE_RPROMPT_INDENT:-1} > 0 )) \
-        && vim_mode_indicator_pfx="%837(l,,)" \
-        || vim_mode_indicator_pfx="%837(l,, )"
+    ## Unique prefix to tag the mode indicator text in the prompt.
+    ## If ZLE_RPROMPT_INDENT is < 1, zle gets confused if $RPS1 isn't empty but
+    ## printing it doesn't move the cursor.
+    #(( ${ZLE_RPROMPT_INDENT:-1} > 0 )) \
+    #    && vim_mode_indicator_pfx="%837(l,,)" \
+    #    || vim_mode_indicator_pfx="%837(l,, )"
 
-    # If mode indicator wasn't setup by theme, define default
-    vim-mode-set-up-indicators () {
-        local indicator=${MODE_INDICATOR_VICMD-${MODE_INDICATOR-DEFAULT}}
-        local set=$((
-            $+MODE_INDICATOR_VIINS +
-            $+MODE_INDICATOR_REPLACE +
-            $+MODE_INDICATOR_VICMD +
-            $+MODE_INDICATOR_SEARCH +
-            $+MODE_INDICATOR_VISUAL +
-            $+MODE_INDICATOR_VLINE))
+    ## If mode indicator wasn't setup by theme, define default
+    #vim-mode-set-up-indicators () {
+    #    local indicator=${MODE_INDICATOR_VICMD-${MODE_INDICATOR-DEFAULT}}
+    #    local set=$((
+    #        $+MODE_INDICATOR_VIINS +
+    #        $+MODE_INDICATOR_REPLACE +
+    #        $+MODE_INDICATOR_VICMD +
+    #        $+MODE_INDICATOR_SEARCH +
+    #        $+MODE_INDICATOR_VISUAL +
+    #        $+MODE_INDICATOR_VLINE))
 
-        if [[ -n $indicator || $set > 0 ]]; then
-            if (( ! $set )); then
-                if [[ $indicator = DEFAULT ]]; then
-                    MODE_INDICATOR_VICMD='%F{10}<%F{2}<<%f'
-                    MODE_INDICATOR_REPLACE='%F{9}<%F{1}*<%f'
-                    MODE_INDICATOR_SEARCH='%F{13}<%F{5}?<%f'
-                    MODE_INDICATOR_VISUAL='%F{12}<%F{4}-<%f'
-                    MODE_INDICATOR_VLINE='%F{12}<%F{4}=<%f'
-                else
-                    MODE_INDICATOR_VICMD=$indicator
-                fi
+    #    if [[ -n $indicator || $set > 0 ]]; then
+    #        if (( ! $set )); then
+    #            if [[ $indicator = DEFAULT ]]; then
+    #                MODE_INDICATOR_VICMD='%F{10}<%F{2}<<%f'
+    #                MODE_INDICATOR_REPLACE='%F{9}<%F{1}*<%f'
+    #                MODE_INDICATOR_SEARCH='%F{13}<%F{5}?<%f'
+    #                MODE_INDICATOR_VISUAL='%F{12}<%F{4}-<%f'
+    #                MODE_INDICATOR_VLINE='%F{12}<%F{4}=<%f'
+    #            else
+    #                MODE_INDICATOR_VICMD=$indicator
+    #            fi
 
-                # Replace / Search indicator defaults to viins
-                (( $+MODE_INDICATOR_VIINS )) && \
-                    : ${MODE_INDICATOR_REPLACE=$MODE_INDICATOR_VIINS}
-                (( $+MODE_INDICATOR_VIINS )) && \
-                    : ${MODE_INDICATOR_SEARCH=$MODE_INDICATOR_VIINS}
+    #            # Replace / Search indicator defaults to viins
+    #            (( $+MODE_INDICATOR_VIINS )) && \
+    #                : ${MODE_INDICATOR_REPLACE=$MODE_INDICATOR_VIINS}
+    #            (( $+MODE_INDICATOR_VIINS )) && \
+    #                : ${MODE_INDICATOR_SEARCH=$MODE_INDICATOR_VIINS}
 
-                # Visual indicator defaults to vicmd
-                (( $+MODE_INDICATOR_VICMD )) && \
-                    : ${MODE_INDICATOR_VISUAL=$MODE_INDICATOR_VICMD}
-                (( $+MODE_INDICATOR_VISUAL )) && \
-                    : ${MODE_INDICATOR_VLINE=$MODE_INDICATOR_VISUAL}
+    #            # Visual indicator defaults to vicmd
+    #            (( $+MODE_INDICATOR_VICMD )) && \
+    #                : ${MODE_INDICATOR_VISUAL=$MODE_INDICATOR_VICMD}
+    #            (( $+MODE_INDICATOR_VISUAL )) && \
+    #                : ${MODE_INDICATOR_VLINE=$MODE_INDICATOR_VISUAL}
 
-                MODE_INDICATOR_PROMPT=${vim_mode_indicator_pfx}${MODE_INDICATOR_VIINS}
+    #            MODE_INDICATOR_PROMPT=${vim_mode_indicator_pfx}${MODE_INDICATOR_VIINS}
 
-                if (( !$+RPS1 )); then
-                    [[ -o promptsubst ]] \
-                        && RPS1='${MODE_INDICATOR_PROMPT}' \
-                        || RPS1="$MODE_INDICATOR_PROMPT"
-                fi
-            fi
-        else
-            unset MODE_INDICATOR_PROMPT
-        fi
-    }
+    #            if (( !$+RPS1 )); then
+    #                [[ -o promptsubst ]] \
+    #                    && RPS1='${MODE_INDICATOR_PROMPT}' \
+    #                    || RPS1="$MODE_INDICATOR_PROMPT"
+    #            fi
+    #        fi
+    #    else
+    #        unset MODE_INDICATOR_PROMPT
+    #    fi
+    #}
 
-    vim-mode-update-prompt () {
-        local keymap="$1"
+    #vim-mode-update-prompt () {
+    #    local keymap="$1"
 
-        # See if user requested indicators since last time
-        (( $+MODE_INDICATOR_PROMPT )) || vim-mode-set-up-indicators
-        (( $+MODE_INDICATOR_PROMPT )) || return
+    #    # See if user requested indicators since last time
+    #    (( $+MODE_INDICATOR_PROMPT )) || vim-mode-set-up-indicators
+    #    (( $+MODE_INDICATOR_PROMPT )) || return
 
-        local -A modes=(
-            I  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VIINS}
-            C  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VICMD}
-            R  ${vim_mode_indicator_pfx}${MODE_INDICATOR_REPLACE}
-            S  ${vim_mode_indicator_pfx}${MODE_INDICATOR_SEARCH}
-            V  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VISUAL}
-            L  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VLINE}
-            # In case user has changed the mode string since last call, look
-            # for the previous value as well as set of current values
-            p  ${MODE_INDICATOR_PROMPT}
-        )
+    #    local -A modes=(
+    #        I  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VIINS}
+    #        C  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VICMD}
+    #        R  ${vim_mode_indicator_pfx}${MODE_INDICATOR_REPLACE}
+    #        S  ${vim_mode_indicator_pfx}${MODE_INDICATOR_SEARCH}
+    #        V  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VISUAL}
+    #        L  ${vim_mode_indicator_pfx}${MODE_INDICATOR_VLINE}
+    #        # In case user has changed the mode string since last call, look
+    #        # for the previous value as well as set of current values
+    #        p  ${MODE_INDICATOR_PROMPT}
+    #    )
 
-        # Pattern that will match any value from $modes. Reverse sort, so that
-        # if one pattern is a prefix of a longer one, it will be tried after.
-        local any_mode=${(j:|:)${(Obu)modes}}
+    #    # Pattern that will match any value from $modes. Reverse sort, so that
+    #    # if one pattern is a prefix of a longer one, it will be tried after.
+    #    local any_mode=${(j:|:)${(Obu)modes}}
 
-        (( $+RPROMPT )) && : ${RPS1=$RPROMPT}
-        local prompts="$PS1 $RPS1"
+    #    (( $+RPROMPT )) && : ${RPS1=$RPROMPT}
+    #    local prompts="$PS1 $RPS1"
 
-        case $keymap in
-            vicmd)        MODE_INDICATOR_PROMPT=$modes[C] ;;
-            replace)      MODE_INDICATOR_PROMPT=$modes[R] ;;
-            isearch)      MODE_INDICATOR_PROMPT=$modes[S] ;;
-            visual)       MODE_INDICATOR_PROMPT=$modes[V] ;;
-            vline)        MODE_INDICATOR_PROMPT=$modes[L] ;;
-            main|viins|*) MODE_INDICATOR_PROMPT=$modes[I] ;;
-        esac
+    #    case $keymap in
+    #        vicmd)        MODE_INDICATOR_PROMPT=$modes[C] ;;
+    #        replace)      MODE_INDICATOR_PROMPT=$modes[R] ;;
+    #        isearch)      MODE_INDICATOR_PROMPT=$modes[S] ;;
+    #        visual)       MODE_INDICATOR_PROMPT=$modes[V] ;;
+    #        vline)        MODE_INDICATOR_PROMPT=$modes[L] ;;
+    #        main|viins|*) MODE_INDICATOR_PROMPT=$modes[I] ;;
+    #    esac
 
-        if [[ ${(SN)prompts#${~any_mode}} > 0 ]]; then
-            PS1=${PS1//${~any_mode}/$MODE_INDICATOR_PROMPT}
-            RPS1=${RPS1//${~any_mode}/$MODE_INDICATOR_PROMPT}
-        fi
+    #    if [[ ${(SN)prompts#${~any_mode}} > 0 ]]; then
+    #        PS1=${PS1//${~any_mode}/$MODE_INDICATOR_PROMPT}
+    #        RPS1=${RPS1//${~any_mode}/$MODE_INDICATOR_PROMPT}
+    #    fi
 
-        zle || return
-        zle reset-prompt
-    }
+    #    zle || return
+    #    zle reset-prompt
+    #}
 
-    # Compatibility with oh-my-zsh vi-mode
-    function vi_mode_prompt_info() {
-        print ${MODE_INDICATOR_PROMPT}
-    }
+    ## Compatibility with oh-my-zsh vi-mode
+    #function vi_mode_prompt_info() {
+    #    print ${MODE_INDICATOR_PROMPT}
+    #}
 
-    vim-mode-set-up-indicators
-    vim_mode_keymap_funcs+=vim-mode-update-prompt
+    #vim-mode-set-up-indicators
+    #vim_mode_keymap_funcs+=vim-mode-update-prompt
 
 
-    # Editing mode indicator - Cursor shape {{{1
-    #
-    # Compatibility with old variable names
-    (( $+ZSH_VIM_MODE_CURSOR_VIINS )) \
-        && : ${MODE_CURSOR_VIINS=ZSH_VIM_MODE_CURSOR_VIINS}
-    (( $+ZSH_VIM_MODE_CURSOR_REPLACE )) \
-        && : ${MODE_CURSOR_REPLACE=ZSH_VIM_MODE_CURSOR_REPLACE}
-    (( $+ZSH_VIM_MODE_CURSOR_VICMD )) \
-        && : ${MODE_CURSOR_VICMD=ZSH_VIM_MODE_CURSOR_VICMD}
-    (( $+ZSH_VIM_MODE_CURSOR_ISEARCH )) \
-        && : ${MODE_CURSOR_SEARCH=ZSH_VIM_MODE_CURSOR_ISEARCH}
-    (( $+ZSH_VIM_MODE_CURSOR_VISUAL )) \
-        && : ${MODE_CURSOR_VISUAL=ZSH_VIM_MODE_CURSOR_VISUAL}
-    (( $+ZSH_VIM_MODE_CURSOR_VLINE )) \
-        && : ${MODE_CURSOR_VLINE=ZSH_VIM_MODE_CURSOR_VLINE}
-    (( $+ZSH_VIM_MODE_CURSOR_DEFAULT )) \
-        && : ${MODE_CURSOR_DEFAULT=ZSH_VIM_MODE_CURSOR_DEFAULT}
+    ## Editing mode indicator - Cursor shape {{{1
+    ##
+    ## Compatibility with old variable names
+    #(( $+ZSH_VIM_MODE_CURSOR_VIINS )) \
+    #    && : ${MODE_CURSOR_VIINS=ZSH_VIM_MODE_CURSOR_VIINS}
+    #(( $+ZSH_VIM_MODE_CURSOR_REPLACE )) \
+    #    && : ${MODE_CURSOR_REPLACE=ZSH_VIM_MODE_CURSOR_REPLACE}
+    #(( $+ZSH_VIM_MODE_CURSOR_VICMD )) \
+    #    && : ${MODE_CURSOR_VICMD=ZSH_VIM_MODE_CURSOR_VICMD}
+    #(( $+ZSH_VIM_MODE_CURSOR_ISEARCH )) \
+    #    && : ${MODE_CURSOR_SEARCH=ZSH_VIM_MODE_CURSOR_ISEARCH}
+    #(( $+ZSH_VIM_MODE_CURSOR_VISUAL )) \
+    #    && : ${MODE_CURSOR_VISUAL=ZSH_VIM_MODE_CURSOR_VISUAL}
+    #(( $+ZSH_VIM_MODE_CURSOR_VLINE )) \
+    #    && : ${MODE_CURSOR_VLINE=ZSH_VIM_MODE_CURSOR_VLINE}
+    #(( $+ZSH_VIM_MODE_CURSOR_DEFAULT )) \
+    #    && : ${MODE_CURSOR_DEFAULT=ZSH_VIM_MODE_CURSOR_DEFAULT}
 
-    # You may want to set this to '', if your cursor stops blinking
-    # when you didn't ask it to. Some terminals, e.g., xterm, don't blink
-    # initially but do blink after the set-to-default sequence. So this
-    # forces it to steady, which should match most default setups.
-    : ${MODE_CURSOR_DEFAULT:=steady}
+    ## You may want to set this to '', if your cursor stops blinking
+    ## when you didn't ask it to. Some terminals, e.g., xterm, don't blink
+    ## initially but do blink after the set-to-default sequence. So this
+    ## forces it to steady, which should match most default setups.
+    #: ${MODE_CURSOR_DEFAULT:=steady}
 
-    send-terminal-sequence() {
-        local sequence="$1"
-        local is_tmux
+    #send-terminal-sequence() {
+    #    local sequence="$1"
+    #    local is_tmux
 
-        # Older TMUX (before 1.5) does not handle cursor styling and needs
-        # to be told to pass those escape sequences directly to the terminal
-        if [[ $TMUX_PASSTHROUGH = 1 ]]; then
-            # Double each escape (see zshbuiltins(1) echo for backslash escapes)
-            # And wrap it in the TMUX DCS passthrough
-            sequence=${sequence//\\(e|x27|033|[uU]00*1[bB])/\\e\\e}
-            sequence="\ePtmux;$sequence\e\\"
-        fi
-        print -n "$sequence"
-    }
+    #    # Older TMUX (before 1.5) does not handle cursor styling and needs
+    #    # to be told to pass those escape sequences directly to the terminal
+    #    if [[ $TMUX_PASSTHROUGH = 1 ]]; then
+    #        # Double each escape (see zshbuiltins(1) echo for backslash escapes)
+    #        # And wrap it in the TMUX DCS passthrough
+    #        sequence=${sequence//\\(e|x27|033|[uU]00*1[bB])/\\e\\e}
+    #        sequence="\ePtmux;$sequence\e\\"
+    #    fi
+    #    print -n "$sequence"
+    #}
 
-    set-terminal-cursor-style() {
-        local steady=
-        local shape=
-        local color=
+    #set-terminal-cursor-style() {
+    #    local steady=
+    #    local shape=
+    #    local color=
 
-        for setting in ${=MODE_CURSOR_DEFAULT} "$@"; do
-            case $setting in
-                blinking)  steady=0 ;;
-                steady)    steady=1 ;;
-                block)     shape=1 ;;
-                underline) shape=3 ;;
-                beam|bar)  shape=5 ;;
-                *)         color="$setting" ;;
-            esac
-        done
+    #    for setting in ${=MODE_CURSOR_DEFAULT} "$@"; do
+    #        case $setting in
+    #            blinking)  steady=0 ;;
+    #            steady)    steady=1 ;;
+    #            block)     shape=1 ;;
+    #            underline) shape=3 ;;
+    #            beam|bar)  shape=5 ;;
+    #            *)         color="$setting" ;;
+    #        esac
+    #    done
 
-        # OSC Ps ; Pt BEL
-        #   Ps = 1 2  -> Change text cursor color to Pt.
-        #   Ps = 1 1 2  -> Reset text cursor color.
+    #    # OSC Ps ; Pt BEL
+    #    #   Ps = 1 2  -> Change text cursor color to Pt.
+    #    #   Ps = 1 1 2  -> Reset text cursor color.
 
-        if [[ -z $color ]]; then
-            # Reset cursor color
-            send-terminal-sequence "\e]112\a"
-        else
-            # Note: Color is "specified by name or RGB specification as per
-            # XParseColor", according to XTerm docs
-            send-terminal-sequence "\e]12;${color}\a"
-        fi
+    #    if [[ -z $color ]]; then
+    #        # Reset cursor color
+    #        send-terminal-sequence "\e]112\a"
+    #    else
+    #        # Note: Color is "specified by name or RGB specification as per
+    #        # XParseColor", according to XTerm docs
+    #        send-terminal-sequence "\e]12;${color}\a"
+    #    fi
 
-        # CSI Ps SP q
-        #   Set cursor style (DECSCUSR), VT520.
-        #     Ps = 0  -> blinking block.
-        #     Ps = 1  -> blinking block (default).
-        #     Ps = 2  -> steady block.
-        #     Ps = 3  -> blinking underline.
-        #     Ps = 4  -> steady underline.
-        #     Ps = 5  -> blinking bar (xterm).
-        #     Ps = 6  -> steady bar (xterm).
+    #    # CSI Ps SP q
+    #    #   Set cursor style (DECSCUSR), VT520.
+    #    #     Ps = 0  -> blinking block.
+    #    #     Ps = 1  -> blinking block (default).
+    #    #     Ps = 2  -> steady block.
+    #    #     Ps = 3  -> blinking underline.
+    #    #     Ps = 4  -> steady underline.
+    #    #     Ps = 5  -> blinking bar (xterm).
+    #    #     Ps = 6  -> steady bar (xterm).
 
-        if [[ -z $steady && -z $shape ]]; then
-            send-terminal-sequence "\e[0 q"
-        else
-            [[ -z $shape ]] && shape=1
-            [[ -z $steady ]] && steady=1
-            send-terminal-sequence "\e[$((shape + steady)) q"
-        fi
-    }
+    #    if [[ -z $steady && -z $shape ]]; then
+    #        send-terminal-sequence "\e[0 q"
+    #    else
+    #        [[ -z $shape ]] && shape=1
+    #        [[ -z $steady ]] && steady=1
+    #        send-terminal-sequence "\e[$((shape + steady)) q"
+    #    fi
+    #}
 
-    vim-mode-set-cursor-style() {
-        local keymap="$1"
+    #vim-mode-set-cursor-style() {
+    #    local keymap="$1"
 
-        if [[ -n $MODE_CURSOR_VIINS \
-           || -n $MODE_CURSOR_REPLACE \
-           || -n $MODE_CURSOR_VICMD \
-           || -n $MODE_CURSOR_SEARCH \
-           || -n $MODE_CURSOR_VISUAL \
-           || -n $MODE_CURSOR_VLINE \
-           ]]
-        then
-            case $keymap in
-                DEFAULT) set-terminal-cursor-style ;;
-                replace) set-terminal-cursor-style ${=MODE_CURSOR_REPLACE-$=MODE_CURSOR_VIINS} ;;
-                vicmd)   set-terminal-cursor-style ${=MODE_CURSOR_VICMD} ;;
-                isearch) set-terminal-cursor-style ${=MODE_CURSOR_SEARCH-$=MODE_CURSOR_VIINS} ;;
-                visual)  set-terminal-cursor-style ${=MODE_CURSOR_VISUAL-$=MODE_CURSOR_VIINS} ;;
-                vline)   set-terminal-cursor-style ${=MODE_CURSOR_VLINE-${=MODE_CURSOR_VISUAL-$=MODE_CURSOR_VIINS}} ;;
+    #    if [[ -n $MODE_CURSOR_VIINS \
+    #       || -n $MODE_CURSOR_REPLACE \
+    #       || -n $MODE_CURSOR_VICMD \
+    #       || -n $MODE_CURSOR_SEARCH \
+    #       || -n $MODE_CURSOR_VISUAL \
+    #       || -n $MODE_CURSOR_VLINE \
+    #       ]]
+    #    then
+    #        case $keymap in
+    #            DEFAULT) set-terminal-cursor-style ;;
+    #            replace) set-terminal-cursor-style ${=MODE_CURSOR_REPLACE-$=MODE_CURSOR_VIINS} ;;
+    #            vicmd)   set-terminal-cursor-style ${=MODE_CURSOR_VICMD} ;;
+    #            isearch) set-terminal-cursor-style ${=MODE_CURSOR_SEARCH-$=MODE_CURSOR_VIINS} ;;
+    #            visual)  set-terminal-cursor-style ${=MODE_CURSOR_VISUAL-$=MODE_CURSOR_VIINS} ;;
+    #            vline)   set-terminal-cursor-style ${=MODE_CURSOR_VLINE-${=MODE_CURSOR_VISUAL-$=MODE_CURSOR_VIINS}} ;;
 
-                main|viins|*)
-                         set-terminal-cursor-style ${=MODE_CURSOR_VIINS} ;;
-            esac
-        fi
-    }
+    #            main|viins|*)
+    #                     set-terminal-cursor-style ${=MODE_CURSOR_VIINS} ;;
+    #        esac
+    #    fi
+    #}
 
-    vim-mode-cursor-init-hook() {
-        vim-mode-set-cursor-style $(vim-mode-initial-keymap)
-    }
+    #vim-mode-cursor-init-hook() {
+    #    vim-mode-set-cursor-style $(vim-mode-initial-keymap)
+    #}
 
-    vim-mode-cursor-finish-hook() {
-        vim-mode-set-cursor-style DEFAULT
-    }
+    #vim-mode-cursor-finish-hook() {
+    #    vim-mode-set-cursor-style DEFAULT
+    #}
 
-    # See https://github.com/softmoth/zsh-vim-mode/issues/6#issuecomment-413606070
-    if [[ $TERM = (dumb|linux|eterm-color) ]] || (( $+KONSOLE_PROFILE_NAME )); then
-        # Disable cursor styling on unsupported terminals
-        :
-    else
-        vim_mode_keymap_funcs+=vim-mode-set-cursor-style
+    ## See https://github.com/softmoth/zsh-vim-mode/issues/6#issuecomment-413606070
+    #if [[ $TERM = (dumb|linux|eterm-color) ]] || (( $+KONSOLE_PROFILE_NAME )); then
+    #    # Disable cursor styling on unsupported terminals
+    #    :
+    #else
+    #    vim_mode_keymap_funcs+=vim-mode-set-cursor-style
 
-        add-zsh-hook        precmd      vim-mode-cursor-init-hook
-        add-zle-hook-widget line-finish vim-mode-cursor-finish-hook
-    fi
+    #    add-zsh-hook        precmd      vim-mode-cursor-init-hook
+    #    add-zle-hook-widget line-finish vim-mode-cursor-finish-hook
+    #fi
 fi
 
 # Restore shell option 'aliases'. This must be the last thing here.
