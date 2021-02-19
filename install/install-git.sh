@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm "$DOTFILES/git/gitconfig >/dev/null"
+rm "$DOTFILES/git/gitconfig" >/dev/null
 cp "$DOTFILES/git/gitconfig_template" "$DOTFILES/git/gitconfig"
 
 if [ -z "$GIT_EMAIL" ]
