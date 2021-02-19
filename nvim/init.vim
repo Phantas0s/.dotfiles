@@ -35,7 +35,8 @@ Plug 'machakann/vim-swap' " swap arguments in parenthesis
 Plug 'chaoren/vim-wordmotion' " camel case motion
 Plug 'honza/vim-snippets' " snippets
 Plug 'itchyny/lightline.vim' " Status bar
-Plug 'bfredl/nvim-miniyank' " Register management
+" Plug 'svermeulen/vim-yoink' " Register history
+Plug 'bfredl/nvim-miniyank' " Register history
 Plug 'stefandtw/quickfix-reflector.vim' " Allow multisearch in current directory / multi replace as well
 Plug 'lambdalisue/suda.vim' " Write file with sudo
 Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
