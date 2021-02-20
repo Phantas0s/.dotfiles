@@ -33,7 +33,7 @@ screencast() {
 }
 
 oscreencast() {
-    if [ ! -z $1 ] ; then
+    if [ ! -z $1 ]; then
         ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 $1
     else
         echo "You need to precise an output file as first argument - eg 'example.mkv'"
@@ -42,10 +42,10 @@ oscreencast() {
 
 vidvolup() {
     output=output.mkv
-    if [ ! -z $3 ] ; then
+    if [ ! -z $3 ]; then
         output=$3
     fi
-    if [ ! -z $1 ] && [ ! -z $2 ] ; then
+    if [ ! -z $1 ] && [ ! -z $2 ]; then
         ffmpeg -i $1 -vol $(echo "256 + ((256 * $2) / 100)" | bc) -vcodec copy $output
     else 
         echo "You need to precise an output file as first argument and percentage of vol up as secong - eg 'example.mkv 100' to double the volume"
@@ -59,7 +59,7 @@ updatesys() {
 extract() {
     for file in "$@"
     do
-        if [ -f $file ] ; then
+        if [ -f $file ]; then
             ex $file
         else
             echo "'$file' is not a valid file"
@@ -70,7 +70,7 @@ extract() {
 mkextract() {
     for file in "$@"
     do
-        if [ -f $file ] ; then
+        if [ -f $file ]; then
             local filename=${file%\.*}
             mkdir -p $filename
             cp $file $filename
@@ -198,8 +198,7 @@ Imgoptimizeall() {
 }
 
 imgconvjpg() {
-    if [ ! -z "$1" ];
-    then
+    if [ ! -z "$1" ]; then
         local filename=${1%\.*}
         magick convert $1 "${filename}.jpg"
     else
@@ -208,8 +207,7 @@ imgconvjpg() {
 }
 
 imgconvpng() {
-    if [ ! -z "$1" ];
-    then
+    if [ ! -z "$1" ]; then
         local filename=${1%\.*}
         magick convert $1 "${filename}.png"
     else
@@ -219,8 +217,8 @@ imgconvpng() {
 
 imgwebp() {
     local IMG_EXT="jpg"
-    if [ ! -z $1 ];
-    then
+
+    if [ ! -z $1 ]; then
         IMG_EXT=$1
     fi
     for F in *.$IMG_EXT; do cwebp -q 100 $F -o `basename ${F%.$IMG_EXT}`.webp; done
@@ -228,8 +226,8 @@ imgwebp() {
 
 gtrm() {
     git tag -d $1
-    if [ ! -z "$2" ];
-    then
+
+    if [ ! -z "$2" ]; then
         git push $2 :refs/tags/$1
     else
         git push origin :refs/tags/$1
@@ -237,18 +235,15 @@ gtrm() {
 }
 
 ssh-create() {
-if [ ! -z "$1" ];
-then
-    ssh-keygen -f $HOME/.ssh/$1 -t rsa -N '' -C "$1"
-    chmod 700 $HOME/.ssh/$1*
-fi
+    if [ ! -z "$1" ]; then
+        ssh-keygen -f $HOME/.ssh/$1 -t rsa -N '' -C "$1"
+        chmod 700 $HOME/.ssh/$1*
+    fi
 }
 
 dback () {
-    if [ ! -z $1 ] && [ ! -z $2 ];
-    then
-        if [ ! -z $3 ];
-        then
+    if [ ! -z $1 ] && [ ! -z $2 ]; then
+        if [ ! -z $3 ]; then
             BS=$3
         else
             BS="512k"
@@ -264,23 +259,20 @@ dback () {
 }
 
 blimg() {
-    if [ ! -z $1 ] && [ ! -z $2 ] && [ ! -z $3 ];
-    then
+    if [ ! -z $1 ] && [ ! -z $2 ] && [ ! -z $3 ]; then
         local CYEAR=$(date +'%Y')
         local BASEDIR="${HOME}/workspace/webtechno/static"
         #Basedir current year
         local BASEDIRY="${HOME}/workspace/webtechno/static/${CYEAR}"
 
-        if [ ! -d $BASEDIRY ]; 
-        then
+        if [ ! -d $BASEDIRY ]; then
             mkdir $BASEDIRY
         fi
 
         #basedir current article
         local BASEDIRC="${BASEDIRY}/${2}"
 
-        if [ ! -d $BASEDIRP ]; 
-        then
+        if [ ! -d $BASEDIRP ]; then
             mkdir $BASEDIRP
         fi
 
@@ -292,34 +284,28 @@ blimg() {
 postgdump() {
     local USER="postgres"
     local HOST="localhost"
-    if [ ! -z $1 ];
-    then
-        if [ -f "${1}.sql" ];
-        then
+    if [ ! -z $1 ]; then
+        if [ -f "${1}.sql" ]; then
             rm -i "${1}.sql"
         fi
 
-        if [ $# = 1 ];
-        then
+        if [ $# = 1 ]; then
             pg_dump -c -U $USER -h $HOST $1 | pv --progress > "${1}.sql"
             echo $1
         fi
 
-        if [ $# = 2 ];
-        then
+        if [ $# = 2 ]; then
             pg_dump -c -U $2 -h $HOST $1 | pv --progress > "${1}.sql"
             echo $1
         fi
 
-        if [ $# = 3 ];
-        then
+        if [ $# = 3 ]; then
             pg_dump -c -U $2 -h $3 $1 | pv --progress > "${1}.sql"
             echo $1
         fi
     fi
 
-    if [ $# = 0 ]; 
-    then
+    if [ $# = 0 ]; then
         echo "You need at least to provide the database name"
     fi
 }
@@ -327,9 +313,8 @@ postgdump() {
 postgimport() {
     local USER="postgres"
     local HOST="localhost"
-    if [ ! -z $1 ];
+    if [ ! -z $1 ]; then
         DB=${1%\.*}
-    then
         # sed -i "1s/^/CREATE DATABASE $DB;\n/" $1
         if [ $# = 1 ];
         then
@@ -337,21 +322,18 @@ postgimport() {
             echo $1
         fi
 
-        if [ $# = 2 ];
-        then
+        if [ $# = 2 ]; then
             pv --progress ${1} | psql -U $1 -h $HOST $1 -d $DB
             echo $1
         fi
 
-        if [ $# = 3 ];
-        then
+        if [ $# = 3 ]; then
             pv --progress ${1} | psql -U $1 -h $2 $1 -d $DB
             echo $1
         fi
     fi
 
-    if [ $# = 0 ]; 
-    then
+    if [ $# = 0 ]; then
         echo "You need at least to provide the database name"
     fi
 }
@@ -460,27 +442,23 @@ ports() {
 
 mnt() {
     local FILE="/mnt/external"
-    if [ ! -z $2 ];
-    then
+    if [ ! -z $2 ]; then
         FILE=$2
     fi
 
-    if [ ! -z $1 ];
-    then
+    if [ ! -z $1 ]; then
         sudo mount "$1" "$FILE" -o rw
         echo "Device in read/write mounted in $FILE"
     fi
 
-    if [ $# = 0 ]; 
-    then
+    if [ $# = 0 ]; then
         echo "You need to provide the device (/dev/sd*) - use lsblk"
     fi
 }
 
 umnt() {
     local DIRECTORY="/mnt"
-    if [ ! -z $1 ];
-    then
+    if [ ! -z $1 ]; then
         DIRECTORY=$1
     fi
     MOUNTED=$(grep $DIRECTORY /proc/mounts | cut -f2 -d" " | sort -r)
@@ -491,23 +469,19 @@ umnt() {
 
 mntmtp() {
     local DIRECTORY="$HOME/mnt"
-    if [ ! -z $2 ];
-    then
+    if [ ! -z $2 ]; then
         local DIRECTORY=$2
     fi
-    if [ ! -d $DIRECTORY ]; 
-    then
+    if [ ! -d $DIRECTORY ]; then
         mkdir $DIRECTORY
     fi
 
-    if [ ! -z $1 ];
-    then
+    if [ ! -z $1 ]; then
         simple-mtpfs --device "$1" "$DIRECTORY"
         echo "MTPFS device in read/write mounted in $DIRECTORY"
     fi
 
-    if [ $# = 0 ]; 
-    then
+    if [ $# = 0 ]; then
         echo "You need to provide the device number - use simple-mtpfs -l"
     fi
 }
@@ -515,8 +489,7 @@ mntmtp() {
 
 umntmtp() {
     local DIRECTORY="$HOME/mnt"
-    if [ ! -z $1 ];
-    then
+    if [ ! -z $1 ]; then
         DIRECTORY=$1
     fi
     cd $HOME
@@ -526,8 +499,7 @@ umntmtp() {
 
 # --restrict-filenames replace special characters like spaces in filenames.
 ydlp() {
-    if [ ! -z $1 ];
-    then
+    if [ ! -z $1 ]; then
         youtube-dl --restrict-filenames -f 22 -o "%(autonumber)s-%(title)s.%(ext)s" "$1"
     else
         echo "You need to specify a playlist url as argument"
@@ -535,8 +507,7 @@ ydlp() {
 }
 
 ydl() {
-    if [ ! -z $1 ];
-    then
+    if [ ! -z $1 ]; then
         youtube-dl --restrict-filenames -f 22 -o "%(title)s.%(ext)s" "$1"
     else
         echo "You need to specify a video url as argument"
@@ -550,8 +521,8 @@ initKondo() {
 
 pom() {
     local POMODORO_DURATION=25
-    if [ ! -z $3 ];
-    then
+
+    if [ ! -z $3 ]; then
         POMODORO_DURATION=$3
     fi
     echo "(($1 * 60) + $2) / $POMODORO_DURATION" | bc
