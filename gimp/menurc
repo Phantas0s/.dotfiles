@@ -1,4 +1,4 @@
-; gimp GtkAccelMap rc-file         -*- scheme -*-
+; gimp-2.10 GtkAccelMap rc-file         -*- scheme -*-
 ; this file is an automated accelerator map dump
 ;
 ; (gtk_accel_path "<Actions>/tools/tools-rotate-image-arbitrary" "")
@@ -22,6 +22,7 @@
 ; (gtk_accel_path "<Actions>/context/context-paint-mode-menu" "")
 ; (gtk_accel_path "<Actions>/filters/filters-motion-blur-linear" "")
 ; (gtk_accel_path "<Actions>/filters/filters-gegl-graph" "")
+; (gtk_accel_path "<Actions>/windows/windows-display-0002" "")
 ; (gtk_accel_path "<Actions>/context/context-brush-select-set" "")
 ; (gtk_accel_path "<Actions>/edit/edit-copy" "<Primary>c")
 ; (gtk_accel_path "<Actions>/context/context-brush-shape-circle" "")
