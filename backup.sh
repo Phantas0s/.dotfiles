@@ -24,6 +24,7 @@ backup() {
         $HOME/Games/dosbox home/Games/dosbox
         $HOME/Games/emulators home/Games/emulators
         $HOME/.local/share home/.local/share
+        $HOME/.thunderbird home/.thunderbird
         $MEDIA/assets assets
         $MEDIA/Documentaries documentaries
         $MEDIA/Ebooks ebooks
@@ -42,11 +43,14 @@ backup() {
         mkdir -p $dest
 
         if [[ "$dry_run" != true ]]; then
-            rsync -arvz --delete $src/ $dest
+            rsync -arvz --delete $src/ $dest 2> "$HOME/Documents/backup_log"
         else
             rsync -arvz --delete --dry-run $src/ $dest
         fi
     done
+
+    echo "ERRORS:\n\n"
+    cat "$HOME/Documents/backup_log"
 }
 
 backup
