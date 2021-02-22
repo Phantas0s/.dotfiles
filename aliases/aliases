@@ -186,7 +186,7 @@ alias mux='tmuxp load'
 # | lynx |
 # +------+
 
-alias lynx='lynx --vikeys '
+alias lynx='lynx -vikeys -accept_all_cookies'
 
 # +----------------+
 # | udiskie-umount |

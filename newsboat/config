@@ -1,5 +1,8 @@
 auto-reload yes
 
+browser "lynx -vikeys -accept_all_cookies"
+feed-sort-order lastupdated
+
 reload-time 30
 reload-threads 100
 
