@@ -29,16 +29,6 @@
             "args": ["start"],
             "filetypes": ["sh"],
             "ignoredRootPaths": ["~"]
-        },
-        "phpactor": {
-            "trace.server": "verbose",
-            "command": "~/.config/nvim/plugged/phpactor/bin/phpactor",
-            "args": ["language-server"],
-            "filetypes": ["php","cucumber"],
-            "initializationOptions": {
-            },
-            "settings": {
-            }
         }
     },
     "snippets.ultisnips.directories": [
