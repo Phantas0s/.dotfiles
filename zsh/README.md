@@ -69,9 +69,15 @@ Each of your screen has a number. That's what `<screen_number>` is.
 
 * `vman`
 
-Open man with neovim.
+Open man with Neovim.
 
 Need the plugin 'jez/vim-superman' installed in Neovim.
+
+* `vinfo`
+
+Open info documentation files in Neovim.
+
+Need the plugin 'alx741/vinfo'
 
 ## Archives
 

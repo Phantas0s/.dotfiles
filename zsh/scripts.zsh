@@ -537,6 +537,10 @@ vman() {
     fi
 }
 
+vinfo() {
+    vim -c "Vinfo $1" -c 'silent only'
+}
+
 zshcomp() {
     for command completion in ${(kv)_comps:#-*(-|-,*)}
     do
@@ -572,16 +576,14 @@ EOF
 }
 
 duckduckgo() {
-    lynx -vikeys -accept_all_cookies "https://lite.duckduckgo.com/lite/?q='$@'"
+    lynx -vikeys -accept_all_cookies "https://lite.duckduckgo.com/lite/?q=$@"
 }
 
 wikipedia() {
-    lynx -vikeys -accept_all_cookies "https://en.wikipedia.org/wiki/$@"
+    lynx -vikeys -accept_all_cookies "https://en.wikipedia.org/wiki?search=$@"
 }
 
-ecosia() {
-    lynx -vikeys -accept_all_cookies "https://www.ecosia.org/search?q='$@'"
-}
+
 
 # Count number 
 blogwc() {

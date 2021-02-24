@@ -42,6 +42,7 @@ Plug 'lambdalisue/suda.vim' " Write file with sudo
 Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
 Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
 Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
+Plug 'alx741/vinfo' " Open info documentation files
 Plug 'AndrewRadev/splitjoin.vim' " Split arrays in PHP / struct in Go / other things
 " Plug 'lpinilla/vim-codepainter'
 
