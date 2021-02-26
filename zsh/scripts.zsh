@@ -1,8 +1,7 @@
 #!/bin/zsh
 
 line() {
-    [ ! -z $1 ] && sed -n "${1}p" && return
-    [ ! -z $1 ] && [ ! -z $2 ] && sed -n $2 "${1}p" && return
+    sed -n "${1}p" $2 && return
 }
 
 screenres() {
@@ -16,7 +15,7 @@ screencast() {
     local heights=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`)
     local bigger_height=$(echo $heights | sed "s/ /\n/" | sort -rg | line 1)
 
-    if [ ! -z $2 ]; then
+    [ ! -z $2 ]; then
         screen=$2
     fi
 
@@ -400,22 +399,22 @@ smedia() {
 }
 
 mkcd() {
-    dir="$*";
-    mkdir -p "$dir" && cd "$dir";
+    local dir="$*";
+    local mkdir -p "$dir" && cd "$dir";
 }
 
 mkcp() {
-    dir="$2"
-    tmp="$2"; tmp="${tmp: -1}"
+    local dir="$2"
+    local tmp="$2"; tmp="${tmp: -1}"
     [ "$tmp" != "/" ] && dir="$(dirname "$2")"
     [ -d "$dir" ] ||
         mkdir -p "$dir" &&
         cp -r "$@"
-    }
+}
 
 mkmv() {
-    dir="$2"
-    tmp="$2"; tmp="${tmp: -1}"
+    local dir="$2"
+    local tmp="$2"; tmp="${tmp: -1}"
     [ "$tmp" != "/" ] && dir="$(dirname "$2")"
     [ -d "$dir" ] ||
         mkdir -p "$dir" &&
@@ -424,12 +423,6 @@ mkmv() {
 
 historystat() {
     history 0 | awk '{print $2}' | sort | uniq -c | sort -n -r | head
-}
-
-updatezsh() {
-    rm -f $DOTFILES/antibody/plugins.sh
-    antibody bundle < $DOTFILES/antibody/plugins.txt > $DOTFILES/antibody/plugins.sh
-    antibody update
 }
 
 promptspeed() {
@@ -592,4 +585,8 @@ blogwc() {
         DATE=$1
     fi
     cd ~/workspace/webtechno/content/post && grep -l "date = \"$DATE" *.md | xargs wc && cd -
+}
+
+cheat() {
+    curl cheat.sh/$1
 }

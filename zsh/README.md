@@ -1,6 +1,6 @@
-# Scripts for zsh
+# Scripts for Zsh
 
-Doc for my zsh scripts (`scripts.zsh`). 
+Doc for my Zsh scripts (`./scripts.zsh`). 
 
 The arguments are indicated between `<>`, for example `<arg>`. 
 
@@ -8,12 +8,9 @@ If the argument has a value, it's the default (and therefore the argument is not
 
 ## Helpers
 
-* `line <line_number> <file>`
+* `line <line_number> <input>`
 
-With one argument, can be piped to display the line number of the output.
-With two arguments, 
-
-It uses `sed` under the hood.
+Wrapper around sed to display a precise line from an input.
 
 ## System
 
@@ -300,21 +297,27 @@ Second column: completion function
 
 Display the command more often used in the shell
 
+## Manual & Help
+
+* `cheat <command>`
+
+Display command cheatsheet from [cheat.sh](cheat.sh).
+
 ## Other
 
 ### File system
 
 * `mkcd`
 
-Similar to cd. Create a folder like `mkdir -p` and goes in it.
+Create a folder like `mkdir -p` and jump to it.
 
 * `mkmv`
 
-Similar to mv. Move a file or a folder, and create the filepath if it doesn't exist
+Move a file or a folder, and create the filepath if it doesn't exist.
 
-* `mkmv`
+* `mkcp`
 
-Similar to cp. Copy a file or a folder, and create the filepath if it doesn't exist
+Copy a file or a folder, and create the filepath if it doesn't exist.
 
 ### Productivity
 
