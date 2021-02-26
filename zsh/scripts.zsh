@@ -15,7 +15,7 @@ screencast() {
     local heights=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`)
     local bigger_height=$(echo $heights | sed "s/ /\n/" | sort -rg | line 1)
 
-    [ ! -z $2 ]; then
+    if [ ! -z $2 ]; then
         screen=$2
     fi
 
