@@ -179,19 +179,19 @@ Use Image resize (see above)
 
 ### Image convert to jpg
 
-* `imgconvjpg <source>`
+* `imgtojpg <source>`
 
 Require imagemagick.
 
-Convert source to a jpg image
+Convert any image to jpg.
 
 ### Image convert to Webp
 
-* `imgwebp <image_extension=jpg>`
+* `imgtowebp <images>`
 
-Require cwebp
+Require cwebp.
 
-Convert all images with specific extension in the current folder to webp (by copy).
+Convert all images given as parameters to webp.
 
 ## Music
 

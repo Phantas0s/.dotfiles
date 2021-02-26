@@ -196,31 +196,20 @@ Imgoptimizeall() {
     done
 }
 
-imgconvjpg() {
-    if [ ! -z "$1" ]; then
-        local filename=${1%\.*}
-        magick convert $1 "${filename}.jpg"
-    else
-        echo -e "You need to add an image to convert as param!"
-    fi
+imgtojpg() {
+    for file in "$@"
+    do
+        local filename=${file%\.*}
+        convert -quality 100 $file "${filename}.jpg"
+    done
 }
 
-imgconvpng() {
-    if [ ! -z "$1" ]; then
-        local filename=${1%\.*}
-        magick convert $1 "${filename}.png"
-    else
-        echo -e "You need to add an image to convert as param!"
-    fi
-}
-
-imgwebp() {
-    local IMG_EXT="jpg"
-
-    if [ ! -z $1 ]; then
-        IMG_EXT=$1
-    fi
-    for F in *.$IMG_EXT; do cwebp -q 100 $F -o `basename ${F%.$IMG_EXT}`.webp; done
+imgtowebp() {
+    for file in "$@"
+    do
+        local filename=${file%\.*}
+        cwebp -q 100 $file -o `basename ${filename}`.webp
+    done
 }
 
 gtrm() {
