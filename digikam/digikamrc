@@ -14,7 +14,7 @@ Options are expanded=true
 
 [Album Settings]
 Album Collections=Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Travel
-Album Monitoring=false
+Album Monitoring=true
 Album Sort Role=0
 All Groups Open=false
 Default Icon Size=142
@@ -89,10 +89,10 @@ ToolTips Show Video Frame Rate=true
 TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=50
-Expansion=0,3879,3880,3851,3766,3798,1,2,62,61,56,60,54,53,52,51,3961,3959,3958,10,3955,9,3954,8,7,6,5,4,3947,3,3945,16,48,50,49,22,47,46,45,44,43,42,41,40,39,38,36,33,28,27,26,25,24,23,17,19,-2
+CurrentIndex=66
+Expansion=0,3879,3880,3851,3766,3798,-2,1,2341,2,62,61,56,60,54,53,52,51,3961,3959,3958,10,3955,9,3954,8,7,6,5,4,3947,3,3945
 RestoreChecked=false
-Selection=50
+Selection=66
 SortColumn=0
 SortOrder=1
 
@@ -883,7 +883,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwJTU1M=
+Database Encrypted Password=AwKwsLA=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
@@ -910,7 +910,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=1
+ActiveTab=6
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1210,7 +1210,7 @@ LVDS-1 HDMI-1 Height 1200=1133
 LVDS-1 HDMI-1 Height 768=723
 LVDS-1 HDMI-1 Width 1366=1366
 LVDS-1 HDMI-1 Width 1920=1920
-LVDS-1 HDMI-1 XPosition=1366
+LVDS-1 HDMI-1 XPosition=0
 LVDS-1 HDMI-1 YPosition=44
 Scan At Start=true
 Scroll Current Item To Center=false
@@ -1218,7 +1218,7 @@ Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1706,7 +1706,7 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=50
+InitialAlbumID=66
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABQMAAAErAf////8AAAAAAQE=
 ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAUDAAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABQMAAABXAP///wAABQMAAAQVAAAABAAAAAQAAAAIAAAACPwAAAAA
 
@@ -1963,7 +1963,7 @@ CaseSensitive=0
 [Setup Dialog]
 LVDS-1 HDMI-1 Height 1080=600
 LVDS-1 HDMI-1 Width 1920=800
-Setup Page=4
+Setup Page=1
 Template Tab=0
 
 [Sketch Search View]

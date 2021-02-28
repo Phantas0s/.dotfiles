@@ -9,7 +9,7 @@ filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Video%20Games/OST file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Video%20Games/OST file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis/%5B2020%5D%20Timeless
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
@@ -30,7 +30,7 @@ gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.158333 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1095 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.158333 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1610 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -76,10 +76,10 @@ hotkey.key29 "b" 0 0 next
 hotkey.key30 "n" 0 0 playback_random
 hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
-mainwin.geometry.h 701
-mainwin.geometry.w 1366
-mainwin.geometry.x 1920
-mainwin.geometry.y 476
+mainwin.geometry.h 1133
+mainwin.geometry.w 1920
+mainwin.geometry.x 0
+mainwin.geometry.y 44
 musical_spectrum.alignment 2
 musical_spectrum.amp_max 0
 musical_spectrum.amp_min -50
@@ -136,20 +136,20 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -19.60264
-playlist.current 2
+playback.volume -5.163003
+playlist.current 4
 playlist.cursor.0 16
 playlist.cursor.1 25
 playlist.cursor.2 113
-playlist.cursor.3 49
-playlist.cursor.4 1467
+playlist.cursor.3 739
+playlist.cursor.4 828
 playlist.cursor.5 60
 playlist.cursor.6 0
 playlist.scroll.0 324
 playlist.scroll.1 -25
 playlist.scroll.2 2519
-playlist.scroll.3 -49
-playlist.scroll.4 -1473
+playlist.scroll.3 0
+playlist.scroll.4 -828
 playlist.scroll.5 -60
 playlist.scroll.6 0
 playlist.scroll.cursorfollowplayback 1
@@ -164,13 +164,13 @@ prefwin.geometry.w 656
 prefwin.geometry.x 632
 prefwin.geometry.y 330
 resume.paused 1
-resume.playlist 2
-resume.position 420.81329
-resume.track 113
+resume.playlist 4
+resume.position 208.05171
+resume.track 828
 searchwin.geometry.h 300
 searchwin.geometry.w 450
-searchwin.geometry.x 733
-searchwin.geometry.y 426
+searchwin.geometry.x 1086
+searchwin.geometry.y 541
 streamer.samplerate 44100
 streamer.samplerate_mult_44 44100
 streamer.samplerate_mult_48 48000
