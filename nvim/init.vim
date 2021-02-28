@@ -377,9 +377,9 @@ set softtabstop=4
 set shiftwidth=4
 
 " Save session
-nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
+nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
-nnoremap <leader>sl :so $VIMCONFIG/sessions/*.vim<C-D><BS><BS><BS><BS><BS>
+nnoremap <leader>sl :so $VIMCONFIG/sessions/
 
 " when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround
