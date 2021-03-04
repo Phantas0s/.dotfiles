@@ -82,6 +82,13 @@ _comp_options+=(globdots) # With hidden files
 source $DOTFILES/zsh/plugins/completion.zsh
 
 # +-----+
+# | Git |
+# +-----+
+
+# Add command gitit to open Github repo in default browser from a local repo
+autoload -Uz gitit; gitit
+
+# +-----+
 # | VIM |
 # +-----+
 
