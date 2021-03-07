@@ -468,10 +468,21 @@ mntmtp() {
     fi
 }
 
+# Silly little script to understand zstyle
+names() {
+    local user_name user_surname user_nickname computer_name
+
+    zstyle -s ':name:' set_user_name user_name || user_name="LEELA"
+    zstyle -s ':name:surname:' set_user_name user_surname || user_surname="TURANGA"
+    zstyle -s ':name:nickname::' set_user_name user_nickname || user_nickname="CYCLOPE"
+    zstyle -s ':name:' set_computer_name computer_name || computer_name="BENDER"
+
+    echo "You're $user_name $user_surname $user_nickname and you're computer is called $computer_name"
+}
 
 umntmtp() {
     local DIRECTORY="$HOME/mnt"
-    if [ ! -z $1 ]; then
+    if ; then
         DIRECTORY=$1
     fi
     cd $HOME
@@ -481,7 +492,7 @@ umntmtp() {
 
 # --restrict-filenames replace special characters like spaces in filenames.
 ydlp() {
-    if [ ! -z $1 ]; then
+    if ; then
         youtube-dl --restrict-filenames -f 22 -o "%(autonumber)s-%(title)s.%(ext)s" "$1"
     else
         echo "You need to specify a playlist url as argument"

@@ -70,24 +70,6 @@ autoload -Uz prompt_purification_setup; prompt_purification_setup
 
 zmodload zsh/zprof
 
-# +------------+
-# | COMPLETION |
-# +------------+
-
-# Automatic loading via #compdef in each files (see https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org)
-fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
-
-autoload -U compinit; compinit
-_comp_options+=(globdots) # With hidden files
-source $DOTFILES/zsh/plugins/completion.zsh
-
-# +-----+
-# | Git |
-# +-----+
-
-# Add command gitit to open Github repo in default browser from a local repo
-autoload -Uz gitit; gitit
-
 # +-----+
 # | VIM |
 # +-----+
@@ -100,6 +82,7 @@ export KEYTIMEOUT=1
 autoload -Uz cursor_mode; cursor_mode
 
 # Use vim keys in tab complete menu
+# Should be called before compinit
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -119,6 +102,24 @@ bindkey -r '^p'
 bindkey -s '^p' 'fmux\n'
 
 source $DOTFILES/zsh/plugins/vim-mode
+# +------------+
+# | COMPLETION |
+# +------------+
+
+# Automatic loading via #compdef in each files (see https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org)
+fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
+
+autoload -U compinit; compinit
+_comp_options+=(globdots) # With hidden files
+source $DOTFILES/zsh/plugins/completion.zsh
+
+# +-----+
+# | Git |
+# +-----+
+
+# Add command gitit to open Github repo in default browser from a local repo
+autoload -Uz gitit; gitit
+
 
 # +-----+
 # | FZF |
