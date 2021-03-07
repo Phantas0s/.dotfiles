@@ -1,4 +1,3 @@
-" Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
 if &compatible
@@ -99,6 +98,7 @@ Plug 'christoomey/vim-titlecase' " Titlecase with gt
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
+Plug 'ron89/thesaurus_query.vim' " Thesaurus
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " PHP
