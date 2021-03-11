@@ -24,6 +24,8 @@ social_media=(
     www.dev.to
     tweetdeck.twitter.com
     recurse.zulipchat.com
+    flurly.com
+    api.flurly.com
 )
 
 if [[ ! -f /etc/hosts ]]; then
