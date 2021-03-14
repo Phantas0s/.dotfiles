@@ -26,6 +26,8 @@ Those files are private and are on my private cloud (using [Nextcloud](https://n
 There are no backup system. If you install this on top of your dotfiles, expect a big mess.
 You shouldn't use the `install.sh` script. You should only pick whatever you want and include it in your own config.
 
-## Shameless Mouseless Plug
+## Building Your Mouseless Development Environment
 
 Switching between a keyboard and mouse costs cognitive energy. [My book will help you set up a Linux-based development environment](https://themouseless.dev) that keeps your hands on your keyboard. Take the brain power you've been using to juggle input devices and focus it where it belongs: on the things you create.
+
+You'll learn how to write your own installation scripts too!
