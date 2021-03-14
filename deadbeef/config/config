@@ -137,7 +137,7 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -5.163003
-playlist.current 4
+playlist.current 2
 playlist.cursor.0 16
 playlist.cursor.1 25
 playlist.cursor.2 113
@@ -174,6 +174,10 @@ searchwin.geometry.y 541
 streamer.samplerate 44100
 streamer.samplerate_mult_44 44100
 streamer.samplerate_mult_48 48000
+trkproperties.geometry.h 400
+trkproperties.geometry.w 400
+trkproperties.geometry.x 493
+trkproperties.geometry.y 439
 waveform.bg_alpha 65535
 waveform.bg_color_b 17990
 waveform.bg_color_g 14392
