@@ -188,7 +188,7 @@ function! general#CharCount()
     endif
 endfunction
 
-" simply visit a dedicated file and prepare for writing it with markdown.
+" simply create a dedicated file and prepare for writing it with markdown.
 function! general#MakeJournalEntry()
     let fname = $CLOUD. '/journal/' . strftime('%d_%m_%Y.md')
     execute 'edit ' . fname

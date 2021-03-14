@@ -238,13 +238,10 @@ vnoremap <silent> * :<C-u>call general#VisualSelection('', '')<CR>/<C-R>=@/<CR><
 vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 " contents of any register are inserted literally (prevent clipboard hacking)
-inoremap <C-r> <C-r><C-o>
+" inoremap <C-r> <C-r><C-o>
 
 " Create tags for help text
 nnoremap <leader>H execute "helptags" expand("%:h")
-
-" Uppercase the word after the cursor
-inoremap <C-u> <esc>mzgUiw`za
 
 " search with very magic mode on
 nnoremap <leader>/ /\v
@@ -280,7 +277,7 @@ nnoremap tL :tabm<CR>
 nnoremap <c-w>h <c-w>s
 
 " delete character after cursor in insert mode
-inoremap <C-d> <Del>
+inoremap <C-l> <Del>
 
 " highlight the line which is longer than the defined margin (120 character)
 highlight MaxLineChar ctermbg=red
@@ -404,7 +401,7 @@ set signcolumn=yes
 set shortmess+=c
 
 " doesn't display the mode status
-set noshowmode
+" set noshowmode
 
 " Keep cursor more in middle when scrolling down / up
 set scrolloff=999
@@ -420,8 +417,8 @@ set foldtext=general#FoldText()
 set inccommand=nosplit
 
 " Better ex autocompletion
-set wildmenu
-set wildmode=list:longest,full
+" set wildmenu
+" set wildmode=list:longest,full
 
 " relative / hybrid line number switch
 set number relativenumber
@@ -429,16 +426,18 @@ set number relativenumber
 " for vertical pane in git diff tool
 set diffopt+=vertical
 
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+" augroup numbertoggle
+"   autocmd!
+"   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" augroup END
 
-autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-if executable('rg')
-    set grepprg=rg\ --vimgrep
-endif
+" if executable('rg')
+"     set grepprg=rg\ --vimgrep
+" endif
 
 " }}}
+
+inoremap <space> <C-G>u<space>

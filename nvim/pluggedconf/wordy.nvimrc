@@ -15,4 +15,3 @@
 
 noremap <silent> <F8> :<C-u>NextWordy<cr>
 xnoremap <silent> <F8> :<C-u>NextWordy<cr>
-inoremap <silent> <F8> <C-o>:NextWordy<cr>
