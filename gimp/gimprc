@@ -13,7 +13,7 @@
 (icon-size medium)
 (color-profile-policy keep)
 (layer-new-name "bottom")
-(layer-new-fill-type background)
+(layer-new-fill-type foreground)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
@@ -26,7 +26,7 @@
     (feather no)
     (feather-radius 10)
     (method line)
-    (width 1)
+    (width 3)
     (unit pixels)
     (cap-style butt)
     (join-style miter)
