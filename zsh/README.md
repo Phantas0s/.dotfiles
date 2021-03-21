@@ -327,6 +327,16 @@ Calculate number of pomodoro done for a specific time in hour(s) and minute(s).
 
 ## Fun
 
+### Vimgolf
+
+* `vimgolf <challenge_id> <key>`
+
+Run vimgolf via docker (doesn't need anything else than docker).
+
+If you have an env variable named `$VIM_GOLF_KEY` with the value of your key, you just need to do: `vimgolf <challenge_id>`
+
+Have fun!
+
 ### Term displays
 
 * `matrix`
