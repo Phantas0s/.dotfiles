@@ -148,9 +148,6 @@ Plug 'tpope/vim-scriptease' " Debug vimscript
 " Agda
 Plug 'derekelkins/agda-vim'
 
-" cheat.sh
-Plug 'dbeniamine/cheat.sh-vim'
-
 call plug#end()
 " }}}
 " Plugin Config ---------------------- {{{
@@ -164,13 +161,13 @@ for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
 endfor
 
-if exists("g:did_load_filetypes")
-  filetype off
-  filetype plugin indent off
-endif
-set runtimepath+=$VIMCONFIG/godoctor.vim
-filetype on
-filetype plugin indent on
+" if exists("g:did_load_filetypes")
+"   filetype off
+"   filetype plugin indent off
+" endif
+" set runtimepath+=$VIMCONFIG/godoctor.vim
+" filetype on
+" filetype plugin indent on
 
 " Impossible to put it in vim-delve.nvimrc file...
 let g:delve_breakpoint_sign = ""
@@ -212,11 +209,14 @@ let maplocalleader = "\\"
 map <space> <leader>
 map <space> <localleader>
 
+" Stop undo at each space
+inoremap <space> <C-G>u<space>
+
 " to create boxes!!
 vmap <F2> !boxes -d stone
 
 " to create ascii art!!
-vmap <f3> !figlet
+vmap <f3> !figlet<CR>
 
 " un-highlight when esc is pressed
 map <silent><esc> :noh<cr>
@@ -439,5 +439,3 @@ set diffopt+=vertical
 " endif
 
 " }}}
-
-inoremap <space> <C-G>u<space>
