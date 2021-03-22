@@ -238,7 +238,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # bind software to workspace
 # can use xprop - WM_CLASS(STRING) = "urxvt", "URxvt"
 assign [class="firefox" instance="Navigator"] → $web
-assign [class="brave-browser" instance="Brave-browser"] → $web
+assign [class="Brave-browser" instance="brave-browser"] → $web
 assign [class="Min" instance="min"] → $web
 assign [class="Chromium" instance="chromium"] → $web
 assign [class="Slack" instance="slack"] → $web
