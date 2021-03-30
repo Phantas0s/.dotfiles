@@ -2,6 +2,7 @@ auto-reload yes
 
 browser "lynx -vikeys -accept_all_cookies %u"
 macro f set browser "firefox %u" ; open-in-browser ; set browser "lynx -vikeys -accept_all_cookies %u"
+macro b set browser "brave %u" ; open-in-browser ; set browser "lynx -vikeys -accept_all_cookies %u"
 feed-sort-order lastupdated
 
 reload-time 30
