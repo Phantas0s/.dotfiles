@@ -228,9 +228,10 @@ alias dow="$HOME/Downloads"
 alias dot="$HOME/.dotfiles"
 
 # Mindmaps
-alias freebrain="freemind $CLOUD/knowledge_base/_BRAINSTORMING/*.mm &"
-alias freelists="freemind $CLOUD/knowledge_base/_LISTS/*.mm &"
-alias freepain="freemind $CLOUD/knowledge_base/_PROBLEMS/*.mm &"
+alias freebrain="freemind $CLOUD/knowledge_base/_BRAINSTORMING/*.mm &> /dev/null &"
+alias freelists="freemind $CLOUD/knowledge_base/_LISTS/*.mm &> /dev/null &"
+alias freepain="freemind $CLOUD/knowledge_base/_PROBLEMS/*.mm &> /dev/null &"
+alias freeproj="freemind $CLOUD/knowledge_base/_PROJECTS/*.mm &> /dev/null &"
 
 # Golang
 alias gosrc="$GOPATH/src/" # golang src
