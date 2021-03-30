@@ -117,13 +117,17 @@ screenshot () {
     if [ ! -f "${LOG}" ]; then touch "${LOG}"; fi
 
     # Screenshot a selected window
-    if [ "$1" = "win" ]; then import -format png "${NAME}"; fi
+    if [ "$1" = "win" ]; then import -format png -quality 100 "${NAME}"; fi
 
     # Screenshot the entire screen
-    if [ "$1" = "scr" ]; then import -format png -window root "${NAME}"; fi
+    if [ "$1" = "scr" ]; then import -format png -quality 100 -window root "${NAME}"; fi
 
     # Screenshot a selected area
-    if [ "$1" = "area" ]; then import -format png "${NAME}"; fi
+    if [ "$1" = "area" ]; then import -format png -quality 100 "${NAME}"; fi
+
+    if [[ $1 =~ "^[0-9].*x[0-9].*$" ]]; then import -format png -quality 100 -resize $1 "${NAME}"; fi
+
+    if [[ $1 =~ "^[0-9]+$" ]]; then import -format png -quality 100 -resize $1 "${NAME}" ; fi
 
     if [[ $# = 0 ]]; then
         # Display a warning if no area defined
