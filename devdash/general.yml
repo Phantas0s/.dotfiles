@@ -1,0 +1,46 @@
+---
+general:
+  refresh: 600
+
+projects:
+  - name: General
+    services:
+      github:
+        # token: env variable DEVDASH_GITHUB_TOKEN
+        owner: Phantas0s
+        repository: devdash
+    widgets:
+      - row:
+          - col:
+              size: "5"
+              elements:
+                - name: github.table_repositories
+                  options:
+                    color: yellow
+                    row_limit: 30
+          - col:
+              size: "5"
+              elements:
+                - name: github.table_issues
+                  options:
+                    color: green
+                    row_limit: 5
+                - name: lh.table_disk
+                  options:
+                    title: " Disks "
+                    color: blue
+                - name: lh.box
+                  options:
+                    title: " Cow says "
+                    color: blue
+                    command: "fortune wisdom | cowsay"
+                    height: 20
+          - col:
+              size: 2
+              elements:
+                - name: lh.box
+                  options:
+                    title: " Weather - Berlin "
+                    color: yellow
+                    height: 8
+                    command: "curl --stderr - --silent wttr.in/berlin?T0Q"

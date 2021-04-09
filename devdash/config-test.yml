@@ -1,0 +1,45 @@
+---
+projects:
+  - name: My Sweet Localhost
+    widgets:
+      - row:
+          - col:
+              size: "9"
+              elements:
+                - name: lh.bar_memory
+                  options:
+                    unit: "mb"
+                    color: yellow
+                    bar_gap: 1
+                    bar_width: 10
+                - name: lh.table_disk
+                  options:
+                    color: magenta
+          - col:
+              size: "3"
+              elements:
+                - name: lh.gauge_cpu_rate
+                  options:
+                    color: yellow
+                    bar_color: green
+                - name: lh.gauge_memory_rate
+                  options:
+                    color: yellow
+                    bar_color: green
+                - name: lh.gauge_swap_rate
+                  options:
+                    color: yellow
+                    bar_color: green
+                - name: lh.box
+                  options:
+                    title: " Weather - Berlin "
+                    color: yellow
+                    height: 8
+                    command: "curl --stderr - --silent wttr.in/berlin?T0Q"
+                - name: lh.box
+                  options:
+                    title: " That's a cow "
+                    border_color: blue
+                    text_color: green
+                    height: 10
+                    command: "cowsay Super dashboard"

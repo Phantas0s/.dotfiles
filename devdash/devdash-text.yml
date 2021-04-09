@@ -1,0 +1,138 @@
+---
+general:
+  refresh: 600
+
+projects:
+  - name: DevDash Github
+    name_options:
+      color: white
+    services:
+      feedly:
+        address: "https://thedevdash.com"
+      travis:
+        token: none
+      github:
+        # token: env variable DEVDASH_GITHUB_TOKEN
+        owner: Phantas0s
+        repository: devdash
+      google_analytics:
+        # keyfile: env variable DEVDASH_GA_KEYFILE
+        view_id: 203383514
+      monitor:
+        address: "https://thedevdash.com"
+    themes:
+      bar:
+        color: yellow
+        title_color: red
+        bar_color: green
+        bar_gap: 1
+      box:
+        color: green
+      table:
+        # Everything is yellow except the border color.
+        border_color: green
+        row_limit: 10
+      ocean:
+        border_color: blue
+        num_color: black
+        bar_color: cyan
+        title_color: magenta
+        bar_gap: 1
+
+    widgets:
+      - row:
+          - col:
+              size: 8
+              elements:
+                # The widget is of type "bar": the theme bar is applied.
+                - name: github.bar_stars
+                  options:
+                    title: " stars "
+                    start_date: "1_months_ago"
+                    end_date: "today"
+          - col:
+              size: 2
+              elements:
+                - name: github.box_stars
+                  options:
+                    title: " total stars "
+                - name: github.box_watchers
+                  options:
+                    title: " total watchers "
+                - name: github.box_open_issues
+                  options:
+                    title: " total open issues "
+      - row:
+          - col:
+              size: 6
+              elements:
+                - name: github.bar_views
+                  options:
+                    bar_gap: 1
+                    bar_width: 6
+          - col:
+              size: 6
+              elements:
+                - name: github.bar_commits
+                  options:
+                    bar_gap: 1
+                    bar_width: 6
+      - row:
+          - col:
+              size: 12
+              elements:
+                - name: display.box
+                  options:
+                    content: "Devdash Website"
+                    color: white
+                    bold: true
+      - row:
+          - col:
+              size: "M"
+              elements:
+                - name: ga.bar_users
+                  options:
+                    start_date: "15_days_ago"
+                    end_date: "today"
+                    color: yellow
+                    num_color: black
+                    bar_gap: 1
+                - name: ga.table_traffic_sources
+                  options:
+                    title: "Traffic sources - This Week"
+                    start_date: "this_week"
+                    end_date: "today"
+                    color: cyan
+                    row_limit: 8
+          - col:
+              size: "S"
+              elements:
+                - name: ga.bar_new_returning
+                  options:
+                    start_date: "6_months_ago"
+                    end_date: "this_month"
+                    time_period: month
+                    metric: "users"
+                    title_color: blue
+                    bar_width: 8
+                    num_color: black
+                    height: 25
+                    bar_gap: 2
+                - name: travis.table_builds
+                  options:
+                    owner: Phantas0s
+                    repository: devdash
+                    color: cyan
+                    row_limit: 3
+          - col:
+              size: "XS"
+              elements:
+                - name: ga.box_real_time
+                  options:
+                    color: red
+                - name: mon.box_availability
+                  options:
+                    color: yellow
+                - name: feedly.box_subscribers
+                  options:
+                    color: magenta

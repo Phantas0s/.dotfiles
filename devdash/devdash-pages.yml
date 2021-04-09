@@ -1,0 +1,58 @@
+---
+general:
+  refresh: 1000
+  keys:
+    quit: "C-c"
+
+projects:
+  - name: https://thevaluable.dev - Pages
+    title_options:
+      border_color: default
+      text_color: default
+      size: XXL
+      bold: true
+    services:
+      google_analytics:
+        # keyfile: env variable DEVDASH_GA_KEYFILE
+        view_id: 89379071
+    widgets:
+      - row:
+          - col:
+              size: "XL"
+              elements:
+                - name: ga.bar_pages
+                  options:
+                    start_date: "18_days_ago 1"
+                    end_date: "today"
+                    filters: "/page/newsletter/"
+                    color: cyan
+      - row:
+          - col:
+              size: "XL"
+              elements:
+                - name: ga.bar_pages
+                  options:
+                    start_date: "18_days_ago 2"
+                    end_date: "today"
+                    filters: "/page/principles/"
+                    color: blue
+      - row:
+          - col:
+              size: "XL"
+              elements:
+                - name: ga.bar_pages
+                  options:
+                    start_date: "18_days_ago 3"
+                    end_date: "today"
+                    filters: "/page/feedback/"
+                    color: green
+      - row:
+          - col:
+              size: "XL"
+              elements:
+                - name: ga.bar_pages
+                  options:
+                    start_date: "18_days_ago 4"
+                    end_date: "today"
+                    filters: "/page/about/"
+                    color: red

@@ -1,0 +1,68 @@
+---
+general:
+  refresh: 1000
+  keys:
+    quit: "C-c"
+
+projects:
+  - name: https://thevaluable.dev - Pages
+    services:
+      google_analytics:
+        # keyfile: env variable DEVDASH_GA_KEYFILE
+        view_id: 89379071
+    themes:
+      fourth_column:
+        start_date: "2_days_ago"
+        end_date: "2_days_ago"
+        color: blue
+        metrics: "sessions, ga:avgTimeOnPage"
+        row_limit: 28
+      fifth_column:
+        start_date: "1_days_ago"
+        end_date: "1_days_ago"
+        color: magenta
+        metrics: "sessions, ga:avgTimeOnPage"
+        row_limit: 28
+      sixth_column:
+        start_date: "today"
+        end_date: "today"
+        color: green
+        metrics: "sessions, ga:avgTimeOnPage"
+        row_limit: 28
+    widgets:
+      - row:
+          - col:
+              size: "S"
+              elements:
+                - name: ga.table_pages
+                  theme: fourth_column
+                  options:
+                    title: "Pages - 2 days ago"
+                - name: ga.box_total
+                  theme: fourth_column
+                  options:
+                    title: "Total"
+                    metric: "sessions"
+          - col:
+              size: "S"
+              elements:
+                - name: ga.table_pages
+                  theme: fifth_column
+                  options:
+                    title: "Pages - 1 days ago"
+                - name: ga.box_total
+                  theme: fifth_column
+                  options:
+                    title: "Total"
+                    metric: "sessions"
+          - col:
+              size: "S"
+              elements:
+                - name: ga.table_pages
+                  theme: sixth_column
+                  options:
+                - name: ga.box_total
+                  theme: sixth_column
+                  options:
+                    title: "Total"
+                    metric: "sessions"

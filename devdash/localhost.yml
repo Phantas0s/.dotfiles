@@ -1,0 +1,54 @@
+---
+projects:
+  - name: My Sweet Localhost
+    # No need of services here
+    # services:
+    widgets:
+      - row:
+          - col:
+              size: "8"
+              elements:
+                - name: lh.bar_memory
+                  options:
+                    unit: "mb"
+                    metrics: "MemTotal,MemFree,MemAvailable,Buffers,Cached,Active"
+                    color: yellow
+                    bar_gap: 1
+                    bar_width: 9
+                - name: lh.table_disk
+                  options:
+                    color: magenta
+                - name: lh.table
+                  options:
+                    title: " Output of ls "
+                    command: "ls"
+                    color: red
+          - col:
+              size: "4"
+              elements:
+                - name: lh.box_uptime
+                  options:
+                    color: blue
+                - name: lh.box_load
+                  options:
+                    color: blue
+                - name: lh.box_processes
+                  options:
+                    color: blue
+                - name: lh.box_cpu_rate
+                  options:
+                    color: cyan
+                - name: lh.box_memory_rate
+                  options:
+                    color: cyan
+                - name: lh.box_swap_rate
+                  options:
+                    color: cyan
+                - name: lh.box_net_io
+                  options:
+                    color: green
+                    unit: "mb"
+                - name: lh.box_disk_io
+                  options:
+                    color: green
+                    unit: "gb"
