@@ -12,8 +12,8 @@
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (color-profile-policy keep)
-(layer-new-name "bottom")
-(layer-new-fill-type foreground)
+(layer-new-name "lines")
+(layer-new-fill-type background)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
