@@ -106,15 +106,12 @@ compress() {
 }
 
 screenshot () {
-    local DIR="${HOME}/Documents/images/screenshots"
+    local DIR="$SCREENSHOT"
     local DATE="$(date +%Y%m%d-%H%M%S)"
     local NAME="${DIR}/screenshot-${DATE}.png"
-    local LOG="${DIR}/screenshots.log"
 
     # Check if the dir to store the screenshots exists, else create it:
     if [ ! -d "${DIR}" ]; then mkdir -p "${DIR}"; fi
-
-    if [ ! -f "${LOG}" ]; then touch "${LOG}"; fi
 
     # Screenshot a selected window
     if [ "$1" = "win" ]; then import -format png -quality 100 "${NAME}"; fi
@@ -132,10 +129,6 @@ screenshot () {
     if [[ $# = 0 ]]; then
         # Display a warning if no area defined
         echo "No screenshot area has been specified. Please choose between: win, scr, area. Screenshot not taken."
-        echo "${DATE}: No screenshot area has been defined. Screenshot not taken." >> "${LOG}"
-    else
-        # Save the screenshot in the directory and edit the log
-        echo "${NAME}" >> "${LOG}"
     fi
 }
 
@@ -613,3 +606,4 @@ vimgolf() {
     fi
     docker run --rm  --net=host -it -e "key=[$VIM_GOLF_KEY]" kramos/vimgolf "$ID"
 }
+
