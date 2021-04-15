@@ -81,5 +81,6 @@ dot_is_installed darktable && dot_install darktable
 dot_is_installed digikam && dot_install digikam
 dot_is_installed newsboat && dot_install newsboat
 dot_is_installed taskell && dot_install taskell
+dot_is_installed devdash && dot_install devdash
 
 dot_install gtk
