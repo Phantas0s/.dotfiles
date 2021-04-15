@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+
 # checkout git branch (including remote branches) with FZF
 fgco() {
   local branches=$(git branch --all | grep -v HEAD) &&
@@ -54,11 +55,9 @@ fstash() {
 }
 
 fmux() {
-    set -eu
-    set -o pipefail
+    set -euo pipefail
 
-    prj=$(find $XDG_CONFIG_HOME/tmuxp/ -execdir sh -c 'printf "%s\n" $(basename "${0%.*}")' {} ';' | sort | uniq | nl | fzf | cut -f 2)
-
+    prj=$(find $XDG_CONFIG_HOME/tmuxp/ -execdir bash -c 'basename "${0%.*}"' {} ';' | sort | uniq | nl | fzf | cut -f 2)
     tmuxp load $prj
 }
 
@@ -108,4 +107,13 @@ ftmux() {
             :  # Start terminal normally
         fi
     fi
+}
+
+fdot() {
+    file=$(find "$DOTFILES/install" -exec basename {} ';' | sort | uniq | nl | fzf | cut -f 2)
+    "$EDITOR" "$DOTFILES/install/$file"
+}
+
+fwork() {
+    cd ~/workspace/$(find ~/workspace/* -type d -prune -exec basename {} ';' | sort | uniq | nl | fzf | cut -f 2)
 }
