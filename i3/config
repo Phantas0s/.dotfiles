@@ -62,7 +62,7 @@ exec --no-startup-id nextcloud &
 #wallpaper
 exec --no-startup-id $XDG_CONFIG_HOME/.fehbg
 
-#Hide the mouse after some time 
+# Hide the mouse after some time 
 # exec --no-startup-id unclutter
 
 # launch scripts
@@ -73,6 +73,9 @@ exec --no-startup-id redshift &
 
 # launch dunst
 exec --no-startup-id dunst
+
+# launch brave
+exec --no-startup-id brave
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
