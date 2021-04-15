@@ -64,6 +64,7 @@ Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 " tmux
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
+Plug 'jpalardy/vim-slime'
 
 " project management
 Plug 'amiorin/vim-project' | Plug 'mhinz/vim-startify' " vim project for one specific vimrc / project + startify for startup cow
@@ -156,6 +157,11 @@ call plug#end()
 " | plugin config |
 " +---------------+
 
+let g:slime_target = "tmux"
+let g:slime_paste_file = tempname()
+" let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
+
 " source every plugin configs
 for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
@@ -187,6 +193,7 @@ let g:coc_global_extensions = [
     \ 'coc-json', 
     \ 'coc-yaml', 
     \ 'coc-godot', 
+    \ 'coc-pyright',
     \ 'coc-phpactor',
     \]
 
@@ -439,3 +446,4 @@ set diffopt+=vertical
 " endif
 
 " }}}
+
