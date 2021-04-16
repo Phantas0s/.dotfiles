@@ -17,16 +17,16 @@ zmodload zsh/complist
 
 # Use hjlk in menu selection (during completion)
 # Doesn't work well with interactive mode
-# bindkey -M menuselect 'h' vi-backward-char
-# bindkey -M menuselect 'j' vi-up-line-or-history
-# bindkey -M menuselect 'k' vi-down-line-or-history
-# bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-up-line-or-history
+bindkey -M menuselect 'k' vi-down-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
 
-bindkey -M menuselect '^g' clear-screen
-bindkey -M menuselect '^o' vi-insert                      # Insert
-bindkey -M menuselect '^a' accept-and-hold                # Add
-bindkey -M menuselect '^n' accept-and-infer-next-history  # Next
-bindkey -M menuselect '^u' undo                           # Undo
+bindkey -M menuselect '^xg' clear-screen
+bindkey -M menuselect '^xi' vi-insert                      # Insert
+bindkey -M menuselect '^xh' accept-and-hold                # Hold
+bindkey -M menuselect '^xn' accept-and-infer-next-history  # Next
+bindkey -M menuselect '^xu' undo                           # Undo
 
 autoload -U compinit; compinit
 _comp_options+=(globdots) # With hidden files

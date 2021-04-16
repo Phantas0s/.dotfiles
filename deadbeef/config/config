@@ -31,7 +31,7 @@ gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.158333 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1095 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.158333 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1610 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -145,14 +145,14 @@ playback.volume -5.163003
 playlist.current 2
 playlist.cursor.0 16
 playlist.cursor.1 87
-playlist.cursor.2 215
+playlist.cursor.2 239
 playlist.cursor.3 739
 playlist.cursor.4 1111
 playlist.cursor.5 60
 playlist.cursor.6 0
 playlist.scroll.0 324
 playlist.scroll.1 1368
-playlist.scroll.2 4959
+playlist.scroll.2 -239
 playlist.scroll.3 0
 playlist.scroll.4 25750
 playlist.scroll.5 -60
@@ -168,10 +168,10 @@ prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 632
 prefwin.geometry.y 330
-resume.paused 1
+resume.paused 0
 resume.playlist 2
-resume.position 355.80780
-resume.track 215
+resume.position 141.30867
+resume.track 239
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 1086
