@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Plugins
 rm -rf "$HOME/.local/lib/deadbeef" && ln -sf "$DOTFILES/deadbeef/plugins" "$HOME/.local/lib/deadbeef"
 

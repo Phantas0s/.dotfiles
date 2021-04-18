@@ -1,0 +1,2 @@
+require "tools/script_manager"
+require "contrib/gimp"
