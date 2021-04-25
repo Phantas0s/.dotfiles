@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Legend of Grimrock II
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/legend-of-grimrock-2" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/legend-of-grimrock-2/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Legend\\ of\\ Grimrock\\ II\\ [GOG.com]/Legend\\ of\\ Grimrock\\ II.lnk
+Type=Application
+StartupNotify=true
+Path=/home/hypnos/Games/gog/legend-of-grimrock-2/dosdevices/c:/GOG Games/Legend of Grimrock II/
+Icon=CE2E_goggame-1207666193.0
+StartupWMClass=grimrock2.exe

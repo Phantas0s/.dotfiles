@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=POD GOLD
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/pod-gold" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/pod-gold/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/POD\\ GOLD\\ [GOG.com]/POD\\ GOLD.lnk
+Type=Application
+StartupNotify=true
+Path=/home/hypnos/Games/gog/pod-gold/dosdevices/c:/GOG Games/POD GOLD/
+Icon=59DD_gfw_high.0
+StartupWMClass=podx3dfx.exe

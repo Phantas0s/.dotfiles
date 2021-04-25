@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Editor
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/the-settlers-iii-ultimate-collection" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/the-settlers-iii-ultimate-collection/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/The\\ Settlers\\ 3\\ -\\ Ultimate\\ Collection\\ [GOG.com]/Tools/Editor.lnk
+Type=Application
+StartupNotify=true
+Comment=Editor
+Path=/home/hypnos/Games/gog/the-settlers-iii-ultimate-collection/dosdevices/c:/GOG Games/Settlers 3 Ultimate/S3Editor
+Icon=1220_S3Editor.0
+StartupWMClass=s3editor.exe

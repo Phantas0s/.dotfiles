@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=notepad
+MimeType=text/plain;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/baldurs_gate_trilogy/drunk/../prefix" wine start /ProgIDOpen txtfile %f
+NoDisplay=true
+StartupNotify=true

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Manual
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/legend-of-grimrock-2" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/legend-of-grimrock-2/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Legend\\ of\\ Grimrock\\ II\\ [GOG.com]/Documents/Manual.lnk
+Type=Application
+StartupNotify=true
+Path=/home/hypnos/Games/gog/legend-of-grimrock-2/dosdevices/c:/GOG Games/Legend of Grimrock II
+Icon=6A18_Legend of Grimrock 2 Manual.0

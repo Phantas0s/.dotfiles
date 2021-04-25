@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=wordpad
+MimeType=application/rtf;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/baldurs_gate_trilogy/drunk/../prefix" /usr/bin/wine start /ProgIDOpen rtffile %f
+NoDisplay=true
+StartupNotify=true
+Icon=2EF4_wordpad.0

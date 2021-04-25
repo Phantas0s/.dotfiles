@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=wordpad
+MimeType=application/x-mswrite;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/baldurs_gate_trilogy/drunk/../prefix" /usr/bin/wine start /ProgIDOpen wrifile %f
+NoDisplay=true
+StartupNotify=true
+Icon=2EF4_wordpad.0

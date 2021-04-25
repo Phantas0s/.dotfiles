@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Uninstall Evoland 2
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/evoland-2/prefix" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/evoland-2/prefix/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Evoland\\ 2\\ [GOG.com]/Uninstall\\ Evoland\\ 2.lnk
+Type=Application
+StartupNotify=true
+Path=/home/hypnos/Games/gog/evoland-2/prefix/dosdevices/c:/game
+Icon=935F_unins000.0
+StartupWMClass=unins000.exe

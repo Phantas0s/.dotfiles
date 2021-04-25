@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=The Settlers 3 - Ultimate Collection
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/the-settlers-iii-ultimate-collection" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/the-settlers-iii-ultimate-collection/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/The\\ Settlers\\ 3\\ -\\ Ultimate\\ Collection\\ [GOG.com]/The\\ Settlers\\ 3\\ -\\ Ultimate\\ Collection.lnk
+Type=Application
+StartupNotify=true
+Path=/home/hypnos/Games/gog/the-settlers-iii-ultimate-collection/dosdevices/c:/GOG Games/Settlers 3 Ultimate
+Icon=1EDA_goggame-1207659185.0
+StartupWMClass=s3.exe

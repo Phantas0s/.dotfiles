@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Manual
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/shadowgrounds" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/shadowgrounds/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Shadowgrounds\\ [GOG.com]/Documents/Manual.lnk
+Type=Application
+StartupNotify=true
+Comment=Manual
+Path=/home/hypnos/Games/gog/shadowgrounds/dosdevices/c:/GOG Games/Shadowgrounds/
+Icon=AE2F_Manual.0

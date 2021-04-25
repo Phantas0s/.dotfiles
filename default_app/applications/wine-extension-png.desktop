@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Wine Internet Explorer
+MimeType=image/png;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/baldurs_gate_trilogy/drunk/../prefix" wine start /ProgIDOpen pngfile %f
+NoDisplay=true
+StartupNotify=true

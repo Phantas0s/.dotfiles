@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Uninstall Shadowgrounds
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/shadowgrounds" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/shadowgrounds/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Shadowgrounds\\ [GOG.com]/Uninstall\\ Shadowgrounds.lnk
+Type=Application
+StartupNotify=true
+Path=/home/hypnos/Games/gog/shadowgrounds/dosdevices/c:/GOG Games/Shadowgrounds
+Icon=BF19_unins000.0
+StartupWMClass=unins000.exe

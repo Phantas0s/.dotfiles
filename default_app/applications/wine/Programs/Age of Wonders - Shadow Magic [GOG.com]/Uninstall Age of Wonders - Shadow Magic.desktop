@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Uninstall Age of Wonders - Shadow Magic
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/age-of-wonders-shadow-magic" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/age-of-wonders-shadow-magic/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Age\\ of\\ Wonders\\ -\\ Shadow\\ Magic\\ [GOG.com]/Uninstall\\ Age\\ of\\ Wonders\\ -\\ Shadow\\ Magic.lnk
+Type=Application
+StartupNotify=true
+Path=/home/hypnos/Games/gog/age-of-wonders-shadow-magic/dosdevices/c:/GOG Games/Age of Wonders - Shadow Magic
+Icon=C83A_unins000.0
+StartupWMClass=unins000.exe

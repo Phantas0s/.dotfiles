@@ -1,0 +1,9 @@
+[Default Applications]
+application/pdf=zathura.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+
+[Added Associations]
+image/jpeg=org.nomacs.ImageLounge.desktop;
+text/x-troff-mm=freemind-usercreated-1.desktop;

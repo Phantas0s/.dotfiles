@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=winebrowser
+MimeType=text/html;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/baldurs_gate_trilogy/drunk/../prefix" wine start /ProgIDOpen htmlfile %f
+NoDisplay=true
+StartupNotify=true
