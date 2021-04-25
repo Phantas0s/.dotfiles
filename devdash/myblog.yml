@@ -1,11 +1,13 @@
 ---
 general:
-  refresh: 1000
+  refresh: 600
   keys:
     quit: "C-c"
+	reload: "C-r"
+	edit: "C-e"
 
 projects:
-  - name: https://thevaluable.dev - General
+  - name: Your Blog
     title_options:
       border_color: default
       text_color: default
@@ -14,14 +16,15 @@ projects:
     services:
       google_analytics:
         # keyfile: env variable DEVDASH_GA_KEYFILE
-        view_id: 89379071
+        # view_id: The value of the viewID is required
       feedly:
-        address: "https://thevaluable.dev"
+        # address: The value of the address is required
       monitor:
-        address: "https://thevaluable.dev"
+        # address: The value of the address is required
       google_search_console:
+        # keyfile: env variable DEVDASH_GA_KEYFILE
         # keyfile: env variable DEVDASH_GSC_KEYFILE
-        address: 'https://thevaluable.dev'
+        # address: The value of the address is required
     themes:
       table:
         color: blue
@@ -128,14 +131,3 @@ projects:
                     end_date: "today"
                     row_limit: 100
                     character_limit: 65
-          - col:
-              size: "4"
-              elements:
-                - name: gsc.table_queries
-                  options:
-                    title: " Queries | Last Week | -date -php "
-                    start_date: "last_week"
-                    end_date: "last_week"
-                    character_limit: 25
-                    row_limit: 17
-                    filters: "-date,-php"

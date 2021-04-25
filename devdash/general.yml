@@ -8,11 +8,10 @@ projects:
       github:
         # token: env variable DEVDASH_GITHUB_TOKEN
         owner: Phantas0s
-        repository: devdash
     widgets:
       - row:
           - col:
-              size: "5"
+              size: "4"
               elements:
                 - name: github.table_repositories
                   options:
@@ -21,22 +20,24 @@ projects:
           - col:
               size: "5"
               elements:
-                - name: github.table_issues
-                  options:
-                    color: green
-                    row_limit: 5
-                - name: lh.table_disk
-                  options:
-                    title: " Disks "
-                    color: blue
                 - name: lh.box
                   options:
                     title: " Cow says "
-                    color: blue
-                    command: "fortune wisdom | cowsay"
+                    command: "./calendar.sh"
+                    # command: "fortune wisdom | cowsay"
                     height: 20
+                - name: lh.table_disk
+                  options:
+                    title: " Disks "
+                    row_limit: 3
+                    color: blue
+                - name: github.table_issues
+                  options:
+                    color: red
+                    row_limit: 10
+                    repository: devdash
           - col:
-              size: 2
+              size: 3
               elements:
                 - name: lh.box
                   options:

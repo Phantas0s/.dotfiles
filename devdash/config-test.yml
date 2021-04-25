@@ -1,4 +1,6 @@
 ---
+general:
+  editor: nano
 projects:
   - name: My Sweet Localhost
     widgets:
@@ -23,10 +25,6 @@ projects:
                     color: yellow
                     bar_color: green
                 - name: lh.gauge_memory_rate
-                  options:
-                    color: yellow
-                    bar_color: green
-                - name: lh.gauge_swap_rate
                   options:
                     color: yellow
                     bar_color: green
