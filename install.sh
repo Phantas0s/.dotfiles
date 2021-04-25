@@ -84,3 +84,4 @@ dot_is_installed taskell && dot_install taskell
 dot_is_installed devdash && dot_install devdash
 
 dot_install gtk
+dot_install default-app
