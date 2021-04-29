@@ -1,10 +1,10 @@
 # Scripts for Zsh
 
-Doc for my Zsh scripts (`./scripts.zsh`). 
+Doc for my Zsh scripts (`./scripts.zsh`) and the scripts using fzf (`./scripts_fzf.sh`).
 
 The arguments are indicated between `<>`, for example `<arg>`. 
 
-If the argument has a value, it's the default (and therefore the argument is not mandatory). For example: `<arg=default>`.
+If the argument has a value, it's the default one (and therefore the argument is not mandatory). For example: `<arg=default>`.
 
 ## Helpers
 
@@ -62,6 +62,12 @@ Each of your screen has a number. That's what `<screen_number>` is.
 
 * `umntmtp <folder="~/mnt/">`
 
+### Pacman Search
+
+* `fpacs`
+
+Search with fzf in all the available Pacman packages
+
 ## Neovim
 
 * `vman`
@@ -75,6 +81,28 @@ Need the plugin 'jez/vim-superman' installed in Neovim.
 Open info documentation files in Neovim.
 
 Need the plugin 'alx741/vinfo'
+
+* `vimgolf <challenge_id> <key>`
+
+Run vimgolf via docker (doesn't need anything else than docker).
+
+If you have an env variable named `$VIM_GOLF_KEY` with the value of your key, you just need to do: `vimgolf <challenge_id>`.
+
+Have fun!
+
+## Tmux
+
+* `fmux`
+
+Let you choose a tmuxp config with fzf and run it.
+
+* `ftmuxp`
+
+Same as fmux but propose to create a new tmux session too and rename URxvt tab automatically with name of tmuxp config file.
+
+* `ftmux`
+
+Attach a session you can choose with fzf.
 
 ## Archives
 
@@ -237,11 +265,16 @@ Delete a tag locally AND on the remote.
 
 Display a git heatmap
 
-### FZF 
+* `fgco`
 
-* `fmux`
+List all branches with fzf and allow you to switch to it (via `git checkout`).
 
-Let you choose a tmuxp config
+* `fstash`
+
+List the stashes with fzf.
+
+* `CTRL+d` - Shows diff of stash against HEAD
+* `CTRL+b` - Checks the stash out as a branch (for easier merging)
 
 ### FZF meets Git
 
@@ -325,17 +358,17 @@ Copy a file or a folder, and create the filepath if it doesn't exist.
 
 Calculate number of pomodoro done for a specific time in hour(s) and minute(s).
 
+### Knowledge Management
+
+* `fm <map_path>`
+
+Open a freemind map with all output stream redirected to /dev/null
+
+* `fmind`
+
+List all my freemind mindmaps and allow to open the one you want.
+
 ## Fun
-
-### Vimgolf
-
-* `vimgolf <challenge_id> <key>`
-
-Run vimgolf via docker (doesn't need anything else than docker).
-
-If you have an env variable named `$VIM_GOLF_KEY` with the value of your key, you just need to do: `vimgolf <challenge_id>`
-
-Have fun!
 
 ### Term displays
 

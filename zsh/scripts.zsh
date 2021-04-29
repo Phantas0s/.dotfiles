@@ -607,3 +607,7 @@ vimgolf() {
     docker run --rm  --net=host -it -e "key=[$VIM_GOLF_KEY]" kramos/vimgolf "$ID"
 }
 
+fm() {
+    local -r file=$1
+    freemind $file &> /dev/null &
+}

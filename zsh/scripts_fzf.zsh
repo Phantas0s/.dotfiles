@@ -9,7 +9,7 @@ fgco() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
-fpacsearch() {
+fpacs() {
     pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
 }
 
@@ -117,3 +117,4 @@ fdot() {
 fwork() {
     cd ~/workspace/$(find ~/workspace/* -type d -prune -exec basename {} ';' | sort | uniq | nl | fzf | cut -f 2)
 }
+
