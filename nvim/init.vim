@@ -291,10 +291,15 @@ highlight MaxLineChar ctermbg=red
 autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
 " open devdocs.io with firefox and search the word under the cursor
-command! -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || firefox -url https://devdocs.io/#q=<args>')
+
+" Multi OS version (open for macOS)
+" command -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
+
+" Only Linux
+command -nargs=? DevDocs :call system('xdg-open https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nnoremap <buffer><leader>D :execute "DevDocs " . fnameescape(expand('<cword>'))<CR>
 " same but with clojuredocs
-command! -nargs=? ClojureDoc :call system('type -p open >/dev/null 2>&1 && open https://clojuredocs.org/search\?q=<args> || firefox -url https://clojuredocs.org/search\?q=<args>')
+command -nargs=? ClojureDoc :call system('xdg-open https://clojuredocs.org/search\?q=<args>')
 autocmd vimrc FileType clojure nnoremap <buffer><leader>D :execute "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
 
 " arrow keys resize windows
@@ -315,8 +320,10 @@ nnoremap J mzJ`z
 tnoremap <C-\> <C-\><C-n>
 
 " buffer cleanup - delete every buffer except the one open
-command! Ball :silent call general#Bdeleteonly()
-command! Jrnl call general#MakeJournalEntry()
+command Ball :silent call general#Bdeleteonly()
+
+" Add a journal entry
+command Jrnl call general#MakeJournalEntry()
 
 " restore the position of the last cursor when you open a file
 autocmd vimrc BufReadPost * call general#RestorePosition()
@@ -433,6 +440,8 @@ set number relativenumber
 " for vertical pane in git diff tool
 set diffopt+=vertical
 
+set shada=!,'100,<50,s100,h
+
 " augroup numbertoggle
 "   autocmd!
 "   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
@@ -446,4 +455,3 @@ set diffopt+=vertical
 " endif
 
 " }}}
-

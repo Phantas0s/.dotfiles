@@ -200,3 +200,11 @@ function! general#MakeJournalEntry()
     normal! o
     startinsert
 endfunction
+
+" output Ex command in buffer
+function! general#Vsystem(excmds)
+    redir => s:results
+    exec a:excmds
+    redir END
+    return s:results
+endfunction
