@@ -23,7 +23,7 @@ projects:
                 - name: lh.box
                   options:
                     title: " Cow says "
-                    command: "./calendar.sh"
+                    command: "./scripts/calendar.sh"
                     # command: "fortune wisdom | cowsay"
                     height: 20
                 - name: lh.table_disk
