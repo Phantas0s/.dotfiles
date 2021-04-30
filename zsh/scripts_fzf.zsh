@@ -118,3 +118,7 @@ fwork() {
     cd ~/workspace/$(find ~/workspace/* -type d -prune -exec basename {} ';' | sort | uniq | nl | fzf | cut -f 2)
 }
 
+fmind() {
+    file=$(ls $CLOUD/knowledge_base/**/*.mm | fzf)
+    freemind "$file" &> /dev/null &
+}
