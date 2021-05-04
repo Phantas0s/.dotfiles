@@ -1,7 +1,8 @@
 [Desktop Entry]
 Type=Application
-Name=A Wine application
+Name=wscript
 MimeType=text/vbscript;
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/children-of-morta" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine start /ProgIDOpen VBSFile %f
+Exec=env WINEPREFIX="/home/hypnos/win32" /usr/bin/wine start /ProgIDOpen VBSFile %f
 NoDisplay=true
 StartupNotify=true
+Icon=B13E_wscript.0

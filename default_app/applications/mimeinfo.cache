@@ -1,5 +1,5 @@
 [MIME Cache]
-application/pdf=wine-extension-pdf.desktop;
+application/pdf=wine-extension-pdf.desktop;zathura.desktop;
 application/rtf=wine-extension-rtf.desktop;
 application/vnd.ms-htmlhelp=wine-extension-chm.desktop;
 application/winhlp=wine-extension-hlp.desktop;

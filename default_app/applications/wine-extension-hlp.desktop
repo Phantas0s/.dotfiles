@@ -2,7 +2,7 @@
 Type=Application
 Name=winhlp32
 MimeType=application/winhlp;
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/children-of-morta" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine start /ProgIDOpen hlpfile %f
+Exec=env WINEPREFIX="/home/hypnos/win32" /usr/bin/wine start /ProgIDOpen hlpfile %f
 NoDisplay=true
 StartupNotify=true
 Icon=4137_winhlp32.0
