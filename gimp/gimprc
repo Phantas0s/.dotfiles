@@ -13,7 +13,6 @@
 (icon-size medium)
 (color-profile-policy keep)
 (layer-new-name "bubble left")
-(layer-add-mask-type selection)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
