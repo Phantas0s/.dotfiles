@@ -68,6 +68,19 @@ Each of your screen has a number. That's what `<screen_number>` is.
 
 Search with fzf in all the available Pacman packages
 
+## Navigation
+
+* `fd`
+
+Display the directory stack with fzf. Jump to the directory when one selected
+
+Only work with the following alias:
+
+```
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index # directory stack
+```
+
 ## Neovim
 
 * `vman`
@@ -117,9 +130,10 @@ Extract any archive automatically. Require `tar` and `unzip`.
 Create a folder with the name of the archive, extract the archive in.
 
 ### Compression
-* `compress <folder>`
 
-Compress a folder - output `tar.gz`
+* `compress <files>...`
+
+Compress one or multiple folder or files.
 
 ## Database
 

@@ -122,3 +122,12 @@ fmind() {
     file=$(ls $CLOUD/knowledge_base/**/*.mm | fzf)
     freemind "$file" &> /dev/null &
 }
+
+fd() {
+    # Only work with alias d defined as:
+    
+    # alias d='dirs -v'
+    # for index ({1..9}) alias "$index"="cd +${index}"; unset index # directory stack
+
+    d | fzf --height="20%" | cut -f 1 | source /dev/stdin
+}

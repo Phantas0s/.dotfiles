@@ -612,3 +612,10 @@ fm() {
     local -r file=$1
     freemind $file &> /dev/null &
 }
+
+back() {
+    for file in "$@"; do
+        cp "$file" "$file".bak
+    done
+
+}
