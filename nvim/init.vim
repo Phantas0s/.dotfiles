@@ -260,7 +260,7 @@ nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
-nnoremap gX :silent :execute
+nnoremap gX <silent> :execute
             \ "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
 
 "toggle between absolute -> relative line number
@@ -336,7 +336,8 @@ nnoremap <silent> <leader><f6> :source $MYVIMRC<CR>
 autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc :call general#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (like Tmux)
-nnoremap <silent><leader>z :call general#ZoomToggle()<CR>
+nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
+nnoremap <leader>AH :lua print('hello world')
 
 " Open images with feh
 autocmd vimrc BufEnter *.png,*.jpg,*gif silent! execute "! feh ".expand("%") | :bw

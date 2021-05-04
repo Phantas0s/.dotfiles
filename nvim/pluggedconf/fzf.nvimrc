@@ -101,7 +101,7 @@ endfunction
 let g:fzf_action = {
   \ 'ctrl-q': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
+  \ 'ctrl-h': 'split',
   \ 'ctrl-v': 'vsplit' }
 
 nmap <leader><tab> <plug>(fzf-maps-n)
