@@ -226,34 +226,13 @@ vmap <F2> !boxes -d stone
 vmap <f3> !figlet<CR>
 
 " un-highlight when esc is pressed
-map <silent><esc> :noh<cr>
+map <silent> <esc> <Cmd>noh<cr>
 
-" surround by quotes - frequently use cases of vim-surround
-" Act like D and C
 nnoremap Y y$
 
 " indent without kill the selection in vmode
 vmap < <gv
 vmap > >gv
-
-" remap the annoying u in visual mode
-vmap u y
-
-" visual mode pressing * or # searches for the current selection
-" super useful! from an idea by michael naumann
-vnoremap <silent> * :<C-u>call general#VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call general#VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
-
-" contents of any register are inserted literally (prevent clipboard hacking)
-" inoremap <C-r> <C-r><C-o>
-
-" Create tags for help text
-nnoremap <leader>H execute "helptags" expand("%:h")
-
-" search with very magic mode on
-nnoremap <leader>/ /\v
-" search with no magic
-nnoremap <leader>? /\M
 
 " location & quickfix window
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
@@ -350,6 +329,10 @@ nnoremap Q <Nop>
 
 " Save files as root
 cnoremap w!! execute ':w suda://%'
+
+" New motions
+onoremap c :<C-U>normal! /{<CR>i{
+
 " }}}
 " Set options ---------------------- {{{
 
