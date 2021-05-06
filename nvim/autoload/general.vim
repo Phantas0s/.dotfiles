@@ -1,5 +1,5 @@
 " Restore position of the cursor when reopening a file
-function! general#RestorePosition()
+function general#RestorePosition()
     if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
         return
     endif
@@ -10,14 +10,14 @@ function! general#RestorePosition()
 endfunc
 
 " delete trailing space when saving files
-function! general#DeleteTrailingWS()
-    exe "normal mz"
-    %s/\s\+$//ge
-    exe "normal `z"
+function general#DeleteTrailingWS()
+    normal mz
+    %s/\v\s+$//ge
+    normal `z
 endfunc
 
 " buffer cleanup - delete every buffer except the one open
-function! general#Buflist()
+function general#Buflist() abort
     redir => bufnames
     silent ls
     redir END
@@ -29,15 +29,15 @@ function! general#Buflist()
     return list
 endfunction
 
-function! general#Bdeleteonly()
+function general#Bdeleteonly() abort
     let list = filter(general#Buflist(), 'v:val != bufname("%")')
     for buffer in list
         call general#DeleteEmptyBuffers()
-        exec "bdelete ".buffer
+        exec 'bdelete '.buffer
     endfor
 endfunction
 
-function! general#DeleteEmptyBuffers()
+function general#DeleteEmptyBuffers() abort
     let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val) && empty(bufname(v:val)) && bufwinnr(v:val) < 0 && (getbufline(v:val, 1, "$") == [""])')
     if !empty(buffers)
         exe 'bd '.join(buffers, ' ')
@@ -45,7 +45,7 @@ function! general#DeleteEmptyBuffers()
 endfunction
 
 " Simple Zoom / Restore window (like Tmux)
-function! general#ZoomToggle() abort
+function general#ZoomToggle() abort
     if exists('t:zoomed') && t:zoomed
         execute t:zoom_winrestcmd
         let t:zoomed = 0
@@ -57,7 +57,7 @@ function! general#ZoomToggle() abort
     endif
 endfunction
 
-function! general#FoldText()
+function general#FoldText() abort
     let line=getline(v:foldstart)
     let nucolwidth=&foldcolumn+&number*&numberwidth
     let windowwidth=winwidth(0)-nucolwidth-3
@@ -69,13 +69,13 @@ function! general#FoldText()
     return line.'…'.repeat(' ',fillcharcount).foldedlinecount.'L'.' '
 endfunction
 
-function! general#ExecuteMacroOverVisualRange()
+function general#ExecuteMacroOverVisualRange() abort
     echo "@".getcmdline()
     execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
 " For use with pressing * or # in visual mode to search for current selection
-function! general#VisualSelection(direction, extra_filter) range
+function general#VisualSelection(direction, extra_filter) range abort
     let l:saved_reg = @"
     execute 'normal! vgvy'
 
@@ -93,14 +93,14 @@ function! general#VisualSelection(direction, extra_filter) range
 endfunction
 
 " to toggle quickfix list and location list
-function! general#GetBufferList()
+function general#GetBufferList() abort
     redir =>buflist
     silent! ls!
     redir END
     return buflist
 endfunction
 
-function! general#ToggleList(bufname, pfx)
+function general#ToggleList(bufname, pfx)
     let buflist = general#GetBufferList()
     for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
         if bufwinnr(bufnum) != -1
@@ -120,7 +120,7 @@ function! general#ToggleList(bufname, pfx)
     endif
 endfunction
 
-function! general#WordCount()
+function general#WordCount() abort
     if (&ft!="markdown")
         return ""
     endif
@@ -154,7 +154,7 @@ function! general#WordCount()
     endif
 endfunction
 
-function! general#CharCount()
+function general#CharCount()
     if (&ft!="markdown")
         return ""
     endif
@@ -189,7 +189,7 @@ function! general#CharCount()
 endfunction
 
 " simply create a dedicated file and prepare for writing it with markdown.
-function! general#MakeJournalEntry()
+function general#MakeJournalEntry()
     let fname = $CLOUD. '/journal/' . strftime('%d_%m_%Y.md')
     execute 'edit ' . fname
     if filereadable(fname) ==? v:false
@@ -202,7 +202,7 @@ function! general#MakeJournalEntry()
 endfunction
 
 " output Ex command in buffer
-function! general#Vsystem(excmds)
+function general#Vsystem(excmds)
     redir => s:results
     exec a:excmds
     redir END
