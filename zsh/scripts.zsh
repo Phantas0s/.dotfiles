@@ -521,10 +521,10 @@ pom() {
 
 # open man page in vim
 vman() {
-    nvim -c "SuperMan $*"
-
-    if [ "$?" != "0" ]; then
-        echo "No manual entry for $*"
+    if [ $# -eq 0 ]; then
+        echo "What manual page do you want?";
+    elif man -w "$@" > /dev/null; then
+        nvim -c "SuperMan $*"
     fi
 }
 
@@ -617,5 +617,4 @@ back() {
     for file in "$@"; do
         cp "$file" "$file".bak
     done
-
 }
