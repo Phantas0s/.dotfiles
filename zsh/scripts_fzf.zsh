@@ -131,3 +131,8 @@ fd() {
 
     d | fzf --height="20%" | cut -f 1 | source /dev/stdin
 }
+
+ftrack() {
+    file=$(ls $CLOUD/tracking/**/*.{ods,csv} | fzf) || return
+    libreoffice "$file" &> /dev/null &
+}
