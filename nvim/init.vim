@@ -333,6 +333,11 @@ cnoremap w!! execute ':w suda://%'
 " New motions
 onoremap c :<C-U>normal! /{<CR>i{
 
+" Save session
+nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
+" Reload session
+nnoremap <leader>sl :so $VIMCONFIG/sessions/
+
 " }}}
 " Set options ---------------------- {{{
 
@@ -370,11 +375,6 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
-" Save session
-nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
-" Reload session
-nnoremap <leader>sl :so $VIMCONFIG/sessions/
 
 " when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround

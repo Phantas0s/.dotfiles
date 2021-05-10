@@ -1,9 +1,7 @@
 #!/bin/bash
 
-rm $VIMCONFIG/pluggedconf &>/dev/null
-rm $VIMCONFIG/colors/* &>/dev/null
-rm $VIMCONFIG/ftplugin &>/dev/null
-rm $VIMCONFIG/autoload/* &>/dev/null
+# rm $VIMCONFIG/pluggedconf &>/dev/null
+# rm $VIMCONFIG/ftplugin &>/dev/null
 
 
 # Create all necessary folder for neovim
@@ -27,16 +25,12 @@ ln -sf "$DOTFILES/nvim/init.vim" "$VIMCONFIG/init.vim"
 
 # Install all mandatory folders if they don't exist already
 mkdir -p "$VIMCONFIG/plugged"
-mkdir -p "$VIMCONFIG/colors"
 mkdir -p "$VIMCONFIG/ultisnips"
-mkdir -p "$VIMCONFIG/autoload"
 mkdir -p "$VIMCONFIG/backup"
 mkdir -p "$VIMCONFIG/undo"
 mkdir -p "$VIMCONFIG/swap"
-mkdir -p "$VIMCONFIG/after/indent"
-mkdir -p "$VIMCONFIG/lua"
+mkdir -p "$VIMCONFIG/after"
 mkdir -p "$VIMCONFIG/thesaurus"
-mkdir -p "$VIMCONFIG/spell"
 
 # Install Godoctor for vim
 if [ ! -d "$VIMCONFIG/godoctor.vim" ]
@@ -51,22 +45,22 @@ if [ ! -f "$VIMCONFIG/projects.nvimrc" ]
 fi
 
 # configuration of different plugins
-ln -sf "$DOTFILES/nvim/pluggedconf" "$VIMCONFIG/pluggedconf"
+ln -sf "$DOTFILES/nvim/pluggedconf" "$VIMCONFIG"
 
 # configuration of coc
 ln -sf "$DOTFILES/nvim/coc-settings.json" "$VIMCONFIG/coc-settings.json"
 
 # color schemes
-ln -sf "$DOTFILES/nvim/colors/"* "$VIMCONFIG/colors"
+ln -sf "$DOTFILES/nvim/colors" "$VIMCONFIG"
 
 # indentation
-ln -sf "$DOTFILES/nvim/after/indent/"* "$VIMCONFIG/after/indent"
+ln -sf "$DOTFILES/nvim/after/indent" "$VIMCONFIG/after"
 
 # lua
-ln -sf "$DOTFILES/nvim/lua/"* "$VIMCONFIG/lua"
+ln -sf "$DOTFILES/nvim/lua" "$VIMCONFIG"
 
 # snippets
-ln -sf "$DOTFILES/nvim/ultisnips/"* "$VIMCONFIG/ultisnips"
+ln -sf "$DOTFILES/nvim/ultisnips/*" "$VIMCONFIG/ultisnips"
 
 # :help ftplugin
 ln -sf "$DOTFILES/nvim/ftplugin" "$VIMCONFIG/ftplugin"
@@ -75,13 +69,13 @@ ln -sf "$DOTFILES/nvim/ftplugin" "$VIMCONFIG/ftplugin"
 ln -sf "$DOTFILES/nvim/ftdetect" "$VIMCONFIG/ftdetect"
 
 # :help autoload
-ln -sf "$DOTFILES/nvim/autoload/"* "$VIMCONFIG/autoload"
+ln -sf "$DOTFILES/nvim/autoload" "$VIMCONFIG"
 
 # thesaurus
-ln -sf "$DOTFILES/nvim/thesaurus/"* "$VIMCONFIG/thesaurus"
+ln -sf "$DOTFILES/nvim/thesaurus/*" "$VIMCONFIG/thesaurus"
 
 # spell files
-ln -sf "$DOTFILES/nvim/spell/"* "$VIMCONFIG/spell/"
+ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"
 
 # projects.nvimrc is installed from the cloud
 
