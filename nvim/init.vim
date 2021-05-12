@@ -131,6 +131,10 @@ Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 Plug 'Phantas0s/go-analyzer.vim' " Custom plugin 
 " Plug '$XDG_CONFIG_HOME/workspace/vim-plugins/go-analyzer.vim'
 
+" Databases
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
 " Javascript
 " Plug 'pangloss/vim-javascript'
 " Plug 'leafgarland/typescript-vim'
@@ -193,6 +197,8 @@ let g:coc_global_extensions = [
     \ 'coc-json', 
     \ 'coc-yaml', 
     \ 'coc-godot', 
+    \ 'coc-sql', 
+    \ 'coc-db',
     \ 'coc-pyright',
     \ 'coc-phpactor',
     \]
@@ -217,20 +223,14 @@ map <space> <leader>
 map <space> <localleader>
 
 " Stop undo at each space
-inoremap <space> <C-G>u<space>
+" Doesn't work with abbreviations...
+" inoremap <space> <C-G>u<space>
 
-" to create boxes!!
-vmap <F2> !boxes -d stone
+vmap <F2> !boxes -d stone " to create boxes!!
+vmap <f3> !figlet<CR> " to create ascii art!!
+map <silent> <esc> <Cmd>noh<cr> " un-highlight when esc is pressed
 
-" to create ascii art!!
-vmap <f3> !figlet<CR>
-
-" un-highlight when esc is pressed
-map <silent> <esc> <Cmd>noh<cr>
-
-nnoremap Y y$
-
-" indent without kill the selection in vmode
+" indent without killing the selection in VISUAL mode
 vmap < <gv
 vmap > >gv
 
@@ -275,10 +275,10 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 " command -nargs=? DevDocs :call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
 
 " Only Linux
-command -nargs=? DevDocs :call system('xdg-open https://devdocs.io/#q=<args>')
+command! -nargs=? DevDocs :call system('xdg-open https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nnoremap <buffer><leader>D :execute "DevDocs " . fnameescape(expand('<cword>'))<CR>
 " same but with clojuredocs
-command -nargs=? ClojureDoc :call system('xdg-open https://clojuredocs.org/search\?q=<args>')
+command! -nargs=? ClojureDoc :call system('xdg-open https://clojuredocs.org/search\?q=<args>')
 autocmd vimrc FileType clojure nnoremap <buffer><leader>D :execute "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
 
 " arrow keys resize windows
@@ -299,10 +299,10 @@ nnoremap J mzJ`z
 tnoremap <C-\> <C-\><C-n>
 
 " buffer cleanup - delete every buffer except the one open
-command Ball :silent call general#Bdeleteonly()
+command! Ball :silent call general#Bdeleteonly()
 
 " Add a journal entry
-command Jrnl call general#MakeJournalEntry()
+command! Jrnl call general#MakeJournalEntry()
 
 " restore the position of the last cursor when you open a file
 autocmd vimrc BufReadPost * call general#RestorePosition()
@@ -316,7 +316,6 @@ autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.
 
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
-nnoremap <leader>AH :lua print('hello world')
 
 " Open images with feh
 autocmd vimrc BufEnter *.png,*.jpg,*gif silent! execute "! feh ".expand("%") | :bw
@@ -339,6 +338,17 @@ nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 nnoremap <leader>sl :so $VIMCONFIG/sessions/
 
 " }}}
+
+" abbreviations ---------------------- {{{
+
+" +---------------+
+" | Abbreviations |
+" +---------------+
+
+iabbrev <expr> cdate strftime('%Y-%m-%d') "current date
+
+" }}}
+
 " Set options ---------------------- {{{
 
 " +--------------+
@@ -390,7 +400,8 @@ set list listchars=tab:\┆\ ,trail:·,nbsp:±
 set hidden
 
 " avoid delay
-set updatetime=300
+" redir doesn't work anymore with that...
+" set updatetime=300
 
 " always show signcolumns
 set signcolumn=yes
