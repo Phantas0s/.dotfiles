@@ -335,7 +335,7 @@ onoremap c :<C-U>normal! /{<CR>i{
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
-nnoremap <leader>sl :so $VIMCONFIG/sessions/
+nnoremap <leader>ls :source $VIMCONFIG/sessions/
 
 " }}}
 

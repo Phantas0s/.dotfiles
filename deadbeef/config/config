@@ -77,10 +77,10 @@ hotkey.key29 "b" 0 0 next
 hotkey.key30 "n" 0 0 playback_random
 hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+mainwin.geometry.h 723
+mainwin.geometry.w 1366
+mainwin.geometry.x 1920
+mainwin.geometry.y 454
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -142,17 +142,17 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -5.163003
-playlist.current 2
+playlist.current 6
 playlist.cursor.0 16
 playlist.cursor.1 87
-playlist.cursor.2 239
+playlist.cursor.2 240
 playlist.cursor.3 739
 playlist.cursor.4 1111
 playlist.cursor.5 60
 playlist.cursor.6 0
-playlist.scroll.0 324
-playlist.scroll.1 1368
-playlist.scroll.2 -239
+playlist.scroll.0 0
+playlist.scroll.1 0
+playlist.scroll.2 5429
 playlist.scroll.3 0
 playlist.scroll.4 25750
 playlist.scroll.5 -60
@@ -164,6 +164,7 @@ playlist.tab.00002 Techtrance
 playlist.tab.00003 Metal
 playlist.tab.00004 Chill
 playlist.tab.00005 Video Games
+playlist.tab.00006 Tool
 prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 632
