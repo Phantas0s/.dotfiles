@@ -382,6 +382,12 @@ Open a freemind map with all output stream redirected to /dev/null
 
 List all my freemind mindmaps and allow to open the one you want.
 
+### Math
+
+* `calcul <operation>`
+
+Calculate a mathematical operation. For example: `calcul "2 * 3"`.
+
 ## Fun
 
 ### Term displays

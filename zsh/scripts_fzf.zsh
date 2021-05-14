@@ -119,8 +119,8 @@ fwork() {
 }
 
 fmind() {
-    file=$(ls $CLOUD/knowledge_base/**/*.mm | fzf)
-    freemind "$file" &> /dev/null &
+    files=$(ls $CLOUD/knowledge_base/**/*.mm | fzf -m | tr -s "\n" " ")
+    freemind $(echo $files) &> /dev/null &
 }
 
 fd() {

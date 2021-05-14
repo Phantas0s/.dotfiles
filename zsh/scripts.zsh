@@ -618,3 +618,7 @@ back() {
         cp "$file" "$file".bak
     done
 }
+
+calcul() {
+    bc -l <<< "$@"
+}

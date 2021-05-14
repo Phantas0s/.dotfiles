@@ -61,7 +61,7 @@ alias pg='ping 8.8.8.8'
 # | bc |
 # +----+
 
-alias bc="bc -q"
+alias cal="noglob calcul"
 
 # +-----+
 # | bat |
@@ -247,3 +247,4 @@ alias cljrepl='clojure -Sdeps "{:deps {com.bhauman/rebel-readline {:mvn/version 
 
 alias ddg="duckduckgo"
 alias wiki="wikipedia"
+
