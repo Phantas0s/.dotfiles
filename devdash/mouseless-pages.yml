@@ -66,6 +66,7 @@ projects:
                 - name: ga.table_pages
                   theme: sixth_column
                   options:
+                    title: "Pages - Today"
                 - name: ga.box_total
                   theme: sixth_column
                   options:
