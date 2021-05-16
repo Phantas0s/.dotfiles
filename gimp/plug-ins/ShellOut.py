@@ -125,8 +125,11 @@ def plugin_main(image, drawable, visible, command):
   # Invoke external command
   pdb.gimp_progress_set_text ("calling " + progtorun[0] + "...")
   pdb.gimp_progress_pulse()
-  child = subprocess.Popen(args, shell=False)
-  child.communicate()
+
+  d = dict(os.environ)
+  d["WINEPREFIX"] = os.path.expanduser("~/win32")
+  child = subprocess.Popen(args, shell=False, env=d)
+  child.wait()
 
   if len(progtorun) > 3:
     progtorun[3](tempfilename, progtorun[2])
@@ -150,7 +153,7 @@ def plugin_main(image, drawable, visible, command):
     temp.translate((tempdrawable.width-newlayer2.width)/2,(tempdrawable.height-newlayer2.height)/2)
 
   pdb.gimp_buffer_delete(buffer)
-  pdb.gimp_edit_clear(temp)	
+  # pdb.gimp_edit_clear(temp)	
   pdb.gimp_floating_sel_anchor(sel)
 
   #load up old selection
