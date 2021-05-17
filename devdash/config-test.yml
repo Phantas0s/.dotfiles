@@ -1,6 +1,4 @@
 ---
-general:
-  editor: nano
 projects:
   - name: My Sweet Localhost
     widgets:

@@ -211,7 +211,7 @@ set $web "2: web"
 set $multimedia "3: multi"
 set $design "4: design"
 set $office "5: office"
-set $mindmap "6: mindmap"
+set $knowledge "6: knowledge"
 set $vm "7: VM"
 
 # switch to workspace
@@ -220,7 +220,7 @@ bindsym $mod+2 workspace $web
 bindsym $mod+3 workspace $multimedia
 bindsym $mod+4 workspace $design
 bindsym $mod+5 workspace $office
-bindsym $mod+6 workspace $mindmap
+bindsym $mod+6 workspace $knowledge
 bindsym $mod+7 workspace $vm
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
@@ -232,7 +232,7 @@ bindsym $mod+Shift+2 move container to workspace $web
 bindsym $mod+Shift+3 move container to workspace $multimedia
 bindsym $mod+Shift+4 move container to workspace $design
 bindsym $mod+Shift+5 move container to workspace $office
-bindsym $mod+Shift+6 move container to workspace $mindmap
+bindsym $mod+Shift+6 move container to workspace $knowledge
 bindsym $mod+Shift+7 move container to workspace $vm
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
@@ -262,12 +262,12 @@ assign [class="Gimp" instance="gimp"] → $design
 assign [class="scribus" instance="scribus"] → $design
 assign [class="Inkscape" instance="org.inkscape.Inkscape"] → $design
 
-assign [class="libreoffice"] → $office
 assign [class="Doublecmd" instance="doublecmd"] → $office
 assign [class="Joplin" instance="joplin"] → $office
 assign [class="calibre" instance="calibre-gui"] → $office
 
-assign [instance="FreeMind"] → $mindmap
+assign [instance="FreeMind"] → $knowledge
+assign [instance="libreoffice-calc"] → $knowledge
 
 assign [class="VirtualBox Manager" instance="virtualBox Manager"] → $vm
 assign [class="VirtualBox Machine" instance="virtualBox Machine"] → $vm

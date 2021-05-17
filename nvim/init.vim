@@ -335,7 +335,7 @@ onoremap c :<C-U>normal! /{<CR>i{
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
-nnoremap <leader>ls :source $VIMCONFIG/sessions/
+nnoremap <leader>sl :source $VIMCONFIG/sessions/
 
 " }}}
 
@@ -345,6 +345,8 @@ nnoremap <leader>ls :source $VIMCONFIG/sessions/
 " | Abbreviations |
 " +---------------+
 
+iabbrev IMO in my opinion
+iabbrev BTW by the way
 iabbrev <expr> cdate strftime('%Y-%m-%d') "current date
 
 " }}}

@@ -77,10 +77,10 @@ hotkey.key29 "b" 0 0 next
 hotkey.key30 "n" 0 0 playback_random
 hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
-mainwin.geometry.h 723
+mainwin.geometry.h 701
 mainwin.geometry.w 1366
 mainwin.geometry.x 1920
-mainwin.geometry.y 454
+mainwin.geometry.y 476
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -142,7 +142,7 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -5.163003
-playlist.current 2
+playlist.current 6
 playlist.cursor.0 16
 playlist.cursor.1 87
 playlist.cursor.2 212

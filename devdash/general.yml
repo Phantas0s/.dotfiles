@@ -26,22 +26,44 @@ projects:
                     command: "./scripts/calendar.sh"
                     # command: "fortune wisdom | cowsay"
                     height: 20
-                - name: lh.table_disk
-                  options:
-                    title: " Disks "
-                    row_limit: 3
-                    color: blue
+                # - name: lh.table_disk
+                #   options:
+                #     title: " Disks "
+                #     row_limit: 3
+                #     color: blue
                 - name: github.table_issues
                   options:
-                    color: red
+                    color: blue
                     row_limit: 10
                     repository: devdash
+                - name: lh.bar_rates
+                  options:
+                    bar_width: 10
+                    height: 20
+                    bar_color: red
+                    bar_gap: 10
+                    num_color: black
           - col:
               size: 3
               elements:
+                - name: lh.box_uptime
+                  options:
+                    color: blue
                 - name: lh.box
                   options:
                     title: " Weather - Berlin "
                     color: yellow
                     height: 8
                     command: "curl --stderr - --silent wttr.in/berlin?T0Q"
+                - name: lh.box
+                  options:
+                    title: " That's a cow "
+                    border_color: blue
+                    text_color: green
+                    height: 10
+                    command: "cowsay Super dashboard"
+                - name: lh.table
+                  options:
+                    title: dashboards
+                    command: "ls /home/hypnos/.config/devdash | grep 'yml'"
+                    color: magenta
