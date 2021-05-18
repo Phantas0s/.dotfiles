@@ -119,7 +119,8 @@ fwork() {
 }
 
 fmind() {
-    files=$(ls $CLOUD/knowledge_base/**/*.mm | sed "s#$CLOUD/knowledge_base/##" | fzf -m | tr -s "\n" " ")
+    local -r root="$CLOUD/knowledge_base"
+    files=$(ls $root/**/*.mm | sed "s#$root/##" | fzf -m | tr -s "\n" " " | sed "s#^#$root/#;s#\s# $root/#g")
     freemind $(echo $files) &> /dev/null &
 }
 
