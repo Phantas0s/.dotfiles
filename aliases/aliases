@@ -61,7 +61,7 @@ alias pg='ping 8.8.8.8'
 # | bc |
 # +----+
 
-alias cal="noglob calcul"
+alias calc="noglob calcul"
 
 # +-----+
 # | bat |
