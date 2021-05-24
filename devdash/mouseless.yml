@@ -37,7 +37,7 @@ projects:
                     num_color: black
                 - name: ga.bar_users
                   options:
-                    start_date: "10_months_ago"
+                    start_date: "12_months_ago"
                     end_date: "this_month"
                     time_period: month
                     color: red

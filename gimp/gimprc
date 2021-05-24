@@ -12,7 +12,7 @@
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (color-profile-policy keep)
-(layer-new-name "bubble left")
+(layer-new-name "bubble right")
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
