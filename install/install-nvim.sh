@@ -25,12 +25,10 @@ ln -sf "$DOTFILES/nvim/init.vim" "$VIMCONFIG/init.vim"
 
 # Install all mandatory folders if they don't exist already
 mkdir -p "$VIMCONFIG/plugged"
-mkdir -p "$VIMCONFIG/ultisnips"
 mkdir -p "$VIMCONFIG/backup"
 mkdir -p "$VIMCONFIG/undo"
 mkdir -p "$VIMCONFIG/swap"
 mkdir -p "$VIMCONFIG/after"
-mkdir -p "$VIMCONFIG/thesaurus"
 
 # Install Godoctor for vim
 if [ ! -d "$VIMCONFIG/godoctor.vim" ]
@@ -60,19 +58,19 @@ ln -sf "$DOTFILES/nvim/after/indent" "$VIMCONFIG/after"
 ln -sf "$DOTFILES/nvim/lua" "$VIMCONFIG"
 
 # snippets
-ln -sf "$DOTFILES/nvim/ultisnips/*" "$VIMCONFIG/ultisnips"
+ln -sf "$DOTFILES/nvim/ultisnips" "$VIMCONFIG"
 
 # :help ftplugin
-ln -sf "$DOTFILES/nvim/ftplugin" "$VIMCONFIG/ftplugin"
+ln -sf "$DOTFILES/nvim/ftplugin" "$VIMCONFIG"
 
 # :help ftdetect
-ln -sf "$DOTFILES/nvim/ftdetect" "$VIMCONFIG/ftdetect"
+ln -sf "$DOTFILES/nvim/ftdetect" "$VIMCONFIG"
 
 # :help autoload
 ln -sf "$DOTFILES/nvim/autoload" "$VIMCONFIG"
 
 # thesaurus
-ln -sf "$DOTFILES/nvim/thesaurus/*" "$VIMCONFIG/thesaurus"
+ln -sf "$DOTFILES/nvim/thesaurus" "$VIMCONFIG"
 
 # spell files
 ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"

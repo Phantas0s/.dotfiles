@@ -274,7 +274,7 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
 " Only Linux
 command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
-autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php,eruby,coffee,haml nnoremap <buffer><leader>D :execute "DevDocs " . fnameescape(expand('<cword>'))<CR>
+autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . fnameescape(expand('<cword>'))<CR>
 " same but with clojuredocs
 command! -nargs=? ClojureDoc call system('xdg-open https://clojuredocs.org/search\?q=<args>')
 autocmd vimrc FileType clojure nnoremap <buffer><leader>D :execute "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
