@@ -57,6 +57,12 @@ alias egrep='egrep --color=auto'
 
 alias pg='ping 8.8.8.8'
 
+# +------+
+# | time |
+# +------+
+
+alias time='/usr/bin/time'
+
 # +----+
 # | bc |
 # +----+
