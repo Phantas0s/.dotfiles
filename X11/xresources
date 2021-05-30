@@ -68,7 +68,7 @@ URxvt.background: [85]#181815
 URxvt*termName: rxvt-unicode
 
 ! Might be used by tmux?
-! We don't need to source zprofile each time terminal is open
+! We dont need to source zprofile each time terminal is open
 ! URxvt*loginShell: true
 
 ! URxvt*hold: false
@@ -93,16 +93,16 @@ URxvt*saveLines: 5000
 
 !! Perl Extensions !!
 !! URxvt*perl-ext-common: default,tabbedex,resize-font
- URxvt*perl-ext-common: tabbedex,resize-font
+URxvt*perl-ext-common: tabbedex,resize-font
 
 URxvt.keysym.C-Down: resize-font:smaller
 URxvt.keysym.C-Up: resize-font:bigger
 URxvt.keysym.C-equal: resize-font:reset
 URxvt.keysym.C-question: resize-font:show
 
-URxvt*keysym.Control-Shift-N: perl:tabbedex:new_tab
-URxvt*keysym.Control-Shift-K: perl:tabbedex:next_tab
-URxvt*keysym.Control-Shift-J: perl:tabbedex:prev_tab
+URxvt.keysym.Control-Shift-N: perl:tabbedex:new_tab
+URxvt.keysym.Control-Shift-K: perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-J: perl:tabbedex:prev_tab
 
 URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
 URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_left
