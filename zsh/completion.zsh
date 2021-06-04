@@ -9,6 +9,9 @@
 # | General |
 # +---------+
 
+# zstyle pattern for the completion
+# :completion:<function>:<completer>:<command>:<argument>:<tag>
+
 # Load more completions
 fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
 
@@ -74,6 +77,7 @@ zstyle ':completion:*' complete-options true
 
 zstyle ':completion:*' file-sort modification
 
+
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
 zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %D %d --%f'
 zstyle ':completion:*:*:*:*:messages' format ' %F{purple} -- %d --%f'
@@ -84,6 +88,7 @@ zstyle ':completion:*:*:*:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Only display some tags for the command cd
 zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
+# zstyle ':completion:*:complete:git:argument-1:' tag-order !aliases
 
 # Required for completion to be in good groups (named after the tags)
 zstyle ':completion:*' group-name ''

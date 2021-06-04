@@ -18,6 +18,7 @@ Album Monitoring=true
 Album Sort Role=0
 All Groups Open=false
 Default Icon Size=142
+Default Tree Face Size=48
 Default Tree Icon Size=22
 Icon Show Aspect Ratio=false
 Icon Show Comments=true
@@ -87,12 +88,13 @@ ToolTips Show Video Codec=true
 ToolTips Show Video Duration=true
 ToolTips Show Video Frame Rate=true
 TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=4014
-Expansion=0,3765,3901,3900,3879,3880,3844,3798,1,3651,4013,4015,4014,3660,66,977,2341,2,62,61,56,60,54,53,52,51,3961,3959,3958,10,3955,9,3954,8,7,6,5,4,3947,3,3945,-2
+CurrentIndex=3954
+Expansion=0,3765,3893,3896,3901,3900,3879,3880,3844,3798,1,3651,4014,977,2341,2,62,61,56,60,54,53,52,51,3961,3959,3958,10,3955,9,3954,8,3953,7,6,5,4,3947,3,3945,4020,-2
 RestoreChecked=false
-Selection=4014
+Selection=3954
 SortColumn=0
 SortOrder=1
 
@@ -197,7 +199,7 @@ EnableCM=true
 GamutCheckMaskColor=126,255,255
 LastMismatchBehavior=2049
 LastMissingProfileBehavior=2050
-LastSpecifiedAssignProfile=
+LastSpecifiedAssignProfile[$e]=/usr/share/digikam/profiles/
 LastSpecifiedInputProfile=
 LastUncalibratedBehavior=2080
 ManagedPreviews=true
@@ -887,7 +889,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwKpqak=
+Database Encrypted Password=AwJ9fX0=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
@@ -914,7 +916,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=6
+ActiveTab=0
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1074,6 +1076,7 @@ org.kde.digikam.plugin.generic.YandexFotki=true
 
 [Face Detection Settings]
 Detection Accuracy=0.7
+Use Yolo V3=false
 
 [Face Management Settings]
 AlbumComboBox-Checked=
@@ -1158,7 +1161,7 @@ Selection=
 Sort Order=0
 SortColumn=0
 SortOrder=1
-SplitterState=AAAA/wAAAAEAAAACAAABdQAAAGMB/////wEAAAACAA==
+SplitterState=AAAA/wAAAAEAAAACAAABdgAAAGMB/////wEAAAACAA==
 
 [GPS Search Sidebar][GPSSearch Map Widget]
 Backend=marble
@@ -1192,6 +1195,7 @@ Application Style=fusion
 Apply Sidebar Changes Directly=false
 Clean core DB At Start=false
 Draw Frames To Grouped Items=true
+Expand New Current Item On Click=true
 FullScreen Hide SideBars=false
 FullScreen Hide StatusBar=false
 FullScreen Hide ThumbBar=true
@@ -1211,7 +1215,7 @@ Height 768=723
 Icon Theme=breeze-dark
 LVDS-1 HDMI-1 Height 1080=1013
 LVDS-1 HDMI-1 Height 1200=1133
-LVDS-1 HDMI-1 Height 1920x1200=1133
+LVDS-1 HDMI-1 Height 1920x1200=1155
 LVDS-1 HDMI-1 Height 768=723
 LVDS-1 HDMI-1 Width 1366=1366
 LVDS-1 HDMI-1 Width 1920=1920
@@ -1219,14 +1223,14 @@ LVDS-1 HDMI-1 Width 1920x1200=1920
 LVDS-1 HDMI-1 XPosition=0
 LVDS-1 HDMI-1 XPosition 1920x1200=0
 LVDS-1 HDMI-1 YPosition=44
-LVDS-1 HDMI-1 YPosition 1920x1200=44
+LVDS-1 HDMI-1 YPosition 1920x1200=22
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1338,7 +1342,7 @@ SlideShowPrintTags=false
 SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
-SplitterState=AAAA/wAAAAEAAAACAAAHaAAAASsB/////wAAAAABAQ==
+SplitterState=AAAA/wAAAAEAAAACAAAHaAAAATsB/////wAAAAABAQ==
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 TIFFCompression=false
 ToolBarsMovable=Disabled
@@ -1551,7 +1555,7 @@ HDMI1 LVDS1 XPosition=0
 HDMI1 LVDS1 YPosition=0
 HDMI1 XPosition=0
 HDMI1 YPosition=0
-Horizontal Splitter State=AAAA/wAAAAEAAAADAAABKwAAAFcAAAErAf////8AAAAAAQE=
+Horizontal Splitter State=AAAA/wAAAAEAAAADAAABOwAAAFcAAAE7Af////8AAAAAAQE=
 LVDS-1 HDMI-1 XPosition=0
 LVDS-1 HDMI-1 XPosition 1366x768=0
 LVDS-1 HDMI-1 XPosition 1920x1200=0
@@ -1722,9 +1726,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=4014
-SplitterState=AAAA/wAAAAEAAAADAAABFAAABQMAAAErAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAUDAAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABQMAAABXAP///wAABQMAAANPAAAABAAAAAQAAAAIAAAACPwAAAAA
+InitialAlbumID=3954
+SplitterState=AAAA/wAAAAEAAAADAAABFAAABQMAAAE7Af////8AAAAAAQE=
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAATzAAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPMAAABXAP///wAABPMAAANlAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
