@@ -235,7 +235,7 @@ nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
-nnoremap gX <silent> :execute
+nnoremap <silent> gX :execute
             \ "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
 
 "toggle between absolute -> relative line number
@@ -274,7 +274,7 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
 " Only Linux
 command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
-autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D execute "DevDocs " . expand('<cword>')<CR>
+autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
 " same but with clojuredocs
 command! -nargs=? ClojureDoc call system('xdg-open https://clojuredocs.org/search\?q=<args>')
 autocmd vimrc FileType clojure nnoremap <buffer><leader>D :execute "ClojureDoc " . fnameescape(expand('<cword>'))<CR>
@@ -316,7 +316,7 @@ autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.
 nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
 
 " Open images with feh
-autocmd vimrc BufEnter *.png,*.jpg,*gif silent! execute "! sxiv ".expand("%") | bwipeout
+autocmd vimrc BufEnter *.png,*.jpg,*.gif silent! execute "! sxiv ".expand("%") | bwipeout
 
 " Execute a macro for the all selection
 xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
@@ -326,9 +326,6 @@ nnoremap Q <Nop>
 
 " Save files as root
 cnoremap w!! execute ':w suda://%'
-
-" New motions
-onoremap c :<C-U>normal! /{<CR>i{
 
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/

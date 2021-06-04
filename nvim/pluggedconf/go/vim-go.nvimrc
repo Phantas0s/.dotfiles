@@ -42,9 +42,9 @@ autocmd FileType go nmap <buffer><leader>grn <plug>(go-rename)
 autocmd FileType go nmap <buffer><leader>gat :GoAddTags<space>
 autocmd FileType go nmap <buffer><leader>gdt :GoRemoveTags<CR>
 
-autocmd Filetype go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
-autocmd Filetype go nmap <buffer><leader>tuh <Plug>(go-alternate-split)
-autocmd Filetype go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
+autocmd FileType go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
+autocmd FileType go nmap <buffer><leader>tuh <Plug>(go-alternate-split)
+autocmd FileType go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
 
 autocmd FileType go nmap <buffer><leader>gim <plug>(go-implements)
 autocmd FileType go nmap <buffer><leader>gc <plug>(go-callee)
