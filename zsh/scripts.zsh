@@ -511,12 +511,11 @@ initKondo() {
 }
 
 pom() {
-    local POMODORO_DURATION=25
+    local -r HOURS=${1:?}
+    local -r MINUTES=${2:-0}
+    local -r POMODORO_DURATION=${3:-25}
 
-    if [ ! -z $3 ]; then
-        POMODORO_DURATION=$3
-    fi
-    echo "(($1 * 60) + $2) / $POMODORO_DURATION" | bc
+    echo "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION" | bc
 }
 
 # open man page in vim
