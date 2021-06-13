@@ -621,3 +621,7 @@ back() {
 calcul() {
     bc -l <<< "$@"
 }
+
+jrnl() {
+    cd "$JRNL" && vim +Jrnl
+}

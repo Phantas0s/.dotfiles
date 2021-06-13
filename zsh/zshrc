@@ -110,7 +110,7 @@ if [ $(command -v "fzf") ]; then
     source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
 
     # Search with fzf and open selected file with Vim
-    bindkey -s '^v' 'vim $(fzf);^M'
+    # bindkey -s '^v' 'vim $(fzf);^M'
 fi
 
 # Startup
