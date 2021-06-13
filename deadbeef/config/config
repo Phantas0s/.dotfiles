@@ -77,10 +77,14 @@ hotkey.key29 "b" 0 0 next
 hotkey.key30 "n" 0 0 playback_random
 hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+logwindow.geometry.h 300
+logwindow.geometry.w 400
+logwindow.geometry.x 183
+logwindow.geometry.y 225
+mainwin.geometry.h 723
+mainwin.geometry.w 1366
+mainwin.geometry.x 1920
+mainwin.geometry.y 454
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -141,24 +145,24 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -0.274725
-playlist.current 7
+playback.volume -4.206677
+playlist.current 0
 playlist.cursor.0 16
 playlist.cursor.1 87
 playlist.cursor.2 212
 playlist.cursor.3 739
 playlist.cursor.4 1111
 playlist.cursor.5 60
-playlist.cursor.6 104
-playlist.cursor.7 0
+playlist.cursor.6 108
+playlist.cursor.7 51
 playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.2 4887
 playlist.scroll.3 0
 playlist.scroll.4 25750
 playlist.scroll.5 -60
-playlist.scroll.6 0
-playlist.scroll.7 0
+playlist.scroll.6 -108
+playlist.scroll.7 1514
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 **Main Playlist**
 playlist.tab.00001 Good old days
@@ -172,10 +176,10 @@ prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 200
 prefwin.geometry.y 205
-resume.paused 1
-resume.playlist 2
-resume.position 34.551406
-resume.track 212
+resume.paused 0
+resume.playlist 6
+resume.position 381.25280
+resume.track 108
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 1086
