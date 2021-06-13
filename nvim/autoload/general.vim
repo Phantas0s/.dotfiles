@@ -188,16 +188,15 @@ function general#CharCount()
     endif
 endfunction
 
-" simply create a dedicated file and prepare for writing it with markdown.
+" create a dedicated file and prepare for writing it with markdown.
 function general#MakeJournalEntry()
-    let fname = $CLOUD. '/journal/' . strftime('%d_%m_%Y.md')
+    let fname = $JRNL . '/' . strftime('%d_%m_%Y.md')
     execute 'edit ' . fname
     if filereadable(fname) ==? v:false
         execute 'normal I# ' . strftime('%A, the %d of %B %Y')
-        write
     endif
-    execute 'normal! Go## ' . strftime('%H:%M')
-    normal! o
+    execute "normal! Go\<cr>## " . strftime('%H:%M')
+    execute "normal! o\<cr>"
     startinsert
 endfunction
 
