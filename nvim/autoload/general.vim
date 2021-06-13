@@ -131,10 +131,11 @@ function general#WordCount() abort
     endif
     " if we modify file, open a new buffer, be in visual ever, or switch modes
     " since last run, we recompute.
-    if &modified || !exists("b:wordcount") || currentmode =~? '\c.*v' || currentmode != g:lastmode_wc
+    if (&modified || !exists("b:wordcount") || currentmode =~? '\c.*v' || currentmode != g:lastmode_wc) && currentmode != 's'
         let g:lastmode_wc = currentmode
         let l:old_position = getpos('.')
         let l:old_status = v:statusmsg
+        echom currentmode
         execute "silent normal g\<c-g>"
         if v:statusmsg == "--No lines in buffer--"
             let b:wordcount = 0
@@ -160,21 +161,21 @@ function general#CharCount()
     endif
 
     let currentmode = mode()
-    if !exists("g:lastmode_wc")
+    if !exists('g:lastmode_wc')
         let g:lastmode_wc = currentmode
     endif
     " if we modify file, open a new buffer, be in visual ever, or switch modes
     " since last run, we recompute.
-    if &modified || !exists("b:charcount") || currentmode =~? '\c.*v' || currentmode != g:lastmode_wc
+    if (&modified || !exists('b:charcount') || currentmode =~? '\c.*v' || currentmode != g:lastmode_wc) && currentmode != 's'
         let g:lastmode_wc = currentmode
         let l:old_position = getpos('.')
         let l:old_status = v:statusmsg
         execute "silent normal g\<c-g>"
-        if v:statusmsg == "--No lines in buffer--"
+        if v:statusmsg ==? '--No lines in buffer--'
             let b:charcount = 0
         else
             let s:split_wc = split(v:statusmsg)
-            if index(s:split_wc, "Selected") < 0
+            if index(s:split_wc, 'Selected') < 0
                 let b:charcount = str2nr(s:split_wc[13]) - 1
             else
                 let b:charcount = str2nr(s:split_wc[9]) - 1
