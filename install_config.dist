@@ -12,9 +12,6 @@
 # GIT_USER=""
 # GIT_EMAIL=""
 
-# Path for your default journal - https://github.com/maebert/jrnl
-# JRNL_DEFAULT_PATH=""
-
 ### Installation from hosting service (nextcloud / dropbox...) ######
 # see install/install-from-cloud.sh
 
