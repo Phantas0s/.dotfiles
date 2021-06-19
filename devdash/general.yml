@@ -26,11 +26,11 @@ projects:
                     command: "./scripts/calendar.sh"
                     # command: "fortune wisdom | cowsay"
                     height: 20
-                # - name: lh.table_disk
-                #   options:
-                #     title: " Disks "
-                #     row_limit: 3
-                #     color: blue
+                - name: lh.table_disk
+                  options:
+                    title: " Disks "
+                    row_limit: 3
+                    color: blue
                 - name: github.table_issues
                   options:
                     color: blue
@@ -46,9 +46,6 @@ projects:
           - col:
               size: 3
               elements:
-                - name: lh.box_uptime
-                  options:
-                    color: blue
                 - name: lh.box
                   options:
                     title: " Weather - Berlin "
