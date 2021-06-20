@@ -135,7 +135,6 @@ function general#WordCount() abort
         let g:lastmode_wc = currentmode
         let l:old_position = getpos('.')
         let l:old_status = v:statusmsg
-        echom currentmode
         execute "silent normal g\<c-g>"
         if v:statusmsg == "--No lines in buffer--"
             let b:wordcount = 0
