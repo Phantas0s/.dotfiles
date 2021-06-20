@@ -21,7 +21,8 @@ ln -sf "$DOTFILES_CLOUD/projects.nvimrc" "$VIMCONFIG"
 mkdir -p "$VIMCONFIG/sessions"
 
 # install nvim config
-ln -sf "$DOTFILES/nvim/init.vim" "$VIMCONFIG/init.vim"
+ln -sf "$DOTFILES/nvim/init.vim" "$VIMCONFIG"
+ln -sf "$DOTFILES/nvim/init_plugins.vim" "$VIMCONFIG"
 
 # Install all mandatory folders if they don't exist already
 mkdir -p "$VIMCONFIG/plugged"
@@ -52,12 +53,15 @@ ln -sf "$DOTFILES/nvim/coc-settings.json" "$VIMCONFIG/coc-settings.json"
 ln -sf "$DOTFILES/nvim/colors" "$VIMCONFIG"
 
 # indentation
+rm -rf "$VIMCONFIG/after/indent"
 ln -sf "$DOTFILES/nvim/after/indent" "$VIMCONFIG/after"
 
 # lua
+rm -rf "$VIMCONFIG/lua"
 ln -sf "$DOTFILES/nvim/lua" "$VIMCONFIG"
 
 # snippets
+rm -rf "$VIMCONFIG/ultisnips"
 ln -sf "$DOTFILES/nvim/ultisnips" "$VIMCONFIG"
 
 # :help ftplugin
@@ -70,6 +74,7 @@ ln -sf "$DOTFILES/nvim/ftdetect" "$VIMCONFIG"
 ln -sf "$DOTFILES/nvim/autoload" "$VIMCONFIG"
 
 # thesaurus
+rm -rf "$VIMCONFIG/thesaurus"
 ln -sf "$DOTFILES/nvim/thesaurus" "$VIMCONFIG"
 
 # spell files
