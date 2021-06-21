@@ -6,12 +6,6 @@ The arguments are indicated between `<>`, for example `<arg>`.
 
 If the argument has a value, it's the default one (and therefore the argument is not mandatory). For example: `<arg=default>`.
 
-## Helpers
-
-* `line <line_number> <input>`
-
-Wrapper around sed to display a precise line from an input.
-
 ## System
 
 ### Update system
@@ -387,6 +381,12 @@ List all my freemind mindmaps and allow to open the one you want.
 * `calcul <operation>`
 
 Calculate a mathematical operation. For example: `calcul "2 * 3"`.
+
+### Internet
+
+* `tiny <url>`
+
+Use tinyurl to shorten the `<url>`.
 
 ## Fun
 

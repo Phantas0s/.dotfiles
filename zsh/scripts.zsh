@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-line() {
-    sed -n "${1}p" $2 && return
-}
-
 screenres() {
     [ ! -z $1 ] && xrandr --current | grep '*' | awk '{print $1}' | line $1
 }
@@ -624,4 +620,9 @@ calcul() {
 
 jrnl() {
     cd "$JRNL" && vim +Jrnl
+}
+
+tiny() {
+    local URL=${1:?}
+    curl -s "http://tinyurl.com/api-create.php?url=$1"
 }
