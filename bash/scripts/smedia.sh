@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/sudo /bin/bash
 
 # Block social media for you to focus on more important tasks.
 # You can put this script in your PATH (/usr/bin/smedia for example). Don't forget to change the permissions (sudo chmod 755 /usr/bin/smedia)

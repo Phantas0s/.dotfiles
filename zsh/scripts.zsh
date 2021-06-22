@@ -378,7 +378,7 @@ pipes() {
 }
 
 smedia() {
-    sudo $DOTFILES/bash/scripts/smedia.sh $@
+    $DOTFILES/bash/scripts/smedia.sh $@
 }
 
 mkcd() {
