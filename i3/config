@@ -349,8 +349,8 @@ exec urxvtc -name bc_scratchpad -e bc -l
 for_window [class="URxvt*"] border pixel 1
 
 # start softwares and command lines in workspaces
-exec i3-msg workspace $office; exec joplin-desktop
-exec i3-msg workspace $terms; exec /usr/bin/urxvtc
+exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
+exec --no-startup-id i3-msg workspace "$office"; exec joplin-desktop
 
 ##########
 # DESIGN #
