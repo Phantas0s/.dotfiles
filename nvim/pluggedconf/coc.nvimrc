@@ -21,7 +21,7 @@ inoremap <silent><expr> <A-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Remap keys for gotos
-nmap <silent><leader>] <Plug>(coc-definition)
+nmap <silent><C-]> <Plug>(coc-definition)
 nmap <silent><leader>]t <Plug>(coc-type-definition)
 nmap <silent><leader>]i <Plug>(coc-implementation)
 nmap <silent><leader>]r <Plug>(coc-references)

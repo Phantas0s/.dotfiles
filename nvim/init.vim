@@ -56,6 +56,7 @@ let g:coc_global_extensions = [
             \ 'coc-db',
             \ 'coc-pyright',
             \ 'coc-phpactor',
+            \ 'coc-metals',
             \]
 
 " \ 'coc-markmap',
