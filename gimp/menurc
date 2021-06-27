@@ -1256,6 +1256,7 @@
 ; (gtk_accel_path "<Actions>/dockable/dockable-tab-style-automatic" "")
 ; (gtk_accel_path "<Actions>/layers/layers-mask-edit" "")
 ; (gtk_accel_path "<Actions>/windows/windows-show-tabs" "")
+; (gtk_accel_path "<Actions>/plug-in/file-print-gutenprint" "")
 ; (gtk_accel_path "<Actions>/layers/layers-mask-add-last-values" "")
 ; (gtk_accel_path "<Actions>/plug-in/file-raw-save" "")
 (gtk_accel_path "<Actions>/image/image-merge-layers" "")
