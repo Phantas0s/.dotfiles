@@ -133,7 +133,7 @@ bindkey -r '^g'
 bindkey -r '^p'
 bindkey -r '^w'
 
-bindkey -s '^g' 'clear\n'
+bindkey -s '^g' ' clear\n'
 bindkey -s '^p' 'fmux\n'
 bindkey -s '^w' 'fwork\n'
 
