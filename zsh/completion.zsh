@@ -93,7 +93,7 @@ zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-d
 # Required for completion to be in good groups (named after the tags)
 zstyle ':completion:*' group-name ''
 
-zstyle ':completion:*:*:-command-:*:*' group-order alias builtins functions commands
+zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions commands
 
 # See ZSHCOMPWID "completion matching control"
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
