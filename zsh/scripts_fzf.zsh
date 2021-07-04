@@ -87,7 +87,7 @@ ftmuxp() {
     fi
 }
 
-# ftmux - propose running tmux session
+# ftmux - help you choose tmux sessions
 ftmux() {
     if [[ ! -n $TMUX ]]; then
         # get the IDs
