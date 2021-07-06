@@ -133,14 +133,10 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 " command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
 
 " Only Linux
-command! -nargs=? DevDocs call system('xdg-open "https://devdocs.io/#q=<args>"')
+command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
 " same but with clojuredocs
-command! -nargs=? ClojureDoc call system('xdg-open "https://clojuredocs.org/search\?q=<args>"')
-autocmd vimrc FileType clojure nnoremap <buffer><leader>D :execute "ClojureDoc " . expand('<cword>')<CR>
 " same but with scaladocs
-command! -nargs=? ScalaDoc call system('xdg-open "https://www.scala-lang.org/api/current/?search=<args>"')
-autocmd vimrc FileType scala nnoremap <buffer><leader>D :execute "ScalaDoc " . expand('<cword>')<CR>
 
 " arrow keys resize windows
 nnoremap <Left> :vertical resize -10<CR>
@@ -188,6 +184,9 @@ xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 " Disable anoying ex mode
 nnoremap Q <Nop>
 
+" Y behave like D
+nnoremap Y y$
+
 " Save files as root
 cnoremap w!! execute ':w suda://%'
 
@@ -195,6 +194,9 @@ cnoremap w!! execute ':w suda://%'
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
 nnoremap <leader>sl :source $VIMCONFIG/sessions/
+
+" Set tmTheme and mm extensions as XML
+autocmd vimrc BufNewFile,BufRead *.tmTheme, *.mm set filetype=xml
 
 " }}}
 
