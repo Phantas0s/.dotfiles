@@ -1,7 +1,7 @@
 " Declare the general config group for autocommand
-augroup php
-  autocmd!
-augroup END
+" augroup php
+"   autocmd!
+" augroup END
 
 " source every plugin configs
 for file in split(glob($XDG_CONFIG_HOME . '/nvim/pluggedconf/php/*.nvimrc'), '\n')
@@ -9,7 +9,7 @@ for file in split(glob($XDG_CONFIG_HOME . '/nvim/pluggedconf/php/*.nvimrc'), '\n
 endfor
 
 " write ctags each time we save files (& for asynchronously)
-autocmd php BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
+" autocmd php BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
 
 " php docs
 let g:pdv_template_dir = $XDG_CONFIG_HOME .'/nvim/plugged/pdv/templates'
