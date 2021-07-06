@@ -8,10 +8,10 @@ rm $XDG_CONFIG_HOME/.tmuxp &>/dev/null
 if [ ! -z "$DOTFILES_CLOUD" ];
 then
     # project relative configuration for neovim
-    ln -sf $DOTFILES_CLOUD/projects.nvimrc $VIMCONFIG/
+    ln -sf "$DOTFILES_CLOUD/projects.nvimrc" "$VIMCONFIG"
 
     # monitor configs with arandr
-    ln -sf $DOTFILES_CLOUD/config_monitors/ $XDG_CONFIG_HOME/
+    ln -sf "$DOTFILES_CLOUD/config_monitors" "$XDG_CONFIG_HOME"
 
     if [ -d "$DOTFILES_CLOUD/openssh" ];
     then
