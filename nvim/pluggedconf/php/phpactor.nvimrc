@@ -1,5 +1,9 @@
+augroup php
+  autocmd!
+augroup END
+
 let g:phpactorOmniError = v:true
-autocmd FileType php setlocal omnifunc=phpactor#Complete
+autocmd php FileType php setlocal omnifunc=phpactor#Complete
 
 " namespace automatic insert
 nnoremap <buffer><leader>u :call phpactor#UseAdd()<cr>
@@ -29,4 +33,3 @@ function! PHPModify(transformer)
     execute "read !phpactor class:transform ".expand('%').' --transform='.a:transformer
     normal! ggdd
 endfunction
-
