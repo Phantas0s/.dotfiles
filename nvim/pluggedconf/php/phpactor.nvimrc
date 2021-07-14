@@ -26,7 +26,8 @@ nnoremap <buffer><leader>rei :call phpactor#ClassInflect()<cr>
 xnoremap <buffer><silent><leader>rem :<C-U>call phpactor#ExtractMethod()<CR>
 nnoremap <buffer><leader>src :call phpactor#FindReferences()<cr>
 
-map <buffer><leader>] :call phpactor#GotoDefinition()<CR>
+map <buffer><leader>] :PhpactorGotoDefinition<CR>
+nnoremap <buffer><leader>ip :PhpactorGotoImplementations<CR>
 
 function! PHPModify(transformer)
     normal! ggdG

@@ -10,8 +10,8 @@ Plug 'henrik/vim-indexed-search'
 
 " general
 
-" Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
-Plug 'machakann/vim-sandwich' 
+Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
+" Plug 'machakann/vim-sandwich' 
 Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-commentary' " keystroke to comment automatically
@@ -23,7 +23,7 @@ Plug 'chaoren/vim-wordmotion' " camel case motion
 Plug 'honza/vim-snippets' " snippets
 Plug 'itchyny/lightline.vim' " Status bar
 " Plug 'svermeulen/vim-yoink' " Register history
-Plug 'bfredl/nvim-miniyank' " Register history
+" Plug 'bfredl/nvim-miniyank' " Register history
 Plug 'stefandtw/quickfix-reflector.vim' " Allow multisearch in current directory / multi replace as well
 Plug 'lambdalisue/suda.vim' " Write file with sudo
 Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
@@ -98,7 +98,7 @@ Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
-Plug '2072/php-indenting-for-vim', {'for': 'php'}
+" Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'} Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion 
 
 " LISP
@@ -139,7 +139,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-scriptease' " Debug vimscript
 
 " Agda
-Plug 'derekelkins/agda-vim'
+" Plug 'derekelkins/agda-vim'
 
 call plug#end()
 " }}}

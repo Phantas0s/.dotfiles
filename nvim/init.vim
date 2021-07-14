@@ -55,7 +55,6 @@ let g:coc_global_extensions = [
             \ 'coc-sql', 
             \ 'coc-db',
             \ 'coc-pyright',
-            \ 'coc-phpactor',
             \ 'coc-metals',
             \]
 
@@ -97,6 +96,10 @@ nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap <silent> gX :execute
             \ "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
+
+" Fix gx for URLs
+nmap <silent> gx yiW:!xdg-open <C-r>" & <CR><CR>
+vmap <silent> gx y:!xdg-open <C-r>" & <CR><CR>
 
 "toggle between absolute -> relative line number
 nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
@@ -307,7 +310,7 @@ set shada=!,'100,<50,s100,h
 " augroup END
 
 " I save too often... Even if Vim never crash. Try to stop that
-autocmd BufWrite * echom "Save only from time to time!"
+" autocmd BufWrite * echom "Save only from time to time!"
 
 " autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
