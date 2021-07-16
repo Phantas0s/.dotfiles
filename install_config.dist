@@ -17,9 +17,13 @@
 
 #private configurations from my personnal cloud
 
-#DOTFILES_CLOUD="$HOME/nextcloud/development/dotfiles_projects/ENV"
+#MEDIA="/run/media/$USER"
+#CLOUD="$HOME/Nextcloud"
+#DOTFILES_CLOUD="$CLOUD/development/dotfiles_projects/ENV"
+
 #wallpaper folder
-# WALLPAPER_PATH="$HOME/nextcloud/wallpaper" 
+
+# WALLPAPER_PATH="$CLOUD/wallpaper" 
 
 # Small i3 status bar (for small screen) or extended
 # I3_STATUS_BAR="small"
