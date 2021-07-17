@@ -41,7 +41,7 @@ function! SetMessageType(entry)
     let a:entry.type = 'M'
 endfunction
 
-let g:neomake_php_enabled_makers = ['phpmd', 'phpcs', 'phpstan', 'php', 'psalm']
+let g:neomake_php_enabled_makers = ['phpmd', 'phpcs', 'phpstan', 'php']
 
 let g:neomake_php_phpcs_maker = {
             \ 'args': ['--report=csv', '--standard=PSR2'],
