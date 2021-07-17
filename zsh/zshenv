@@ -7,7 +7,7 @@
 export TERM='rxvt-256color'
 export DOTFILES="$HOME/.dotfiles"
 
-[ -f $DOTFILES/install_config ] && source $DOTFILES/install_config
+[ -f "$DOTFILES/install_config" ] && source "$DOTFILES/install_config"
 
 # XDG
 export XDG_CONFIG_HOME=$HOME/.config
