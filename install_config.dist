@@ -23,7 +23,7 @@
 
 #wallpaper folder
 
-# WALLPAPER_PATH="$CLOUD/wallpaper" 
+# WALLPAPER_PATH="$CLOUD/wallpapers"
 
 # Small i3 status bar (for small screen) or extended
 # I3_STATUS_BAR="small"
