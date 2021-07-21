@@ -20,7 +20,7 @@ npm update -g
 
 dot_mes_update "composer packages"
 sudo composer self-update
-cgr update
+# cgr update
 
 dot_mes_update "composer packages"
 dot_install_func go update_go_binaries
