@@ -31,6 +31,11 @@
             "ignoredRootPaths": ["~"]
         }
     },
+
+    "php-cs-fixer.rules": "@Symfony,ordered_imports,no_unused_imports",
+    "php-cs-fixer.config": ".php_cs.dist",
+    "php-cs-fixer.allowRisky": true,
+
     "snippets.ultisnips.directories": [
         "UltiSnips",
         "gosnippets/UltiSnips"

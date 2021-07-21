@@ -61,8 +61,8 @@ rm -rf "$VIMCONFIG/lua"
 ln -sf "$DOTFILES/nvim/lua" "$VIMCONFIG"
 
 # snippets
-rm -rf "$VIMCONFIG/ultisnips"
-ln -sf "$DOTFILES/nvim/ultisnips" "$VIMCONFIG"
+rm -rf "$VIMCONFIG/UltiSnips"
+ln -sf "$DOTFILES/nvim/UltiSnips" "$VIMCONFIG"
 
 # :help ftplugin
 ln -sf "$DOTFILES/nvim/ftplugin" "$VIMCONFIG"

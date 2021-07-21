@@ -8,7 +8,9 @@ if m:
 endsnippet
 
 snippet class "Class declaration template with strict mode" b
-<?php declare(strict_types=1);
+<?php 
+
+declare(strict_types=1);
 
 namespace ${1:`!p
 relpath = os.path.relpath(path)
@@ -23,7 +25,9 @@ class ${1:`!p snip.rv=snip.basename`}
 endsnippet
 
 snippet classa "Class declaration template with App/ begin namespace" b
-<?php
+<?php 
+
+declare(strict_types=1);
 
 namespace App\\${1:`!p
 relpath = os.path.relpath(path)
@@ -34,11 +38,14 @@ if m:
 
 class ${1:`!p snip.rv=snip.basename`}
 {
+${0}
 }
 endsnippet
 
 snippet interface "Interface declaration template" b
-<?php
+<?php 
+
+declare(strict_types=1);
 
 namespace ${1:`!p
 abspath = os.path.abspath(path)
@@ -50,6 +57,23 @@ if m:
 /**
  * Interface ${1:`!p snip.rv=snip.basename`}
  */
+interface $1
+{
+	public function ${3:someFunction}();$4
+	}
+}
+endsnippet
+
+snippet interfacea "Interface declaration template in App namespace" b
+<?php
+
+namespace App\\${1:`!p
+abspath = os.path.abspath(path)
+m = re.search(r'[A-Z].+(?=/)', abspath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
+
 interface $1
 {
 	public function ${3:someFunction}();$4

@@ -20,6 +20,7 @@ Plug 'wellle/targets.vim' " add new text object (can delete between comma with d
 Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text
 Plug 'machakann/vim-swap' " swap arguments in parenthesis
 Plug 'chaoren/vim-wordmotion' " camel case motion
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' " snippets
 Plug 'itchyny/lightline.vim' " Status bar
 " Plug 'svermeulen/vim-yoink' " Register history
@@ -93,12 +94,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 " PHP
 " Plug 'joonty/vdebug'
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
-" Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'} Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion 
 
 " LISP

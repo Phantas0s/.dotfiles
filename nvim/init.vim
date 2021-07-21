@@ -46,7 +46,6 @@ nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr>
 
 " Coc extensions
 let g:coc_global_extensions = [
-            \ 'coc-snippets',
             \ 'coc-css', 
             \ 'coc-html',
             \ 'coc-json', 
@@ -54,10 +53,13 @@ let g:coc_global_extensions = [
             \ 'coc-godot', 
             \ 'coc-sql', 
             \ 'coc-db',
+            \ 'coc-phpactor',
+            \ 'coc-php-cs-fixer',
             \ 'coc-pyright',
             \ 'coc-metals',
             \]
 
+" \ 'coc-snippets',
 " \ 'coc-markmap',
 " \ 'coc-sh',
 

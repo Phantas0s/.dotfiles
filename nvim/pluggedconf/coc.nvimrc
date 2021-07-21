@@ -6,7 +6,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-imap <C-s> <Plug>(coc-snippets-expand)
+" imap <C-s> <Plug>(coc-snippets-expand)
 
 function! s:check_back_space() abort
   let col = col('.') - 1
