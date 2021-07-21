@@ -190,7 +190,7 @@ endfunction
 
 " create a dedicated file and prepare for writing it with markdown.
 function general#MakeJournalEntry()
-    let fname = $JRNL . '/' . strftime('%d_%m_%Y.md')
+    let fname = $JRNL . '/' . strftime('%Y_%m_%d.md')
     execute 'edit ' . fname
     if filereadable(fname) ==? v:false
         execute 'normal I# ' . strftime('%A, the %d of %B %Y')
