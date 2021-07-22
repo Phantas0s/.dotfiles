@@ -61,6 +61,9 @@ Plug 'amiorin/vim-project' | Plug 'mhinz/vim-startify' " vim project for one spe
 " compiler
 Plug 'neomake/neomake'
 
+" debugger
+Plug 'puremourning/vimspector'
+
 " git
 Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' " wrapper for git and display git diff in the left gutter
 Plug 'junegunn/gv.vim' " Display commits for project / file

@@ -1,4 +1,5 @@
 # global gitignore
+
 .php_cs.cache
 .ignore
 dumps/
@@ -25,3 +26,6 @@ report-golang-analysis/
 
 # Clojure
 .clj-kondo
+
+# PHP
+phpunit.xml.dist

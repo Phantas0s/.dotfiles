@@ -20,6 +20,7 @@
 #export MEDIA="/run/media/$USER"
 #export CLOUD="$HOME/Nextcloud"
 #export DOTFILES_CLOUD="$CLOUD/development/dotfiles_projects/ENV"
+#export JRNL="$CLOUD/journal"
 
 #wallpaper folder
 
