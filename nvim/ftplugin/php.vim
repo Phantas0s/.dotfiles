@@ -1,8 +1,3 @@
-" Declare the general config group for autocommand
-" augroup php
-"   autocmd!
-" augroup END
-
 " source every plugin configs
 for file in split(glob($XDG_CONFIG_HOME . '/nvim/pluggedconf/php/*.nvimrc'), '\n')
     exe 'source' file

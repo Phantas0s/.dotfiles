@@ -18,7 +18,8 @@ nnoremap <buffer><leader>] :PhpactorGotoDefinition<CR>
 nnoremap <buffer><leader>ric :call PHPModify("implement_contracts")<cr>
 nnoremap <buffer><leader>rap :call PHPModify("add_missing_properties")<cr>
 
-nnoremap <buffer><leader>rca :PhpactorGenerateAccessor
+nnoremap <buffer><leader>ruc :PhpactorImportClass<cr>
+nnoremap <buffer><leader>rca :PhpactorGenerateAccessor<cr>
 
 " Fill constructor
 nnoremap <buffer><leader>fc :call PHPModify("complete_constructor")<cr>
@@ -28,6 +29,8 @@ nnoremap <buffer><leader>rei :call phpactor#ClassInflect()<cr>
 
 " Extract method
 xnoremap <buffer><silent><leader>rem :<C-U>call phpactor#ExtractMethod()<CR>
+"
+autocmd php BufWritePost *.php silent! PhpactorImportMissingClasses
 
 function! PHPModify(transformer)
     normal! ggdG

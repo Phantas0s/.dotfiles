@@ -21,22 +21,33 @@ if [ -f "$HOME/.ssh/github" ]; then
     if [ ! -d "$HOME/workspace/ottosocial" ]; then
         cd "$HOME/workspace" || exit
         git clone git@github.com:Phantas0s/ottosocial.git
-        go get ./ottosocial
-        go install ./ottosocial
+        cd ottosocial || exit
+        go build
+        mv ottosocial "$GOBIN"
     fi
 
     if [ ! -d "$HOME/workspace/devdash" ]; then
         cd "$HOME/workspace" || exit
         git clone git@github.com:Phantas0s/devdash.git
-        go get ./devdash
-        go install ./devdash
+        cd devdash || exit
+        go build
+        mv devdash "$GOBIN"
+    fi
+
+    if [ ! -d "$HOME/workspace/gocket" ]; then
+        cd "$HOME/workspace" || exit
+        git clone git@github.com:Phantas0s/gocket.git
+        cd gocket || exit
+        go build
+        mv gocket "$GOBIN"
     fi
 
     if [ ! -d "$GOPATH/src/github.com/Phantas0s/testomatic" ]; then
         cd "$GOPATH/src/github.com/Phantas0s" || exit
         git clone git@github.com:Phantas0s/testomatic.git
-        go get ./testomatic
-        go install ./testomatic
+        cd testomatic || exit
+        go build
+        mv testomatic "$GOBIN"
     fi
 
     if [ ! -d "$HOME/workspace/playground" ]; then
