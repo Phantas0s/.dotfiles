@@ -92,6 +92,7 @@ source $DOTFILES/zsh/plugins/vim-mode
 # +------------+
 
 source $DOTFILES/zsh/completion.zsh
+autoload $DOTFILES/zsh/plugins/kubectl-completion/zsh-kubectl-completion
 
 # +-----+
 # | Git |
