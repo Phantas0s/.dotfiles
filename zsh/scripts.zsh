@@ -626,3 +626,8 @@ tiny() {
     local URL=${1:?}
     curl -s "http://tinyurl.com/api-create.php?url=$1"
 }
+
+serve() {
+    local -r PORT=${1:-8888}
+    python2 -m SimpleHTTPServer "$PORT"
+}

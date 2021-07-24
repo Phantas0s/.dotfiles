@@ -388,6 +388,10 @@ Calculate a mathematical operation. For example: `calcul "2 * 3"`.
 
 Use tinyurl to shorten the `<url>`.
 
+* `serve <port=8888>`
+
+Create a server using Python with specific port
+
 ## Fun
 
 ### Term displays
