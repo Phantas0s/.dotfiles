@@ -29,3 +29,6 @@ report-golang-analysis/
 
 # PHP
 phpunit.xml.dist
+
+# Vim
+.vimspector.json

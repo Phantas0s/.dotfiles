@@ -95,7 +95,7 @@ Plug 'ron89/thesaurus_query.vim' " Thesaurus
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " PHP
-" Plug 'joonty/vdebug'
+Plug 'joonty/vdebug'
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig

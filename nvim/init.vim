@@ -53,6 +53,7 @@ let g:coc_global_extensions = [
             \ 'coc-godot', 
             \ 'coc-sql', 
             \ 'coc-db',
+            \ 'coc-snippets',
             \ 'coc-phpactor',
             \ 'coc-php-cs-fixer',
             \ 'coc-pyright',
