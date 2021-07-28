@@ -9,3 +9,10 @@ nmap <f7> <Plug>VimpectorRestart
 nmap <f10> <Plug>VimspectorToggleBreakpoint
 nmap <f11> <Plug>VimspectorBalloonEval
 nmap <f12> :VimspectorReset
+
+let g:vimspector_sign_priority = {
+  \    'vimspectorBP':         999,
+  \    'vimspectorBPCond':     999,
+  \    'vimspectorBPDisabled': 999,
+  \    'vimspectorPC':         999,
+  \ }
