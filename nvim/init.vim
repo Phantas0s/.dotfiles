@@ -113,9 +113,10 @@ nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap tl :tablast<CR>
 nnoremap tn :tabnew<CR>
+nnoremap tc :tabclose<CR>
 
 " move tab to first position
-nnoremap tF :tabm 0<CR>
+nnoremap tH :tabm 0<CR>
 nnoremap tL :tabm<CR>
 
 " windows navigation

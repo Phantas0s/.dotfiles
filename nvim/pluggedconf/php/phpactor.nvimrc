@@ -22,7 +22,7 @@ nnoremap <buffer><leader>ruc :PhpactorImportClass<cr>
 nnoremap <buffer><leader>rca :PhpactorGenerateAccessor<cr>
 
 " Fill constructor
-nnoremap <buffer><leader>fc :call PHPModify("complete_constructor")<cr>
+nnoremap <buffer><leader>rcc :call PHPModify("complete_constructor")<cr>
 
 " Extract interface
 nnoremap <buffer><leader>rei :call phpactor#ClassInflect()<cr>

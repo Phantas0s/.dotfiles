@@ -7,8 +7,9 @@ nmap <f5> <Plug>VimspectorContinue " Start debugging or continue
 nmap <f6> <Plug>VimspectorStop
 nmap <f7> <Plug>VimpectorRestart
 nmap <f10> <Plug>VimspectorToggleBreakpoint
-nmap <f11> <Plug>VimspectorBalloonEval
-nmap <f12> :VimspectorReset
+" nmap <f11> <Plug>VimspectorBalloonEval
+nmap <f11> :call vimspector#ClearBreakpoints()<cr>
+nmap <f12> :VimspectorReset<cr>
 
 let g:vimspector_sign_priority = {
   \    'vimspectorBP':         999,
