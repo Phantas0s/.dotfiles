@@ -3,7 +3,6 @@
 mkdir -p $GOPATH/bin
 
 binaries=(
-    github.com/derekparker/delve/cmd/dlv
     github.com/kisielk/errcheck
     github.com/davidrjenni/reftools/cmd/fillstruct
     github.com/davidrjenni/reftools/cmd/fillswitch
