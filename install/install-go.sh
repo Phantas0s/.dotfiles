@@ -3,18 +3,15 @@
 mkdir -p $GOPATH/bin
 
 binaries=(
-    github.com/derekparker/delve/cmd/dlv
     github.com/kisielk/errcheck
     github.com/davidrjenni/reftools/cmd/fillstruct
     github.com/davidrjenni/reftools/cmd/fillswitch
     github.com/nsf/gocode
     github.com/jgautheron/goconst/cmd/goconst
     github.com/rogpeppe/godef
-    github.com/godoctor/godoctor
     github.com/zmb3/gogetdoc
     github.com/motemen/go-iferr/cmd/goiferr
     github.com/ChimeraCoder/gojson/gojson # cat <path_to_yaml> | gojson -fmt=yaml -name=hello
-    github.com/golangci/golangci-lint/cmd/golangci-lint
     golang.org/x/lint/golint
     github.com/fatih/gomodifytags
     github.com/securego/gosec/cmd/gosec
