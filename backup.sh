@@ -43,14 +43,14 @@ backup() {
         mkdir -p $dest
 
         if [[ "$dry_run" != true ]]; then
-            rsync -arvz --delete $src/ $dest 2> "$HOME/Documents/backup_log"
+            rsync -avz --delete $src/ $dest 2>> "/tmp/backup_log"
         else
-            rsync -arvz --delete --dry-run $src/ $dest
+            rsync -avz --delete --dry-run $src/ $dest
         fi
     done
 
     echo "ERRORS:\n\n"
-    cat "$HOME/Documents/backup_log"
+    cat "/tmp/backup_log"
 }
 
 backup
