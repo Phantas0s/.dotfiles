@@ -51,39 +51,24 @@ let g:neomake_php_phpcs_maker = {
             \ 'postprocess': function('SetWarningType'),
             \ }
 
-let g:neomake_php_phpstan_maker = {
-            \ 'args': ['analyse', '--error-format', 'raw', '--no-progress', '--level', '7'],
-            \ 'errorformat': '%W%f:%l:%m',
-            \ 'postprocess': function('SetWarningType'),
-            \ }
+" let g:neomake_php_phpstan_maker = {
+"             \ 'args': ['analyse', '--error-format', 'raw', '--no-progress', '--level', '7'],
+"             \ 'errorformat': '%W%f:%l:%m',
+"             \ 'postprocess': function('SetWarningType'),
+"             \ }
+" let g:neomake_php_phpmd_maker = {
+"             \ 'args': ['%:p', 'text', 'cleancode,codesize,design,unusedcode,naming'],
+"             \ 'errorformat': '%W%f:%l%\s%\s%#%m',
+"             \ 'postprocess': function('SetMessageType'),
+"             \ }
 
-let g:neomake_php_php_maker = {
-            \ 'args': ['-l', '-d', 'display_errors=1', '-d', 'log_errors=0',
-            \      '-d', 'xdebug.cli_color=0'],
-            \ 'errorformat':
-            \ '%-GNo syntax errors detected in%.%#,'.
-            \ '%EParse error: %#syntax error\, %m in %f on line %l,'.
-            \ '%EParse error: %m in %f on line %l,'.
-            \ '%EFatal error: %m in %f on line %l,'.
-            \ '%-G\s%#,'.
-            \ '%-GErrors parsing %.%#',
-            \ 'output_stream': 'stdout',
-            \ 'postprocess': function('SetErrorType'),
-            \ }
-
-let g:neomake_php_phpmd_maker = {
-            \ 'args': ['%:p', 'text', 'cleancode,codesize,design,unusedcode,naming'],
-            \ 'errorformat': '%W%f:%l%\s%\s%#%m',
-            \ 'postprocess': function('SetMessageType'),
-            \ }
-
-let g:neomake_php_psalm_maker = {
-        \ 'args': [
-            \ '--output-format=pylint'
-        \ ],
-        \ 'errorformat': '%A%f:%l:%\s[%t%n]%\s%m',
-        \ 'postprocess': function('SetWarningType'),
-        \ }
+" let g:neomake_php_psalm_maker = {
+"         \ 'args': [
+"             \ '--output-format=pylint'
+"         \ ],
+"         \ 'errorformat': '%A%f:%l:%\s[%t%n]%\s%m',
+"         \ 'postprocess': function('SetWarningType'),
+"         \ }
 
 " +------------+
 " | JavaScript |
