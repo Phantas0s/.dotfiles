@@ -202,7 +202,7 @@ imgtowebp() {
     for file in "$@"
     do
         local filename=${file%\.*}
-        cwebp -q 100 $file -o `basename ${filename}`.webp
+        cwebp -q 100 $file -o $(basename ${filename}).webp
     done
 }
 
