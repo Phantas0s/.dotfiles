@@ -38,6 +38,9 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 
 " navigation
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
+
 Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
 " replace f F t T - don't work well with dot though :'(
 Plug 'yangmillstheory/vim-snipe'
