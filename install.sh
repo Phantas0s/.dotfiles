@@ -82,6 +82,7 @@ dot_is_installed digikam && dot_install digikam
 dot_is_installed newsboat && dot_install newsboat
 dot_is_installed taskell && dot_install taskell
 dot_is_installed devdash && dot_install devdash
+dot_is_installed php && dot_install php
 
 dot_install gtk
 dot_install default-app
