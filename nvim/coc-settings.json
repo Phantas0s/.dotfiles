@@ -42,7 +42,7 @@
         "UltiSnips",
         "gosnippets/UltiSnips"
     ],
-    "snippets.userSnippetsDirectory": "~/.config/nvim/ultisnips",
+    "snippets.userSnippetsDirectory": "~/.config/nvim/UltiSnips",
     "suggest.snippetIndicator": " ►",
     "diagnostic.enable": false,
     "coc.preferences.formatOnSaveFiletypes": ["go", "clojure", "php"],
