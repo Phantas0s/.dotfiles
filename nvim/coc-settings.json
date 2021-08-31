@@ -47,6 +47,6 @@
     "diagnostic.enable": false,
     "coc.preferences.formatOnSaveFiletypes": ["go", "clojure", "php"],
     "coc.preferences.hoverTarget": "float",
-
+    "tree.key.close": "",
     "html.format.enable": true
 }

@@ -138,8 +138,15 @@ bindkey -s '^g' ' clear\n'
 bindkey -s '^p' 'fmux\n'
 bindkey -s '^w' 'fwork\n'
 
+# +------+
+# | Node |
+# +------+
+
+source /usr/share/nvm/init-nvm.sh
+
 # +---------------------+
 # | SYNTAX HIGHLIGHTING |
 # +---------------------+
 
 source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

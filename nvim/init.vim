@@ -307,19 +307,16 @@ set diffopt+=vertical
 
 set shada=!,'100,<50,s100,h
 
-" augroup numbertoggle
-"   autocmd!
-"   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-"   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-" augroup END
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
-" I save too often... Even if Vim never crash. Try to stop that
-" autocmd BufWrite * echom "Save only from time to time!"
+autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" if executable('rg')
-"     set grepprg=rg\ --vimgrep
-" endif
+if executable('rg')
+    set grepprg=rg\ --vimgrep
+endif
 
 " }}}
