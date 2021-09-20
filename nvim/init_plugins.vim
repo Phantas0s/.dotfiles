@@ -21,8 +21,6 @@ Plug 'chaoren/vim-wordmotion' " camel case motion
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' " snippets
 Plug 'itchyny/lightline.vim' " Status bar
-Plug 'stefandtw/quickfix-reflector.vim' " Allow multisearch in current directory / multi replace as well
-Plug 'lambdalisue/suda.vim' " Write file with sudo
 Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
 Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
 Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
