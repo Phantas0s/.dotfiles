@@ -1,0 +1,7 @@
+snippet safe "safe bash options" b
+# e - script stops on error (return != 0)
+# u - error if undefined variable
+# o pipefail - script fails if one of piped command fails
+# x - output each line (debug)
+set -euo pipefail
+endsnippet
