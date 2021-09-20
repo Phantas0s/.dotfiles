@@ -91,10 +91,10 @@ TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=3957
-Expansion=0,3765,3893,3896,3901,3900,3879,3880,3844,3798,1,3651,4014,977,2341,2,3979,3981,3980,3957,3956,10,3955,9,3954,8,4042,3953,4041,3952,4040,3951,4039,3950,4038,4037,3949,6,4036,4035,3948,5,4,3947,3,4031,3972,3971,3966,3945,4021,11,-2
+CurrentIndex=3954
+Expansion=0,3765,3893,3896,3901,3900,3879,3880,3844,3798,1,3651,4014,977,2341,2,3979,3981,3980,3954,8,4042,3953,4041,3952,4040,3951,4039,3950,4038,4037,3949,6,4036,4035,3948,5,4,3947,3,4031,3972,3971,3966,3945,4021,11,-2
 RestoreChecked=false
-Selection=3957
+Selection=3954
 SortColumn=0
 SortOrder=1
 
@@ -160,10 +160,12 @@ Sync Digikam to Baloo=false
 
 [Batch Queue Manager Settings]
 BqmBottomSplitter=AAAA/wAAAAEAAAACAAAAhQAAAIUB/////wEAAAABAA==
-BqmTopSplitter=AAAA/wAAAAEAAAADAAAAhQAAAHYAAACLAf////8BAAAAAQA=
-BqmVerticalSplitter=AAAA/wAAAAEAAAACAAAAigAAAH4B/////wEAAAACAA==
+BqmTopSplitter=AAAA/wAAAAEAAAADAAAAhQAAAHgAAACLAf////8BAAAAAQA=
+BqmVerticalSplitter=AAAA/wAAAAEAAAACAAAAjAAAAIEB/////wEAAAACAA==
 HDMI-1 LVDS-1 XPosition 1366x768=0
+HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=0
+HDMI-1 LVDS-1 YPosition 1920x1200=0
 HDMI1 LVDS1 XPosition=0
 HDMI1 LVDS1 YPosition=0
 HDMI1 XPosition=0
@@ -891,7 +893,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwKdnZ0=
+Database Encrypted Password=AwJlZWU=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
@@ -919,7 +921,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=6
+ActiveTab=1
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1169,7 +1171,7 @@ Selection=
 Sort Order=0
 SortColumn=0
 SortOrder=1
-SplitterState=AAAA/wAAAAEAAAACAAABdgAAAGMB/////wEAAAACAA==
+SplitterState=AAAA/wAAAAEAAAACAAABeQAAAGUB/////wEAAAACAA==
 
 [GPS Search Sidebar][GPSSearch Map Widget]
 Backend=marble
@@ -1246,7 +1248,7 @@ Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQnAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1308,7 +1310,9 @@ FullScreen Hide StatusBar=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
 HDMI-1 LVDS-1 XPosition 1366x768=0
+HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=0
+HDMI-1 LVDS-1 YPosition 1920x1200=0
 HDMI1 LVDS1 XPosition=0
 HDMI1 LVDS1 YPosition=0
 HDMI1 XPosition=0
@@ -1570,7 +1574,9 @@ FullScreen Hide SideBars=false
 FullScreen Hide StatusBar=false
 FullScreen Hide ToolBars=false
 HDMI-1 LVDS-1 XPosition 1366x768=0
+HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=0
+HDMI-1 LVDS-1 YPosition 1920x1200=0
 HDMI1 LVDS1 Height 1200=1133
 HDMI1 LVDS1 Width 1920=1920
 HDMI1 LVDS1 XPosition=0
@@ -1752,9 +1758,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=3957
+InitialAlbumID=3954
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABQMAAAE7Af////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAATzAAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPMAAABXAP///wAABPMAAAQrAAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT1AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPUAAABXAP///wAABPUAAANhAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
