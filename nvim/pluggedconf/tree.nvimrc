@@ -1,3 +1,7 @@
+lua<<EOF
+require'nvim-tree'.setup {}
+EOF
+
 nnoremap <leader>n :NvimTreeToggle<cr>
 
 " Put cursor on file open in current buffer
