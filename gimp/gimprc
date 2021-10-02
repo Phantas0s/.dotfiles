@@ -7,12 +7,12 @@
 # Preferences dialog.
 
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable")
-(monitor-xresolution 94)
-(monitor-yresolution 94)
+(monitor-xresolution 125)
+(monitor-yresolution 125)
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (color-profile-policy keep)
-(layer-new-name "bubble right")
+(layer-new-name "main")
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
@@ -24,14 +24,14 @@
     (antialias yes)
     (feather no)
     (feather-radius 10)
-    (method line)
-    (width 3)
+    (method paint-method)
+    (width 10)
     (unit pixels)
-    (cap-style butt)
+    (cap-style round)
     (join-style miter)
     (miter-limit 10)
     (dash-offset 0)
-    (dash-info 0)
+    (dash-info 24 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5)
     (emulate-brush-dynamics yes))
 
 

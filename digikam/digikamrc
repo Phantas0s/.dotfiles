@@ -91,10 +91,10 @@ TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=3954
-Expansion=0,3765,3893,3896,3901,3900,3879,3880,3844,3798,1,3651,4014,977,2341,2,3979,3981,3980,3954,8,4042,3953,4041,3952,4040,3951,4039,3950,4038,4037,3949,6,4036,4035,3948,5,4,3947,3,4031,3972,3971,3966,3945,4021,11,-2
+CurrentIndex=3949
+Expansion=0,3765,3893,3896,3901,3900,3879,3880,3844,3798,1,3651,4014,977,2,3979,3981,3980,3949,6,4036,4035,3948,5,4,3947,3,4031,3972,3971,3966,3945,4021,11,-2
 RestoreChecked=false
-Selection=3954
+Selection=3949
 SortColumn=0
 SortOrder=1
 
@@ -893,7 +893,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwJlZWU=
+Database Encrypted Password=AwIUFBQ=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
@@ -921,7 +921,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=1
+ActiveTab=6
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1758,9 +1758,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=3954
+InitialAlbumID=3949
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABQMAAAE7Af////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT1AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPUAAABXAP///wAABPUAAANhAAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT1AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPUAAABXAP///wAABPUAAAQnAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
