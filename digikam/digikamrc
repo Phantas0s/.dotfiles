@@ -91,10 +91,10 @@ TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=3949
-Expansion=0,3765,3893,3896,3901,3900,3879,3880,3844,3798,1,3651,4014,977,2,3979,3981,3980,3949,6,4036,4035,3948,5,4,3947,3,4031,3972,3971,3966,3945,4021,11,-2
+CurrentIndex=24
+Expansion=0,4014,3980,3979,3981,3948,3947,3896,3893,3880,3879,3901,3900,1,3765,3726,3727,3844,2,24,23,22
 RestoreChecked=false
-Selection=3949
+Selection=24
 SortColumn=0
 SortOrder=1
 
@@ -178,7 +178,6 @@ LVDS-1 HDMI-1 XPosition 1920x1200=0
 LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
-RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
@@ -219,6 +218,104 @@ Recently Used Tags=18
 
 [DMetadata Settings]
 unifyReadWrite=true
+
+[DMetadata Settings][readCaptionNamespaces][#0000]
+alternativeName=
+convertRatio=
+index=0
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.dc.description
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=2
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCaptionNamespaces][#0001]
+alternativeName=
+convertRatio=
+index=1
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.exif.UserComment
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCaptionNamespaces][#0002]
+alternativeName=
+convertRatio=
+index=2
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.tiff.ImageDescription
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCaptionNamespaces][#0003]
+alternativeName=
+convertRatio=
+index=3
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.acdsee.notes
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=3
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCaptionNamespaces][#0004]
+alternativeName=
+convertRatio=
+index=4
+isDefault=true
+isDisabled=false
+namespaceName=JPEG/TIFF Comments
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=4
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCaptionNamespaces][#0005]
+alternativeName=Exif.Photo.UserComment
+convertRatio=
+index=5
+isDefault=true
+isDisabled=false
+namespaceName=Exif.Image.ImageDescription
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][readCaptionNamespaces][#0006]
+alternativeName=
+convertRatio=
+index=6
+isDefault=true
+isDisabled=false
+namespaceName=Iptc.Application2.Caption
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=1
+tagPaths=1
 
 [DMetadata Settings][readColor labelNamespaces][#0000]
 alternativeName=
@@ -554,6 +651,104 @@ secondNameOpts=0
 separator=;
 specialOpts=0
 subspace=0
+tagPaths=1
+
+[DMetadata Settings][writeCaptionNamespaces][#0000]
+alternativeName=
+convertRatio=
+index=0
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.dc.description
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=2
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCaptionNamespaces][#0001]
+alternativeName=
+convertRatio=
+index=1
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.exif.UserComment
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCaptionNamespaces][#0002]
+alternativeName=
+convertRatio=
+index=2
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.tiff.ImageDescription
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCaptionNamespaces][#0003]
+alternativeName=
+convertRatio=
+index=3
+isDefault=true
+isDisabled=false
+namespaceName=Xmp.acdsee.notes
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=3
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCaptionNamespaces][#0004]
+alternativeName=
+convertRatio=
+index=4
+isDefault=true
+isDisabled=false
+namespaceName=JPEG/TIFF Comments
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=4
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCaptionNamespaces][#0005]
+alternativeName=Exif.Photo.UserComment
+convertRatio=
+index=5
+isDefault=true
+isDisabled=false
+namespaceName=Exif.Image.ImageDescription
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][writeCaptionNamespaces][#0006]
+alternativeName=
+convertRatio=
+index=6
+isDefault=true
+isDisabled=false
+namespaceName=Iptc.Application2.Caption
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=1
 tagPaths=1
 
 [DMetadata Settings][writeColor labelNamespaces][#0000]
@@ -894,17 +1089,17 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwL09PQ=
+Database Encrypted Password=AwK5ubk=
 Database Hostname=
-Database Name=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
-Database Name Face=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
-Database Name Similarity=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
-Database Name Thumbnails=/run/media/hypnos/Photos/~PERSO - PHOTO/db/digikam/
+Database Name=/run/media/hypnos/Photos/db/digikam/
+Database Name Face=/run/media/hypnos/Photos/db/digikam/
+Database Name Similarity=/run/media/hypnos/Photos/db/digikam/
+Database Name Thumbnails=/run/media/hypnos/Photos/db/digikam/
 Database Port=-1
 Database Type=QSQLITE
 Database Username=
 Internal Database Server=false
-Internal Database Server Mysql Admin Command=mysqladmin
+Internal Database Server Mysql Admin Command=
 Internal Database Server Mysql Init Command=
 Internal Database Server Mysql Server Command=
 Internal Database Server Path=
@@ -922,7 +1117,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=6
+ActiveTab=1
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1081,6 +1276,10 @@ org.kde.digikam.plugin.generic.VKontakte=true
 org.kde.digikam.plugin.generic.VideoSlideShow=true
 org.kde.digikam.plugin.generic.Wallpaper=true
 org.kde.digikam.plugin.generic.YandexFotki=true
+org.kde.digikam.plugin.generic.iNaturalist=true
+
+[ExifToolFormatsSearchBar Search Text Tool]
+CaseSensitive=0
 
 [ExifToolSearchBar Search Text Tool]
 CaseSensitive=0
@@ -1234,7 +1433,7 @@ Height 768=723
 Icon Theme=breeze-dark
 LVDS-1 HDMI-1 Height 1080=1013
 LVDS-1 HDMI-1 Height 1200=1133
-LVDS-1 HDMI-1 Height 1920x1200=1155
+LVDS-1 HDMI-1 Height 1920x1200=1133
 LVDS-1 HDMI-1 Height 768=723
 LVDS-1 HDMI-1 Width 1366=1366
 LVDS-1 HDMI-1 Width 1920=1920
@@ -1242,15 +1441,15 @@ LVDS-1 HDMI-1 Width 1920x1200=1920
 LVDS-1 HDMI-1 XPosition=0
 LVDS-1 HDMI-1 XPosition 1920x1200=1366
 LVDS-1 HDMI-1 YPosition=44
-LVDS-1 HDMI-1 YPosition 1920x1200=22
-RestorePositionForNextInstance=false
+LVDS-1 HDMI-1 YPosition 1920x1200=44
+MenuBar=Disabled
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQnAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQ9AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1345,7 +1544,6 @@ PGFLossLess=true
 PNGCompression=9
 PreviewMode=128
 RawImportToolIid=org.kde.digikam.plugin.rawimport.Native
-RestorePositionForNextInstance=false
 RestoreToolSettings=true
 Show Thumbbar=false
 ShowImageSettingsDialog=true
@@ -1594,7 +1792,6 @@ LVDS-1 HDMI-1 YPosition=0
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
 Navigate By Pair=false
-RestorePositionForNextInstance=false
 Show Thumbbar=true
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
@@ -1762,7 +1959,7 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=3949
+InitialAlbumID=24
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABQMAAAE7Af////8AAAAAAQE=
 ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT1AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPUAAABXAP///wAABPUAAAQnAAAABAAAAAQAAAAIAAAACPwAAAAA
 
@@ -1779,6 +1976,7 @@ Clear Metadata If Rescan=false
 Custom Sidecar Extensions=
 EXIF Rotate=true
 EXIF Set Orientation=true
+ExifTool Path=
 Metadata Writing Mode=1
 Rescan File If Modified=false
 Rotate By Internal Flag=true
@@ -2019,7 +2217,7 @@ CaseSensitive=0
 [Setup Dialog]
 LVDS-1 HDMI-1 Height 1080=600
 LVDS-1 HDMI-1 Width 1920=800
-Setup Page=2
+Setup Page=1
 Template Tab=0
 
 [Sketch Search View]
@@ -2040,7 +2238,7 @@ HDMI1 Width 1920=1
 FaceTagsFilter Expanded=true
 LabelsFilter Expanded=true
 Matching Condition=0
-Search Text Filter Fields=0
+Search Text Filter Fields=127
 Show Untagged=false
 Show Without Face=false
 TagsFilter Expanded=true
