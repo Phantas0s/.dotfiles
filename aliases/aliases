@@ -157,6 +157,7 @@ alias nvimn='nvim --noplugin -u NONE'             # launch nvim without any plug
 # +-----+
 
 alias gs='git status'
+alias gss='git status -s'
 alias ga='git add'
 alias gp='git push'
 alias gpo='git push origin'
@@ -253,4 +254,3 @@ alias cljrepl='clojure -Sdeps "{:deps {com.bhauman/rebel-readline {:mvn/version 
 
 alias ddg="duckduckgo"
 alias wiki="wikipedia"
-

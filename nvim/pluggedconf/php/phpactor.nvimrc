@@ -22,7 +22,7 @@ nnoremap <buffer><leader>ruc :PhpactorImportClass<cr>
 nnoremap <buffer><leader>rca :PhpactorGenerateAccessor<cr>
 
 " Fill constructor
-nnoremap <buffer><leader>rcc :call PHPModify("complete_constructor")<cr>
+nnoremap <buffer><silent><leader>rcc :call PHPModify("complete_constructor")<cr>
 
 " Extract interface
 nnoremap <buffer><leader>rei :call phpactor#ClassInflect()<cr>
@@ -30,7 +30,7 @@ nnoremap <buffer><leader>rei :call phpactor#ClassInflect()<cr>
 " Extract method
 xnoremap <buffer><silent><leader>rem :<C-U>call phpactor#ExtractMethod()<CR>
 "
-autocmd php BufWritePost *.php silent! PhpactorImportMissingClasses
+" autocmd php BufWritePost *.php silent! PhpactorImportMissingClasses
 
 function! PHPModify(transformer)
     normal! ggdG
