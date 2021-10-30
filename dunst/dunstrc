@@ -31,27 +31,21 @@
 
     dmenu = /usr/bin/dmenu -p dunst:
     browser = /usr/bin/firefox -new-tab
- 
+
 [frame]
     width = 1
     color = "#444444"
- 
-[shortcuts]
-    close = ctrl+x
-    close_all = ctrl+shift+x
-    history = ctrl+grave
-    context = ctrl+shift+period
- 
+
 [urgency_low]
     background = "#303030"
     foreground = "#87AF87"
     timeout = 10
- 
+
 [urgency_normal]
     background = "#303030"
     foreground = "#C6C6C6"
     timeout = 15 
- 
+
 [urgency_critical]
     background = "#d75f5f"
     foreground = "#303030"
@@ -79,34 +73,3 @@
 #[espeak]
     summary = "*"
     script = dunst_espeak.sh
- 
-#[script-test]
-#    summary = "*script*"
-#    script = dunst_test.sh
- 
-#[ignore]
-## This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
- 
-#[signed_on]
-#    appname = Pidgin
-#    summary = "*signed on*"
-#    urgency = low
-#
-#[signed_off]
-#    appname = Pidgin
-#    summary = *signed off*
-#    urgency = low
-#
-#[says]
-#    appname = Pidgin
-#    summary = *says*
-#    urgency = critical
-#
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
-

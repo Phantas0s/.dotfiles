@@ -74,6 +74,11 @@ exec --no-startup-id redshift &
 # launch dunst
 exec --no-startup-id dunst
 
+# dunst keyboard shortcuts
+bindsym Ctrl+Shift+x exec dunstctl close-all
+bindsym Ctrl+x exec dunstctl close
+bindsym Ctrl+BackSpace exec dunstctl history-pop
+
 # launch brave
 exec --no-startup-id brave
 
