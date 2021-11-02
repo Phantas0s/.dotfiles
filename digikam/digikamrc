@@ -17,7 +17,7 @@ Album Collections=Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Trav
 Album Monitoring=true
 Album Sort Role=0
 All Groups Open=false
-Default Icon Size=142
+Default Icon Size=171
 Default Tree Face Size=48
 Default Tree Icon Size=22
 Icon Show Aspect Ratio=false
@@ -91,10 +91,10 @@ TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=24
-Expansion=0,4014,3980,3979,3981,3948,3947,3896,3893,3880,3879,3901,3900,1,3765,3726,3727,3844,2,24,23,22
+CurrentIndex=2394
+Expansion=0,4014,3980,3979,3981,3948,3947,3896,3893,3880,3879,3901,3900,1,3765,3726,3727,3844,35,946,2392,2393,2394,33,34,2,-2
 RestoreChecked=false
-Selection=24
+Selection=2394
 SortColumn=0
 SortOrder=1
 
@@ -214,7 +214,7 @@ RenderingIntent=0
 WorkProfileFile[$e]=/usr/share/digikam/profiles/srgb-d65.icm
 
 [CoreDB Settings]
-Recently Used Tags=18
+Recently Used Tags=36,18
 
 [DMetadata Settings]
 unifyReadWrite=true
@@ -1089,7 +1089,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwK5ubk=
+Database Encrypted Password=AwLj4+M=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1117,7 +1117,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=1
+ActiveTab=4
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1128,15 +1128,15 @@ VideoProperties Expanded=true
 
 [Digikam Right Sidebar][Captions Tags Properties Tab]
 Contact Expanded=true
-ItemDescEdit Tab=0
+ItemDescEdit Tab=1
 ItemDescEditTab CaptionsLang=x-default
 ItemDescEditTab SearchBarCaseSensitive=0
-ItemDescEditTab TagCheckViewCurrentIndex=
+ItemDescEditTab TagCheckViewCurrentIndex=36
 ItemDescEditTab TagCheckViewExpansion=0
 ItemDescEditTab TagCheckViewRestoreChecked=false
-ItemDescEditTab TagCheckViewSelection=
+ItemDescEditTab TagCheckViewSelection=36
 ItemDescEditTab TagCheckViewSortColumn=0
-ItemDescEditTab TagCheckViewSortOrder=0
+ItemDescEditTab TagCheckViewSortOrder=1
 ItemDescEditTab TagCheckViewToggle Auto Tags=0
 ItemDescEditTab TitleLang=x-default
 Location Expanded=true
@@ -1402,7 +1402,7 @@ CaseSensitive=0
 [General Settings]
 Application Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Application Style=fusion
-Apply Sidebar Changes Directly=false
+Apply Sidebar Changes Directly=true
 Clean core DB At Start=false
 Draw Frames To Grouped Items=true
 Expand New Current Item On Click=true
@@ -1510,10 +1510,12 @@ FullScreen Hide SideBars=false
 FullScreen Hide StatusBar=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
+HDMI-1 LVDS-1 Height 1920x1200=1133
+HDMI-1 LVDS-1 Width 1920x1200=1920
 HDMI-1 LVDS-1 XPosition 1366x768=0
 HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=0
-HDMI-1 LVDS-1 YPosition 1920x1200=0
+HDMI-1 LVDS-1 YPosition 1920x1200=44
 HDMI1 LVDS1 XPosition=0
 HDMI1 LVDS1 YPosition=0
 HDMI1 XPosition=0
@@ -1566,7 +1568,7 @@ SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
 SplitterState=AAAA/wAAAAEAAAACAAAHaAAAATsB/////wAAAAABAQ==
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 TIFFCompression=false
 ToolBarsMovable=Disabled
 Unclip Color=0
@@ -1959,9 +1961,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=24
-SplitterState=AAAA/wAAAAEAAAADAAABFAAABQMAAAE7Af////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT1AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPUAAABXAP///wAABPUAAAQnAAAABAAAAAQAAAAIAAAACPwAAAAA
+InitialAlbumID=2394
+SplitterState=AAAA/wAAAAEAAAADAAABFAAABdUAAAFvAf////8AAAAAAQE=
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT0AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPQAAABXAP///wAABPQAAAQ9AAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
@@ -2234,6 +2236,9 @@ UseWholeAlbumsEntry=false
 HDMI1 Height 1200=1
 HDMI1 Width 1920=1
 
+[TagEditDlgTitleEdit Search Text Tool]
+CaseSensitive=0
+
 [TagFilter Sidebar]
 FaceTagsFilter Expanded=true
 LabelsFilter Expanded=true
@@ -2254,6 +2259,17 @@ Selection=
 SortColumn=0
 SortOrder=1
 TagsSource=false
+
+[Tags Manager]
+CurrentIndex=0
+Expansion=0
+RestoreChecked=false
+Selection=
+SortColumn=0
+SortOrder=0
+
+[Tags Manager List]
+Items=
 
 [TimeLine Sidebar]
 CurrentIndex=
