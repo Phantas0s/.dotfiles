@@ -100,6 +100,10 @@ URxvt.keysym.C-Up: resize-font:bigger
 URxvt.keysym.C-equal: resize-font:reset
 URxvt.keysym.C-question: resize-font:show
 
+! +------+
+! | Tabs |
+! +------+
+
 URxvt.keysym.Control-Shift-N: perl:tabbedex:new_tab
 URxvt.keysym.Control-Shift-K: perl:tabbedex:next_tab
 URxvt.keysym.Control-Shift-J: perl:tabbedex:prev_tab
@@ -108,6 +112,13 @@ URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
 URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_left
 URxvt.keysym.Control-Shift-L: perl:tabbedex:move_tab_right
 
+! Disable bell
+URxvt.tabbedex.bell-timeout: 0
+
+! Hide activity indicators
+URxvt.tabbedex.tabbar-timeouts: 0:  :10:  
+
+! Design for tabs
 URxvt*tabbedex.tabbar-fg: 15
 URxvt*tabbedex.tabbar-bg: 236
 URxvt*tabbedex.tab-fg: 110
