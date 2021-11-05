@@ -7,8 +7,8 @@
 # Preferences dialog.
 
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable")
-(monitor-xresolution 125)
-(monitor-yresolution 125)
+(monitor-xresolution 94)
+(monitor-yresolution 94)
 (icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (color-profile-policy keep)
@@ -24,8 +24,8 @@
     (antialias yes)
     (feather no)
     (feather-radius 10)
-    (method paint-method)
-    (width 10)
+    (method line)
+    (width 3)
     (unit pixels)
     (cap-style round)
     (join-style miter)

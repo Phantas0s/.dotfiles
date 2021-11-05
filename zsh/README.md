@@ -346,6 +346,12 @@ Display command cheatsheet from [cheat.sh](cheat.sh).
 
 ## Other
 
+### Project Management
+
+* `touchproject <name>`
+
+Create a [taskell](https://github.com/smallhadroncollider/taskell) project `<name>`.
+
 ### File system
 
 * `mkcd`

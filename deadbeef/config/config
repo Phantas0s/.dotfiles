@@ -1,7 +1,7 @@
 ape.write_apev2 1
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
-deadbeef_version 1.8.7
+deadbeef_version 1.8.8
 filebrowser.autofilter 1
 filebrowser.bgcolor 
 filebrowser.bgcolor_selected 
@@ -81,10 +81,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 183
 logwindow.geometry.y 225
-mainwin.geometry.h 1133
+mainwin.geometry.h 1111
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
-mainwin.geometry.y 44
+mainwin.geometry.y 66
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -149,17 +149,17 @@ playback.volume -2.019190
 playlist.current 2
 playlist.cursor.0 16
 playlist.cursor.1 87
-playlist.cursor.2 245
+playlist.cursor.2 102
 playlist.cursor.3 739
-playlist.cursor.4 1111
+playlist.cursor.4 461
 playlist.cursor.5 60
 playlist.cursor.6 103
 playlist.cursor.7 51
 playlist.scroll.0 0
 playlist.scroll.1 0
-playlist.scroll.2 -245
+playlist.scroll.2 2255
 playlist.scroll.3 0
-playlist.scroll.4 25750
+playlist.scroll.4 9909
 playlist.scroll.5 -60
 playlist.scroll.6 0
 playlist.scroll.7 1514
@@ -176,10 +176,10 @@ prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 200
 prefwin.geometry.y 205
-resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.paused 1
+resume.playlist 2
+resume.position 494.87274
+resume.track 102
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 1086
