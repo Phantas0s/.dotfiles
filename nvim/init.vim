@@ -57,6 +57,7 @@ let g:coc_global_extensions = [
             \ 'coc-phpactor',
             \ 'coc-php-cs-fixer',
             \ 'coc-tsserver',
+            \ 'coc-eslint',
             \ 'coc-pyright',
             \ 'coc-metals',
             \]
