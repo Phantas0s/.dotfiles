@@ -54,6 +54,7 @@ let g:coc_global_extensions = [
             \ 'coc-sql', 
             \ 'coc-db',
             \ 'coc-snippets',
+            \ 'coc-lua',
             \ 'coc-phpactor',
             \ 'coc-php-cs-fixer',
             \ 'coc-tsserver',
