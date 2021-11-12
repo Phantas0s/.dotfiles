@@ -75,9 +75,11 @@ let g:neomake_php_phpcs_maker = {
 " +------------+
 
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_typescript_enabled_makers = ['eslint']
 
 " Use the fix option of eslint
 let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
+let g:neomake_typescript_eslint_args = ['-f', 'compact', '--fix']
 
 " Callback for reloading file in buffer when eslint has finished and maybe has
 " autofixed some stuff
@@ -90,7 +92,7 @@ endfunction
 
 " Call neomake#Make directly instead of the Neomake provided command
 if has('nvim')
-    autocmd vimrc BufWritePost *.js,*.jsx :silent :call neomake#Make(1, [], function('s:Neomake_callback'))
+    autocmd vimrc BufWritePost *.js,*.jsx,*.ts :silent :call neomake#Make(1, [], function('s:Neomake_callback'))
 endif
 
 " +--------+

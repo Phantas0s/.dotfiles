@@ -1,3 +1,5 @@
+setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
 " Declare the general config group for autocommand
 augroup js
     autocmd!
