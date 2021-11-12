@@ -10,7 +10,7 @@ filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Video%20Games/OST file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Artiste/Electro/Techno%20-%20Techtrance file:///run/media/hypnos/Music/Artiste/Electro/Techno%20-%20Techtrance/~COMPILS
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Video%20Games/OST file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Artiste/Electro/Techno%20-%20Techtrance
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
@@ -145,11 +145,11 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -21.66893
-playlist.current 4
+playback.volume -3.755405
+playlist.current 2
 playlist.cursor.0 16
 playlist.cursor.1 87
-playlist.cursor.2 102
+playlist.cursor.2 40
 playlist.cursor.3 739
 playlist.cursor.4 257
 playlist.cursor.5 60
@@ -157,9 +157,9 @@ playlist.cursor.6 103
 playlist.cursor.7 51
 playlist.scroll.0 0
 playlist.scroll.1 0
-playlist.scroll.2 1709
+playlist.scroll.2 -40
 playlist.scroll.3 0
-playlist.scroll.4 -257
+playlist.scroll.4 5935
 playlist.scroll.5 -60
 playlist.scroll.6 0
 playlist.scroll.7 1514
@@ -176,10 +176,10 @@ prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 200
 prefwin.geometry.y 205
-resume.paused 1
-resume.playlist 4
-resume.position 9.2857237
-resume.track 257
+resume.paused 0
+resume.playlist 2
+resume.position 309.65390
+resume.track 40
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 1086

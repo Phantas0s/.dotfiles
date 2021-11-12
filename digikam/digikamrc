@@ -91,10 +91,10 @@ TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=2394
-Expansion=0,4014,3980,3979,3981,3948,3947,3896,3893,3880,3879,3901,3900,1,3765,3726,3727,3844,35,946,2392,2393,2394,33,34,2,-2
+CurrentIndex=4036
+Expansion=0,4014,3980,3979,3981,3948,3947,3896,3893,3880,3879,3901,3900,1,3765,3726,3727,3844,35,946,2392,4035,4049,4050,4051,4036,4037,4038,4046,4047,4048,4034,4032,2417,2416,2415,2414,2413,4030,4025,2412,2410,4029,4024,2408,2407,2406,2405,2404,2402,2401,2400,2398,4023,2397,2396,2393,2394,33,34,2,-2
 RestoreChecked=false
-Selection=2394
+Selection=4036
 SortColumn=0
 SortOrder=1
 
@@ -178,7 +178,6 @@ LVDS-1 HDMI-1 XPosition 1920x1200=0
 LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
-RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
@@ -215,7 +214,7 @@ RenderingIntent=0
 WorkProfileFile[$e]=/usr/share/digikam/profiles/srgb-d65.icm
 
 [CoreDB Settings]
-Recently Used Tags=36,18
+Recently Used Tags=36,43,45,44,35,39,38,37,18
 
 [DMetadata Settings]
 unifyReadWrite=true
@@ -1090,7 +1089,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwKioqI=
+Database Encrypted Password=AwKfn58=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1133,7 +1132,7 @@ ItemDescEdit Tab=1
 ItemDescEditTab CaptionsLang=x-default
 ItemDescEditTab SearchBarCaseSensitive=0
 ItemDescEditTab TagCheckViewCurrentIndex=36
-ItemDescEditTab TagCheckViewExpansion=0
+ItemDescEditTab TagCheckViewExpansion=0,43,44
 ItemDescEditTab TagCheckViewRestoreChecked=false
 ItemDescEditTab TagCheckViewSelection=36
 ItemDescEditTab TagCheckViewSortColumn=0
@@ -1418,7 +1417,7 @@ HDMI-1 LVDS-1 Width 1920x1200=1920
 HDMI-1 LVDS-1 XPosition 1366x768=1920
 HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=454
-HDMI-1 LVDS-1 YPosition 1920x1200=22
+HDMI-1 LVDS-1 YPosition 1920x1200=66
 HDMI1 Height 1200=1155
 HDMI1 LVDS1 Height 1200=1155
 HDMI1 LVDS1 Height 768=723
@@ -1444,7 +1443,6 @@ LVDS-1 HDMI-1 XPosition 1920x1200=1366
 LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1920x1200=44
 MenuBar=Disabled
-RestorePositionForNextInstance=false
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
@@ -1548,7 +1546,6 @@ PGFLossLess=true
 PNGCompression=9
 PreviewMode=128
 RawImportToolIid=org.kde.digikam.plugin.rawimport.Native
-RestorePositionForNextInstance=false
 RestoreToolSettings=true
 Show Thumbbar=false
 ShowImageSettingsDialog=true
@@ -1755,10 +1752,10 @@ CaseSensitive=0
 CaseSensitive=0
 
 [ItemIconViewTagFilterView]
-CurrentIndex=
+CurrentIndex=36
 Expansion=
 RestoreChecked=false
-Selection=
+Selection=36
 SortColumn=0
 SortOrder=1
 Toggle Auto Tags=0
@@ -1797,7 +1794,6 @@ LVDS-1 HDMI-1 YPosition=0
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
 Navigate By Pair=false
-RestorePositionForNextInstance=false
 Show Thumbbar=true
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
@@ -1965,9 +1961,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=2394
+InitialAlbumID=4036
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABdUAAAFvAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT0AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPQAAABXAP///wAABPQAAAQ9AAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT0AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPQAAABXAP///wAABPQAAAQRAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
@@ -2266,9 +2262,9 @@ TagsSource=false
 
 [Tags Manager]
 CurrentIndex=0
-Expansion=0
+Expansion=0,43,44,38,20
 RestoreChecked=false
-Selection=
+Selection=0
 SortColumn=0
 SortOrder=0
 
