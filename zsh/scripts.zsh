@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 screenres() {
     [ ! -z $1 ] && xrandr --current | grep '*' | awk '{print $1}' | line $1
@@ -630,4 +630,8 @@ tiny() {
 serve() {
     local -r PORT=${1:-8888}
     python2 -m SimpleHTTPServer "$PORT"
+}
+
+backup() {
+    $DOTFILES/bash/scripts/backup/backup.sh $@
 }
