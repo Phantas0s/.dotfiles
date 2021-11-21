@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BAT_CONFIG_DIR=$(bat --config-dir)
 rm -rf "$BAT_CONFIG_DIR"

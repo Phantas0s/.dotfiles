@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #TODO separate all of that
 #TODO from cloud shouldn't exist

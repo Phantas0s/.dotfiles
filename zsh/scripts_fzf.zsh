@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 
 # checkout git branch (including remote branches) with FZF

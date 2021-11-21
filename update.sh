@@ -1,6 +1,8 @@
-source $DOTFILES/colors.sh
-source $DOTFILES/install_functions.sh
-source $DOTFILES/install_config
+#!/usr/bin/env bash
+
+source "$DOTFILES/colors.sh"
+source "$DOTFILES/install_functions.sh"
+source "$DOTFILES/install_config"
 
 #---------------------------------------
 
@@ -34,7 +36,7 @@ nvim --noplugin +PlugUpdate +qa
 #---------------------------------------
 
 dot_mes_update "tmux plugins"
-$HOME/.tmux/plugins/tpm/bin/update_plugins all
+"$HOME/.tmux/plugins/tpm/bin/update_plugins all"
 
 #---------------------------------------
 

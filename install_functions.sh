@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function dot_mes_red() {
     echo -e "${red} ${1}"

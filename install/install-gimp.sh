@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 mkdir -p "$XDG_CONFIG_HOME/GIMP/$GIMP_VERSION"
 

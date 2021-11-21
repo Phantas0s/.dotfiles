@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # Copy the default config file if not present already
 
@@ -47,10 +47,10 @@ fi
 ###########
 
 # Install
-. $DOTFILES/install/install-zsh.sh
-. $DOTFILES/install/install-from-cloud.sh
-. $DOTFILES/install/install-fonts.sh
-. $DOTFILES/install/install-X11.sh
+. "$DOTFILES/install/install-zsh.sh"
+. "$DOTFILES/install/install-from-cloud.sh"
+. "$DOTFILES/install/install-fonts.sh"
+. "$DOTFILES/install/install-X11.sh"
 
 dot_is_installed git && dot_install projects
 dot_is_installed lxappearance && dot_install theme
@@ -60,7 +60,6 @@ dot_is_installed nvim && dot_install nvim
 dot_is_installed tmux && dot_install tmux
 dot_is_installed dunst && dot_install dunst
 dot_is_installed feh && dot_install feh
-# dot_is_installed composer && dot_install composer
 dot_is_installed mycli && dot_install mycli
 dot_is_installed pgcli && dot_install pgcli
 dot_is_installed go && dot_install_func go install_go_binaries

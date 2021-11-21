@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # rm $VIMCONFIG/pluggedconf &>/dev/null
 # rm $VIMCONFIG/ftplugin &>/dev/null

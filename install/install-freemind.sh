@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 FREEMIND_CONFIG_DIR=$HOME/.freemind
 
 mkdir -p $FREEMIND_CONFIG_DIR

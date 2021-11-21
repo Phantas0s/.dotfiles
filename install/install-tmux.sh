@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # From cloud
 ln -sf "$DOTFILES_CLOUD/tmuxp" "$XDG_CONFIG_HOME"

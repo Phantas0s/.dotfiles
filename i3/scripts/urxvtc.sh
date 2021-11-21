@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 urxvtc "$@"
 if [ $? -eq 2 ]; then

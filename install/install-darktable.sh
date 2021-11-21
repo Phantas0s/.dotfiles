@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Install lua scripts
 [ ! -d "$XDG_CONFIG_HOME/darktable/lua" ] && git clone https://github.com/darktable-org/lua-scripts.git "$XDG_CONFIG_HOME/darktable/lua"

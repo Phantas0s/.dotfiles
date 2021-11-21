@@ -61,11 +61,11 @@ let g:coc_global_extensions = [
             \ 'coc-eslint',
             \ 'coc-pyright',
             \ 'coc-metals',
+            \ 'coc-sh',
             \]
 
 " \ 'coc-snippets',
 " \ 'coc-markmap',
-" \ 'coc-sh',
 
 let g:vim_markdown_folding_disabled = 1
 " }}}

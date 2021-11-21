@@ -25,6 +25,10 @@ Call a bash script and update:
 Use dd to copy an entire hard disk to another disk output. Ask questions to be sure you know what you are doing :)
 Way safer than using pure dd without any warning message... (and its weird syntax!).
 
+### System backup
+
+* `backup` - Backup all my data to 
+
 ### Create ssh key
 
 * `sshcreate <name>`

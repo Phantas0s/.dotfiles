@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # For more icons and themes, see:
 # https://www.gnome-look.org/

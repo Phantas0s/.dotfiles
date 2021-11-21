@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 rm "$DOTFILES/git/gitconfig" >/dev/null
 cp "$DOTFILES/git/gitconfig_template" "$DOTFILES/git/gitconfig"

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 __open() {
   if [ "$(uname -s)" = "Darwin" ]; then
     open "$1" 2> /dev/null

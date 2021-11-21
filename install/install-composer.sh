@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # TODO experienced one crash here - might help?
 # [ ! -d $COMPOSER_HOME ] && mkdir -p $COMPOSER_HOME

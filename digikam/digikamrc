@@ -6,6 +6,9 @@ SortColumn=0
 SortOrder=1
 Toggle Auto Tags=0
 
+[AdvancedRename Dialog]
+Dialog Size=450,450
+
 [AdvancedRename Input]
 Pattern History List=\\0
 
@@ -91,10 +94,10 @@ TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=3853
-Expansion=0,3845,4014,3980,3979,3981,3948,3947,3924,3925,3926,3923,3905,3846,3872,3874,3873,3871,3869,3868,3866,3853,3857,3859,3858,3855,3856,3854,3864,3863,3862,3861,3852,3851,3848,3896,3893,3880,3879,3901,3900,3765,3726,3727,3844,35,946,2392,4035,4049,4050,4051,4036,4037,4038,4046,4047,4048,4034,4032,2417,2416,2415,2414,2413,4030,4025,2412,2410,4029,4024,2408,2407,2406,2405,2404,2402,2401,2400,2398,4023,2397,2396,2393,2394,33,34,2,-2
+CurrentIndex=34
+Expansion=0,4014,3980,3979,3981,3948,3947,3924,3925,3926,3923,3905,3846,3872,3874,3873,3871,3869,3868,3866,3865,3857,3859,3858,3855,3856,3854,3864,3863,3862,3861,3852,3851,3896,3893,3880,3879,3901,3900,3765,3726,3727,3844,946,2392,4035,4049,4050,4051,4036,4037,4038,4046,4047,4048,4034,4032,2417,2416,2415,2414,2413,4030,4025,2412,2410,4029,4024,2408,2407,2406,2405,2404,2402,2401,2400,2398,4023,2397,2396,2393,2394,31,33,34,2,-2
 RestoreChecked=false
-Selection=3853
+Selection=34
 SortColumn=0
 SortOrder=1
 
@@ -178,7 +181,6 @@ LVDS-1 HDMI-1 XPosition 1920x1200=0
 LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
-RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
@@ -207,7 +209,7 @@ LastMissingProfileBehavior=2050
 LastSpecifiedAssignProfile[$e]=/usr/share/digikam/profiles/
 LastSpecifiedInputProfile=
 LastUncalibratedBehavior=2080
-ManagedPreviews=true
+ManagedPreviews=false
 ManagedView=true
 MonitorProfileFile[$e]=/usr/share/digikam/profiles/srgb-d65.icm
 ProofingRenderingIntent=3
@@ -1090,7 +1092,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwKGhoY=
+Database Encrypted Password=AwK5ubk=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1118,7 +1120,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=4
+ActiveTab=6
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1412,13 +1414,13 @@ FullScreen Hide StatusBar=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
 HDMI-1 LVDS-1 Height 1366x768=723
-HDMI-1 LVDS-1 Height 1920x1200=1155
+HDMI-1 LVDS-1 Height 1920x1200=1111
 HDMI-1 LVDS-1 Width 1366x768=1366
 HDMI-1 LVDS-1 Width 1920x1200=1920
 HDMI-1 LVDS-1 XPosition 1366x768=1920
 HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=454
-HDMI-1 LVDS-1 YPosition 1920x1200=22
+HDMI-1 LVDS-1 YPosition 1920x1200=66
 HDMI1 Height 1200=1155
 HDMI1 LVDS1 Height 1200=1155
 HDMI1 LVDS1 Height 768=723
@@ -1434,7 +1436,7 @@ Height 768=723
 Icon Theme=breeze-dark
 LVDS-1 HDMI-1 Height 1080=1013
 LVDS-1 HDMI-1 Height 1200=1133
-LVDS-1 HDMI-1 Height 1920x1200=1133
+LVDS-1 HDMI-1 Height 1920x1200=1089
 LVDS-1 HDMI-1 Height 768=723
 LVDS-1 HDMI-1 Width 1366=1366
 LVDS-1 HDMI-1 Width 1920=1920
@@ -1442,16 +1444,14 @@ LVDS-1 HDMI-1 Width 1920x1200=1920
 LVDS-1 HDMI-1 XPosition=0
 LVDS-1 HDMI-1 XPosition 1920x1200=1366
 LVDS-1 HDMI-1 YPosition=44
-LVDS-1 HDMI-1 YPosition 1920x1200=44
-MenuBar=Disabled
-RestorePositionForNextInstance=false
+LVDS-1 HDMI-1 YPosition 1920x1200=0
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQnAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPoAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1515,9 +1515,9 @@ FullScreen Hide ToolBars=false
 HDMI-1 LVDS-1 Height 1920x1200=1133
 HDMI-1 LVDS-1 Width 1920x1200=1920
 HDMI-1 LVDS-1 XPosition 1366x768=0
-HDMI-1 LVDS-1 XPosition 1920x1200=0
+HDMI-1 LVDS-1 XPosition 1920x1200=1366
 HDMI-1 LVDS-1 YPosition 1366x768=0
-HDMI-1 LVDS-1 YPosition 1920x1200=44
+HDMI-1 LVDS-1 YPosition 1920x1200=0
 HDMI1 LVDS1 XPosition=0
 HDMI1 LVDS1 YPosition=0
 HDMI1 XPosition=0
@@ -1530,12 +1530,14 @@ JPEG2000Compression=75
 JPEG2000LossLess=true
 JPEGCompression=75
 JPEGSubSampling=1
+LVDS-1 HDMI-1 Height 1920x1200=1067
+LVDS-1 HDMI-1 Width 1920x1200=1920
 LVDS-1 HDMI-1 XPosition=0
 LVDS-1 HDMI-1 XPosition 1366x768=0
-LVDS-1 HDMI-1 XPosition 1920x1200=0
+LVDS-1 HDMI-1 XPosition 1920x1200=1366
 LVDS-1 HDMI-1 YPosition=0
 LVDS-1 HDMI-1 YPosition 1366x768=0
-LVDS-1 HDMI-1 YPosition 1920x1200=0
+LVDS-1 HDMI-1 YPosition 1920x1200=110
 Median Filter Passes=0
 Noise Reduction Threshold=0
 Noise Reduction Type=0
@@ -1548,7 +1550,6 @@ PGFLossLess=true
 PNGCompression=9
 PreviewMode=128
 RawImportToolIid=org.kde.digikam.plugin.rawimport.Native
-RestorePositionForNextInstance=false
 RestoreToolSettings=true
 Show Thumbbar=false
 ShowImageSettingsDialog=true
@@ -1571,7 +1572,7 @@ SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
 SplitterState=AAAA/wAAAAEAAAACAAAHaAAAATsB/////wAAAAABAQ==
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPPAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 TIFFCompression=false
 ToolBarsMovable=Disabled
 Unclip Color=0
@@ -1755,10 +1756,10 @@ CaseSensitive=0
 CaseSensitive=0
 
 [ItemIconViewTagFilterView]
-CurrentIndex=36
-Expansion=
+CurrentIndex=20
+Expansion=43,44
 RestoreChecked=false
-Selection=36
+Selection=20,37,26,23,27,38,36,22,21,25,19,24,43,34,35,33
 SortColumn=0
 SortOrder=1
 Toggle Auto Tags=0
@@ -1797,7 +1798,6 @@ LVDS-1 HDMI-1 YPosition=0
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
 Navigate By Pair=false
-RestorePositionForNextInstance=false
 Show Thumbbar=true
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
@@ -1965,9 +1965,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=3853
+InitialAlbumID=34
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABdUAAAFvAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT0AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPQAAABXAP///wAABPQAAAN3AAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT0AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPQAAABXAP///wAABPQAAAP+AAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
@@ -2223,7 +2223,7 @@ CaseSensitive=0
 [Setup Dialog]
 LVDS-1 HDMI-1 Height 1080=600
 LVDS-1 HDMI-1 Width 1920=800
-Setup Page=1
+Setup Page=4
 Template Tab=0
 
 [Sketch Search View]

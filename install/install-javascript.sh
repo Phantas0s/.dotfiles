@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ln -sf $DOTFILES/javascript/.tern-project $HOME
 ln -sf $DOTFILES/javascript/.eslintrc.json $HOME

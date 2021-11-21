@@ -37,3 +37,43 @@ function help ()
 
 }
 endsnippet
+
+snippet shunit "Shell unit test" b
+# file: `!p snip.rv = os.path.relpath(path)`
+# Doc: https://github.com/kward/shunit2
+
+${0}
+
+source shunit2
+endsnippet
+
+snippet shunit2comp "Shell unit test with example" b
+# file: `!p snip.rv = os.path.relpath(path)`
+# Doc: https://github.com/kward/shunit2
+
+# Run before all tests
+function oneTimeSetUp() {
+	return 0
+}
+
+# Run before each test
+function setUp() {
+	return 0
+}
+
+function testEquality() {
+	assertEquals 1 1
+}
+
+# Run after each test
+function tearDown() {
+	return 0
+}
+
+# Run after all tests
+function oneTimeTearDown() {
+	return 0
+}
+
+source shunit2
+endsnippet
