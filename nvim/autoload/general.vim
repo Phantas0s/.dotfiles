@@ -4,9 +4,13 @@ function general#RestorePosition()
         return
     endif
 
-    if line("'\"") > 1 && line("'\"") <= line("$")
-        exe "normal! g`\""
-    endif
+    lua require'general/restore_position'.restore_position()
+    " Possible
+    "lua require('general/restore_position').restore_position()
+
+    " Other way to call the lua function (need to asign function to a variable before calling it)
+    " let RestorePosition = luaeval('require("general/restore_position").restore_position')
+    " call RestorePosition()
 endfunc
 
 " delete trailing space when saving files

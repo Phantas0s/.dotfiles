@@ -21,7 +21,7 @@ Plug 'chaoren/vim-wordmotion' " camel case motion
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' " snippets
 Plug 'itchyny/lightline.vim' " Status bar
-Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
+" Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
 Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
 Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
 Plug 'alx741/vinfo' " Open info documentation files
@@ -59,16 +59,18 @@ Plug 'neomake/neomake'
 Plug 'puremourning/vimspector'
 
 " git
-Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify' " wrapper for git and display git diff in the left gutter
+Plug 'tpope/vim-fugitive' "wrapper for git
+Plug 'mhinz/vim-signify' "  display git diff in the left gutter
+" Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb' 
 Plug 'junegunn/gv.vim' " Display commits for project / file
 Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
 
 " syntax highlighting
 Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
-Plug 'chr4/nginx.vim' " nginx 
-Plug 'wgwoods/vim-systemd-syntax' " systemd 
-Plug 'cespare/vim-toml' " toml 
+Plug 'chr4/nginx.vim' " nginx
+Plug 'wgwoods/vim-systemd-syntax' " systemd
+Plug 'cespare/vim-toml' " toml
 
 " lsp
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
