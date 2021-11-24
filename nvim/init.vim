@@ -62,6 +62,7 @@ let g:coc_global_extensions = [
             \ 'coc-pyright',
             \ 'coc-metals',
             \ 'coc-sh',
+            \ 'coc-pyright',
             \]
 
 " \ 'coc-snippets',
