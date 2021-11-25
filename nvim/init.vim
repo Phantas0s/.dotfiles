@@ -42,16 +42,16 @@ let g:delve_tracepoint_sign = ""
 source $VIMCONFIG/projects.nvimrc
 
 " close the buffer
-nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr> 
+nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr>
 
 " Coc extensions
 let g:coc_global_extensions = [
-            \ 'coc-css', 
+            \ 'coc-css',
             \ 'coc-html',
-            \ 'coc-json', 
-            \ 'coc-yaml', 
-            \ 'coc-godot', 
-            \ 'coc-sql', 
+            \ 'coc-json',
+            \ 'coc-yaml',
+            \ 'coc-godot',
+            \ 'coc-sql',
             \ 'coc-db',
             \ 'coc-snippets',
             \ 'coc-lua',
@@ -143,6 +143,9 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 " Multi OS version (open for macOS)
 " command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
 
+" romainl redir (https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7)
+command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
+
 " Only Linux
 command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
@@ -180,7 +183,7 @@ nnoremap <silent> <leader><f5> :vsplit $MYVIMRC<CR>
 nnoremap <silent> <leader><f6> :source $MYVIMRC<CR>
 
 " delete trailing space when saving files
-autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc call general#DeleteTrailingWS()
+autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc,*.vim,*.lua call general#DeleteTrailingWS()
 
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
@@ -270,7 +273,7 @@ set smartcase
 " set list
 set list listchars=tab:\┆\ ,trail:·,nbsp:±
 
-" doesn't prompt a warning when opening a file and the current file was modified but not saved 
+" doesn't prompt a warning when opening a file and the current file was modified but not saved
 set hidden
 
 " avoid delay

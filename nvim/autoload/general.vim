@@ -1,12 +1,9 @@
 " Restore position of the cursor when reopening a file
 function general#RestorePosition()
-    if exists("g:restore_position_ignore") && match(expand("%"), g:restore_position_ignore) > -1
-        return
-    endif
+    lua require'custom/general'.restore_position()
 
-    lua require'general/restore_position'.restore_position()
     " Possible
-    "lua require('general/restore_position').restore_position()
+    "lua require('custom/general').restore_position()
 
     " Other way to call the lua function (need to asign function to a variable before calling it)
     " let RestorePosition = luaeval('require("general/restore_position").restore_position')
@@ -15,9 +12,7 @@ endfunc
 
 " delete trailing space when saving files
 function general#DeleteTrailingWS()
-    normal mz
-    %s/\v\s+$//ge
-    normal `z
+    lua require'custom/general'.delete_trailing_ws()
 endfunc
 
 " buffer cleanup - delete every buffer except the one open
@@ -212,3 +207,43 @@ function general#Vsystem(excmds)
     redir END
     return s:results
 endfunction
+
+# See: https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7
+function general#Redir(cmd, rng, start, end)
+	for win in range(1, winnr('$'))
+		if getwinvar(win, 'scratch')
+			execute win . 'windo close'
+		endif
+	endfor
+	if a:cmd =~ '^!'
+		let cmd = a:cmd =~' %'
+			\ ? matchstr(substitute(a:cmd, ' %', ' ' . expand('%:p'), ''), '^!\zs.*')
+			\ : matchstr(a:cmd, '^!\zs.*')
+		if a:rng == 0
+			let output = systemlist(cmd)
+		else
+			let joined_lines = join(getline(a:start, a:end), '\n')
+			let cleaned_lines = substitute(shellescape(joined_lines), "'\\\\''", "\\\\'", 'g')
+			let output = systemlist(cmd . " <<< $" . cleaned_lines)
+		endif
+	else
+		redir => output
+		execute a:cmd
+		redir END
+		let output = split(output, "\n")
+	endif
+	vnew
+	let w:scratch = 1
+	setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile
+	call setline(1, output)
+endfunction
+
+" Alternative version - to test
+" Redirect the output of a Vim or external command into a scratch buffer
+" function! Redir(cmd) abort
+"     let output = execute(a:cmd)
+"     tabnew
+"     setlocal nobuflisted buftype=nofile bufhidden=wipe noswapfile
+"     call setline(1, split(output, "\n"))
+" endfunction
+" command! -nargs=1 Redir silent call Redir(<f-args>)
