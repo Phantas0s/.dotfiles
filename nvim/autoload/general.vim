@@ -208,7 +208,7 @@ function general#Vsystem(excmds)
     return s:results
 endfunction
 
-# See: https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7
+" See: https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7
 function general#Redir(cmd, rng, start, end)
 	for win in range(1, winnr('$'))
 		if getwinvar(win, 'scratch')
