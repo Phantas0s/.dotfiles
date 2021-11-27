@@ -15,7 +15,7 @@ Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http:/
 Plug 'tpope/vim-commentary' " keystroke to comment automatically
 
 Plug 'wellle/targets.vim' " add new text object (can delete between comma with di, for example)
-Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text
+" Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text
 Plug 'machakann/vim-swap' " swap arguments in parenthesis
 Plug 'chaoren/vim-wordmotion' " camel case motion
 Plug 'SirVer/ultisnips'
@@ -62,7 +62,7 @@ Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive' "wrapper for git
 Plug 'mhinz/vim-signify' "  display git diff in the left gutter
 " Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-rhubarb' 
+Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim' " Display commits for project / file
 Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
 
@@ -96,7 +96,7 @@ Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
-Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion 
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion
 
 " LISP
 Plug 'guns/vim-sexp', { 'for': ['clojure', 'scheme'] }
@@ -112,13 +112,13 @@ Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
-Plug 'Phantas0s/go-analyzer.vim' " Custom plugin 
+Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
 
 " Databases
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
-" CSV 
+" CSV
 Plug 'chrisbra/csv.vim'
 
 " VimScript

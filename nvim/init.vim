@@ -21,6 +21,8 @@ endfor
 " | plugin config |
 " +---------------+
 
+lua require('hypnos/kit')
+
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
 " let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
@@ -69,6 +71,10 @@ let g:coc_global_extensions = [
 " \ 'coc-markmap',
 
 let g:vim_markdown_folding_disabled = 1
+
+" Lua syntax highlighting in Vimscript (*.vim) files
+let g:vimsyn_embed = 'l;'
+
 " }}}
 " General Bindings ---------------------- {{{
 
@@ -135,6 +141,9 @@ inoremap <C-l> <Del>
 " highlight the line which is longer than the defined margin (120 character)
 highlight MaxLineChar ctermbg=red
 autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
+
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
+
 " Autocmd test
 " autocmd vimrc FileType markdown call general#MakeJournalEntry()
 

@@ -1,9 +1,9 @@
 " Restore position of the cursor when reopening a file
 function general#RestorePosition()
-    lua require'custom/general'.restore_position()
+    lua require('hypnos/general').restore_position()
 
     " Possible
-    "lua require('custom/general').restore_position()
+    "lua require'hypnos/general'.restore_position()
 
     " Other way to call the lua function (need to asign function to a variable before calling it)
     " let RestorePosition = luaeval('require("general/restore_position").restore_position')
@@ -12,7 +12,7 @@ endfunc
 
 " delete trailing space when saving files
 function general#DeleteTrailingWS()
-    lua require'custom/general'.delete_trailing_ws()
+    lua require('hypnos/general').delete_trailing_ws()
 endfunc
 
 " buffer cleanup - delete every buffer except the one open
@@ -46,8 +46,7 @@ endfunction
 " Simple Zoom / Restore window (like Tmux)
 function general#ZoomToggle() abort
     if exists('t:zoomed') && t:zoomed
-        execute t:zoom_winrestcmd
-        let t:zoomed = 0
+        execute t:zoom_winrestcmd let t:zoomed = 0
     else
         let t:zoom_winrestcmd = winrestcmd()
         resize

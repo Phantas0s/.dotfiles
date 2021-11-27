@@ -1,6 +1,6 @@
 #!/usr/bin/env lua
 
-local function split(str,div) -- credit: http://richard.warburton.it
+function _G.split(str,div) -- credit: http://richard.warburton.it
   if (div=='') then return false end
   local pos,arr = 0,{}
   -- for each divider found
@@ -12,19 +12,13 @@ local function split(str,div) -- credit: http://richard.warburton.it
   return arr
 end
 
-local function buflist()
-    bufnames = vim.api.nvim_exec('silent ls', true)
-    local list, bufs = {}, vim.fn.split(bufnames, "\n")
-    for k, v in pairs(bufs) do
-        local buf = split(v, '"')
-        table.insert(list, buf[2])
-        print(vim.inspect(list))
-    end
+function _G.tprint(...)
+  local objects = {}
+  for i = 1, select('#', ...) do
+    local v = select(i, ...)
+    table.insert(objects, vim.inspect(v))
+  end
 
-    return list
+  print(table.concat(objects, '\n'))
+  return ...
 end
-buflist()
-
-return {
-    buffer_list = buflist
-}
