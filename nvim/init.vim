@@ -142,6 +142,7 @@ inoremap <C-l> <Del>
 highlight MaxLineChar ctermbg=red
 autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
+" Highlight briefly yanked text
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
 
 " Autocmd test
