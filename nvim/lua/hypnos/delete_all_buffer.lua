@@ -3,7 +3,7 @@
 local function buflist()
     local bufnames = vim.api.nvim_exec('silent ls', true)
     local list, bufs = {}, vim.split(bufnames, "\n")
-    for k, v in pairs(bufs) do
+    for _, v in pairs(bufs) do
         local buf = vim.split(v, '"')
         table.insert(list, buf[2])
     end

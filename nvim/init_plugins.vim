@@ -73,8 +73,17 @@ Plug 'wgwoods/vim-systemd-syntax' " systemd
 Plug 'cespare/vim-toml' " toml
 
 " lsp
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
+" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 
 " fzf
 Plug 'junegunn/fzf.vim'
