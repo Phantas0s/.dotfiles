@@ -27,32 +27,32 @@ endif
 let g:go_auto_sameids = 1
 
 " vim-go mappings
-autocmd FileType go nmap <buffer><leader>d :GoDeclsDir<cr>
+autocmd FileType go nmap <buffer><localleader>d :GoDeclsDir<cr>
 
-autocmd FileType go nmap <buffer><leader>gr <plug>(go-run)
-autocmd FileType go nmap <buffer><leader>gt <plug>(go-test)
-autocmd FileType go nmap <buffer><leader>gb <plug>(go-build)
-autocmd FileType go nmap <buffer><leader>gi <plug>(go-install)
+autocmd FileType go nmap <buffer><localleader>gr <plug>(go-run)
+autocmd FileType go nmap <buffer><localleader>gt <plug>(go-test)
+autocmd FileType go nmap <buffer><localleader>gb <plug>(go-build)
+autocmd FileType go nmap <buffer><localleader>gi <plug>(go-install)
 
-autocmd FileType go nmap <buffer><leader>gtf <plug>(go-test-func)
-autocmd FileType go nmap <buffer><leader>gtc <plug>(go-coverage-toggle)
+autocmd FileType go nmap <buffer><localleader>gtf <plug>(go-test-func)
+autocmd FileType go nmap <buffer><localleader>gtc <plug>(go-coverage-toggle)
 
-autocmd FileType go nmap <buffer><leader>grn <plug>(go-rename)
+autocmd FileType go nmap <buffer><localleader>grn <plug>(go-rename)
 
-autocmd FileType go nmap <buffer><leader>gat :GoAddTags<space>
-autocmd FileType go nmap <buffer><leader>gdt :GoRemoveTags<CR>
+autocmd FileType go nmap <buffer><localleader>gat :GoAddTags<space>
+autocmd FileType go nmap <buffer><localleader>gdt :GoRemoveTags<CR>
 
-autocmd FileType go nmap <buffer><leader>tu <Plug>(go-alternate-edit)
-autocmd FileType go nmap <buffer><leader>tuh <Plug>(go-alternate-split)
-autocmd FileType go nmap <buffer><leader>tuv <Plug>(go-alternate-vertical)
+autocmd FileType go nmap <buffer><localleader>tu <Plug>(go-alternate-edit)
+autocmd FileType go nmap <buffer><localleader>tuh <Plug>(go-alternate-split)
+autocmd FileType go nmap <buffer><localleader>tuv <Plug>(go-alternate-vertical)
 
-autocmd FileType go nmap <buffer><leader>gim <plug>(go-implements)
-autocmd FileType go nmap <buffer><leader>gc <plug>(go-callee)
+autocmd FileType go nmap <buffer><localleader>gim <plug>(go-implements)
+autocmd FileType go nmap <buffer><localleader>gc <plug>(go-callee)
 
-" autocmd FileType go nmap <buffer><leader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
-autocmd FileType go nmap <buffer><leader>u :exec "GoImport ".expand("<cword>")<cr>
+" autocmd FileType go nmap <buffer><localleader>gd :exec "GoDoc ".expand("<c-r><c-f>")<cr>
+autocmd FileType go nmap <buffer><localleader>u :exec "GoImport ".expand("<cword>")<cr>
 
-autocmd FileType go nmap <buffer><leader>gfs :exec "GoFillStruct"<cr>
+autocmd FileType go nmap <buffer><localleader>gfs :exec "GoFillStruct"<cr>
 
 " Require vim-go
 " inoremap <silent><buffer> . <esc>:call go#AliasGoImport()<cr>

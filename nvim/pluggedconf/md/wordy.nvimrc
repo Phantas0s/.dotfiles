@@ -13,5 +13,5 @@
 "   \ 'adverbs',
 "   \ ]
 
-noremap <silent> <F8> :<C-u>NextWordy<cr>
-xnoremap <silent> <F8> :<C-u>NextWordy<cr>
+noremap <buffer><silent> <F8> :<C-u>NextWordy<cr>
+xnoremap <buffer><silent> <F8> :<C-u>NextWordy<cr>

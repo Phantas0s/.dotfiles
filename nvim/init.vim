@@ -6,22 +6,31 @@ augroup vimrc
     autocmd!
 augroup END
 
+" +------------+
+" | leader key |
+" +------------+
+
+" Configure leader key
+let mapleader = "\<space>"
+let maplocalleader = "\<space>"
+
 " +----------------+
 " | install plugin |
 " +----------------+
 
 source $VIMCONFIG/init_plugins.vim
 
-" source every plugin configs
-for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
-    execute 'source' file
-endfor
-
 " +---------------+
 " | plugin config |
 " +---------------+
 
+" Load custom library for lua
 lua require('hypnos/kit')
+
+" source every plugin configs
+for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
+    execute 'source' file
+endfor
 
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
@@ -82,21 +91,15 @@ let g:vimsyn_embed = 'l;'
 " | general binding |
 " +-----------------+
 
-syntax on
-
-" weird hack for nerdtree to work
-let mapleader = "\\"
-let maplocalleader = "\\"
-map <space> <leader>
-map <space> <localleader>
-
 " Stop undo at each space
 " Doesn't work with abbreviations...
 " inoremap <space> <C-G>u<space>
 
 vmap <F2> !boxes -d stone " to create boxes!!
 vmap <f3> !figlet<CR> " to create ascii art!!
-map <silent> <esc> <Cmd>noh<cr> " un-highlight when esc is pressed
+
+" un-highlight when esc is pressed
+map <silent> <esc> <Cmd>noh<cr>
 
 " indent without killing the selection in VISUAL mode
 vmap < <gv
@@ -129,14 +132,11 @@ nnoremap tc :tabclose<CR>
 nnoremap tH :tabm 0<CR>
 nnoremap tL :tabm<CR>
 
-" windows navigation
-" use ctrl + hjkl
-
 " create horizontal window
 nnoremap <c-w>h <c-w>s
 
 " delete character after cursor in insert mode
-inoremap <C-l> <Del>
+" inoremap <C-l> <Del>
 
 " highlight the line which is longer than the defined margin (120 character)
 highlight MaxLineChar ctermbg=red
@@ -145,22 +145,15 @@ autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 " Highlight briefly yanked text
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
 
-" Autocmd test
-" autocmd vimrc FileType markdown call general#MakeJournalEntry()
-
-" open devdocs.io with firefox and search the word under the cursor
+" romainl redir (https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7)
+command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
 
 " Multi OS version (open for macOS)
 " command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
 
-" romainl redir (https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7)
-command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
-
 " Only Linux
 command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
-" same but with clojuredocs
-" same but with scaladocs
 
 " arrow keys resize windows
 nnoremap <Left> :vertical resize -10<CR>
@@ -219,9 +212,6 @@ nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
 nnoremap <leader>sl :source $VIMCONFIG/sessions/
 
-" Set tmTheme and mm extensions as XML
-autocmd vimrc BufNewFile,BufRead *.tmTheme, *.mm set filetype=xml
-
 " }}}
 
 " abbreviations ---------------------- {{{
@@ -260,7 +250,7 @@ set undolevels=10000 " How many undos
 set undoreload=10000 " number of lines to save for undo
 
 " set line number
-set number
+" set number
 
 " the copy goes to the clipboard
 set clipboard+=unnamedplus
@@ -305,7 +295,7 @@ set scrolloff=999
 " write automatically when quitting buffer
 set autowrite
 
-" Fold related
+" Folds
 set foldlevelstart=0 " Start with all folds closed
 set foldtext=general#FoldText()
 

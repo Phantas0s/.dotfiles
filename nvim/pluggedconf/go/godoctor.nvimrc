@@ -7,7 +7,7 @@
 " syntax on
 
 " vimdoctor 
-xnoremap <buffer><leader>rem :Refactor extract
-xnoremap <buffer><leader>rev :Refactor var
-xnoremap <buffer><leader>ret :Refactor toggle
-noremap <buffer><leader>rgd :Refactor godoc<cr>
+xnoremap <buffer><localleader>rem :Refactor extract
+xnoremap <buffer><localleader>rev :Refactor var
+xnoremap <buffer><localleader>ret :Refactor toggle
+noremap <buffer><localleader>rgd :Refactor godoc<cr>

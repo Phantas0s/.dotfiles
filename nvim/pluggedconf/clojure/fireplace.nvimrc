@@ -6,21 +6,21 @@
 " TODO would be better to have an environment variable for that? for every names to be consistent.
 let g:fireplace_cljs_repl = "(figwheel.main.api/repl-env \"dev\")"
 " Start REPL for clojurescript
-autocmd FileType clojure nmap <buffer><leader>r :exec "Piggieback"<cr>
+autocmd FileType clojure nmap <buffer><localleader>r :exec "Piggieback"<cr>
 " Kill REPL 
-autocmd FileType clojure nmap <buffer><leader>kr :exec "Piggieback!"<cr>
+autocmd FileType clojure nmap <buffer><localleader>kr :exec "Piggieback!"<cr>
 
 " Eval anything under the cursor
 " TODO to fix
-" autocmd FileType clojure nmap <buffer><leader>E :exec "Eval ".expand("<cword>")<cr>
-" autocmd FileType clojure vmap <buffer><leader>E :exec "Eval"
+" autocmd FileType clojure nmap <buffer><localleader>E :exec "Eval ".expand("<cword>")<cr>
+" autocmd FileType clojure vmap <buffer><localleader>E :exec "Eval"
 
 " Eval s-expression (expression inside parentheses) under the cursor
-autocmd FileType clojure nmap <buffer><leader>X cpp
+autocmd FileType clojure nmap <buffer><localleader>X cpp
 
 " Display the 
-autocmd FileType clojure nmap <buffer><leader>K :exec "Doc ".expand("<cword>")<cr>
+autocmd FileType clojure nmap <buffer><localleader>K :exec "Doc ".expand("<cword>")<cr>
 
 " Display the source of function / macro but no special forms (doesn't work for "if").
-autocmd FileType clojure nmap <buffer><leader>S :exec "Source ".expand("<cword>")<cr>
+autocmd FileType clojure nmap <buffer><localleader>S :exec "Source ".expand("<cword>")<cr>
 

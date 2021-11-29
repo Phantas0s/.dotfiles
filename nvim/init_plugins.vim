@@ -50,9 +50,9 @@ Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows 
 Plug 'jpalardy/vim-slime'
 
 " project management
-Plug 'amiorin/vim-project' | Plug 'mhinz/vim-startify' " vim project for one specific vimrc / project + startify for startup cow
+Plug 'mhinz/vim-startify' " startify for startup cow
 
-" compiler
+" compiler / linter
 Plug 'neomake/neomake'
 
 " debugger

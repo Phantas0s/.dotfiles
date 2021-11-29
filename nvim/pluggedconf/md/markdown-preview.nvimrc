@@ -1,2 +1,2 @@
-autocmd FileType markdown nmap <buffer><leader>p :exec "MarkdownPreview"<cr>
+autocmd FileType markdown nmap <buffer><localleader>p :exec "MarkdownPreview"<cr>
 

@@ -5,21 +5,21 @@ let g:vim_php_refactoring_default_method_visibility = 'private'
 let g:vim_php_refactoring_auto_validate_visibility = 1
 let g:vim_php_refactoring_phpdoc = "pdv#DocumentCurrentLine"
 
-autocmd vimrc FileType php nnoremap <buffer><leader>reu :call PhpExtractUse()<CR>
-autocmd vimrc FileType php xnoremap <buffer><leader>rec :call PhpExtractConst()<CR>
-autocmd vimrc FileType php nnoremap <buffer><leader>rep :call PhpExtractClassProperty()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>reu :call PhpExtractUse()<CR>
+autocmd vimrc FileType php xnoremap <buffer><localleader>rec :call PhpExtractConst()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>rep :call PhpExtractClassProperty()<CR>
 
-autocmd vimrc FileType php nnoremap <buffer><leader>rrm :call PhpRenameMethod()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>rrm :call PhpRenameMethod()<CR>
 
-autocmd vimrc FileType php nnoremap <buffer><leader>rcp :call PhpCreateProperty()<CR>
-autocmd vimrc FileType php nnoremap <buffer><leader>rrp :call PhpRenameClassVariable()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>rcp :call PhpCreateProperty()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>rrp :call PhpRenameClassVariable()<CR>
 
-autocmd vimrc FileType php nnoremap <buffer><leader>rlv :call PhpRenameLocalVariable()<CR>
-autocmd vimrc FileType php nnoremap <buffer><leader>rdu :call PhpDetectUnusedUseStatements()<CR>
-autocmd vimrc FileType php xnoremap <buffer><leader>raa :call PhpAlignAssigns()<CR>
-autocmd vimrc FileType php nnoremap <buffer><leader>rsg :call PhpCreateSettersAndGetters()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>rlv :call PhpRenameLocalVariable()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>rdu :call PhpDetectUnusedUseStatements()<CR>
+autocmd vimrc FileType php xnoremap <buffer><localleader>raa :call PhpAlignAssigns()<CR>
+autocmd vimrc FileType php nnoremap <buffer><localleader>rsg :call PhpCreateSettersAndGetters()<CR>
 
-xnoremap <buffer><leader>rev :call PHPExtractVariable()<cr>
+xnoremap <buffer><localleader>rev :call PHPExtractVariable()<cr>
 
 function! PHPExtractVariable()
     let l:name = input("Name of new variable: $")
