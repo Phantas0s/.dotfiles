@@ -37,14 +37,6 @@ let g:slime_paste_file = tempname()
 " let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
 let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
 
-" if exists("g:did_load_filetypes")
-"   filetype off
-"   filetype plugin indent off
-" endif
-" set runtimepath+=$VIMCONFIG/godoctor.vim
-" filetype on
-" filetype plugin indent on
-
 " Impossible to put it in vim-delve.nvimrc file...
 let g:delve_breakpoint_sign = ""
 let g:delve_tracepoint_sign = ""
@@ -84,19 +76,13 @@ let g:vim_markdown_folding_disabled = 1
 " Lua syntax highlighting in Vimscript (*.vim) files
 let g:vimsyn_embed = 'l;'
 
-" }}}
-" General Bindings ---------------------- {{{
-
 " +-----------------+
-" | general binding |
+" | general mapping |
 " +-----------------+
 
-" Stop undo at each space
-" Doesn't work with abbreviations...
-" inoremap <space> <C-G>u<space>
-
-vmap <F2> !boxes -d stone " to create boxes!!
-vmap <f3> !figlet<CR> " to create ascii art!!
+" Create box and figlet - ESSENTIAL :D
+vmap <F2> !boxes -d stone<cr>
+vmap <f3> !figlet<cr>
 
 " un-highlight when esc is pressed
 map <silent> <esc> <Cmd>noh<cr>
@@ -110,8 +96,10 @@ nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
-nnoremap <silent> gX :execute
-            \ "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
+nnoremap <silent> gX :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
+
+" Go to file even if doesn't exist
+map gf :e <cfile><CR>
 
 " Fix gx for URLs
 nmap <silent> gx yiW:!xdg-open <C-r>" & <CR><CR>
@@ -138,16 +126,6 @@ nnoremap <c-w>h <c-w>s
 " delete character after cursor in insert mode
 " inoremap <C-l> <Del>
 
-" highlight the line which is longer than the defined margin (120 character)
-highlight MaxLineChar ctermbg=red
-autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
-
-" Highlight briefly yanked text
-au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
-
-" romainl redir (https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7)
-command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
-
 " Multi OS version (open for macOS)
 " command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
 
@@ -156,10 +134,10 @@ command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
 
 " arrow keys resize windows
-nnoremap <Left> :vertical resize -10<CR>
-nnoremap <Right> :vertical resize +10<CR>
-nnoremap <Up> :resize -10<CR>
-nnoremap <Down> :resize +10<CR>
+nnoremap <left> :vertical resize -10<cr>
+nnoremap <right> :vertical resize +10<cr>
+nnoremap <up> :resize -10<cr>
+nnoremap <down> :resize +10<cr>
 
 imap <up> <nop>
 imap <down> <nop>
@@ -170,30 +148,14 @@ imap <right> <nop>
 nnoremap J mzJ`z
 
 " Quit neovim terminal
-tnoremap <C-\> <C-\><C-n>
-
-" buffer cleanup - delete every buffer except the one open
-command! Ball :silent call general#Bdeleteonly()
-
-" Add a journal entry
-command! Jrnl call general#MakeJournalEntry()
-
-" restore the position of the last cursor when you open a file
-autocmd vimrc BufReadPost * call general#RestorePosition()
+tnoremap <C-q> <C-\><C-n>
 
 " edit vimrc with f5 and source it with f6
 nnoremap <silent> <leader><f5> :vsplit $MYVIMRC<CR>
 nnoremap <silent> <leader><f6> :source $MYVIMRC<CR>
 
-" delete trailing space when saving files
-autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc,*.vim,*.lua call general#DeleteTrailingWS()
-
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
-
-" Open files with external application
-autocmd vimrc BufEnter *.png,*.jpg,*.gif silent! execute "! sxiv ".expand("%") | bwipeout
-autocmd vimrc BufEnter *.pdf silent! execute "! zathura ".expand("%") "&" | bwipeout
 
 " Execute a macro for the all selection
 xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
@@ -212,9 +174,53 @@ nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
 nnoremap <leader>sl :source $VIMCONFIG/sessions/
 
-" }}}
+" +---------------+
+" | User Commands |
+" +---------------+
 
-" abbreviations ---------------------- {{{
+" buffer cleanup - delete every buffer except the one open
+command! Ball :silent call general#Bdeleteonly()
+
+" Add a journal entry
+command! Jrnl call general#MakeJournalEntry()
+
+" romainl redir (https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7)
+command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
+
+" +---------+
+" | autocmd |
+" +---------+
+
+" restore the position of the last cursor when you open a file
+autocmd vimrc BufReadPost * call general#RestorePosition()
+
+" delete trailing space when saving files
+autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc,*.vim,*.lua call general#DeleteTrailingWS()
+
+" Open files with external application
+autocmd vimrc BufEnter *.png,*.jpg,*.gif silent! execute "! sxiv ".expand("%") | bwipeout
+autocmd vimrc BufEnter *.pdf silent! execute "! zathura ".expand("%") "&" | bwipeout
+
+" Tuggle relative number
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" Formatting options (:help fo-table)
+autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" +--------------+
+" | Highlighting |
+" +--------------+
+
+" highlight the line which is longer than the defined margin (120 character)
+highlight MaxLineChar ctermbg=red
+autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
+
+" Highlight briefly yanked text
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
 
 " +---------------+
 " | Abbreviations |
@@ -223,10 +229,6 @@ nnoremap <leader>sl :source $VIMCONFIG/sessions/
 iabbrev IMO in my opinion
 iabbrev BTW by the way
 iabbrev <expr> cdate strftime('%Y-%m-%d') "current date
-
-" }}}
-
-" Set options ---------------------- {{{
 
 " +--------------+
 " | Set  options |
@@ -312,18 +314,6 @@ set number relativenumber
 " for vertical pane in git diff tool
 set diffopt+=vertical
 
-set shada=!,'100,<50,s100,h
-
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
-
-autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
-
-" }}}
