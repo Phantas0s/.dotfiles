@@ -9,9 +9,6 @@
 # | General |
 # +---------+
 
-# zstyle pattern for the completion
-# :completion:<function>:<completer>:<command>:<argument>:<tag>
-
 # Load more completions
 fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
 
