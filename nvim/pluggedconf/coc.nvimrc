@@ -1,3 +1,28 @@
+" Coc extensions
+let g:coc_global_extensions = [
+            \ 'coc-css',
+            \ 'coc-html',
+            \ 'coc-json',
+            \ 'coc-yaml',
+            \ 'coc-godot',
+            \ 'coc-sql',
+            \ 'coc-db',
+            \ 'coc-snippets',
+            \ 'coc-lua',
+            \ 'coc-phpactor',
+            \ 'coc-php-cs-fixer',
+            \ 'coc-tsserver',
+            \ 'coc-eslint',
+            \ 'coc-pyright',
+            \ 'coc-metals',
+            \ 'coc-sh',
+            \ 'coc-pyright',
+            \]
+
+" \ 'coc-snippets',
+" \ 'coc-markmap',
+
+
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -25,7 +50,6 @@ nmap <silent><leader>] <Plug>(coc-definition)
 nmap <silent><leader>]t <Plug>(coc-type-definition)
 nmap <silent><leader>]i <Plug>(coc-implementation)
 nmap <silent><leader>]r <Plug>(coc-references)
-
 
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

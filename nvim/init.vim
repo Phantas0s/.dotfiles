@@ -47,30 +47,6 @@ source $VIMCONFIG/projects.nvimrc
 " close the buffer
 nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr>
 
-" Coc extensions
-let g:coc_global_extensions = [
-            \ 'coc-css',
-            \ 'coc-html',
-            \ 'coc-json',
-            \ 'coc-yaml',
-            \ 'coc-godot',
-            \ 'coc-sql',
-            \ 'coc-db',
-            \ 'coc-snippets',
-            \ 'coc-lua',
-            \ 'coc-phpactor',
-            \ 'coc-php-cs-fixer',
-            \ 'coc-tsserver',
-            \ 'coc-eslint',
-            \ 'coc-pyright',
-            \ 'coc-metals',
-            \ 'coc-sh',
-            \ 'coc-pyright',
-            \]
-
-" \ 'coc-snippets',
-" \ 'coc-markmap',
-
 let g:vim_markdown_folding_disabled = 1
 
 " Lua syntax highlighting in Vimscript (*.vim) files
