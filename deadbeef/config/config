@@ -10,7 +10,7 @@ filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Video%20Games/OST file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Artiste/Electro/Techno%20-%20Techtrance
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
@@ -31,7 +31,7 @@ gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.332357 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1275 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.332357 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=906 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -79,12 +79,12 @@ hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 183
-logwindow.geometry.y 225
-mainwin.geometry.h 723
+logwindow.geometry.x 322
+logwindow.geometry.y 219
+mainwin.geometry.h 701
 mainwin.geometry.w 1366
 mainwin.geometry.x 1920
-mainwin.geometry.y 454
+mainwin.geometry.y 476
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -145,24 +145,24 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -8.527483
-playlist.current 3
+playback.volume -8.849515
+playlist.current 7
 playlist.cursor.0 16
 playlist.cursor.1 87
-playlist.cursor.2 739
-playlist.cursor.3 257
+playlist.cursor.2 9
+playlist.cursor.3 1487
 playlist.cursor.4 60
 playlist.cursor.5 103
 playlist.cursor.6 51
-playlist.cursor.7 51
+playlist.cursor.7 0
 playlist.scroll.0 0
 playlist.scroll.1 0
-playlist.scroll.2 0
-playlist.scroll.3 5935
+playlist.scroll.2 -9
+playlist.scroll.3 34995
 playlist.scroll.4 1247
 playlist.scroll.5 0
 playlist.scroll.6 1514
-playlist.scroll.7 1514
+playlist.scroll.7 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 **Main Playlist**
 playlist.tab.00001 Good old days
@@ -171,6 +171,7 @@ playlist.tab.00003 Chill
 playlist.tab.00004 Video Games
 playlist.tab.00005 Tool
 playlist.tab.00006 MJK
+playlist.tab.00007 Chiptune
 prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 200
