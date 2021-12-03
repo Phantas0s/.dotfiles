@@ -81,10 +81,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 322
 logwindow.geometry.y 219
-mainwin.geometry.h 701
-mainwin.geometry.w 1366
-mainwin.geometry.x 1920
-mainwin.geometry.y 476
+mainwin.geometry.h 1133
+mainwin.geometry.w 1920
+mainwin.geometry.x 0
+mainwin.geometry.y 44
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -145,8 +145,8 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -8.849515
-playlist.current 7
+playback.volume -19.75734
+playlist.current 8
 playlist.cursor.0 16
 playlist.cursor.1 87
 playlist.cursor.2 9
@@ -154,7 +154,8 @@ playlist.cursor.3 1487
 playlist.cursor.4 60
 playlist.cursor.5 103
 playlist.cursor.6 51
-playlist.cursor.7 0
+playlist.cursor.7 25
+playlist.cursor.8 0
 playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.2 -9
@@ -162,7 +163,8 @@ playlist.scroll.3 34995
 playlist.scroll.4 1247
 playlist.scroll.5 0
 playlist.scroll.6 1514
-playlist.scroll.7 0
+playlist.scroll.7 157
+playlist.scroll.8 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 **Main Playlist**
 playlist.tab.00001 Good old days
@@ -172,14 +174,15 @@ playlist.tab.00004 Video Games
 playlist.tab.00005 Tool
 playlist.tab.00006 MJK
 playlist.tab.00007 Chiptune
+playlist.tab.00008 Techtrance
 prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 200
 prefwin.geometry.y 205
 resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.playlist 8
+resume.position 0.0000000
+resume.track 34
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 1086
