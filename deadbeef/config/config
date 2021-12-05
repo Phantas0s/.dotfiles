@@ -31,7 +31,7 @@ gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.332357 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=906 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.000000 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.332357 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1275 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -81,10 +81,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 322
 logwindow.geometry.y 219
-mainwin.geometry.h 1133
+mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
-mainwin.geometry.y 44
+mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -145,8 +145,8 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -19.75734
-playlist.current 8
+playback.volume -2.766733
+playlist.current 9
 playlist.cursor.0 16
 playlist.cursor.1 87
 playlist.cursor.2 9
@@ -154,8 +154,9 @@ playlist.cursor.3 1487
 playlist.cursor.4 60
 playlist.cursor.5 103
 playlist.cursor.6 51
-playlist.cursor.7 25
+playlist.cursor.7 37
 playlist.cursor.8 0
+playlist.cursor.9 12
 playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.2 -9
@@ -163,8 +164,9 @@ playlist.scroll.3 34995
 playlist.scroll.4 1247
 playlist.scroll.5 0
 playlist.scroll.6 1514
-playlist.scroll.7 157
+playlist.scroll.7 180
 playlist.scroll.8 0
+playlist.scroll.9 605
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 **Main Playlist**
 playlist.tab.00001 Good old days
@@ -175,14 +177,15 @@ playlist.tab.00005 Tool
 playlist.tab.00006 MJK
 playlist.tab.00007 Chiptune
 playlist.tab.00008 Techtrance
+playlist.tab.00009 Extrawelt
 prefwin.geometry.h 540
 prefwin.geometry.w 656
 prefwin.geometry.x 200
 prefwin.geometry.y 205
 resume.paused 0
-resume.playlist 8
-resume.position 0.0000000
-resume.track 34
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 1086
