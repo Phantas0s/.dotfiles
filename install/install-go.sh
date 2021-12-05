@@ -28,18 +28,18 @@ binaries=(
 
 function install_go_binaries() {
     for item in "${binaries[@]}"; do
-        filename=$(basename ${item})
-        if [ ! -f $GOPATH/bin/$filename ]; then
-            dot_mes_install ${filename}
-            go get -u $item;
+        filename=$(basename "${item}")
+        if [ ! -f "$GOPATH/bin/$filename" ]; then
+            dot_mes_install "${filename}"
+            go install "${item}@latest";
         fi
     done
 }
 
 function update_go_binaries() {
     for item in "${binaries[@]}"; do
-        filename=$(basename ${item})
-        dot_mes_update ${filename}
-        go get -u $item;
+        filename=$(basename "${item}")
+        dot_mes_update "${filename}"
+        go install "${item}@latest"
     done
 }

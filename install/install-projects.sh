@@ -8,8 +8,6 @@ mkdir -p "$GOPATH/src/github.com/Phantas0s" > /dev/null
 ## Public projects
 
 cd "$HOME/workspace" || exit
-[ ! -d "$HOME/workspace/vim" ] && git clone https://github.com/vim/vim
-[ ! -d "$HOME/workspace/neovim" ] && git clone https://github.com/neovim/neovim
 [ ! -d "$HOME/workspace/code-maat" ] && git clone https://github.com/adamtornhill/code-maat
 
 ## Private projects

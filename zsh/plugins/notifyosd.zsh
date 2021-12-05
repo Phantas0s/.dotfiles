@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # commands to ignore
 cmdignore=(htop tmux top vim nvim testomatic pgcli bat mux tmuxp gc)
 
