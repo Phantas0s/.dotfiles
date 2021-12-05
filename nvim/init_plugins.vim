@@ -110,10 +110,10 @@ Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
 " Golang
-Plug 'fatih/vim-go', {'for': 'go'} " general plugin
-Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
-Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
+" Plug 'fatih/vim-go', {'for': 'go'} " general plugin
+" Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
+Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 
 " Databases
 Plug 'tpope/vim-dadbod'

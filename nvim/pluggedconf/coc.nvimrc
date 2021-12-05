@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
             \ 'coc-yaml',
             \ 'coc-godot',
             \ 'coc-sql',
+            \ 'coc-go',
             \ 'coc-db',
             \ 'coc-snippets',
             \ 'coc-lua',

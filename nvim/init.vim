@@ -74,6 +74,9 @@ nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap <silent> gX :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
 
+" open current file using xdg-open
+nnoremap <leader>x :silent :execute "!xdg-open %"<CR>
+
 " Go to file even if doesn't exist
 map gf :e <cfile><CR>
 

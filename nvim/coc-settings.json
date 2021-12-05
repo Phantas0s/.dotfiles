@@ -13,12 +13,6 @@
                     "classpath-cmd": ["clj", "-Spath"]}]
             }
         },
-        "golang": {
-            "command": "gopls",
-            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-            "trace.server": "verbose",
-            "filetypes": ["go"]
-        },
         "godot": {
             "host": "127.0.0.1",
             "filetypes": ["gd", "gdscript3"],
