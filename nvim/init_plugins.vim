@@ -37,7 +37,6 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 " navigation
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
 " Plug 'kyazdani42/nvim-tree.lua'
-" Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
 " replace f F t T - don't work well with dot though :'(
@@ -91,6 +90,9 @@ Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
 Plug 'ron89/thesaurus_query.vim' " Thesaurus
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+" LaTeX / writting
+Plug 'lervag/vimtex'
+
 " PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
@@ -124,6 +126,10 @@ Plug 'chrisbra/csv.vim'
 
 " VimScript
 Plug 'tpope/vim-scriptease' " Debug vimscript
+
+" Bad Practices
+Plug 'antonk52/bad-practices.nvim'
+" Plug 'rcarriga/nvim-notify'
 
 call plug#end()
 " }}}

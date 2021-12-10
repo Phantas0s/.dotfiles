@@ -18,6 +18,7 @@ let g:coc_global_extensions = [
             \ 'coc-metals',
             \ 'coc-sh',
             \ 'coc-pyright',
+            \ 'coc-vimtex',
             \]
 
 " \ 'coc-snippets',
