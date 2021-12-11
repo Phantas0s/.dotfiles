@@ -52,6 +52,12 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # +------+
+# | xlip |
+# +------+
+
+alias cb='xclip -sel clip'
+
+# +------+
 # | ping |
 # +------+
 
