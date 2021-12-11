@@ -67,9 +67,13 @@ map <silent> <esc> <Cmd>noh<cr>
 vmap < <gv
 vmap > >gv
 
-" location & quickfix window
+" location & quickfix
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
+nnoremap <leader>j :cnext<CR>
+nnoremap <leader>k :cprevious<CR>
+nnoremap <leader>lj :lnext<CR>
+nnoremap <leader>lk :lprevious<CR>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap <silent> gX :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
