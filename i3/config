@@ -182,7 +182,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+p focus parent
 
 # focus the child container
-bindsym $mod+c focus child
+# bindsym $mod+c focus child
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -281,9 +281,9 @@ assign [class="VirtualBox Machine" instance="virtualBox Machine"] → $vm
 ####################
 
 # reload the configuration file
-bindsym $mod+Ctrl+c reload
+bindsym $mod+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Ctrl+r restart
+bindsym $mod+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Ctrl+F12 exec i3-msg exit
 
@@ -311,7 +311,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
