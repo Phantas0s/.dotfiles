@@ -146,7 +146,7 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -9.394084
-playlist.current 8
+playlist.current 3
 playlist.cursor.0 16
 playlist.cursor.1 87
 playlist.cursor.2 9
@@ -184,9 +184,9 @@ prefwin.geometry.w 717
 prefwin.geometry.x 200
 prefwin.geometry.y 205
 resume.paused 0
-resume.playlist 8
-resume.position 0.0465341
-resume.track 89
+resume.playlist 3
+resume.position 0.0928798
+resume.track 1551
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 418
