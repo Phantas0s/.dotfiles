@@ -449,3 +449,6 @@ bindsym $mod+z exec "setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=
 exec --no-startup-id $I3_CONFIG/scripts/remaps.sh
 
 bindsym $mod+Ctrl+f fullscreen toggle global
+
+# Switch keylock on at startup
+exec --no-startup-id numlockx on
