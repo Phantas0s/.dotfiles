@@ -17,7 +17,7 @@ fi
 # From Cloud
 ln -sf "$DOTFILES_CLOUD/projects.nvimrc" "$VIMCONFIG"
 
-# install vim session folder
+# crreate vim sessions and macros folder
 mkdir -p "$VIMCONFIG/sessions"
 
 # install nvim config
@@ -51,6 +51,10 @@ ln -sf "$DOTFILES/nvim/coc-settings.json" "$VIMCONFIG/coc-settings.json"
 
 # color schemes
 ln -sf "$DOTFILES/nvim/colors" "$VIMCONFIG"
+
+# macros
+rm -rf "$VIMCONFIG/macros"
+ln -sf "$DOTFILES/nvim/macros" "$VIMCONFIG/macros"
 
 # indentation
 rm -rf "$VIMCONFIG/after/indent"

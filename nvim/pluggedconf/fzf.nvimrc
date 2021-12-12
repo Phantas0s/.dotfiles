@@ -100,4 +100,4 @@ let g:fzf_action = {
   \ 'ctrl-h': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-nmap <leader><tab> <plug>(fzf-maps-n)
+" nmap <leader><tab> <plug>(fzf-maps-n)
