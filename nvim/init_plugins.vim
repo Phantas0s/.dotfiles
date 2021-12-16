@@ -128,7 +128,8 @@ Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-scriptease' " Debug vimscript
 
 " Bad Practices
-Plug 'antonk52/bad-practices.nvim'
+" slow down everything
+" Plug 'antonk52/bad-practices.nvim'
 " Plug 'rcarriga/nvim-notify'
 
 call plug#end()

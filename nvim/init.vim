@@ -299,6 +299,9 @@ set number relativenumber
 " for vertical pane in git diff tool
 set diffopt+=vertical
 
+" to be able to use find in any projects
+set path=.,**
+
 if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
