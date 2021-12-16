@@ -1,4 +1,3 @@
-" Install Plugins ---------------------- {{{
 " +----------------+
 " | install plugin |
 " +----------------+
@@ -25,7 +24,7 @@ Plug 'itchyny/lightline.vim' " Status bar
 Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
 Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
 Plug 'alx741/vinfo' " Open info documentation files
-Plug 'AndrewRadev/splitjoin.vim' " Split arrays in PHP / struct in Go / other things
+Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
 
 " undo tree
 Plug 'simnalamburt/vim-mundo' " Undo tree display
@@ -46,7 +45,7 @@ Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 " tmux
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
-Plug 'jpalardy/vim-slime'
+Plug 'jpalardy/vim-slime' " Can send to tmux pane from Vim - cool for REPL
 
 " project management
 Plug 'mhinz/vim-startify' " startify for startup cow
@@ -60,10 +59,10 @@ Plug 'puremourning/vimspector'
 " git
 Plug 'tpope/vim-fugitive' "wrapper for git
 Plug 'mhinz/vim-signify' "  display git diff in the left gutter
-" Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim' " Display commits for project / file
-Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
+" Plug 'airblade/vim-gitgutter'
+" Plug 'tpope/vim-rhubarb'
+" Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
 
 " syntax highlighting
 Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
@@ -80,8 +79,6 @@ Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 Plug 'junegunn/fzf.vim'
 
 " markdown / writting
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
-Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 Plug 'godlygeek/tabular' " Align plugin (useful for markdown tables for example)
 Plug 'christoomey/vim-titlecase' " Titlecase with gt
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
@@ -89,6 +86,8 @@ Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
 Plug 'ron89/thesaurus_query.vim' " Thesaurus
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
+" Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
 " LaTeX / writting
 Plug 'lervag/vimtex'
@@ -118,8 +117,8 @@ Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 
 " Databases
-Plug 'tpope/vim-dadbod'
-Plug 'kristijanhusak/vim-dadbod-ui'
+" Plug 'tpope/vim-dadbod'
+" Plug 'kristijanhusak/vim-dadbod-ui'
 
 " CSV
 Plug 'chrisbra/csv.vim'
@@ -133,4 +132,3 @@ Plug 'tpope/vim-scriptease' " Debug vimscript
 " Plug 'rcarriga/nvim-notify'
 
 call plug#end()
-" }}}

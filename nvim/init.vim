@@ -20,10 +20,6 @@ let maplocalleader = "\<space>"
 
 source $VIMCONFIG/init_plugins.vim
 
-" +---------------+
-" | plugin config |
-" +---------------+
-
 " Load custom library for lua
 lua require('hypnos/kit')
 
@@ -32,20 +28,9 @@ for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
 endfor
 
-let g:slime_target = "tmux"
-let g:slime_paste_file = tempname()
-" let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
-let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
-
-" Impossible to put it in vim-delve.nvimrc file...
-let g:delve_breakpoint_sign = ""
-let g:delve_tracepoint_sign = ""
-
-" project config - personnal file (not on my git repository)
-source $VIMCONFIG/projects.nvimrc
-
-" close the buffer
-nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr>
+" +------------------+
+" | global variables |
+" +------------------+
 
 let g:vim_markdown_folding_disabled = 1
 
@@ -67,6 +52,8 @@ map <silent> <esc> <Cmd>noh<cr>
 vmap < <gv
 vmap > >gv
 
+inoremap <C-d> <Del>
+
 " location & quickfix
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
@@ -74,6 +61,9 @@ nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprevious<CR>
 nnoremap <leader>lj :lnext<CR>
 nnoremap <leader>lk :lprevious<CR>
+
+" close the current buffer and switch to alternate buffer
+nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap <silent> gX :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
