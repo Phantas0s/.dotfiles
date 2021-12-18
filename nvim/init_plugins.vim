@@ -4,8 +4,7 @@
 
 call plug#begin("$VIMCONFIG/plugged")
 
-" display the result when searching
-Plug 'henrik/vim-indexed-search'
+
 
 " general
 Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
@@ -13,18 +12,22 @@ Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple versio
 Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-commentary' " keystroke to comment automatically
 
-Plug 'wellle/targets.vim' " add new text object (can delete between comma with di, for example)
-" Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text
+Plug 'wellle/targets.vim' " add new text objects (can delete between comma with di, for example)
+Plug 'henrik/vim-indexed-search' " display the result when searching
 Plug 'machakann/vim-swap' " swap arguments in parenthesis
-Plug 'chaoren/vim-wordmotion' " camel case motion
+Plug 'itchyny/lightline.vim' " Status bar
+Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
+" Plug 'chaoren/vim-wordmotion' " camel case motion
+" Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
+" Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text (default in Neovim now)
+
+" snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' " snippets
-Plug 'itchyny/lightline.vim' " Status bar
-" Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
-Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
+
+" reading doc in Vim
 Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
 Plug 'alx741/vinfo' " Open info documentation files
-Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
 
 " undo tree
 Plug 'simnalamburt/vim-mundo' " Undo tree display
@@ -35,12 +38,11 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 
 " navigation
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
-" Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
-" replace f F t T - don't work well with dot though :'(
-Plug 'yangmillstheory/vim-snipe'
+Plug 'yangmillstheory/vim-snipe' " replace f F t T - don't work well with dot though :'(
 Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
+" Plug 'kyazdani42/nvim-tree.lua'
 
 " tmux
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
@@ -94,11 +96,11 @@ Plug 'lervag/vimtex'
 
 " PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion
+" Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 
 " LISP
 Plug 'guns/vim-sexp', { 'for': ['clojure', 'scheme'] }
@@ -111,14 +113,17 @@ Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
 " Golang
-" Plug 'fatih/vim-go', {'for': 'go'} " general plugin
-" Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
+" Plug 'fatih/vim-go', {'for': 'go'} " general plugin
+" Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 
 " Databases
 " Plug 'tpope/vim-dadbod'
 " Plug 'kristijanhusak/vim-dadbod-ui'
+
+" CSS
+Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
 
 " CSV
 Plug 'chrisbra/csv.vim'
@@ -127,7 +132,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-scriptease' " Debug vimscript
 
 " Bad Practices
-" slow down everything
+" slow down everything - but good plugin idea
 " Plug 'antonk52/bad-practices.nvim'
 " Plug 'rcarriga/nvim-notify'
 

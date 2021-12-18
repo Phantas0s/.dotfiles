@@ -137,7 +137,6 @@ let g:go_fmt_options = {
             \ 'gofmt': '-s',
             \ }
 
-nnoremap <leader>gg :Neomake<space>
 autocmd FileType go nmap <buffer><leader>go :exec "Neomake golangci"<cr>
 
 " +----+
