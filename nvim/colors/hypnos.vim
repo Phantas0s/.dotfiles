@@ -16,6 +16,8 @@ hi Delimiter ctermfg=magenta ctermbg=NONE cterm=NONE
 
 hi WarningMsg ctermfg=red ctermbg=236 cterm=NONE
 
+hi Todo ctermfg=red ctermbg=white cterm=NONE
+
 " tabs
 hi TabLineSel ctermfg=red ctermbg=red cterm=bold
 hi TabLineFill ctermfg=red ctermbg=red cterm=bold
@@ -109,7 +111,6 @@ hi SpellCap ctermfg=236 ctermbg=yellow cterm=bold
 "hi SpecialChar ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Conditional ctermfg=1 ctermbg=NONE cterm=bold
 "hi StorageClass ctermfg=60 tc=NONE cterm=bold
-"hi Todo ctermfg=189 ctermbg=1 cterm=NONE
 "hi Special ctermfg=228 ctermbg=NONE cterm=NONE
 "hi StatusLine ctermfg=236 ctermbg=1 cterm=bold
 "hi Label ctermfg=1 ctermbg=NONE cterm=bold

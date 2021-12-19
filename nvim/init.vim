@@ -186,6 +186,9 @@ augroup END
 " Formatting options (:help fo-table)
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Automatically source vimrc after saving
+" autocmd vimrc bufwritepost init.vim source $MYVIMRC
+
 " +--------------+
 " | Highlighting |
 " +--------------+
@@ -292,6 +295,7 @@ set diffopt+=vertical
 " to be able to use find in any projects
 set path=.,**
 
+" Set ripgrep for grep program
 if executable('rg')
     set grepprg=rg\ --vimgrep
 endif

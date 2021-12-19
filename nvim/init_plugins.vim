@@ -4,8 +4,6 @@
 
 call plug#begin("$VIMCONFIG/plugged")
 
-
-
 " general
 Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
 Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
