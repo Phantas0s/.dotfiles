@@ -1,4 +1,7 @@
 " Coc extensions
+
+set updatetime=300
+
 let g:coc_global_extensions = [
             \ 'coc-css',
             \ 'coc-html',
@@ -31,7 +34,7 @@ inoremap <silent><expr><C-j>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
