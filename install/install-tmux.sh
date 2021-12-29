@@ -12,6 +12,9 @@ fi
 
 ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux"
 
+# Generate default tmux conf
+# tmux -f /dev/null show-options -s \; show-options -g \; list-keys > "$DOTFILES/tmux/tmux.defaults.conf"
+
 if [ ! -d "$XDG_CONFIG_HOME/tmux/plugins/tpm" ]
 then
     git clone https://github.com/tmux-plugins/tpm "$XDG_CONFIG_HOME/tmux/plugins/tpm"
