@@ -194,7 +194,7 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 " +--------------+
 
 " highlight the line which is longer than the defined margin (120 character)
-highlight MaxLineChar ctermbg=red
+
 autocmd vimrc FileType php,js,vue,go call matchadd('MaxLineChar', '\%120v', 100)
 
 " Highlight briefly yanked text

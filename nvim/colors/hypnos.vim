@@ -6,6 +6,7 @@ hi SignColumn ctermfg=236 ctermbg=236 cterm=NONE
 hi VertSplit ctermfg=236 ctermbg=236 cterm=bold
 hi CursorLine ctermfg=NONE ctermbg=236 cterm=bold
 hi CursorLineNr ctermfg=red ctermbg=236 cterm=bold
+hi Todo ctermfg=red ctermbg=white cterm=NONE
 
 hi Search ctermfg=yellow ctermbg=NONE cterm=bold
 hi SpellRare ctermfg=yellow ctermbg=232 cterm=bold
@@ -15,8 +16,6 @@ hi Statement ctermfg=blue ctermbg=NONE cterm=NONE
 hi Delimiter ctermfg=magenta ctermbg=NONE cterm=NONE
 
 hi WarningMsg ctermfg=red ctermbg=236 cterm=NONE
-
-hi Todo ctermfg=red ctermbg=white cterm=NONE
 
 " tabs
 hi TabLineSel ctermfg=red ctermbg=red cterm=bold
@@ -84,6 +83,10 @@ hi DiffText ctermfg=yellow ctermbg=236 cterm=NONE
 " Neomake plugin
 hi NeomakeWarningSign ctermfg=yellow ctermbg=236
 hi SpellCap ctermfg=236 ctermbg=yellow cterm=bold
+
+" quick-scope plugin
+highlight QuickScopePrimary ctermfg=red cterm=underline
+highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 
 "hi CTagsMember-i  no settings --
 "hi CTagsGlobalConstant-i  no settings --

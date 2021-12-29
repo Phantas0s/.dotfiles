@@ -4,7 +4,10 @@
 
 call plug#begin("$VIMCONFIG/plugged")
 
-" general
+" +---------+
+" | General |
+" +---------+
+
 Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
 Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
@@ -19,41 +22,69 @@ Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / 
 " Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
 " Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text (default in Neovim now)
 
-" snippets
+" +----------+
+" | Snippets |
+" +----------+
+
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' " snippets
 
-" reading doc in Vim
+" +--------------------+
+" | Reading doc in Vim |
+" +--------------------+
+
 Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
 Plug 'alx741/vinfo' " Open info documentation files
 
-" undo tree
+" +-----------+
+" | Undo tree |
+" +-----------+
+
 Plug 'simnalamburt/vim-mundo' " Undo tree display
 
-" outliners
+" +-----------+
+" | Outliners |
+" +-----------+
+
 Plug 'majutsushi/tagbar'
 Plug 'liuchengxu/vista.vim' " Use LSP
 
-" navigation
+" +------------+
+" | Navigation |
+" +------------+
+
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
 
 Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
-Plug 'yangmillstheory/vim-snipe' " replace f F t T - don't work well with dot though :'(
+" Plug 'yangmillstheory/vim-snipe' " replace f F t T - don't work well with dot though :'(
+Plug 'unblevable/quick-scope'
 Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 " Plug 'kyazdani42/nvim-tree.lua'
 
-" tmux
+" +------+
+" | tmux |
+" +------+
+
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
 Plug 'jpalardy/vim-slime' " Can send to tmux pane from Vim - cool for REPL
 
-" project management
+" +--------------------+
+" | Project management |
+" +--------------------+
+
 Plug 'mhinz/vim-startify' " startify for startup cow
 
-" compiler / linter
+" +-------------------+
+" | Compiler / Linter |
+" +-------------------+
+
 Plug 'neomake/neomake'
 
-" debugger
+" +----------+
+" | Debugger |
+" +----------+
+
 Plug 'puremourning/vimspector'
 
 " git
@@ -133,5 +164,10 @@ Plug 'tpope/vim-scriptease' " Debug vimscript
 " slow down everything - but good plugin idea
 " Plug 'antonk52/bad-practices.nvim'
 " Plug 'rcarriga/nvim-notify'
+
+" Knowledge Management
+
+" Google Keep
+" Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
