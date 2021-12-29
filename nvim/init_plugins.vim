@@ -69,6 +69,12 @@ Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " synta
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
 Plug 'jpalardy/vim-slime' " Can send to tmux pane from Vim - cool for REPL
 
+" +-------+
+" | kitty |
+" +-------+
+
+Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ~/.config/kitty/'}
+
 " +--------------------+
 " | Project management |
 " +--------------------+
