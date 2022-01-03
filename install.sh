@@ -83,6 +83,7 @@ dot_is_installed taskell && dot_install taskell
 dot_is_installed devdash && dot_install devdash
 dot_is_installed php && dot_install php
 dot_is_installed kitty && dot_install kitty
+dot_is_installed sxiv && dot_install sxiv
 
 dot_install gtk
 dot_install default-app
