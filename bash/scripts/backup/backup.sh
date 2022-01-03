@@ -60,6 +60,7 @@ function run()
         ["$MEDIA/Music"]=music
         ["$MEDIA/Photos"]=photos
         ["$MEDIA/Video"]=video
+        ["$MEDIA/Animation"]=animation
     )
 
     # ! to expand the keys

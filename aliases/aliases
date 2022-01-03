@@ -23,6 +23,8 @@ alias xpropc='xprop | grep WM_CLASS' # display xprop class
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index # directory stack
 
+alias kitty='kitty -o allow_remote_control=yes --single-instance --listen-on unix:@mykitty'
+
 # +----+
 # | ls |
 # +----+
