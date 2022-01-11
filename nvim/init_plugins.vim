@@ -93,7 +93,10 @@ Plug 'neomake/neomake'
 
 Plug 'puremourning/vimspector'
 
-" git
+" +-----+
+" | Git |
+" +-----+
+
 Plug 'tpope/vim-fugitive' "wrapper for git
 Plug 'mhinz/vim-signify' "  display git diff in the left gutter
 Plug 'junegunn/gv.vim' " Display commits for project / file
@@ -101,21 +104,33 @@ Plug 'junegunn/gv.vim' " Display commits for project / file
 " Plug 'tpope/vim-rhubarb'
 " Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
 
-" syntax highlighting
+" +---------------------+
+" | Syntax highlighting |
+" +---------------------+
+
 Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
 Plug 'chr4/nginx.vim' " nginx
 Plug 'wgwoods/vim-systemd-syntax' " systemd
 Plug 'cespare/vim-toml' " toml
 
-" lsp
+" +-----+
+" | LSP |
+" +-----+
+
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'rafcamlet/coc-nvim-lua'
 Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 
-" fzf
+" +-----+
+" | FZF |
+" +-----+
+
 Plug 'junegunn/fzf.vim'
 
-" markdown / writting
+" +----------+
+" | Writting |
+" +----------+
+
 Plug 'godlygeek/tabular' " Align plugin (useful for markdown tables for example)
 Plug 'christoomey/vim-titlecase' " Titlecase with gt
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
@@ -126,10 +141,13 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 " Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 " Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
-" LaTeX / writting
+" latex
 Plug 'lervag/vimtex'
 
-" PHP
+" +-----+
+" | PHP |
+" +-----+
+
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
@@ -137,33 +155,46 @@ Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion
 " Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
 
-" LISP
+" +------+
+" | LISP |
+" +------+
+
 Plug 'guns/vim-sexp', { 'for': ['clojure', 'scheme'] }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': ['clojure', 'scheme'] }
 
-" Clojure
+" +---------+
+" | Clojure |
+" +---------+
+
 Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
 Plug 'guns/vim-clojure-static', {'for': 'clojure'}
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
-" Golang
+" +--------+
+" | Golang |
+" +--------+
+
 Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
 Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 " Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 " Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 
-" Databases
-" Plug 'tpope/vim-dadbod'
-" Plug 'kristijanhusak/vim-dadbod-ui'
+" +-----+
+" | CSS |
+" +-----+
 
-" CSS
 Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
 
-" CSV
+" +-----+
+" | CSV |
+" +-----+
 Plug 'chrisbra/csv.vim'
 
-" VimScript
+" +-----------+
+" | VimScript |
+" +-----------+
+
 Plug 'tpope/vim-scriptease' " Debug vimscript
 
 " Bad Practices
@@ -172,8 +203,5 @@ Plug 'tpope/vim-scriptease' " Debug vimscript
 " Plug 'rcarriga/nvim-notify'
 
 " Knowledge Management
-
-" Google Keep
-" Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
