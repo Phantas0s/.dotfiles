@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# +-----+
+# | Git |
+# +-----+
 
 # checkout git branch (including remote branches) with FZF
 fgco() {
@@ -7,10 +10,6 @@ fgco() {
   local branch=$(echo "$branches" |
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-}
-
-fpacs() {
-    pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
 }
 
 # git log browser with FZF
@@ -53,6 +52,18 @@ fstash() {
     fi
   done
 }
+
+# +--------+
+# | Pacman |
+# +--------+
+
+fpac() {
+    pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
+}
+
+# +------+
+# | tmux |
+# +------+
 
 fmux() {
     set -euo pipefail
@@ -109,19 +120,32 @@ ftmux() {
     fi
 }
 
+# +-------+
+# | Other |
+# +-------+
+
+# List install files for dotfiles
 fdot() {
     file=$(find "$DOTFILES/install" -exec basename {} ';' | sort | uniq | nl | fzf | cut -f 2)
     "$EDITOR" "$DOTFILES/install/$file"
 }
 
+# List projects
 fwork() {
     cd ~/workspace/$(find ~/workspace/* -type d -prune -exec basename {} ';' | sort | uniq | nl | fzf | cut -f 2)
 }
 
+# List mindmaps
 fmind() {
     local -r root="$CLOUD/knowledge_base"
     files=$(ls $root/**/*.mm | sed "s#$root/##" | fzf -m | tr -s "\n" " " | sed "s#^#$root/#;s#\s# $root/#g")
     freemind $(echo $files) &> /dev/null &
+}
+
+# List tracking spreadsheets (productivity, money ...)
+ftrack() {
+    file=$(ls $CLOUD/tracking/**/*.{ods,csv} | fzf) || return
+    libreoffice "$file" &> /dev/null &
 }
 
 fd() {
@@ -133,7 +157,3 @@ fd() {
     d | fzf --height="20%" | cut -f 1 | source /dev/stdin
 }
 
-ftrack() {
-    file=$(ls $CLOUD/tracking/**/*.{ods,csv} | fzf) || return
-    libreoffice "$file" &> /dev/null &
-}

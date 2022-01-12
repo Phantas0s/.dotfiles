@@ -62,9 +62,9 @@ Each of your screen has a number. That's what `<screen_number>` is.
 
 ### Pacman Search
 
-* `fpacs`
+* `fpac`
 
-Search with fzf in all the available Pacman packages
+Search with fzf in all the available Pacman packages.
 
 ## Navigation
 

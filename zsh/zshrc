@@ -111,7 +111,7 @@ if [ $(command -v "fzf") ]; then
     source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
 
     # Search with fzf and open selected file with Vim
-    # bindkey -s '^v' 'vim $(fzf);^M'
+    bindkey -s '^v' 'vim $(fzf);^M'
 fi
 
 # Startup
@@ -129,13 +129,13 @@ ftmuxp
 
 # ctrl+l used for tmux (switch pane)
 bindkey -r '^l'
-
 bindkey -r '^g'
-bindkey -r '^p'
-bindkey -r '^w'
+bindkey '^g' clear-screen
 
-bindkey -s '^g' ' clear\n'
+bindkey -r '^p'
 bindkey -s '^p' 'fmux\n'
+
+bindkey -r '^w'
 bindkey -s '^w' 'fwork\n'
 
 # +------+
