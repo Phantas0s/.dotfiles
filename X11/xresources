@@ -32,7 +32,7 @@
 *.color14:      #afd7ff
 
 ! white 239 15
-*.color7:       #e4e4e4
+*.color7:       #eeeeee
 *.color15:      #ffffff
 
 !!!!!!!!!!!!!!!!!!
@@ -58,7 +58,7 @@ URxvt*cursorColor: #ffffff
 
 ! Useful for transparency
 URxvt*depth: 32
-URxvt.background: [85]#181815
+URxvt.background: [90]#181815
 
 ! URxvt*pointerBlank: false
 ! DEPRECATED - might be used by transparency - use URxvt*transparent: true
