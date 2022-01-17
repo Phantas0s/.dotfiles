@@ -405,7 +405,7 @@ function! plug#end()
 
   for [map, names] in items(lod.map)
     for [mode, map_prefix, key_prefix] in
-          \ [['i', '<C-O>', ''], ['n', '', ''], ['v', '', 'gv'], ['o', '', '']]
+          \ [['i', '<C-\><C-O>', ''], ['n', '', ''], ['v', '', 'gv'], ['o', '', '']]
       execute printf(
       \ '%snoremap <silent> %s %s:<C-U>call <SID>lod_map(%s, %s, %s, "%s")<CR>',
       \ mode, map, map_prefix, string(map), string(names), mode != 'i', key_prefix)
@@ -1208,7 +1208,8 @@ function! s:update_impl(pull, force, args) abort
   normal! 2G
   silent! redraw
 
-  let s:clone_opt = []
+  " Set remote name, overriding a possible user git config's clone.defaultRemoteName
+  let s:clone_opt = ['--origin', 'origin']
   if get(g:, 'plug_shallow', 1)
     call extend(s:clone_opt, ['--depth', '1'])
     if s:git_version_requirement(1, 7, 10)
