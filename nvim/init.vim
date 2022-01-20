@@ -34,6 +34,18 @@ endfor
 
 let g:vim_markdown_folding_disabled = 1
 
+" New and fast way for detecting filetype
+let g:do_filetype_lua = 1
+
+function! Markdonfolds()
+    let thisline = getline(v:lnum)
+    if match(thisline, '^#') >= 0
+        return ">1"
+    endif
+    return 1
+endfunction
+" let foldexpr = Markdonfolds()
+
 " Lua syntax highlighting in Vimscript (*.vim) files
 let g:vimsyn_embed = 'l;'
 
@@ -135,12 +147,6 @@ xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 
 " Disable anoying ex mode
 nnoremap Q <Nop>
-
-" Y behave like D
-nnoremap Y y$
-
-" Save files as root
-cnoremap w!! execute ':w suda://%'
 
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
@@ -276,7 +282,7 @@ set scrolloff=999
 set autowrite
 
 " Folds
-set foldlevelstart=0 " Start with all folds closed
+" set foldlevelstart=999 " Start with all folds open
 set foldtext=general#FoldText()
 
 " Show the substitution LIVE
@@ -293,7 +299,7 @@ set number relativenumber
 set diffopt+=vertical
 
 " to be able to use find in any projects
-set path=.,**
+set path=.,**,,
 
 " Set ripgrep for grep program
 if executable('rg')

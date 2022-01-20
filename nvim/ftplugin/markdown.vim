@@ -28,3 +28,6 @@ let g:tagbar_type_markdown = {
 " Write mode
 setlocal number norelativenumber
 setlocal spell
+
+" let g:markdown_folding=1
+" norm! zi

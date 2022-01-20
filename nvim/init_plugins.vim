@@ -131,26 +131,25 @@ Plug 'junegunn/fzf.vim'
 " | Writting |
 " +----------+
 
-Plug 'godlygeek/tabular' " Align plugin (useful for markdown tables for example)
+Plug 'godlygeek/tabular' " Align stuff (useful for markdown tables for example)
 Plug 'christoomey/vim-titlecase' " Titlecase with gt
-Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " show grammar mistakes
+Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " Show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
 Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
 Plug 'ron89/thesaurus_query.vim' " Thesaurus
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " Preview markdown file in browser
+Plug 'lervag/vimtex' " latex
+
 " Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
 " Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
-
-" latex
-Plug 'lervag/vimtex'
 
 " +-----+
 " | PHP |
 " +-----+
 
-Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
-Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
+" Plug 'StanAngeloff/php.vim', {'for': 'php'}
+" Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
+" Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion
 " Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
@@ -176,7 +175,7 @@ Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 " +--------+
 
 Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
-Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
+" Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 " Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 " Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
 
@@ -189,6 +188,7 @@ Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and co
 " +-----+
 " | CSV |
 " +-----+
+
 Plug 'chrisbra/csv.vim'
 
 " +-----------+
@@ -197,8 +197,7 @@ Plug 'chrisbra/csv.vim'
 
 Plug 'tpope/vim-scriptease' " Debug vimscript
 
-" Bad Practices
-" slow down everything - but good plugin idea
+" Bad Practices - slow down everything, but good plugin idea
 " Plug 'antonk52/bad-practices.nvim'
 " Plug 'rcarriga/nvim-notify'
 
