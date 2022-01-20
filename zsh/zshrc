@@ -140,6 +140,10 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd '^v' edit-command-line
 
+source "$DOTFILES/zsh/plugins/fg_bg.sh"
+zle -N fg-bg
+bindkey '^Z' fg-bg
+
 source "$DOTFILES/zsh/kbd.zsh"
 
 # +------+

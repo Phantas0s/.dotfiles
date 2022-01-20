@@ -156,4 +156,3 @@ fd() {
 
     d | fzf --height="20%" | cut -f 1 | source /dev/stdin
 }
-
