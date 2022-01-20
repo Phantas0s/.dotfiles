@@ -145,8 +145,8 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -3.061833
-playlist.current 9
+playback.volume -7.809884
+playlist.current 3
 playlist.cursor.0 -1
 playlist.cursor.1 87
 playlist.cursor.2 9
@@ -184,9 +184,9 @@ prefwin.geometry.w 717
 prefwin.geometry.x 200
 prefwin.geometry.y 205
 resume.paused 0
-resume.playlist 9
-resume.position 0.0000000
-resume.track 91
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 267

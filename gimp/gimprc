@@ -32,7 +32,6 @@
 (color-profile-policy keep)
 (image-resize-fill-type white)
 (layer-new-name "main")
-(layer-new-fill-type foreground)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
