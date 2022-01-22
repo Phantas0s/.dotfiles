@@ -37,7 +37,7 @@
 				<key>invisibles</key>
 				<string>#ffd75f</string>
 				<key>lineHighlight</key>
-				<string>#eeeeee</string>
+				<string>#e4e4e4</string>
 				<key>selection</key>
 				<string>#87af87</string>
                 <key>gutterForeground</key>
@@ -151,7 +151,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#eeeeee</string>
+				<string>#e4e4e4</string>
 			</dict>
 		</dict>
 		<dict>
