@@ -1,8 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=wscript
+Name=A Wine application
 MimeType=text/vbscript;
-Exec=env WINEPREFIX="/home/hypnos/win32" /usr/bin/wine start /ProgIDOpen VBSFile %f
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/homm_3" /home/ubuntu/buildbot/runners/wine/lutris-6.1-x86_64/bin/wine start /ProgIDOpen VBSFile %f
 NoDisplay=true
 StartupNotify=true
-Icon=B13E_wscript.0
