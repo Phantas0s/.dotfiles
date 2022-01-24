@@ -10,20 +10,20 @@ augroup mdnumbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-let g:tagbar_type_markdown = {
-    \ 'ctagstype': 'markdown',
-    \ 'ctagsbin' : '/usr/bin/markdown2ctags',
-    \ 'ctagsargs' : '-f - --sort=yes',
-    \ 'kinds' : [
-        \ 's:sections',
-        \ 'i:images'
-    \ ],
-    \ 'sro' : '|',
-    \ 'kind2scope' : {
-        \ 's' : 'section',
-    \ },
-    \ 'sort': 0,
-\ }
+" let g:tagbar_type_markdown = {
+"     \ 'ctagstype': 'markdown',
+"     \ 'ctagsbin' : '/usr/bin/markdown2ctags',
+"     \ 'ctagsargs' : '-f - --sort=yes',
+"     \ 'kinds' : [
+"         \ 's:sections',
+"         \ 'i:images'
+"     \ ],
+"     \ 'sro' : '|',
+"     \ 'kind2scope' : {
+"         \ 's' : 'section',
+"     \ },
+"     \ 'sort': 0,
+" \ }
 
 " Write mode
 setlocal number norelativenumber

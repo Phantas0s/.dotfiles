@@ -148,6 +148,10 @@ xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 " Disable anoying ex mode
 nnoremap Q <Nop>
 
+" Paste from the yank buffer
+nnoremap <leader>p "0p
+nnoremap <leader>P "0P
+
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session

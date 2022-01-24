@@ -18,6 +18,7 @@ Plug 'henrik/vim-indexed-search' " display the result when searching
 Plug 'machakann/vim-swap' " swap arguments in parenthesis
 Plug 'itchyny/lightline.vim' " Status bar
 Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
+Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 " Plug 'chaoren/vim-wordmotion' " camel case motion
 " Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
 " Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text (default in Neovim now)
@@ -46,7 +47,7 @@ Plug 'simnalamburt/vim-mundo' " Undo tree display
 " | Outliners |
 " +-----------+
 
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 Plug 'liuchengxu/vista.vim' " Use LSP
 
 " +------------+
@@ -54,11 +55,10 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 " +------------+
 
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
+Plug 'unblevable/quick-scope' " Highlight characters when using f F t T
 
-Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
+" Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
 " Plug 'yangmillstheory/vim-snipe' " replace f F t T - don't work well with dot though :'(
-Plug 'unblevable/quick-scope'
-Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 " Plug 'kyazdani42/nvim-tree.lua'
 
 " +------+
@@ -85,13 +85,13 @@ Plug 'mhinz/vim-startify' " startify for startup cow
 " | Compiler / Linter |
 " +-------------------+
 
-Plug 'neomake/neomake'
+Plug 'neomake/neomake' " Maker & Linter
 
 " +----------+
 " | Debugger |
 " +----------+
 
-Plug 'puremourning/vimspector'
+Plug 'puremourning/vimspector' "Multi language debugger
 
 " +-----+
 " | Git |
@@ -127,9 +127,9 @@ Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 
 Plug 'junegunn/fzf.vim'
 
-" +----------+
-" | Writting |
-" +----------+
+" +---------+
+" | Writing |
+" +---------+
 
 Plug 'godlygeek/tabular' " Align stuff (useful for markdown tables for example)
 Plug 'christoomey/vim-titlecase' " Titlecase with gt
@@ -140,8 +140,8 @@ Plug 'ron89/thesaurus_query.vim' " Thesaurus
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " Preview markdown file in browser
 Plug 'lervag/vimtex' " latex
 
-" Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
-" Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
+Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
 " +-----+
 " | PHP |
