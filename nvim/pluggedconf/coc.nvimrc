@@ -9,6 +9,7 @@ let g:coc_global_extensions = [
             \ 'coc-yaml',
             \ 'coc-godot',
             \ 'coc-sql',
+            \ 'coc-xml',
             \ 'coc-go',
             \ 'coc-db',
             \ 'coc-snippets',
@@ -49,6 +50,7 @@ inoremap <silent><expr> <A-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Remap keys for gotos
+nmap <silent><leader>] <Plug>(coc-definition)
 nmap <silent><leader>gd <Plug>(coc-definition)
 nmap <silent><leader>gt <Plug>(coc-type-definition)
 nmap <silent><leader>gi <Plug>(coc-implementation)
