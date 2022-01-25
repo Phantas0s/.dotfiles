@@ -96,7 +96,7 @@ autoload -Uz $DOTFILES/zsh/plugins/kubectl-completion/zsh-kubectl-completion
 # +-----+
 
 # Add command gitit to open Github repo in default browser from a local repo
-source gitit
+source $DOTFILES/zsh/plugins/gitit.zsh
 
 # +-----+
 # | FZF |
