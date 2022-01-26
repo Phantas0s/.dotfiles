@@ -7,10 +7,8 @@ source "$DOTFILES/install_config"
 #---------------------------------------
 
 # Save zsh history file
-
-[ -f "$DOTFILES_CLOUD/zsh/.zhistory" ] && rm "$DOTFILES_CLOUD/zsh/.zhistory"
 mkdir -p "$DOTFILES_CLOUD/zsh/"
-cp "$ZDOTDIR/.zhistory" "$DOTFILES_CLOUD/zsh/.zhistory"
+cp "$ZDOTDIR/.zhistory" "$DOTFILES_CLOUD/zsh/.zhistory-$(date +%F)"
 
 #---------------------------------------
 
