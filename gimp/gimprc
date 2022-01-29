@@ -31,7 +31,7 @@
 (icon-size medium)
 (color-profile-policy keep)
 (image-resize-fill-type white)
-(layer-new-name "main")
+(layer-new-name "Barcode")
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
