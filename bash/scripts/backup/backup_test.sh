@@ -1,31 +1,60 @@
 #!/usr/bin/env bash
+
 # file: backup_test.sh
 # Doc: https://github.com/kward/shunit2
 
+# Run before all tests
 function oneTimeSetUp() {
     script=./backup.sh
+    dirs=./dir.csv
 }
 
-function test-equality() {
+# Run before each test
+function setUp() {
+    mkdir -p testdata/{source/a_directory,destination}
+    touch testdata/source/{a_file,a_directory/another_file}
+
+    source=testdata/source
+    destination=testdata/destination
+
+    file=./dir.csv
+    echo "$source,$destination" > "$file"
+}
+
+function testOptionHelp() {
     assertContains "$($script -h)" help
 }
 
-function test-dry-run() {
-    assertContains "$($script -d)" "(DRY RUN)"
+function testOptionVersion() {
+    assertContains "$($script -v)" "Version 1.0"
 }
 
-function test-version() {
-    assertContains "$($script -v)" "Version"
+function testOptionsDryRun() {
+    assertContains "$($script -d $dirs)" "(DRY RUN)"
 }
 
-function is-array() {
-    local -r var=${1?}
-    if [ -n "${var}" ]; then
-        echo "The variable $var doesn't exist"
-        return 1
-    fi
-    declare -p "$var" &> /dev/null || grep -q '^declare \-A' | grep -q '^typeset \-A'
-    echo $?
+function testDestination() {
+    "$($script "$file")"
+    assertTrue "[ $(find "$source" | wc -l) == $(find "$destination" | wc -l) ]"
 }
 
-. shunit2
+function testDeleteFile() {
+    "$($script "$file")"
+    rm "$source/a_file"
+    assertTrue "[ $(find "$source" | wc -l) != $(find "$destination" | wc -l) ]"
+    "$($script "$file")"
+    assertTrue "[ $(find "$source" | wc -l) == $(find "$destination" | wc -l) ]"
+}
+
+function testCopyAFile() {
+    "$($script "$file")"
+    assertTrue "[ -f $destination/a_file ]"
+}
+
+
+# Run after each test
+function tearDown() {
+    rm -rf ./testdata
+}
+
+source shunit2
