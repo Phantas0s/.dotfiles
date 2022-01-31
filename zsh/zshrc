@@ -51,6 +51,10 @@ source $DOTFILES/aliases/aliases
 
 source $DOTFILES/zsh/scripts.zsh # Scripts
 
+source "$DOTFILES/zsh/plugins/fg_bg.sh"
+zle -N fg-bg
+bindkey '^Z' fg-bg
+
 # +--------------------+
 # | TIME NOTIFICATIONS |
 # +--------------------+
@@ -138,13 +142,9 @@ bindkey -s '^w' 'fwork\n'
 # edit current command line with vim (vim-mode, then v)
 autoload -Uz edit-command-line
 zle -N edit-command-line
-bindkey -M vicmd '^v' edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
-source "$DOTFILES/zsh/plugins/fg_bg.sh"
-zle -N fg-bg
-bindkey '^Z' fg-bg
-
-source "$DOTFILES/zsh/kbd.zsh"
+source "$DOTFILES/zsh/bindings.zsh"
 
 # +------+
 # | Node |
