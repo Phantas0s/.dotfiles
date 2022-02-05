@@ -633,7 +633,7 @@ serve() {
 }
 
 backup() {
-    $DOTFILES/bash/scripts/backup/backup.sh $@
+    $DOTFILES/bash/scripts/backup/backup.sh $@ $CLOUD/dotfiles/dir.csv
 }
 
 kubecfg() {
