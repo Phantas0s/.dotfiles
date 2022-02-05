@@ -635,3 +635,7 @@ serve() {
 backup() {
     $DOTFILES/bash/scripts/backup/backup.sh $@
 }
+
+kubecfg() {
+    . $CLOUD/development/dotfiles_projects/amboss/kubecfg.sh
+}

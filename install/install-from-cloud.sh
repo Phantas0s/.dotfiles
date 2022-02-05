@@ -3,9 +3,9 @@
 #TODO separate all of that
 #TODO from cloud shouldn't exist
 
-rm $XDG_CONFIG_HOME/.tmuxp &>/dev/null
+rm "$XDG_CONFIG_HOME/.tmuxp" &>/dev/null
 
-if [ ! -z "$DOTFILES_CLOUD" ];
+if [ -n "$DOTFILES_CLOUD" ];
 then
     # project relative configuration for neovim
     ln -sf "$DOTFILES_CLOUD/projects.nvimrc" "$VIMCONFIG"
@@ -17,27 +17,26 @@ then
     then
         if [ ! -d "$HOME/.ssh" ];
         then
-            mkdir $HOME/.ssh > /dev/null
+            mkdir "$HOME/.ssh" > /dev/null
         fi
 
-        rm $HOME/.ssh/config &>/dev/null
+        rm "$HOME/.ssh/config" &>/dev/null
 
-        cp $DOTFILES_CLOUD/openssh/config $HOME/.ssh/config
-        # chown $USER:$USER $HOME/.ssh/config
-        chmod 700 $HOME/.ssh/config
+        cp "$DOTFILES_CLOUD/openssh/config" "$HOME/.ssh/config"
+        chmod 700 "$HOME/.ssh/config"
     fi
 fi
 
-rm -rf $HOME/wallpapers
+rm -rf "$HOME/wallpapers"
 
-if [ ! -z "$WALLPAPER_PATH" ]
+if [ -n "$WALLPAPER_PATH" ]
 then
-    ln -s $WALLPAPER_PATH ~/wallpapers
+    ln -s "$WALLPAPER_PATH" ~/wallpapers
 fi
 
-if [ ! -z "$CLOUD" ];
+if [ -n "$CLOUD" ];
 then
     # vpn config
-    rm $XDG_CONFIG_HOME/vpn/ &>/dev/null
-    ln -sf $CLOUD/vpn $XDG_CONFIG_HOME/.vpn
+    rm "$XDG_CONFIG_HOME/vpn/" &>/dev/null
+    ln -sf "$CLOUD/vpn" "$XDG_CONFIG_HOME/.vpn"
 fi

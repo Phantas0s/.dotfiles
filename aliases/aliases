@@ -188,6 +188,8 @@ alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n
 alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"                                                             # git log for each branches
 alias gsub="git submodule update --remote"                                                        # pull submodules
 
+alias dif="git diff --no-index"                                                                   # Diff two files even if not in git repo! Can add -w (don't diff whitespaces)
+
 # +------+
 # | tmux |
 # +------+
@@ -218,11 +220,10 @@ alias um='udiskie-umount'
 # +--------+
 # | docker |
 # +--------+
-alias docki="docker inspect"                                                    # display the information about a container
-alias docke='docker exec -t -i'                                                 # going inside a container
-alias dockDE='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
+alias dockls="docker container ls | awk '{print $NF}'"                          # display names of running containers
+alias dockRr='docker rm $(docker ps -a -q)'                                     # delete every containers / images
+alias dockRr='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
 alias dockstats='docker stats $(docker ps -q)'                                  # stats on images
-alias dockls='docker ps'                                                        # list docker containers
 alias dockimg='docker images'                                                   # list images installed
 alias dockprune='docker system prune -a'                                        # prune everything
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
