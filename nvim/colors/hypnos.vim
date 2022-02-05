@@ -6,7 +6,7 @@ hi SignColumn ctermfg=236 ctermbg=236 cterm=NONE
 hi VertSplit ctermfg=236 ctermbg=236 cterm=bold
 hi CursorLine ctermfg=NONE ctermbg=236 cterm=bold
 hi CursorLineNr ctermfg=red ctermbg=236 cterm=bold
-hi Todo ctermfg=red ctermbg=white cterm=NONE
+hi Todo ctermfg=red ctermbg=white cterm=bold
 
 hi Search ctermfg=yellow ctermbg=NONE cterm=bold
 hi SpellRare ctermfg=yellow ctermbg=232 cterm=bold
