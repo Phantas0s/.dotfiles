@@ -52,7 +52,7 @@ projects:
               elements:
                 - name: ga.bar_pages
                   options:
-                    start_date: "25_days_ago 4"
+                    start_date: "25_days_ago"
                     end_date: "today"
                     filters: "/page/about/"
                     color: red
@@ -62,7 +62,17 @@ projects:
               elements:
                 - name: ga.bar_pages
                   options:
-                    start_date: "25_days_ago 4"
+                    start_date: "25_days_ago"
                     end_date: "today"
                     filters: "/page/books/"
-                    color: red
+                    color: magenta
+      - row:
+          - col:
+              size: "XL"
+              elements:
+                - name: ga.bar_pages
+                  options:
+                    start_date: "25_days_ago"
+                    end_date: "today"
+                    filters: "/posts"
+                    color: white
