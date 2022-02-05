@@ -55,7 +55,7 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 " +------------+
 
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
-Plug 'unblevable/quick-scope' " Highlight characters when using f F t T
+" Plug 'unblevable/quick-scope' " Highlight characters when using f F t T
 
 " Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
 " Plug 'yangmillstheory/vim-snipe' " replace f F t T - don't work well with dot though :'(

@@ -6,8 +6,8 @@ endfor
 " cancel the number toggled defined in init file
 augroup mdnumbertoggle
   autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set norelativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  autocmd BufEnter,FocusGained,InsertLeave * setlocal norelativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * setlocal norelativenumber
 augroup END
 
 " let g:tagbar_type_markdown = {
@@ -26,7 +26,7 @@ augroup END
 " \ }
 
 " Write mode
-setlocal number norelativenumber
+" setlocal number norelativenumber
 setlocal spell
 
 " let g:markdown_folding=1

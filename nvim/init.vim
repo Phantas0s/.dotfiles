@@ -91,7 +91,8 @@ nmap <silent> gx yiW:!xdg-open <C-r>" & <CR><CR>
 vmap <silent> gx y:!xdg-open <C-r>" & <CR><CR>
 
 "toggle between absolute -> relative line number
-nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
+" nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
+nnoremap <C-n> :set relativenumber! <CR>
 
 " tabs
 nnoremap th :tabfirst<CR>
