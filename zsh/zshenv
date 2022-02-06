@@ -34,8 +34,13 @@ export GIMP_VERSION="2.10"
 export SCREENSHOT="$HOME/Documents/images/screenshots"
 
 # fzf
-export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
+# export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_CTRL_T_OPTS=""
+# export FZF_CTRL_R_OPTS=""
+# export FZF_ALT_C_COMMAND=
+# export FZF_ALT_C_OPTS=
 
 # X11
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"

@@ -49,7 +49,7 @@ source $DOTFILES/aliases/aliases
 # | SCRIPTS |
 # +---------+
 
-source $DOTFILES/zsh/scripts.zsh # Scripts
+source $DOTFILES/zsh/scripts.zsh
 
 source "$DOTFILES/zsh/plugins/fg_bg.sh"
 zle -N fg-bg
@@ -145,6 +145,20 @@ zle -N edit-command-line
 bindkey -M vicmd 'v' edit-command-line
 
 source "$DOTFILES/zsh/bindings.zsh"
+
+# Add Vi commands on brackets and quotes
+autoload -Uz select-bracketed select-quoted
+zle -N select-quoted
+zle -N select-bracketed
+for km in viopp visual; do
+  bindkey -M $km -- '-' vi-up-line-or-history
+  for c in {a,i}${(s..)^:-\'\"\`\|,./:;=+@}; do
+    bindkey -M $km $c select-quoted
+  done
+  for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
+    bindkey -M $km $c select-bracketed
+  done
+done
 
 # +------+
 # | Node |

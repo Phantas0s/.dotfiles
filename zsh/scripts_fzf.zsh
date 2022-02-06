@@ -137,9 +137,14 @@ fwork() {
 
 # List mindmaps
 fmind() {
-    local -r root="$CLOUD/knowledge_base"
-    files=$(ls $root/**/*.mm | sed "s#$root/##" | fzf -m | tr -s "\n" " " | sed "s#^#$root/#;s#\s# $root/#g")
-    freemind $(echo $files) &> /dev/null &
+    local folders=("$CLOUD/knowledge_base" "$WORKSPACE/alexandria")
+
+    files=""
+    for root in ${folders[@]}; do
+        files="$files $(find $root -name '*.mm')"
+    done
+    result=$(echo "$files" | fzf -m --height 60% --border | tr -s "\n" " ")
+    [ -n "$result" ] && freemind $(echo $result) &> /dev/null &
 }
 
 # List tracking spreadsheets (productivity, money ...)
@@ -148,7 +153,7 @@ ftrack() {
     libreoffice "$file" &> /dev/null &
 }
 
-fd() {
+fpop() {
     # Only work with alias d defined as:
     
     # alias d='dirs -v'
