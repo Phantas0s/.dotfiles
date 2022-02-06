@@ -1,5 +1,5 @@
-! special 251 234 251
-*.foreground:   #C6C6C6
+! special 253 234 238
+*.foreground:   #EEEEEE
 *.background:   #1C1C1C
 *.cursorColor:  #444444
 
@@ -58,7 +58,7 @@ URxvt*cursorColor: #ffffff
 
 ! Useful for transparency
 URxvt*depth: 32
-URxvt.background: [90]#181815
+URxvt.background: [85]#181815
 
 ! URxvt*pointerBlank: false
 ! DEPRECATED - might be used by transparency - use URxvt*transparent: true
