@@ -117,9 +117,16 @@ Plug 'cespare/vim-toml' " toml
 " | LSP |
 " +-----+
 
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'rafcamlet/coc-nvim-lua'
-Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
+" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'rafcamlet/coc-nvim-lua'
+" Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'L3MON4D3/LuaSnip'
+" Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+Plug 'andersevenrud/cmp-tmux'
 
 " +-----+
 " | FZF |

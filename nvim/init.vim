@@ -23,6 +23,9 @@ source $VIMCONFIG/init_plugins.vim
 " Load custom library for lua
 lua require('hypnos/kit')
 
+" Load Neovim LSP
+source "$VIMCONFIG/pluggedconf/lsp.lua"
+
 " source every plugin configs
 for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
@@ -217,7 +220,7 @@ au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeou
 
 iabbrev IMO in my opinion
 iabbrev BTW by the way
-iabbrev <expr> cdate strftime('%Y-%m-%d') "current date
+iabbrev <expr> cdate strftime('%Y-%m-%d')
 
 " +--------------+
 " | Set  options |
