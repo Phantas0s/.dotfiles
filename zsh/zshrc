@@ -84,7 +84,7 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Change cursor
-source cursor_mode
+source "$DOTFILES/zsh/plugins/cursor_mode"
 
 # Add Vi text-objects for brackets and quotes
 autoload -Uz select-bracketed select-quoted

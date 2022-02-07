@@ -93,6 +93,7 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = 'ultisnips' },
         { name = 'tmux' },
+        { name = 'path' },
     }, {
         { name = 'buffer' },
     })
