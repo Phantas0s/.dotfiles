@@ -23,9 +23,6 @@ source $VIMCONFIG/init_plugins.vim
 " Load custom library for lua
 lua require('hypnos/kit')
 
-" Load Neovim LSP
-source "$VIMCONFIG/pluggedconf/lsp.lua"
-
 " source every plugin configs
 for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
@@ -313,3 +310,5 @@ set path=.,**,,
 if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
+
+set completeopt=menu,menuone,noselect
