@@ -73,7 +73,7 @@ autocmd fzf VimEnter * command! -nargs=* Rgr
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
+  \ 'hl':      ['fg', 'Visual'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
   \ 'hl+':     ['fg', 'Statement'],

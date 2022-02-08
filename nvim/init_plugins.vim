@@ -132,6 +132,7 @@ Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 " Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'andersevenrud/cmp-tmux'
+Plug 'ojroques/nvim-lspfuzzy'
 
 " +-----+
 " | FZF |
