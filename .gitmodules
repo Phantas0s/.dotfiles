@@ -4,6 +4,7 @@
 [submodule "zsh/plugins/zsh-syntax-highlighting"]
 	path = zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+    branch = feature/redrawhook
 [submodule "zsh/prompt"]
 	path = zsh/prompt
 	url = https://github.com/Phantas0s/purification
