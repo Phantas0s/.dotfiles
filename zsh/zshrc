@@ -100,6 +100,15 @@ for km in viopp visual; do
   done
 done
 
+autoload -Uz surround
+zle -N delete-surround surround
+zle -N add-surround surround
+zle -N change-surround surround
+bindkey -M vicmd cs change-surround
+bindkey -M vicmd ds delete-surround
+bindkey -M vicmd ys add-surround
+bindkey -M visual S add-surround
+
 # +------------+
 # | COMPLETION |
 # +------------+
@@ -156,7 +165,7 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd 'v' edit-command-line
 
-source "$DOTFILES/zsh/bindings.zsh"
+# source "$DOTFILES/zsh/bindings.zsh"
 
 # +------+
 # | Node |
@@ -169,4 +178,3 @@ source /usr/share/nvm/init-nvm.sh
 # +---------------------+
 
 source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
