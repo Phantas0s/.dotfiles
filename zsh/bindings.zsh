@@ -174,17 +174,17 @@ typeset -grA keys=(
     Ctrl+Alt+Shift+Backspace '^?'
   )
 
-bindkey -- "${keys[Home]}"            beginning-of-line
-bindkey -- "${keys[End]}"             end-of-line
-bindkey -- "${keys[Insert]}"          overwrite-mode
-bindkey -- "${keys[Backspace]}"       backward-delete-char
-bindkey -- "${keys[Delete]}"          delete-char
-bindkey -- "${keys[Up]}"              up-line-or-history
-bindkey -- "${keys[Down]}"            down-line-or-history
-bindkey -- "${keys[Left]}"            backward-char
-bindkey -- "${keys[Right]}"           forward-char
-bindkey -- "${keys[PageUp]}"          beginning-of-buffer-or-history
-bindkey -- "${keys[PageDown]}"        end-of-buffer-or-history
-bindkey -- "${keys[Shift+Tab]}"       reverse-menu-complete
-bindkey -- "${keys[Ctrl+Left]}"       backward-word
-bindkey -- "${keys[Ctrl+Right]}"      forward-word
+bindkey -- "${keys[Home]}"            .beginning-of-line
+bindkey -- "${keys[End]}"             .end-of-line
+bindkey -- "${keys[Insert]}"          .overwrite-mode
+bindkey -- "${keys[Backspace]}"       .backward-delete-char
+bindkey -- "${keys[Delete]}"          .delete-char
+bindkey -- "${keys[Up]}"              .up-line-or-history
+bindkey -- "${keys[Down]}"            .down-line-or-history
+bindkey -- "${keys[Left]}"            .backward-char
+bindkey -- "${keys[Right]}"           .forward-char
+bindkey -- "${keys[PageUp]}"          .beginning-of-buffer-or-history
+bindkey -- "${keys[PageDown]}"        .end-of-buffer-or-history
+bindkey -- "${keys[Shift+Tab]}"       .reverse-menu-complete
+bindkey -- "${keys[Ctrl+Left]}"       .backward-word
+bindkey -- "${keys[Ctrl+Right]}"      .forward-word
