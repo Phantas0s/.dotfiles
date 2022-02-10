@@ -22,6 +22,7 @@ Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 " Plug 'chaoren/vim-wordmotion' " camel case motion
 " Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
 " Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text (default in Neovim now)
+Plug 'editorconfig/editorconfig-vim'
 
 " +----------+
 " | Snippets |
