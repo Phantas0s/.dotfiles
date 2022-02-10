@@ -74,5 +74,5 @@ projects:
                   options:
                     start_date: "25_days_ago"
                     end_date: "today"
-                    filters: "/posts"
+                    filters: "/post"
                     color: white
