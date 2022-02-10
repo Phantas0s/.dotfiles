@@ -149,7 +149,7 @@ let g:neomake_sh_enabled_makers = ['shellcheck']
 " | SQL |
 " +-----+
 
-let g:neomake_sql_enabled_makers = ['sqlint']
+" let g:neomake_sql_enabled_makers = ['sqlint']
 
 " +------+
 " | Yaml |
