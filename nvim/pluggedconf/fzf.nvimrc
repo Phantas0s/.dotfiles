@@ -69,7 +69,7 @@ autocmd fzf VimEnter * command! -nargs=* Rgr
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
-" Customize fzf colors to match your color scheme
+" Customize fzf colors to match the current color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
