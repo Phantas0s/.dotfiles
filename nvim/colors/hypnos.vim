@@ -6,10 +6,9 @@ hi SignColumn ctermfg=black ctermbg=black cterm=NONE
 hi VertSplit ctermfg=black ctermbg=black cterm=bold
 hi CursorLine ctermfg=NONE ctermbg=black cterm=bold
 hi CursorLineNr ctermfg=red ctermbg=black cterm=bold
-hi Todo ctermfg=red ctermbg=white cterm=bold
+hi Todo ctermfg=red ctermbg=lightGray cterm=bold
 
 hi Search ctermfg=yellow ctermbg=NONE cterm=bold
-hi SpellRare ctermfg=yellow ctermbg=black cterm=bold
 hi PreProc ctermfg=white ctermbg=NONE cterm=NONE
 hi Visual ctermfg=red ctermbg=black cterm=bold
 hi Statement ctermfg=blue ctermbg=NONE cterm=NONE
@@ -18,9 +17,10 @@ hi Delimiter ctermfg=magenta ctermbg=NONE cterm=NONE
 hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
 " tabs
-hi TabLineSel ctermfg=red ctermbg=red cterm=bold
-hi TabLineFill ctermfg=red ctermbg=red cterm=bold
-hi TabLine ctermfg=red ctermbg=red cterm=bold
+hi Red ctermfg=red ctermbg=red cterm=bold
+hi! link TabLineSel Red
+hi! link TabLineFill Red
+hi! link TabLine Red
 
 " Used for autocompletion
 hi PMenu ctermfg=lightGray ctermbg=black cterm=NONE
@@ -35,7 +35,8 @@ hi Directory ctermfg=blue ctermbg=NONE cterm=bold
 
 " Writting
 hi Underlined ctermfg=magenta ctermbg=black cterm=underline
-hi SpellBad ctermfg=white ctermbg=red cterm=underline
+hi SpellRare ctermfg=yellow ctermbg=black cterm=bold
+hi SpellBad ctermfg=red ctermbg=NONE cterm=underline
 hi Folded ctermfg=white ctermbg=black cterm=bold
 
 " Code
