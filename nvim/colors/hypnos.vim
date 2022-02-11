@@ -64,6 +64,10 @@ hi markdownH3 ctermfg=green ctermbg=NONE cterm=NONE
 hi markdownH4 ctermfg=blue ctermbg=NONE cterm=NONE
 hi markdownH5 ctermfg=cyan ctermbg=NONE cterm=NONE
 
+" SQL
+
+hi sqlKeyword ctermfg=red ctermbg=NONE cterm=bold
+
 "---------"
 " PLUGINS "
 "---------"

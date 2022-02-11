@@ -32,3 +32,5 @@ phpunit.xml.dist
 
 # Vim
 .vimspector.json
+
+script-project.sh
