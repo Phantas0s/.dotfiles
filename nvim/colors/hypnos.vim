@@ -28,7 +28,7 @@ hi! link TabLine RedBold
 
 " Used for autocompletion
 hi PMenu ctermfg=lightGray ctermbg=black cterm=NONE
-hi PMenuSel ctermfg=black ctermbg=red cterm=bold
+hi PMenuSel ctermfg=white ctermbg=red cterm=bold
 
 " Directory
 hi Directory ctermfg=blue ctermbg=NONE cterm=bold
@@ -68,6 +68,9 @@ hi markdownH5 ctermfg=cyan ctermbg=NONE cterm=NONE
 " SQL
 
 hi sqlKeyword ctermfg=red ctermbg=NONE cterm=bold
+
+" i3
+hi Special ctermfg=lightGray ctermbg=NONE cterm=NONE
 
 "---------"
 " PLUGINS "
@@ -113,7 +116,6 @@ highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 "hi SpecialChar ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Conditional ctermfg=1 ctermbg=NONE cterm=bold
 "hi StorageClass ctermfg=60 tc=NONE cterm=bold
-"hi Special ctermfg=228 ctermbg=NONE cterm=NONE
 "hi StatusLine ctermfg=black ctermbg=1 cterm=bold
 "hi Label ctermfg=1 ctermbg=NONE cterm=bold
 "hi Character ctermfg=248 ctermbg=NONE cterm=NONE
