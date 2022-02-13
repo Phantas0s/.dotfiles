@@ -84,7 +84,12 @@ nnoremap <silent> gX :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile
 nnoremap <leader>x :silent :execute "!xdg-open %"<CR>
 
 " Go to file even if doesn't exist
-map gf :e <cfile><CR>
+nnoremap gF :e <cfile><CR>
+
+" Create an Ex Command to cd to the current dir - doesn't run it if need to modify it
+nnoremap <leader>cd :cd %:p:h
+" Actually change the directory to the current file
+command CDC cd %:p:h
 
 " Fix gx for URLs
 nmap <silent> gx yiW:!xdg-open <C-r>" & <CR><CR>
@@ -311,4 +316,3 @@ if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
 
-set completeopt=menu,menuone,noselect
