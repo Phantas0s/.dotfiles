@@ -26,7 +26,7 @@
     separator_height = 2
     padding = 8 
     horizontal_padding = 8
-    separator_color = "#444444"
+    separator_color = "#eeeeee"
     startup_notification = false
 
     dmenu = /usr/bin/dmenu -p dunst:
@@ -34,7 +34,7 @@
 
 [frame]
     width = 1
-    color = "#444444"
+    color = "#eeeeee"
 
 [urgency_low]
     background = "#303030"

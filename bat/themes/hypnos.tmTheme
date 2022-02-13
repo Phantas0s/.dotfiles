@@ -434,7 +434,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#444444</string>
+				<string>#b2b2b2</string>
 			</dict>
 		</dict>
 		<dict>
@@ -500,7 +500,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#444444</string>
+				<string>#b2b2b2</string>
 				<key>foreground</key>
 				<string>#303030</string>
 			</dict>

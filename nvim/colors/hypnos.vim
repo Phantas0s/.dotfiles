@@ -1,12 +1,17 @@
 let g:colors_name = 'hypnos'
 
+" Linking Group
+
+hi RedBold ctermfg=red ctermbg=red cterm=bold
+hi White ctermfg=white ctermbg=NONE cterm=NONE
+
 " General
 hi LineNr ctermfg=lightGray ctermbg=black cterm=NONE
 hi SignColumn ctermfg=black ctermbg=black cterm=NONE
-hi VertSplit ctermfg=black ctermbg=black cterm=bold
+hi VertSplit ctermfg=black ctermbg=black cterm=NONE
 hi CursorLine ctermfg=NONE ctermbg=black cterm=bold
 hi CursorLineNr ctermfg=red ctermbg=black cterm=bold
-hi Todo ctermfg=red ctermbg=lightGray cterm=bold
+hi Todo ctermfg=red ctermbg=white cterm=bold
 
 hi Search ctermfg=yellow ctermbg=NONE cterm=bold
 hi PreProc ctermfg=white ctermbg=NONE cterm=NONE
@@ -17,18 +22,13 @@ hi Delimiter ctermfg=magenta ctermbg=NONE cterm=NONE
 hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
 " tabs
-hi Red ctermfg=red ctermbg=red cterm=bold
-hi! link TabLineSel Red
-hi! link TabLineFill Red
-hi! link TabLine Red
+hi! link TabLineSel RedBold
+hi! link TabLineFill RedBold
+hi! link TabLine RedBold
 
 " Used for autocompletion
 hi PMenu ctermfg=lightGray ctermbg=black cterm=NONE
-hi PMenuSel ctermfg=white ctermbg=red cterm=bold
-
-" ???
-" hi PMenuSbar ctermfg=NONE ctermbg=6 cterm=NONE
-" hi PMenuThumb ctermfg=NONE ctermbg=6 cterm=NONE
+hi PMenuSel ctermfg=black ctermbg=red cterm=bold
 
 " Directory
 hi Directory ctermfg=blue ctermbg=NONE cterm=bold
@@ -53,8 +53,8 @@ hi Structure ctermfg=green ctermbg=NONE cterm=bold
 
 hi Type ctermfg=green ctermbg=NONE cterm=bold
 hi MatchParen ctermfg=black ctermbg=yellow cterm=bold
-hi Identifier ctermfg=white ctermbg=NONE cterm=NONE
-hi Operator ctermfg=white ctermbg=NONE cterm=NONE
+hi default link Identifier White
+hi default link Operator White
 
 hi ColorColumn ctermfg=lightGray ctermbg=NONE cterm=NONE
 
