@@ -52,7 +52,7 @@ hi String ctermfg=magenta ctermbg=NONE cterm=NONE
 hi Structure ctermfg=green ctermbg=NONE cterm=bold
 
 hi Type ctermfg=green ctermbg=NONE cterm=bold
-hi MatchParen ctermfg=black ctermbg=yellow cterm=bold
+hi MatchParen ctermfg=green ctermbg=NONE cterm=bold
 hi default link Identifier White
 hi default link Operator White
 
@@ -84,7 +84,7 @@ hi DiffText ctermfg=yellow ctermbg=black cterm=NONE
 
 " Neomake plugin
 hi NeomakeWarningSign ctermfg=yellow ctermbg=black
-hi SpellCap ctermfg=black ctermbg=yellow cterm=bold
+hi SpellCap ctermfg=white ctermbg=yellow cterm=bold
 
 " quick-scope plugin
 highlight QuickScopePrimary ctermfg=red cterm=underline
@@ -129,6 +129,5 @@ highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 "hi SpecialKey c ctermfg=66 ctermbg=NONE cterm=NONE
 "hi Constant ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Tag ctermfg=1 ctermbg=NONE cterm=NONE
-"hi Repeat ctermfg=1 ctermbg=NONE cterm=bold
 "hi Macro ctermfg=1 ctermbg=ONE cterm=NONE
 "hi cursorim ctermfg=black ctermbg=10 cterm=NONE
