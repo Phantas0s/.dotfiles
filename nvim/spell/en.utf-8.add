@@ -89,3 +89,6 @@ autocommands
 autocommand
 wildcard
 namespaces
+keymaps
+bindkey
+keymap
