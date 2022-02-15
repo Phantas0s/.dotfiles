@@ -75,7 +75,7 @@ nnoremap <leader>lj :lnext<CR>
 nnoremap <leader>lk :lprevious<CR>
 
 " close the current buffer and switch to alternate buffer
-nnoremap <silent> <leader>db <cmd>bp <bar>bd #<cr>
+nnoremap <silent> <leader>db <cmd>bp <bar>bd! #<cr>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap <silent> gX :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>

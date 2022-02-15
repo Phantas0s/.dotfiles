@@ -132,3 +132,9 @@ endsnippet
 snippet e: "Variable declaration := with error" b
 ${1:name}, err:= ${0:value}
 endsnippet
+
+snippet ifo "if key in a map"
+	if ${1:value}, ok := ${2:map}[${3:key}]; ok {
+		${4:/* code */}
+	}
+endsnippet

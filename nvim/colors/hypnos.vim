@@ -13,6 +13,7 @@ hi PreProc ctermfg=white ctermbg=NONE cterm=NONE
 hi Visual ctermfg=red ctermbg=black cterm=bold
 hi Statement ctermfg=blue ctermbg=NONE cterm=NONE
 hi Delimiter ctermfg=magenta ctermbg=NONE cterm=NONE
+hi Special ctermfg=cyan ctermbg=NONE cterm=bold
 
 hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
@@ -113,7 +114,6 @@ highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 "hi SpecialChar ctermfg=1 ctermbg=NONE cterm=NONE
 "hi Conditional ctermfg=1 ctermbg=NONE cterm=bold
 "hi StorageClass ctermfg=60 tc=NONE cterm=bold
-"hi Special ctermfg=228 ctermbg=NONE cterm=NONE
 "hi StatusLine ctermfg=black ctermbg=1 cterm=bold
 "hi Label ctermfg=1 ctermbg=NONE cterm=bold
 "hi Character ctermfg=248 ctermbg=NONE cterm=NONE

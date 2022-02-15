@@ -64,7 +64,7 @@ cmp.setup {
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-c>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.close(),
         ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
@@ -91,7 +91,7 @@ cmp.setup {
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'ultisnips' },
+        -- { name = 'ultisnips' },
         { name = 'tmux' },
         { name = 'path' },
         -- { name = "nvim_lsp_signature_help" },
