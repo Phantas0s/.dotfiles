@@ -1,12 +1,17 @@
 let g:colors_name = 'hypnos'
 
+" Linking Group
+
+hi RedBold ctermfg=red ctermbg=red cterm=bold
+hi White ctermfg=white ctermbg=NONE cterm=NONE
+
 " General
 hi LineNr ctermfg=lightGray ctermbg=black cterm=NONE
 hi SignColumn ctermfg=black ctermbg=black cterm=NONE
-hi VertSplit ctermfg=black ctermbg=black cterm=bold
+hi VertSplit ctermfg=black ctermbg=black cterm=NONE
 hi CursorLine ctermfg=NONE ctermbg=black cterm=bold
 hi CursorLineNr ctermfg=red ctermbg=black cterm=bold
-hi Todo ctermfg=red ctermbg=lightGray cterm=bold
+hi Todo ctermfg=red ctermbg=white cterm=bold
 
 hi Search ctermfg=yellow ctermbg=NONE cterm=bold
 hi PreProc ctermfg=white ctermbg=NONE cterm=NONE
@@ -18,18 +23,13 @@ hi Special ctermfg=cyan ctermbg=NONE cterm=bold
 hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
 " tabs
-hi Red ctermfg=red ctermbg=red cterm=bold
-hi! link TabLineSel Red
-hi! link TabLineFill Red
-hi! link TabLine Red
+hi! link TabLineSel RedBold
+hi! link TabLineFill RedBold
+hi! link TabLine RedBold
 
 " Used for autocompletion
 hi PMenu ctermfg=lightGray ctermbg=black cterm=NONE
 hi PMenuSel ctermfg=white ctermbg=red cterm=bold
-
-" ???
-" hi PMenuSbar ctermfg=NONE ctermbg=6 cterm=NONE
-" hi PMenuThumb ctermfg=NONE ctermbg=6 cterm=NONE
 
 " Directory
 hi Directory ctermfg=blue ctermbg=NONE cterm=bold
@@ -53,9 +53,9 @@ hi String ctermfg=magenta ctermbg=NONE cterm=NONE
 hi Structure ctermfg=green ctermbg=NONE cterm=bold
 
 hi Type ctermfg=green ctermbg=NONE cterm=bold
-hi MatchParen ctermfg=black ctermbg=yellow cterm=bold
-hi Identifier ctermfg=white ctermbg=NONE cterm=NONE
-hi Operator ctermfg=white ctermbg=NONE cterm=NONE
+hi MatchParen ctermfg=green ctermbg=NONE cterm=bold
+hi default link Identifier White
+hi default link Operator White
 
 hi ColorColumn ctermfg=lightGray ctermbg=NONE cterm=NONE
 
@@ -70,6 +70,9 @@ hi markdownH5 ctermfg=cyan ctermbg=NONE cterm=NONE
 
 hi sqlKeyword ctermfg=red ctermbg=NONE cterm=bold
 
+" i3
+hi Special ctermfg=lightGray ctermbg=NONE cterm=NONE
+
 "---------"
 " PLUGINS "
 "---------"
@@ -82,7 +85,7 @@ hi DiffText ctermfg=yellow ctermbg=black cterm=NONE
 
 " Neomake plugin
 hi NeomakeWarningSign ctermfg=yellow ctermbg=black
-hi SpellCap ctermfg=black ctermbg=yellow cterm=bold
+hi SpellCap ctermfg=white ctermbg=yellow cterm=bold
 
 " quick-scope plugin
 highlight QuickScopePrimary ctermfg=red cterm=underline
@@ -127,6 +130,5 @@ highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 "hi SpecialKey c ctermfg=66 ctermbg=NONE cterm=NONE
 "hi Constant ctermfg=248 ctermbg=NONE cterm=NONE
 "hi Tag ctermfg=1 ctermbg=NONE cterm=NONE
-"hi Repeat ctermfg=1 ctermbg=NONE cterm=bold
 "hi Macro ctermfg=1 ctermbg=ONE cterm=NONE
 "hi cursorim ctermfg=black ctermbg=10 cterm=NONE

@@ -11,8 +11,7 @@ set_from_resource $cursorColor cursorColor #C6C6C6
 
 # black
 set_from_resource $black1 color0 #303030
-set_from_resource $black2 color8 #444444
-set $trueblack #000000
+set_from_resource $black2 color8 #b2b2b2
 
 # red
 set_from_resource $red1 color1 #d75f5f
@@ -319,19 +318,17 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="zoom"] floating enable
 
 # floating windows
-for_window [class="KeePassXC"] floating enable
-for_window [class="Arandr"] floating enable
-for_window [class="Gcolor2"] floating enable
-for_window [instance="gnome-alsamixer" class="Gnome-alsamixer"] floating enable
-for_window [instance="Thunar" class="Thunar"] floating enable
+for_window [class="KeePassXC"] floating enable, border none
+for_window [class="Arandr"] floating enable, border none
+for_window [class="Gcolor2"] floating enable, border none
 
 # Terminal scratchpad with tmux and three windows: 1.term / 2.vim (on a temp file) / 3.translation CLI
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad -e tmux new-session -d -s scratchpad ';' \
-new-window -n vim 'nvim +e /tmp/nvim-tmp.md +"set spelllang=de,en"' ';' \
-new-window -n trans 'trans -I' ';' \
-attach-session -d -t scratchpad ';'
+    exec urxvtc -name urxvt_scratchpad -e tmux new-session -d -s scratchpad ';' \
+    new-window -n vim 'nvim +e /tmp/nvim-tmp.md +"set spelllang=de,en"' ';' \
+    new-window -n trans 'trans -I' ';' \
+    attach-session -d -t scratchpad ';'
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
@@ -363,28 +360,27 @@ exec --no-startup-id i3-msg workspace "$office"; exec joplin-desktop
 hide_edge_borders both
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #333333 $black2 $white2 #285577
-client.focused_inactive #333333 $background $foreground #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           $red1   $red1   $white2 $red1     $red1
-client.placeholder      #000000 #0c0c0c $white2 #000000   #0c0c0c
+client.focused          $black1 $black1 $white2 black1
+client.focused_inactive $black1 $black1 $white1 $white1 $white1
+client.unfocused        $background $background $black2 $white1 $white1
+client.urgent           $red1 $red1 $white2 $red1 $red1
+client.placeholder      $red1 $red1 $white2 $red1 $red1
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {
     status_command i3status --config $I3_CONFIG/i3status.conf
     # Disable all tray icons
     tray_output none
     # tray_output primary
     colors {
-        background $black2
+        background $black1
         statusline $white2
-        separator $white2 
+        separator $black2
 
         #                  border background text
         focused_workspace  $background $background $red1
-        active_workspace   $black2 $black1 $white2
-        inactive_workspace $black1 $black2 $foreground
+        active_workspace   $black1 $black1 $black2
+        inactive_workspace $background $black1 $white2
         urgent_workspace   $red1 $red1 $white2
         binding_mode       $background $red2 $white2
     }

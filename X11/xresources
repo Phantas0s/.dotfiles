@@ -3,9 +3,9 @@
 *.background:   #1C1C1C
 *.cursorColor:  #444444
 
-! black 236 238
+! black 236 249
 *.color0:       #303030
-*.color8:       #444444
+*.color8:       #b2b2b2
 
 ! red 167
 *.color1:       #d75f5f
@@ -31,7 +31,7 @@
 *.color6:       #afd7ff
 *.color14:      #afd7ff
 
-! white 239 15
+! white 255 15
 *.color7:       #eeeeee
 *.color15:      #ffffff
 
