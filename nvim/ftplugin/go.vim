@@ -11,3 +11,6 @@ autocmd go BufWritePre *.go lua vim.lsp.buf.formatting()
 for file in split(glob($XDG_CONFIG_HOME . "/nvim/pluggedconf/go/*.nvimrc"), '\n')
     exe 'source' file
 endfor
+
+" Set the makeprg and errorformat options for go
+compiler go

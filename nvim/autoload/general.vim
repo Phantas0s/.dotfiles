@@ -30,8 +30,8 @@ endfunction
 
 function general#Bdeleteonly() abort
     let list = filter(general#Buflist(), 'v:val != bufname("%")')
+    call general#DeleteEmptyBuffers()
     for buffer in list
-        call general#DeleteEmptyBuffers()
         exec 'bdelete '.buffer
     endfor
 endfunction
@@ -39,7 +39,7 @@ endfunction
 function general#DeleteEmptyBuffers() abort
     let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val) && empty(bufname(v:val)) && bufwinnr(v:val) < 0 && (getbufline(v:val, 1, "$") == [""])')
     if !empty(buffers)
-        exe 'bd! '.join(buffers, ' ')
+        exe 'bdelete '.join(buffers, ' ')
     endif
 endfunction
 

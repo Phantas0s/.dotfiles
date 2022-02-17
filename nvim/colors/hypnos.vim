@@ -85,7 +85,7 @@ hi DiffText ctermfg=yellow ctermbg=black cterm=NONE
 
 " Neomake plugin
 hi NeomakeWarningSign ctermfg=yellow ctermbg=black
-hi SpellCap ctermfg=white ctermbg=yellow cterm=bold
+hi SpellCap ctermfg=NONE ctermbg=red cterm=bold
 
 " quick-scope plugin
 highlight QuickScopePrimary ctermfg=red cterm=underline

@@ -99,7 +99,7 @@ endif
 " | Golang |
 " +--------+
 
-let g:neomake_go_enabled_makers = [ 'go']
+let g:neomake_go_enabled_makers = [ 'go', 'golangci' ]
 let g:neomake_go_golangci_maker = {
             \ 'exe': 'golangci-lint',
             \ 'args': [ 'run', '--enable=unparam' ],
@@ -155,7 +155,7 @@ let g:neomake_sh_enabled_makers = ['shellcheck']
 " | Yaml |
 " +------+
 
-let g:neomake_yaml_enabled_makers = [ 'yamllint' ]
+let g:neomake_yaml_enabled_makers = ['yamllint']
 
 " +---------------+
 " | Racket (Lisp) |
@@ -250,4 +250,3 @@ augroup neomake_hooks
     autocmd User NeomakeFinished :call StopSpinner()
     " autocmd User NeomakeFinished :echom "Build complete"
 augroup END
-
