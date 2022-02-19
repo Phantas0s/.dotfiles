@@ -56,6 +56,10 @@ ln -sf "$DOTFILES/nvim/colors" "$VIMCONFIG"
 rm -rf "$VIMCONFIG/macros"
 ln -sf "$DOTFILES/nvim/macros" "$VIMCONFIG/macros"
 
+# compiler
+rm -rf "$VIMCONFIG/compiler"
+ln -sf "$DOTFILES/nvim/compiler" "$VIMCONFIG/compiler"
+
 # indentation
 rm -rf "$VIMCONFIG/after/indent"
 ln -sf "$DOTFILES/nvim/after/indent" "$VIMCONFIG/after"
