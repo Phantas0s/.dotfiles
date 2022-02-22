@@ -13,4 +13,4 @@ for file in split(glob($XDG_CONFIG_HOME . "/nvim/pluggedconf/go/*.nvimrc"), '\n'
 endfor
 
 " Set the makeprg and errorformat options for go
-compiler go
+command! -buffer -bang Compile compiler go | silent make!

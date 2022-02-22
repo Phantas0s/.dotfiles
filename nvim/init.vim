@@ -158,6 +158,9 @@ nnoremap Q <Nop>
 nnoremap <leader>p "0p
 nnoremap <leader>P "0P
 
+" Surround with s (I never use the NORMAL substitute command)
+nnoremap s ys
+
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session

@@ -31,7 +31,7 @@ gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.045635 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.174805 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1578 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.008393 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.174805 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1578 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -83,7 +83,7 @@ logwindow.geometry.x 322
 logwindow.geometry.y 219
 mainwin.geometry.h 1155
 mainwin.geometry.w 1920
-mainwin.geometry.x 1366
+mainwin.geometry.x 0
 mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
@@ -145,8 +145,8 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -7.809884
-playlist.current 3
+playback.volume -21.85893
+playlist.current 8
 playlist.cursor.0 -1
 playlist.cursor.1 87
 playlist.cursor.2 9
@@ -155,7 +155,7 @@ playlist.cursor.4 60
 playlist.cursor.5 34
 playlist.cursor.6 0
 playlist.cursor.7 0
-playlist.cursor.8 56
+playlist.cursor.8 60
 playlist.cursor.9 0
 playlist.scroll.0 0
 playlist.scroll.1 0
@@ -165,7 +165,7 @@ playlist.scroll.4 647
 playlist.scroll.5 533
 playlist.scroll.6 163
 playlist.scroll.7 1686
-playlist.scroll.8 -56
+playlist.scroll.8 -60
 playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 1
