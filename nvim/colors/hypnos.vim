@@ -1,5 +1,3 @@
-" *cterm-colors*
-
 " NR-16 COLOR NAME
 " 0     Black
 " 1     DarkBlue

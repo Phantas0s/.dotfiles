@@ -15,7 +15,7 @@ Plug 'tpope/vim-commentary' " keystroke to comment automatically
 
 Plug 'wellle/targets.vim' " add new text objects (can delete between comma with di, for example)
 Plug 'henrik/vim-indexed-search' " display the result when searching
-Plug 'machakann/vim-swap' " swap arguments in parenthesis
+" Plug 'machakann/vim-swap' " swap arguments in parenthesis
 " Plug 'itchyny/lightline.vim' " Status bar
 Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
 Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
@@ -146,16 +146,16 @@ Plug 'junegunn/fzf.vim'
 " +---------+
 
 Plug 'godlygeek/tabular' " Align stuff (useful for markdown tables for example)
-Plug 'christoomey/vim-titlecase' " Titlecase with gt
+" Plug 'christoomey/vim-titlecase' " Titlecase with gt
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " Show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
-Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
-Plug 'ron89/thesaurus_query.vim' " Thesaurus
+" Plug 'reedes/vim-lexical' " Dictionnary, thesaurus...
+" Plug 'ron89/thesaurus_query.vim' " Thesaurus
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " Preview markdown file in browser
 Plug 'lervag/vimtex' " latex
 
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
-Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
+" Plug 'junegunn/goyo.vim', { 'for': 'markdown' } " Distraction-free
+" Plug 'junegunn/limelight.vim', { 'for': 'markdown' } " Hyperfocus-writing
 
 " +-----+
 " | PHP |
