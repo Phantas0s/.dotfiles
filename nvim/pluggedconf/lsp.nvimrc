@@ -18,7 +18,7 @@ local opts = { noremap=true, silent=true }
 
 -- Mappings.
 -- See `:help vim.lsp.*` for documentation on any of the below functions
--- vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>d', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>]', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>g', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -26,7 +26,7 @@ local opts = { noremap=true, silent=true }
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>i', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
--- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
 -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
 -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
 -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
@@ -91,9 +91,10 @@ cmp.setup {
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        -- { name = 'ultisnips' },
+        { name = 'ultisnips' },
         { name = 'tmux' },
         { name = 'path' },
+        { name = 'nvim_lua' },
         -- { name = "nvim_lsp_signature_help" },
     }, {
         { name = 'buffer' },
@@ -118,17 +119,53 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 local lspconfig = require('lspconfig')
 
 
-require'lspconfig'.sqlls.setup{
-    cmd = { "sql-language-server", "up", "--method", "stdio" },
-    filetypes = { "sql", "mysql" },
-    settings = {}
-}
+-- require'lspconfig'.sqlls.setup{
+--     cmd = { "sql-language-server", "up", "--method", "stdio" },
+--     filetypes = { "sql", "mysql" },
+--     settings = {}
+-- }
 
+local lib = vim.api.nvim_get_runtime_file("", true)
+table.insert(lib, "/usr/lib/lua-language-server/meta/3rd/love2d")
+
+local runtime_path = vim.split(package.path, ';')
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
+table.insert(runtime_path, "?.lua")
+table.insert(runtime_path, "/usr/share/5.3/?.lua")
+table.insert(runtime_path, "/usr/share/lua/5.3/?/init.lua")
+
+lspconfig.sumneko_lua.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+        -- Setup your lua path
+        path = runtime_path,
+      },
+      diagnostics = {
+        globals = {'vim'},
+      },
+      workspace = {
+        library = lib,
+        checkThirdParty = false,
+        ignoreSubmodules = false,
+        useGitIgnore = false,
+        preloadFileSize = 65536,
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 
     'gopls', 
     'ltex', 
-    'sumneko_lua', 
     'cssls', 
     'html',
     'eslint',

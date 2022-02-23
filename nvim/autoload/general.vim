@@ -146,9 +146,9 @@ function general#WordCount() abort
             let v:statusmsg = l:old_status
         endif
         call setpos('.', l:old_position)
-        return b:wordcount
+        return "Words " . b:wordcount . " |"
     else
-        return b:wordcount
+        return "Words " . b:wordcount . " |"
     endif
 endfunction
 

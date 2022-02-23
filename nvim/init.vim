@@ -18,7 +18,11 @@ let maplocalleader = "\<space>"
 " | install plugin |
 " +----------------+
 
+" Source plugin definition file
 source $VIMCONFIG/init_plugins.vim
+
+" Source status line
+source $VIMCONFIG/status_line.vim
 
 " Load custom library for lua
 lua require('hypnos/kit')
@@ -159,7 +163,7 @@ nnoremap <leader>p "0p
 nnoremap <leader>P "0P
 
 " Surround with s (I never use the NORMAL substitute command)
-nnoremap s ys
+nmap s ys
 
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
@@ -318,4 +322,3 @@ set path=.,**,,
 if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
-

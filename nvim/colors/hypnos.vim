@@ -1,8 +1,27 @@
+" *cterm-colors*
+
+" NR-16 COLOR NAME
+" 0     Black
+" 1     DarkBlue
+" 2     DarkGreen
+" 3     DarkCyan
+" 4     DarkRed
+" 5     DarkMagenta
+" 6     Brown, DarkYellow
+" 7     LightGray, LightGrey, Gray, Grey
+" 8     DarkGray, DarkGrey
+" 9     Blue, LightBlue
+" 10    Green, LightGreen
+" 11    Cyan, LightCyan
+" 12    Red, LightRed
+" 13    Magenta, LightMagenta
+" 14    Yellow, LightYellow
+" 15    White
+
 let g:colors_name = 'hypnos'
 
 " Linking Group
 
-hi RedBold ctermfg=red ctermbg=red cterm=bold
 hi White ctermfg=white ctermbg=NONE cterm=NONE
 
 " General
@@ -22,10 +41,14 @@ hi Special ctermfg=cyan ctermbg=NONE cterm=bold
 
 hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
+hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold
+
 " tabs
-hi! link TabLineSel RedBold
-hi! link TabLineFill RedBold
-hi! link TabLine RedBold
+hi TabLineSel ctermfg=red ctermbg=black cterm=NONE
+hi TabLineFill ctermfg=white ctermbg=black cterm=NONE
+hi TabLine ctermfg=white ctermbg=black cterm=NONE
+hi StatusLine ctermfg=white ctermbg=black cterm=bold
+hi StatusLineNC ctermfg=Gray ctermbg=black cterm=NONE
 
 " Used for autocompletion
 hi PMenu ctermfg=lightGray ctermbg=black cterm=NONE

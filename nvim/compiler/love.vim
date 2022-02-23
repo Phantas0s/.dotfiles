@@ -1,1 +1,0 @@
-set makeprg=love\ .
