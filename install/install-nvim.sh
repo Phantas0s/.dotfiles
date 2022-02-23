@@ -22,6 +22,7 @@ mkdir -p "$VIMCONFIG/sessions"
 
 # install nvim config
 ln -sf "$DOTFILES/nvim/init.vim" "$VIMCONFIG"
+ln -sf "$DOTFILES/nvim/status_line.vim" "$VIMCONFIG"
 ln -sf "$DOTFILES/nvim/init_plugins.vim" "$VIMCONFIG"
 
 # Install all mandatory folders if they don't exist already

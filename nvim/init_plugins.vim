@@ -16,7 +16,7 @@ Plug 'tpope/vim-commentary' " keystroke to comment automatically
 Plug 'wellle/targets.vim' " add new text objects (can delete between comma with di, for example)
 Plug 'henrik/vim-indexed-search' " display the result when searching
 Plug 'machakann/vim-swap' " swap arguments in parenthesis
-Plug 'itchyny/lightline.vim' " Status bar
+" Plug 'itchyny/lightline.vim' " Status bar
 Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
 Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 " Plug 'chaoren/vim-wordmotion' " camel case motion
@@ -127,8 +127,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+" Plug 'hrsh7th/cmp-cmdline'
 " Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 " Plug 'L3MON4D3/LuaSnip'
 " Plug 'saadparwaiz1/cmp_luasnip'
