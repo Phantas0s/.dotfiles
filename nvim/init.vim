@@ -170,7 +170,7 @@ nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
 nnoremap <leader>sl :source $VIMCONFIG/sessions/
 " Source sets of macros
-nnoremap <leader>ml :source $VIMCONFIG/macros/
+nnoremap <leader>sm :source $VIMCONFIG/macros/
 
 " +---------------+
 " | User Commands |

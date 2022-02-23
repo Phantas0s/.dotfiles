@@ -37,7 +37,7 @@ hi PreProc ctermfg=white ctermbg=NONE cterm=NONE
 hi Visual ctermfg=red ctermbg=black cterm=bold
 hi Statement ctermfg=blue ctermbg=NONE cterm=NONE
 hi Delimiter ctermfg=magenta ctermbg=NONE cterm=NONE
-hi Special ctermfg=cyan ctermbg=NONE cterm=bold
+hi Special ctermfg=cyan ctermbg=NONE cterm=NONE
 
 hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
@@ -77,8 +77,8 @@ hi Structure ctermfg=green ctermbg=NONE cterm=bold
 
 hi Type ctermfg=green ctermbg=NONE cterm=bold
 hi MatchParen ctermfg=green ctermbg=NONE cterm=bold
-hi default link Identifier White
-hi default link Operator White
+hi Identifier ctermfg=cyan ctermbg=NONE cterm=NONE
+hi Operator ctermfg=white ctermbg=NONE cterm=NONE
 
 hi ColorColumn ctermfg=lightGray ctermbg=NONE cterm=NONE
 
