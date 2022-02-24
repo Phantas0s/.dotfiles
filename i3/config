@@ -362,7 +362,7 @@ hide_edge_borders both
 # class                 border  backgr. text    indicator child_border
 client.focused          $black1 $black1 $white2 black1
 client.focused_inactive $black1 $black1 $white1 $white1 $white1
-client.unfocused        $background $background $black1 $white1 $white1
+client.unfocused        $background $background $black2 $white1 $white1
 client.urgent           $red1 $red1 $white2 $red1 $red1
 client.placeholder      $red1 $red1 $white2 $red1 $red1
 
@@ -380,7 +380,7 @@ bar {
         #                  border background text
         focused_workspace  $background $background $red1
         active_workspace   $black1 $black1 $black2
-        inactive_workspace $background $black1 $black2
+        inactive_workspace $background $black1 $foreground
         urgent_workspace   $red1 $red1 $white2
         binding_mode       $background $red2 $white2
     }
