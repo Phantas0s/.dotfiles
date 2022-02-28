@@ -203,13 +203,14 @@ Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and co
 " | CSV |
 " +-----+
 
+" Format CSV automatically
 Plug 'chrisbra/csv.vim'
 
 " +-----------+
 " | VimScript |
 " +-----------+
 
-Plug 'tpope/vim-scriptease' " Debug vimscript
+Plug 'tpope/vim-scriptease' " Debug vimscripts
 
 " Bad Practices - slow down everything, but good plugin idea
 " Plug 'antonk52/bad-practices.nvim'

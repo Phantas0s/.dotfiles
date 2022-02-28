@@ -360,9 +360,9 @@ exec --no-startup-id i3-msg workspace "$office"; exec joplin-desktop
 hide_edge_borders both
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $black1 $black1 $white2 black1
-client.focused_inactive $black1 $black1 $white1 $white1 $white1
-client.unfocused        $background $background $black2 $white1 $white1
+client.focused          $background $black1 $white2 $background
+client.focused_inactive $background $black1 $white1 $background
+client.unfocused        $background $background $black2 $background
 client.urgent           $red1 $red1 $white2 $red1 $red1
 client.placeholder      $red1 $red1 $white2 $red1 $red1
 
