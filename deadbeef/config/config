@@ -1,6 +1,7 @@
 ape.write_apev2 1
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
+cli_add_to_specific_playlist 0
 deadbeef_version 1.8.8
 filebrowser.autofilter 1
 filebrowser.bgcolor 
@@ -32,7 +33,7 @@ gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.008393 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.174805 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1578 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.008393 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -78,14 +79,15 @@ hotkey.key29 "b" 0 0 next
 hotkey.key30 "n" 0 0 playback_random
 hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
+ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 322
+logwindow.geometry.x 318
 logwindow.geometry.y 219
-mainwin.geometry.h 723
-mainwin.geometry.w 1366
-mainwin.geometry.x 1920
-mainwin.geometry.y 454
+mainwin.geometry.h 1155
+mainwin.geometry.w 1920
+mainwin.geometry.x 0
+mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -146,7 +148,7 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume 0.0000000
+playback.volume -3.575017
 playlist.current 9
 playlist.cursor.0 -1
 playlist.cursor.1 87
@@ -157,7 +159,7 @@ playlist.cursor.5 34
 playlist.cursor.6 0
 playlist.cursor.7 0
 playlist.cursor.8 60
-playlist.cursor.9 0
+playlist.cursor.9 9
 playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.2 0
@@ -167,7 +169,7 @@ playlist.scroll.5 533
 playlist.scroll.6 163
 playlist.scroll.7 1686
 playlist.scroll.8 1300
-playlist.scroll.9 0
+playlist.scroll.9 -9
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 1
 playlist.tab.00000 **Main Playlist**
@@ -182,8 +184,8 @@ playlist.tab.00008 Minimal
 playlist.tab.00009 Video Games
 prefwin.geometry.h 551
 prefwin.geometry.w 717
-prefwin.geometry.x 200
-prefwin.geometry.y 205
+prefwin.geometry.x 203
+prefwin.geometry.y 293
 resume.paused 0
 resume.playlist -1
 resume.position -1.000000
