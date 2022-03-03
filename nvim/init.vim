@@ -199,7 +199,7 @@ autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.
 autocmd vimrc BufEnter *.png,*.jpg,*.gif silent! execute "! sxiv ".expand("%") | bwipeout
 autocmd vimrc BufEnter *.pdf silent! execute "! zathura ".expand("%") "&" | bwipeout
 
-" Tuggle relative number
+" Toggle relative number
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber

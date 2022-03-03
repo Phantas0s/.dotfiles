@@ -45,8 +45,10 @@ hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold
 hi TabLineSel ctermfg=red ctermbg=black cterm=NONE
 hi TabLineFill ctermfg=white ctermbg=black cterm=NONE
 hi TabLine ctermfg=white ctermbg=black cterm=NONE
+
+" Status line
 hi StatusLine ctermfg=white ctermbg=black cterm=bold
-hi StatusLineNC ctermfg=Gray ctermbg=black cterm=NONE
+hi StatusLineNC ctermfg=gray ctermbg=black cterm=NONE
 
 " Used for autocompletion
 hi PMenu ctermfg=lightGray ctermbg=black cterm=NONE

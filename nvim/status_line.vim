@@ -18,7 +18,7 @@ set statusline+=%M\                     "Modified
 
 set statusline+=\ %=                     "ASlign left
 set statusline+=%{%general#WordCount()%} "Word counts
-set statusline+=%4*\%{b:gitbranch}       "Git branch
+set statusline+=%{b:gitbranch}       "Git branch
 set statusline+=\ %l/%L\ %p%%            "Line X/Y Percent of file
 set statusline+=\ \|\ Buf\ %n            "Buffer
 " set statusline+=\ \|\ %{%tolower('%Y')%} "Filetype
@@ -33,14 +33,14 @@ function! StatuslineGitBranch()
     lcd -
     if l:gitrevparse!~#'fatal: not a git repository'
       let b:gitbranch='['.substitute(l:gitrevparse, '\n', '', 'g').' '
+      if l:gitaddedparse!=#''
+        let b:gitbranch.= '+'
+      endif
+      if l:gitmodifiedparse!=#''
+        let b:gitbranch.= ''
+      endif
+      let b:gitbranch.='] '
     endif
-    if l:gitaddedparse!=#''
-      let b:gitbranch.= '+'
-    endif
-    if l:gitmodifiedparse!=#''
-      let b:gitbranch.= ''
-    endif
-    let b:gitbranch.='] '
   endif
 endfunction
 
