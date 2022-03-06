@@ -33,12 +33,12 @@ function! StatuslineGitBranch()
     let l:gitmodifiedparse=system('command git status --porcelain -b 2> /dev/null | grep -E "^ M |^AM |^MM |^ T "')
     lcd -
     if l:gitrevparse!~#'fatal: not a git repository'
-      let b:gitbranch='['.substitute(l:gitrevparse, '\n', '', 'g').' '
+      let b:gitbranch='['.substitute(l:gitrevparse, '\n', '', 'g')
       if l:gitaddedparse!=#''
-        let b:gitbranch.= '+'
+        let b:gitbranch.= ' +'
       endif
       if l:gitmodifiedparse!=#''
-        let b:gitbranch.= ''
+        let b:gitbranch.= ' '
       endif
       let b:gitbranch.='] '
     endif
