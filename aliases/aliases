@@ -179,10 +179,9 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias gco='git checkout '
-alias gl='git log'
+alias gl='git log --pretty=oneline'
 alias gr='git remote'
 alias grs='git remote show'
-alias glo='git log --pretty="oneline"'
 alias glol='git log --graph --oneline --decorate'
 alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" # Delete local branch merged with master
 alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"                                                             # git log for each branches
