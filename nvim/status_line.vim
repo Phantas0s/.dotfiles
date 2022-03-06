@@ -23,6 +23,7 @@ set statusline+=\ %l/%L\ %p%%            "Line X/Y Percent of file
 set statusline+=\ \|\ Buf\ %n            "Buffer
 " set statusline+=\ \|\ %{%tolower('%Y')%} "Filetype
 
+" Just a try to put some good Git stuff in the status line (quite useless though)
 function! StatuslineGitBranch()
   let b:gitbranch=''
   if &modifiable

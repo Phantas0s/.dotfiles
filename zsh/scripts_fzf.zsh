@@ -143,7 +143,7 @@ fmind() {
     for root in ${folders[@]}; do
         files="$files $(find $root -name '*.mm')"
     done
-    result=$(echo "$files" | fzf -m --height 60% --border | tr -s "\n" " ")
+    result=$(echo "$files" | fzf -m --height 60% --border sharp | tr -s "\n" " ")
     [ -n "$result" ] && freemind $(echo $result) &> /dev/null &
 }
 

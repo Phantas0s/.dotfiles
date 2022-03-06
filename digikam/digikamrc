@@ -1092,7 +1092,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwIcHBw=
+Database Encrypted Password=AwLLy8s=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1462,7 +1462,7 @@ Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
