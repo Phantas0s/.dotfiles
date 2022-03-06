@@ -22,3 +22,10 @@ function _G.tprint(...)
   print(table.concat(objects, '\n'))
   return ...
 end
+
+function _G.syscmd(cmd)
+    local handle = io.popen(cmd)
+    result = handle:read("*a")
+    handle:close()
+    return result
+end
