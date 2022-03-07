@@ -5,26 +5,32 @@ local function GitBranch()
         temp = syscmd('git rev-parse --abbrev-ref HEAD')
         vim.cmd('lcd -')
         if temp ~= 'fatal: no git repository' then
-            temp:gsub("\n", "")
-            branch = temp
+            branch = temp:gsub("\n", "")
         end
     end
     return branch
 end
 
 local function WordCount()
-    -- TODO to finish
     if vim.api.nvim_buf_get_option(vim.current_buffer, 'filetype') ~= "markdown" then
-        return
+        return ""
     end
-    local currentMode = vim.api.nvim_get_mode()
-    local stats = vim.api.nvim_exec([[execute("silent normal g\<c-g>")]], true)
-    local wordcount = 0
-    local info = {}
-    if stats ~= "--No lines in buffer--" then
-        info = vim.split(stats, " ")
+    words = vim.fn.wordcount().words
+    if vim.fn.wordcount().visual_words then
+        words = vim.fn.wordcount().visual_words
     end
-    tprint(info)
+    return " | " .. words .. " words"
+end
+
+local function CharCount()
+    if vim.api.nvim_buf_get_option(vim.current_buffer, 'filetype') ~= "markdown" then
+        return ""
+    end
+    chars = vim.fn.wordcount().chars
+    if vim.fn.wordcount().visual_chars then
+        chars = vim.fn.wordcount().visual_chars
+    end
+    return " | " .. chars .. " chars"
 end
 
 function status_line()
@@ -35,14 +41,16 @@ function status_line()
         " %=",
         " %=",
         "[" .. GitBranch() .. "]",
-        -- WordCount(),
         " %l/%L %p%%",
+        WordCount(),
+        CharCount(),
         " | Buf %n"
     }
 end
 
--- vim.o.statusline = "%!luaeval('status_line()')"
+vim.o.statusline = "%!luaeval('status_line()')"
 
 return {
-    word_count = WordCount
+    word_count = WordCount,
+    git_branch = GitBranch
 }
