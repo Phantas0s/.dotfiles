@@ -33,7 +33,17 @@ local function CharCount()
     return " | " .. chars .. " chars"
 end
 
-function status_line()
+function ModeColor(mode)
+    if mode == "i" then
+        vim.cmd("hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold")
+    elseif mode == "r" then
+        vim.cmd("hi ModeMsg ctermfg=green ctermbg=NONE cterm=bold")
+    else
+        vim.cmd("hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold")
+    end
+end
+
+function StatusLine()
     return table.concat {
         "%r",
         "%t",
@@ -48,9 +58,12 @@ function status_line()
     }
 end
 
-vim.o.statusline = "%!luaeval('status_line()')"
+vim.o.statusline = StatusLine()
 
-return {
-    word_count = WordCount,
-    git_branch = GitBranch
-}
+vim.cmd([[
+augroup Mode
+    autocmd!
+    au InsertEnter * lua ModeColor(vim.api.nvim_eval('v:insertmode'))
+    au InsertLeave * hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold
+augroup END
+]])

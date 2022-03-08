@@ -3,7 +3,7 @@
 
 lua << EOF
 -- Mappings.
--- For diagnostic, eee `:help vim.diagnostic.*`
+-- For diagnostic, see `:help vim.diagnostic.*`
 local opts = { noremap=true, silent=true }
 
 -- Use an on_attach function to only map the following keys
@@ -29,10 +29,47 @@ local opts = { noremap=true, silent=true }
 -- vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
    end
 
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+-- local servers = { 'gopls' }
+-- for _, lsp in pairs(servers) do
+-- require('lspconfig')[lsp].setup {
+--     on_attach = on_attach,
+--     flags = {
+--         debounce_text_changes = 150,
+--     }
+-- }
+-- end
+
 -- nvim-cmp
--- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- Add additional capabilities supported by nvim-cmp
+-- luasnip setup
+-- local luasnip = require 'luasnip'
+
+--cmp.setup.cmdline('/', {
+--    sources = {
+--        { name = 'buffer' }
+--    }
+--})
+
+-- cmp.setup.cmdline(':', {
+--    sources = cmp.config.sources({
+--       { name = 'path' }
+--     }, {
+--       { name = 'cmdline' }
+--     })
+-- })
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lspconfig = require('lspconfig')
 
+
+-- require'lspconfig'.sqlls.setup{
+--     cmd = { "sql-language-server", "up", "--method", "stdio" },
+--     filetypes = { "sql", "mysql" },
+--     settings = {}
+-- }
 
 local lib = vim.api.nvim_get_runtime_file("", true)
 table.insert(lib, "/usr/lib/lua-language-server/meta/3rd/love2d")
@@ -46,7 +83,7 @@ table.insert(runtime_path, "/usr/share/lua/5.3/?/init.lua")
 
 lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
-  -- capabilities = capabilities,
+  capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -71,7 +108,7 @@ lspconfig.sumneko_lua.setup {
     },
   },
 }
--- Enable some language servers
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 
     'gopls', 
     'ltex', 
@@ -83,7 +120,7 @@ local servers = {
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = on_attach,
-        -- capabilities = capabilities,
+        capabilities = capabilities,
     }
 end
 
@@ -121,55 +158,55 @@ function goimports(timeout_ms)
 end
 
 -- nvim-cmp setup
--- local cmp = require 'cmp'
--- cmp.setup {
---     snippet = {
---         expand = function(args)
---             vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
---         end,
---     },
---     mapping = {
---         ['<C-k>'] = cmp.mapping.select_prev_item(),
---         ['<C-j>'] = cmp.mapping.select_next_item(),
---         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
---         ['<C-f>'] = cmp.mapping.scroll_docs(4),
---         ['<C-c>'] = cmp.mapping.complete(),
---         ['<C-e>'] = cmp.mapping.close(),
---         ['<CR>'] = cmp.mapping.confirm {
---             behavior = cmp.ConfirmBehavior.Replace,
---             select = true,
---         },
---         -- ['<Tab>'] = function(fallback)
---         --   if cmp.visible() then
---         --     cmp.select_next_item()
---         --   elseif luasnip.expand_or_jumpable() then
---         --     luasnip.expand_or_jump()
---         --   else
---         --     fallback()
---         --   end
---         -- end,
---         -- ['<S-Tab>'] = function(fallback)
---         --   if cmp.visible() then
---         --     cmp.select_prev_item()
---         --   elseif luasnip.jumpable(-1) then
---         --     luasnip.jump(-1)
---         --   else
---         --     fallback()
---         --   end
---         -- end,
---     },
---     sources = cmp.config.sources({
---         { name = 'nvim_lsp' },
---         { name = 'ultisnips' },
---         { name = 'tmux' },
---         { name = 'path' },
---         { name = 'nvim_lua' },
---         -- { name = "nvim_lsp_signature_help" },
---     }, {
---         { name = 'buffer' },
---     })
---   }
--- 
+local cmp = require 'cmp'
+cmp.setup {
+    snippet = {
+        expand = function(args)
+            vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        end,
+    },
+    mapping = {
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-c>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+        },
+        -- ['<Tab>'] = function(fallback)
+        --   if cmp.visible() then
+        --     cmp.select_next_item()
+        --   elseif luasnip.expand_or_jumpable() then
+        --     luasnip.expand_or_jump()
+        --   else
+        --     fallback()
+        --   end
+        -- end,
+        -- ['<S-Tab>'] = function(fallback)
+        --   if cmp.visible() then
+        --     cmp.select_prev_item()
+        --   elseif luasnip.jumpable(-1) then
+        --     luasnip.jump(-1)
+        --   else
+        --     fallback()
+        --   end
+        -- end,
+    },
+    sources = cmp.config.sources({
+        -- { name = 'nvim_lsp' },
+        -- { name = 'ultisnips' },
+        -- { name = 'tmux' },
+        -- { name = 'path' },
+        { name = 'nvim_lua' },
+        -- { name = "nvim_lsp_signature_help" },
+    }, {
+        -- { name = 'buffer' },
+    })
+  }
+
 EOF
 
 autocmd BufWritePre *.go lua goimports(1000)

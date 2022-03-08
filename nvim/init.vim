@@ -21,11 +21,9 @@ let maplocalleader = "\<space>"
 " Source plugin definition file
 source $VIMCONFIG/init_plugins.vim
 
-" Source status line
-source $VIMCONFIG/status_line.vim
-
 " Load custom library for lua
 lua require('hypnos/kit')
+lua require('hypnos/status_line')
 
 " source every plugin configs
 for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
