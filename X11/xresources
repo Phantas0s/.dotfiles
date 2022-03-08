@@ -41,10 +41,6 @@
 
 URxvt*font: xft:Inconsolata Nerd Font:style=Medium:size=14:pixelsize=16:antialias=true
 
-! URxvt*intensityStyles: true
-! URxvt*linespace: 0
-
-! URxvt*geometry: 100x30
 URxvt*borderLess: false
 URxvt*externalBorder: 0
 URxvt*internalBorder: 4
@@ -52,17 +48,10 @@ URxvt*internalBorder: 4
 URxvt*scrollBar: false
 
 URxvt*cursorColor: #ffffff
-! URxvt*cursorColor2: #000000
-! URxvt*cursorBlink: false
-! URxvt*reverseVideo: false
 
 ! Useful for transparency
 URxvt*depth: 32
 URxvt.background: [85]#181815
-
-! URxvt*pointerBlank: false
-! DEPRECATED - might be used by transparency - use URxvt*transparent: true
-!URxvt*inheritPixmap: false
 
 ! Might be used by tmux
 URxvt*termName: rxvt-unicode
@@ -78,27 +67,14 @@ URxvt*saveLines: 5000
 ! | Scroll |
 ! +--------+
 
-! URxvt*jumpScroll: true
-! URxvt*skipScroll: true
-! URxvt*scrollTtyOutput: false
-! URxvt*scrollWithBuffer: false
-! URxvt*scrollTtyKeypress: true
-
-! URxvt*tripleclickwords: true
-! URxvt*cutchars: ()*,<>[]{}|`""''
-
-! For tabs
-! URxvt*pastableTabs: false
-! URxvt*mapAlert: false
-
 !! Perl Extensions !!
-!! URxvt*perl-ext-common: default,tabbedex,resize-font
 URxvt*perl-ext-common: tabbedex,resize-font
 
 URxvt.keysym.C-Down: resize-font:smaller
 URxvt.keysym.C-Up: resize-font:bigger
 URxvt.keysym.C-equal: resize-font:reset
 URxvt.keysym.C-question: resize-font:show
+URxvt*letterSpace: -1
 
 ! +------+
 ! | Tabs |
@@ -126,5 +102,3 @@ URxvt*tabbedex.tab-fg: 167
 URxvt*tabbedex.tab-bg: 236
 URxvt*tabbedex.transparent:true
 URxvt*tabbedex.new-button: false
-
-URxvt*letterSpace: -1
