@@ -1,3 +1,4 @@
+-- TODO not really efficient to run the shell command every refresh of the statusline...
 local function GitBranch()
     local branch = ""
     if vim.api.nvim_buf_get_option(vim.current_buffer, 'modifiable') then
@@ -8,7 +9,10 @@ local function GitBranch()
             branch = temp:gsub("\n", "")
         end
     end
-    return branch
+    if branch ~= "" then
+        return "[" .. branch .. "]"
+    end
+    return ""
 end
 
 local function WordCount()
@@ -43,14 +47,18 @@ function ModeColor(mode)
     end
 end
 
+-- TODO call to the different function seems to be cached... and not reloaded when needed
 function StatusLine()
     return table.concat {
-        "%r",
-        "%t",
+        "%#PMenuSel#",
+        "%r", --Readonly flat
+        "%#Visual#",
+        " %t",
+        "%#TabLineFill#",
         "%M",
         " %=",
         " %=",
-        "[" .. GitBranch() .. "]",
+        GitBranch(),
         " %l/%L %p%%",
         WordCount(),
         CharCount(),
