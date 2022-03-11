@@ -41,7 +41,7 @@ function ModeColor(mode)
     if mode == "i" then
         vim.cmd("hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold")
     elseif mode == "r" then
-        vim.cmd("hi ModeMsg ctermfg=green ctermbg=NONE cterm=bold")
+        vim.cmd("hi ModeMsg ctermfg=magenta ctermbg=NONE cterm=bold")
     else
         vim.cmd("hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold")
     end
@@ -52,11 +52,11 @@ function StatusLine()
     return table.concat {
         "%#DiffChange#",
         "%r", --Readonly flat
-        "%#Visual#",
+        "%#TabLineFill#",
         " %t",
+        "%#Visual#",
         " %m",
         "%#TabLineFill#",
-        " %=",
         " %=",
         GitBranch(),
         " %l/%L %p%%",
