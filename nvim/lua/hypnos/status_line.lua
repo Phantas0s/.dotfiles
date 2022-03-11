@@ -50,12 +50,12 @@ end
 -- TODO call to the different function seems to be cached... and not reloaded when needed
 function StatusLine()
     return table.concat {
-        "%#PMenuSel#",
+        "%#DiffChange#",
         "%r", --Readonly flat
         "%#Visual#",
         " %t",
+        " %m",
         "%#TabLineFill#",
-        "%M",
         " %=",
         " %=",
         GitBranch(),
@@ -73,5 +73,7 @@ augroup Mode
     autocmd!
     au InsertEnter * lua ModeColor(vim.api.nvim_eval('v:insertmode'))
     au InsertLeave * hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold
+    au WinEnter,BufEnter * lua vim.o.statusline = StatusLine()
+    au WinLeave,BufLeave * lua vim.o.statusline = StatusLine()
 augroup END
 ]])

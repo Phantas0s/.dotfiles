@@ -1,4 +1,21 @@
-set tabline=%!TabLine()
+set tabline=%!TestTabLine()
+
+" tabpagenr($) - Number of tab open
+" tabpagenr() - Current tab page
+function! TestTabLine()
+    for i in range(tabpagenr('$'))
+        let s = ''
+        echo 'index:'.i
+        echo 'index plus:'.i+1
+        echo tabpagenr()
+        if i + 1 == tabpagenr()
+            let s .= '%#TabLineSel#'
+        else
+            let s .= '%#TabLine#'
+        endif
+    endfor
+    return s
+endfunction
 
 function! TabLine()
   let s = ''
@@ -178,9 +195,9 @@ highlight! TabNumSel term=bold,reverse cterm=bold,reverse ctermfg=1 ctermbg=7 gu
 highlight! WinNum term=bold,underline cterm=bold,underline ctermfg=11 ctermbg=7 guifg=DarkBlue guibg=LightGrey
 highlight! WinNumSel term=bold cterm=bold ctermfg=7 ctermbg=14 guifg=DarkBlue guibg=LightGrey
 
-set tabline=%!MyTabLine()
+" set tabline=%!MyTabLine()
 
 endif " exists("+showtabline")
 
-# https://github.com/alvarosevilla95/luatab.nvim
-# https://github.com/akinsho/bufferline.nvim
+" https://github.com/alvarosevilla95/luatab.nvim
+" https://github.com/akinsho/bufferline.nvim
