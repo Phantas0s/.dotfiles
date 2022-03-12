@@ -50,9 +50,9 @@ end
 -- TODO call to the different function seems to be cached... and not reloaded when needed
 function StatusLine()
     return table.concat {
-        "%#DiffChange#",
+        "%#Visual#",
         "%r", --Readonly flat
-        "%#TabLineFill#",
+        "%#DiffChange#",
         " %t",
         "%#Visual#",
         " %m",

@@ -35,7 +35,7 @@ Plug 'honza/vim-snippets' " snippets
 " | Reading doc in Vim |
 " +--------------------+
 
-Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
+" Plug 'jez/vim-superman' " Open man with vim using vman (need to be configured in zsh boot)
 Plug 'alx741/vinfo' " Open info documentation files
 
 " +-----------+
