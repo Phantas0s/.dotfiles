@@ -37,14 +37,11 @@ local function CharCount()
     return " | " .. chars .. " chars"
 end
 
-function ModeColor(mode)
-    if mode == "i" then
-        vim.cmd("hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold")
-    elseif mode == "r" then
-        vim.cmd("hi ModeMsg ctermfg=magenta ctermbg=NONE cterm=bold")
-    else
-        vim.cmd("hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold")
+local function BufChange()
+    if vim.api.nvim_buf_get_option(vim.api.nvim_get_current_buf(), 'modified') then
+        return ""
     end
+    return ""
 end
 
 -- TODO call to the different function seems to be cached... and not reloaded when needed
@@ -54,8 +51,9 @@ function StatusLine()
         "%r", --Readonly flat
         "%#DiffChange#",
         " %t",
+
         "%#Visual#",
-        " %m",
+        " " .. BufChange(),
         "%#TabLineFill#",
         " %=",
         GitBranch(),
@@ -66,6 +64,16 @@ function StatusLine()
     }
 end
 
+function ModeColor(mode)
+    if mode == "i" then
+        vim.cmd("hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold")
+    elseif mode == "r" then
+        vim.cmd("hi ModeMsg ctermfg=magenta ctermbg=NONE cterm=bold")
+    else
+        vim.cmd("hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold")
+    end
+end
+
 vim.o.statusline = StatusLine()
 
 vim.cmd([[
@@ -73,7 +81,6 @@ augroup Mode
     autocmd!
     au InsertEnter * lua ModeColor(vim.api.nvim_eval('v:insertmode'))
     au InsertLeave * hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold
-    au WinEnter,BufEnter * lua vim.o.statusline = StatusLine()
-    au WinLeave,BufLeave * lua vim.o.statusline = StatusLine()
+    au WinEnter,BufEnter,BufModifiedSet,CursorMoved,CursorMovedI * lua vim.o.statusline = StatusLine()
 augroup END
 ]])

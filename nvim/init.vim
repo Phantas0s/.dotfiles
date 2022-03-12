@@ -24,6 +24,7 @@ source $VIMCONFIG/init_plugins.vim
 " Load custom library for lua
 lua require('hypnos/kit')
 lua require('hypnos/status_line')
+lua require('hypnos/tab_line')
 
 " source every plugin configs
 for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')

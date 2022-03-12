@@ -1,4 +1,4 @@
-set tabline=%!TestTabLine()
+" set tabline=%!TestTabLine()
 
 " tabpagenr($) - Number of tab open
 " tabpagenr() - Current tab page
