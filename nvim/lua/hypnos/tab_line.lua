@@ -27,6 +27,6 @@ end
 vim.cmd([[
   augroup TabLine
   au!
-  au BufEnter,TabEnter * lua vim.o.tabline = TabLine()
+  au BufEnter,TabEnter,BufWritePost,CursorMoved,CursorMovedI * lua vim.o.tabline = TabLine()
   augroup END
 ]])

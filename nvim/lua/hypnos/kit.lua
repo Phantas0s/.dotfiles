@@ -23,9 +23,14 @@ function _G.tprint(...)
   return ...
 end
 
-function _G.syscmd(cmd)
-    local handle = io.popen(cmd)
-    result = handle:read("*a")
+function _G.osExec(cmd)
+    local handle = assert(io.popen(cmd))
+    local result = handle:read("*a")
     handle:close()
     return result
+end
+
+function _G.Reload(pack)
+    package.loaded['hypnos/'..pack] = nil
+    require('hypnos/'..pack)
 end
