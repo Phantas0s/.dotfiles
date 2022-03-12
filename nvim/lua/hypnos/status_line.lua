@@ -3,14 +3,11 @@ local function GitBranch()
     local branch = ""
     if vim.api.nvim_buf_get_option(vim.current_buffer, 'modifiable') then
         vim.cmd('lcd %:p:h')
-        temp = syscmd('git rev-parse --abbrev-ref HEAD')
-        vim.cmd('lcd -')
-        if temp ~= 'fatal: no git repository' then
+        local temp = osExec('git rev-parse --abbrev-ref HEAD 2> /dev/null')
+        if temp ~= "" then
             branch = temp:gsub("\n", "")
+            return "[" .. branch .. "]"
         end
-    end
-    if branch ~= "" then
-        return "[" .. branch .. "]"
     end
     return ""
 end
@@ -51,7 +48,6 @@ function StatusLine()
         "%r", --Readonly flat
         "%#DiffChange#",
         " %t",
-
         "%#Visual#",
         " " .. BufChange(),
         "%#TabLineFill#",
