@@ -8,3 +8,4 @@
 [submodule "zsh/prompt"]
 	path = zsh/prompt
 	url = https://github.com/Phantas0s/purification
+    branch = master

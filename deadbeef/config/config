@@ -84,10 +84,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 318
 logwindow.geometry.y 219
-mainwin.geometry.h 1155
+mainwin.geometry.h 1156
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
-mainwin.geometry.y 22
+mainwin.geometry.y 44
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
