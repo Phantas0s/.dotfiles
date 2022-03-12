@@ -42,12 +42,18 @@ hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold
 
 " tabs
-hi TabLineSel ctermfg=red ctermbg=black cterm=NONE
-hi TabLineFill ctermfg=white ctermbg=black cterm=NONE
-hi TabLine ctermfg=white ctermbg=black cterm=NONE
+hi TabLineSel ctermfg=white ctermbg=black cterm=NONE
+hi TabLineNumSel ctermfg=red ctermbg=black cterm=NONE
+hi TabLineModSel ctermfg=blue ctermbg=black cterm=NONE
+hi TabLineNum ctermfg=gray ctermbg=black cterm=NONE
+hi TabLine ctermfg=gray ctermbg=black cterm=NONE
+hi TabLineMod ctermfg=gray ctermbg=black cterm=NONE
 
 " Status line
-hi StatusLine ctermfg=white ctermbg=black cterm=bold
+hi StatusLine ctermfg=gray ctermbg=black cterm=bold
+hi StatusLineRO ctermfg=red ctermbg=black cterm=bold
+hi StatusLineFile ctermfg=white ctermbg=black cterm=bold
+hi StatusLineChange ctermfg=blue ctermbg=black cterm=bold
 hi StatusLineNC ctermfg=gray ctermbg=black cterm=NONE
 
 " Used for autocompletion
@@ -66,7 +72,7 @@ hi Folded ctermfg=white ctermbg=black cterm=bold
 " Code
 hi Keyword ctermfg=blue ctermbg=NONE cterm=NONE
 hi Function ctermfg=cyan ctermbg=NONE cterm=NONE
-hi Comment ctermfg=249 ctermbg=NONE cterm=NONE
+hi Comment ctermfg=gray ctermbg=NONE cterm=NONE
 hi LocalVariable ctermfg=magenta ctermbg=NONE cterm=NONE
 
 hi Float ctermfg=red ctermbg=NONE cterm=NONE

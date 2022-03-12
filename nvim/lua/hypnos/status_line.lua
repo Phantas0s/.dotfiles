@@ -44,13 +44,13 @@ end
 -- TODO call to the different function seems to be cached... and not reloaded when needed
 function StatusLine()
     return table.concat {
-        "%#Visual#",
+        "%#StatusLineRO#",
         "%r", --Readonly flat
-        "%#DiffChange#",
+        "%#StatusLineFile#",
         " %t",
-        "%#Visual#",
-        " " .. BufChange(),
-        "%#TabLineFill#",
+        "%#StatusLineChange#",
+        BufChange(),
+        "%#StatusLine#",
         " %=",
         GitBranch(),
         " %l/%L %p%%",
