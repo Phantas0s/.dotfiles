@@ -114,6 +114,7 @@ local servers = {
     'ltex', 
     'cssls', 
     'html',
+    'phpactor',
     'eslint',
 }
 
