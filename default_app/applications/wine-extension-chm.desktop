@@ -2,7 +2,7 @@
 Type=Application
 Name=hh
 MimeType=application/vnd.ms-htmlhelp;
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/homm_3" /home/ubuntu/buildbot/runners/wine/lutris-6.1-x86_64/bin/wine start /ProgIDOpen chm.file %f
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/homm_3" wine start /ProgIDOpen chm.file %f
 NoDisplay=true
 StartupNotify=true
-Icon=A35F_hh.0
+Icon=D15F_hh.0

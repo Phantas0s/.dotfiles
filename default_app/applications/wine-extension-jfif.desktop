@@ -2,6 +2,7 @@
 Type=Application
 Name=Wine Internet Explorer
 MimeType=image/jpeg;
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/baldurs_gate_trilogy/drunk/../prefix" wine start /ProgIDOpen pjpegfile %f
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/homm_3" wine start /ProgIDOpen pjpegfile %f
 NoDisplay=true
 StartupNotify=true
+Icon=ECB7_iexplore.0

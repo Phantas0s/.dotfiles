@@ -2,6 +2,7 @@
 Type=Application
 Name=notepad
 MimeType=application/x-wine-extension-ini;
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/baldurs_gate_trilogy/drunk/../prefix" wine start /ProgIDOpen inifile %f
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/homm_3" wine start /ProgIDOpen inifile %f
 NoDisplay=true
 StartupNotify=true
+Icon=2E40_notepad.0
