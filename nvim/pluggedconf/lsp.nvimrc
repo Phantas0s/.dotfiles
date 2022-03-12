@@ -111,7 +111,7 @@ lspconfig.sumneko_lua.setup {
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 
     'gopls', 
-    'ltex', 
+    -- 'ltex', 
     'cssls', 
     'html',
     'phpactor',
