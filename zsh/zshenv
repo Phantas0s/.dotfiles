@@ -33,6 +33,9 @@ export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 export GIMP_VERSION="2.10"
 export SCREENSHOT="$HOME/Documents/images/screenshots"
 
+# Man pages
+export MANPAGER='nvim +Man!'
+
 # fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_DEFAULT_OPTS='--height 60% --border sharp --color="bg+:0,border:248,spinner:12,hl:11,header:249,info:15,pointer:12,marker:12,prompt:12,hl+:9"'

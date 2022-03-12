@@ -514,15 +514,6 @@ pom() {
     echo "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION" | bc
 }
 
-# open man page in vim
-vman() {
-    if [ $# -eq 0 ]; then
-        echo "What manual page do you want?";
-    elif man -w "$@" > /dev/null; then
-        nvim -c "SuperMan $*"
-    fi
-}
-
 vinfo() {
     vim -c "Vinfo $1" -c 'silent only'
 }

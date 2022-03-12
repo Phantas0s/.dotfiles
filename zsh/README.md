@@ -81,12 +81,6 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index # directory stack
 
 ## Neovim
 
-* `vman`
-
-Open man with Neovim.
-
-Need the plugin 'jez/vim-superman' installed in Neovim.
-
 * `vinfo`
 
 Open info documentation files in Neovim.
