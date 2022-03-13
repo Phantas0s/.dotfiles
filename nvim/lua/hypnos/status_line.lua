@@ -1,8 +1,8 @@
 -- TODO not really efficient to run the shell command every refresh of the statusline...
 local function GitBranch()
     local branch = ""
-    if vim.api.nvim_buf_get_option(vim.current_buffer, 'modifiable') then
-        vim.cmd('lcd %:p:h')
+    if vim.o.modifiable then
+        -- vim.cmd('lcd %:p:h')
         local temp = osExec('git rev-parse --abbrev-ref HEAD 2> /dev/null')
         if temp ~= "" then
             branch = temp:gsub("\n", "")
