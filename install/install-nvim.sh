@@ -90,8 +90,3 @@ ln -sf "$DOTFILES/nvim/thesaurus" "$VIMCONFIG"
 ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"
 
 # projects.nvimrc is installed from the cloud
-
-# TODO crash when lightline pluggin is not installed...
-# installing colorscheme for lightline
-ln -sf "$DOTFILES/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim" \
-"$VIMCONFIG/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim"

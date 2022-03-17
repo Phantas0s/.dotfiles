@@ -53,3 +53,5 @@
 [user]
 	email = matthieu.cneude@gmail.com
 	name = Matthieu
+[diff]
+	submodule = log

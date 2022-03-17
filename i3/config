@@ -312,18 +312,31 @@ mode "resize" {
 
 bindsym $mod+Shift+r mode "resize"
 
+# Icons
+for_window [all] title_window_icon padding 3px
+
+# URxvt border
+for_window [class="URxvt*"] border pixel 1
+
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="zoom"] floating enable
 
 # floating windows
-for_window [class="KeePassXC"] floating enable, border none
-for_window [class="Arandr"] floating enable, border none
-for_window [class="Gcolor2"] floating enable, border none
+for_window [class="Arandr"] floating enable, sticky enable, border none
+for_window [class="Gcolor2"] floating enable,sticky enable, border none
 
-# Terminal scratchpad with tmux and three windows: 1.term / 2.vim (on a temp file) / 3.translation CLI
-for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
+# pavucontrol
+for_window [class="Pavucontrol"] move to scratchpad, floating enable, sticky enable, resize set 800 600
+bindsym $mod+Ctrl+m [class="Pavucontrol"] scratchpad show
+exec pavucontrol
+
+# Terminal scratchpad with tmux and three windows: 
+# 1.term 
+# 2.vim (on a temp file) 
+# 3.translation CLI
+for_window [instance="urxvt_scratchpad"] move to scratchpad, sticky enable
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
     exec urxvtc -name urxvt_scratchpad -e tmux new-session -d -s scratchpad ';' \
     new-window -n vim 'nvim +e /tmp/nvim-tmp.md +"set spelllang=de,en"' ';' \
@@ -331,22 +344,20 @@ bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
     attach-session -d -t scratchpad ';'
 
 # htop scratchpad
-for_window [instance="htop_scratchpad"] move to scratchpad, border none
+for_window [instance="htop_scratchpad"] move to scratchpad, sticky enable, border none
 bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
 exec urxvtc -name htop_scratchpad -e htop
 
 # keepass scratchpad
-for_window [class="KeePassXC"] move to scratchpad
+for_window [class="KeePassXC"] move to scratchpad, sticky enable, floating enable, border none
 bindsym $mod+Shift+a [class="KeePassXC"] scratchpad show
 exec keepassxc
 
 # bc scratchpad
-for_window [instance="bc_scratchpad"] move to scratchpad, border none
+for_window [instance="bc_scratchpad"] move to scratchpad, sticky enable, border none
 bindsym $mod+Shift+b [instance="bc_scratchpad"] scratchpad show
 exec urxvtc -name bc_scratchpad -e bc -l
 
-# configuration of some software
-for_window [class="URxvt*"] border pixel 1
 
 # start softwares and command lines in workspaces
 exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
