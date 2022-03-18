@@ -229,6 +229,7 @@ au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeou
 iabbrev IMO in my opinion
 iabbrev BTW by the way
 iabbrev <expr> cdate strftime('%Y-%m-%d')
+iabbrev hte the
 
 " +--------------+
 " | Set  options |
@@ -316,6 +317,9 @@ set diffopt+=vertical
 
 " to be able to use find in any projects
 set path=.,**,,
+
+" Don't display preview window for omni-completion
+:set completeopt-=preview
 
 " Set ripgrep for grep program
 if executable('rg')
