@@ -5,9 +5,9 @@
 
 
 # Create all necessary folder for neovim
-if [ ! -d $VIMCONFIG ]
+if [ ! -d "$VIMCONFIG" ]
   then
-    mkdir $VIMCONFIG
+    mkdir "$VIMCONFIG"
 
     # install neovim plugin manager
     curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs \
@@ -22,7 +22,6 @@ mkdir -p "$VIMCONFIG/sessions"
 
 # install nvim config
 ln -sf "$DOTFILES/nvim/init.vim" "$VIMCONFIG"
-ln -sf "$DOTFILES/nvim/status_line.vim" "$VIMCONFIG"
 ln -sf "$DOTFILES/nvim/init_plugins.vim" "$VIMCONFIG"
 
 # Install all mandatory folders if they don't exist already
@@ -90,8 +89,3 @@ ln -sf "$DOTFILES/nvim/thesaurus" "$VIMCONFIG"
 ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"
 
 # projects.nvimrc is installed from the cloud
-
-# TODO crash when lightline pluggin is not installed...
-# installing colorscheme for lightline
-ln -sf "$DOTFILES/nvim/plugged/lightline.vim/colorscheme/hypnos256.vim" \
-"$VIMCONFIG/plugged/lightline.vim/autoload/lightline/colorscheme/hypnos256.vim"
