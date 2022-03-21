@@ -20,8 +20,9 @@ FZF-EOF"
 # | Pacman |
 # +--------+
 
+# TODO can improve that with a bind to switch to what was installed
 fpac() {
-    pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
+    pacman -Slq | fzf --multi --reverse --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
 }
 
 # +------+
@@ -29,10 +30,9 @@ fpac() {
 # +------+
 
 fmux() {
-    set -euo pipefail
-
     prj=$(find $XDG_CONFIG_HOME/tmuxp/ -execdir bash -c 'basename "${0%.*}"' {} ';' | sort | uniq | nl | fzf | cut -f 2)
-    tmuxp load $prj
+    echo $prj
+    [ -n "$prj" ] && tmuxp load $prj
 }
 
 # ftmuxp - propose every possible tmuxp session
@@ -90,7 +90,7 @@ ftmux() {
 # List install files for dotfiles
 fdot() {
     file=$(find "$DOTFILES/install" -exec basename {} ';' | sort | uniq | nl | fzf | cut -f 2)
-    "$EDITOR" "$DOTFILES/install/$file"
+    [ -n "$file" ] && "$EDITOR" "$DOTFILES/install/$file"
 }
 
 # List projects
@@ -100,7 +100,7 @@ fwork() {
 }
 
 fpdf() {
-    result=$(find -type f -name '*.pdf' | nl | fzf | cut -f 2)
+    result=$(find -type f -name '*.pdf' | fzf --preview "pdftotext {} - | less")
     [ -n "$result" ] && zathura "$result" &
 }
 
@@ -119,7 +119,7 @@ fmind() {
 # List tracking spreadsheets (productivity, money ...)
 ftrack() {
     file=$(ls $CLOUD/tracking/**/*.{ods,csv} | fzf) || return
-    libreoffice "$file" &> /dev/null &
+    [ -n "$file" ] && libreoffice "$file" &> /dev/null &
 }
 
 fpop() {

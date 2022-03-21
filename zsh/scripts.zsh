@@ -506,14 +506,6 @@ initKondo() {
     clj-kondo --lint "$(boot with-cp -w -f -)"
 }
 
-pom() {
-    local -r HOURS=${1:?}
-    local -r MINUTES=${2:-0}
-    local -r POMODORO_DURATION=${3:-25}
-
-    echo "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION" | bc
-}
-
 vinfo() {
     vim -c "Vinfo $1" -c 'silent only'
 }
@@ -624,9 +616,31 @@ serve() {
 }
 
 backup() {
-    $DOTFILES/bash/scripts/backup/backup.sh $@ $CLOUD/dotfiles/dir.csv
+    "$DOTFILES/bash/scripts/backup/backup.sh" "$@" "$CLOUD/dotfiles/dir.csv"
 }
 
 kubecfg() {
-    . $CLOUD/development/dotfiles_projects/amboss/kubecfg.sh
+    . "$CLOUD/development/dotfiles_projects/amboss/kubecfg.sh"
+}
+
+# Terminal scratchpad with tmux and three windows:
+# 1.term
+# 2.vim (on a temp file)
+# 3.translation CLI
+# Used to restart i3 scratchpad if it was closed; logic is duplicated in i3/config
+scratchpad() {
+tmux kill-session -t scratchpad
+urxvtc -name urxvt_scratchpad -e tmux new-session -d -s scratchpad ';' \
+    new-window -n nvim 'nvim +e /tmp/scratchpad.md +"set spelllang=de,en"' ';' \
+    new-window -n trans 'trans -I' ';' \
+    attach-session -d -t scratchpad ';'
+
+}
+
+pom() {
+    local -r HOURS=${1:?}
+    local -r MINUTES=${2:-0}
+    local -r POMODORO_DURATION=${3:-25}
+
+    bc <<< "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION"
 }

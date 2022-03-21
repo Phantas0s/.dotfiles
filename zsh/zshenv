@@ -37,8 +37,8 @@ export SCREENSHOT="$HOME/Documents/images/screenshots"
 export MANPAGER='nvim +Man!'
 
 # fzf
-export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
-export FZF_DEFAULT_OPTS='--height 60% --border sharp --color="bg+:0,border:248,spinner:12,hl:11,header:249,info:15,pointer:12,marker:12,prompt:12,hl+:9"'
+# export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
+# export FZF_DEFAULT_OPTS='--height 60% --border sharp --color="bg+:0,border:248,spinner:12,hl:11,header:249,info:15,pointer:12,marker:12,prompt:12,hl+:9"'
 # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # export FZF_CTRL_T_OPTS=""
 # export FZF_CTRL_R_OPTS=""

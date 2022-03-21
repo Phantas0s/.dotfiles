@@ -75,7 +75,7 @@
 'bindkey' '-s' '^[Od'    '^[[1;5D'
 'bindkey' '-s' '^[Oc'    '^[[1;5C'
 
-typeset -grA keys=(
+typeset -gA keys=(
     Up                   '^[[A'
     Down                 '^[[B'
     Right                '^[[C'
@@ -92,8 +92,8 @@ typeset -grA keys=(
     Shift+Down           '^[[1;2B'
     Shift+Right          '^[[1;2C'
     Shift+Left           '^[[1;2D'
-    Shift+Home           '^[[1;2H'
     Shift+End            '^[[1;2F'
+    Shift+Home           '^[[1;2H'
     Shift+Insert         '^[[2;2~'
     Shift+Delete         '^[[3;2~'
     Shift+PageUp         '^[[5;2~'
@@ -105,8 +105,8 @@ typeset -grA keys=(
     Alt+Down             '^[[1;3B'
     Alt+Right            '^[[1;3C'
     Alt+Left             '^[[1;3D'
-    Alt+Home             '^[[1;3H'
     Alt+End              '^[[1;3F'
+    Alt+Home             '^[[1;3H'
     Alt+Insert           '^[[2;3~'
     Alt+Delete           '^[[3;3~'
     Alt+PageUp           '^[[5;3~'
@@ -117,8 +117,8 @@ typeset -grA keys=(
     Alt+Shift+Down       '^[[1;4B'
     Alt+Shift+Right      '^[[1;4C'
     Alt+Shift+Left       '^[[1;4D'
-    Alt+Shift+Home       '^[[1;4H'
     Alt+Shift+End        '^[[1;4F'
+    Alt+Shift+Home       '^[[1;4H'
     Alt+Shift+Insert     '^[[2;4~'
     Alt+Shift+Delete     '^[[3;4~'
     Alt+Shift+PageUp     '^[[5;4~'
