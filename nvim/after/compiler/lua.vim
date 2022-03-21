@@ -12,7 +12,9 @@ if exists(':CompilerSet') != 2
   command -nargs=* CompilerSet setlocal <args>
 endif
 
+" cpoptions is a set of flag turning on and off specific compatibility with Vi
 let s:save_cpo = &cpoptions
+" Do not concatenate sourced lines taht start with backslash
 set cpoptions-=C
 
 CompilerSet makeprg=lua\ .

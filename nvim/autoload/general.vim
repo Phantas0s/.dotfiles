@@ -12,7 +12,7 @@ endfunc
 
 " delete trailing space when saving files
 function general#DeleteTrailingWS()
-    lua require('hypnos/general').delete_trailing_ws()
+    lua require('hypnos/general').del_trailing_ws()
 endfunc
 
 " buffer cleanup - delete every buffer except the one open
@@ -209,6 +209,7 @@ endfunction
 
 " See: https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7
 function general#Redir(cmd, rng, start, end)
+    " Close all the windows of current tabpage if it has a variable "win" attached
 	for win in range(1, winnr('$'))
 		if getwinvar(win, 'scratch')
 			execute win . 'windo close'

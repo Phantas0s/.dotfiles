@@ -29,6 +29,7 @@ hi VertSplit ctermfg=black ctermbg=black cterm=NONE
 hi CursorLine ctermfg=NONE ctermbg=black cterm=bold
 hi CursorLineNr ctermfg=red ctermbg=black cterm=bold
 hi Todo ctermfg=red ctermbg=white cterm=bold
+hi NvimInternalError ctermfg=red ctermbg=NONE cterm=bold
 
 hi Search ctermfg=yellow ctermbg=NONE cterm=bold
 hi PreProc ctermfg=white ctermbg=NONE cterm=NONE
@@ -36,7 +37,6 @@ hi Visual ctermfg=red ctermbg=black cterm=bold
 hi Statement ctermfg=blue ctermbg=NONE cterm=NONE
 hi Delimiter ctermfg=magenta ctermbg=NONE cterm=NONE
 hi Special ctermfg=cyan ctermbg=NONE cterm=NONE
-
 hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
 hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold
@@ -53,7 +53,7 @@ hi TabLineMod ctermfg=gray ctermbg=black cterm=NONE
 hi StatusLine ctermfg=gray ctermbg=black cterm=bold
 hi StatusLineRO ctermfg=red ctermbg=black cterm=bold
 hi StatusLineFile ctermfg=white ctermbg=black cterm=bold
-hi StatusLineChange ctermfg=blue ctermbg=black cterm=bold
+hi StatusLineChange ctermfg=red ctermbg=black cterm=bold
 hi StatusLineNC ctermfg=gray ctermbg=black cterm=NONE
 
 " Used for autocompletion
@@ -67,6 +67,7 @@ hi Directory ctermfg=blue ctermbg=NONE cterm=bold
 hi Underlined ctermfg=magenta ctermbg=black cterm=underline
 hi SpellRare ctermfg=yellow ctermbg=black cterm=bold
 hi SpellBad ctermfg=red ctermbg=NONE cterm=underline
+hi SpellCap ctermfg=NONE ctermbg=red cterm=bold
 hi Folded ctermfg=white ctermbg=black cterm=bold
 
 " Code
@@ -114,7 +115,6 @@ hi DiffText ctermfg=yellow ctermbg=black cterm=NONE
 
 " Neomake plugin
 hi NeomakeWarningSign ctermfg=yellow ctermbg=black
-hi SpellCap ctermfg=NONE ctermbg=red cterm=bold
 
 " quick-scope plugin
 highlight QuickScopePrimary ctermfg=red cterm=underline

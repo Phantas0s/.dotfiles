@@ -200,8 +200,8 @@ cmp.setup {
     sources = cmp.config.sources({
         -- { name = 'nvim_lsp' },
         -- { name = 'ultisnips' },
-        -- { name = 'tmux' },
         -- { name = 'path' },
+        { name = 'tmux' },
         { name = 'nvim_lua' },
         -- { name = "nvim_lsp_signature_help" },
     }, {

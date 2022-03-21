@@ -1,12 +1,12 @@
 #!/usr/bin/env lua
 
-local function restorePosition()
+local function restore_position()
     if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
         vim.cmd('normal! g`\"')
     end
 end
 
-local function deleteTrailingWS()
+local function del_trailing_ws()
     vim.cmd([[
         normal mz
         %s/\v\s+$//ge
@@ -15,6 +15,6 @@ local function deleteTrailingWS()
 end
 
 return {
-    restore_position = restorePosition,
-    delete_trailing_ws = deleteTrailingWS
+    restore_position = restore_position,
+    del_trailing_ws = del_trailing_ws
 }
