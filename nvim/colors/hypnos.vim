@@ -41,6 +41,10 @@ hi WarningMsg ctermfg=red ctermbg=black cterm=NONE
 
 hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold
 
+hi IncSearch ctermfg=black ctermbg=lightGray cterm=NONE
+hi ColorColumn ctermfg=black ctermbg=lightGray cterm=NONE
+hi MaxLineChar ctermfg=black ctermbg=yellow cterm=NONE
+
 " tabs
 hi TabLineSel ctermfg=white ctermbg=black cterm=NONE
 hi TabLineNumSel ctermfg=red ctermbg=black cterm=NONE
