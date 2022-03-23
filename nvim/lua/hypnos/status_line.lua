@@ -36,7 +36,7 @@ end
 
 local function BufChange()
     if vim.api.nvim_buf_get_option(vim.api.nvim_get_current_buf(), 'modified') then
-        return ""
+        return " "
     end
     return ""
 end
