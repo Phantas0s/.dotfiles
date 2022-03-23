@@ -69,6 +69,7 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug '
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
 Plug 'jpalardy/vim-slime' " Can send to tmux pane from Vim - cool for REPL
+Plug 'wellle/tmux-complete.vim'
 
 " +-------+
 " | kitty |
