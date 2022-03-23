@@ -46,18 +46,18 @@ hi ColorColumn ctermfg=black ctermbg=lightGray cterm=NONE
 hi MaxLineChar ctermfg=black ctermbg=yellow cterm=NONE
 
 " tabs
-hi TabLineSel ctermfg=white ctermbg=black cterm=NONE
-hi TabLineNumSel ctermfg=red ctermbg=black cterm=NONE
+hi TabLineSel ctermfg=white ctermbg=black cterm=bold
+hi TabLineNumSel ctermfg=red ctermbg=black cterm=bold
 hi TabLineModSel ctermfg=blue ctermbg=black cterm=NONE
 hi TabLineNum ctermfg=gray ctermbg=black cterm=NONE
 hi TabLine ctermfg=gray ctermbg=black cterm=NONE
 hi TabLineMod ctermfg=gray ctermbg=black cterm=NONE
 
 " Status line
-hi StatusLine ctermfg=gray ctermbg=black cterm=bold
+hi StatusLine ctermfg=white ctermbg=black cterm=NONE
 hi StatusLineRO ctermfg=red ctermbg=black cterm=bold
 hi StatusLineFile ctermfg=white ctermbg=black cterm=bold
-hi StatusLineChange ctermfg=red ctermbg=black cterm=bold
+hi StatusLineChange ctermfg=blue ctermbg=black cterm=bold
 hi StatusLineNC ctermfg=gray ctermbg=black cterm=NONE
 
 " Used for autocompletion
