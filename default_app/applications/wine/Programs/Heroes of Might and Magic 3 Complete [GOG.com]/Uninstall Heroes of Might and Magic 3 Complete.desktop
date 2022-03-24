@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Uninstall Heroes of Might and Magic 3 Complete
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/heroes-of-might-and-magic-iii" wine /home/ubuntu/buildbot/runners/wine/lutris-5.7-11-x86_64/bin/wine /Unix /home/hypnos/Games/gog/heroes-of-might-and-magic-iii/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Heroes\\ of\\ Might\\ and\\ Magic\\ 3\\ Complete\\ [GOG.com]/Uninstall\\ Heroes\\ of\\ Might\\ and\\ Magic\\ 3\\ Complete.lnk
-Type=Application
-StartupNotify=true
-Path=/home/hypnos/Games/gog/heroes-of-might-and-magic-iii/dosdevices/c:/GOG Games/HoMM 3 Complete
-Icon=3C07_unins000.0
-StartupWMClass=unins000.exe

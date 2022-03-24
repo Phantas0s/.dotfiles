@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Runestone Keeper
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/runestone-keeper" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/runestone-keeper/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Runestone\\ Keeper\\ [GOG.com]/Runestone\\ Keeper.lnk
-Type=Application
-StartupNotify=true
-Path=/home/hypnos/Games/gog/runestone-keeper/dosdevices/c:/GOG Games/Runestone Keeper/
-Icon=15F5_goggame-1445608249.0
-StartupWMClass=runestonekeeper.exe

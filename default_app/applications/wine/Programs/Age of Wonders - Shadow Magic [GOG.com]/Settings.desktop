@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Settings
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/age-of-wonders-shadow-magic" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/age-of-wonders-shadow-magic/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Age\\ of\\ Wonders\\ -\\ Shadow\\ Magic\\ [GOG.com]/Settings.lnk
-Type=Application
-StartupNotify=true
-Comment=Settings
-Path=/home/hypnos/Games/gog/age-of-wonders-shadow-magic/dosdevices/c:/GOG Games/Age of Wonders - Shadow Magic/
-Icon=CCA6_AoWSMSetup.0
-StartupWMClass=aowsmsetup.exe

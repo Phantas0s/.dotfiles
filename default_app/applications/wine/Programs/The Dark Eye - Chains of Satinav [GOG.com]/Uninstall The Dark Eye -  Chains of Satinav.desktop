@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Uninstall The Dark Eye -  Chains of Satinav
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/the-dark-eye-chains-of-satinav" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/the-dark-eye-chains-of-satinav/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/The\\ Dark\\ Eye\\ -\\ Chains\\ of\\ Satinav\\ [GOG.com]/Uninstall\\ The\\ Dark\\ Eye\\ -\\ \\ Chains\\ of\\ Satinav.lnk
-Type=Application
-StartupNotify=true
-Path=/home/hypnos/Games/gog/the-dark-eye-chains-of-satinav/dosdevices/c:/GOG Games/The Dark Eye - Chains of Satinav
-Icon=7D4A_unins000.0
-StartupWMClass=unins000.exe

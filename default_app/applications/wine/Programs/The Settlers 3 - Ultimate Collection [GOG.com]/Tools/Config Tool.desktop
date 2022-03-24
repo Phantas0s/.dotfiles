@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Config Tool
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/the-settlers-iii-ultimate-collection" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/the-settlers-iii-ultimate-collection/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/The\\ Settlers\\ 3\\ -\\ Ultimate\\ Collection\\ [GOG.com]/Tools/Config\\ Tool.lnk
-Type=Application
-StartupNotify=true
-Comment=Config Tool
-Path=/home/hypnos/Games/gog/the-settlers-iii-ultimate-collection/dosdevices/c:/GOG Games/Settlers 3 Ultimate/
-Icon=0271_SETUPS3.0
-StartupWMClass=setups3.exe

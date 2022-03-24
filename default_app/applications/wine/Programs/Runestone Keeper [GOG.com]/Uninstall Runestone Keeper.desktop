@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Uninstall Runestone Keeper
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/runestone-keeper" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/runestone-keeper/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Runestone\\ Keeper\\ [GOG.com]/Uninstall\\ Runestone\\ Keeper.lnk
-Type=Application
-StartupNotify=true
-Path=/home/hypnos/Games/gog/runestone-keeper/dosdevices/c:/GOG Games/Runestone Keeper
-Icon=5BC9_unins000.0
-StartupWMClass=unins000.exe
