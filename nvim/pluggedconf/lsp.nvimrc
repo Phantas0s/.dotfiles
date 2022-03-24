@@ -61,7 +61,7 @@ local opts = { noremap=true, silent=true }
 --     })
 -- })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lspconfig = require('lspconfig')
 
 
@@ -83,7 +83,7 @@ table.insert(runtime_path, "/usr/share/lua/5.3/?/init.lua")
 
 lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
+  -- capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -122,7 +122,7 @@ local servers = {
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = on_attach,
-        capabilities = capabilities,
+        -- capabilities = capabilities,
     }
 end
 
@@ -160,55 +160,55 @@ function goimports(timeout_ms)
 end
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
-cmp.setup {
-    snippet = {
-        expand = function(args)
-            vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-        end,
-    },
-    mapping = {
-        ['<C-k>'] = cmp.mapping.select_prev_item(),
-        ['<C-j>'] = cmp.mapping.select_next_item(),
-        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-c>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.close(),
-        ['<CR>'] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-        },
-        -- ['<Tab>'] = function(fallback)
-        --   if cmp.visible() then
-        --     cmp.select_next_item()
-        --   elseif luasnip.expand_or_jumpable() then
-        --     luasnip.expand_or_jump()
-        --   else
-        --     fallback()
-        --   end
-        -- end,
-        -- ['<S-Tab>'] = function(fallback)
-        --   if cmp.visible() then
-        --     cmp.select_prev_item()
-        --   elseif luasnip.jumpable(-1) then
-        --     luasnip.jump(-1)
-        --   else
-        --     fallback()
-        --   end
-        -- end,
-    },
-    sources = cmp.config.sources({
-        -- { name = 'nvim_lsp' },
-        -- { name = 'ultisnips' },
-        -- { name = 'path' },
-        { name = 'tmux' },
-        { name = 'nvim_lua' },
-        -- { name = "nvim_lsp_signature_help" },
-    }, {
-        -- { name = 'buffer' },
-    })
-  }
-
+-- local cmp = require 'cmp'
+-- cmp.setup {
+--     snippet = {
+--         expand = function(args)
+--             vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+--         end,
+--     },
+--     mapping = {
+--         ['<C-k>'] = cmp.mapping.select_prev_item(),
+--         ['<C-j>'] = cmp.mapping.select_next_item(),
+--         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+--         ['<C-f>'] = cmp.mapping.scroll_docs(4),
+--         ['<C-c>'] = cmp.mapping.complete(),
+--         ['<C-e>'] = cmp.mapping.close(),
+--         ['<CR>'] = cmp.mapping.confirm {
+--             behavior = cmp.ConfirmBehavior.Replace,
+--             select = true,
+--         },
+--         -- ['<Tab>'] = function(fallback)
+--         --   if cmp.visible() then
+--         --     cmp.select_next_item()
+--         --   elseif luasnip.expand_or_jumpable() then
+--         --     luasnip.expand_or_jump()
+--         --   else
+--         --     fallback()
+--         --   end
+--         -- end,
+--         -- ['<S-Tab>'] = function(fallback)
+--         --   if cmp.visible() then
+--         --     cmp.select_prev_item()
+--         --   elseif luasnip.jumpable(-1) then
+--         --     luasnip.jump(-1)
+--         --   else
+--         --     fallback()
+--         --   end
+--         -- end,
+--     },
+--     sources = cmp.config.sources({
+--         -- { name = 'nvim_lsp' },
+--         -- { name = 'ultisnips' },
+--         -- { name = 'path' },
+--         { name = 'tmux' },
+--         { name = 'nvim_lua' },
+--         -- { name = "nvim_lsp_signature_help" },
+--     }, {
+--         -- { name = 'buffer' },
+--     })
+--   }
+-- 
 EOF
 
 autocmd BufWritePre *.go lua goimports(1000)
