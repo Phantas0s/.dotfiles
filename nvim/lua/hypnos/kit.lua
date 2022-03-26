@@ -34,3 +34,15 @@ function _G.Reload(pack)
     package.loaded['hypnos/'..pack] = nil
     require('hypnos/'..pack)
 end
+
+function _G.nremap(mode, mapping, cmd, opts)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(
+    mode,
+    mapping,
+    cmd,
+    options)
+end
