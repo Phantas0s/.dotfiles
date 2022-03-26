@@ -340,12 +340,9 @@ exec pavucontrol
 # 1.term 
 # 2.vim (on a temp file) 
 # 3.translation CLI
-for_window [instance="urxvt_scratchpad"] move to scratchpad, sticky enable
+for_window [instance="urxvt_scratchpad"] move to scratchpad
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad -e tmux new-session -d -s scratchpad ';' \
-    new-window -n nvim 'nvim +e /tmp/scratchpad.md +"set spelllang=de,en"' ';' \
-    new-window -n trans 'trans -I' ';' \
-    attach-session -d -t scratchpad ';'
+exec "$DOTFILES/bash/scripts/scratchpad.sh"
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, sticky enable, border none
