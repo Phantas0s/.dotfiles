@@ -158,7 +158,7 @@ alias dvim="vim -u /usr/share/nvim/archlinux.vim" # nvim with default config
 alias nvimc='rm -I $VIMCONFIG/swap/*'             # clean nvim swap file
 alias nvimcu='rm -I $VIMCONFIG/undo/*'            # clean the vim undo
 alias nviml='nvim -w $VIMCONFIG/vimlog "$@"'      # log the keystrokes 
-alias nvimn='nvim --noplugin -u NONE'             # launch nvim without any plugin or config
+alias nvimd='nvim --noplugin -u NONE'             # launch nvim without any plugin or config (nvim debug)
 
 # +-----+
 # | Git |
