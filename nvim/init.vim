@@ -27,6 +27,14 @@ lua require('hypnos/status_line')
 lua require('hypnos/tab_line')
 lua require('hypnos/text_objects').basic_text_objects()
 
+" let s:chars = [ '_', '.', ':', ',', ';', '<bar>', '/', '<bslash>', '*', '+', '%', '`', '?' ]
+" for char in s:chars
+"     for mode in [ 'xnoremap', 'onoremap' ]
+"         execute printf('%s i%s :<C-u>silent normal! T%svt%s<CR>', mode, char, char, char)
+"         execute printf('%s a%s :<C-u>normal! F%svf%s<CR>', mode, char, char, char)
+"     endfor
+" endfor
+
 " source every plugin configs
 for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
     execute 'source' file
@@ -234,6 +242,9 @@ iabbrev IMO in my opinion
 iabbrev BTW by the way
 iabbrev <expr> cdate strftime('%Y-%m-%d')
 iabbrev hte the
+
+" Useful for writing the book Learning to Play Vim
+iabbrev cur{} ж\cur{}ж
 
 " +--------------+
 " | Set  options |

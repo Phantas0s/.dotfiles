@@ -46,7 +46,8 @@ endfunction
 " Simple Zoom / Restore window (like Tmux)
 function general#ZoomToggle() abort
     if exists('t:zoomed') && t:zoomed
-        execute t:zoom_winrestcmd let t:zoomed = 0
+        execute t:zoom_winrestcmd
+        let t:zoomed = 0
     else
         let t:zoom_winrestcmd = winrestcmd()
         resize
