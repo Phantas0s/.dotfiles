@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Titan Quest - Anniversary Edition Win10 Safe Mode
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/titan-quest-anniversary-edition" wine /home/ubuntu/buildbot/runners/wine/lutris-5.7-11-x86_64/bin/wine /Unix /home/hypnos/Games/gog/titan-quest-anniversary-edition/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/GOG.com/Titan\\ Quest\\ -\\ Anniversary\\ Edition/Titan\\ Quest\\ -\\ Anniversary\\ Edition\\ Win10\\ Safe\\ Mode.lnk
-Type=Application
-StartupNotify=true
-Comment=Titan Quest - Anniversary Edition Win10 Safe Mode
-Path=/home/hypnos/Games/gog/titan-quest-anniversary-edition/dosdevices/c:/GOG Games/Titan Quest - Anniversary Edition/
-Icon=4CD4_TQ.0
-StartupWMClass=tq.exe

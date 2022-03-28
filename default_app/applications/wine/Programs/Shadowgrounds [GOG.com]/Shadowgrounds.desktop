@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Shadowgrounds
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/shadowgrounds" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/shadowgrounds/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Shadowgrounds\\ [GOG.com]/Shadowgrounds.lnk
-Type=Application
-StartupNotify=true
-Path=/home/hypnos/Games/gog/shadowgrounds/dosdevices/c:/GOG Games/Shadowgrounds
-Icon=3F85_goggame-1207658914.0
-StartupWMClass=shadowgrounds launcher.exe

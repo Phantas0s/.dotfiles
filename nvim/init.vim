@@ -25,6 +25,7 @@ source $VIMCONFIG/init_plugins.vim
 lua require('hypnos/kit')
 lua require('hypnos/status_line')
 lua require('hypnos/tab_line')
+lua require('hypnos/text_objects').basic_text_objects()
 
 " source every plugin configs
 for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
@@ -169,7 +170,10 @@ nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session
 nnoremap <leader>sl :source $VIMCONFIG/sessions/
 " Source sets of macros
-nnoremap <leader>sm :source $VIMCONFIG/macros/
+nnoremap <leader>ml :source $VIMCONFIG/macros/
+
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " +---------------+
 " | User Commands |
@@ -217,6 +221,7 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 
 " highlight the line which is longer than the defined margin (80 character)
 autocmd vimrc FileType php,js,vue,go,sh call matchadd('MaxLineChar', '\%80v', 100)
+autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100)
 
 " Highlight briefly yanked text
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}

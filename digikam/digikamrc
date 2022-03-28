@@ -95,7 +95,7 @@ Update Type=0
 
 [AlbumFolderView Sidebar]
 CurrentIndex=4069
-Expansion=0,4014,3987,3988,3973,3978,3980,3979,3981,3977,3975,3976,3974,3986,3985,3984,3956,3971,3972,3948,3947,4059,3940,3937,3927,3924,3925,3926,3923,3905,3846,3872,3874,3873,3871,3869,3868,3866,3865,3853,3857,3859,3858,3855,3856,3854,3864,3863,3862,3861,3852,3851,3896,3893,3880,3879,3901,3900,1,3765,3726,3727,3844,946,2392,4049,4050,4051,4036,4037,4038,4046,4047,4048,4034,4032,2411,2417,2416,2415,2414,2413,4030,4025,2412,2410,4029,4024,2408,2407,2406,2405,2404,2402,2401,2400,2398,4023,2397,2396,2394,2303,4040,4041,31,34,32,2,4069,-2
+Expansion=0,4014,3987,3988,3973,3978,3980,3979,3981,3977,3975,3976,3974,3986,3985,3984,3956,3971,3972,3948,3947,4059,3940,3937,3927,3924,3925,3926,3923,3905,3846,3872,3874,3873,3871,3869,3868,3866,3865,3853,3857,3859,3858,3855,3856,3854,3864,3863,3862,3861,3852,3851,3896,3893,3880,3879,3901,3900,-2,1,3765,3726,3727,3844,946,2392,4049,4050,4051,4036,4037,4038,4046,4047,4048,4034,4032,2411,2417,2416,2415,2414,2413,4030,4025,2412,2410,4029,4024,2408,2407,2406,2405,2404,2402,2401,2400,2398,4023,2397,2396,2394,2303,4040,4041,31,34,32,2,4069
 RestoreChecked=false
 Selection=4069
 SortColumn=0
@@ -1092,7 +1092,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwLLy8s=
+Database Encrypted Password=AwIfHx8=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1418,6 +1418,7 @@ Application Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Application Style=fusion
 Apply Sidebar Changes Directly=true
 Clean core DB At Start=false
+Detect faces in newly added images=false
 Draw Frames To Grouped Items=true
 Expand New Current Item On Click=true
 FullScreen Hide SideBars=false
@@ -1447,22 +1448,26 @@ Height 768=723
 Icon Theme=breeze-dark
 LVDS-1 HDMI-1 Height 1080=1013
 LVDS-1 HDMI-1 Height 1200=1133
-LVDS-1 HDMI-1 Height 1920x1200=1133
+LVDS-1 HDMI-1 Height 1366x768=723
+LVDS-1 HDMI-1 Height 1920x1200=1155
 LVDS-1 HDMI-1 Height 768=723
 LVDS-1 HDMI-1 Width 1366=1366
+LVDS-1 HDMI-1 Width 1366x768=1366
 LVDS-1 HDMI-1 Width 1920=1920
 LVDS-1 HDMI-1 Width 1920x1200=1920
 LVDS-1 HDMI-1 XPosition=0
-LVDS-1 HDMI-1 XPosition 1920x1200=1366
+LVDS-1 HDMI-1 XPosition 1366x768=1920
+LVDS-1 HDMI-1 XPosition 1920x1200=0
 LVDS-1 HDMI-1 YPosition=44
-LVDS-1 HDMI-1 YPosition 1920x1200=44
+LVDS-1 HDMI-1 YPosition 1366x768=454
+LVDS-1 HDMI-1 YPosition 1920x1200=22
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1615,7 +1620,7 @@ VideoProperties Expanded=true
 [ImageViewer Settings][Right Sidebar][Captions Tags Properties Tab]
 Contact Expanded=true
 ItemDescEdit Tab=0
-ItemDescEditTab CaptionsLang=
+ItemDescEditTab CaptionsLang=x-default
 ItemDescEditTab SearchBarCaseSensitive=0
 ItemDescEditTab TagCheckViewCurrentIndex=
 ItemDescEditTab TagCheckViewExpansion=0
@@ -1624,7 +1629,7 @@ ItemDescEditTab TagCheckViewSelection=
 ItemDescEditTab TagCheckViewSortColumn=0
 ItemDescEditTab TagCheckViewSortOrder=0
 ItemDescEditTab TagCheckViewToggle Auto Tags=0
-ItemDescEditTab TitleLang=
+ItemDescEditTab TitleLang=x-default
 Location Expanded=true
 Rights Expanded=true
 Subjects Expanded=true
@@ -1826,7 +1831,7 @@ VideoProperties Expanded=true
 [LightTable Settings][Left Sidebar][Captions Tags Properties Tab]
 Contact Expanded=true
 ItemDescEdit Tab=0
-ItemDescEditTab CaptionsLang=
+ItemDescEditTab CaptionsLang=x-default
 ItemDescEditTab SearchBarCaseSensitive=0
 ItemDescEditTab TagCheckViewCurrentIndex=
 ItemDescEditTab TagCheckViewExpansion=0
@@ -1835,7 +1840,7 @@ ItemDescEditTab TagCheckViewSelection=
 ItemDescEditTab TagCheckViewSortColumn=0
 ItemDescEditTab TagCheckViewSortOrder=0
 ItemDescEditTab TagCheckViewToggle Auto Tags=0
-ItemDescEditTab TitleLang=
+ItemDescEditTab TitleLang=x-default
 Location Expanded=true
 Rights Expanded=true
 Subjects Expanded=true
@@ -1905,7 +1910,7 @@ VideoProperties Expanded=true
 [LightTable Settings][Right Sidebar][Captions Tags Properties Tab]
 Contact Expanded=true
 ItemDescEdit Tab=0
-ItemDescEditTab CaptionsLang=
+ItemDescEditTab CaptionsLang=x-default
 ItemDescEditTab SearchBarCaseSensitive=0
 ItemDescEditTab TagCheckViewCurrentIndex=
 ItemDescEditTab TagCheckViewExpansion=0
@@ -1914,7 +1919,7 @@ ItemDescEditTab TagCheckViewSelection=
 ItemDescEditTab TagCheckViewSortColumn=0
 ItemDescEditTab TagCheckViewSortOrder=0
 ItemDescEditTab TagCheckViewToggle Auto Tags=0
-ItemDescEditTab TitleLang=
+ItemDescEditTab TitleLang=x-default
 Location Expanded=true
 Rights Expanded=true
 Subjects Expanded=true
@@ -1978,7 +1983,7 @@ ToolBarsMovable=Disabled
 [MainWindow]
 InitialAlbumID=4069
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABdUAAAFvAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT0AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPQAAABXAP///wAABPQAAAQqAAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAS9AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABL0AAABXAP///wAABL0AAAQqAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6

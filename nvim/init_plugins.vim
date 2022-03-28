@@ -13,16 +13,17 @@ Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple versio
 Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-commentary' " keystroke to comment automatically
 
-Plug 'wellle/targets.vim' " add new text objects (can delete between comma with di, for example)
-Plug 'henrik/vim-indexed-search' " display the result when searching
-" Plug 'machakann/vim-swap' " swap arguments in parenthesis
-" Plug 'itchyny/lightline.vim' " Status bar
 Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
 Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
+Plug 'henrik/vim-indexed-search' " display the result when searching
+Plug 'editorconfig/editorconfig-vim'
+
+" Plug 'wellle/targets.vim' " add new text objects (can delete between comma with di, for example)
+" Plug 'machakann/vim-swap' " swap arguments in parenthesis
+" Plug 'itchyny/lightline.vim' " Status bar
 " Plug 'chaoren/vim-wordmotion' " camel case motion
 " Plug 'blueyed/vim-diminactive' " Plug to dim colors of not-focused windows
 " Plug 'machakann/vim-highlightedyank' " Highlight briefly every yanked text (default in Neovim now)
-Plug 'editorconfig/editorconfig-vim'
 
 " +----------+
 " | Snippets |
@@ -69,6 +70,7 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug '
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
 Plug 'jpalardy/vim-slime' " Can send to tmux pane from Vim - cool for REPL
+Plug 'wellle/tmux-complete.vim' " Omni-completion from tmux pane
 
 " +-------+
 " | kitty |
@@ -122,18 +124,18 @@ Plug 'cespare/vim-toml' " toml
 " Plug 'rafcamlet/coc-nvim-lua'
 " Plug 'wellle/tmux-complete.vim' " Add tmux completion for COC
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-nvim-lua'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-nvim-lua'
 " Plug 'hrsh7th/cmp-cmdline'
 " Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 " Plug 'L3MON4D3/LuaSnip'
 " Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'andersevenrud/cmp-tmux'
-Plug 'ojroques/nvim-lspfuzzy'
+" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+" Plug 'andersevenrud/cmp-tmux'
+" Plug 'ojroques/nvim-lspfuzzy'
 
 " +-----+
 " | FZF |

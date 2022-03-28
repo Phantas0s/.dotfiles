@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Wine Installer
-MimeType=application/x-wine-extension-msp;
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/homm_3" wine start /ProgIDOpen Msi.Patch %f
-NoDisplay=true
-StartupNotify=true
-Icon=D23E_msiexec.0

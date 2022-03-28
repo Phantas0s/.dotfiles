@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Alien Shooter with Expansions
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/alien-shooter-expansions" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/alien-shooter-expansions/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Alien\\ Shooter\\ with\\ Expansions\\ [GOG.com]/Alien\\ Shooter\\ with\\ Expansions.lnk
-Type=Application
-StartupNotify=true
-Path=/home/hypnos/Games/gog/alien-shooter-expansions/dosdevices/c:/GOG Games/Alien Shooter
-Icon=44D4_goggame-1207658898.0
-StartupWMClass=alienshooter.exe

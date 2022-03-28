@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Editor
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/age-of-wonders-shadow-magic" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/age-of-wonders-shadow-magic/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Age\\ of\\ Wonders\\ -\\ Shadow\\ Magic\\ [GOG.com]/Editor.lnk
-Type=Application
-StartupNotify=true
-Comment=Editor
-Path=/home/hypnos/Games/gog/age-of-wonders-shadow-magic/dosdevices/c:/GOG Games/Age of Wonders - Shadow Magic/
-Icon=6F41_AoWSMEd.0
-StartupWMClass=aowsmed.exe

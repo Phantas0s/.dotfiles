@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Manual
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/alien-shooter-expansions" /home/ubuntu/buildbot/runners/wine/lutris-6.0-rc1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/hypnos/Games/gog/alien-shooter-expansions/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Alien\\ Shooter\\ with\\ Expansions\\ [GOG.com]/Documents/Manual.lnk
-Type=Application
-StartupNotify=true
-Comment=Manual
-Path=/home/hypnos/Games/gog/alien-shooter-expansions/dosdevices/c:/GOG Games/Alien Shooter
-Icon=B93E_Manual.0

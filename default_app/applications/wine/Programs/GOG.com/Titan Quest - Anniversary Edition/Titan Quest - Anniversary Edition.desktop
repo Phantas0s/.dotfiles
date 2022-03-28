@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Titan Quest - Anniversary Edition
-Exec=env WINEPREFIX="/home/hypnos/Games/gog/titan-quest-anniversary-edition" wine /home/ubuntu/buildbot/runners/wine/lutris-5.7-11-x86_64/bin/wine /Unix /home/hypnos/Games/gog/titan-quest-anniversary-edition/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/GOG.com/Titan\\ Quest\\ -\\ Anniversary\\ Edition/Titan\\ Quest\\ -\\ Anniversary\\ Edition.lnk
-Type=Application
-StartupNotify=true
-Path=/home/hypnos/Games/gog/titan-quest-anniversary-edition/dosdevices/c:/GOG Games/Titan Quest - Anniversary Edition
-Icon=556F_goggame-1196955511.0
-StartupWMClass=tq.exe

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # If launch in i3/config the scratchpads are not spawn (race condition?)
 urxvtd -o -q -f
 
