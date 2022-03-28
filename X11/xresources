@@ -96,9 +96,11 @@ URxvt.tabbedex.bell-timeout: 0
 URxvt.tabbedex.tabbar-timeouts: 0:  :10:  
 
 ! Design for tabs
+URxvt*tabbedex.title: false
+! URxvt*tabbedex.title-fg: 110
 URxvt*tabbedex.tabbar-fg: 15
 URxvt*tabbedex.tabbar-bg: 236
-URxvt*tabbedex.tab-fg: 167
+URxvt*tabbedex.tab-fg: bold 167
 URxvt*tabbedex.tab-bg: 236
 URxvt*tabbedex.transparent:true
 URxvt*tabbedex.new-button: false
