@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=wordpad
+MimeType=application/rtf;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen rtffile %f
+NoDisplay=true
+StartupNotify=true
+Icon=3365_wordpad.0

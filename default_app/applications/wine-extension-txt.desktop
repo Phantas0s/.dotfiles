@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=notepad
+MimeType=text/plain;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen txtfile %f
+NoDisplay=true
+StartupNotify=true
+Icon=2E40_notepad.0

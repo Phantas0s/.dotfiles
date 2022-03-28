@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=winebrowser
+MimeType=application/pdf;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen pdffile %f
+NoDisplay=true
+StartupNotify=true
+Icon=81F5_winebrowser.0

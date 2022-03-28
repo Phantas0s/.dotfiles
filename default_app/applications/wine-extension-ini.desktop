@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=notepad
+MimeType=application/x-wine-extension-ini;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen inifile %f
+NoDisplay=true
+StartupNotify=true
+Icon=2E40_notepad.0

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=wordpad
+MimeType=application/x-mswrite;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen wrifile %f
+NoDisplay=true
+StartupNotify=true
+Icon=3365_wordpad.0

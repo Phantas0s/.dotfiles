@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Wine Internet Explorer
+MimeType=image/gif;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen giffile %f
+NoDisplay=true
+StartupNotify=true
+Icon=ECB7_iexplore.0

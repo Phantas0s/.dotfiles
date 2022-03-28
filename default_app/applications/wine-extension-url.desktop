@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=rundll32
+MimeType=application/x-mswinurl;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen InternetShortcut %f
+NoDisplay=true
+StartupNotify=true
+Icon=5742_rundll32.0

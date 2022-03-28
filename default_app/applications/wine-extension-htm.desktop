@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=winebrowser
+MimeType=text/html;
+Exec=env WINEPREFIX="/home/hypnos/Games/gog/incoming" wine start /ProgIDOpen htmlfile %f
+NoDisplay=true
+StartupNotify=true
+Icon=81F5_winebrowser.0
