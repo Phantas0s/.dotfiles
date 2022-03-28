@@ -384,6 +384,7 @@ bar {
     # Disable all tray icons
     tray_output none
     # tray_output primary
+    separator_symbol "┃"
     colors {
         background $black1
         statusline $white2
