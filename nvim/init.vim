@@ -26,17 +26,10 @@ lua require('hypnos/kit')
 lua require('hypnos/status_line')
 lua require('hypnos/tab_line')
 lua require('hypnos/text_objects').basic_text_objects()
-
-" let s:chars = [ '_', '.', ':', ',', ';', '<bar>', '/', '<bslash>', '*', '+', '%', '`', '?' ]
-" for char in s:chars
-"     for mode in [ 'xnoremap', 'onoremap' ]
-"         execute printf('%s i%s :<C-u>silent normal! T%svt%s<CR>', mode, char, char, char)
-"         execute printf('%s a%s :<C-u>normal! F%svf%s<CR>', mode, char, char, char)
-"     endfor
-" endfor
+lua require('hypnos/text_objects').indent_text_objects()
 
 " source every plugin configs
-for file in split(glob("$VIMCONFIG/pluggedconf/*.nvimrc"), '\n')
+for file in split(glob('$VIMCONFIG/pluggedconf/*.nvimrc'), '\n')
     execute 'source' file
 endfor
 
