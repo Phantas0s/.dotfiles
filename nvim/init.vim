@@ -331,5 +331,5 @@ set path=.,**,,
 
 " Set ripgrep for grep program
 if executable('rg')
-    set grepprg=rg\ --vimgrep
+    set grepprg=rg\ --vimgrep\ --smart-case
 endif
