@@ -64,6 +64,10 @@ ln -sf "$DOTFILES/nvim/compiler" "$VIMCONFIG/compiler"
 rm -rf "$VIMCONFIG/after/indent"
 ln -sf "$DOTFILES/nvim/after/indent" "$VIMCONFIG/after"
 
+# indentation
+rm -rf "$VIMCONFIG/after/compiler"
+ln -sf "$DOTFILES/nvim/after/compiler" "$VIMCONFIG/after"
+
 # lua
 rm -rf "$VIMCONFIG/lua"
 ln -sf "$DOTFILES/nvim/lua" "$VIMCONFIG"
