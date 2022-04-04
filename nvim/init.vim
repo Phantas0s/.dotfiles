@@ -301,7 +301,7 @@ set shortmess+=c
 " set noshowmode
 
 " Keep cursor more in middle when scrolling down / up
-set scrolloff=999
+" set scrolloff=999
 
 " write automatically when quitting buffer
 set autowrite
