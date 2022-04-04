@@ -21,18 +21,19 @@ function basic_text_objects()
 end
 
 function select_indent(around)
+    local start_indent = vim.fn.indent(vim.fn.line('.'))
+    local blank_line_pattern = '^%s*$'
+
     if string.match(vim.fn.getline('.'), blank_line_pattern) then
         return
     end
 
-    local start_indent = vim.fn.indent(vim.fn.line('.'))
     if vim.v.count > 0 then
         start_indent = start_indent - vim.o.shiftwidth * (vim.v.count - 1)
         if start_indent < 0 then
             start_indent = 0
         end
     end
-    local blank_line_pattern = '^%s*$'
 
     local prev_line = vim.fn.line('.') - 1
     local prev_blank_line = function(line) return string.match(vim.fn.getline(line), blank_line_pattern) end
