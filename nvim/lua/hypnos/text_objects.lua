@@ -14,8 +14,8 @@ function basic_text_objects()
     local chars = { '_', '.', ':', ',', ';', '|', '/', '\\', '*', '+', '%', '`', '?' }
     for _,char in ipairs(chars) do
         for _,mode in ipairs({ 'x', 'o' }) do
-            nremap(mode, 'i'..char, string.format(':<C-u>silent! normal! f%sF%slvt%s<CR>', char, char, char))
-            nremap(mode, 'a'..char, string.format(':<C-u>silent! normal! f%sF%svf%s<CR>', char, char, char))
+            nremap(mode, 'i'..char, string.format(':<C-u>silent! normal! f%sF%slvt%s<CR>', char, char, char), { silent = true })
+            nremap(mode, 'a'..char, string.format(':<C-u>silent! normal! f%sF%svf%s<CR>', char, char, char, { silent = true }))
         end
     end
 end
@@ -61,8 +61,8 @@ end
 
 function indent_text_objects()
     for _,mode in ipairs({ 'x', 'o' }) do
-        nremap(mode, 'ii', ':<c-u>lua select_indent()<cr>')
-        nremap(mode, 'ai', ':<c-u>lua select_indent(true)<cr>')
+        nremap(mode, 'ii', ':<c-u>lua select_indent()<cr>', { silent = true })
+        nremap(mode, 'ai', ':<c-u>lua select_indent(true)<cr>', { silent = true })
     end
 end
 
