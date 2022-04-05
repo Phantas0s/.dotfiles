@@ -234,7 +234,10 @@ au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeou
 iabbrev IMO in my opinion
 iabbrev BTW by the way
 iabbrev <expr> cdate strftime('%Y-%m-%d')
+
 iabbrev hte the
+iabbrev authros authors
+iabbrev authro author
 
 " Useful for writing the book Learning to Play Vim
 iabbrev cur{} ж\cur{}ж
