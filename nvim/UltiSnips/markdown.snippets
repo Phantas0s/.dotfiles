@@ -1,7 +1,7 @@
-snippet hheader "Hugo Header"
+snippet hh "Hugo Header"
 +++
 date = "${1}"
-draft = false
+draft = true
 title = ""
 tags = []
 
@@ -18,4 +18,16 @@ snippet hbq "Hugo blockquote"
 {{< blockquote author="${1}" link="${2}">}}
 ${3}
 {{< /blockquote >}}
+endsnippet
+
+snippet hlt "Hugo list table"
+{{<list-table>}}
+${1}
+{{</list-table>}}
+endsnippet
+
+snippet htable "Hugo list table"
+{{<table>}}
+${1}
+{{</table>}}
 endsnippet
