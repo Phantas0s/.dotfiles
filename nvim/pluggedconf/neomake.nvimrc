@@ -19,7 +19,7 @@ if isdirectory($VIMCONFIG . "/plugged/neomake")
     call neomake#configure#automake('w')
 endif
 
-command! -bang -nargs=* -complete=file Make NeomakeProject <args>
+" command! -bang -nargs=* -complete=file Make NeomakeProject <args>
 
 " +-----+
 " | PHP |

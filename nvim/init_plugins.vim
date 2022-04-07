@@ -12,6 +12,7 @@ Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, h
 Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
 Plug 'tpope/vim-commentary' " keystroke to comment automatically
+Plug 'tpope/vim-dispatch' " Asynchronous make
 
 Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
 Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)

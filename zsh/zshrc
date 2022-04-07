@@ -55,6 +55,14 @@ source "$DOTFILES/zsh/plugins/fg_bg.sh"
 zle -N fg-bg
 bindkey '^Z' fg-bg
 
+function _new_command {
+    zle push-input
+    BUFFER=""
+}
+
+zle -N _new_command
+bindkey '^Xo' _new_command
+
 # +--------------------+
 # | TIME NOTIFICATIONS |
 # +--------------------+

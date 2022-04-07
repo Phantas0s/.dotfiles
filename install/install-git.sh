@@ -6,4 +6,6 @@ ln -sf "$DOTFILES/git/gitconfig" "$XDG_CONFIG_HOME/git/config"
 ln -sf "$DOTFILES/git/gitignore" "$XDG_CONFIG_HOME/git/ignore"
 
 # Set the global hooks
-git config --global init.templatedir "$DOTFILES/git/templates"
+# DEACTIVATED - Mess up stuff when rebasing
+# Should be added manually
+# git config --global init.templatedir "$DOTFILES/git/templates"

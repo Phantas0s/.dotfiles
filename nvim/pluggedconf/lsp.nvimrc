@@ -81,7 +81,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Disable diagnosis
- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
 
 -- Go import
 function goimports(timeout_ms)
