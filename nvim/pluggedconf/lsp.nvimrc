@@ -117,4 +117,4 @@ end
 EOF
 
 " Automatic go import
-autocmd BufWritePre *.go lua goimports(1000)
+" autocmd BufWritePre *.go lua goimports(1000)

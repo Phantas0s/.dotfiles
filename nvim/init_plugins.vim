@@ -219,5 +219,6 @@ Plug 'tpope/vim-scriptease' " Debug vimscripts
 " Plug 'rcarriga/nvim-notify'
 
 " Knowledge Management
+" Plug 'github/copilot.vim'
 
 call plug#end()
