@@ -37,6 +37,9 @@ export SCREENSHOT="$HOME/Documents/images/screenshots"
 export MANPAGER='nvim +Man!'
 
 # fzf
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 FZF_COLORS="bg+:-1,\
 fg:gray,\
 fg+:white,\
@@ -50,27 +53,15 @@ marker:red,\
 prompt:gray,\
 hl+:red"
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS="--height 60% \
 --border sharp \
 --color='$FZF_COLORS' \
 --prompt '∷ ' \
 --pointer ▶ \
 --marker ⇒"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
 
-# export FZF_TMUX=""
 # export FZF_TMUX_OPTS="-p"
-
-# export FZF_COMPLETION_TRIGGER=""
-# export FZF_COMPLETION_OPTS=""
-
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# export FZF_CTRL_T_OPTS=""
-
-# export FZF_CTRL_R_OPTS=""
-
-# export FZF_ALT_C_COMMAND=""
-# export FZF_ALT_C_OPTS=""
 
 # X11
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
