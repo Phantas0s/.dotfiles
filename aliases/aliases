@@ -220,7 +220,7 @@ alias um='udiskie-umount'
 # +--------+
 # | docker |
 # +--------+
-alias dockls="docker container ls | awk '{print $NF}'"                          # display names of running containers
+alias dockls="docker container ls | awk 'NR > 1 {print \$NF}'"                  # display names of running containers
 alias dockRr='docker rm $(docker ps -a -q)'                                     # delete every containers / images
 alias dockRr='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
 alias dockstats='docker stats $(docker ps -q)'                                  # stats on images
