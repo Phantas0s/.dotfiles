@@ -1,3 +1,4 @@
+
 ! special 253 234 238
 *.foreground:   #EEEEEE
 *.background:   #1C1C1C
@@ -69,6 +70,9 @@ URxvt*saveLines: 5000
 
 !! Perl Extensions !!
 URxvt*perl-ext-common: tabbedex,resize-font
+
+! To consider:
+! https://github.com/muennich/urxvt-perls/blob/master/keyboard-select
 
 URxvt.keysym.C-Down: resize-font:smaller
 URxvt.keysym.C-Up: resize-font:bigger
