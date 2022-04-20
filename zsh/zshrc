@@ -142,13 +142,7 @@ source $DOTFILES/zsh/plugins/gitit.zsh
 # +-----+
 
 if [ $(command -v "fzf") ]; then
-    source /usr/share/fzf/completion.zsh
-    source /usr/share/fzf/key-bindings.zsh
-
-    source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
-
-    # Search with fzf and open selected file with Vim
-    # bindkey -s '^v' 'vim $(fzf);^M'
+    source $DOTFILES/zsh/fzf.zsh
 fi
 
 # Startup

@@ -1,30 +1,49 @@
 #!/usr/bin/env zsh
 
 screenres() {
-    [ ! -z $1 ] && xrandr --current | grep '*' | awk '{print $1}' | line $1
+    [ ! -z $1 ] && xrandr --current | grep '*' | awk '{print $1}' | sed -n "$1p"
 }
 
 screencast() {
+    T="$(date +%d-%m-%Y-%H-%M-%S)".mkv
+    if [ $# -gt 0 ]; then
+        if echo $1 | grep '\....$' > /dev/null; then
+            T=$1
+        else
+            T=$1.mkv
+        fi
+    fi
+
+    # To list cams: v4l2-ctl --list-devices
     # Record screen 2 by default
     local screen=2
     local offset=""
     local heights=(`screenres 1 | awk -Fx '{print $2}'` `screenres 2 | awk -Fx '{print $2}'`)
     local bigger_height=$(echo $heights | sed "s/ /\n/" | sort -rg | line 1)
 
-    if [ ! -z $2 ]; then
-        screen=$2
-    fi
-
-    if [ ! -z $1 ]; then
         [ $screen -eq 1 ] && offset="+0,$(( $bigger_height -  $(screenres 1 | awk -Fx '{print $2}')))"
-        # [ $screen -eq 2 ] && offset="+$(screenres 1 | awk -Fx '{print $1}')"
-        ffmpeg -f x11grab -framerate 60 -s $(screenres $screen) -i :0.0$offset -f pulse -sample_rate 44100 -i default -c:v libx264 -preset ultrafast -c:a aac $1
+        ffmpeg -f x11grab -framerate 60 -s $(screenres $screen) -i :0.0$offset \
+            -f v4l2 -framerate 30 -video_size 640x480 -i /dev/video2 \
+            -f pulse -sample_rate 44100 -i default \
+            -filter_complex "overlay=main_w-overlay_w-2:main_h-overlay_h-2" \
+            -c:v libx264 -preset ultrafast -crf 18 -c:a aac -b:a 320k $T
+
+##!/bin/bash
+#if [ $# -gt 0 ]; then
+#	if echo $1 | grep '\....$' > /dev/null; then 
+#		T=$1
+#	else
+#		T=$1.mkv
+#	fi
+#fi
+## echo $T
+#ffmpeg -f alsa -i pulse -f x11grab -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -r 25 -i :0.0 -f video4linux2 -i /dev/video0 -filter_complex '[2:v]scale=480:-1[cam];[1:v][cam]overlay=W-w-10:H-h-10' -ab 192 -acodec pcm_s16le -qscale 0 $HOME/Screencasts/$T
+#@Phantas0s
+ 
+        
 
        # Other codecs
        # -c:v ffvhuff   # lossless but HUGE
-   else 
-       echo "You need to precise an output file as first argument - eg 'example.mkv'"
-    fi
 }
 
 oscreencast() {
