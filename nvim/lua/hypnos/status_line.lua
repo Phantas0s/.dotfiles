@@ -13,10 +13,10 @@ local function GitBranch()
 end
 
 local function WordCount()
-    if vim.api.nvim_buf_get_option(vim.current_buffer, 'filetype') ~= "markdown" then
+    if vim.current_buffer and vim.api.nvim_buf_get_option(0, 'filetype') ~= "markdown" then
         return ""
     end
-    words = vim.fn.wordcount().words
+    local words = vim.fn.wordcount().words
     if vim.fn.wordcount().visual_words then
         words = vim.fn.wordcount().visual_words
     end
@@ -24,10 +24,10 @@ local function WordCount()
 end
 
 local function CharCount()
-    if vim.api.nvim_buf_get_option(vim.current_buffer, 'filetype') ~= "markdown" then
+    if vim.api.nvim_buf_get_option(0, 'filetype') ~= "markdown" then
         return ""
     end
-    chars = vim.fn.wordcount().chars
+    local chars = vim.fn.wordcount().chars
     if vim.fn.wordcount().visual_chars then
         chars = vim.fn.wordcount().visual_chars
     end
