@@ -108,6 +108,11 @@ fpdf() {
     [ -n "$result" ] && zathura "$result" &
 }
 
+fepub() {
+    result=$(find -type f -name '*.epub' | fzf --bind "ctrl-r:reload(find -type f -name '*.epub')")
+    [ -n "$result" ] && zathura "$result" &
+}
+
 # List mindmaps
 fmind() {
     local folders=("$CLOUD/knowledge_base" "$WORKSPACE/alexandria")
