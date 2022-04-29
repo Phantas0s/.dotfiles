@@ -89,7 +89,7 @@ Plug 'mhinz/vim-startify' " startify for startup cow
 " | Compiler / Linter |
 " +-------------------+
 
-Plug 'neomake/neomake' " Maker & Linter
+" Plug 'neomake/neomake' " Maker & Linter
 
 " +----------+
 " | Debugger |

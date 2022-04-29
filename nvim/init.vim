@@ -37,19 +37,12 @@ endfor
 " | global variables |
 " +------------------+
 
+" Disable fold in markdown
 let g:vim_markdown_folding_disabled = 1
 
 " New and fast way for detecting filetype
 let g:do_filetype_lua = 1
-
-function! Markdonfolds()
-    let thisline = getline(v:lnum)
-    if match(thisline, '^#') >= 0
-        return ">1"
-    endif
-    return 1
-endfunction
-" let foldexpr = Markdonfolds()
+let g:did_load_filetypes = 0
 
 " Lua syntax highlighting in Vimscript (*.vim) files
 let g:vimsyn_embed = 'l;'
@@ -135,11 +128,6 @@ nnoremap <right> :vertical resize +10<cr>
 nnoremap <up> :resize -10<cr>
 nnoremap <down> :resize +10<cr>
 
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
 " Keep the cursor in place while joining lines
 nnoremap J mzJ`z
 
@@ -223,8 +211,8 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 " +--------------+
 
 " highlight the line which is longer than the defined margin (80 character)
-autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v', 100)
-autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100)
+autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v', 100, 100)
+autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100, 100)
 
 " Highlight briefly yanked text
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
@@ -233,16 +221,30 @@ au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeou
 " | Abbreviations |
 " +---------------+
 
+" Some abbreviations finish with _ because it's not often that an underscore is followed by a space
+
+" from `:help abbreviations`
+func Delchar(pat)
+    let c = nr2char(getchar(0))
+    return (c =~ a:pat) ? '' : c
+endfunc
+
 iabbrev IMO in my opinion
 iabbrev BTW by the way
-iabbrev <expr> cdate strftime('%Y-%m-%d')
 
+" Quick fixes
 iabbrev hte the
+iabbrev teh the
 iabbrev authros authors
 iabbrev authro author
+iabbrev proejct project
+
+" Date
+iabbrev <expr> date_ strftime('%Y-%m-%d')
 
 " Useful for writing the book Learning to Play Vim
-iabbrev cur{} ж\cur{}ж
+iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
+iabbrev mne_ **[]{.underline}**<Esc>F[a<c-r>=Delchar('\s')<cr>
 
 " +--------------+
 " | Set  options |

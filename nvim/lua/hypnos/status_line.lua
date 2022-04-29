@@ -13,6 +13,7 @@ local function GitBranch()
 end
 
 local function WordCount()
+    -- 0 is the current buffer
     if vim.current_buffer and vim.api.nvim_buf_get_option(0, 'filetype') ~= "markdown" then
         return ""
     end
@@ -24,6 +25,7 @@ local function WordCount()
 end
 
 local function CharCount()
+    -- 0 is the current buffer
     if vim.api.nvim_buf_get_option(0, 'filetype') ~= "markdown" then
         return ""
     end
