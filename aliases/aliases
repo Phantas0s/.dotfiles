@@ -258,6 +258,9 @@ alias gobin="$GOPATH/bin/" # golang bin
 # Clojure
 alias cljrepl='clojure -Sdeps "{:deps {com.bhauman/rebel-readline {:mvn/version \"0.1.4\"}}}" -m rebel-readline.main'
 
+# AWS
+alias awsa='aws --profile amboss-profile'
+
 # +---------+
 # | scripts |
 # +---------+
