@@ -40,8 +40,6 @@
   # instead of opening all files:
   # git reviewone foo.js bar.js
     reviewone = !nvim -p +\"tabdo Gdiff $GIT_REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$GIT_REVIEW_BASE'\"
-[init]
-	templatedir = /home/hypnos/.dotfiles/git/templates
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
 [merge]
