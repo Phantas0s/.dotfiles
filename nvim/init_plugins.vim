@@ -103,7 +103,7 @@ Plug 'puremourning/vimspector' "Multi language debugger
 
 Plug 'tpope/vim-fugitive' "wrapper for git
 Plug 'mhinz/vim-signify' "  display git diff in the left gutter
-Plug 'junegunn/gv.vim' " Display commits for project / file
+" Plug 'junegunn/gv.vim' " Display commits for project / file
 " Plug 'airblade/vim-gitgutter'
 " Plug 'tpope/vim-rhubarb'
 " Plug 'rhysd/git-messenger.vim' " Display commit message for a precise line
@@ -185,7 +185,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': ['clojure', 'scheme'
 Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
 Plug 'guns/vim-clojure-static', {'for': 'clojure'}
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
-Plug 'tpope/vim-dispatch', {'for': 'clojure'}
 
 " +--------+
 " | Golang |
