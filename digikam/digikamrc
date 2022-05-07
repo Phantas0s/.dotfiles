@@ -1092,7 +1092,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwLh4eE=
+Database Encrypted Password=AwJqamo=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1426,13 +1426,13 @@ FullScreen Hide StatusBar=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
 HDMI-1 LVDS-1 Height 1366x768=723
-HDMI-1 LVDS-1 Height 1920x1200=1133
+HDMI-1 LVDS-1 Height 1920x1200=1155
 HDMI-1 LVDS-1 Width 1366x768=1366
 HDMI-1 LVDS-1 Width 1920x1200=1920
 HDMI-1 LVDS-1 XPosition 1366x768=1920
 HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=454
-HDMI-1 LVDS-1 YPosition 1920x1200=44
+HDMI-1 LVDS-1 YPosition 1920x1200=22
 HDMI1 Height 1200=1155
 HDMI1 LVDS1 Height 1200=1155
 HDMI1 LVDS1 Height 768=723
@@ -1983,7 +1983,7 @@ ToolBarsMovable=Disabled
 [MainWindow]
 InitialAlbumID=0
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABdUAAAFvAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAS9AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABL0AAABXAP///wAABL0AAAQUAAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAS9AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABL0AAABXAP///wAABL0AAAQqAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
