@@ -650,6 +650,22 @@ git-jump() {
     "$DOTFILES/bash/scripts/git-jump.sh" "$@"
 }
 
+tagflac() {
+    lltag -q --rename "%n - %t" "$@"
+}
+
+reposize() {
+  url=`echo $1 \
+    | perl -pe 's#(?:https?://github.com/)([\w\d.-]+\/[\w\d.-]+).*#\1#g' \
+    | perl -pe 's#git\@github.com:([\w\d.-]+\/[\w\d.-]+)\.git#\1#g'
+  `
+  printf "https://github.com/$url => "
+  curl -s https://api.github.com/repos/$url \
+  | jq '.size' \
+  | numfmt --to=iec --from-unit=1024
+}
+
+
 pom() {
     local -r HOURS=${1:?}
     local -r MINUTES=${2:-0}
