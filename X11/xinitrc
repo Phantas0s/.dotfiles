@@ -15,6 +15,12 @@ setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape'&
 # mpd
 [ ! -s ~/.config/mpd/pid ] && mpd
 
+# Increase key rate
+# xset r rate 300 30
+
+# Set back to the default
+#xset r rate
+
 udiskie &
 
 exec i3
