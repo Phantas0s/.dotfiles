@@ -31,7 +31,7 @@
 (icon-size medium)
 (color-profile-policy keep)
 (image-resize-fill-type white)
-(layer-new-name "Barcode")
+(layer-new-name "bubbles")
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)
