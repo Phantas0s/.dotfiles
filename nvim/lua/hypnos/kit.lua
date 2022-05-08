@@ -34,4 +34,3 @@ function _G.Reload(pack)
     package.loaded['hypnos/'..pack] = nil
     require('hypnos/'..pack)
 end
-

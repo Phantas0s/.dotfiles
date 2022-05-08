@@ -70,8 +70,8 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug '
 
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
-Plug 'jpalardy/vim-slime' " Can send to tmux pane from Vim - cool for REPL
 Plug 'wellle/tmux-complete.vim' " Omni-completion from tmux pane
+" Plug 'jpalardy/vim-slime' " Can send to tmux pane from Vim - cool for REPL
 
 " +-------+
 " | kitty |
@@ -103,6 +103,7 @@ Plug 'puremourning/vimspector' "Multi language debugger
 
 Plug 'tpope/vim-fugitive' "wrapper for git
 Plug 'mhinz/vim-signify' "  display git diff in the left gutter
+Plug 'rhysd/conflict-marker.vim' " Mark conflict
 " Plug 'junegunn/gv.vim' " Display commits for project / file
 " Plug 'airblade/vim-gitgutter'
 " Plug 'tpope/vim-rhubarb'
@@ -190,7 +191,7 @@ Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 " | Golang |
 " +--------+
 
-Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
+" Plug 'Phantas0s/go-analyzer.vim' " Custom plugin
 " Plug 'sebdah/vim-delve', {'for': 'go'} " debugger
 " Plug 'fatih/vim-go', {'for': 'go'} " general plugin
 " Plug 'godoctor/godoctor.vim', {'for': 'go'} " refactoring
