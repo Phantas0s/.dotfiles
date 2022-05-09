@@ -246,6 +246,12 @@ iabbrev <expr> date_ strftime('%Y-%m-%d')
 iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
 iabbrev mne_ **[]{.underline}**<Esc>F[a<c-r>=Delchar('\s')<cr>
 
+" +-------+
+" | netrw |
+" +-------+
+
+nnoremap <leader>n :20Lexplore<cr>
+
 " +--------------+
 " | Set  options |
 " +--------------+

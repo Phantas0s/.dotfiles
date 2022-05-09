@@ -57,7 +57,7 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 " | Navigation |
 " +------------+
 
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
+" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight' | Plug 'ryanoasis/vim-devicons'
 " Plug 'unblevable/quick-scope' " Highlight characters when using f F t T
 
 " Plug 'simeji/winresizer' " Easy way to rezise and exchange windows
