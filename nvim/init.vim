@@ -250,7 +250,11 @@ iabbrev mne_ **[]{.underline}**<Esc>F[a<c-r>=Delchar('\s')<cr>
 " | netrw |
 " +-------+
 
+" Open on the left
 nnoremap <leader>n :20Lexplore<cr>
+
+" Treestyle display
+let g:netrw_liststyle = 3
 
 " +--------------+
 " | Set  options |
