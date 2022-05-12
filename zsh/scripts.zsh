@@ -481,6 +481,16 @@ mntmtp() {
     fi
 }
 
+umntmtp() {
+    local DIRECTORY="$HOME/mnt"
+    if ; then
+        DIRECTORY=$1
+    fi
+    cd $HOME
+    umount $DIRECTORY
+    echo "$DIRECTORY with mtp filesystem unmounted"
+}
+
 # Silly little script to understand zstyle
 names() {
     local user_name user_surname user_nickname computer_name
@@ -491,16 +501,6 @@ names() {
     zstyle -s ':name:' set_computer_name computer_name || computer_name="BENDER"
 
     echo "You're $user_name $user_surname $user_nickname and you're computer is called $computer_name"
-}
-
-umntmtp() {
-    local DIRECTORY="$HOME/mnt"
-    if ; then
-        DIRECTORY=$1
-    fi
-    cd $HOME
-    umount $DIRECTORY
-    echo "$DIRECTORY with mtp filesystem unmounted"
 }
 
 # --restrict-filenames replace special characters like spaces in filenames.
