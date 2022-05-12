@@ -114,6 +114,7 @@ Token.String = "ansired"
 Token.String.Other = "ansired"
 Token.Number = "ansired"
 Token.Operator = "ansired"
+Token.Name.Function = "ansiyellow"
 # completion-menu.completion.current = 'bg:#ffffff #000000'
 # completion-menu.completion = 'bg:#008888 #ffffff'
 # completion-menu.meta.completion.current = 'bg:#44aaaa #000000'
