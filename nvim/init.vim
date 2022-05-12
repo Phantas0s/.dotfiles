@@ -251,10 +251,8 @@ iabbrev mne_ **[]{.underline}**<Esc>F[a<c-r>=Delchar('\s')<cr>
 " +-------+
 
 " Open on the left
-nnoremap <leader>n :20Lexplore<cr>
-
-" Treestyle display
-let g:netrw_liststyle = 3
+nnoremap <leader>v :Vexplore<cr>
+nnoremap <leader>l :Lexplore<cr>
 
 " +--------------+
 " | Set  options |
