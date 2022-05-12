@@ -250,9 +250,11 @@ iabbrev mne_ **[]{.underline}**<Esc>F[a<c-r>=Delchar('\s')<cr>
 " | netrw |
 " +-------+
 
+command! Oexplore exe 'Vexplore' getcwd()
+
 " Open on the left
 nnoremap <leader>v :Vexplore<cr>
-nnoremap <leader>l :Lexplore<cr>
+nnoremap <leader>V :Oexplore<cr>
 
 " +--------------+
 " | Set  options |
@@ -311,15 +313,6 @@ set signcolumn=yes
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
-
-" doesn't display the mode status
-" set noshowmode
-
-" Keep cursor more in middle when scrolling down / up
-" set scrolloff=999
-
-" write automatically when quitting buffer
-set autowrite
 
 " Folds
 " set foldlevelstart=999 " Start with all folds open
