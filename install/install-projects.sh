@@ -15,6 +15,9 @@ cd "$HOME/workspace" || exit
 if [ -f "$HOME/.ssh/github" ]; then
     CURRENT=$(pwd)
 
+    mkdir -p "$HOME/Music"
+    [ ! -d "$HOME/Music/playlists" ] && git clone git@github.com:Phantas0s/playlists $HOME/Music/playlists
+
     if [ ! -d "$HOME/workspace/webtechno" ]; then
         cd "$HOME/workspace" || exit
         mkdir "$HOME/workspace/webtechno"

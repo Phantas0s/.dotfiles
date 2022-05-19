@@ -8,4 +8,4 @@ rm -rf "$HOME/.local/lib/deadbeef" && ln -sf "$DOTFILES/deadbeef/plugins" "$HOME
 rm -rf "$XDG_CONFIG_HOME/deadbeef" && ln -sf "$DOTFILES/deadbeef/config" "$XDG_CONFIG_HOME/deadbeef"
 
 # Playlists
-rm -rf "$XDG_CONFIG_HOME/deadbeef/playlists" && ln -sf "$CLOUD/multimedia/music/deadbeef/playlists" "$XDG_CONFIG_HOME/deadbeef/playlists"
+rm -rf "$XDG_CONFIG_HOME/deadbeef/playlists" && ln -sf "$HOME/Music/playlists" "$XDG_CONFIG_HOME/deadbeef/playlists"
