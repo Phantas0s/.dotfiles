@@ -11,7 +11,7 @@ filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
@@ -26,14 +26,16 @@ filebrowser.showicons 1
 filebrowser.sidebar_width 200
 filebrowser.sort_treeview 1
 filebrowser.treelines 1
-filechooser.lastdir file:///home/hypnos/Downloads/incoming_soundtrack
+filechooser.lastdir file:///home/hypnos/Downloads
+filechooser.playlist.lastdir file:///home/hypnos
 gtkui.color.tabstrip_selected_text 65535 65535 65535
-gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"88","align":"1","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"269","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"196","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
+gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"88","align":"1","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"269","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"302","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
 gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
+gtkui.eq.visible 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.008393 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {filebrowser {} tabbed_playlist hideheaders=0 width=1009 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -84,10 +86,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 318
 logwindow.geometry.y 219
-mainwin.geometry.h 675
-mainwin.geometry.w 1280
-mainwin.geometry.x 1920
-mainwin.geometry.y 502
+mainwin.geometry.h 1133
+mainwin.geometry.w 1920
+mainwin.geometry.x 0
+mainwin.geometry.y 44
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -104,9 +106,9 @@ musical_spectrum.color.black_keys 0 0 0
 musical_spectrum.color.gradient_00 49344 7196 10280
 musical_spectrum.color.gradient_01 57568 6939 9252
 musical_spectrum.color.gradient_02 57568 6939 9252
-musical_spectrum.color.gradient_03 59110 24929 0
-musical_spectrum.color.gradient_04 65535 30840 0
-musical_spectrum.color.gradient_05 58853 42405 2570
+musical_spectrum.color.gradient_03 60909 13107 15163
+musical_spectrum.color.gradient_04 63222 24929 20817
+musical_spectrum.color.gradient_05 65535 48830 28527
 musical_spectrum.color.hgrid 21845 21845 21845
 musical_spectrum.color.ogrid 42148 0 0
 musical_spectrum.color.peaks 42148 0 0
@@ -148,15 +150,22 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -0.014101
-playlist.current 10
+playback.volume -0.274725
+playlist.current 3
 playlist.cursor.0 -1
 playlist.cursor.1 87
 playlist.cursor.10 0
+playlist.cursor.11 0
+playlist.cursor.12 0
+playlist.cursor.13 426
+playlist.cursor.14 386
+playlist.cursor.15 763
+playlist.cursor.16 67
+playlist.cursor.17 0
 playlist.cursor.2 9
-playlist.cursor.3 225
+playlist.cursor.3 526
 playlist.cursor.4 60
-playlist.cursor.5 63
+playlist.cursor.5 0
 playlist.cursor.6 0
 playlist.cursor.7 0
 playlist.cursor.8 54
@@ -164,18 +173,25 @@ playlist.cursor.9 9
 playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.10 0
+playlist.scroll.11 0
+playlist.scroll.12 0
+playlist.scroll.13 10265
+playlist.scroll.14 0
+playlist.scroll.15 18690
+playlist.scroll.16 8924
+playlist.scroll.17 0
 playlist.scroll.2 0
-playlist.scroll.3 3896
+playlist.scroll.3 -526
 playlist.scroll.4 647
-playlist.scroll.5 762
+playlist.scroll.5 0
 playlist.scroll.6 1132
 playlist.scroll.7 1686
-playlist.scroll.8 -54
-playlist.scroll.9 711
+playlist.scroll.8 0
+playlist.scroll.9 151
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 1
 playlist.tab.00000 **Main Playlist**
-playlist.tab.00001 Good old days
+playlist.tab.00001 NeuMetal
 playlist.tab.00002 Metal
 playlist.tab.00003 Chill
 playlist.tab.00004 Video Games
@@ -185,14 +201,21 @@ playlist.tab.00007 Movies
 playlist.tab.00008 Minimal
 playlist.tab.00009 Video Games
 playlist.tab.00010 Queen
+playlist.tab.00011 Synthwave
+playlist.tab.00012 World
+playlist.tab.00013 Elektronika
+playlist.tab.00014 NIN
+playlist.tab.00015 Trip Hop
+playlist.tab.00016 Hip Hop
+playlist.tab.00017 World
 prefwin.geometry.h 551
 prefwin.geometry.w 717
-prefwin.geometry.x 203
-prefwin.geometry.y 293
+prefwin.geometry.x 167
+prefwin.geometry.y 140
 resume.paused 0
-resume.playlist 10
-resume.position 2.8792734
-resume.track 198
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 267
