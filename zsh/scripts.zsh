@@ -650,8 +650,12 @@ git-jump() {
     "$DOTFILES/bash/scripts/git-jump.sh" "$@"
 }
 
-tagflac() {
-    lltag -q --rename "%n - %t" "$@"
+# Rename music automatically depending of mp3/ogg/flac tags
+mvtag() {
+    local option=$1
+    shift
+
+    lltag "$option" --yes --rename "%n - %t" "$@"
 }
 
 reposize() {
