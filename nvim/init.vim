@@ -90,8 +90,8 @@ nnoremap <leader>cd :cd %:p:h
 command CDC cd %:p:h
 
 " Fix gx for URLs
-nmap <silent> gx yiW:!xdg-open <C-r>" & <CR><CR>
-vmap <silent> gx y:!xdg-open <C-r>" & <CR><CR>
+" nmap <silent> gx yiW:!xdg-open <C-r>" & <CR><CR>
+" vmap <silent> gx y:!xdg-open <C-r>" & <CR><CR>
 
 "toggle between absolute -> relative line number
 " nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
