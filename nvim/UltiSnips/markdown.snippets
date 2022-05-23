@@ -1,4 +1,4 @@
-snippet hh "Hugo Header"
+snippet header "Hugo Header"
 +++
 date = "${1}"
 draft = true
@@ -14,28 +14,20 @@ description = ""
 +++
 endsnippet
 
-snippet hbq "Hugo blockquote"
+snippet bq "Hugo blockquote"
 {{< blockquote author="${1}" link="${2}">}}
 ${3}
 {{< /blockquote >}}
 endsnippet
 
-snippet hlt "Hugo list table"
-{{<list-table>}}
-${1}
-{{</list-table>}}
-endsnippet
-
-snippet htable "Hugo list table"
+snippet table "Hugo list table"
 {{<table>}}
 ${1}
 {{</table>}}
 endsnippet
 
-snippet cur "Create cursor for Learning to Play Vim"
-ж\cur{$1}ж
-endsnippet
-
-snippet mne "Create mnemonic for Learning to Play Vim"
-**[$1]{.underline}**
+snippet list-table "Create a list table"
+{{<list-table header="true" >}}
+$1
+{{</list-table>}}
 endsnippet
