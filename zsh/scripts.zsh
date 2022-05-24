@@ -655,7 +655,7 @@ mvtag() {
     local option=$1
     shift
 
-    lltag "$option" --yes --rename "%n - %t" "$@"
+    lltag --yes "$option" --rename-regexp "s/[\'?,\[\]\.\(\)]//" --rename-regexp "s/_-_/-/" --rename-min --rename-sep '_' --rename "%n-%t" "$@"
 }
 
 reposize() {

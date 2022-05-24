@@ -2,7 +2,7 @@
 
 Doc for my Zsh scripts (`./scripts.zsh`) and the scripts using fzf (`./scripts_fzf.sh`).
 
-The arguments are indicated between `<>`, for example `<arg>`. 
+The arguments are indicated between `<>`, for example `<arg>`.
 
 If the argument has a value, it's the default one (and therefore the argument is not mandatory). For example: `<arg=default>`.
 
@@ -27,7 +27,7 @@ Way safer than using pure dd without any warning message... (and its weird synta
 
 ### System backup
 
-* `backup` - Backup all my data to 
+* `backup` - Backup all my data to
 
 ### Create ssh key
 
@@ -141,7 +141,7 @@ Create a dump of a database. Include clean up and create dabatase when imported 
 
 The file created will be `<database>`.sql
 
-#### Import 
+#### Import
 
 * `postgimport <table_name> <user=postgres> <host=localhost>`
 
@@ -161,7 +161,7 @@ List of port opens, fuzzy searchable via fzf
 
 * `screencast <output_file> <screen_number>`
 
-Take a screencast and save it in the `<output_file>`. 
+Take a screencast and save it in the `<output_file>`.
 
 The choice of screen with `<screen_number>` is very much tailored for my own needs, with a small screen as first screen and big screen as second.
 
@@ -171,7 +171,7 @@ Increase the volume of a video and save the new video as <output_file>. For exam
 
 ## Images
 
-### Screenshot 
+### Screenshot
 
 * `screenshot <win|scr|area>`
 
@@ -183,7 +183,7 @@ Take a screenshot of the window / screen / area respectively.
 
 Display width / height of an image.
 
-### Image resize 
+### Image resize
 
 * `imgresize <source> <width> <overwrite>`
 Resize and create a new image, named `<source>_<width>.<extension>` following aspect ratio.
@@ -261,7 +261,7 @@ Download a video with best quality from Youtube.
 
 Download a playlist from Youtube.
 
-## Git 
+## Git
 
 * `gtrm <tag_name> <remote=origin>`
 
@@ -284,7 +284,7 @@ List the stashes with fzf.
 
 ### FZF meets Git
 
-#### Checkout 
+#### Checkout
 
 * `fgco`
 
@@ -301,7 +301,7 @@ Simple way to fuzzy search in the log tree.
 
 * `fstash`
 
-Fuzzy search in the stash list. 
+Fuzzy search in the stash list.
 
 ## Programming Languages
 
@@ -404,17 +404,17 @@ Create a server using Python with specific port
 
 Display... the matrix!
 
-* `pipes` 
+* `pipes`
 
 Remember the OpenGL pipes screensaver on windows 9*? The same in the terminal. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/pipes).
 
 ### Term Colors
 
-* `colorblocks` 
+* `colorblocks`
 
 Display the main terminal colors configured, in nice blocks. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorblocks).
 
-* `colorcards` 
+* `colorcards`
 
 Display all the terminal colors configured, in nice panes. [source](https://github.com/iiPlasma/dots/blob/master/bin/bin/colorcards).
 
