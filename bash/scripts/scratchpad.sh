@@ -10,4 +10,5 @@ tmux kill-session -t scratchpad 2> /dev/null
 urxvtc -name urxvt_scratchpad -e tmux new-session -d -s scratchpad ';' \
     new-window -n nvim 'nvim +e /tmp/scratchpad.md +"set spelllang=de,en"' ';' \
     new-window -n trans 'trans -I' ';' \
+    new-window -n mixer 'pulsemixer' ';' \
     attach-session -d -t scratchpad ';'
