@@ -238,6 +238,7 @@ iabbrev teh the
 iabbrev authros authors
 iabbrev authro author
 iabbrev proejct project
+iabbrev direcotry directory
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')

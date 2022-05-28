@@ -26,7 +26,7 @@ filebrowser.showicons 1
 filebrowser.sidebar_width 200
 filebrowser.sort_treeview 1
 filebrowser.treelines 1
-filechooser.lastdir file:///home/hypnos/Downloads
+filechooser.lastdir file:///run/media/hypnos/Music
 filechooser.playlist.lastdir file:///home/hypnos
 gtkui.color.tabstrip_selected_text 65535 65535 65535
 gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"88","align":"1","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"269","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"302","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
@@ -34,11 +34,12 @@ gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.eq.visible 0
 gtkui.font.tabstrip_text Open Sans 11
-gtkui.hide_remove_from_disk 1
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.hide_remove_from_disk 0
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1079 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
+gtkui.skip_deleted_songs 1
 gtkui.statusbar.visible 1
 gtkui.statusbar_seltime 0
 gtkui.tabscroll 0
@@ -84,12 +85,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 318
+logwindow.geometry.x 314
 logwindow.geometry.y 219
-mainwin.geometry.h 1133
+mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
-mainwin.geometry.y 44
+mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -153,69 +154,55 @@ playback.loop 1
 playback.volume -0.274725
 playlist.current 3
 playlist.cursor.0 -1
-playlist.cursor.1 87
+playlist.cursor.1 12
 playlist.cursor.10 0
 playlist.cursor.11 0
-playlist.cursor.12 0
-playlist.cursor.13 426
-playlist.cursor.14 386
-playlist.cursor.15 763
-playlist.cursor.16 67
+playlist.cursor.12 426
+playlist.cursor.13 386
+playlist.cursor.14 763
+playlist.cursor.15 67
+playlist.cursor.16 0
 playlist.cursor.17 0
-playlist.cursor.2 9
-playlist.cursor.3 526
-playlist.cursor.4 60
+playlist.cursor.2 648
+playlist.cursor.3 0
+playlist.cursor.4 0
 playlist.cursor.5 0
 playlist.cursor.6 0
-playlist.cursor.7 0
-playlist.cursor.8 54
-playlist.cursor.9 9
+playlist.cursor.7 54
+playlist.cursor.8 9
+playlist.cursor.9 0
 playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.10 0
 playlist.scroll.11 0
-playlist.scroll.12 0
-playlist.scroll.13 10265
-playlist.scroll.14 0
-playlist.scroll.15 18690
-playlist.scroll.16 8924
+playlist.scroll.12 10265
+playlist.scroll.13 0
+playlist.scroll.14 18690
+playlist.scroll.15 8924
+playlist.scroll.16 0
 playlist.scroll.17 0
-playlist.scroll.2 0
-playlist.scroll.3 -526
-playlist.scroll.4 647
-playlist.scroll.5 0
-playlist.scroll.6 1132
-playlist.scroll.7 1686
-playlist.scroll.8 0
-playlist.scroll.9 151
+playlist.scroll.2 -648
+playlist.scroll.3 0
+playlist.scroll.4 0
+playlist.scroll.5 1132
+playlist.scroll.6 1686
+playlist.scroll.7 0
+playlist.scroll.8 151
+playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 1
-playlist.tab.00000 **Main Playlist**
-playlist.tab.00001 NeuMetal
-playlist.tab.00002 Metal
-playlist.tab.00003 Chill
-playlist.tab.00004 Video Games
-playlist.tab.00005 Chiptune
-playlist.tab.00006 Techtrance
-playlist.tab.00007 Movies
-playlist.tab.00008 Minimal
-playlist.tab.00009 Video Games
-playlist.tab.00010 Queen
-playlist.tab.00011 Synthwave
-playlist.tab.00012 World
-playlist.tab.00013 Elektronika
-playlist.tab.00014 NIN
-playlist.tab.00015 Trip Hop
-playlist.tab.00016 Hip Hop
-playlist.tab.00017 World
+playlist.tab.00000 ==MAIN==
+playlist.tab.00001 Hard Rock - Metal
+playlist.tab.00002 Electro - Chill
+playlist.tab.00003 New Playlist
 prefwin.geometry.h 551
 prefwin.geometry.w 717
-prefwin.geometry.x 167
-prefwin.geometry.y 140
+prefwin.geometry.x 114
+prefwin.geometry.y 71
 resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.playlist 3
+resume.position 0.0464399
+resume.track 42
 searchwin.geometry.h 300
 searchwin.geometry.w 450
 searchwin.geometry.x 267
