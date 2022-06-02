@@ -177,7 +177,7 @@ command! Jrnl call general#MakeJournalEntry()
 " romainl redir (https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7)
 command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
 
-command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar', '\%' . <q-args> . 'v', 100)
+command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar', '\%' . <q-args> . 'v')
 
 " +---------+
 " | autocmd |
