@@ -249,6 +249,7 @@ iabbrev <expr> date_ strftime('%Y-%m-%d')
 " Useful for writing the book Learning to Play Vim
 iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
 iabbrev mne_ **[]{.underline}**<Esc>F[a<c-r>=Delchar('\s')<cr>
+iabbrev sc_ []{.smallcap}<Esc>F[a<c-r>=Delchar('\s')<cr>
 
 " +-------+
 " | netrw |
