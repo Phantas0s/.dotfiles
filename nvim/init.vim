@@ -232,13 +232,16 @@ endfunc
 iabbrev IMO in my opinion
 iabbrev BTW by the way
 
-" Quick fixes
+" Typos
 iabbrev hte the
 iabbrev teh the
 iabbrev authros authors
 iabbrev authro author
 iabbrev proejct project
 iabbrev direcotry directory
+iabbrev direcotries directories
+iabbrev trhe the
+iabbrev insteand instead
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
