@@ -211,8 +211,8 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 " +--------------+
 
 " highlight the line which is longer than the defined margin (80 character)
-autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v', 100, 100)
-autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100, 100)
+autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v', 10)
+autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100)
 
 " Highlight briefly yanked text
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
