@@ -94,3 +94,6 @@ bindkey
 keymap
 whitespaces
 whitespace
+create/!
+buffer/!
+buffer
