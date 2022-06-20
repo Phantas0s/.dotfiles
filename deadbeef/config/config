@@ -11,7 +11,7 @@ filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
@@ -35,7 +35,7 @@ gtkui.embolden_selected_tracks 0
 gtkui.eq.visible 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 0
-gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1079 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
+gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
 gtkui.override_tabstrip_colors 0
@@ -89,7 +89,7 @@ logwindow.geometry.x 314
 logwindow.geometry.y 219
 mainwin.geometry.h 1155
 mainwin.geometry.w 1920
-mainwin.geometry.x 1366
+mainwin.geometry.x 0
 mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
@@ -151,10 +151,10 @@ musical_spectrum.window 2
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
-playback.volume -0.274725
-playlist.current 2
-playlist.cursor.0 12
-playlist.cursor.1 12
+playback.volume -0.396825
+playlist.current 0
+playlist.cursor.0 152
+playlist.cursor.1 3727
 playlist.cursor.10 0
 playlist.cursor.11 0
 playlist.cursor.12 426
@@ -163,7 +163,7 @@ playlist.cursor.14 763
 playlist.cursor.15 67
 playlist.cursor.16 0
 playlist.cursor.17 0
-playlist.cursor.2 648
+playlist.cursor.2 1264
 playlist.cursor.3 0
 playlist.cursor.4 0
 playlist.cursor.5 0
@@ -171,8 +171,8 @@ playlist.cursor.6 0
 playlist.cursor.7 54
 playlist.cursor.8 9
 playlist.cursor.9 0
-playlist.scroll.0 0
-playlist.scroll.1 0
+playlist.scroll.0 2751
+playlist.scroll.1 92489
 playlist.scroll.10 0
 playlist.scroll.11 0
 playlist.scroll.12 10265
@@ -181,7 +181,7 @@ playlist.scroll.14 18690
 playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
-playlist.scroll.2 -648
+playlist.scroll.2 31125
 playlist.scroll.3 7250
 playlist.scroll.4 0
 playlist.scroll.5 1132

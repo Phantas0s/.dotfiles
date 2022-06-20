@@ -677,3 +677,7 @@ pom() {
 
     bc <<< "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION"
 }
+
+nas() {
+    sshfs -o idmap=user,default_permissions nas:/share/homes/admin ~/Network
+}
