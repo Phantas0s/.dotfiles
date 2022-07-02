@@ -59,8 +59,8 @@ vmap <f3> !figlet<cr>
 map <silent> <esc> <Cmd>noh<cr>
 
 " indent without killing the selection in VISUAL mode
-vmap < <gv
-vmap > >gv
+" vmap < <gv
+" vmap > >gv
 
 inoremap <C-d> <Del>
 
@@ -89,10 +89,6 @@ nnoremap <leader>cd :cd %:p:h
 " Actually change the directory to the current file
 command CDC cd %:p:h
 
-" Fix gx for URLs
-" nmap <silent> gx yiW:!xdg-open <C-r>" & <CR><CR>
-" vmap <silent> gx y:!xdg-open <C-r>" & <CR><CR>
-
 "toggle between absolute -> relative line number
 " nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
 nnoremap <C-n> :set relativenumber! <CR>
@@ -112,12 +108,8 @@ nnoremap tL :tabm<CR>
 " create horizontal window
 nnoremap <c-w>h <c-w>s
 
-" delete character after cursor in insert mode
-" inoremap <C-l> <Del>
-
 " Multi OS version (open for macOS)
 " command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
-
 " Only Linux
 command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
 autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
@@ -143,9 +135,6 @@ nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
 
 " Execute a macro for the all selection
 xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
-
-" Disable anoying ex mode
-nnoremap Q <Nop>
 
 " Paste from the yank buffer
 nnoremap <leader>p "0p
@@ -248,7 +237,7 @@ iabbrev <expr> date_ strftime('%Y-%m-%d')
 
 " Useful for writing the book Learning to Play Vim
 iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
-iabbrev mne_ **[]{.underline}**<Esc>F[a<c-r>=Delchar('\s')<cr>
+iabbrev mne_ []{.mne}<Esc>F[a<c-r>=Delchar('\s')<cr>
 iabbrev sc_ []{.smallcap}<Esc>F[a<c-r>=Delchar('\s')<cr>
 
 " +-------+
