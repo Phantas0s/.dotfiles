@@ -153,6 +153,8 @@ nnoremap <leader>ml :source $VIMCONFIG/macros/
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
+nnoremap <leader>g :file<cr>
+
 " +---------------+
 " | User Commands |
 " +---------------+
@@ -238,7 +240,7 @@ iabbrev <expr> date_ strftime('%Y-%m-%d')
 " Useful for writing the book Learning to Play Vim
 iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
 iabbrev mne_ []{.mne}<Esc>F[a<c-r>=Delchar('\s')<cr>
-iabbrev sc_ []{.smallcap}<Esc>F[a<c-r>=Delchar('\s')<cr>
+iabbrev sc_ []{.smallcaps}<Esc>F[a<c-r>=Delchar('\s')<cr>
 
 " +-------+
 " | netrw |
