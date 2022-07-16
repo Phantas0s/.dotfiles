@@ -47,6 +47,8 @@ let g:did_load_filetypes = 0
 " Lua syntax highlighting in Vimscript (*.vim) files
 let g:vimsyn_embed = 'l;'
 
+let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript']
+
 " +-----------------+
 " | general mapping |
 " +-----------------+
@@ -56,7 +58,7 @@ vmap <F2> !boxes -d stone<cr>
 vmap <f3> !figlet<cr>
 
 " un-highlight when esc is pressed
-map <silent> <esc> <Cmd>noh<cr>
+nnoremap <silent> <c-c> <Cmd>noh<cr>
 
 " indent without killing the selection in VISUAL mode
 " vmap < <gv
@@ -233,6 +235,9 @@ iabbrev direcotry directory
 iabbrev direcotries directories
 iabbrev trhe the
 iabbrev insteand instead
+iabbrev solutiosn solutions
+iabbrev documenation documentation
+iabbrev itslef itself
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
