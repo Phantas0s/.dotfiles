@@ -89,8 +89,8 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 858
-logwindow.geometry.y 820
+logwindow.geometry.x 595
+logwindow.geometry.y 435
 mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
@@ -172,7 +172,7 @@ playlist.cursor.2 4
 playlist.cursor.3 1269
 playlist.cursor.4 649
 playlist.cursor.5 374
-playlist.cursor.6 0
+playlist.cursor.6 1932
 playlist.cursor.7 54
 playlist.cursor.8 9
 playlist.cursor.9 0
@@ -202,7 +202,7 @@ playlist.tab.00002 Electro - Acid
 playlist.tab.00003 Electro - Chill
 playlist.tab.00004 Electro - Electronika
 playlist.tab.00005 Electro - Progressive
-playlist.tab.00006 New Playlist
+playlist.tab.00006 OST
 prefwin.geometry.h 551
 prefwin.geometry.w 717
 prefwin.geometry.x 114
@@ -344,8 +344,8 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 858
-logwindow.geometry.y 820
+logwindow.geometry.x 595
+logwindow.geometry.y 435
 mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
@@ -427,7 +427,7 @@ playlist.cursor.2 4
 playlist.cursor.3 1269
 playlist.cursor.4 649
 playlist.cursor.5 374
-playlist.cursor.6 0
+playlist.cursor.6 1932
 playlist.cursor.7 54
 playlist.cursor.8 9
 playlist.cursor.9 0
@@ -457,7 +457,7 @@ playlist.tab.00002 Electro - Acid
 playlist.tab.00003 Electro - Chill
 playlist.tab.00004 Electro - Electronika
 playlist.tab.00005 Electro - Progressive
-playlist.tab.00006 New Playlist
+playlist.tab.00006 OST
 prefwin.geometry.h 551
 prefwin.geometry.w 717
 prefwin.geometry.x 114
