@@ -145,14 +145,17 @@ if [ $(command -v "fzf") ]; then
     source $DOTFILES/zsh/fzf.zsh
 fi
 
-# Startup
+# Display all possible tmuxp session when opening terminal
+ftmuxp
+
+# +---------+
+# | Startup |
+# +---------+
+
 if [[ "$(tty)" = "/dev/tty1" ]];
 then
     pgrep i3 || exec ssh-agent startx "$XDG_CONFIG_HOME/X11/xinitrc"
 fi
-
-# Display all possible tmuxp session when opening terminal
-ftmuxp
 
 # +---------+
 # | BINDING |

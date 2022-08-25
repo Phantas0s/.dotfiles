@@ -58,7 +58,7 @@ vmap <F2> !boxes -d stone<cr>
 vmap <f3> !figlet<cr>
 
 " un-highlight when esc is pressed
-nnoremap <silent> <c-c> <Cmd>noh<cr>
+nnoremap <silent> <c-c> <Cmd>nohlsearch<cr>
 
 " indent without killing the selection in VISUAL mode
 " vmap < <gv
@@ -86,8 +86,6 @@ nnoremap <leader>x :silent :execute "!xdg-open %"<CR>
 " Go to file even if doesn't exist
 nnoremap gF :e <cfile><CR>
 
-" Create an Ex Command to cd to the current dir - doesn't run it if need to modify it
-nnoremap <leader>cd :cd %:p:h
 " Actually change the directory to the current file
 command CDC cd %:p:h
 
@@ -238,6 +236,7 @@ iabbrev insteand instead
 iabbrev solutiosn solutions
 iabbrev documenation documentation
 iabbrev itslef itself
+iabbrev hisotry history
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')

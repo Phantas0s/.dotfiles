@@ -32,7 +32,6 @@
 (color-profile-policy keep)
 (image-resize-fill-type white)
 (layer-new-name "bubbles")
-(layer-new-fill-type background)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)

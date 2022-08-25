@@ -94,10 +94,10 @@ TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=3853
-Expansion=0,3845,4015,3992,3988,3978,3980,3979,3981,3977,3975,3976,3974,3986,3985,3984,3971,3972,3959,3960,3965,3964,3963,3962,3967,3966,3970,3969,3968,3957,3958,3955,3953,3954,3952,3950,3951,3948,3947,4059,3940,3937,3929,3930,3927,3925,3926,3923,3918,3908,3905,3846,3875,3872,3874,3873,3871,3869,3868,3866,3865,3853,3857,3859,3858,3855,3856,3854,3864,3863,3860,3862,3861,3852,3851,3847,3904,3896,3893,3880,3879,3901,3900,-2,3765,3726,3727,3844,946,2392,4049,4050,4051,4036,4037,4038,4046,4047,4048,4034,4032,2411,2417,2416,2415,2414,2413,4030,4025,2412,2410,4029,4024,2408,2407,2406,2405,2404,2402,2401,2400,2398,4023,2397,2396,2394,2303,4040,4041,34,32,4069,4121,4120,4119,4118,4117,4116,4115,4114,4113,4112,-3
+CurrentIndex=3906
+Expansion=0,3845,4015,4160,4159,4158,4157,4156,4154,4153,4152,4151,4149,4148,4147,4146,4145,3997,3994,3996,3995,3992,3991,3990,3988,3978,3980,3979,3981,3977,3975,3976,3974,3986,3985,3984,3983,3982,3971,3972,3960,3965,3964,3963,3962,3967,3966,3970,3969,3968,3957,3958,3955,3953,3954,3952,3950,3951,3948,3947,4059,3940,3937,3929,3930,3927,3906,3925,3926,3923,3918,3908,3905,3875,3870,3872,3874,3873,3871,3869,3868,3866,3865,3853,3857,3859,3858,3855,3856,3854,3864,3863,3860,3862,3861,3852,3851,3847,3904,3896,3893,3880,3879,3901,3900,-3,1,3765,3735,3731,3727,3844,946,2392,4049,4050,4051,4036,4037,4038,4046,4047,4048,4034,4032,2411,2417,2416,2415,2414,2413,4030,4025,2412,2410,4029,4024,2408,2407,2406,2405,2404,2402,2401,2400,2398,4023,2397,2396,2394,2303,4040,4041,34,32,4069,-2
 RestoreChecked=false
-Selection=3853
+Selection=3906
 SortColumn=0
 SortOrder=1
 
@@ -1092,7 +1092,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwKOjo4=
+Database Encrypted Password=AwKWlpY=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1425,12 +1425,16 @@ FullScreen Hide SideBars=false
 FullScreen Hide StatusBar=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
+HDMI-1 LVDS-1 Height 1280x720=675
 HDMI-1 LVDS-1 Height 1366x768=723
 HDMI-1 LVDS-1 Height 1920x1200=1155
+HDMI-1 LVDS-1 Width 1280x720=1280
 HDMI-1 LVDS-1 Width 1366x768=1366
 HDMI-1 LVDS-1 Width 1920x1200=1920
+HDMI-1 LVDS-1 XPosition 1280x720=1920
 HDMI-1 LVDS-1 XPosition 1366x768=1920
 HDMI-1 LVDS-1 XPosition 1920x1200=0
+HDMI-1 LVDS-1 YPosition 1280x720=502
 HDMI-1 LVDS-1 YPosition 1366x768=454
 HDMI-1 LVDS-1 YPosition 1920x1200=22
 HDMI1 Height 1200=1155
@@ -1449,17 +1453,21 @@ Icon Theme=breeze-dark
 LVDS-1 HDMI-1 Height 1080=1013
 LVDS-1 HDMI-1 Height 1200=1133
 LVDS-1 HDMI-1 Height 1366x768=723
+LVDS-1 HDMI-1 Height 1920x1080=1035
 LVDS-1 HDMI-1 Height 1920x1200=1155
 LVDS-1 HDMI-1 Height 768=723
 LVDS-1 HDMI-1 Width 1366=1366
 LVDS-1 HDMI-1 Width 1366x768=1366
 LVDS-1 HDMI-1 Width 1920=1920
+LVDS-1 HDMI-1 Width 1920x1080=1920
 LVDS-1 HDMI-1 Width 1920x1200=1920
 LVDS-1 HDMI-1 XPosition=0
 LVDS-1 HDMI-1 XPosition 1366x768=1920
+LVDS-1 HDMI-1 XPosition 1920x1080=1366
 LVDS-1 HDMI-1 XPosition 1920x1200=1366
 LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1366x768=454
+LVDS-1 HDMI-1 YPosition 1920x1080=22
 LVDS-1 HDMI-1 YPosition 1920x1200=22
 Scan At Start=true
 Scroll Current Item To Center=false
@@ -1528,7 +1536,7 @@ FullScreen Hide SideBars=false
 FullScreen Hide StatusBar=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
-HDMI-1 LVDS-1 Height 1920x1200=1133
+HDMI-1 LVDS-1 Height 1920x1200=1111
 HDMI-1 LVDS-1 Width 1920x1200=1920
 HDMI-1 LVDS-1 XPosition 1366x768=0
 HDMI-1 LVDS-1 XPosition 1920x1200=0
@@ -1587,7 +1595,7 @@ SlideShowPrintTags=false
 SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
-SplitterState=AAAA/wAAAAEAAAACAAAHYwAAATUB/////wAAAAABAQ==
+SplitterState=AAAA/wAAAAEAAAACAAAHZwAAASUB/////wAAAAABAQ==
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAP7AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 TIFFCompression=false
 ToolBarsMovable=Disabled
@@ -1796,6 +1804,8 @@ Clear On Close=false
 FullScreen Hide SideBars=false
 FullScreen Hide StatusBar=false
 FullScreen Hide ToolBars=false
+HDMI-1 LVDS-1 Height 1920x1200=1155
+HDMI-1 LVDS-1 Width 1920x1200=1920
 HDMI-1 LVDS-1 XPosition 1366x768=0
 HDMI-1 LVDS-1 XPosition 1920x1200=0
 HDMI-1 LVDS-1 YPosition 1366x768=0
@@ -1815,7 +1825,7 @@ LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
 Navigate By Pair=false
 Show Thumbbar=true
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
 [LightTable Settings][Left Sidebar]
@@ -1977,13 +1987,13 @@ Version Properties Tab=versions
 Version Properties View Mode=2
 
 [LightTable Thumbbar]
-State=AAAA/wAAAAD9AAAAAQAAAAIAAATyAAAAwPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAGUAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABPIAAABXAP///wAABPIAAANOAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAQAAAAIAAATQAAAAzvwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAGUAXwB0AGgAdQBtAGIAYgBhAHIBAAAAAAAABNAAAABXAP///wAABNAAAAM9AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=3853
-SplitterState=AAAA/wAAAAEAAAADAAABFAAABdUAAAFvAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAS9AAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABL0AAABXAP///wAABL0AAANkAAAABAAAAAQAAAAIAAAACPwAAAAA
+InitialAlbumID=3906
+SplitterState=AAAA/wAAAAEAAAADAAABdAAABF0AAAFvAf////8AAAAAAQE=
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAARdAAAAy/wBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABF0AAABXAP///wAABF0AAAQqAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Media Player Settings]
 Volume=6
@@ -2334,6 +2344,172 @@ VFormat=1
 VStandard=0
 VType=12
 
+[adjustcurves Tool]
+AdjustCurvesChannel0Point0=0,0
+AdjustCurvesChannel0Point1=-1,-1
+AdjustCurvesChannel0Point10=-1,-1
+AdjustCurvesChannel0Point11=-1,-1
+AdjustCurvesChannel0Point12=49980,43350
+AdjustCurvesChannel0Point13=-1,-1
+AdjustCurvesChannel0Point14=-1,-1
+AdjustCurvesChannel0Point15=-1,-1
+AdjustCurvesChannel0Point16=65025,65025
+AdjustCurvesChannel0Point17=-1,-1
+AdjustCurvesChannel0Point2=-1,-1
+AdjustCurvesChannel0Point3=-255,15045
+AdjustCurvesChannel0Point4=15300,18360
+AdjustCurvesChannel0Point5=-255,18105
+AdjustCurvesChannel0Point6=-1,-1
+AdjustCurvesChannel0Point7=-255,31620
+AdjustCurvesChannel0Point8=32640,31620
+AdjustCurvesChannel0Point9=-1,-1
+AdjustCurvesChannel0Type=0
+AdjustCurvesChannel1Point0=0,0
+AdjustCurvesChannel1Point1=-1,-1
+AdjustCurvesChannel1Point10=-1,-1
+AdjustCurvesChannel1Point11=-1,-1
+AdjustCurvesChannel1Point12=-1,-1
+AdjustCurvesChannel1Point13=-1,-1
+AdjustCurvesChannel1Point14=-1,-1
+AdjustCurvesChannel1Point15=-1,-1
+AdjustCurvesChannel1Point16=65025,65025
+AdjustCurvesChannel1Point17=-1,-1
+AdjustCurvesChannel1Point2=-1,-1
+AdjustCurvesChannel1Point3=-1,-1
+AdjustCurvesChannel1Point4=-1,-1
+AdjustCurvesChannel1Point5=-1,-1
+AdjustCurvesChannel1Point6=-1,-1
+AdjustCurvesChannel1Point7=-1,-1
+AdjustCurvesChannel1Point8=-1,-1
+AdjustCurvesChannel1Point9=-1,-1
+AdjustCurvesChannel1Type=0
+AdjustCurvesChannel2Point0=0,0
+AdjustCurvesChannel2Point1=-1,-1
+AdjustCurvesChannel2Point10=-1,-1
+AdjustCurvesChannel2Point11=-1,-1
+AdjustCurvesChannel2Point12=-1,-1
+AdjustCurvesChannel2Point13=-1,-1
+AdjustCurvesChannel2Point14=-1,-1
+AdjustCurvesChannel2Point15=-1,-1
+AdjustCurvesChannel2Point16=65025,65025
+AdjustCurvesChannel2Point17=-1,-1
+AdjustCurvesChannel2Point2=-1,-1
+AdjustCurvesChannel2Point3=-1,-1
+AdjustCurvesChannel2Point4=-1,-1
+AdjustCurvesChannel2Point5=-1,-1
+AdjustCurvesChannel2Point6=-1,-1
+AdjustCurvesChannel2Point7=-1,-1
+AdjustCurvesChannel2Point8=-1,-1
+AdjustCurvesChannel2Point9=-1,-1
+AdjustCurvesChannel2Type=0
+AdjustCurvesChannel3Point0=0,0
+AdjustCurvesChannel3Point1=-1,-1
+AdjustCurvesChannel3Point10=-1,-1
+AdjustCurvesChannel3Point11=-1,-1
+AdjustCurvesChannel3Point12=-1,-1
+AdjustCurvesChannel3Point13=-1,-1
+AdjustCurvesChannel3Point14=-1,-1
+AdjustCurvesChannel3Point15=-1,-1
+AdjustCurvesChannel3Point16=65025,65025
+AdjustCurvesChannel3Point17=-1,-1
+AdjustCurvesChannel3Point2=-1,-1
+AdjustCurvesChannel3Point3=-1,-1
+AdjustCurvesChannel3Point4=-1,-1
+AdjustCurvesChannel3Point5=-1,-1
+AdjustCurvesChannel3Point6=-1,-1
+AdjustCurvesChannel3Point7=-1,-1
+AdjustCurvesChannel3Point8=-1,-1
+AdjustCurvesChannel3Point9=-1,-1
+AdjustCurvesChannel3Type=0
+AdjustCurvesChannel4Point0=0,0
+AdjustCurvesChannel4Point1=-1,-1
+AdjustCurvesChannel4Point10=-1,-1
+AdjustCurvesChannel4Point11=-1,-1
+AdjustCurvesChannel4Point12=-1,-1
+AdjustCurvesChannel4Point13=-1,-1
+AdjustCurvesChannel4Point14=-1,-1
+AdjustCurvesChannel4Point15=-1,-1
+AdjustCurvesChannel4Point16=65025,65025
+AdjustCurvesChannel4Point17=-1,-1
+AdjustCurvesChannel4Point2=-1,-1
+AdjustCurvesChannel4Point3=-1,-1
+AdjustCurvesChannel4Point4=-1,-1
+AdjustCurvesChannel4Point5=-1,-1
+AdjustCurvesChannel4Point6=-1,-1
+AdjustCurvesChannel4Point7=-1,-1
+AdjustCurvesChannel4Point8=-1,-1
+AdjustCurvesChannel4Point9=-1,-1
+AdjustCurvesChannel4Type=0
+Histogram Channel=4
+Histogram Scale=1
+
+[adjustlevels Tool]
+GammaChannel0=1.1
+GammaChannel1=1
+GammaChannel2=1
+GammaChannel3=1
+GammaChannel4=1
+HighInputChannel0=65280
+HighInputChannel1=65280
+HighInputChannel2=65280
+HighInputChannel3=65280
+HighInputChannel4=65280
+HighOutputChannel0=65280
+HighOutputChannel1=65280
+HighOutputChannel2=65280
+HighOutputChannel3=65280
+HighOutputChannel4=65280
+Histogram Channel=0
+Histogram Scale=1
+LowInputChannel0=2048
+LowInputChannel1=0
+LowInputChannel2=0
+LowInputChannel3=0
+LowInputChannel4=0
+LowOutputChannel0=0
+LowOutputChannel1=0
+LowOutputChannel2=0
+LowOutputChannel3=0
+LowOutputChannel4=0
+
+[autocorrection Tool]
+Auto Correction Filter=0
+Histogram Channel=0
+Histogram Scale=1
+
+[hsladjust Tool]
+Histogram Channel=0
+Histogram Scale=1
+HueAdjustment=0
+LighnessAdjustment=0
+SaturationAdjustment=-2.75
+VibranceAdjustment=0
+
+[localcontrast Tool]
+Blur1=80
+Blur2=80
+Blur3=80
+Blur4=80
+FunctionInput=0
+GeneralSettingsContainer Expanded=true
+HighSaturation=42
+Histogram Channel=0
+Histogram Scale=1
+LowSaturation=32
+Power1=20
+Power2=30
+Power3=30
+Power4=30
+Stage1SettingsContainer Expanded=true
+Stage2SettingsContainer Expanded=true
+Stage3SettingsContainer Expanded=true
+Stage4SettingsContainer Expanded=true
+StageFour=false
+StageOne=true
+StageThree=false
+StageTwo=false
+StretchContrast=true
+
 [mainwindow_mapwidgetview]
 Sort Order=0
 
@@ -2391,3 +2567,32 @@ NSettings=0
 [mainwindow_tableview][Current Profile][Column 5]
 Column Id=digikam-tags
 NSettings=0
+
+[restoration Tool]
+Alpha=0.6000000238418579
+Amplitude=60
+Anisotropy=0.30000001192092896
+BTile=4
+Da=30
+Dl=0.800000011920929
+FastApprox=true
+GaussPrec=2
+Interpolation=0
+Iteration=1
+Preset=0
+Sharpness=0.699999988079071
+Sigma=1.100000023841858
+Tile=256
+
+[sharpen Tool]
+RefocusCorrelationAdjustment=0.5
+RefocusGaussAdjustment=0
+RefocusMatrixSize=5
+RefocusNoiseAdjustment=0.03
+RefocusRadiusAdjustment=1
+SharpenMethod=0
+SimpleSharpRadiusAdjustment=43
+UnsharpMaskAmountAdjustment=1
+UnsharpMaskApplyOnLumaOnLy=false
+UnsharpMaskRadiusAdjustment=1
+UnsharpMaskThresholdAdjustment=0.05

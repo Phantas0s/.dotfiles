@@ -103,6 +103,7 @@ do
 end
 -- Disable diagnosis
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+-- vim.diagnostic.open_float() to open a float and not having the diagnostic running outside of the screen...
 
 -- Go import
 function OrgImports(wait_ms)

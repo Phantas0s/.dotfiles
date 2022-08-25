@@ -42,7 +42,7 @@ alias l='ls -CF'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -i'
+alias rm='rm -iv'
 alias la='ls -alh'
 
 # +------+
