@@ -1,2 +1,2 @@
-#!/bin/sh
-feh --no-fehbg --bg-fill '/home/hypnos/wallpapers/whole_area.jpg' 
+#!/bin/bash
+feh --no-fehbg --bg-fill "$WALLPAPER_PATH/1490910627617.jpg"

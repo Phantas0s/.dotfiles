@@ -242,6 +242,8 @@ function! plug#begin(...)
     let home = s:path(s:plug_fnamemodify(s:plug_expand(a:1), ':p'))
   elseif exists('g:plug_home')
     let home = s:path(g:plug_home)
+  elseif has('nvim')
+    let home = stdpath('data') . '/plugged'
   elseif !empty(&rtp)
     let home = s:path(split(&rtp, ',')[0]) . '/plugged'
   else
@@ -350,7 +352,7 @@ function! plug#end()
   endif
   let lod = { 'ft': {}, 'map': {}, 'cmd': {} }
 
-  if exists('g:did_load_filetypes')
+  if get(g:, 'did_load_filetypes', 0)
     filetype off
   endif
   for name in g:plugs_order
@@ -2619,26 +2621,34 @@ function! s:preview_commit()
 
   let sha = matchstr(getline('.'), '^  \X*\zs[0-9a-f]\{7,9}')
   if empty(sha)
-    return
+    let name = matchstr(getline('.'), '^- \zs[^:]*\ze:$')
+    if empty(name)
+      return
+    endif
+    let title = 'HEAD@{1}..'
+    let command = 'git diff --no-color HEAD@{1}'
+  else
+    let title = sha
+    let command = 'git show --no-color --pretty=medium '.sha
+    let name = s:find_name(line('.'))
   endif
 
-  let name = s:find_name(line('.'))
   if empty(name) || !has_key(g:plugs, name) || !isdirectory(g:plugs[name].dir)
     return
   endif
 
   if exists('g:plug_pwindow') && !s:is_preview_window_open()
     execute g:plug_pwindow
-    execute 'e' sha
+    execute 'e' title
   else
-    execute 'pedit' sha
+    execute 'pedit' title
     wincmd P
   endif
-  setlocal previewwindow filetype=git buftype=nofile nobuflisted modifiable
+  setlocal previewwindow filetype=git buftype=nofile bufhidden=wipe nobuflisted modifiable
   let batchfile = ''
   try
     let [sh, shellcmdflag, shrd] = s:chsh(1)
-    let cmd = 'cd '.plug#shellescape(g:plugs[name].dir).' && git show --no-color --pretty=medium '.sha
+    let cmd = 'cd '.plug#shellescape(g:plugs[name].dir).' && '.command
     if s:is_win
       let [batchfile, cmd] = s:batchfile(cmd)
     endif
@@ -2764,9 +2774,9 @@ function! s:snapshot(force, ...) abort
   1
   let anchor = line('$') - 3
   let names = sort(keys(filter(copy(g:plugs),
-        \'has_key(v:val, "uri") && !has_key(v:val, "commit") && isdirectory(v:val.dir)')))
+        \'has_key(v:val, "uri") && isdirectory(v:val.dir)')))
   for name in reverse(names)
-    let sha = s:git_revision(g:plugs[name].dir)
+    let sha = has_key(g:plugs[name], 'commit') ? g:plugs[name].commit : s:git_revision(g:plugs[name].dir)
     if !empty(sha)
       call append(anchor, printf("silent! let g:plugs['%s'].commit = '%s'", name, sha))
       redraw
