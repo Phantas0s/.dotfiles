@@ -65,7 +65,10 @@ exec --no-startup-id vmware-user
 # start owncloud client
 exec --no-startup-id nextcloud &
 
-#wallpaper
+# start syncthing
+exec --no-startup-id syncthing &
+
+# set the wallpaper
 exec --no-startup-id $XDG_CONFIG_HOME/.fehbg
 
 # Hide the mouse after some time 

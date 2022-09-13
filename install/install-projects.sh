@@ -50,9 +50,11 @@ if [ -f "$HOME/.ssh/github" ]; then
         git clone git@github.com:Phantas0s/mouseless-dev landing_page
         git clone git@github.com:Phantas0s/mouseless_book book
         git clone git@github.com:Phantas0s/mouseless-dev-youtube video
+        git clone git@https://github.com/Phantas0s/mouseless-book-behind-scene
         mkdir -p "$HOME/workspace/mouseless/installer" && cd "$HOME/workspace/mouseless/installer" || exit
         git clone git@github.com:Phantas0s/arch_installer
         git clone git@github.com:Phantas0s/dotfiles
+        git clone git@github.com/Phantas0s/mouseless-book-companion
     fi
 
     if [ ! -d "$HOME/workspace/gocket" ]; then
