@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO get rid of all this mess and see if we can install all of that via AUR
+
 ln -sf $DOTFILES/javascript/.tern-project $HOME
 ln -sf $DOTFILES/javascript/.eslintrc.json $HOME
 
