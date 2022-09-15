@@ -15,7 +15,7 @@ cp "$ZDOTDIR/.zhistory" "$DOTFILES_CLOUD/zsh/.zhistory-$(date +%F)"
 dot_mes_warn "Activate sudo"
 sudo echo "Sudo activated!"
 
-dot_mes_update "npm packages"
+# dot_mes_update "npm packages"
 # npm install -g npm
 # npm update -g
 
@@ -30,11 +30,6 @@ sudo composer self-update
 
 dot_mes_update "Neovim plugins"
 nvim --noplugin +PlugUpdate +qa
-
-#---------------------------------------
-
-dot_mes_update "tmux plugins"
-"$HOME/.tmux/plugins/tpm/bin/update_plugins all"
 
 #---------------------------------------
 
