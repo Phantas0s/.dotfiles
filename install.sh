@@ -86,4 +86,4 @@ dot_is_installed sxiv && dot_install sxiv
 dot_is_installed litecli && dot_install litecli
 
 dot_install gtk
-dot_install default-app
+# dot_install default-app
