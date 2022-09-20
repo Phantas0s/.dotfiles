@@ -100,10 +100,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 349
 logwindow.geometry.y 195
-mainwin.geometry.h 983
+mainwin.geometry.h 1006
 mainwin.geometry.w 1680
-mainwin.geometry.x 1920
-mainwin.geometry.y 194
+mainwin.geometry.x 0
+mainwin.geometry.y 44
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -221,7 +221,7 @@ prefwin.geometry.y 71
 resume.paused 0
 resume.playlist 3
 resume.position 0.0464399
-resume.track 1419
+resume.track 1420
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
@@ -375,10 +375,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 349
 logwindow.geometry.y 195
-mainwin.geometry.h 983
+mainwin.geometry.h 1006
 mainwin.geometry.w 1680
-mainwin.geometry.x 1920
-mainwin.geometry.y 194
+mainwin.geometry.x 0
+mainwin.geometry.y 44
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -496,7 +496,7 @@ prefwin.geometry.y 71
 resume.paused 0
 resume.playlist 3
 resume.position 0.0464399
-resume.track 1419
+resume.track 1420
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
