@@ -669,6 +669,9 @@ reposize() {
   | numfmt --to=iec --from-unit=1024
 }
 
+nas() {
+    sshfs -o idmap=user,default_permissions nas:/share ~/Network
+}
 
 pom() {
     local -r HOURS=${1:?}
@@ -676,8 +679,4 @@ pom() {
     local -r POMODORO_DURATION=${3:-25}
 
     bc <<< "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION"
-}
-
-nas() {
-    sshfs -o idmap=user,default_permissions nas:/share/homes/admin ~/Network
 }

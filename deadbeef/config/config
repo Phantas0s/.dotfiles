@@ -12,7 +12,7 @@ filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste/electro/acid-trance
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste/electro/acid-trance file:///run/media/hypnos/Music/artiste
 filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
@@ -45,7 +45,7 @@ gtkui.eq.visible 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 0
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.020384 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1520"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1329"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
 gtkui.move_to_trash 1
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
@@ -100,10 +100,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 349
 logwindow.geometry.y 195
-mainwin.geometry.h 1005
+mainwin.geometry.h 983
 mainwin.geometry.w 1680
 mainwin.geometry.x 1920
-mainwin.geometry.y 172
+mainwin.geometry.y 194
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -165,7 +165,7 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.2716136
+playback.volume.normalized 0.3739284
 playlist.current 3
 playlist.cursor.0 152
 playlist.cursor.1 3727
@@ -177,8 +177,8 @@ playlist.cursor.14 763
 playlist.cursor.15 67
 playlist.cursor.16 0
 playlist.cursor.17 0
-playlist.cursor.2 4
-playlist.cursor.3 1269
+playlist.cursor.2 69
+playlist.cursor.3 1297
 playlist.cursor.4 649
 playlist.cursor.5 374
 playlist.cursor.6 0
@@ -195,12 +195,12 @@ playlist.scroll.14 18690
 playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
-playlist.scroll.2 1294
-playlist.scroll.3 -1269
+playlist.scroll.2 392
+playlist.scroll.3 32826
 playlist.scroll.4 15945
 playlist.scroll.5 -374
 playlist.scroll.6 0
-playlist.scroll.7 0
+playlist.scroll.7 3618
 playlist.scroll.8 0
 playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
@@ -220,8 +220,8 @@ prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
 resume.playlist 3
-resume.position 0.0000000
-resume.track 1258
+resume.position 0.0464399
+resume.track 1419
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
@@ -287,7 +287,7 @@ filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste/electro/acid-trance
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste/electro/acid-trance file:///run/media/hypnos/Music/artiste
 filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
@@ -320,7 +320,7 @@ gtkui.eq.visible 0
 gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 0
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.020384 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1520"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1329"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
 gtkui.move_to_trash 1
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
@@ -375,10 +375,10 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 349
 logwindow.geometry.y 195
-mainwin.geometry.h 1005
+mainwin.geometry.h 983
 mainwin.geometry.w 1680
 mainwin.geometry.x 1920
-mainwin.geometry.y 172
+mainwin.geometry.y 194
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -440,7 +440,7 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.2716136
+playback.volume.normalized 0.3739284
 playlist.current 3
 playlist.cursor.0 152
 playlist.cursor.1 3727
@@ -452,8 +452,8 @@ playlist.cursor.14 763
 playlist.cursor.15 67
 playlist.cursor.16 0
 playlist.cursor.17 0
-playlist.cursor.2 4
-playlist.cursor.3 1269
+playlist.cursor.2 69
+playlist.cursor.3 1297
 playlist.cursor.4 649
 playlist.cursor.5 374
 playlist.cursor.6 0
@@ -470,12 +470,12 @@ playlist.scroll.14 18690
 playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
-playlist.scroll.2 1294
-playlist.scroll.3 -1269
+playlist.scroll.2 392
+playlist.scroll.3 32826
 playlist.scroll.4 15945
 playlist.scroll.5 -374
 playlist.scroll.6 0
-playlist.scroll.7 0
+playlist.scroll.7 3618
 playlist.scroll.8 0
 playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
@@ -495,8 +495,8 @@ prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
 resume.playlist 3
-resume.position 0.0000000
-resume.track 1258
+resume.position 0.0464399
+resume.track 1419
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450

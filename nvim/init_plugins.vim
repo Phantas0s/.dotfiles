@@ -141,6 +141,4 @@ Plug 'chrisbra/csv.vim'
 
 Plug 'tpope/vim-scriptease' " Debug vimscripts
 
-" Plug 'github/copilot.vim'
-
 call plug#end()
