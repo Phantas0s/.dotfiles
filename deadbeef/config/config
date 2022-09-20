@@ -8,18 +8,26 @@ filebrowser.bgcolor
 filebrowser.bgcolor_selected 
 filebrowser.bookmarks_file $HOME/.config/gtk-3.0/bookmarks
 filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
+filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
 filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste/electro/acid-trance
+filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
 filebrowser.filter_enabled 1
 filebrowser.font_size 0
+filebrowser.fullsearch_wait 5
 filebrowser.hidden 0
+filebrowser.hide_navigation 0
+filebrowser.hide_search 0
+filebrowser.hide_toolbar 0
 filebrowser.icon_size 24
 filebrowser.save_treeview 1
+filebrowser.search_delay 1000
+filebrowser.show_coverart 1
 filebrowser.showbookmarks 0
 filebrowser.showhidden 0
 filebrowser.showicons 1
@@ -90,12 +98,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 351
+logwindow.geometry.x 349
 logwindow.geometry.y 195
-mainwin.geometry.h 675
-mainwin.geometry.w 1280
+mainwin.geometry.h 1005
+mainwin.geometry.w 1680
 mainwin.geometry.x 1920
-mainwin.geometry.y 502
+mainwin.geometry.y 172
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -158,7 +166,7 @@ output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
 playback.volume.normalized 0.2716136
-playlist.current 2
+playlist.current 3
 playlist.cursor.0 152
 playlist.cursor.1 3727
 playlist.cursor.10 0
@@ -211,9 +219,9 @@ prefwin.geometry.w 760
 prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
-resume.playlist 0
+resume.playlist 3
 resume.position 0.0000000
-resume.track 4
+resume.track 1258
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
@@ -236,6 +244,7 @@ waveform.border_width 1
 waveform.cache_enabled 1
 waveform.cursor_width 3
 waveform.display_rms 1
+waveform.display_ruler 0
 waveform.fg_alpha 65535
 waveform.fg_color_b 25700
 waveform.fg_color_g 23644
@@ -244,6 +253,7 @@ waveform.fg_rms_alpha 65535
 waveform.fg_rms_color_b 31611
 waveform.fg_rms_color_g 30326
 waveform.fg_rms_color_r 30583
+waveform.fill_waveform 1
 waveform.font_size 18
 waveform.log_enabled 0
 waveform.max_file_length 180
@@ -255,6 +265,10 @@ waveform.pb_color_g 16383
 waveform.pb_color_r 49151
 waveform.refresh_interval 33
 waveform.render_method 2
+waveform.rlr_alpha 65535
+waveform.rlr_color_b 0
+waveform.rlr_color_g 0
+waveform.rlr_color_r 0
 waveform.scroll_enabled 1
 waveform.shade_waveform 0
 waveform.soundcloud_style 0
@@ -269,18 +283,26 @@ filebrowser.bgcolor
 filebrowser.bgcolor_selected 
 filebrowser.bookmarks_file $HOME/.config/gtk-3.0/bookmarks
 filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
+filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
 filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste/electro/acid-trance
+filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
 filebrowser.filter 
 filebrowser.filter_enabled 1
 filebrowser.font_size 0
+filebrowser.fullsearch_wait 5
 filebrowser.hidden 0
+filebrowser.hide_navigation 0
+filebrowser.hide_search 0
+filebrowser.hide_toolbar 0
 filebrowser.icon_size 24
 filebrowser.save_treeview 1
+filebrowser.search_delay 1000
+filebrowser.show_coverart 1
 filebrowser.showbookmarks 0
 filebrowser.showhidden 0
 filebrowser.showicons 1
@@ -351,12 +373,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 351
+logwindow.geometry.x 349
 logwindow.geometry.y 195
-mainwin.geometry.h 675
-mainwin.geometry.w 1280
+mainwin.geometry.h 1005
+mainwin.geometry.w 1680
 mainwin.geometry.x 1920
-mainwin.geometry.y 502
+mainwin.geometry.y 172
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -419,7 +441,7 @@ output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
 playback.volume.normalized 0.2716136
-playlist.current 2
+playlist.current 3
 playlist.cursor.0 152
 playlist.cursor.1 3727
 playlist.cursor.10 0
@@ -472,9 +494,9 @@ prefwin.geometry.w 760
 prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
-resume.playlist 0
+resume.playlist 3
 resume.position 0.0000000
-resume.track 4
+resume.track 1258
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
@@ -497,6 +519,7 @@ waveform.border_width 1
 waveform.cache_enabled 1
 waveform.cursor_width 3
 waveform.display_rms 1
+waveform.display_ruler 0
 waveform.fg_alpha 65535
 waveform.fg_color_b 25700
 waveform.fg_color_g 23644
@@ -505,6 +528,7 @@ waveform.fg_rms_alpha 65535
 waveform.fg_rms_color_b 31611
 waveform.fg_rms_color_g 30326
 waveform.fg_rms_color_r 30583
+waveform.fill_waveform 1
 waveform.font_size 18
 waveform.log_enabled 0
 waveform.max_file_length 180
@@ -516,6 +540,10 @@ waveform.pb_color_g 16383
 waveform.pb_color_r 49151
 waveform.refresh_interval 33
 waveform.render_method 2
+waveform.rlr_alpha 65535
+waveform.rlr_color_b 0
+waveform.rlr_color_g 0
+waveform.rlr_color_r 0
 waveform.scroll_enabled 1
 waveform.shade_waveform 0
 waveform.soundcloud_style 0
