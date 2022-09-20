@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Plugins
+mkdir -p $HOME/.local/lib
 rm -rf "$HOME/.local/lib/deadbeef" && ln -sf "$DOTFILES/deadbeef/plugins" "$HOME/.local/lib/deadbeef"
 
 # Config
