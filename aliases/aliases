@@ -30,11 +30,11 @@ alias kitty='kitty -o allow_remote_control=yes --single-instance --listen-on uni
 # +----+
 
 alias ls='ls --color=auto'
-alias lsl='ls -l'
+alias l='ls -l'
 alias ll='ls -lahF'
 alias lls='ls -lahFtr'
 alias la='ls -A'
-alias l='ls -CF'
+alias lc='ls -CF'
 
 # +----+
 # | cp |
