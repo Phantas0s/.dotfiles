@@ -65,8 +65,7 @@ dot_is_installed pgcli && dot_install pgcli
 # dot_is_installed go && dot_install_func go install_go_binaries
 dot_is_installed joplin && dot_install joplin
 dot_is_installed vifm && dot_install vifm
-dot_is_installed clojure && dot_install clojure
-dot_is_installed freemind && dot_install freemind
+dot_is_installed clojure && dot_install clojure dot_is_installed freemind && dot_install freemind
 dot_is_installed redshift && dot_install redshift
 dot_is_installed gimp && dot_install gimp
 dot_is_installed zathura && dot_install zathura
@@ -81,6 +80,7 @@ dot_is_installed php && dot_install php
 dot_is_installed kitty && dot_install kitty
 dot_is_installed sxiv && dot_install sxiv
 dot_is_installed litecli && dot_install litecli
+dot_is_installed thunderbird && dot_install thunderbird
 
 dot_install gtk
 # dot_install default-app
