@@ -218,7 +218,7 @@ set $multimedia "3: multi"
 set $design "4: design"
 set $office "5: office"
 set $knowledge "6: knowledge"
-set $vm "7: VM"
+set $games "7: Games"
 
 # switch to workspace
 bindsym $mod+1 workspace $terms
@@ -227,7 +227,7 @@ bindsym $mod+3 workspace $multimedia
 bindsym $mod+4 workspace $design
 bindsym $mod+5 workspace $office
 bindsym $mod+6 workspace $knowledge
-bindsym $mod+7 workspace $vm
+bindsym $mod+7 workspace $games
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
@@ -239,7 +239,7 @@ bindsym $mod+Shift+3 move container to workspace $multimedia
 bindsym $mod+Shift+4 move container to workspace $design
 bindsym $mod+Shift+5 move container to workspace $office
 bindsym $mod+Shift+6 move container to workspace $knowledge
-bindsym $mod+Shift+7 move container to workspace $vm
+bindsym $mod+Shift+7 move container to workspace $games
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
@@ -259,9 +259,10 @@ assign [class="Slack" instance="slack"] → $web
 
 assign [class="mpv" instance="gl"] → $multimedia
 assign [class="Easytag" instance="easytag"] → $multimedia
-assign [class="Steam" instance="Steam"] → $multimedia
-assign [class="Lutris" instance="lutris"] → $multimedia
 assign [class="Deadbeef" instance="deadbeef"] → $multimedia
+
+assign [class="Lutris" instance="lutris"] → $games
+assign [class="Steam" instance="Steam"] → $games
 
 assign [class="Thunderbird" instance="Mail"] → $office
 assign [class="Thunderbird" instance="Msgcompose"] → $office
@@ -340,6 +341,11 @@ for_window [class="Pavucontrol"] move to scratchpad, floating enable, sticky ena
 bindsym $mod+Ctrl+m [class="Pavucontrol"] scratchpad show
 exec pavucontrol
 
+# tuxedo control center
+for_window [instance="tuxedo-control-center"] move to scratchpad, sticky enable, border none set 800 600
+bindsym $mod+Ctrl+n [instance="tuxedo-control-center"] scratchpad show
+exec tuxedo-control-center
+
 # TODO - logic duplicated - See $DOTFILES/zsh/scripts.zsh
 # Can't call script from here because not loaded yet
 # Might work if the scratchpad script is created in zprofile
@@ -366,6 +372,7 @@ exec keepassxc
 for_window [instance="bc_scratchpad"] move to scratchpad, sticky enable, border none
 bindsym $mod+Shift+b [instance="bc_scratchpad"] scratchpad show
 exec urxvtc -name bc_scratchpad -e bc -l
+
 
 
 # start softwares and command lines in workspaces

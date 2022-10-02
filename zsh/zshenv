@@ -82,6 +82,14 @@ export NPM_CONFIG_PREFIX="$XDG_CONFIG_HOME/node_modules"
 # git
 export GIT_REVIEW_BASE=master # See gitconfig
 
+# from xdg-ninja
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export WINEPREFIX="$XDG_DATA_HOME/wine"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+
 # PATH
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"                       # COMPOSER
 export PATH="$GOBIN:$PATH"                                          # GOBIN

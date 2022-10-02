@@ -5,7 +5,7 @@
 # https://aur.archlinux.org/packages.php?O=0&L=0&C=17&K=icon-theme&SeB=nd&SB=n&SO=a&PP=50&do_Search=Go
 # https://wiki.archlinux.org/index.php/GTK
 
-mkdir -p "$HOME/.icons"
+mkdir -p "$XDG_/.icons"
 
 if [ ! -d "$HOME/.icons/Flatery-Yellow" ]; then
     rm -rf /tmp/Flatery

@@ -28,6 +28,7 @@ if [ -f "$HOME/.ssh/github" ]; then
             ln -s ../../githooks/* .
         fi
     fi
+
     if [ ! -d "$HOME/workspace/ottosocial" ]; then
         cd "$HOME/workspace" || exit
         git clone git@github.com:Phantas0s/ottosocial.git
@@ -71,6 +72,12 @@ if [ -f "$HOME/.ssh/github" ]; then
         cd testomatic || exit
         go build
         mv testomatic "$GOBIN"
+    fi
+
+    if [ ! -d "$HOME/workspace/vim_courses" ]; then
+        mkdir "$HOME/workspace/vim_courses"
+        cd "$HOME/workspace/vim_courses" || exit
+        git clone --recurse-submodules git@github.com:Phantas0s/vim-book.git book
     fi
 
     if [ ! -d "$HOME/workspace/playground" ]; then

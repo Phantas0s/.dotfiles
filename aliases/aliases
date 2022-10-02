@@ -36,6 +36,11 @@ alias lls='ls -lahFtr'
 alias la='ls -A'
 alias lc='ls -CF'
 
+# +------+
+# | wget |
+# +------+
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+
 # +----+
 # | cp |
 # +----+
@@ -217,6 +222,7 @@ alias lynx='lynx -vikeys -accept_all_cookies'
 # +----------------+
 
 alias um='udiskie-umount'
+alias umedia='udiskie-umount $MEDIA/*'
 
 # +--------+
 # | docker |
@@ -239,6 +245,8 @@ alias docker-compose-dev='docker-compose -f docker-compose-dev.yml' # run a diff
 # +----------+
 # | Personal |
 # +----------+
+
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 
 # Folders
 alias work="$HOME/workspace"
