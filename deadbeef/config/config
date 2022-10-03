@@ -99,12 +99,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 331
+logwindow.geometry.x 327
 logwindow.geometry.y 466
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+mainwin.geometry.h 1005
+mainwin.geometry.w 1680
+mainwin.geometry.x 1920
+mainwin.geometry.y 172
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -166,14 +166,14 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.8458259
-playlist.current 4
+playback.volume.normalized 0.5293992
+playlist.current 3
 playlist.cursor.0 152
 playlist.cursor.1 69
 playlist.cursor.10 0
-playlist.cursor.11 1932
-playlist.cursor.12 0
-playlist.cursor.13 386
+playlist.cursor.11 0
+playlist.cursor.12 1932
+playlist.cursor.13 0
 playlist.cursor.14 763
 playlist.cursor.15 67
 playlist.cursor.16 0
@@ -183,27 +183,27 @@ playlist.cursor.3 1297
 playlist.cursor.4 416
 playlist.cursor.5 374
 playlist.cursor.6 0
-playlist.cursor.7 2328
-playlist.cursor.8 0
+playlist.cursor.7 0
+playlist.cursor.8 2328
 playlist.cursor.9 0
 playlist.scroll.0 2751
 playlist.scroll.1 392
-playlist.scroll.10 0
-playlist.scroll.11 171
-playlist.scroll.12 0
-playlist.scroll.13 0
+playlist.scroll.10 12380
+playlist.scroll.11 0
+playlist.scroll.12 171
+playlist.scroll.13 1896
 playlist.scroll.14 18690
 playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
 playlist.scroll.2 0
 playlist.scroll.3 32826
-playlist.scroll.4 -416
+playlist.scroll.4 10868
 playlist.scroll.5 -374
 playlist.scroll.6 0
-playlist.scroll.7 57821
-playlist.scroll.8 0
-playlist.scroll.9 12380
+playlist.scroll.7 0
+playlist.scroll.8 57821
+playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 0
 playlist.tab.00000 ==MAIN==
@@ -212,21 +212,22 @@ playlist.tab.00002 Electro - Minimal
 playlist.tab.00003 Electro - Chill
 playlist.tab.00004 Electro - Electronika
 playlist.tab.00005 Electro - Progressive
-playlist.tab.00006 Electro - Goa
-playlist.tab.00007 Hard Rock - Metal
-playlist.tab.00008 Jazz / Blues
-playlist.tab.00009 Pop / Rock
-playlist.tab.00010 Rap / Hip Hop
-playlist.tab.00011 OST - Video Games
-playlist.tab.00012 New Playlist
+playlist.tab.00006 Electro - Synthwave
+playlist.tab.00007 Electro - Goa
+playlist.tab.00008 Hard Rock - Metal
+playlist.tab.00009 Jazz / Blues
+playlist.tab.00010 Pop / Rock
+playlist.tab.00011 Rap / Hip Hop
+playlist.tab.00012 OST - Video Games
+playlist.tab.00013 OST - Movies
 prefwin.geometry.h 551
 prefwin.geometry.w 760
 prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.playlist 3
+resume.position 0.0000000
+resume.track 1109
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
@@ -379,12 +380,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 331
+logwindow.geometry.x 327
 logwindow.geometry.y 466
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+mainwin.geometry.h 1005
+mainwin.geometry.w 1680
+mainwin.geometry.x 1920
+mainwin.geometry.y 172
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -446,14 +447,14 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.8458259
-playlist.current 4
+playback.volume.normalized 0.5293992
+playlist.current 3
 playlist.cursor.0 152
 playlist.cursor.1 69
 playlist.cursor.10 0
-playlist.cursor.11 1932
-playlist.cursor.12 0
-playlist.cursor.13 386
+playlist.cursor.11 0
+playlist.cursor.12 1932
+playlist.cursor.13 0
 playlist.cursor.14 763
 playlist.cursor.15 67
 playlist.cursor.16 0
@@ -463,27 +464,27 @@ playlist.cursor.3 1297
 playlist.cursor.4 416
 playlist.cursor.5 374
 playlist.cursor.6 0
-playlist.cursor.7 2328
-playlist.cursor.8 0
+playlist.cursor.7 0
+playlist.cursor.8 2328
 playlist.cursor.9 0
 playlist.scroll.0 2751
 playlist.scroll.1 392
-playlist.scroll.10 0
-playlist.scroll.11 171
-playlist.scroll.12 0
-playlist.scroll.13 0
+playlist.scroll.10 12380
+playlist.scroll.11 0
+playlist.scroll.12 171
+playlist.scroll.13 1896
 playlist.scroll.14 18690
 playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
 playlist.scroll.2 0
 playlist.scroll.3 32826
-playlist.scroll.4 -416
+playlist.scroll.4 10868
 playlist.scroll.5 -374
 playlist.scroll.6 0
-playlist.scroll.7 57821
-playlist.scroll.8 0
-playlist.scroll.9 12380
+playlist.scroll.7 0
+playlist.scroll.8 57821
+playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 0
 playlist.tab.00000 ==MAIN==
@@ -492,21 +493,22 @@ playlist.tab.00002 Electro - Minimal
 playlist.tab.00003 Electro - Chill
 playlist.tab.00004 Electro - Electronika
 playlist.tab.00005 Electro - Progressive
-playlist.tab.00006 Electro - Goa
-playlist.tab.00007 Hard Rock - Metal
-playlist.tab.00008 Jazz / Blues
-playlist.tab.00009 Pop / Rock
-playlist.tab.00010 Rap / Hip Hop
-playlist.tab.00011 OST - Video Games
-playlist.tab.00012 New Playlist
+playlist.tab.00006 Electro - Synthwave
+playlist.tab.00007 Electro - Goa
+playlist.tab.00008 Hard Rock - Metal
+playlist.tab.00009 Jazz / Blues
+playlist.tab.00010 Pop / Rock
+playlist.tab.00011 Rap / Hip Hop
+playlist.tab.00012 OST - Video Games
+playlist.tab.00013 OST - Movies
 prefwin.geometry.h 551
 prefwin.geometry.w 760
 prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.playlist 3
+resume.position 0.0000000
+resume.track 1109
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450

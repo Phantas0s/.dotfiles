@@ -588,12 +588,13 @@ cheat() {
 
 touchproject(){
     if [ -z $1 ];then
-        echo "You need to pass a project name" && exit 1
+        echo "You need to pass a project name"
+    else
+        local project=$1
+        cd "$CLOUD/project_management/"
+        taskell $project
+        cd -
     fi
-    local project=$1
-    cd "$CLOUD/project_management/"
-    taskell $project
-    cd -
 }
 
 vimgolf() {

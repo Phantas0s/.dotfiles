@@ -237,6 +237,7 @@ iabbrev solutiosn solutions
 iabbrev documenation documentation
 iabbrev itslef itself
 iabbrev hisotry history
+iabbrev frist first
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
