@@ -10,7 +10,8 @@ local on_attach = function(client, bufnr)
     -- Enable Omni-completion
    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-    local opts = { noremap=true, silent=true }
+   local opts = { noremap=true, silent=true }
+   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>aa', '<cmd>lua vim.diagnostic.setqflist()<cr>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>d', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>]', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>g', '<cmd>lua vim.lsp.buf.formatting()<cr>', opts)
@@ -81,29 +82,6 @@ for _, lsp in ipairs(servers) do
         on_attach = on_attach,
     }
 end
-
-do
-  local method = "textDocument/publishDiagnostics"
-  local default_handler = vim.lsp.handlers[method]
-  vim.lsp.handlers[method] = function(err, method, result, client_id, bufnr, config)
-    default_handler(err, method, result, client_id, bufnr, config)
-    local diagnostics = vim.lsp.diagnostic.get_all()
-    local qflist = {}
-    for bufnr, diagnostic in pairs(diagnostics) do
-      for _, d in ipairs(diagnostic) do
-        d.bufnr = bufnr
-        d.lnum = d.range.start.line + 1
-        d.col = d.range.start.character + 1
-        d.text = d.message
-        table.insert(qflist, d)
-      end
-    end
-    vim.fn.setqflist(qflist)
-  end
-end
--- Disable diagnosis
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
--- vim.diagnostic.open_float() to open a float and not having the diagnostic running outside of the screen...
 
 -- Go import
 function OrgImports(wait_ms)

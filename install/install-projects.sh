@@ -66,6 +66,12 @@ if [ -f "$HOME/.ssh/github" ]; then
         mv gocket "$GOBIN"
     fi
 
+    if [ ! -d "$HOME/workspace/garden" ]; then
+        cd "$HOME/workspace" || exit
+        git clone git@github.com:Phantas0s/garden.git
+        cd -
+    fi
+
     if [ ! -d "$GOPATH/src/github.com/Phantas0s/testomatic" ]; then
         cd "$GOPATH/src/github.com/Phantas0s" || exit
         git clone git@github.com:Phantas0s/testomatic.git

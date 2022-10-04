@@ -346,10 +346,6 @@ for_window [instance="tuxedo-control-center"] move to scratchpad, sticky enable,
 bindsym $mod+Ctrl+n [instance="tuxedo-control-center"] scratchpad show
 exec tuxedo-control-center
 
-# TODO - logic duplicated - See $DOTFILES/zsh/scripts.zsh
-# Can't call script from here because not loaded yet
-# Might work if the scratchpad script is created in zprofile
-# ---------------
 # Terminal scratchpad with tmux and three windows:
 # 1.term 
 # 2.vim (on a temp file) 
