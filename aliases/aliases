@@ -221,7 +221,7 @@ alias lynx='lynx -vikeys -accept_all_cookies'
 # | udiskie-umount |
 # +----------------+
 
-alias um='udiskie-umount'
+alias ubackup='udiskie-umount $MEDIA/BACKUP'
 alias umedia='udiskie-umount $MEDIA/*'
 
 # +--------+
