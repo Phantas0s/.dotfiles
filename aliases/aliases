@@ -270,6 +270,10 @@ alias cljrepl='clojure -Sdeps "{:deps {com.bhauman/rebel-readline {:mvn/version 
 # AWS
 alias awsa='aws --profile amboss-profile'
 
+# OBS
+
+alias obsn='prime-run obs&'
+
 # +---------+
 # | scripts |
 # +---------+

@@ -2,7 +2,7 @@ ape.write_apev2 1
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
 cli_add_to_specific_playlist 0
-deadbeef_version 1.9.2
+deadbeef_version 1.9.3
 filebrowser.autofilter 1
 filebrowser.bgcolor 
 filebrowser.bgcolor_selected 
@@ -99,12 +99,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 388
-logwindow.geometry.y 554
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+logwindow.geometry.x 461
+logwindow.geometry.y 670
+mainwin.geometry.h 1005
+mainwin.geometry.w 1680
+mainwin.geometry.x 1920
+mainwin.geometry.y 172
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -167,7 +167,7 @@ output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
 playback.volume.normalized 0.8058652
-playlist.current 8
+playlist.current 3
 playlist.cursor.0 152
 playlist.cursor.1 69
 playlist.cursor.10 92
@@ -179,12 +179,12 @@ playlist.cursor.15 67
 playlist.cursor.16 0
 playlist.cursor.17 0
 playlist.cursor.2 0
-playlist.cursor.3 1297
+playlist.cursor.3 1284
 playlist.cursor.4 425
 playlist.cursor.5 374
 playlist.cursor.6 0
 playlist.cursor.7 0
-playlist.cursor.8 2328
+playlist.cursor.8 2165
 playlist.cursor.9 0
 playlist.scroll.0 2751
 playlist.scroll.1 392
@@ -197,12 +197,12 @@ playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
 playlist.scroll.2 0
-playlist.scroll.3 32826
+playlist.scroll.3 -1284
 playlist.scroll.4 10868
 playlist.scroll.5 -374
 playlist.scroll.6 0
 playlist.scroll.7 0
-playlist.scroll.8 57821
+playlist.scroll.8 -2165
 playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 0
@@ -226,9 +226,9 @@ prefwin.geometry.w 760
 prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.playlist 3
+resume.position 0.0464399
+resume.track 1291
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
