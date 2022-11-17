@@ -65,6 +65,12 @@ alias egrep='egrep --color=auto'
 alias cb='xclip -sel clip'
 
 # +------+
+# | dust |
+# +------+
+
+alias dust='du -sh * | sort -hr'
+
+# +------+
 # | ping |
 # +------+
 

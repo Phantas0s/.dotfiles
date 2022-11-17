@@ -99,7 +99,7 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 461
+logwindow.geometry.x 459
 logwindow.geometry.y 670
 mainwin.geometry.h 1005
 mainwin.geometry.w 1680
@@ -167,7 +167,7 @@ output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
 playback.volume.normalized 0.8058652
-playlist.current 3
+playlist.current 0
 playlist.cursor.0 152
 playlist.cursor.1 69
 playlist.cursor.10 92
@@ -226,9 +226,9 @@ prefwin.geometry.w 760
 prefwin.geometry.x 114
 prefwin.geometry.y 71
 resume.paused 0
-resume.playlist 3
-resume.position 0.0464399
-resume.track 1291
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450

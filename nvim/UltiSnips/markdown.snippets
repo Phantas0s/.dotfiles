@@ -20,14 +20,20 @@ ${3}
 {{< /blockquote >}}
 endsnippet
 
-snippet table "Hugo list table"
+snippet table "Hugo table"
 {{<table>}}
 ${1}
 {{</table>}}
 endsnippet
 
-snippet list-table "Create a list table"
+snippet list-table "Hugo list table"
 {{<list-table header="true" >}}
 $1
 {{</list-table>}}
+endsnippet
+
+snippet toggle "Hugo visible toggle"
+{{< visible-toggle id="$1" title="Click to see the solution">}}
+$2
+{{</ visible-toggle>}}
 endsnippet
