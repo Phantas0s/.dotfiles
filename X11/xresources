@@ -40,7 +40,8 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-URxvt*font: xft:Inconsolata Nerd Font:style=Medium:size=14:pixelsize=16:antialias=true
+URxvt*font: xft:Inconsolata Nerd Font Mono:style=Regular:size=15:antialias=true
+URxvt*boldFont: xft:Inconsolata Nerd Font Mono:style=Bold:size=15:antialias=true
 
 URxvt*borderLess: false
 URxvt*externalBorder: 0
@@ -64,6 +65,8 @@ URxvt*termName: rxvt-unicode
 ! URxvt*hold: false
 URxvt*saveLines: 5000
 
+URxvt*letterSpace: -1
+
 ! +--------+
 ! | Scroll |
 ! +--------+
@@ -78,7 +81,6 @@ URxvt.keysym.C-Down: resize-font:smaller
 URxvt.keysym.C-Up: resize-font:bigger
 URxvt.keysym.C-equal: resize-font:reset
 URxvt.keysym.C-question: resize-font:show
-URxvt*letterSpace: -1
 
 ! +------+
 ! | Tabs |
