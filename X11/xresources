@@ -40,8 +40,8 @@
 !! rxvt-unicode !!
 !!!!!!!!!!!!!!!!!!
 
-URxvt*font: xft:Inconsolata Nerd Font Mono:style=Regular:size=15:antialias=true
-URxvt*boldFont: xft:Inconsolata Nerd Font Mono:style=Bold:size=15:antialias=true
+URxvt*font: xft:Inconsolata Nerd Font Mono:style=Regular:size=13:antialias=true
+URxvt*boldFont: xft:Inconsolata Nerd Font Mono:style=Bold:size=13:antialias=true
 
 URxvt*borderLess: false
 URxvt*externalBorder: 0

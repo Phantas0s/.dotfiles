@@ -111,6 +111,12 @@ alias pacls="sudo pacman -Qe"
 alias pacc='sudo pacman -Sc'
 alias paccc='sudo pacman -Scc'            # empty the whole cache
 
+# +-------+
+# | fonts |
+# +-------+
+
+alias fonts='fc-cache -f -v'
+
 # +-----+
 # | yay |
 # +-----+
