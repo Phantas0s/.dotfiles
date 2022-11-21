@@ -145,8 +145,8 @@ nmap s ys
 
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
-" Reload session
-nnoremap <leader>sl :source $VIMCONFIG/sessions/
+" Reload session (here `<C-Z> trigger the completin - see wildcharm`)
+nnoremap <leader>sl :source $VIMCONFIG/sessions/<C-Z>
 " Source sets of macros
 nnoremap <leader>ml :source $VIMCONFIG/macros/
 
@@ -339,6 +339,9 @@ set path=.,**,,
 
 " Don't display preview window for omni-completion
 :set completeopt-=preview
+
+" Mapping to trigger completion in macro and mappings
+set wildcharm=<C-Z>
 
 " Set ripgrep for grep program
 if executable('rg')
