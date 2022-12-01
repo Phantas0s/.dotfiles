@@ -49,7 +49,7 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
-Plug 'wellle/tmux-complete.vim' " Omni-completion from tmux pane
+Plug 'wellle/tmux-complete.vim' " Omni-completion from tmux pane (CTRL-X_CTRL_U)
 
 " +--------------------+
 " | Project management |

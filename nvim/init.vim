@@ -335,7 +335,8 @@ set number relativenumber
 set diffopt+=vertical
 
 " to be able to use find in any projects
-set path=.,**,,
+" set path=.,**,,
+let &path=join(split(system('find . -type d'), '\n'), ',')
 
 " Don't display preview window for omni-completion
 :set completeopt-=preview
