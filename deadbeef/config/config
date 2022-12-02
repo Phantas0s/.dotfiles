@@ -12,7 +12,7 @@ filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/electro/psydub file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste/electro/acid-trance file:///run/media/hypnos/Music/artiste
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/electro/drum_n_bass-dubstep
 filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
@@ -100,8 +100,8 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 439
-logwindow.geometry.y 670
+logwindow.geometry.x 526
+logwindow.geometry.y 788
 mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
@@ -167,9 +167,9 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.2895526
-playlist.current 6
-playlist.cursor.0 152
+playback.volume.normalized 0.1964436
+playlist.current 0
+playlist.cursor.0 8
 playlist.cursor.1 69
 playlist.cursor.10 92
 playlist.cursor.11 0
@@ -187,7 +187,7 @@ playlist.cursor.6 11
 playlist.cursor.7 0
 playlist.cursor.8 2165
 playlist.cursor.9 0
-playlist.scroll.0 2751
+playlist.scroll.0 0
 playlist.scroll.1 392
 playlist.scroll.10 -92
 playlist.scroll.11 12380
@@ -226,10 +226,10 @@ prefwin.geometry.h 571
 prefwin.geometry.w 768
 prefwin.geometry.x 114
 prefwin.geometry.y 71
-resume.paused 1
-resume.playlist 6
-resume.position 202.57177
-resume.track 29
+resume.paused 0
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
