@@ -336,7 +336,8 @@ set diffopt+=vertical
 
 " to be able to use find in any projects
 " set path=.,**,,
-let &path=join(split(system('find . -type d'), '\n'), ',')
+let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')
+" let &path=join(split(system('fd . --type d'), '\n'), ',')
 
 " Don't display preview window for omni-completion
 :set completeopt-=preview
