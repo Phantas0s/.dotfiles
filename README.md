@@ -1,4 +1,4 @@
-#  Doftiles
+#  Dotfiles
 
 [![Phantas0s rice](screen_780.png)](screen.png)
 
