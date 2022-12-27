@@ -12,7 +12,7 @@ filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/electro/drum_n_bass-dubstep
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro/minimal file:///run/media/hypnos/Music/artiste/electro/electronica file:///run/media/hypnos/Music/artiste/electro/electronica/rone file:///run/media/hypnos/Music/series/ost file:///run/media/hypnos/Music/manga file:///run/media/hypnos/Music/manga/samurai_champloo file:///run/media/hypnos/Music/manga/samurai_champloo/depature
 filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
@@ -46,7 +46,7 @@ gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 0
 gtkui.italic_current_track 0
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1520"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1329"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
 gtkui.move_to_trash 1
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
@@ -100,12 +100,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 526
-logwindow.geometry.y 788
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+logwindow.geometry.x 510
+logwindow.geometry.y 498
+mainwin.geometry.h 1005
+mainwin.geometry.w 1680
+mainwin.geometry.x 1920
+mainwin.geometry.y 172
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -167,10 +167,10 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.1964436
-playlist.current 0
+playback.volume.normalized 0.7257100
+playlist.current 6
 playlist.cursor.0 8
-playlist.cursor.1 69
+playlist.cursor.1 4
 playlist.cursor.10 92
 playlist.cursor.11 0
 playlist.cursor.12 0
@@ -179,16 +179,16 @@ playlist.cursor.14 0
 playlist.cursor.15 67
 playlist.cursor.16 0
 playlist.cursor.17 0
-playlist.cursor.2 0
-playlist.cursor.3 1284
-playlist.cursor.4 425
+playlist.cursor.2 71
+playlist.cursor.3 16
+playlist.cursor.4 984
 playlist.cursor.5 374
-playlist.cursor.6 11
+playlist.cursor.6 38
 playlist.cursor.7 0
 playlist.cursor.8 2165
 playlist.cursor.9 0
 playlist.scroll.0 0
-playlist.scroll.1 392
+playlist.scroll.1 0
 playlist.scroll.10 -92
 playlist.scroll.11 12380
 playlist.scroll.12 0
@@ -197,16 +197,16 @@ playlist.scroll.14 1896
 playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
-playlist.scroll.2 0
-playlist.scroll.3 -1284
-playlist.scroll.4 10868
+playlist.scroll.2 -70
+playlist.scroll.3 0
+playlist.scroll.4 -984
 playlist.scroll.5 -374
-playlist.scroll.6 -11
+playlist.scroll.6 -38
 playlist.scroll.7 0
 playlist.scroll.8 -2165
 playlist.scroll.9 0
 playlist.scroll.cursorfollowplayback 1
-playlist.stop_after_album 0
+playlist.stop_after_album 1
 playlist.tab.00000 ==MAIN==
 playlist.tab.00001 Electro - Acid
 playlist.tab.00002 Electro - Minimal
