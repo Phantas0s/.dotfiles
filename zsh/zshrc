@@ -168,12 +168,6 @@ bindkey '^g' .clear-screen
 bindkey -r '^p'
 bindkey -s '^p' 'fpdf\n'
 
-bindkey -r '^f'
-bindkey -s '^f' 'fmind\n'
-
-bindkey -r '^w'
-bindkey -s '^w' 'fwork\n'
-
 # edit current command line with vim (vim-mode, then CTRL-v)
 autoload -Uz edit-command-line
 zle -N edit-command-line

@@ -573,7 +573,7 @@ wikipedia() {
 
 
 
-# Count number 
+# Count number of words in my blog for a given year
 blogwc() {
     DATE=$(date +"%Y")
     if [ ! -z $1 ]; then
@@ -670,8 +670,24 @@ reposize() {
   | numfmt --to=iec --from-unit=1024
 }
 
+# Connect my NAS to $HOME/Network
 nas() {
     sshfs -o idmap=user,default_permissions nas:/share ~/Network
+}
+
+# Disable the native keyboard for my TUXEDO laptop
+-keyb() {
+    xinput disable $(xinput list | grep "AT Translated Set" | awk '{print $7}' | sed 's/id=//')
+}
+
+# Enable the native keyboard for my TUXEDO laptop
+keyb() {
+    xinput enable $(xinput list | grep "AT Translated Set" | awk '{print $7}' | sed 's/id=//')
+}
+
+# Launch a program in a terminal without getting any output, and detache the process from terminal (can then close the terminal)
+-echo() {
+    "$@" &> /dev/null & disown
 }
 
 pom() {
@@ -681,3 +697,5 @@ pom() {
 
     bc <<< "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION"
 }
+
+
