@@ -27,8 +27,8 @@ ${1}
 endsnippet
 
 snippet list-table "Hugo list table"
-{{<list-table header="true" >}}
-$1
+{{<list-table header="true" $1>}}
+$2
 {{</list-table>}}
 endsnippet
 
@@ -36,4 +36,16 @@ snippet toggle "Hugo visible toggle"
 {{< visible-toggle id="$1" title="Click to see the solution">}}
 $2
 {{</ visible-toggle>}}
+endsnippet
+
+snippet playtime "Playtime section for Learning to Play Vim"
+::: playtime
+$1
+:::
+endsnippet
+
+snippet help "Help section for Learning to Play vim"
+::: help
+$1
+:::
 endsnippet
