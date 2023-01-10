@@ -34,16 +34,6 @@ projects:
                   options:
                     start_date: "25_days_ago"
                     end_date: "today"
-                    filters: "/page/principles/"
-                    color: blue
-      - row:
-          - col:
-              size: "XL"
-              elements:
-                - name: ga.bar_pages
-                  options:
-                    start_date: "25_days_ago"
-                    end_date: "today"
                     filters: "/page/support/"
                     color: green
       - row:

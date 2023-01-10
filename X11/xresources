@@ -47,6 +47,9 @@ URxvt*borderLess: false
 URxvt*externalBorder: 0
 URxvt*internalBorder: 4
 
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+
 URxvt*scrollBar: false
 
 URxvt*cursorColor: #ffffff
@@ -85,6 +88,9 @@ URxvt.keysym.C-question: resize-font:show
 ! +------+
 ! | Tabs |
 ! +------+
+
+! Disable all default keystrokes
+URxvt.tabbedex.no-tabbedex-keys: true
 
 URxvt.keysym.Control-Shift-N: perl:tabbedex:new_tab
 URxvt.keysym.Control-Shift-K: perl:tabbedex:next_tab

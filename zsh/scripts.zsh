@@ -168,6 +168,10 @@ imgresize() {
     echo "$finalName resized to $2"
 }
 
+Imgresize() {
+    imgresize $1 $2 true
+}
+
 imgresizeall() {
     for f in *.${1}; do
         if [ ! -z $3 ]; then
@@ -685,7 +689,9 @@ keyb() {
     xinput enable $(xinput list | grep "AT Translated Set" | awk '{print $7}' | sed 's/id=//')
 }
 
-# Launch a program in a terminal without getting any output, and detache the process from terminal (can then close the terminal)
+# Launch a program in a terminal without getting any output,
+# and detache the process from terminal
+# (can then close the terminal without terminating process)
 -echo() {
     "$@" &> /dev/null & disown
 }

@@ -57,12 +57,8 @@ let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript',
 vmap <F2> !boxes -d stone<cr>
 vmap <f3> !figlet<cr>
 
-" un-highlight when esc is pressed
-nnoremap <silent> <c-c> <Cmd>nohlsearch<cr>
-
-" indent without killing the selection in VISUAL mode
-" vmap < <gv
-" vmap > >gv
+" un-highlight the last search result
+nnoremap <silent> <leader><space> <Cmd>nohlsearch<cr>
 
 inoremap <C-d> <Del>
 
@@ -78,7 +74,7 @@ nnoremap <leader>lk :lprevious<CR>
 nnoremap <silent> <leader>dd <cmd>bp <bar>bd! #<cr>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
-nnoremap <silent> gX :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
+nnoremap <silent> gX :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
 
 " open current file using xdg-open
 nnoremap <leader>x :silent :execute "!xdg-open %"<CR>
@@ -137,8 +133,8 @@ nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
 xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 
 " Paste from the yank buffer
-nnoremap <leader>p "0p
-nnoremap <leader>P "0P
+" nnoremap <leader>p "0p
+" nnoremap <leader>P "0P
 
 " Surround with s (I never use the NORMAL substitute command)
 nmap s ys
@@ -154,6 +150,8 @@ inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 nnoremap <leader>g :file<cr>
+
+nnoremap <silent> <leader>p :let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')<cr>
 
 " +---------------+
 " | User Commands |
@@ -181,8 +179,8 @@ autocmd vimrc BufReadPost * call general#RestorePosition()
 autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc,*.vim,*.lua,*.md call general#DeleteTrailingWS()
 
 " Open files with external application
-autocmd vimrc BufEnter *.png,*.jpg,*.gif silent! execute "! sxiv ".expand("%") | bwipeout
-autocmd vimrc BufEnter *.pdf silent! execute "! zathura ".expand("%") "&" | bwipeout
+autocmd vimrc BufEnter *.png,*.jpg,*.gif silent! execute "!sxiv ".expand("%") | bwipeout
+autocmd vimrc BufEnter *.pdf silent! execute "!zathura ".expand("%") "&" | bwipeout
 
 " Toggle relative number
 augroup numbertoggle
@@ -220,12 +218,22 @@ func Delchar(pat)
     return (c =~ a:pat) ? '' : c
 endfunc
 
-iabbrev IMO in my opinion
-iabbrev BTW by the way
+" iabbrev IMO in my opinion
+" iabbrev BTW by the way
 
 " Typos
 iabbrev hte the
 iabbrev teh the
+iabbrev thme them
+iabbrev htey they
+iabbrev iwth with
+iabbrev htat that
+iabbrev hlep help
+iabbrev myabe maybe
+iabbrev exmaple example
+iabbrev exmaples examples
+iabbrev followign following
+iabbrev wihtout without
 iabbrev authros authors
 iabbrev authro author
 iabbrev proejct project
@@ -240,6 +248,8 @@ iabbrev hisotry history
 iabbrev frist first
 iabbrev functioanlities functionalities
 iabbrev functioantlities functionalities
+iabbrev opearte operate
+iabbrev infomration information
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
@@ -248,6 +258,9 @@ iabbrev <expr> date_ strftime('%Y-%m-%d')
 iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
 iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
 iabbrev sc_ []{.smallcaps}<esc>F[a<c-r>=Delchar('\s')<cr>
+
+iabbrev mne~ {{< mne >}}<esc>F>i<c-r>=Delchar('\s')<cr>
+" iabbrev mne~ <esc>F[a<c-r>=Delchar('\s')<cr>
 
 " +-------+
 " | netrw |
@@ -288,11 +301,12 @@ set clipboard+=unnamedplus
 
 " use 4 spaces instead of tab (to replace existing tab use :retab)
 " copy indent from current line when starting a new line
-set autoindent
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+set autoindent
 
 " when at 3 spaces, and I hit > ... indent of 4 spaces in total, not 7
 set shiftround
@@ -302,7 +316,9 @@ set ignorecase
 set smartcase
 
 " set list
-set list listchars=tab:\┆\ ,trail:·,nbsp:±
+" set list listchars=tab:\┆\ ,trail:·,nbsp:±
+set list
+let &listchars='tab:┆ ,trail:·'
 
 " doesn't prompt a warning when opening a file and the current file was modified but not saved
 set hidden
@@ -335,15 +351,17 @@ set number relativenumber
 set diffopt+=vertical
 
 " to be able to use find in any projects
-" set path=.,**,,
-let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')
+set path=.,**,,
 " let &path=join(split(system('fd . --type d'), '\n'), ',')
 
 " Don't display preview window for omni-completion
-:set completeopt-=preview
+set completeopt-=preview
 
 " Mapping to trigger completion in macro and mappings
 set wildcharm=<C-Z>
+
+" Split window when jump to a position from quickfix list
+" set switchbuf=vsplit
 
 " Set ripgrep for grep program
 if executable('rg')

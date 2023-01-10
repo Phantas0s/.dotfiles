@@ -49,13 +49,14 @@ hl:yellow,\
 header:blue,\
 info:green,\
 pointer:red,\
-marker:red,\
+marker:blue,\
 prompt:gray,\
 hl+:red"
 
 export FZF_DEFAULT_OPTS="--height 60% \
 --border sharp \
---color='$FZF_COLORS' \
+--layout reverse-list \
+--color '$FZF_COLORS' \
 --prompt '∷ ' \
 --pointer ▶ \
 --marker ⇒"

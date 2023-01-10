@@ -22,7 +22,7 @@ function dot_mes_warn() {
 
 function dot_install() {
     echo -e "${blue}-> Installing ${yellow}${1} ${blue}config"
-    . $DOTFILES/install/install-${1}.sh
+    . "$DOTFILES/install/install-${1}.sh"
 }
 
 function dot_install_func() {

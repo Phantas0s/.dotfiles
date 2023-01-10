@@ -7,8 +7,8 @@
 # Preferences dialog.
 
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable")
-(monitor-xresolution 94)
-(monitor-yresolution 94)
+(monitor-xresolution 141)
+(monitor-yresolution 142)
 (default-view
     (show-menubar yes)
     (show-statusbar yes)
@@ -31,7 +31,8 @@
 (icon-size medium)
 (color-profile-policy keep)
 (image-resize-fill-type white)
-(layer-new-name "bubbles")
+(layer-new-name "other")
+(layer-merge-type clip-to-bottom-layer)
 (path-import-path "${gimp_dir}/path")
 (fill-options
     (style solid)

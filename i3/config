@@ -319,6 +319,8 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+gaps inner 0px
+
 bindsym $mod+Shift+r mode "resize"
 
 # Icons
