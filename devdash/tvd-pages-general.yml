@@ -16,19 +16,19 @@ projects:
         end_date: "2_days_ago"
         color: blue
         metrics: "sessions, ga:avgTimeOnPage"
-        row_limit: 28
+        row_limit: 24
       fifth_column:
         start_date: "1_days_ago"
         end_date: "1_days_ago"
         color: magenta
         metrics: "sessions, ga:avgTimeOnPage"
-        row_limit: 28
+        row_limit: 24
       sixth_column:
         start_date: "today"
         end_date: "today"
         color: green
         metrics: "sessions, ga:avgTimeOnPage"
-        row_limit: 28
+        row_limit: 24
     widgets:
       - row:
           - col:
