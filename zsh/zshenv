@@ -55,7 +55,7 @@ hl+:red"
 
 export FZF_DEFAULT_OPTS="--height 60% \
 --border sharp \
---layout reverse-list \
+--layout reverse \
 --color '$FZF_COLORS' \
 --prompt '∷ ' \
 --pointer ▶ \

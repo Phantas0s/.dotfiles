@@ -105,12 +105,12 @@ fwork() {
 
 fpdf() {
     result=$(find -type f -name '*.pdf' | fzf --bind "ctrl-r:reload(find -type f -name '*.pdf')" --preview "pdftotext {} - | less")
-    [ -n "$result" ] && zathura "$result" &
+    [ -n "$result" ] && nohup zathura "$result" &> /dev/null & disown
 }
 
 fepub() {
     result=$(find -type f -name '*.epub' | fzf --bind "ctrl-r:reload(find -type f -name '*.epub')")
-    [ -n "$result" ] && zathura "$result" &
+    [ -n "$result" ] && nohup zathura "$result" &> /dev/null & disown
 }
 
 # List mindmaps
