@@ -5,7 +5,7 @@
 # +-----+
 
 # git log browser with FZF
-fglog() {
+fgl() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
   fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
@@ -14,6 +14,13 @@ fglog() {
                 xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
                 {}
 FZF-EOF"
+}
+
+fgb() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
 # +--------+
@@ -103,17 +110,19 @@ fwork() {
     [ -n "$result" ] && cd ~/workspace/$result
 }
 
+# Open pdf with Zathura
 fpdf() {
     result=$(find -type f -name '*.pdf' | fzf --bind "ctrl-r:reload(find -type f -name '*.pdf')" --preview "pdftotext {} - | less")
     [ -n "$result" ] && nohup zathura "$result" &> /dev/null & disown
 }
 
+# Open epubs with Zathura
 fepub() {
     result=$(find -type f -name '*.epub' | fzf --bind "ctrl-r:reload(find -type f -name '*.epub')")
     [ -n "$result" ] && nohup zathura "$result" &> /dev/null & disown
 }
 
-# List mindmaps
+# Open freemind mindmap
 fmind() {
     local folders=("$CLOUD/knowledge_base" "$WORKSPACE/alexandria")
 
@@ -131,6 +140,7 @@ ftrack() {
     [ -n "$file" ] && libreoffice "$file" &> /dev/null &
 }
 
+# Search and find directories in the dir stack
 fpop() {
     # Only work with alias d defined as:
     
@@ -138,4 +148,22 @@ fpop() {
     # for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
     d | fzf --height="20%" | cut -f 1 | source /dev/stdin
+}
+
+# Find in File using ripgrep
+fif() {
+  if [ ! "$#" -gt 0 ]; then return 1; fi
+  rg --files-with-matches --no-messages "$1" \
+      | fzf --preview "highlight -O ansi -l {} 2> /dev/null \
+      | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' \
+      || rg --ignore-case --pretty --context 10 '$1' {}"
+}
+
+# Find in file using ripgrep-all
+fifa() {
+    if [ ! "$#" -gt 0 ]; then return 1; fi
+    local file
+    file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$*" \
+        | fzf-tmux -p +m --preview="rga --ignore-case --pretty --context 10 '"$*"' {}")" \
+        && print -z "./$file" || return 1;
 }
