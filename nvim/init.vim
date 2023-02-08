@@ -59,7 +59,6 @@ vmap <f3> !figlet<cr>
 
 " un-highlight the last search result
 nnoremap <silent> <leader><space> <Cmd>nohlsearch<cr>
-
 inoremap <C-d> <Del>
 
 " location & quickfix
@@ -103,12 +102,6 @@ nnoremap tL :tabm<CR>
 
 " create horizontal window
 nnoremap <c-w>h <c-w>s
-
-" Multi OS version (open for macOS)
-" command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
-" Only Linux
-command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
-autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
 
 " arrow keys resize windows
 nnoremap <left> :vertical resize -10<cr>
@@ -175,6 +168,22 @@ command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar'
 " restore the position of the last cursor when you open a file
 autocmd vimrc BufReadPost * call general#RestorePosition()
 
+" augroup ToggleSearchHighlighting
+" au!
+" autocmd CmdlineEnter \?,/ set hlsearch
+" autocmd CmdlineLeave \?,/ set nohlsearch
+" augroup END
+
+" nnoremap <leader>h <cmd>set hlsearch!<cr>
+
+" augroup ToggleSearchHighlighting
+" au!
+" autocmd CmdlineEnter \?,/ set hlsearch
+" autocmd InsertEnter * set nohlsearch
+" augroup END
+
+" nnoremap <leader>h <cmd>set hlsearch!<cr>
+
 " delete trailing space when saving files
 autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc,*.vim,*.lua,*.md call general#DeleteTrailingWS()
 
@@ -192,8 +201,14 @@ augroup END
 " Formatting options (:help fo-table)
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Multi OS version (open for macOS)
+" command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
+" Only Linux
+command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
+autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
+
 " Automatically source vimrc after saving
-" autocmd vimrc bufwritepost init.vim source $MYVIMRC
+autocmd vimrc BufWritePost init.vim source $MYVIMRC
 
 " +--------------+
 " | Highlighting |
@@ -204,7 +219,7 @@ autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v',
 autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100)
 
 " Highlight briefly yanked text
-au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
+autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
 
 " +---------------+
 " | Abbreviations |
@@ -218,8 +233,9 @@ func Delchar(pat)
     return (c =~ a:pat) ? '' : c
 endfunc
 
-" iabbrev IMO in my opinion
-" iabbrev BTW by the way
+iabbrev IMO in my opinion
+iabbrev IMHO in my humble opinion
+iabbrev BTW by the way
 
 " Typos
 iabbrev hte the
@@ -239,6 +255,7 @@ iabbrev authro author
 iabbrev proejct project
 iabbrev direcotry directory
 iabbrev direcotries directories
+iabbrev environemnt environment
 iabbrev trhe the
 iabbrev insteand instead
 iabbrev solutiosn solutions
