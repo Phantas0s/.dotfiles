@@ -146,6 +146,9 @@ nnoremap <leader>g :file<cr>
 
 nnoremap <silent> <leader>p :let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')<cr>
 
+" Automatically fix the spelling
+imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 " +---------------+
 " | User Commands |
 " +---------------+
@@ -253,6 +256,7 @@ iabbrev wihtout without
 iabbrev authros authors
 iabbrev authro author
 iabbrev proejct project
+iabbrev varialbe variable
 iabbrev direcotry directory
 iabbrev direcotries directories
 iabbrev environemnt environment
@@ -283,10 +287,10 @@ iabbrev mne~ {{< mne >}}<esc>F>i<c-r>=Delchar('\s')<cr>
 " | netrw |
 " +-------+
 
-command! Oexplore exe 'Vexplore' getcwd()
+command! Oexplore exe 'Explore' getcwd()
 
 " Open on the left
-nnoremap <leader>v :Vexplore<cr>
+nnoremap <leader>v :Explore<cr>
 nnoremap <leader>V :Oexplore<cr>
 
 " +--------------+

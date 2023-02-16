@@ -188,6 +188,7 @@ LVDS-1 HDMI-1 XPosition 1920x1200=0
 LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
+RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
@@ -1190,7 +1191,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwLa2to=
+Database Encrypted Password=AwIvLy8=
 Database Hostname=
 Database Name=/run/media/hypnos/Photos/db/digikam/
 Database Name Face=/run/media/hypnos/Photos/db/digikam/
@@ -1592,6 +1593,7 @@ LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1366x768=454
 LVDS-1 HDMI-1 YPosition 1920x1080=22
 LVDS-1 HDMI-1 YPosition 1920x1200=22
+RestorePositionForNextInstance=false
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
@@ -1717,6 +1719,7 @@ PGFLossLess=true
 PNGCompression=9
 PreviewMode=128
 RawImportToolIid=org.kde.digikam.plugin.rawimport.Native
+RestorePositionForNextInstance=false
 RestoreToolSettings=true
 Show Thumbbar=false
 ShowImageSettingsDialog=true
@@ -1977,6 +1980,7 @@ LVDS-1 HDMI-1 YPosition=0
 LVDS-1 HDMI-1 YPosition 1366x768=0
 LVDS-1 HDMI-1 YPosition 1920x1200=0
 Navigate By Pair=false
+RestorePositionForNextInstance=false
 Show Thumbbar=true
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
