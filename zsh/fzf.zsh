@@ -39,12 +39,22 @@ _fzf_compgen_dir() {
    fd --type d --hidden --follow --exclude ".git" "$1"
 }
 
-_fzf_comprun() {
-  local command=$1
-  shift
+# _fzf_comprun() {
+#   local command=$1
+#   shift
 
-  case "$command" in
-    tree)           find . -type d | fzf --height 50% --border sharp --preview 'tree -C {}' "$@";;
-    *)            fzf "$@" ;;
-  esac
+#   case "$command" in
+#     tree)           find . -type d | fzf --height 50% --border sharp --preview 'tree -C {}' "$@";;
+#     *)            fzf "$@" ;;
+#   esac
+# }
+
+# Custom fuzzy completion for "doge" command
+#   e.g. doge **<TAB>
+_fzf_complete_git() {
+  _fzf_complete -- "$@" < <(
+    echo "log"
+    echo "diff"
+  )
 }
+
