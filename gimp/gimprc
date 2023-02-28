@@ -7,8 +7,8 @@
 # Preferences dialog.
 
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable")
-(monitor-xresolution 141)
-(monitor-yresolution 142)
+(monitor-xresolution 94)
+(monitor-yresolution 94)
 (default-view
     (show-menubar yes)
     (show-statusbar yes)
