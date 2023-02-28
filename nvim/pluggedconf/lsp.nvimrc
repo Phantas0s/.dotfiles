@@ -41,7 +41,7 @@ table.insert(runtime_path, "/usr/share/lua/5.3/?/init.lua")
 local lib = vim.api.nvim_get_runtime_file("", true)
 table.insert(lib, "/usr/lib/lua-language-server/meta/3rd/love2d")
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
