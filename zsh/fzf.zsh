@@ -7,29 +7,23 @@ bindkey -rM emacs '\ec'
 bindkey -rM vicmd '\ec'
 bindkey -rM viins '\ec'
 
-zle     -N            fzf-cd-widget
-bindkey -M emacs '^e' fzf-cd-widget
-bindkey -M vicmd '^e' fzf-cd-widget
-bindkey -M viins '^e' fzf-cd-widget
-
-# zle     -N   fzf-completion
-# bindkey '^e' fzf-completion
+zle     -N              fzf-cd-widget
+bindkey -M emacs '\C-e' fzf-cd-widget
+bindkey -M vicmd '\C-e' fzf-cd-widget
+bindkey -M viins '\C-e' fzf-cd-widget
 
 source /usr/share/fzf/completion.zsh
 
 source $DOTFILES/zsh/scripts_fzf.zsh # fzf Scripts
-# _fzf_comprun() {
-#     local command=$1
-#     shift
+_fzf_comprun() {
+    local command=$1
+    shift
 
-#     case "$command" in
-#         cd)           find . -type d | fzf --height 50% --border sharp --margin 5% --preview 'tree -C {} | head -n 10' "$@";;
-#         *)            fzf "$@" ;;
-#     esac
-# }
-
-# Search with fzf and open selected file with Vim
-# bindkey -s '^v' 'vim $(fzf);^M'
+    case "$command" in
+        cd)           find . -type d | fzf --preview 'tree -C {}' "$@";;
+        *)            fzf "$@" ;;
+    esac
+}
 
 _fzf_compgen_path() {
     rg --files --glob "!.git" "$1"
@@ -39,22 +33,12 @@ _fzf_compgen_dir() {
    fd --type d --hidden --follow --exclude ".git" "$1"
 }
 
-# _fzf_comprun() {
-#   local command=$1
-#   shift
+_fzf_comprun() {
+  local command=$1
+  shift
 
-#   case "$command" in
-#     tree)           find . -type d | fzf --height 50% --border sharp --preview 'tree -C {}' "$@";;
-#     *)            fzf "$@" ;;
-#   esac
-# }
-
-# Custom fuzzy completion for "doge" command
-#   e.g. doge **<TAB>
-_fzf_complete_git() {
-  _fzf_complete -- "$@" < <(
-    echo "log"
-    echo "diff"
-  )
+  case "$command" in
+    tree)         find . -type d | fzf --preview 'tree -C {}' "$@";;
+    *)            fzf "$@" ;;
+  esac
 }
-

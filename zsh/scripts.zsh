@@ -27,23 +27,6 @@ screencast() {
             -f pulse -sample_rate 44100 -i default \
             -filter_complex "overlay=main_w-overlay_w-2:main_h-overlay_h-2" \
             -c:v libx264 -preset ultrafast -crf 18 -c:a aac -b:a 320k $T
-
-##!/bin/bash
-#if [ $# -gt 0 ]; then
-#	if echo $1 | grep '\....$' > /dev/null; then 
-#		T=$1
-#	else
-#		T=$1.mkv
-#	fi
-#fi
-## echo $T
-#ffmpeg -f alsa -i pulse -f x11grab -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -r 25 -i :0.0 -f video4linux2 -i /dev/video0 -filter_complex '[2:v]scale=480:-1[cam];[1:v][cam]overlay=W-w-10:H-h-10' -ab 192 -acodec pcm_s16le -qscale 0 $HOME/Screencasts/$T
-#@Phantas0s
- 
-        
-
-       # Other codecs
-       # -c:v ffvhuff   # lossless but HUGE
 }
 
 oscreencast() {
@@ -54,17 +37,17 @@ oscreencast() {
     fi
 }
 
-vidvolup() {
-    output=output.mkv
-    if [ ! -z $3 ]; then
-        output=$3
-    fi
-    if [ ! -z $1 ] && [ ! -z $2 ]; then
-        ffmpeg -i $1 -vol $(echo "256 + ((256 * $2) / 100)" | bc) -vcodec copy $output
-    else 
-        echo "You need to precise an output file as first argument and percentage of vol up as secong - eg 'example.mkv 100' to double the volume"
-    fi
-}
+# vidvolup() {
+#     output=output.mkv
+#     if [ ! -z $3 ]; then
+#         output=$3
+#     fi
+#     if [ ! -z $1 ] && [ ! -z $2 ]; then
+#         ffmpeg -i $1 -vol $(echo "256 + ((256 * $2) / 100)" | bc) -vcodec copy $output
+#     else
+#         echo "You need to precise an output file as first argument and percentage of vol up as secong - eg 'example.mkv 100' to double the volume"
+#     fi
+# }
 
 updatesys() {
     sh $DOTFILES/update.sh
@@ -655,7 +638,7 @@ git-jump() {
     "$DOTFILES/bash/scripts/git-jump.sh" "$@"
 }
 
-# Rename music automatically depending of mp3/ogg/flac tags
+# Rename music files automatically depending of their tags (mp3/ogg/flac)
 mvtag() {
     local option=$1
     shift
@@ -703,5 +686,3 @@ pom() {
 
     bc <<< "(($HOURS * 60) + $MINUTES) / $POMODORO_DURATION"
 }
-
-
