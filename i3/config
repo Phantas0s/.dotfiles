@@ -271,6 +271,7 @@ assign [instance="nomacs"] → $design
 assign [class="digikam" instance="digikam"] → $design
 assign [class="Darktable" instance="darktable"] → $design
 assign [class="Gimp" instance="gimp"] → $design
+assign [class="Pinta" instance="Pinta"] → $design
 assign [class="scribus" instance="scribus"] → $design
 assign [class="Inkscape" instance="org.inkscape.Inkscape"] → $design
 
