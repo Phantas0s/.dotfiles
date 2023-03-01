@@ -1,4 +1,4 @@
-let g:vimspector_install_gadgets = [ 'vscode-php-debug' ]
+let g:vimspector_install_gadgets = [ 'vscode-php-debug', 'delve' ]
 
 nmap <f2> <Plug>VimspectorStepOver
 nmap <f3> <Plug>VimspectorStepInto

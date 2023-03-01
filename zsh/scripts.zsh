@@ -679,6 +679,12 @@ keyb() {
     "$@" &> /dev/null & disown
 }
 
+# Generate a password - default 20 characters
+pass() {
+    local size=${1:-20}
+    cat /dev/random | tr -dc '[:graph:]' | head -c$size
+}
+
 pom() {
     local -r HOURS=${1:?}
     local -r MINUTES=${2:-0}
