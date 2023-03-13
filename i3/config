@@ -52,8 +52,6 @@ set_from_resource $white2 color15 #ffffff
 # To see a complete list, run xmodmap
 set $mod Mod4
 
-#---Starting External Scripts---# #
-
 # exec urxvtd daemon
 # urxvtc run via Xinitrc because otherwise the scratchpad don't work (race condition?)
 # exec --no-startup-id ~/.i3/scripts/urxvtc.sh
@@ -62,7 +60,7 @@ set $mod Mod4
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id vmware-user
 
-# start owncloud client
+# start nextcloud client
 exec --no-startup-id nextcloud &
 
 # start syncthing

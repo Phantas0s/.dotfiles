@@ -51,7 +51,7 @@ function run() {
         rsync "${rsync_opts[@]}" "${src}/" "$dest" 2> /tmp/errors
     done < "$file"
 
-    echo "ERRORS: \n"
+    printf "ERRORS: \n"
     cat /tmp/errors
 }
 
