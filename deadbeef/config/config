@@ -2,7 +2,7 @@ ape.write_apev2 1
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
 cli_add_to_specific_playlist 0
-deadbeef_version 1.9.4
+deadbeef_version 1.9.5
 filebrowser.autofilter 1
 filebrowser.bgcolor 
 filebrowser.bgcolor_selected 
@@ -46,7 +46,7 @@ gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 0
 gtkui.italic_current_track 0
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1329"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.765840 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1520"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
 gtkui.move_to_trash 1
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
@@ -100,12 +100,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 478
-logwindow.geometry.y 212
-mainwin.geometry.h 1133
-mainwin.geometry.w 1920
+logwindow.geometry.x 466
+logwindow.geometry.y 80
+mainwin.geometry.h 855
+mainwin.geometry.w 1440
 mainwin.geometry.x 0
-mainwin.geometry.y 44
+mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -167,8 +167,8 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.6837091
-playlist.current 2
+playback.volume.normalized 0.1813297
+playlist.current 3
 playlist.cursor.0 164
 playlist.cursor.1 4
 playlist.cursor.10 92
@@ -226,10 +226,10 @@ prefwin.geometry.h 571
 prefwin.geometry.w 768
 prefwin.geometry.x 114
 prefwin.geometry.y 71
-resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.paused 1
+resume.playlist 3
+resume.position 210.49951
+resume.track 1407
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
@@ -245,9 +245,9 @@ trkproperties.geometry.w 400
 trkproperties.geometry.x 437
 trkproperties.geometry.y 253
 waveform.bg_alpha 65535
-waveform.bg_color_b 17990
-waveform.bg_color_g 14392
-waveform.bg_color_r 15677
+waveform.bg_color_b 13095
+waveform.bg_color_g 13095
+waveform.bg_color_r 13980
 waveform.border_width 1
 waveform.cache_enabled 1
 waveform.cursor_width 3
@@ -265,7 +265,7 @@ waveform.fill_waveform 1
 waveform.font_size 18
 waveform.log_enabled 0
 waveform.max_file_length 180
-waveform.mix_to_mono 0
+waveform.mix_to_mono 1
 waveform.num_samples 2048
 waveform.pb_alpha 29652
 waveform.pb_color_b 16383
@@ -278,6 +278,6 @@ waveform.rlr_color_b 0
 waveform.rlr_color_g 0
 waveform.rlr_color_r 0
 waveform.scroll_enabled 1
-waveform.shade_waveform 0
+waveform.shade_waveform 1
 waveform.soundcloud_style 0
 wv.write_apev2 1
