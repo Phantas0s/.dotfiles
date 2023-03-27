@@ -32,8 +32,11 @@
 (color-profile-policy keep)
 (image-resize-fill-type white)
 (layer-new-name "other")
+(layer-new-fill-type foreground)
 (layer-merge-type clip-to-bottom-layer)
 (path-import-path "${gimp_dir}/path")
+(selection-feather-radius 2)
+(selection-border-radius 2)
 (fill-options
     (style solid)
     (antialias yes)

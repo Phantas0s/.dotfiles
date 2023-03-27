@@ -12,7 +12,7 @@ filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro/minimal file:///run/media/hypnos/Music/artiste/electro/electronica file:///run/media/hypnos/Music/artiste/electro/electronica/rone file:///run/media/hypnos/Music/series/ost file:///run/media/hypnos/Music/manga file:///run/media/hypnos/Music/manga/samurai_champloo file:///run/media/hypnos/Music/manga/samurai_champloo/depature file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/classical
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro/minimal file:///run/media/hypnos/Music/artiste/electro/electronica file:///run/media/hypnos/Music/artiste/electro/electronica/rone file:///run/media/hypnos/Music/series/ost file:///run/media/hypnos/Music/manga file:///run/media/hypnos/Music/manga/samurai_champloo file:///run/media/hypnos/Music/manga/samurai_champloo/depature file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/classical file:///run/media/hypnos/Music/artiste/classical/_COMPILS
 filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
@@ -100,10 +100,10 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 466
-logwindow.geometry.y 80
-mainwin.geometry.h 855
-mainwin.geometry.w 1440
+logwindow.geometry.x 458
+logwindow.geometry.y -8
+mainwin.geometry.h 1155
+mainwin.geometry.w 1920
 mainwin.geometry.x 0
 mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
@@ -167,15 +167,15 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.1813297
-playlist.current 3
+playback.volume.normalized 0.9864978
+playlist.current 14
 playlist.cursor.0 164
 playlist.cursor.1 4
 playlist.cursor.10 92
 playlist.cursor.11 0
 playlist.cursor.12 0
 playlist.cursor.13 1932
-playlist.cursor.14 0
+playlist.cursor.14 1703
 playlist.cursor.15 67
 playlist.cursor.16 0
 playlist.cursor.17 0
@@ -193,7 +193,7 @@ playlist.scroll.10 -92
 playlist.scroll.11 12380
 playlist.scroll.12 0
 playlist.scroll.13 171
-playlist.scroll.14 1896
+playlist.scroll.14 -1703
 playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
@@ -226,10 +226,10 @@ prefwin.geometry.h 571
 prefwin.geometry.w 768
 prefwin.geometry.x 114
 prefwin.geometry.y 71
-resume.paused 1
-resume.playlist 3
-resume.position 210.49951
-resume.track 1407
+resume.paused 0
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450

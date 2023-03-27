@@ -286,6 +286,13 @@ alias awsa='aws --profile amboss-profile'
 
 alias obsn='prime-run obs&'
 
+# +--------+
+# | Custom |
+# +--------+
+
+alias mke='mkextract'
+alias ex='extract'
+
 # +---------+
 # | scripts |
 # +---------+

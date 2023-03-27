@@ -77,3 +77,9 @@ function oneTimeTearDown() {
 
 source shunit2
 endsnippet
+
+snippet forinf "for files in $@ done (forinf)" b
+for files in "$@"; do
+	${0:${VISUAL}}
+done
+endsnippet
