@@ -4,6 +4,8 @@ screenres() {
     [ ! -z $1 ] && xrandr --current | grep '*' | awk '{print $1}' | sed -n "$1p"
 }
 
+# Begin a screencast 
+# TODO - To fix (and miss the webcam)
 screencast() {
     T="$(date +%d-%m-%Y-%H-%M-%S)".mkv
     if [ $# -gt 0 ]; then
@@ -37,33 +39,24 @@ oscreencast() {
     fi
 }
 
-# vidvolup() {
-#     output=output.mkv
-#     if [ ! -z $3 ]; then
-#         output=$3
-#     fi
-#     if [ ! -z $1 ] && [ ! -z $2 ]; then
-#         ffmpeg -i $1 -vol $(echo "256 + ((256 * $2) / 100)" | bc) -vcodec copy $output
-#     else
-#         echo "You need to precise an output file as first argument and percentage of vol up as secong - eg 'example.mkv 100' to double the volume"
-#     fi
-# }
-
+# Run script to update Arch and others
 updatesys() {
     sh $DOTFILES/update.sh
 }
 
+# Extract files
 extract() {
     for file in "$@"
     do
         if [ -f $file ]; then
-            ex $file
+            _ex $file
         else
             echo "'$file' is not a valid file"
         fi
     done
 }
 
+# Extract files in their own directories
 mkextract() {
     for file in "$@"
     do
@@ -72,7 +65,7 @@ mkextract() {
             mkdir -p $filename
             cp $file $filename
             cd $filename
-            ex $file
+            _ex $file
             rm -f $file
             cd -
         else
@@ -81,7 +74,8 @@ mkextract() {
     done
 }
 
-ex() {
+# Internal function to extract any file
+_ex() {
     case $1 in
         *.tar.bz2)  tar xjf $1      ;;
         *.tar.gz)   tar xzf $1      ;;
@@ -99,11 +93,15 @@ ex() {
     esac
 }
 
+# Compress a file 
+# TODO to improve to compress in any possible format
+# TODO to improve to compress multiple files
 compress() {
     local DATE="$(date +%Y%m%d-%H%M%S)"
     tar cvzf "$DATE.tar.gz" "$@"
 }
 
+# Take a screenshot
 screenshot () {
     local DIR="$SCREENSHOT"
     local DATE="$(date +%Y%m%d-%H%M%S)"
@@ -131,13 +129,18 @@ screenshot () {
     fi
 }
 
+# Spit the size of images
 imgsize() {
-    local width=$(identify -format "%w" "$1")> /dev/null
-    local height=$(identify -format "%h" "$1")> /dev/null
+    for file in "$@"
+    do
+        local width=$(identify -format "%w" "$file")> /dev/null
+        local height=$(identify -format "%h" "$file")> /dev/null
 
-    echo -e "Size of $1: $width*$height"
+        echo -e "Size of $file: $width*$height"
+    done
 }
 
+# Resize an image
 imgresize() {
     local filename=${1%\.*}
     local extension="${1##*.}"
@@ -201,6 +204,14 @@ imgtojpg() {
     do
         local filename=${file%\.*}
         convert -quality 100 $file "${filename}.jpg"
+    done
+}
+
+imgtopng() {
+    for file in "$@"
+    do
+        local filename=${file%\.*}
+        convert -quality 100 $file "${filename}.png"
     done
 }
 
@@ -623,7 +634,7 @@ serve() {
 }
 
 backup() {
-    "$DOTFILES/bash/scripts/backup/backup.sh" "$@" "$CLOUD/dotfiles/dir.csv"
+    "$DOTFILES/bash/scripts/backup/backup.sh" "-x" "$@" "$CLOUD/dotfiles/dir.csv"
 }
 
 kubecfg() {
@@ -684,6 +695,33 @@ pass() {
     local size=${1:-20}
     cat /dev/random | tr -dc '[:graph:]' | head -c$size
 }
+
+# Generate a m3u files with same filename as directories passed as arguments.
+# The file is written with all files in each arg.
+# Example: cm3u Xenogears
+# Create a file 'Xenogears.m3u' and inside for example 'Xenogears/Xenogears The Game.bin'
+cm3u() {
+    for file in "$@"
+    do
+        if [ -d $file ]; then
+            m3u="$file.m3u"
+            find "$file" -type f > "$m3u"
+        else
+            echo "'$file' should be the directory where all your files are"
+        fi
+    done
+}
+
+# Transfer all ROMS to my rg35xx handheld console
+roms2gb() {
+    "$DOTFILES/bash/scripts/backup/backup.sh" "$@" "$CLOUD/dotfiles/roms.csv"
+    cp /home/hypnos/Games/emulators/console/nes/roms/hacks/* /run/media/hypnos/ROMS/FC
+    cp /home/hypnos/Games/emulators/console/snes/roms/hacks/* /run/media/hypnos/ROMS/SFC
+    cp /home/hypnos/Games/emulators/console/megadrive/roms/hacks/* /run/media/hypnos/ROMS/MD
+    cp /home/hypnos/Games/emulators/console/gba/roms/hacks/* /run/media/hypnos/ROMS/GBA
+    cp /home/hypnos/Games/emulators/console/gb/roms/hacks/* /run/media/hypnos/ROMS/GB
+}
+
 
 pom() {
     local -r HOURS=${1:?}
