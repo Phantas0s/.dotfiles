@@ -38,11 +38,19 @@ function testDestination() {
     assertTrue "[ $(find "$source" | wc -l) == $(find "$destination" | wc -l) ]"
 }
 
-function testDeleteFile() {
+function testNoDeleteByDefault() {
     "$($script "$file")"
     rm "$source/a_file"
     assertTrue "[ $(find "$source" | wc -l) != $(find "$destination" | wc -l) ]"
     "$($script "$file")"
+    assertTrue "[ $(find "$source" | wc -l) != $(find "$destination" | wc -l) ]"
+}
+
+function testDeleteFile() {
+    "$($script "$file")"
+    rm "$source/a_file"
+    assertTrue "[ $(find "$source" | wc -l) != $(find "$destination" | wc -l) ]"
+    "$($script -x "$file")"
     assertTrue "[ $(find "$source" | wc -l) == $(find "$destination" | wc -l) ]"
 }
 
@@ -54,7 +62,9 @@ function testCopyAFile() {
 
 # Run after each test
 function tearDown() {
-    rm -rf ./testdata
+    if [[ -d ./testdata ]]; then
+        rm -rf ./testdata
+    fi
 }
 
 source shunit2

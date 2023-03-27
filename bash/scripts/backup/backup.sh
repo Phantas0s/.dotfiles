@@ -13,15 +13,17 @@ function output-help()
     Options:
     -h|help       Display this message
     -v|version    Display script version
-    -d|dry-run    Run rsync with --dry-run for test"
+    -d|dry-run    Run rsync with --dry-run for test
+    -x|delete     Run rsync with --delete for mirroring
+    -x|size-only  Run rsync with --size-only (no comparison with timestamps)"
 }
 
 function run() {
-    local rsync_opts=(-avz --delete)
+    local rsync_opts=(-avz)
 
     __ScriptVersion="1.0"
 
-    while getopts ":hvd" opt
+    while getopts ":hvdxs" opt
     do
     case $opt in
 
@@ -30,6 +32,10 @@ function run() {
         v|version  )  echo "$0 -- Version $__ScriptVersion"; exit 0   ;;
 
         d|dry-run  )  rsync_opts+=(--dry-run); ;;
+
+        x|delete  )  rsync_opts+=(--delete); ;;
+
+        s|size-only  )  rsync_opts+=(--size-only); ;;
 
         * )  echo -e "\n  Option does not exist : $OPTARG\n"
             output-help; exit 1   ;;
