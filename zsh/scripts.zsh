@@ -633,10 +633,6 @@ serve() {
     python2 -m SimpleHTTPServer "$PORT"
 }
 
-backup() {
-    "$DOTFILES/bash/scripts/backup/backup.sh" "-x" "$@" "$CLOUD/dotfiles/dir.csv"
-}
-
 kubecfg() {
     . "$CLOUD/development/dotfiles_projects/amboss/kubecfg.sh"
 }
@@ -712,9 +708,13 @@ cm3u() {
     done
 }
 
+backup() {
+    "$DOTFILES/bash/scripts/backup/backup.sh" "-x" "$@" "$DOTFILES_CLOUD/backup/dir.csv"
+}
+
 # Transfer all ROMS to my rg35xx handheld console
 roms2gb() {
-    "$DOTFILES/bash/scripts/backup/backup.sh" "$@" "$CLOUD/dotfiles/roms.csv"
+    "$DOTFILES/bash/scripts/backup/backup.sh" "$@" "$DOTFILES_CLOUD/backup/roms.csv"
     cp /home/hypnos/Games/emulators/console/nes/roms/hacks/* /run/media/hypnos/ROMS/FC
     cp /home/hypnos/Games/emulators/console/snes/roms/hacks/* /run/media/hypnos/ROMS/SFC
     cp /home/hypnos/Games/emulators/console/megadrive/roms/hacks/* /run/media/hypnos/ROMS/MD
