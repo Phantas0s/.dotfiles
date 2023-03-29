@@ -638,7 +638,7 @@ backup() {
 }
 
 kubecfg() {
-    . "$CLOUD/development/dotfiles_projects/amboss/kubecfg.sh"
+    . "$DOTFILES_CLOUD/kubecfg.sh"
 }
 
 scratchpad() {
