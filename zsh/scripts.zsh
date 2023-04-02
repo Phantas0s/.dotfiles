@@ -671,12 +671,22 @@ nas() {
 
 # Disable the native keyboard for my TUXEDO laptop
 -keyb() {
-    xinput disable $(xinput list | grep "AT Translated Set" | awk '{print $7}' | sed 's/id=//')
+    xinput disable $(xinput list | grep -i "at translated set" | awk '{print $7}' | sed 's/id=//')
 }
 
 # Enable the native keyboard for my TUXEDO laptop
 keyb() {
-    xinput enable $(xinput list | grep "AT Translated Set" | awk '{print $7}' | sed 's/id=//')
+    xinput enable $(xinput list | grep -i "at translated set" | awk '{print $7}' | sed 's/id=//')
+}
+
+# Enable native pad for my Tuxedo laptop
+pad() {
+    xinput enable $(xinput list | grep -i "touchpad" | awk '{print $6}' | sed 's/id=//')
+}
+
+# Disable native pad for my Tuxedo laptop
+-pad() {
+    xinput disable $(xinput list | grep -i "touchpad" | awk '{print $6}' | sed 's/id=//')
 }
 
 # Launch a program in a terminal without getting any output,
