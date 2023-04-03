@@ -633,10 +633,6 @@ serve() {
     python2 -m SimpleHTTPServer "$PORT"
 }
 
-backup() {
-    "$DOTFILES/bash/scripts/backup/backup.sh" "-x" "$@" "$CLOUD/dotfiles/dir.csv"
-}
-
 kubecfg() {
     . "$DOTFILES_CLOUD/kubecfg.sh"
 }
@@ -675,12 +671,22 @@ nas() {
 
 # Disable the native keyboard for my TUXEDO laptop
 -keyb() {
-    xinput disable $(xinput list | grep "AT Translated Set" | awk '{print $7}' | sed 's/id=//')
+    xinput disable $(xinput list | grep -i "at translated set" | awk '{print $7}' | sed 's/id=//')
 }
 
 # Enable the native keyboard for my TUXEDO laptop
 keyb() {
-    xinput enable $(xinput list | grep "AT Translated Set" | awk '{print $7}' | sed 's/id=//')
+    xinput enable $(xinput list | grep -i "at translated set" | awk '{print $7}' | sed 's/id=//')
+}
+
+# Enable native pad for my Tuxedo laptop
+pad() {
+    xinput enable $(xinput list | grep -i "touchpad" | awk '{print $6}' | sed 's/id=//')
+}
+
+# Disable native pad for my Tuxedo laptop
+-pad() {
+    xinput disable $(xinput list | grep -i "touchpad" | awk '{print $6}' | sed 's/id=//')
 }
 
 # Launch a program in a terminal without getting any output,
@@ -712,9 +718,13 @@ cm3u() {
     done
 }
 
+backup() {
+    "$DOTFILES/bash/scripts/backup/backup.sh" "-x" "$@" "$DOTFILES_CLOUD/backup/dir.csv"
+}
+
 # Transfer all ROMS to my rg35xx handheld console
 roms2gb() {
-    "$DOTFILES/bash/scripts/backup/backup.sh" "$@" "$CLOUD/dotfiles/roms.csv"
+    "$DOTFILES/bash/scripts/backup/backup.sh" "$@" "$DOTFILES_CLOUD/backup/roms.csv"
     cp /home/hypnos/Games/emulators/console/nes/roms/hacks/* /run/media/hypnos/ROMS/FC
     cp /home/hypnos/Games/emulators/console/snes/roms/hacks/* /run/media/hypnos/ROMS/SFC
     cp /home/hypnos/Games/emulators/console/megadrive/roms/hacks/* /run/media/hypnos/ROMS/MD
