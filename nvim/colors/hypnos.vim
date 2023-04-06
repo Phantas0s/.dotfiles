@@ -93,6 +93,24 @@ hi Operator ctermfg=white ctermbg=NONE cterm=NONE
 
 hi ColorColumn ctermfg=lightGray ctermbg=NONE cterm=NONE
 
+hi @boolean ctermfg=red ctermbg=NONE cterm=NONE
+hi @attribute ctermfg=green ctermbg=NONE cterm=NONE
+hi @function ctermfg=cyan ctermbg=NONE cterm=NONE
+hi @keyword.function ctermfg=blue ctermbg=black cterm=NONE
+hi @keyword ctermfg=lightGray ctermbg=NONE cterm=NONE
+hi @conditional ctermfg=lightGray ctermbg=NONE cterm=NONE
+hi @repeat ctermfg=lightGray ctermbg=NONE cterm=NONE
+hi @identifier ctermfg=lightGray ctermbg=NONE cterm=NONE
+hi @variable ctermfg=blue ctermbg=NONE cterm=NONE
+hi @variable.field ctermfg=white ctermbg=NONE cterm=NONE
+hi @field ctermfg=white ctermbg=NONE cterm=NONE
+hi @keyword ctermfg=lightGray ctermbg=NONE cterm=NONE
+hi @keyword.operator ctermfg=lightGray ctermbg=NONE cterm=NONE
+hi @keyword.return ctermfg=lightGray ctermbg=NONE cterm=NONE
+" hi @punctuation.bracket ctermfg=red ctermbg=NONE cterm=NONE
+" hi @operator ctermfg=red ctermbg=NONE cterm=NONE
+hi @parameter ctermfg=green ctermbg=NONE cterm=NONE
+
 " Markdown
 hi markdownH1 ctermfg=red ctermbg=NONE cterm=NONE
 hi markdownH2 ctermfg=yellow ctermbg=NONE cterm=NONE
@@ -123,6 +141,8 @@ hi NeomakeWarningSign ctermfg=yellow ctermbg=black
 " quick-scope plugin
 highlight QuickScopePrimary ctermfg=red cterm=underline
 highlight QuickScopeSecondary ctermfg=yellow cterm=underline
+
+" NOT USED
 
 "hi CTagsMember-i  no settings --
 "hi CTagsGlobalConstant-i  no settings --
@@ -168,163 +188,83 @@ highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 
 " Treesitter
 
-" Following is deprecated apparently
-
-" TSStrong
-" TSEmphasis
-" TSUnderline
-" TSNote
-" TSWarning
-" TSDanger
-" highlight! link TSAnnotation BlueItalic
-" highlight! link TSAttribute BlueItalic
-" highlight! link TSBoolean Purple
-" highlight! link TSCharacter Yellow
-" highlight! link TSCharacterSpecial SpecialChar
-" highlight! link TSComment Comment
-" highlight! link TSConditional Red
-" highlight! link TSConstBuiltin PurpleItalic
-" highlight! link TSConstMacro PurpleItalic
-" highlight! link TSConstant Fg
-" highlight! link TSConstructor Green
-" highlight! link TSDebug Debug
-" highlight! link TSDefine Define
-" highlight! link TSEnvironment Macro
-" highlight! link TSEnvironmentName Type
-" highlight! link TSError Error
-" highlight! link TSException Red
-" highlight! link TSField Orange
-" highlight! link TSFloat Purple
-" highlight! link TSFuncBuiltin Green
-" highlight! link TSFuncMacro Green
-" highlight! link TSFunction Green
-" highlight! link TSFunctionCall Green
-" highlight! link TSInclude Red
-" highlight! link TSKeyword Red
-" highlight! link TSKeywordFunction Red
-" highlight! link TSKeywordOperator Red
-" highlight! link TSKeywordReturn Red
-" highlight! link TSLabel Red
-" highlight! link TSLiteral String
-" highlight! link TSMath Yellow
-" highlight! link TSMethod Green
-" highlight! link TSMethodCall Green
-" highlight! link TSNamespace BlueItalic
-" highlight! link TSNone Fg
-" highlight! link TSNumber Purple
-" highlight! link TSOperator Red
-" highlight! link TSParameter Fg
-" highlight! link TSParameterReference Fg
-" highlight! link TSPreProc PreProc
-" highlight! link TSProperty Orange
-" highlight! link TSPunctBracket Grey
-" highlight! link TSPunctDelimiter Grey
-" highlight! link TSPunctSpecial Yellow
-" highlight! link TSRepeat Red
-" highlight! link TSStorageClass Red
-" highlight! link TSStorageClassLifetime Red
-" highlight! link TSStrike Grey
-" highlight! link TSString Yellow
-" highlight! link TSStringEscape Green
-" highlight! link TSStringRegex Green
-" highlight! link TSStringSpecial SpecialChar
-" highlight! link TSSymbol Fg
-" highlight! link TSTag BlueItalic
-" highlight! link TSTagAttribute Green
-" highlight! link TSTagDelimiter Red
-" highlight! link TSText Green
-" highlight! link TSTextReference Constant
-" highlight! link TSTitle Title
-" highlight! link TSTodo Todo
-" highlight! link TSType BlueItalic
-" highlight! link TSTypeBuiltin BlueItalic
-" highlight! link TSTypeDefinition BlueItalic
-" highlight! link TSTypeQualifier Red
-" highlight! link TSURI markdownUrl
-" highlight! link TSVariable Fg
-" highlight! link TSVariableBuiltin PurpleItalic
-
-" Not deprecated
-
-" if has('nvim-0.8.0')
-"   highlight! link @annotation TSAnnotation
-"   highlight! link @attribute TSAttribute
-"   highlight! link @boolean TSBoolean
-"   highlight! link @character TSCharacter
-"   highlight! link @character.special TSCharacterSpecial
-"   highlight! link @comment TSComment
-"   highlight! link @conceal Grey
-"   highlight! link @conditional TSConditional
-"   highlight! link @constant TSConstant
-"   highlight! link @constant.builtin TSConstBuiltin
-"   highlight! link @constant.macro TSConstMacro
-"   highlight! link @constructor TSConstructor
-"   highlight! link @debug TSDebug
-"   highlight! link @define TSDefine
-"   highlight! link @error TSError
-"   highlight! link @exception TSException
-"   highlight! link @field TSField
-"   highlight! link @float TSFloat
-"   highlight! link @function TSFunction
-"   highlight! link @function.builtin TSFuncBuiltin
-"   highlight! link @function.call TSFunctionCall
-"   highlight! link @function.macro TSFuncMacro
-"   highlight! link @include TSInclude
-"   highlight! link @keyword TSKeyword
-"   highlight! link @keyword.function TSKeywordFunction
-"   highlight! link @keyword.operator TSKeywordOperator
-"   highlight! link @keyword.return TSKeywordReturn
-"   highlight! link @label TSLabel
-"   highlight! link @math TSMath
-"   highlight! link @method TSMethod
-"   highlight! link @method.call TSMethodCall
-"   highlight! link @namespace TSNamespace
-"   highlight! link @none TSNone
-"   highlight! link @number TSNumber
-"   highlight! link @operator TSOperator
-"   highlight! link @parameter TSParameter
-"   highlight! link @parameter.reference TSParameterReference
-"   highlight! link @preproc TSPreProc
-"   highlight! link @property TSProperty
-"   highlight! link @punctuation.bracket TSPunctBracket
-"   highlight! link @punctuation.delimiter TSPunctDelimiter
-"   highlight! link @punctuation.special TSPunctSpecial
-"   highlight! link @repeat TSRepeat
-"   highlight! link @storageclass TSStorageClass
-"   highlight! link @storageclass.lifetime TSStorageClassLifetime
-"   highlight! link @strike TSStrike
-"   highlight! link @string TSString
-"   highlight! link @string.escape TSStringEscape
-"   highlight! link @string.regex TSStringRegex
-"   highlight! link @string.special TSStringSpecial
-"   highlight! link @symbol TSSymbol
-"   highlight! link @tag TSTag
-"   highlight! link @tag.attribute TSTagAttribute
-"   highlight! link @tag.delimiter TSTagDelimiter
-"   highlight! link @text TSText
-"   highlight! link @text.danger TSDanger
-"   highlight! link @text.diff.add diffAdded
-"   highlight! link @text.diff.delete diffRemoved
-"   highlight! link @text.emphasis TSEmphasis
-"   highlight! link @text.environment TSEnvironment
-"   highlight! link @text.environment.name TSEnvironmentName
-"   highlight! link @text.literal TSLiteral
-"   highlight! link @text.math TSMath
-"   highlight! link @text.note TSNote
-"   highlight! link @text.reference TSTextReference
-"   highlight! link @text.strike TSStrike
-"   highlight! link @text.strong TSStrong
-"   highlight! link @text.title TSTitle
-"   highlight! link @text.todo TSTodo
-"   highlight! link @text.underline TSUnderline
-"   highlight! link @text.uri TSURI
-"   highlight! link @text.warning TSWarning
-"   highlight! link @todo TSTodo
-"   highlight! link @type TSType
-"   highlight! link @type.builtin TSTypeBuiltin
-"   highlight! link @type.definition TSTypeDefinition
-"   highlight! link @type.qualifier TSTypeQualifier
-"   highlight! link @uri TSURI
-"   highlight! link @variable TSVariable
-"   highlight! link @variable.builtin TSVariableBuiltin
-" endif
+"hi @annotation ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @attribute ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @boolean ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @character ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @character.special ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @comment ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @conceal ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @conditional ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @constant ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @constant.builtin ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @constant.macro ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @constructor ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @debug ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @define ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @error ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @exception ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @field ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @float ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @function ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @function.builtin ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @function.call ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @function.macro ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @include ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @keyword ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @keyword.function ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @keyword.operator ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @keyword.return ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @label ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @math ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @method ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @method.call ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @namespace ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @none ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @number ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @operator ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @parameter ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @parameter.reference ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @preproc ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @property ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @punctuation.bracket ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @punctuation.delimiter ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @punctuation.special ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @repeat ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @storageclass ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @storageclass.lifetime ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @strike ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @string ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @string.escape ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @string.regex ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @string.special ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @symbol ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @tag ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @tag.attribute ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @tag.delimiter ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.danger ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.diff.add ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.diff.delete ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.emphasis ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.environment ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.environment.name ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.literal ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.math ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.note ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.reference ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.strike ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.strong ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.title ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.todo ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.underline ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.uri ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @text.warning ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @todo ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @type ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @type.builtin ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @type.definition ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @type.qualifier ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @uri ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @variable ctermfg=lightGray ctermbg=black cterm=NONE
+"hi @variable.builtin ctermfg=lightGray ctermbg=black cterm=NONE
