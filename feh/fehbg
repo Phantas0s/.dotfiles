@@ -1,2 +1,9 @@
 #!/bin/bash
-feh --no-fehbg --bg-fill "$WALLPAPER_PATH/1490589082750.jpg"
+
+# Get a random wallpaper
+files=($(find "$WALLPAPER_PATH" -type f))
+N=${#files[@]}
+((N=RANDOM%N))
+randomfile=${files[$N]}
+
+feh --no-fehbg --bg-fill "$randomfile"
