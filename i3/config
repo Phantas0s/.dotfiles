@@ -52,14 +52,6 @@ set_from_resource $white2 color15 #ffffff
 # To see a complete list, run xmodmap
 set $mod Mod4
 
-# exec urxvtd daemon
-# urxvtc run via Xinitrc because otherwise the scratchpad don't work (race condition?)
-# exec --no-startup-id ~/.i3/scripts/urxvtc.sh
-
-# resize correctly in vmware
-exec --no-startup-id vmware-user-suid-wrapper
-exec --no-startup-id vmware-user
-
 # start nextcloud client
 exec --no-startup-id nextcloud &
 
@@ -85,8 +77,6 @@ exec --no-startup-id dunst
 bindsym $mod+x exec dunstctl close-all
 bindsym Ctrl+BackSpace exec dunstctl history-pop
 
-# launch brave
-exec --no-startup-id brave
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -375,6 +365,7 @@ exec urxvtc -name bc_scratchpad -e bc -l
 # start softwares and command lines in workspaces
 exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
 exec --no-startup-id i3-msg workspace "$office"; exec joplin-desktop
+# exec --no-startup-id i3-msg workspace "$web"; exec brave
 
 ##########
 # DESIGN #

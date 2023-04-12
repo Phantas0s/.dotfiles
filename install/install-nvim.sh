@@ -92,4 +92,8 @@ ln -sf "$DOTFILES/nvim/thesaurus" "$VIMCONFIG"
 # spell files
 ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"
 
-# projects.nvimrc is installed from the cloud
+# parsers for treesitter
+ln -sf "$DOTFILES/nvim/parser" "$VIMCONFIG"
+
+# queries for treesitter
+ln -sf "$DOTFILES/nvim/queries" "$VIMCONFIG"
