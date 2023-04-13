@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Get a random wallpaper
-files=($(find "$WALLPAPER_PATH" -type f))
-N=${#files[@]}
-((N=RANDOM%N))
-randomfile=${files[$N]}
-
-feh --no-fehbg --bg-fill "$randomfile"
+if [[ -f "/tmp/CURRENT_WALLPAPER" ]]; then
+    wall=$(cat /tmp/CURRENT_WALLPAPER)
+    feh --no-fehbg --bg-fill "$wall"
+else
+    source "$DOTFILES/feh/fehrnwall"
+fi
