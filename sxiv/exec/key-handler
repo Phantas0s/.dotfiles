@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-while read file
+# All shortcut needs to be preceded by CTRL-X
+
+while read -r file
 do
         case "$1" in
         "C-d")
-                mkdir -p ~/.trash && mv "$file" ~/.trash ;;
+                mkdir -p "$XDG_CONFIG_HOME/trash" && mv "$file" "$XDG_CONFIG_HOME/trash" ;;
         "C-r")
                 convert -rotate 90 "$file" "$file" ;;
         "C-c")
