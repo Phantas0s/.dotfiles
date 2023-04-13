@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get a random wallpaper
+files=($(find "$WALLPAPER_PATH" -type f))
+N=${#files[@]}
+((N=RANDOM%N))
+randomfile=${files[$N]}
+
+feh --no-fehbg --bg-fill "$randomfile"
+# Keep the same wallpaper per session
+# Reused in the script $DOTFILES/feh/fehbg
+echo "$randomfile" > /tmp/CURRENT_WALLPAPER
