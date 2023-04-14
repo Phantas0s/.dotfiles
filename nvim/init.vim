@@ -85,7 +85,7 @@ nnoremap gF :e <cfile><CR>
 command CDC cd %:p:h
 
 "toggle between absolute -> relative line number
-" nnoremap <C-n> :let [&nu, &rnu] = [&nu, &nu+&rnu==1]<CR>
+" nnoremap <C-n> :let [&number, &relativenumber] = [&number, &number+&relativenumber==1]<CR>
 nnoremap <C-n> :set relativenumber! <CR>
 
 " tabs
@@ -195,11 +195,11 @@ autocmd vimrc BufEnter *.png,*.jpg,*.gif silent! execute "!sxiv ".expand("%") | 
 autocmd vimrc BufEnter *.pdf silent! execute "!zathura ".expand("%") "&" | bwipeout
 
 " Toggle relative number
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+" augroup numbertoggle
+"   autocmd!
+"   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" augroup END
 
 " Formatting options (:help fo-table)
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -276,8 +276,12 @@ iabbrev infomration information
 iabbrev <expr> date_ strftime('%Y-%m-%d')
 
 " Useful for writing the book Learning to Play Vim
+
+" Create a cursor
 iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
+" Create a mnemonic
 iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
+" Create smallcaps
 iabbrev sc_ []{.smallcaps}<esc>F[a<c-r>=Delchar('\s')<cr>
 
 iabbrev mne~ {{< mne >}}<esc>F>i<c-r>=Delchar('\s')<cr>

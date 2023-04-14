@@ -73,6 +73,11 @@ exec --no-startup-id redshift &
 # launch dunst
 exec --no-startup-id dunst
 
+# Switch keylock on at startup
+exec --no-startup-id numlockx on
+
+# exec --no-startup-id $I3_CONFIG/scripts/remaps.sh
+
 # dunst keyboard shortcuts
 bindsym $mod+x exec dunstctl close-all
 bindsym Ctrl+BackSpace exec dunstctl history-pop
@@ -406,15 +411,9 @@ bar {
 # set $i3lockwall i3lock -i $I3_CONFIG/wallpapers/2016-04-07-09.34-Village-in-the-sky.png -t
 set $i3lockwall sh $I3_CONFIG/scripts/lock.sh
 
-# In order to cache an image
-# exec --no-startup-id betterlockscreen -u $I3_CONFIG/wallpapers/snow_tree.png 
-
-# exec --no-startup-id betterlockscreen -w
-# set $i3lockwall exec betterlockscreen --lock
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 #wallpaper and transparency
-# exec --no-startup-id compton -b --active-opacity 1 --config $XDG_CONFIG_HOME/.compton --backend xrender --vsync opengl
 exec --no-startup-id picom -b --active-opacity 1 --backend xrender
 
 # shutdown / restart / suspend...
@@ -458,9 +457,4 @@ bindsym $mod+a mode "$mode_display"
 # Remap caps lock when new keyboard attached
 bindsym $mod+z exec "setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape' &"
 
-exec --no-startup-id $I3_CONFIG/scripts/remaps.sh
-
 bindsym $mod+Ctrl+f fullscreen toggle global
-
-# Switch keylock on at startup
-exec --no-startup-id numlockx on
