@@ -79,6 +79,7 @@ Plug 'PotatoesMaster/i3-vim-syntax' " i3 config
 Plug 'chr4/nginx.vim' " nginx
 Plug 'wgwoods/vim-systemd-syntax' " systemd
 Plug 'cespare/vim-toml' " toml
+Plug 'jparise/vim-graphql' " graphql
 
 " +-----+
 " | LSP |
