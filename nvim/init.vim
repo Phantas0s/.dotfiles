@@ -49,6 +49,9 @@ let g:vimsyn_embed = 'l;'
 
 let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript']
 
+" Plugin ai.vim
+let g:ai_no_mappings = 1
+
 " +-----------------+
 " | general mapping |
 " +-----------------+

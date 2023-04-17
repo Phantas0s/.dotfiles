@@ -154,5 +154,4 @@ Plug 'nvim-treesitter/playground'
 
 Plug 'aduros/ai.vim'
 
-
 call plug#end()
