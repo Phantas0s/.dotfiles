@@ -45,9 +45,9 @@ let g:do_filetype_lua = 1
 let g:did_load_filetypes = 0
 
 " Lua syntax highlighting in Vimscript (*.vim) files
-let g:vimsyn_embed = 'l;'
+let g:vimsyn_embed = 'l'
 
-let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript']
+let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'go']
 
 " Plugin ai.vim
 let g:ai_no_mappings = 1
@@ -84,9 +84,6 @@ nnoremap <leader>x :silent :execute "!xdg-open %"<CR>
 " Go to file even if doesn't exist
 nnoremap gF :e <cfile><CR>
 
-" Actually change the directory to the current file
-command CDC cd %:p:h
-
 "toggle between absolute -> relative line number
 " nnoremap <C-n> :let [&number, &relativenumber] = [&number, &number+&relativenumber==1]<CR>
 nnoremap <C-n> :set relativenumber! <CR>
@@ -122,9 +119,6 @@ tnoremap <C-q> <C-\><C-n>
 nnoremap <silent> <leader><f5> :vsplit $MYVIMRC<CR>
 nnoremap <silent> <leader><f6> :source $MYVIMRC<CR>
 
-" Simple Zoom / Restore window (like Tmux)
-nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
-
 " Execute a macro for the all selection
 xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
 
@@ -150,7 +144,11 @@ nnoremap <leader>g :file<cr>
 nnoremap <silent> <leader>p :let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')<cr>
 
 " Automatically fix the spelling
-imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+imap <c-z> <c-g>u<Esc>[s1z=`]a<c-g>u
+nnoremap <silent> <leader>z 1z=
+
+" Simple Zoom / Restore window (like Tmux)
+nnoremap <silent> <leader>Z :call general#ZoomToggle()<CR>
 
 " +---------------+
 " | User Commands |
@@ -166,6 +164,9 @@ command! Jrnl call general#MakeJournalEntry()
 command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
 
 command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar', '\%' . <q-args> . 'v')
+
+" Change the directory to the current file
+command! CDC cd %:p:h
 
 " +---------+
 " | autocmd |
@@ -231,10 +232,8 @@ autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", t
 " | Abbreviations |
 " +---------------+
 
-" Some abbreviations finish with _ because it's not often that an underscore is followed by a space
-
-" from `:help abbreviations`
-func Delchar(pat)
+" from `:help abbreviations` (see `:helpgrep Eatchar`
+func! Delchar(pat)
     let c = nr2char(getchar(0))
     return (c =~ a:pat) ? '' : c
 endfunc
@@ -274,9 +273,18 @@ iabbrev functioanlities functionalities
 iabbrev functioantlities functionalities
 iabbrev opearte operate
 iabbrev infomration information
+iabbrev wnat want
+iabbrev almsot almost
+iabbrev chnaging changing
+iabbrev mutliple multiple
+iabbrev intersting interesting
+iabbrev inofmration information
+iabbrev sovling solving
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
+
+" Some abbreviations finish with _ because it's not often that an underscore is followed by a space - useful for snippets
 
 " Useful for writing the book Learning to Play Vim
 
@@ -286,6 +294,8 @@ iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
 iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
 " Create smallcaps
 iabbrev sc_ []{.smallcaps}<esc>F[a<c-r>=Delchar('\s')<cr>
+
+" Useful for markdown for The Valuable Dev
 
 iabbrev mne~ {{< mne >}}<esc>F>i<c-r>=Delchar('\s')<cr>
 " iabbrev mne~ <esc>F[a<c-r>=Delchar('\s')<cr>

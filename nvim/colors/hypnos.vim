@@ -31,7 +31,7 @@ highlight CursorLineNr ctermfg=red ctermbg=black cterm=bold
 highlight Todo ctermfg=red ctermbg=white cterm=bold
 highlight NvimInternalError ctermfg=red ctermbg=NONE cterm=bold
 
-highlight Search ctermfg=yellow ctermbg=NONE cterm=bold
+highlight Search ctermfg=green ctermbg=NONE cterm=bold
 highlight PreProc ctermfg=white ctermbg=NONE cterm=NONE
 highlight Visual ctermfg=red ctermbg=black cterm=bold
 highlight Statement ctermfg=blue ctermbg=NONE cterm=NONE
@@ -69,9 +69,11 @@ highlight Directory ctermfg=blue ctermbg=NONE cterm=bold
 
 " Writting
 highlight Underlined ctermfg=magenta ctermbg=black cterm=underline
-highlight SpellRare ctermfg=yellow ctermbg=black cterm=bold
+highlight SpellLocal ctermfg=magenta ctermbg=NONE cterm=underline
+highlight SpellRare ctermfg=blue ctermbg=NONE cterm=underline
 highlight SpellBad ctermfg=red ctermbg=NONE cterm=underline
-highlight SpellCap ctermfg=NONE ctermbg=red cterm=bold
+highlight SpellCap ctermfg=NONE ctermbg=red cterm=underline
+
 highlight Folded ctermfg=white ctermbg=black cterm=bold
 
 " Code
@@ -87,7 +89,7 @@ highlight String ctermfg=magenta ctermbg=NONE cterm=NONE
 highlight Structure ctermfg=green ctermbg=NONE cterm=bold
 
 highlight Type ctermfg=green ctermbg=NONE cterm=bold
-highlight MatchParen ctermfg=yellow ctermbg=NONE cterm=bold
+highlight MatchParen ctermfg=magenta ctermbg=NONE cterm=bold
 highlight Identifier ctermfg=cyan ctermbg=NONE cterm=NONE
 highlight Operator ctermfg=white ctermbg=NONE cterm=NONE
 
@@ -117,6 +119,7 @@ highlight markdownH2 ctermfg=yellow ctermbg=NONE cterm=NONE
 highlight markdownH3 ctermfg=green ctermbg=NONE cterm=NONE
 highlight markdownH4 ctermfg=blue ctermbg=NONE cterm=NONE
 highlight markdownH5 ctermfg=cyan ctermbg=NONE cterm=NONE
+highlight markdownH6 ctermfg=gray ctermbg=NONE cterm=NONE
 
 " SQL
 
