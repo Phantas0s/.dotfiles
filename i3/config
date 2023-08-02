@@ -326,7 +326,7 @@ for_window [class="URxvt*"] border pixel 1
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [class="zoom"] floating enable
+# for_window [class="zoom"] floating enable
 
 # floating windows
 for_window [class="Arandr"] floating enable, sticky enable, border none
