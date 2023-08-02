@@ -9,6 +9,8 @@
 # | General |
 # +---------+
 
+# source ./gambit.zsh
+
 # Load more completions
 fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
 

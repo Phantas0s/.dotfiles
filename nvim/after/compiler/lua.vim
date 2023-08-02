@@ -1,5 +1,5 @@
 " Vim compiler file
-" Compiler:	lua
+" Interpreter: lua
 
 if exists('current_compiler')
   finish
@@ -12,15 +12,7 @@ if exists(':CompilerSet') != 2
   command -nargs=* CompilerSet setlocal <args>
 endif
 
-" cpoptions is a set of flag turning on and off specific compatibility with Vi
-let s:save_cpo = &cpoptions
-" Do not concatenate sourced lines taht start with backslash
-set cpoptions-=C
-
-CompilerSet makeprg=lua\ .
-CompilerSet errorformat=luac: %f:%l: %m
-
-let &cpoptions = s:save_cpo
-unlet s:save_cpo
+CompilerSet makeprg=lua
+CompilerSet errorformat=lua:\ %f:%l:\ %m
 
 " vim: sw=2 sts=2 et

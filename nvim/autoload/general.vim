@@ -250,8 +250,7 @@ endfunction
 " command! -nargs=1 Redir silent call Redir(<f-args>)
 
 function! general#SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  for id in synstack(line("."), col("."))
+    echo synIDattr(id, "name")
+  endfor
 endfunc

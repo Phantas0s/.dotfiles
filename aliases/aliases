@@ -176,8 +176,8 @@ alias nvimc='rm -I $VIMCONFIG/swap/*'             # clean nvim swap file
 alias nvimcu='rm -I $VIMCONFIG/undo/*'            # clean the vim undo
 alias nviml='nvim -w $VIMCONFIG/vimlog "$@"'      # log the keystrokes 
 alias nvimd='nvim --noplugin -u NONE'             # launch nvim without any plugin or config (nvim debug)
-alias nvimfr='nvim +e /tmp/scratchpad.md +"set spelllang=fr"'
-alias lvim='\vim +"set nowrap|syntax off"'        # fast vim for big files / big oneliner
+alias nvimfr='nvim +e /tmp/scratchpad.md -c "set spelllang=fr"'
+alias lvim='\vim -c "set nowrap|syntax off"'        # fast vim for big files / big oneliner
 
 # +-----+
 # | Git |
