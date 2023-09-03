@@ -331,6 +331,7 @@ for_window [class="zoom"] floating enable
 # floating windows
 for_window [class="Arandr"] floating enable, sticky enable, border none
 for_window [class="Gcolor2"] floating enable,sticky enable, border none
+for_window [class="Nvidia-settings"] floating enable,sticky enable, border none
 
 # pavucontrol
 for_window [class="Pavucontrol"] move to scratchpad, floating enable, sticky enable, resize set 800 600
