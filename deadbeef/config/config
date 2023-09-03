@@ -46,7 +46,7 @@ gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 0
 gtkui.italic_current_track 0
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.665936 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1329"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.665936 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1520"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
 gtkui.move_to_trash 1
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
@@ -100,12 +100,12 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 436
-logwindow.geometry.y -250
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+logwindow.geometry.x 434
+logwindow.geometry.y -272
+mainwin.geometry.h 1005
+mainwin.geometry.w 1680
+mainwin.geometry.x 1920
+mainwin.geometry.y 172
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -168,7 +168,7 @@ output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
 playback.volume.normalized 0.6246058
-playlist.current 5
+playlist.current 8
 playlist.cursor.0 9
 playlist.cursor.1 4
 playlist.cursor.10 92
@@ -181,7 +181,7 @@ playlist.cursor.16 0
 playlist.cursor.17 0
 playlist.cursor.2 71
 playlist.cursor.3 20
-playlist.cursor.4 984
+playlist.cursor.4 737
 playlist.cursor.5 374
 playlist.cursor.6 39
 playlist.cursor.7 0
@@ -198,9 +198,9 @@ playlist.scroll.15 8924
 playlist.scroll.16 0
 playlist.scroll.17 0
 playlist.scroll.2 -70
-playlist.scroll.3 -20
-playlist.scroll.4 -984
-playlist.scroll.5 -374
+playlist.scroll.3 0
+playlist.scroll.4 -737
+playlist.scroll.5 9788
 playlist.scroll.6 -39
 playlist.scroll.7 0
 playlist.scroll.8 -2160
@@ -226,10 +226,10 @@ prefwin.geometry.h 571
 prefwin.geometry.w 768
 prefwin.geometry.x 114
 prefwin.geometry.y 71
-resume.paused 1
-resume.playlist 5
-resume.position 4.3653502
-resume.track 420
+resume.paused 0
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450
