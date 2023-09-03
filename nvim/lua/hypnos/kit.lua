@@ -34,3 +34,15 @@ function _G.Reload(pack)
     package.loaded['hypnos/'..pack] = nil
     require('hypnos/'..pack)
 end
+
+-- nvim_get_var throw an error if the var doesn't exists...
+function _G.get_var(el, var, default, func)
+  local s, v = pcall(function()
+    return func(el,var)
+  end)
+  if s then return v else return default end
+end
+
+function _G.starts_with(str, start)
+	return str:sub(1, #start) == start
+end

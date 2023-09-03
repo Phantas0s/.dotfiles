@@ -1,6 +1,6 @@
 function TabLine()
     local line = ''
-    for i = 1 ,vim.fn.tabpagenr('$') do
+    for i = 1,vim.fn.tabpagenr('$') do
         local buffers = vim.fn.tabpagebuflist(i)
         local mod = ''
         if i == vim.fn.tabpagenr() then

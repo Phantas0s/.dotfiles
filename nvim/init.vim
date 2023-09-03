@@ -23,6 +23,8 @@ source $VIMCONFIG/init_plugins.vim
 
 " Load custom library for lua
 lua require('hypnos/kit')
+
+" Load all Lua stuff
 lua require('hypnos/status_line')
 lua require('hypnos/tab_line')
 lua require('hypnos/text_objects').basic_text_objects()
@@ -62,7 +64,7 @@ vmap <f3> !figlet<cr>
 
 " un-highlight the last search result
 nnoremap <silent> <leader><space> <Cmd>nohlsearch<cr>
-inoremap <C-d> <Del>
+inoremap <c-d> <del>
 
 " location & quickfix
 nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
@@ -145,10 +147,10 @@ nnoremap <silent> <leader>p :let &path=join(split(system("find $(pwd) -type d -n
 
 " Automatically fix the spelling
 imap <c-z> <c-g>u<Esc>[s1z=`]a<c-g>u
-nnoremap <silent> <leader>z 1z=
+nnoremap <silent> <leader>Z 1z=
 
 " Simple Zoom / Restore window (like Tmux)
-nnoremap <silent> <leader>Z :call general#ZoomToggle()<CR>
+nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
 
 " +---------------+
 " | User Commands |
@@ -161,7 +163,7 @@ command! Ball :silent call general#Bdeleteonly()
 command! Jrnl call general#MakeJournalEntry()
 
 " romainl redir (https://gist.github.com/romainl/eae0a260ab9c135390c30cd370c20cd7)
-command! -nargs=1 -complete=command -bar -range Redir silent call general#Redir(<q-args>, <range>, <line1>, <line2>)
+command! -nargs=1 -complete=command -bar -range Redir call general#Redir(<q-args>, <range>, <line1>, <line2>)
 
 command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar', '\%' . <q-args> . 'v')
 
@@ -274,12 +276,14 @@ iabbrev functioantlities functionalities
 iabbrev opearte operate
 iabbrev infomration information
 iabbrev wnat want
+iabbrev soltuion solution
 iabbrev almsot almost
 iabbrev chnaging changing
 iabbrev mutliple multiple
 iabbrev intersting interesting
 iabbrev inofmration information
 iabbrev sovling solving
+iabbrev fisrt first
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
