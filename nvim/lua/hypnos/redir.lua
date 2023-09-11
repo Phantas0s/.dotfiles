@@ -16,18 +16,19 @@ local function redir(cmd)
 		result = vim.fn.split(vim.fn.execute(cmd), "\n")
 	end
 
+    // TODO might use nvim_buf_create
 	vim.api.nvim_command("vnew")
 	local buf = vim.api.nvim_get_current_buf()
     local w = vim.api.nvim_get_current_win()
 
-	vim.api.nvim_buf_set_name(0, "result #" .. buf)
+	vim.api.nvim_buf_set_name(buf, "result #" .. buf)
 
     vim.api.nvim_win_set_var(w, "scratch", true)
     vim.api.nvim_buf_set_option(buf, "modifiable", true)
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, result)
 	vim.api.nvim_buf_set_option(buf, "modifiable", false)
-	vim.api.nvim_buf_set_option(0, "buftype", "nofile")
-	vim.api.nvim_buf_set_option(0, "bufhidden", "wipe")
+	vim.api.nvim_buf_set_option(buf, "buftype", "nofile")
+	vim.api.nvim_buf_set_option(buf, "bufhidden", "wipe")
 
 	vim.api.nvim_command("setlocal wrap")
 	vim.api.nvim_command("setlocal cursorline")

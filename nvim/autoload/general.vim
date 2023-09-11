@@ -19,6 +19,14 @@ function general#ZoomToggle()
     lua require('hypnos/general').zoom_toggle()
 endfunc
 
+function general#GitBlame()
+    lua require('hypnos/general').git_blame()
+endfunc
+
+function general#CloseFloat()
+    lua require('hypnos/general').close_floating_windows()
+endfunc
+
 " redirect some Ex command output to a scratch buffer
 function general#Redir(cmd, rng, start, end)
     let Redir = luaeval('require("hypnos/redir").redir')
@@ -135,3 +143,4 @@ function! general#SynStack()
     echo synIDattr(id, "name")
   endfor
 endfunc
+

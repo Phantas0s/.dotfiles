@@ -170,6 +170,9 @@ command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar'
 " Change the directory to the current file
 command! CDC cd %:p:h
 
+command! Gpopupblame call general#GitBlame()
+command! CloseFloat call general#CloseFloat()
+
 " +---------+
 " | autocmd |
 " +---------+

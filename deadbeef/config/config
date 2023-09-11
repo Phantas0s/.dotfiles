@@ -167,8 +167,8 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.6246058
-playlist.current 8
+playback.volume.normalized 0.6801946
+playlist.current 2
 playlist.cursor.0 9
 playlist.cursor.1 4
 playlist.cursor.10 92
