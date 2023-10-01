@@ -16,7 +16,6 @@ local function redir(cmd)
 		result = vim.fn.split(vim.fn.execute(cmd), "\n")
 	end
 
-    // TODO might use nvim_buf_create
 	vim.api.nvim_command("vnew")
 	local buf = vim.api.nvim_get_current_buf()
     local w = vim.api.nvim_get_current_win()

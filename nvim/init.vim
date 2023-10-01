@@ -173,6 +173,8 @@ command! CDC cd %:p:h
 command! Gpopupblame call general#GitBlame()
 command! CloseFloat call general#CloseFloat()
 
+command! WM :w | Make book.pdf
+
 " +---------+
 " | autocmd |
 " +---------+
@@ -287,6 +289,8 @@ iabbrev intersting interesting
 iabbrev inofmration information
 iabbrev sovling solving
 iabbrev fisrt first
+iabbrev benefitial beneficial
+iabbrev comamnd command
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
@@ -301,6 +305,7 @@ iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
 iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
 " Create smallcaps
 iabbrev sc_ []{.smallcaps}<esc>F[a<c-r>=Delchar('\s')<cr>
+iabbrev ind_ []{.index}<esc>F[a<c-r>=Delchar('\s')<cr>
 
 " Useful for markdown for The Valuable Dev
 
