@@ -149,10 +149,4 @@ Plug 'tpope/vim-scriptease' " Debug vimscripts
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
-" +--------+
-" | OpenAI |
-" +--------+
-
-Plug 'aduros/ai.vim'
-
 call plug#end()
