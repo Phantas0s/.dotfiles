@@ -259,6 +259,7 @@ assign [class="Steam" instance="Steam"] → $games
 
 assign [class="Thunderbird" instance="Mail"] → $office
 assign [class="Thunderbird" instance="Msgcompose"] → $office
+assign [class="Nextcloud" instance="nextcloud"] → $office
 
 assign [instance="nomacs"] → $design
 assign [class="digikam" instance="digikam"] → $design
@@ -369,9 +370,9 @@ exec urxvtc -name bc_scratchpad -e bc -l
 
 
 # start softwares and command lines in workspaces
-exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
-exec --no-startup-id i3-msg workspace "$office"; exec joplin-desktop
-# exec --no-startup-id i3-msg workspace "$web"; exec brave
+exec --no-startup-id joplin-desktop
+# exec --no-startup-id brave
+exec --no-startup-id i3-msg workspace "$knowledge; exec nohup freemind $CLOUD/knowledge_base/mindmeister.mm &> /dev/null & disown"
 
 ##########
 # DESIGN #
