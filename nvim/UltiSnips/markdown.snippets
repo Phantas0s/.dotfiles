@@ -32,6 +32,28 @@ $2
 {{</list-table>}}
 endsnippet
 
+snippet :list-table "Pandoc lua filter list table"
+::: list-table
+- - Keystroke
+  - Description
+
+- - $1
+  - 
+:::
+endsnippet
+
+snippet :::list-table "Pandoc lua filter list table with three columns"
+::: list-table
+- - Question
+  - Keystroke
+  - Result
+
+- - $1
+  -
+  -
+:::
+endsnippet
+
 snippet toggle "Hugo visible toggle"
 {{< visible-toggle id="$1" title="Click to see the solution">}}
 $2

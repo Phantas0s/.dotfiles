@@ -2,7 +2,7 @@ ape.write_apev2 1
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
 cli_add_to_specific_playlist 0
-deadbeef_version 1.9.5
+deadbeef_version 1.9.6
 filebrowser.autofilter 1
 filebrowser.bgcolor 
 filebrowser.bgcolor_selected 
@@ -102,8 +102,8 @@ logwindow.geometry.h 300
 logwindow.geometry.w 400
 logwindow.geometry.x 432
 logwindow.geometry.y -294
-mainwin.geometry.h 855
-mainwin.geometry.w 1440
+mainwin.geometry.h 1155
+mainwin.geometry.w 1920
 mainwin.geometry.x 0
 mainwin.geometry.y 22
 mp3.id3v1_encoding iso8859-1
@@ -168,7 +168,7 @@ output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
 playback.volume.normalized 0.6801946
-playlist.current 2
+playlist.current 13
 playlist.cursor.0 9
 playlist.cursor.1 -1
 playlist.cursor.10 92

@@ -49,6 +49,7 @@ let g:did_load_filetypes = 0
 " Lua syntax highlighting in Vimscript (*.vim) files
 let g:vimsyn_embed = 'l'
 
+" Add highlighting for the following languages in markdown
 let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'go']
 
 " +-----------------+
@@ -64,40 +65,40 @@ nnoremap <silent> <leader><space> <Cmd>nohlsearch<cr>
 inoremap <c-d> <del>
 
 " location & quickfix
-nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<CR>
-nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<CR>
-nnoremap <leader>j :cnext<CR>
-nnoremap <leader>k :cprevious<CR>
-nnoremap <leader>lj :lnext<CR>
-nnoremap <leader>lk :lprevious<CR>
+nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<cr>
+nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<cr>
+nnoremap <leader>j :cnext<cr>
+nnoremap <leader>k :cprevious<cr>
+nnoremap <leader>lj :lnext<cr>
+nnoremap <leader>lk :lprevious<cr>
 
 " close the current buffer and switch to alternate buffer
-nnoremap <silent> <leader>dd <cmd>bp <bar>bd! #<cr>
+nnoremap <silent> <leader>dd <cmd>bp <bar> bd! #<cr>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap <silent> gX :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
 
 " open current file using xdg-open
-nnoremap <leader>x :silent :execute "!xdg-open %"<CR>
+nnoremap <leader>x :silent :execute "!xdg-open %"<cr>
 
 " Go to file even if doesn't exist
-nnoremap gF :e <cfile><CR>
+nnoremap gF :e <cfile><cr>
 
 "toggle between absolute -> relative line number
-" nnoremap <C-n> :let [&number, &relativenumber] = [&number, &number+&relativenumber==1]<CR>
-nnoremap <C-n> :set relativenumber! <CR>
+" nnoremap <C-n> :let [&number, &relativenumber] = [&number, &number+&relativenumber==1]<cr>
+nnoremap <C-n> :set relativenumber! <cr>
 
 " tabs
-nnoremap th :tabfirst<CR>
-nnoremap tk :tabnext<CR>
-nnoremap tj :tabprev<CR>
-nnoremap tl :tablast<CR>
-nnoremap tn :tabnew<CR>
-nnoremap tc :tabclose<CR>
+nnoremap th :tabfirst<cr>
+nnoremap tk :tabnext<cr>
+nnoremap tj :tabprev<cr>
+nnoremap tl :tablast<cr>
+nnoremap tn :tabnew<cr>
+nnoremap tc :tabclose<cr>
 
 " move tab to first position
-nnoremap tH :tabm 0<CR>
-nnoremap tL :tabm<CR>
+nnoremap tH :tabm 0<cr>
+nnoremap tL :tabm<cr>
 
 " create horizontal window
 nnoremap <c-w>h <c-w>s
@@ -115,11 +116,11 @@ nnoremap J mzJ`z
 tnoremap <C-q> <C-\><C-n>
 
 " edit vimrc with f5 and source it with f6
-nnoremap <silent> <leader><f5> :vsplit $MYVIMRC<CR>
-nnoremap <silent> <leader><f6> :source $MYVIMRC<CR>
+nnoremap <silent> <leader><f5> :vsplit $MYVIMRC<cr>
+nnoremap <silent> <leader><f6> :source $MYVIMRC<cr>
 
 " Execute a macro for the all selection
-xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<CR>
+xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<cr>
 
 " Paste from the yank buffer
 " nnoremap <leader>p "0p
@@ -138,8 +139,6 @@ nnoremap <leader>ml :source $VIMCONFIG/macros/
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
-nnoremap <leader>g :file<cr>
-
 nnoremap <silent> <leader>p :let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')<cr>
 
 " Automatically fix the spelling
@@ -147,7 +146,7 @@ imap <c-z> <c-g>u<Esc>[s1z=`]a<c-g>u
 nnoremap <silent> <leader>Z 1z=
 
 " Simple Zoom / Restore window (like Tmux)
-nnoremap <silent> <leader>z :call general#ZoomToggle()<CR>
+nnoremap <silent> <leader>z :call general#ZoomToggle()<cr>
 
 " +---------------+
 " | User Commands |
@@ -170,7 +169,10 @@ command! CDC cd %:p:h
 command! Gpopupblame call general#GitBlame()
 command! CloseFloat call general#CloseFloat()
 
-command! WM :w | Make book.pdf
+" Pandoc Book - compile a chapter
+command! MakeC execute 'Make chapter='.expand('%').' chapter.{pdf,epub} chapter-print.pdf'
+" Pandoc Book - compile a book
+command! MakeB execute 'Make book.{pdf,epub}'
 
 " +---------+
 " | autocmd |
@@ -216,7 +218,7 @@ autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 " command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
 " Only Linux
 command! -nargs=? DevDocs call system('xdg-open https://devdocs.io/#q=<args>')
-autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<CR>
+autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer><leader>D :execute "DevDocs " . expand('<cword>')<cr>
 
 " Automatically source vimrc after saving
 autocmd vimrc BufWritePost init.vim source $MYVIMRC
@@ -230,7 +232,7 @@ autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v',
 autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100)
 
 " Highlight briefly yanked text
-autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
+autocmd vimrc TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
 
 " +---------------+
 " | Abbreviations |
@@ -296,7 +298,7 @@ iabbrev <expr> date_ strftime('%Y-%m-%d')
 
 " Useful for writing the book Learning to Play Vim
 
-" Create a cursor
+" Create a cursor for minted codeblocks
 iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
 " Create a mnemonic
 iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
@@ -304,8 +306,11 @@ iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
 iabbrev sc_ []{.smallcaps}<esc>F[a<c-r>=Delchar('\s')<cr>
 iabbrev ind_ []{.index}<esc>F[a<c-r>=Delchar('\s')<cr>
 
+iabbrev space_  
+
 " Useful for markdown for The Valuable Dev
 
+" Create a mnemonic style
 iabbrev mne~ {{< mne >}}<esc>F>i<c-r>=Delchar('\s')<cr>
 " iabbrev mne~ <esc>F[a<c-r>=Delchar('\s')<cr>
 
