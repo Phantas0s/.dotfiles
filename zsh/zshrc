@@ -50,6 +50,9 @@ source $DOTFILES/aliases/aliases
 # +---------+
 
 source $DOTFILES/zsh/scripts.zsh
+if [ ! -z "$DOTFILES_CLOUD/scripts.zsh" ]; then
+    source $DOTFILES_CLOUD/scripts.zsh
+fi
 
 source "$DOTFILES/zsh/plugins/fg_bg.sh"
 zle -N fg-bg

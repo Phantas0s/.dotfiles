@@ -72,6 +72,7 @@ nnoremap <leader>k :cprevious<cr>
 nnoremap <leader>lj :lnext<cr>
 nnoremap <leader>lk :lprevious<cr>
 
+
 " close the current buffer and switch to alternate buffer
 nnoremap <silent> <leader>dd <cmd>bp <bar> bd! #<cr>
 
