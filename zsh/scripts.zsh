@@ -141,6 +141,10 @@ imgsize() {
 }
 
 # Resize an image
+# arg1: the file
+# arg2: the width to resize
+# arg3: modify the file in place
+# Example: imgresize myimage.jpg 780 true
 imgresize() {
     local filename=${1%\.*}
     local extension="${1##*.}"
@@ -158,6 +162,11 @@ Imgresize() {
     imgresize $1 $2 true
 }
 
+# Resize all images
+# arg1: the extension of all images
+# arg2: the width to resize
+# arg3: modify the files in place
+# Example: imgresizeall jpg 780 true
 imgresizeall() {
     for f in *.${1}; do
         if [ ! -z $3 ]; then
