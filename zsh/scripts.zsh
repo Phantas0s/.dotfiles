@@ -177,6 +177,20 @@ imgresizeall() {
     done
 }
 
+imginvert() {
+    local filename=${1%\.*}
+    local extension="${1##*.}"
+    local separator="_"
+    local invert="inverted"
+    if [ ! -z $2 ]; then
+        local finalName="$filename.$extension"
+    else
+        local finalName="$filename$separator$invert.$extension"
+    fi
+    convert $1 -channel RGB -negate $finalName
+    echo "$finalName inverted"
+}
+
 imgoptimize() {
     local filename=${1%\.*}
     local extension="${1##*.}"
