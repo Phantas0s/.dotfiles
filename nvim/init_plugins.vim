@@ -147,4 +147,10 @@ Plug 'tpope/vim-scriptease' " Debug vimscripts
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
+" +--------------+
+" | Intelligence |
+" +--------------+
+
+Plug 'zbirenbaum/copilot.lua'
+
 call plug#end()
