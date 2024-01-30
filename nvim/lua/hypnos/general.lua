@@ -78,5 +78,5 @@ return {
     del_trailing_ws = del_trailing_ws,
     zoom_toggle = zoom_toggle,
     git_blame = git_blame,
-    close_floating_windows = close_floating_windows
+    close_floating_windows = close_floating_windows,
 }

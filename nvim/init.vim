@@ -29,6 +29,7 @@ lua require('hypnos/status_line')
 lua require('hypnos/tab_line')
 lua require('hypnos/text_objects').basic_text_objects()
 lua require('hypnos/text_objects').indent_text_objects()
+lua require('hypnos/project').read_project_config()
 
 " source every plugin configs
 for file in split(glob('$VIMCONFIG/pluggedconf/*.nvimrc'), '\n')

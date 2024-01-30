@@ -100,7 +100,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'godlygeek/tabular' " Align stuff (useful for markdown tables for example)
 Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " Show grammar mistakes
 Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " Preview markdown file in browser
 
 " +-----+
 " | PHP |
@@ -141,7 +140,6 @@ Plug 'chrisbra/csv.vim'
 " +-----------+
 
 Plug 'tpope/vim-scriptease' " Debug vimscripts
-
 
 " +------------+
 " | Treesitter |
