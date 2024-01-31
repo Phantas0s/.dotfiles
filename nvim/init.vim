@@ -296,26 +296,6 @@ iabbrev comamnd command
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
 
-" Some abbreviations finish with _ because it's not often that an underscore is followed by a space - useful for snippets
-
-" Useful for writing the book Learning to Play Vim
-
-" Create a cursor for minted codeblocks
-iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
-" Create a mnemonic
-iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
-" Create smallcaps
-iabbrev sc_ []{.smallcaps}<esc>F[a<c-r>=Delchar('\s')<cr>
-iabbrev ind_ []{.index}<esc>F[a<c-r>=Delchar('\s')<cr>
-
-iabbrev space_  
-
-" Useful for markdown for The Valuable Dev
-
-" Create a mnemonic style
-iabbrev mne~ {{< mne >}}<esc>F>i<c-r>=Delchar('\s')<cr>
-" iabbrev mne~ <esc>F[a<c-r>=Delchar('\s')<cr>
-
 " +-------+
 " | netrw |
 " +-------+

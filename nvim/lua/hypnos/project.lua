@@ -3,7 +3,8 @@
 local function read_project_config()
     local workspace = os.getenv("WORKSPACE")
     local paths = {
-        "vim_courses/book"
+        "vim_courses/book",
+        "webtechno",
     }
 
     for _, rpath in ipairs(paths) do
