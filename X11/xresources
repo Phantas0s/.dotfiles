@@ -56,7 +56,7 @@ URxvt*cursorColor: #ffffff
 
 ! Useful for transparency
 URxvt*depth: 32
-URxvt.background: [85]#181815
+URxvt.background: [100]#181815
 
 ! Might be used by tmux
 URxvt*termName: rxvt-unicode

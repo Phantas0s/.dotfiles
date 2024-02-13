@@ -399,5 +399,5 @@ set wildcharm=<C-Z>
 
 " Set ripgrep for grep program
 if executable('rg')
-    set grepprg=rg\ --vimgrep\ --smart-case
+    let &grepprg='rg --vimgrep --smart-case $*'
 endif
