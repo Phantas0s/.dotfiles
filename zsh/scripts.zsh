@@ -755,6 +755,9 @@ roms2gb() {
     cp /home/hypnos/Games/emulators/console/gb/roms/hacks/* /run/media/hypnos/ROMS/GB
 }
 
+gitam() {
+    LC_ALL=C GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
+}
 
 pom() {
     local -r HOURS=${1:?}
