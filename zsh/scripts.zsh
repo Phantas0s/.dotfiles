@@ -689,7 +689,7 @@ reposize() {
 
 # Connect my NAS to $HOME/Network
 nas() {
-    sshfs -o idmap=user,default_permissions nas:/share ~/Network
+    sshfs -o idmap=user,default_permissions nas:/share/homes/admin ~/Network
 }
 
 # Disable the native keyboard for my TUXEDO laptop

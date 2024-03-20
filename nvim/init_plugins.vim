@@ -17,6 +17,8 @@ Plug 'tpope/vim-dispatch' " Asynchronous make
 Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
 " Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 Plug 'editorconfig/editorconfig-vim'
+" Use gz to format title case
+Plug 'christoomey/vim-titlecase'
 
 " +----------+
 " | Snippets |

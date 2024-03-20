@@ -416,7 +416,7 @@ set $i3lockwall sh $I3_CONFIG/scripts/lock.sh
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 #wallpaper and transparency
-exec --no-startup-id picom -b --active-opacity 1 --backend xrender
+exec --no-startup-id picom -b --active-opacity 1 --inactive-opacity 1 --backend xrender
 
 # shutdown / restart / suspend...
 set $mode_system \

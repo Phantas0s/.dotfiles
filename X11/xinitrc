@@ -12,9 +12,6 @@ setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape'&
 # personnalized keyboard keys
 [[ -f $XDG_CONFIG_HOME/X11/xmodmap ]] && xmodmap $XDG_CONFIG_HOME/X11/xmodmap
 
-# mpd
-[ ! -s ~/.config/mpd/pid ] && mpd
-
 # Increase key rate
 # xset r rate 300 30
 

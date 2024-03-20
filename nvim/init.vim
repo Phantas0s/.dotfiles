@@ -124,6 +124,8 @@ nnoremap <silent> <leader><f6> :source $MYVIMRC<cr>
 " Execute a macro for the all selection
 xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<cr>
 
+xnoremap s :s/\%V//g<left><left><left>
+
 " Paste from the yank buffer
 " nnoremap <leader>p "0p
 " nnoremap <leader>P "0P
@@ -385,14 +387,14 @@ set number relativenumber
 set diffopt+=vertical
 
 " to be able to use find in any projects
-set path=.,**,,
-" let &path=join(split(system('fd . --type d'), '\n'), ',')
+" set path=.,**,,
+let &path=join(split(system('fd . --type d'), '\n'), ',')
 
 " Don't display preview window for omni-completion
 set completeopt-=preview
 
 " Mapping to trigger completion in macro and mappings
-set wildcharm=<C-Z>
+set wildcharm=<c-z>
 
 " Split window when jump to a position from quickfix list
 " set switchbuf=vsplit

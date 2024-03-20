@@ -39,7 +39,7 @@ Icon Show Resolution=false
 Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
-IconView Font=Open Sans,9,-1,5,50,0,0,0,0,0
+IconView Font=Open Sans,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Image Group Mode=2
 Image Group Sort Order=0
 Image Sort Order=0
@@ -60,7 +60,7 @@ Show Thumbbar=true
 Show ToolTips=false
 Sidebar Title Style=2
 Theme=Black Body
-ToolTips Font=Open Sans,9,-1,5,50,0,0,0,0,0
+ToolTips Font=Open Sans,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 ToolTips Show Album Caption=true
 ToolTips Show Album Category=true
 ToolTips Show Album Collection=true
@@ -93,14 +93,14 @@ ToolTips Show Video Aspect Ratio=true
 ToolTips Show Video Codec=true
 ToolTips Show Video Duration=true
 ToolTips Show Video Frame Rate=true
-TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Update Type=1
 
 [AlbumFolderView Sidebar]
 CurrentIndex=0
-Expansion=0,4160,4159,4154,4152,4153,4151,4150,4149,4148,4147,4146,4145,4144,4051,4059,4048,4049,4050,4047,4038,4041,4037,4036,4025,3964,3994,3995,3988,3990,3992,3991,3985,3986,3984,3983,3971,3975,3977,3976,3974,3972,3982,3981,3978,3980,3979,3970,3969,4023,4024,3966,3968,3967,3965,4022,3996,4016,4015,4012,4011,4010,4007,4005,4003,3997,4021,4019,-3,1,3948,3947,3940,3930,3929,3957,3960,3958,3925,3927,3926,3924,3923,3901,3918,3898,3900,3873,3896,3893,3877,3880,3879,3874,3875,3863,3868,3872,3871,3869,3864,3866,3865,3859,3862,3861,3860,3854,3858,3857,3856,3855,3850,3852,3851,3847,3849,3846,3844,3962,3955,3950,3951,3954,3952,3953,2412,2417,2416,2415,2414,2413,2410,2411,2408,2401,2407,2406,2405,2404,2402,2397,2400,2398,2392,2396,2394,946,28,34,33,32,31,2,-2
+Expansion=0,4160,4159,4154,4152,4153,4151,4150,4149,4148,4147,4146,4145,4144,4051,4059,4048,4049,4050,4047,4038,4041,4037,4036,4025,3964,3994,3995,3988,3990,3992,3991,3985,3986,3984,3983,3971,3975,3977,3976,3974,3972,3982,3981,3978,3980,3979,3970,3969,4023,4024,3966,3968,3967,3965,4022,3996,4016,4015,4012,4011,4010,4007,4005,4003,3997,4021,4019,-2,1,3948,3947,3940,3930,3929,3957,3960,3958,3925,3927,3926,3924,3923,3901,3918,3898,3900,3873,3896,3893,3877,3880,3879,3874,3875,3863,3868,3872,3871,3869,3864,3866,3865,3859,3862,3861,3860,3854,3858,3857,3856,3855,3850,3852,3851,3847,3849,3846,3844,3962,3955,3950,3951,3954,3952,3953,2412,2417,2416,2415,2414,2413,2410,2411,2408,2401,2407,2406,2405,2404,2402,2397,2400,2398,2392,2396,2394,946,28,34,33,32,31,2,-3
 RestoreChecked=false
-Selection=
+Selection=0
 SortColumn=0
 SortOrder=1
 
@@ -1066,7 +1066,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwINDQ0=
+Database Encrypted Password=AwJfX18=
 Database Hostname=
 Database Name=/run/media/hypnos/photography/db/digikam/
 Database Name Face=/run/media/hypnos/photography/db/digikam/
@@ -1286,20 +1286,20 @@ Use Yolo V3=false
 
 [Face Management Settings]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
 Already Scanned Handling=0
 Face Scan Main Task=Recognize Marked Faces
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=
+TagComboBox-CurrentIndex=24
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=
+TagComboBox-Selection=24
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
@@ -1319,10 +1319,10 @@ targetUrl=file:///tmp
 
 [Find Duplicates View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
@@ -1333,10 +1333,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=
+TagComboBox-CurrentIndex=24
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=
+TagComboBox-Selection=24
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1360,10 +1360,10 @@ SortOrder=1
 
 [Fuzzy Search View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1379,7 +1379,7 @@ Selection=
 Sort Order=0
 SortColumn=0
 SortOrder=1
-SplitterState=AAAA/wAAAAEAAAACAAABewAAAGUB/////wEAAAACAA==
+SplitterState=AAAA/wAAAAEAAAACAAABfQAAAGUB/////wEAAAACAA==
 
 [GPS Search Sidebar][GPSSearch Map Widget]
 Backend=marble
@@ -1412,7 +1412,7 @@ CaseSensitive=0
 2 screens: Width=1920
 2 screens: XPosition=0
 2 screens: YPosition=22
-Application Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+Application Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Application Style=fusion
 Apply Sidebar Changes Directly=true
 Clean core DB At Start=false
@@ -1486,7 +1486,6 @@ Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQtAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1636,7 +1635,6 @@ SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
 SplitterState=AAAA/wAAAAEAAAACAAAGNgAAATIB/////wAAAAABAQ==
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQXAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 TIFFCompression=false
 ToolBarsMovable=Disabled
 Unclip Color=0
@@ -2059,7 +2057,7 @@ ToolBarsMovable=Disabled
 [MainWindow]
 InitialAlbumID=0
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABQAAAAEuAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAUAAAAAy/wBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABQAAAABXAP///wAABQAAAAQtAAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAUAAAAAy/wBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABQAAAABXAP///wAABP4AAAQnAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [MaintenanceDlg Settings]
 AlbumComboBox-Checked=
@@ -2432,10 +2430,10 @@ CaseSensitive=0
 
 [Select Reference]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -2458,10 +2456,10 @@ Video Tab=0
 
 [Sketch Search View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -2756,7 +2754,7 @@ Grouping mode=2
 
 [mainwindow_tableview][Current Profile]
 Column Count=6
-Header State=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02X\x00\x00\x00\x06\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\xff\xff\xff\xff
+Header State=AAAA/wAAAAAAAAABAAAAAQAAAAYBAAAAAAAAAAAAAAAAAAAAAAAAAlgAAAAGAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAABkAAAAAA==
 Profile Name=
 
 [mainwindow_tableview][Current Profile][Column 0]
