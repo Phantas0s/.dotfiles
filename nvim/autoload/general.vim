@@ -51,7 +51,7 @@ function general#Bdeleteonly() abort
     let list = filter(general#Buflist(), 'v:val != bufname("%")')
     call general#DeleteEmptyBuffers()
     for buffer in list
-        exec 'bdelete '.buffer
+        execute 'bdelete '.buffer
     endfor
 endfunction
 
@@ -77,52 +77,6 @@ endfunction
 function general#ExecuteMacroOverVisualRange() abort
     echo "@".getcmdline()
     execute ":'<,'>normal @".nr2char(getchar())
-endfunction
-
-" For use with pressing * or # in visual mode to search for current selection
-function general#VisualSelection(direction, extra_filter) range abort
-    let l:saved_reg = @"
-    execute 'normal! vgvy'
-
-    let l:pattern = escape(@", "\\/.*'$^~[]")
-    let l:pattern = substitute(l:pattern, "\n$", '', '')
-
-    if a:direction is# 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
-    elseif a:direction is# 'replace'
-        call CmdLine('%s' . '/'. l:pattern . '/')
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-
-" to toggle quickfix list and location list
-function general#GetBufferList() abort
-    redir =>buflist
-    silent! ls!
-    redir END
-    return buflist
-endfunction
-
-function general#ToggleList(bufname, pfx)
-    let buflist = general#GetBufferList()
-    for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
-        if bufwinnr(bufnum) != -1
-            exec(a:pfx.'close')
-            return
-        endif
-    endfor
-    if a:pfx == 'l' && len(getloclist(0)) == 0
-        echohl ErrorMsg
-        echo "Location List is Empty."
-        return
-    endif
-    let winnr = winnr()
-    exec(a:pfx.'open')
-    if winnr() != winnr
-        wincmd p
-    endif
 endfunction
 
 " create a dedicated file and prepare for writing it with markdown.

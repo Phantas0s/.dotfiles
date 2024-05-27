@@ -66,13 +66,10 @@ nnoremap <silent> <leader><space> <Cmd>nohlsearch<cr>
 inoremap <c-d> <del>
 
 " location & quickfix
-nnoremap <silent> <leader>l :call general#ToggleList("Location List", 'l')<cr>
-nnoremap <silent> <leader>q :call general#ToggleList("Quickfix List", 'c')<cr>
 nnoremap <leader>j :cnext<cr>
 nnoremap <leader>k :cprevious<cr>
 nnoremap <leader>lj :lnext<cr>
 nnoremap <leader>lk :lprevious<cr>
-
 
 " close the current buffer and switch to alternate buffer
 nnoremap <silent> <leader>dd <cmd>bp <bar> bd! #<cr>
@@ -122,7 +119,7 @@ nnoremap <silent> <leader><f5> :vsplit $MYVIMRC<cr>
 nnoremap <silent> <leader><f6> :source $MYVIMRC<cr>
 
 " Execute a macro for the all selection
-xnoremap @ :<C-u>call general#ExecuteMacroOverVisualRange()<cr>
+xnoremap @ <cmd>call general#ExecuteMacroOverVisualRange()<cr>
 
 xnoremap s :s/\%V//g<left><left><left>
 
@@ -294,6 +291,7 @@ iabbrev sovling solving
 iabbrev fisrt first
 iabbrev benefitial beneficial
 iabbrev comamnd command
+iabbrev thsi this
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')

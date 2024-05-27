@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.9 beta">
-  <Hotkeys Version="62">
+<doublecmd DCVersion="1.1.12 gamma">
+  <Hotkeys Version="63">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F2</Shortcut>
@@ -9,10 +9,6 @@
       <Hotkey>
         <Shortcut>Shift+F6</Shortcut>
         <Command>cm_RenameOnly</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>F3</Shortcut>
-        <Command>cm_View</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>F4</Shortcut>
@@ -389,6 +385,15 @@
       <Hotkey>
         <Shortcut>Ctrl+Shift+B</Shortcut>
         <Command>cm_FlatViewSel</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>F3</Shortcut>
+        <Command>cm_View</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Shift+F3</Shortcut>
+        <Command>cm_View</Command>
+        <Param>cursor=1</Param>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>

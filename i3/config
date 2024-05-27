@@ -335,8 +335,8 @@ for_window [class="Gcolor2"] floating enable,sticky enable, border none
 for_window [class="Nvidia-settings"] floating enable,sticky enable, border none
 
 # pavucontrol
-for_window [class="Pavucontrol"] move to scratchpad, floating enable, sticky enable, resize set 800 600
-bindsym $mod+Ctrl+m [class="Pavucontrol"] scratchpad show
+for_window [class="pavucontrol"] move to scratchpad, floating enable, sticky enable, resize set 800 600
+bindsym $mod+Ctrl+m [class="pavucontrol"] scratchpad show
 exec pavucontrol
 
 # tuxedo control center

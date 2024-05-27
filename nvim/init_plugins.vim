@@ -2,6 +2,8 @@
 " | install plugin |
 " +----------------+
 
+packadd cfilter
+
 call plug#begin("$VIMCONFIG/plugged")
 
 " +---------+

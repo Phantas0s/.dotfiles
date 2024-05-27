@@ -100,3 +100,23 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 " nmap <leader><tab> <plug>(fzf-maps-n)
+
+let s:git_add_cmd='git ls-files --modified --deleted --other --exclude-standard --deduplicate $(git rev-parse --show-toplevel)'
+command! -bang GitAdd call fzf#run(fzf#wrap({
+    \ 'source': s:git_add_cmd,
+    \ 'options': [
+        \ '--multi',
+        \ '--multi',
+        \ '--reverse',
+        \ '--no-sort',
+        \ '--prompt', 'Add > ',
+        \ '--preview', 'git status --short',
+        \ '--bind', 'enter:execute(git add {+})',
+        \ '--bind', 'enter:+reload('.s:git_add_cmd.')',
+    \ ]}))
+
+  " --bind='f1:toggle-header' \
+  " --bind='f2:toggle-preview' \
+  " --bind='enter:+refresh-preview' \
+  " --header-first \
+  " --header='ENTER to stage the file'
