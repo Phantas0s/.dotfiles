@@ -148,8 +148,8 @@ Plug 'tpope/vim-scriptease' " Debug vimscripts
 " +------------+
 " | Treesitter |
 " +------------+
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/playground'
 
 " +--------------+
 " | Intelligence |

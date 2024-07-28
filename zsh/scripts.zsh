@@ -687,11 +687,6 @@ reposize() {
   | numfmt --to=iec --from-unit=1024
 }
 
-# Connect my NAS to $HOME/Network
-nas() {
-    sshfs -o idmap=user,default_permissions nas:/share/homes/admin ~/Network
-}
-
 # Disable the native keyboard for my TUXEDO laptop
 -keyb() {
     xinput disable $(xinput list | grep -i "at translated set" | awk '{print $7}' | sed 's/id=//')

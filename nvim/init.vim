@@ -85,7 +85,8 @@ nnoremap gF :e <cfile><cr>
 
 "toggle between absolute -> relative line number
 " nnoremap <C-n> :let [&number, &relativenumber] = [&number, &number+&relativenumber==1]<cr>
-nnoremap <C-n> :set relativenumber! <cr>
+nnoremap <c-n> <cmd>set relativenumber!<cr>
+inoremap <c-n> <cmd>set relativenumber!<cr>
 
 " tabs
 nnoremap th :tabfirst<cr>
@@ -167,13 +168,9 @@ command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar'
 " Change the directory to the current file
 command! CDC cd %:p:h
 
+" Try to use popup in Neovim
 command! Gpopupblame call general#GitBlame()
 command! CloseFloat call general#CloseFloat()
-
-" Pandoc Book - compile a chapter
-command! MakeC execute 'Make chapter='.expand('%').' chapter.{pdf,epub} chapter-print.pdf'
-" Pandoc Book - compile a book
-command! MakeB execute 'Make book.{pdf,epub}'
 
 " +---------+
 " | autocmd |

@@ -93,7 +93,7 @@ ln -sf "$DOTFILES/nvim/thesaurus" "$VIMCONFIG"
 ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"
 
 # parsers for treesitter
-ln -sf "$DOTFILES/nvim/parser" "$VIMCONFIG"
+# ln -sf "$DOTFILES/nvim/parser" "$VIMCONFIG"
 
 # queries for treesitter
-ln -sf "$DOTFILES/nvim/queries" "$VIMCONFIG"
+# ln -sf "$DOTFILES/nvim/queries" "$VIMCONFIG"
