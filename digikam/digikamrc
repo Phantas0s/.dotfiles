@@ -1065,12 +1065,12 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwLe3t4=
+Database Encrypted Password=AwLf398=
 Database Hostname=
-Database Name=/run/media/hypnos/photography/db/digikam/
-Database Name Face=/run/media/hypnos/photography/db/digikam/
-Database Name Similarity=/run/media/hypnos/photography/db/digikam/
-Database Name Thumbnails=/run/media/hypnos/photography/db/digikam/
+Database Name=/run/media/hypnos/photography/db/digikam
+Database Name Face=/run/media/hypnos/photography/db/digikam
+Database Name Similarity=/run/media/hypnos/photography/db/digikam
+Database Name Thumbnails=/run/media/hypnos/photography/db/digikam
 Database Port=-1
 Database Type=QSQLITE
 Database Username=

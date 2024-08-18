@@ -33,7 +33,7 @@ $2
 endsnippet
 
 snippet :list-table "Pandoc lua filter list table"
-::: list-table
+::: {.list-table widths=2,10}
 - - Keystroke
   - Description
 
@@ -43,10 +43,10 @@ snippet :list-table "Pandoc lua filter list table"
 endsnippet
 
 snippet :::list-table "Pandoc lua filter list table with three columns"
-::: list-table
-- - Question
-  - Keystroke
-  - Result
+::: {.list-table widths=2.5,2,5}
+- - Ex command
+  - Short name
+  - Description
 
 - - $1
   -

@@ -12,7 +12,7 @@ filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
 filebrowser.defaultpath /run/media/hypnos/Music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro/minimal file:///run/media/hypnos/Music/artiste/electro/electronica file:///run/media/hypnos/Music/artiste/electro/electronica/rone file:///run/media/hypnos/Music/series/ost file:///run/media/hypnos/Music/manga file:///run/media/hypnos/Music/manga/samurai_champloo file:///run/media/hypnos/Music/manga/samurai_champloo/depature file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/classical file:///run/media/hypnos/Music/artiste/classical/_COMPILS file:///run/media/hypnos/music/artiste file:///run/media/hypnos/music/artiste/electro file:///run/media/hypnos/music/artiste/electro/minimal file:///run/media/hypnos/music/artiste/electro/minimal/extrawelt
+filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro/minimal file:///run/media/hypnos/Music/artiste/electro/electronica file:///run/media/hypnos/Music/artiste/electro/electronica/rone file:///run/media/hypnos/Music/series/ost file:///run/media/hypnos/Music/manga file:///run/media/hypnos/Music/manga/samurai_champloo file:///run/media/hypnos/Music/manga/samurai_champloo/depature file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/classical file:///run/media/hypnos/Music/artiste/classical/_COMPILS file:///run/media/hypnos/music/artiste file:///run/media/hypnos/music/artiste/electro/minimal file:///run/media/hypnos/music/artiste/electro/minimal/extrawelt file:///run/media/hypnos/music/artiste/electro
 filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
@@ -100,8 +100,8 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 514
-logwindow.geometry.y 232
+logwindow.geometry.x 484
+logwindow.geometry.y -98
 mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
@@ -167,8 +167,8 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.6361443
-playlist.current 5
+playback.volume.normalized 0.9688661
+playlist.current 2
 playlist.cursor.0 9
 playlist.cursor.1 -1
 playlist.cursor.10 1703
@@ -180,13 +180,13 @@ playlist.cursor.15 92
 playlist.cursor.16 0
 playlist.cursor.17 0
 playlist.cursor.2 20
-playlist.cursor.3 737
+playlist.cursor.3 764
 playlist.cursor.4 0
 playlist.cursor.5 171
 playlist.cursor.6 374
-playlist.cursor.7 39
+playlist.cursor.7 37
 playlist.cursor.8 151
-playlist.cursor.9 0
+playlist.cursor.9 2
 playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.10 48608
@@ -198,13 +198,13 @@ playlist.scroll.15 -92
 playlist.scroll.16 0
 playlist.scroll.17 0
 playlist.scroll.2 0
-playlist.scroll.3 -737
+playlist.scroll.3 -764
 playlist.scroll.4 474
-playlist.scroll.5 4666
+playlist.scroll.5 4613
 playlist.scroll.6 9788
-playlist.scroll.7 -39
+playlist.scroll.7 857
 playlist.scroll.8 3886
-playlist.scroll.9 0
+playlist.scroll.9 -1
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 1
 playlist.tab.00000 ==MAIN==

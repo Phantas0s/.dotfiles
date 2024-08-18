@@ -5,7 +5,7 @@ augroup END
 " use real tabs in .go files, not spaces
 setlocal noexpandtab
 
-autocmd go BufWritePre *.go lua vim.lsp.buf.format({async = true})
+autocmd go BufWritePre <buffer> lua vim.lsp.buf.format({async = true})
 
 " source every plugin configs
 for file in split(glob($XDG_CONFIG_HOME . "/nvim/pluggedconf/go/*.nvimrc"), '\n')

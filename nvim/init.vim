@@ -150,6 +150,10 @@ nnoremap <silent> <leader>Z 1z=
 " Simple Zoom / Restore window (like Tmux)
 nnoremap <silent> <leader>z :call general#ZoomToggle()<cr>
 
+" Scroll more
+nnoremap <c-e> 10<c-e>
+nnoremap <c-y> 10<c-y>
+
 " +---------------+
 " | User Commands |
 " +---------------+
@@ -176,24 +180,11 @@ command! CloseFloat call general#CloseFloat()
 " | autocmd |
 " +---------+
 
+autocmd vimrc CmdlineEnter \?,/ set hlsearch
+autocmd vimrc InsertEnter * set nohlsearch
+
 " restore the position of the last cursor when you open a file
 autocmd vimrc BufReadPost * call general#RestorePosition()
-
-" augroup ToggleSearchHighlighting
-" au!
-" autocmd CmdlineEnter \?,/ set hlsearch
-" autocmd CmdlineLeave \?,/ set nohlsearch
-" augroup END
-
-" nnoremap <leader>h <cmd>set hlsearch!<cr>
-
-" augroup ToggleSearchHighlighting
-" au!
-" autocmd CmdlineEnter \?,/ set hlsearch
-" autocmd InsertEnter * set nohlsearch
-" augroup END
-
-" nnoremap <leader>h <cmd>set hlsearch!<cr>
 
 " delete trailing space when saving files
 autocmd vimrc BufWrite *.php,*.js,*.jsx,*.vue,*.twig,*.html,*.sh,*.yaml,*.yml,*.clj,*.cljs,*.cljc,*.vim,*.lua,*.md call general#DeleteTrailingWS()
@@ -228,6 +219,7 @@ autocmd vimrc BufWritePost init.vim source $MYVIMRC
 " highlight the line which is longer than the defined margin (80 character)
 autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v', 10)
 autocmd vimrc FileType vim call matchadd('MaxLineChar', '\%120v', 100)
+autocmd vimrc FileType gitcommit call matchadd('MaxLineChar', '\%72v', 100)
 
 " Highlight briefly yanked text
 autocmd vimrc TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
@@ -236,7 +228,7 @@ autocmd vimrc TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSear
 " | Abbreviations |
 " +---------------+
 
-" from `:help abbreviations` (see `:helpgrep Eatchar`
+" from `:help abbreviations` (see `:helpgrep Eatchar`)
 func! Delchar(pat)
     let c = nr2char(getchar(0))
     return (c =~ a:pat) ? '' : c
@@ -289,6 +281,7 @@ iabbrev fisrt first
 iabbrev benefitial beneficial
 iabbrev comamnd command
 iabbrev thsi this
+iabbrev occurence occurrence
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
@@ -323,9 +316,6 @@ set undodir=$VIMCONFIG/undo
 " number of undo saved
 set undolevels=10000 " How many undos
 set undoreload=10000 " number of lines to save for undo
-
-" set line number
-" set number
 
 " the copy goes to the clipboard
 set clipboard+=unnamedplus
