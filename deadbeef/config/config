@@ -100,8 +100,8 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 484
-logwindow.geometry.y -98
+logwindow.geometry.x 295
+logwindow.geometry.y -301
 mainwin.geometry.h 1155
 mainwin.geometry.w 1920
 mainwin.geometry.x 0
@@ -167,7 +167,7 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.9688661
+playback.volume.normalized 0.1513477
 playlist.current 2
 playlist.cursor.0 9
 playlist.cursor.1 -1
