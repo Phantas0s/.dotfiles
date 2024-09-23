@@ -39,7 +39,8 @@ Plug 'alx741/vinfo' " Open info documentation files
 " | Undo tree |
 " +-----------+
 
-Plug 'simnalamburt/vim-mundo' " Undo tree display
+Plug 'mbbill/undotree'
+" Plug 'simnalamburt/vim-mundo' " Undo tree display
 
 " +-----------+
 " | Outliners |
@@ -155,6 +156,6 @@ Plug 'tpope/vim-scriptease' " Debug vimscripts
 " | Intelligence |
 " +--------------+
 
-Plug 'zbirenbaum/copilot.lua'
+" Plug 'zbirenbaum/copilot.lua'
 
 call plug#end()

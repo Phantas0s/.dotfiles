@@ -8,15 +8,17 @@ augroup END
 
 " +------------+
 " | leader key |
-" +------------+
+" +------------+ {{{
 
 " Configure leader key
 let mapleader = "\<space>"
 let maplocalleader = "\<space>"
 
+" }}}
+
 " +----------------+
 " | install plugin |
-" +----------------+
+" +----------------+ {{{
 
 " Source plugin definition file
 source $VIMCONFIG/init_plugins.vim
@@ -36,9 +38,11 @@ for file in split(glob('$VIMCONFIG/pluggedconf/*.nvimrc'), '\n')
     execute 'source' file
 endfor
 
+" }}}
+
 " +------------------+
 " | global variables |
-" +------------------+
+" +------------------+ {{{
 
 " Disable fold in markdown
 let g:vim_markdown_folding_disabled = 1
@@ -53,9 +57,11 @@ let g:vimsyn_embed = 'l'
 " Add highlighting for the following languages in markdown
 let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'go']
 
+" }}}
+
 " +-----------------+
 " | general mapping |
-" +-----------------+
+" +-----------------+ {{{
 
 " Create box and figlet - ESSENTIAL :D
 vmap <F2> !boxes -d stone<cr>
@@ -128,7 +134,7 @@ xnoremap s :s/\%V//g<left><left><left>
 " nnoremap <leader>p "0p
 " nnoremap <leader>P "0P
 
-" Surround with s (I never use the NORMAL substitute command)
+" Surround with s (I never use the substitute command in normal mode)
 nmap s ys
 
 " Save session
@@ -154,9 +160,22 @@ nnoremap <silent> <leader>z :call general#ZoomToggle()<cr>
 nnoremap <c-e> 10<c-e>
 nnoremap <c-y> 10<c-y>
 
+" Jumping from branch to branch in the undo tree
+nnoremap <leader>u g-
+nnoremap <leader>r g+
+
+" Open all folds more easily
+nnoremap zz zR
+
+" Define a text-object for square brackets
+onoremap ir i[
+onoremap ar a[
+
+" }}}
+
 " +---------------+
 " | User Commands |
-" +---------------+
+" +---------------+ {{{
 
 " buffer cleanup - delete every buffer except the one open
 command! Ball :silent call general#Bdeleteonly()
@@ -176,9 +195,11 @@ command! CDC cd %:p:h
 command! Gpopupblame call general#GitBlame()
 command! CloseFloat call general#CloseFloat()
 
+" }}}
+
 " +---------+
 " | autocmd |
-" +---------+
+" +---------+ {{{
 
 autocmd vimrc CmdlineEnter \?,/ set hlsearch
 autocmd vimrc InsertEnter * set nohlsearch
@@ -201,7 +222,7 @@ autocmd vimrc BufEnter *.pdf silent! execute "!zathura ".expand("%") "&" | bwipe
 " augroup END
 
 " Formatting options (:help fo-table)
-autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd vimrc FileType vim,lua setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Multi OS version (open for macOS)
 " command -nargs=? DevDocs call system('type -p open >/dev/null 2>&1 && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
@@ -212,9 +233,11 @@ autocmd vimrc FileType python,ruby,rspec,javascript,go,html,php nnoremap <buffer
 " Automatically source vimrc after saving
 autocmd vimrc BufWritePost init.vim source $MYVIMRC
 
+" }}}
+
 " +--------------+
 " | Highlighting |
-" +--------------+
+" +--------------+ {{{
 
 " highlight the line which is longer than the defined margin (80 character)
 autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v', 10)
@@ -224,9 +247,11 @@ autocmd vimrc FileType gitcommit call matchadd('MaxLineChar', '\%72v', 100)
 " Highlight briefly yanked text
 autocmd vimrc TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
 
+" }}}
+
 " +---------------+
 " | Abbreviations |
-" +---------------+
+" +---------------+ {{{
 
 " from `:help abbreviations` (see `:helpgrep Eatchar`)
 func! Delchar(pat)
@@ -286,9 +311,11 @@ iabbrev occurence occurrence
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
 
+" }}}
+
 " +-------+
 " | netrw |
-" +-------+
+" +-------+ {{{
 
 command! Oexplore exe 'Explore' getcwd()
 
@@ -296,9 +323,11 @@ command! Oexplore exe 'Explore' getcwd()
 nnoremap <leader>v :Explore<cr>
 nnoremap <leader>V :Oexplore<cr>
 
+" }}}
+
 " +--------------+
 " | Set  options |
-" +--------------+
+" +--------------+ {{{
 
 " colorscheme
 colorscheme hypnos
@@ -315,7 +344,6 @@ set undodir=$VIMCONFIG/undo
 
 " number of undo saved
 set undolevels=10000 " How many undos
-set undoreload=10000 " number of lines to save for undo
 
 " the copy goes to the clipboard
 set clipboard+=unnamedplus
@@ -388,3 +416,5 @@ set wildcharm=<c-z>
 if executable('rg')
     let &grepprg='rg --vimgrep --smart-case $*'
 endif
+
+" }}}

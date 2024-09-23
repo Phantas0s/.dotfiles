@@ -10,7 +10,8 @@ local function read_project_config()
     for _, rpath in ipairs(paths) do
         local path = workspace .. '/' .. rpath
         if path == vim.fn.getcwd() then
-            vim.cmd("source " .. path .. '/.vim/vimrc') end
+            vim.cmd(string.format('source %s/.vim/vimrc', path))
+        end
     end
 end
 
