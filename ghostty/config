@@ -1,0 +1,7 @@
+desktop-notifications = false
+keybind = shift+ctrl+n=new_tab
+# keybind = shift+ctrl+v=new_split:right
+quit-after-last-window-closed = true
+background = #1C1C1C
+foreground = #eeeeee
+cursor_color = #444444
