@@ -14,7 +14,7 @@ end
 
 local function WordCount()
     -- 0 is the current buffer
-    if vim.current_buffer and vim.api.nvim_buf_get_option(0, 'filetype') ~= "markdown" then
+    if vim.current_buffer and vim.api.nvim_get_option_value('filetype', { scope = "local" }) ~= "markdown" then
         return ""
     end
     local words = vim.fn.wordcount().words
@@ -26,7 +26,7 @@ end
 
 local function CharCount()
     -- 0 is the current buffer
-    if vim.api.nvim_buf_get_option(0, 'filetype') ~= "markdown" then
+    if vim.api.nvim_get_option_value('filetype', { scope = "local" }) ~= "markdown" then
         return ""
     end
     local chars = vim.fn.wordcount().chars
@@ -37,7 +37,7 @@ local function CharCount()
 end
 
 local function BufChange()
-    if vim.api.nvim_buf_get_option(vim.api.nvim_get_current_buf(), 'modified') then
+    if vim.api.nvim_get_option_value('modified', { scope = "local" } ) then
         return " "
     end
     return ""
@@ -64,11 +64,11 @@ end
 
 function ModeColor(mode)
     if mode == "i" then
-        vim.cmd("hi ModeMsg ctermfg=red ctermbg=NONE cterm=bold")
+        vim.cmd("hi ModeMsg ctermfg=red ctermbg=black cterm=bold")
     elseif mode == "r" then
-        vim.cmd("hi ModeMsg ctermfg=magenta ctermbg=NONE cterm=bold")
+        vim.cmd("hi ModeMsg ctermfg=magenta ctermbg=black cterm=bold")
     else
-        vim.cmd("hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold")
+        vim.cmd("hi ModeMsg ctermfg=yellow ctermbgblackNONE cterm=bold")
     end
 end
 
@@ -78,7 +78,7 @@ vim.cmd([[
 augroup Mode
     autocmd!
     au InsertEnter * lua ModeColor(vim.api.nvim_eval('v:insertmode'))
-    au InsertLeave * hi ModeMsg ctermfg=yellow ctermbg=NONE cterm=bold
+    au InsertLeave * hi ModeMsg ctermfg=yellow ctermbg=black cterm=bold
     au WinEnter,BufEnter,BufModifiedSet,CursorMoved,CursorMovedI * lua vim.o.statusline = StatusLine()
 augroup END
 ]])

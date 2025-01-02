@@ -58,7 +58,9 @@ highlight StatusLine ctermfg=white ctermbg=black cterm=NONE
 highlight StatusLineRO ctermfg=red ctermbg=black cterm=bold
 highlight StatusLineFile ctermfg=white ctermbg=black cterm=bold
 highlight StatusLineChange ctermfg=blue ctermbg=black cterm=bold
-highlight StatusLineNC ctermfg=gray ctermbg=black cterm=NONE
+highlight StatusLineNC ctermfg=white ctermbg=black cterm=NONE
+highlight StatusLineTerm ctermfg=white ctermbg=black cterm=NONE
+highlight StatusLineTermNC ctermfg=white ctermbg=black cterm=NONE
 
 " Used for autocompletion
 highlight PMenu ctermfg=lightGray ctermbg=black cterm=NONE
