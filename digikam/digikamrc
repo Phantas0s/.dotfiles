@@ -46,6 +46,7 @@ Image Sort Order=0
 Image Sorting=0
 Item Left Click Action=0
 Preview Convert To Eight Bit=true
+Preview Image Smooth Scaled=true
 Preview Load Full Image Size=false
 Preview Raw Use Embedded Preview=false
 Preview Raw Use Half Size Data=false
@@ -97,10 +98,10 @@ TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Update Type=1
 
 [AlbumFolderView Sidebar]
-CurrentIndex=2
-Expansion=0,4160,4159,4154,4152,4153,4151,4150,4149,4148,4147,4146,4145,4144,4051,4059,4048,4049,4050,4047,4038,4041,4037,4036,4025,3964,3994,3995,3988,3990,3992,3991,3985,3986,3984,3983,3971,3975,3977,3976,3974,3972,3982,3981,3978,3980,3979,3970,3969,4023,4024,3966,3968,3967,3965,4022,3996,4016,4015,4012,4011,4010,4007,4005,4003,3997,4021,4019,-3,1,3948,3947,3940,3930,3929,3957,3960,3958,3925,3927,3926,3924,3923,3901,3918,3898,3900,3873,3896,3893,3877,3880,3879,3874,3875,3863,3868,3872,3871,3869,3864,3866,3865,3859,3862,3861,3860,3854,3858,3857,3856,3855,3850,3852,3851,3847,3849,3846,3844,3962,3955,3950,3951,3954,3952,3953,2412,2417,2416,2415,2414,2413,2410,2411,2408,2401,2407,2406,2405,2404,2402,2397,2400,2398,2392,2396,2394,946,34,33,32,31,2,-2
+CurrentIndex=4338
+Expansion=0,1,2,4330,4329,4328,4327,4326,4318,4314,4312,4308,4338,4307,4337
 RestoreChecked=false
-Selection=2
+Selection=4338
 SortColumn=0
 SortOrder=1
 
@@ -139,7 +140,7 @@ TagTreeViewSortOrder=0
 
 [AlbumSelectWidget]
 AlbumTreeViewCurrentIndex=
-AlbumTreeViewExpansion=1
+AlbumTreeViewExpansion=1,3963
 AlbumTreeViewRestoreChecked=false
 AlbumTreeViewSelection=
 AlbumTreeViewSortColumn=0
@@ -1065,12 +1066,12 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwJxcXE=
+Database Encrypted Password=AwLr6+s=
 Database Hostname=
-Database Name=/run/media/hypnos/photography/db/digikam
-Database Name Face=/run/media/hypnos/photography/db/digikam
-Database Name Similarity=/run/media/hypnos/photography/db/digikam
-Database Name Thumbnails=/run/media/hypnos/photography/db/digikam
+Database Name=/run/media/hypnos/photography/db/digikam/
+Database Name Face=/run/media/hypnos/photography/db/digikam/
+Database Name Similarity=/run/media/hypnos/photography/db/digikam/
+Database Name Thumbnails=/run/media/hypnos/photography/db/digikam/
 Database Port=-1
 Database Type=QSQLITE
 Database Username=
@@ -1137,7 +1138,7 @@ Web GPS Locator=0
 
 [Digikam Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -1281,12 +1282,17 @@ CaseSensitive=0
 
 [Face Detection Settings]
 Detection Accuracy=0.7
+Face Detection Accuracy=7
+Face Detection Model=2
+Face Detection Size=3
+Face Recognition Accuracy=7
+Face Recognition Model=1
 Use Yolo V3=false
 
 [Face Management Settings]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=3963
-AlbumComboBox-Expansion=1
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
 AlbumComboBox-Selection=1,3963
 AlbumComboBox-SortColumn=0
@@ -1298,7 +1304,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=24
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=38,48
+TagComboBox-Selection=36,48
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
@@ -1318,10 +1324,10 @@ targetUrl=file:///tmp
 
 [Find Duplicates View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=1
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=1
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
@@ -1332,10 +1338,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=48
+TagComboBox-CurrentIndex=36
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=48
+TagComboBox-Selection=36
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1359,8 +1365,8 @@ SortOrder=1
 
 [Fuzzy Search View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=3963
-AlbumComboBox-Expansion=1
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
 AlbumComboBox-Selection=1,3963
 AlbumComboBox-SortColumn=0
@@ -1382,7 +1388,7 @@ SplitterState=AAAA/wAAAAEAAAACAAABfQAAAGUB/////wEAAAACAA==
 
 [GPS Search Sidebar][GPSSearch Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -1702,7 +1708,7 @@ Web GPS Locator=0
 
 [ImageViewer Settings][Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -1930,7 +1936,7 @@ Web GPS Locator=0
 
 [LightTable Settings][Left Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -2012,7 +2018,7 @@ Web GPS Locator=0
 
 [LightTable Settings][Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -2056,9 +2062,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATQAAAAzvwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=2
+InitialAlbumID=4338
 SplitterState=AAAA/wAAAAEAAAADAAABFAAABQAAAAEuAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT+AAAAy/wBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABP4AAABXAP///wAABP4AAAQnAAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT+AAAAy/wBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABP4AAABXAP///wAABP4AAANWAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [MaintenanceDlg Settings]
 AlbumComboBox-Checked=
@@ -2431,10 +2437,10 @@ CaseSensitive=0
 
 [Select Reference]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=1
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=1
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -2457,8 +2463,8 @@ Video Tab=0
 
 [Sketch Search View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=3963
-AlbumComboBox-Expansion=1
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
 AlbumComboBox-Selection=1,3963
 AlbumComboBox-SortColumn=0
@@ -2557,6 +2563,9 @@ VEffect=0
 VFormat=1
 VStandard=0
 VType=12
+
+[WebBrowserDlgSearchBar Search Text Tool]
+CaseSensitive=0
 
 [adjustcurves Tool]
 AdjustCurvesChannel0Point0=0,0
@@ -2729,7 +2738,7 @@ Sort Order=0
 
 [mainwindow_mapwidgetview][Central Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true

@@ -55,7 +55,7 @@ let g:did_load_filetypes = 0
 let g:vimsyn_embed = 'l'
 
 " Add highlighting for the following languages in markdown
-let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'go']
+let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'go', 'yaml']
 
 " }}}
 
@@ -140,12 +140,15 @@ nmap s ys
 " Save session
 nnoremap <leader>ss :mksession! $VIMCONFIG/sessions/
 " Reload session (here `<C-Z> trigger the completin - see wildcharm`)
-nnoremap <leader>sl :source $VIMCONFIG/sessions/<C-Z>
+nnoremap <leader>sl :source $VIMCONFIG/sessions/<c-z>
 " Source sets of macros
 nnoremap <leader>ml :source $VIMCONFIG/macros/
 
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+inoremap <expr> <c-j> pumvisible() ? '<c-n>' : '<c-j>'
+inoremap <expr> <c-k> pumvisible() ? '<c-p>' : '<c-k>'
+
+cnoremap <expr> <c-j> pumvisible() ? '<c-n>' : '<c-j>'
+cnoremap <expr> <c-k> pumvisible() ? '<c-p>' : '<c-k>'
 
 nnoremap <silent> <leader>p :let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')<cr>
 
@@ -307,6 +310,7 @@ iabbrev benefitial beneficial
 iabbrev comamnd command
 iabbrev thsi this
 iabbrev occurence occurrence
+iabbrev specfic specific
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
@@ -388,10 +392,6 @@ set foldtext=general#FoldText()
 
 " Show the substitution LIVE
 set inccommand=nosplit
-
-" Better ex autocompletion
-" set wildmenu
-" set wildmode=list:longest,full
 
 " relative / hybrid line number switch
 set number relativenumber

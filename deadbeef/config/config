@@ -46,7 +46,7 @@ gtkui.font.tabstrip_text Open Sans 11
 gtkui.hide_remove_from_disk 0
 gtkui.italic_current_track 0
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.665936 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1520"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.665936 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1138"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
 gtkui.move_to_trash 1
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 0
@@ -100,12 +100,13 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 295
-logwindow.geometry.y -301
-mainwin.geometry.h 1155
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 22
+logwindow.geometry.x 526
+logwindow.geometry.y 336
+mainwin.geometry.h 855
+mainwin.geometry.maximized 1
+mainwin.geometry.w 1440
+mainwin.geometry.x 1920
+mainwin.geometry.y 322
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -167,8 +168,8 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.1513477
-playlist.current 2
+playback.volume.normalized 0.6148036
+playlist.current 3
 playlist.cursor.0 9
 playlist.cursor.1 -1
 playlist.cursor.10 1703
@@ -203,7 +204,7 @@ playlist.scroll.4 474
 playlist.scroll.5 4613
 playlist.scroll.6 9788
 playlist.scroll.7 857
-playlist.scroll.8 3886
+playlist.scroll.8 0
 playlist.scroll.9 -1
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_album 1
