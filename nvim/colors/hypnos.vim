@@ -59,8 +59,8 @@ highlight StatusLineRO ctermfg=red ctermbg=black cterm=bold
 highlight StatusLineFile ctermfg=white ctermbg=black cterm=bold
 highlight StatusLineChange ctermfg=blue ctermbg=black cterm=bold
 highlight StatusLineNC ctermfg=white ctermbg=black cterm=NONE
-highlight StatusLineTerm ctermfg=white ctermbg=black cterm=NONE
-highlight StatusLineTermNC ctermfg=white ctermbg=black cterm=NONE
+highlight StatusLineTerm ctermfg=black ctermbg=black cterm=NONE
+highlight StatusLineTermNC ctermfg=black ctermbg=black cterm=NONE
 
 " Used for autocompletion
 highlight PMenu ctermfg=lightGray ctermbg=black cterm=NONE
@@ -97,23 +97,23 @@ highlight Operator ctermfg=white ctermbg=NONE cterm=NONE
 
 highlight ColorColumn ctermfg=lightGray ctermbg=NONE cterm=NONE
 
-highlight @boolean ctermfg=red ctermbg=NONE cterm=NONE
-highlight @attribute ctermfg=green ctermbg=NONE cterm=NONE
-highlight @function ctermfg=cyan ctermbg=NONE cterm=NONE
-highlight @keyword.function ctermfg=blue ctermbg=NONE cterm=NONE
-highlight @keyword ctermfg=lightGray ctermbg=NONE cterm=NONE
-highlight @conditional ctermfg=lightGray ctermbg=NONE cterm=NONE
-highlight @repeat ctermfg=lightGray ctermbg=NONE cterm=NONE
-highlight @identifier ctermfg=lightGray ctermbg=NONE cterm=NONE
-highlight @variable ctermfg=blue ctermbg=NONE cterm=NONE
-highlight @variable.field ctermfg=white ctermbg=NONE cterm=NONE
-highlight @field ctermfg=white ctermbg=NONE cterm=NONE
-highlight @keyword ctermfg=lightGray ctermbg=NONE cterm=NONE
-highlight @keyword.operator ctermfg=lightGray ctermbg=NONE cterm=NONE
-highlight @keyword.return ctermfg=lightGray ctermbg=NONE cterm=NONE
+" highlight @boolean ctermfg=red ctermbg=NONE cterm=NONE
+" highlight @attribute ctermfg=green ctermbg=NONE cterm=NONE
+" highlight @function ctermfg=cyan ctermbg=NONE cterm=NONE
+" highlight @keyword.function ctermfg=blue ctermbg=NONE cterm=NONE
+" highlight @keyword ctermfg=lightGray ctermbg=NONE cterm=NONE
+" highlight @conditional ctermfg=lightGray ctermbg=NONE cterm=NONE
+" highlight @repeat ctermfg=lightGray ctermbg=NONE cterm=NONE
+" highlight @identifier ctermfg=lightGray ctermbg=NONE cterm=NONE
+" highlight @variable ctermfg=blue ctermbg=NONE cterm=NONE
+" highlight @variable.field ctermfg=white ctermbg=NONE cterm=NONE
+" highlight @field ctermfg=white ctermbg=NONE cterm=NONE
+" highlight @keyword ctermfg=lightGray ctermbg=NONE cterm=NONE
+" highlight @keyword.operator ctermfg=lightGray ctermbg=NONE cterm=NONE
+" highlight @keyword.return ctermfg=lightGray ctermbg=NONE cterm=NONE
 " highlight @punctuation.bracket ctermfg=red ctermbg=NONE cterm=NONE
 " highlight @operator ctermfg=red ctermbg=NONE cterm=NONE
-highlight @parameter ctermfg=green ctermbg=NONE cterm=NONE
+" highlight @parameter ctermfg=green ctermbg=NONE cterm=NONE
 
 " Markdown
 highlight markdownH1 ctermfg=red ctermbg=NONE cterm=NONE
@@ -152,7 +152,7 @@ highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 "highlight CTagsMember-i  no settings --
 "highlight CTagsGlobalConstant-i  no settings --
 "highlight Ignore-i  no settings --
-"highlight Normal c0c5ce guibg=#192224 guisp=#192224 gui=NONE ctermfg=252 ctermbg=black cterm=NONE
+"highlight Normal c0c5ce
 "highlight CTagsImport-i  no settings --
 "highlight CTagsGlobalVariable-i  no settings --
 "highlight EnumerationValue-i  no settings --

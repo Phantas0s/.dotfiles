@@ -9,8 +9,8 @@ keybind = shift+ctrl+up=increase_font_size:1
 keybind = shift+ctrl+down=decrease_font_size:1
 keybind = shift+ctrl+left=reset_font_size
 
-keybind = shift+ctrl+h=move_tab:+1
-keybind = shift+ctrl+l=move_tab:-1
+keybind = shift+ctrl+h=move_tab:-1
+keybind = shift+ctrl+l=move_tab:+1
 
 keybind = alt+ctrl+v=paste_from_clipboard
 
