@@ -1,7 +1,15 @@
 desktop-notifications = false
+cursor-color = #444444
+cursor-style = bar
 keybind = shift+ctrl+n=new_tab
 # keybind = shift+ctrl+v=new_split:right
 quit-after-last-window-closed = true
 background = #1C1C1C
 foreground = #eeeeee
-cursor_color = #444444
+shell-integration = zsh
+shell-integration-features = cursor
+quit-after-last-window-closed = true
+gtk-single-instance = true
+gtk-titlebar = false
+gtk-wide-tabs = false
+gtk-adwaita = false
