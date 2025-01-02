@@ -124,7 +124,7 @@ function OrgImports(wait_ms)
   for _, res in pairs(result or {}) do
     for _, r in pairs(res.result or {}) do
       if r.edit then
-        vim.lsp.util.apply_workspace_edit(r.edit, "UTF-8")
+        vim.lsp.util.apply_workspace_edit(r.edit, "utf-8")
       else
         vim.lsp.buf.execute_command(r.command)
       end
