@@ -1,4 +1,14 @@
 desktop-notifications = false
+window-inherit-working-directory = false
+window-decoration = false
+selection-invert-fg-bg = true
+
+gtk-single-instance = false
+gtk-titlebar = false
+gtk-wide-tabs = false
+gtk-adwaita = false
+confirm-close-surface = false
+
 cursor-style = bar
 keybind = shift+ctrl+n=new_tab
 keybind = shift+ctrl+j=previous_tab
@@ -20,11 +30,6 @@ quit-after-last-window-closed = true
 shell-integration = zsh
 shell-integration-features = cursor
 quit-after-last-window-closed = true
-gtk-single-instance = false
-gtk-titlebar = false
-gtk-wide-tabs = false
-gtk-adwaita = false
-confirm-close-surface = false
 
 link-url = true
 

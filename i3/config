@@ -103,7 +103,7 @@ font pango:Inconsolata 12
 floating_modifier $mod
 
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -323,6 +323,7 @@ for_window [all] title_window_icon padding 3px
 
 # URxvt border
 for_window [class="URxvt*"] border pixel 1
+for_window [class="ghostty"] border pixel 1
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
@@ -348,8 +349,8 @@ exec tuxedo-control-center
 # 1.term 
 # 2.vim (on a temp file) 
 # 3.translation CLI
-for_window [instance="urxvt_scratchpad"] move to scratchpad
-bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
+for_window [instance="ghostty_scratchpad"] move to scratchpad
+bindsym $mod+Shift+t [instance="ghostty_scratchpad"] scratchpad show
 exec "$DOTFILES/bash/scripts/scratchpad.sh"
 
 # htop scratchpad
