@@ -100,8 +100,8 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 526
-logwindow.geometry.y 336
+logwindow.geometry.x 518
+logwindow.geometry.y 248
 mainwin.geometry.h 855
 mainwin.geometry.maximized 1
 mainwin.geometry.w 1440
@@ -168,9 +168,9 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.6148036
-playlist.current 3
-playlist.cursor.0 9
+playback.volume.normalized 0.2927661
+playlist.current 0
+playlist.cursor.0 10
 playlist.cursor.1 -1
 playlist.cursor.10 1703
 playlist.cursor.11 1932
@@ -188,7 +188,7 @@ playlist.cursor.6 374
 playlist.cursor.7 37
 playlist.cursor.8 151
 playlist.cursor.9 2
-playlist.scroll.0 0
+playlist.scroll.0 -10
 playlist.scroll.1 0
 playlist.scroll.10 48608
 playlist.scroll.11 1856
@@ -207,7 +207,7 @@ playlist.scroll.7 857
 playlist.scroll.8 0
 playlist.scroll.9 -1
 playlist.scroll.cursorfollowplayback 1
-playlist.stop_after_album 1
+playlist.stop_after_album 0
 playlist.tab.00000 ==MAIN==
 playlist.tab.00001 Electro - Acid
 playlist.tab.00002 Electro - Chill

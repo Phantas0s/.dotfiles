@@ -177,7 +177,7 @@ onoremap ar a[
 " }}}
 
 " +---------------+
-" | User Commands |
+" | user commands |
 " +---------------+ {{{
 
 " buffer cleanup - delete every buffer except the one open
@@ -239,7 +239,7 @@ autocmd vimrc BufWritePost init.vim source $MYVIMRC
 " }}}
 
 " +--------------+
-" | Highlighting |
+" | highlighting |
 " +--------------+ {{{
 
 " highlight the line which is longer than the defined margin (80 character)
@@ -253,7 +253,7 @@ autocmd vimrc TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSear
 " }}}
 
 " +---------------+
-" | Abbreviations |
+" | abbreviations |
 " +---------------+ {{{
 
 " from `:help abbreviations` (see `:helpgrep Eatchar`)
@@ -311,6 +311,8 @@ iabbrev comamnd command
 iabbrev thsi this
 iabbrev occurence occurrence
 iabbrev specfic specific
+iabbrev positoin position
+iabbrev taht that
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
@@ -329,12 +331,15 @@ nnoremap <leader>V :Oexplore<cr>
 
 " }}}
 
-" +--------------+
-" | Set  options |
-" +--------------+ {{{
+" +---------+
+" | options |
+" +---------+ {{{
 
 " colorscheme
 colorscheme hypnos
+
+" 256 colors
+set notermguicolors
 
 " no swap file
 set noswapfile

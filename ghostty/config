@@ -2,6 +2,11 @@ desktop-notifications = false
 window-inherit-working-directory = false
 window-decoration = false
 selection-invert-fg-bg = true
+#osc-color-report-format = 8-bit
+
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
 
 gtk-single-instance = false
 gtk-titlebar = false
