@@ -74,7 +74,7 @@ mkextract() {
     done
 }
 
-# Internal function to extract any file
+# Internal function to extract any archive
 _ex() {
     case $1 in
         *.tar.bz2)  tar xjf $1      ;;
