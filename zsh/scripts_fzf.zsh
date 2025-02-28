@@ -254,8 +254,8 @@ ftmuxp() {
     if [[ "$ID" = "${create_new_session}" ]]; then
         tmux new-session
     elif [[ -n "$ID" ]]; then
-        # Change name of urxvt tab to session name
-        printf '\033]777;tabbedx;set_tab_name;%s\007' "$ID"
+        # Change tab name for ghostty
+        echo -ne "\033]0;$ID\007"
         tmuxp load "$ID"
     fi
 }
@@ -274,8 +274,8 @@ ftmux() {
         if [[ "$ID" = "${create_new_session}" ]]; then
             tmux new-session
         elif [[ -n "$ID" ]]; then
-            printf '\033]777;tabbedx;set_tab_name;%s\007' "$ID"
-            tmux attach-session -t "$ID"
+            # Change tab name for ghostty
+            echo -ne "\033]0;$ID\007"
         else
             :  # Start terminal normally
         fi
