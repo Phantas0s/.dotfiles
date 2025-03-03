@@ -1066,7 +1066,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwKhoaE=
+Database Encrypted Password=AwI1NTU=
 Database Hostname=
 Database Name=/run/media/hypnos/photography/db/digikam/
 Database Name Face=/run/media/hypnos/photography/db/digikam/
@@ -1493,7 +1493,6 @@ Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=false
 String Comparison Type=0
-ToolBarsMovable=Disabled
 Use Large Thumbs=false
 Use Native File Dialog=false
 Use Trash=true

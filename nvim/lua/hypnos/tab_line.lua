@@ -33,9 +33,4 @@ function TabLine()
     return line
 end
 
-vim.cmd([[
-  augroup TabLine
-  au!
-  au BufEnter,TabEnter,BufWritePost,CursorMoved,CursorMovedI * lua vim.o.tabline = TabLine()
-  augroup END
-]])
+vim.o.tabline = '%!v:lua.TabLine()'
