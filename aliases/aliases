@@ -14,7 +14,7 @@ alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
 # | X11 |
 # +-----+
 
-alias xpropc='xprop | grep WM_CLASS' # display xprop class
+alias xclass='xprop | grep WM_CLASS' # display xprop class
 
 # +-----+
 # | Zsh |

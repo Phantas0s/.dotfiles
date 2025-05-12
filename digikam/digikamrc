@@ -98,10 +98,10 @@ TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Update Type=1
 
 [AlbumFolderView Sidebar]
-CurrentIndex=3978
-Expansion=0,3963,3964,3971,3975,3977,3976,3972,3981,3978,-3,1,2,4329,4328,4327,4326,4325,4324,4322,4321,4320,4319,4318,4317,4316,4315,4314,4345,4313,4312,4344,4311,4310,4309,4308,4342,4338,4307,4341,4340,4337
+CurrentIndex=4418
+Expansion=0,3964,3971,3975,3977,3976,3972,3981,3978,-2,1,2,4418,4417,4416,4415,4413,4412,4411,4410,4409,4408,4407,4406,4405,4404,4403,4402,4401,4400,4399,4398,4397,4395,4394,4393,4391,4390,4389,4387,4386,4385,4384,4383,4382,4381,4380,4379,4342,4338,4424,4341,4340,4366,-3
 RestoreChecked=false
-Selection=3978
+Selection=4418
 SortColumn=0
 SortOrder=1
 
@@ -161,6 +161,31 @@ All Sync XMP Caption=true
 All Sync XMP Date=true
 All XMP Edit Page=0
 
+[Autotags Settings]
+AlbumComboBox-Checked=
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1,3963
+AlbumComboBox-RestoreChecked=true
+AlbumComboBox-Selection=1,3963
+AlbumComboBox-SortColumn=0
+AlbumComboBox-SortOrder=0
+AlbumTypeEntry=0
+Autotags Languages=
+Autotags Object Detection Accuracy=7
+Autotags Object Detection Model=none
+Autotags Scan Mode=0
+Autotags Tag Mode=0
+Autotags Use Full CPU=false
+TagComboBox-Checked=
+TagComboBox-CurrentIndex=68
+TagComboBox-Expansion=
+TagComboBox-RestoreChecked=true
+TagComboBox-Selection=59,26
+TagComboBox-SortColumn=0
+TagComboBox-SortOrder=0
+UseWholeAlbumsEntry=true
+UseWholeTagsEntry=false
+
 [Baloo Settings]
 Sync Baloo to Digikam=false
 Sync Digikam to Baloo=false
@@ -169,7 +194,7 @@ Sync Digikam to Baloo=false
 2 screens: XPosition=0
 2 screens: YPosition=0
 BqmBottomSplitter=AAAA/wAAAAEAAAACAAAAhQAAAIUB/////wEAAAABAA==
-BqmTopSplitter=AAAA/wAAAAEAAAADAAAAhQAAAHgAAACWAf////8BAAAAAQA=
+BqmTopSplitter=AAAA/wAAAAEAAAADAAAAhQAAAHgAAACoAf////8BAAAAAQA=
 BqmVerticalSplitter=AAAA/wAAAAEAAAACAAAAjAAAAIEB/////wEAAAACAA==
 HDMI-1 LVDS-1 XPosition 1366x768=0
 HDMI-1 LVDS-1 XPosition 1920x1200=0
@@ -1066,7 +1091,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwI1NTU=
+Database Encrypted Password=AwL19fU=
 Database Hostname=
 Database Name=/run/media/hypnos/photography/db/digikam/
 Database Name Face=/run/media/hypnos/photography/db/digikam/
@@ -1294,17 +1319,25 @@ AlbumComboBox-Checked=
 AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=1,3963
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
 Already Scanned Handling=0
+Face Already Scanned Handling=0
+Face Detection Accuracy=10
+Face Detection Model=0
+Face Detection Size=3
+Face Recognition Accuracy=7
+Face Recognition Model=0
 Face Scan Main Task=Recognize Marked Faces
+Face Scan Task=0
+Face Use Full CPU=false
 TagComboBox-Checked=
 TagComboBox-CurrentIndex=24
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=62,48
+TagComboBox-Selection=59,48
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
@@ -1324,10 +1357,10 @@ targetUrl=file:///tmp
 
 [Find Duplicates View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=1
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=1
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
@@ -1338,10 +1371,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=62
+TagComboBox-CurrentIndex=59
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=62
+TagComboBox-Selection=59
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1368,7 +1401,7 @@ AlbumComboBox-Checked=
 AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=1,3963
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1485,6 +1518,7 @@ LVDS-1 HDMI-1 YPosition=44
 LVDS-1 HDMI-1 YPosition 1366x768=454
 LVDS-1 HDMI-1 YPosition 1920x1080=22
 LVDS-1 HDMI-1 YPosition 1920x1200=22
+MenuBar=Disabled
 Scan At Start=true
 Scroll Current Item To Center=false
 Select First Album Item=true
@@ -1524,6 +1558,14 @@ EXIF Tags Filter=
 
 [Image Quality Settings]
 Accepted Threshold=60
+AlbumComboBox-Checked=
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1,3963
+AlbumComboBox-RestoreChecked=true
+AlbumComboBox-Selection=1,3963
+AlbumComboBox-SortColumn=0
+AlbumComboBox-SortOrder=0
+AlbumTypeEntry=0
 Blur Weight=100
 Compression Weight=100
 Detect Aesthetic=true
@@ -1534,12 +1576,38 @@ Detect Noise=true
 Enable Sorter=false
 Exposure Weight=100
 HighQ Accepted=true
+Image Quality Accepted Threshold=60
+Image Quality Blur Weight=100
+Image Quality Compression Weight=100
+Image Quality Detect Aesthetic=true
+Image Quality Detect Blur=true
+Image Quality Detect Compression=true
+Image Quality Detect Exposure=true
+Image Quality Detect Noise=true
+Image Quality Exposure Weight=100
+Image Quality HighQ Accepted=true
+Image Quality LowQ Rejected=true
+Image Quality MediumQ Pending=true
+Image Quality Noise Weight=100
+Image Quality Pending Threshold=40
+Image Quality Rejected Threshold=10
+Image Quality Scan Mode=0
+Image Quality Use Full CPU=false
 LowQ Rejected=true
 MediumQ Pending=true
 Noise Weight=100
 Pending Threshold=40
 Rejected Threshold=10
 Speed=1
+TagComboBox-Checked=
+TagComboBox-CurrentIndex=68
+TagComboBox-Expansion=
+TagComboBox-RestoreChecked=true
+TagComboBox-Selection=59,26
+TagComboBox-SortColumn=0
+TagComboBox-SortOrder=0
+UseWholeAlbumsEntry=true
+UseWholeTagsEntry=false
 
 [ImageViewer Settings]
 2 screens: Height=1133
@@ -1639,7 +1707,7 @@ SlideShowPrintTags=false
 SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
-SplitterState=AAAA/wAAAAEAAAACAAAGNgAAATIB/////wAAAAABAQ==
+SplitterState=AAAA/wAAAAEAAAACAAAGNgAAATQB/////wAAAAABAQ==
 TIFFCompression=false
 ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAfsAAAAeAGUAZABpAHQAbwByAF8AdABoAHUAbQBiAGIAYQByAQAAAAD/////AAAAVwD///8AAAAAAAAAAAAAAAQAAAAEAAAACAAAAAj8AAAAAA==
 ToolBarsMovable=Disabled
@@ -1846,6 +1914,7 @@ CaseSensitive=0
 [Labels Sidebar]
 ColorSelection=
 Expansion=
+ImageQualityScanWidgetExpanded=true
 PickSelection=
 RatingSelection=
 
@@ -2061,9 +2130,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATQAAAAzvwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=3978
-SplitterState=AAAA/wAAAAEAAAADAAABFAAABP4AAAEuAf////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAT+AAAAy/wBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABP4AAABXAP///wAABP4AAAQnAAAABAAAAAQAAAAIAAAACPwAAAAA
+InitialAlbumID=4418
+SplitterState=AAAA/wAAAAEAAAADAAABJwAABP4AAAE0Af////8AAAAAAQE=
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAMFAAAAhPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAAAwUAAABXAP///wAAAwUAAAKHAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [MaintenanceDlg Settings]
 AlbumComboBox-Checked=
@@ -2241,6 +2310,7 @@ makeBinary[$e]=
 [People Sidebar]
 CurrentIndex=
 Expansion=
+FaceScanWidgetExpanded=true
 RestoreChecked=false
 Selection=
 SortColumn=0
@@ -2436,10 +2506,10 @@ CaseSensitive=0
 
 [Select Reference]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=1
+AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=1
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -2465,7 +2535,7 @@ AlbumComboBox-Checked=
 AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=1,3963
+AlbumComboBox-Selection=3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -2498,6 +2568,7 @@ TypeGeolocationFilter Expanded=true
 TypeMimeFilter Expanded=true
 
 [TagView Sidebar]
+AutotagScanWidgetExpanded=true
 CurrentIndex=
 Expansion=0
 RestoreChecked=false
@@ -2763,7 +2834,7 @@ Grouping mode=2
 
 [mainwindow_tableview][Current Profile]
 Column Count=6
-Header State=AAAA/wAAAAAAAAABAAAAAQAAAAYBAAAAAAAAAAAAAAAAAAAAAAAAAlgAAAAGAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAABkAAAAAA==
+Header State=AAAA/wAAAAAAAAABAAAAAQAAAAYBAAAAAAAAAAAAAAAAAAAAAAAAAlgAAAAGAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAABkAAAAAAAAAAAAAAAAAAAAAQ==
 Profile Name=
 
 [mainwindow_tableview][Current Profile][Column 0]

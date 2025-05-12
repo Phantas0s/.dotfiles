@@ -1,6 +1,6 @@
 " source every plugin configs
 for file in split(glob($XDG_CONFIG_HOME . '/nvim/pluggedconf/php/*.nvimrc'), '\n')
-    exe 'source' file
+    execute 'source' file
 endfor
 
 " write ctags each time we save files (& for asynchronously)

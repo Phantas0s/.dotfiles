@@ -313,6 +313,10 @@ iabbrev occurence occurrence
 iabbrev specfic specific
 iabbrev positoin position
 iabbrev taht that
+iabbrev anme name
+iabbrev tehn then
+iabbrev thansk thanks
+iabbrev waht what
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')

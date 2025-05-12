@@ -250,18 +250,20 @@ assign [class="Min" instance="min"] → $web
 assign [class="Chromium" instance="chromium"] → $web
 assign [class="Slack" instance="slack"] → $web
 
-assign [class="mpv" instance="gl"] → $multimedia
-assign [class="Easytag" instance="easytag"] → $multimedia
+assign [class="mpv" instance="mpvk"] → $multimedia
 assign [class="Deadbeef" instance="deadbeef"] → $multimedia
 
-assign [class="Lutris" instance="lutris"] → $games
-assign [class="Steam" instance="Steam"] → $games
+assign [class="Lutris" instance="net.lutris.Lutris"] → $games
+assign [class="steam" instance="steamwebhelper"] → $games
 
 assign [class="Thunderbird" instance="Mail"] → $office
 assign [class="Thunderbird" instance="Msgcompose"] → $office
 assign [class="Nextcloud" instance="nextcloud"] → $office
 
-assign [instance="nomacs"] → $design
+assign [class="Doublecmd" instance="doublecmd"] → $office
+assign [class="Joplin" instance="joplin"] → $office
+assign [class="calibre" instance="calibre-gui"] → $office
+
 assign [class="digikam" instance="digikam"] → $design
 assign [class="Darktable" instance="darktable"] → $design
 assign [class="Gimp" instance="gimp"] → $design
@@ -269,15 +271,11 @@ assign [class="Pinta" instance="pinta"] → $design
 assign [class="scribus" instance="scribus"] → $design
 assign [class="Inkscape" instance="org.inkscape.Inkscape"] → $design
 
-assign [class="Doublecmd" instance="doublecmd"] → $office
-assign [class="Joplin" instance="joplin"] → $office
-assign [class="calibre" instance="calibre-gui"] → $office
-
 assign [instance="FreeMind"] → $knowledge
 assign [instance="libreoffice-calc"] → $knowledge
 
-assign [class="VirtualBox Manager" instance="virtualBox Manager"] → $vm
-assign [class="VirtualBox Machine" instance="virtualBox Machine"] → $vm
+# assign [class="VirtualBox Manager" instance="virtualBox Manager"] → $vm
+# assign [class="VirtualBox Machine" instance="virtualBox Machine"] → $vm
 
 ####################
 # restart / reload #
