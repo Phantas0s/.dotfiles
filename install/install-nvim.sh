@@ -30,6 +30,7 @@ mkdir -p "$VIMCONFIG/backup"
 mkdir -p "$VIMCONFIG/undo"
 mkdir -p "$VIMCONFIG/swap"
 mkdir -p "$VIMCONFIG/after"
+mkdir -p "$VIMCONFIG/syntax"
 
 # Install Godoctor for vim
 if [ ! -d "$VIMCONFIG/godoctor.vim" ]
@@ -68,6 +69,10 @@ ln -sf "$DOTFILES/nvim/after/indent" "$VIMCONFIG/after"
 rm -rf "$VIMCONFIG/after/compiler"
 ln -sf "$DOTFILES/nvim/after/compiler" "$VIMCONFIG/after"
 
+# ftplugin override
+rm -rf "$VIMCONFIG/after/ftplugin"
+ln -sf "$DOTFILES/nvim/after/ftplugin" "$VIMCONFIG/after"
+
 # lua
 rm -rf "$VIMCONFIG/lua"
 ln -sf "$DOTFILES/nvim/lua" "$VIMCONFIG"
@@ -88,6 +93,9 @@ ln -sf "$DOTFILES/nvim/autoload" "$VIMCONFIG"
 # thesaurus
 rm -rf "$VIMCONFIG/thesaurus"
 ln -sf "$DOTFILES/nvim/thesaurus" "$VIMCONFIG"
+
+rm -rf "$VIMCONFIG/syntax"
+ln -sf "$DOTFILES/nvim/syntax" "$VIMCONFIG"
 
 # spell files
 ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"

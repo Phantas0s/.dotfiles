@@ -35,10 +35,3 @@ endfunction
 
 set tabline=%!TestTabLine()
 
-" We assume we use a 256 colors terminal here
-highlight TabLineSel ctermfg=white ctermbg=black cterm=bold
-highlight TabLineNum ctermfg=gray ctermbg=black cterm=none
-highlight TabLineNumSel ctermfg=red ctermbg=black cterm=bold
-highlight TabLine ctermfg=gray ctermbg=black cterm=none
-
-

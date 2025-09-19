@@ -63,7 +63,7 @@ highlight StatusLineTerm ctermfg=white ctermbg=black cterm=none
 highlight StatusLineTermNC ctermfg=white ctermbg=black cterm=none
 
 " Used for autocompletion
-highlight PMenu ctermfg=lightGray ctermbg=black cterm=none
+highlight! default link PMenu LineNr
 highlight PMenuSel ctermfg=white ctermbg=red cterm=bold
 
 " Directory

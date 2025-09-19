@@ -150,6 +150,8 @@ inoremap <expr> <c-k> pumvisible() ? '<c-p>' : '<c-k>'
 cnoremap <expr> <c-j> pumvisible() ? '<c-n>' : '<c-j>'
 cnoremap <expr> <c-k> pumvisible() ? '<c-p>' : '<c-k>'
 
+inoremap <expr> <cr> pumvisible() ? '<c-y>' : '<cr>'
+
 nnoremap <silent> <leader>p :let &path=join(split(system("find $(pwd) -type d -not -path '*git*'"), '\n'), ',')<cr>
 
 " Automatically fix the spelling
@@ -195,8 +197,8 @@ command! -nargs=1 -complete=command LimitChar silent call matchadd('MaxLineChar'
 command! CDC cd %:p:h
 
 " Try to use popup in Neovim
-command! Gpopupblame call general#GitBlame()
-command! CloseFloat call general#CloseFloat()
+" command! Gpopupblame call general#GitBlame()
+" command! CloseFloat call general#CloseFloat()
 
 " }}}
 
@@ -339,14 +341,15 @@ nnoremap <leader>V :Oexplore<cr>
 " | options |
 " +---------+ {{{
 
-" colorscheme
-colorscheme hypnos
-
 " 256 colors
 set notermguicolors
 
+" colorscheme
+colorscheme hypnos
+
 " no swap file
 set noswapfile
+
 " set the directory where the swap file will be saved
 set backupdir=$VIMCONFIG/backup
 set directory=$VIMCONFIG/swap
@@ -356,7 +359,7 @@ set undofile
 set undodir=$VIMCONFIG/undo
 
 " number of undo saved
-set undolevels=10000 " How many undos
+set undolevels=10000
 
 " the copy goes to the clipboard
 set clipboard+=unnamedplus

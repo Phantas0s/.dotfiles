@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.yml.dist set filetype=yaml.
+autocmd BufNewFile,BufRead *.yml.dist setfiletype yaml

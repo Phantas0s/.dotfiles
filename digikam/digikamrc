@@ -20,7 +20,7 @@ Album Collections=Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Trav
 Album Monitoring=true
 Album Sort Role=0
 All Groups Open=false
-Default Icon Size=118
+Default Icon Size=126
 Default Tree Face Size=48
 Default Tree Icon Size=22
 Icon Show Aspect Ratio=false
@@ -98,10 +98,10 @@ TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Update Type=1
 
 [AlbumFolderView Sidebar]
-CurrentIndex=4418
-Expansion=0,3964,3971,3975,3977,3976,3972,3981,3978,-2,1,2,4418,4417,4416,4415,4413,4412,4411,4410,4409,4408,4407,4406,4405,4404,4403,4402,4401,4400,4399,4398,4397,4395,4394,4393,4391,4390,4389,4387,4386,4385,4384,4383,4382,4381,4380,4379,4342,4338,4424,4341,4340,4366,-3
+CurrentIndex=2
+Expansion=0,3964,3971,3975,3977,3976,3972,3981,3978,-3,1,2,-2
 RestoreChecked=false
-Selection=4418
+Selection=2
 SortColumn=0
 SortOrder=1
 
@@ -180,7 +180,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=68
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=59,26
+TagComboBox-Selection=55,26
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
@@ -1091,7 +1091,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwL19fU=
+Database Encrypted Password=AwJra2s=
 Database Hostname=
 Database Name=/run/media/hypnos/photography/db/digikam/
 Database Name Face=/run/media/hypnos/photography/db/digikam/
@@ -1319,7 +1319,7 @@ AlbumComboBox-Checked=
 AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=3963
+AlbumComboBox-Selection=1,3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
@@ -1337,7 +1337,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=24
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=59,48
+TagComboBox-Selection=55,48
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
@@ -1357,10 +1357,10 @@ targetUrl=file:///tmp
 
 [Find Duplicates View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=3963
+AlbumComboBox-CurrentIndex=1
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=3963
+AlbumComboBox-Selection=1
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
@@ -1371,10 +1371,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=59
+TagComboBox-CurrentIndex=55
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=59
+TagComboBox-Selection=55
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1401,7 +1401,7 @@ AlbumComboBox-Checked=
 AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=3963
+AlbumComboBox-Selection=1,3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1453,6 +1453,7 @@ CaseSensitive=0
 Application Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Application Style=fusion
 Apply Sidebar Changes Directly=true
+Automatically start a background face recognition scan when a new face is tagged=true
 Clean core DB At Start=false
 Detect faces in newly added images=false
 Draw Frames To Grouped Items=true
@@ -1603,7 +1604,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=68
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=59,26
+TagComboBox-Selection=55,26
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
@@ -2130,9 +2131,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATQAAAAzvwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=4418
-SplitterState=AAAA/wAAAAEAAAADAAABJwAABP4AAAE0Af////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAMFAAAAhPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAAAwUAAABXAP///wAAAwUAAAKHAAAABAAAAAQAAAAIAAAACPwAAAAA
+InitialAlbumID=2
+SplitterState=AAAA/wAAAAEAAAADAAABJwAABOEAAAE4Af////8AAAAAAQE=
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAThAAAAhPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABOEAAABXAP///wAABOEAAAQ9AAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [MaintenanceDlg Settings]
 AlbumComboBox-Checked=
@@ -2506,10 +2507,10 @@ CaseSensitive=0
 
 [Select Reference]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=3963
+AlbumComboBox-CurrentIndex=1
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=3963
+AlbumComboBox-Selection=1
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -2535,7 +2536,7 @@ AlbumComboBox-Checked=
 AlbumComboBox-CurrentIndex=3963
 AlbumComboBox-Expansion=1,3963
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=3963
+AlbumComboBox-Selection=1,3963
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
