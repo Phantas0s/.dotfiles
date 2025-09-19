@@ -312,6 +312,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# No gaps
 gaps inner 0px
 
 bindsym $mod+Shift+r mode "resize"
