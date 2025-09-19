@@ -100,6 +100,10 @@ ln -sf "$DOTFILES/nvim/syntax" "$VIMCONFIG"
 # spell files
 ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"
 
+# syntax
+rm -rf "$VIMCONFIG/syntax"
+ln -sf "$DOTFILES/nvim/syntax" "$VIMCONFIG"
+
 # parsers for treesitter
 # ln -sf "$DOTFILES/nvim/parser" "$VIMCONFIG"
 
