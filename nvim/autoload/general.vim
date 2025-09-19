@@ -97,4 +97,3 @@ function! general#SynStack()
     echo synIDattr(id, "name")
   endfor
 endfunc
-

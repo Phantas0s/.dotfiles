@@ -30,8 +30,6 @@ local on_attach = function(client, bufnr)
 end
 
 
-local lspconfig = require('lspconfig')
-
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
@@ -42,7 +40,7 @@ table.insert(runtime_path, "/usr/share/lua/5.3/?/init.lua")
 local lib = vim.api.nvim_get_runtime_file("", true)
 table.insert(lib, "/usr/lib/lua-language-server/meta/3rd/love2d")
 
-lspconfig.lua_ls.setup {
+vim.lsp.config("lua_ls", {
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -65,7 +63,8 @@ lspconfig.lua_ls.setup {
       },
     },
   },
-}
+})
+
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 
     -- 'ltex', 
@@ -80,9 +79,9 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
+    vim.lsp.config("lsp", {
         on_attach = on_attach,
-    }
+    })
 end
 
 -- LSP diagnostic
