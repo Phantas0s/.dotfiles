@@ -101,8 +101,8 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 510
-logwindow.geometry.y 160
+logwindow.geometry.x 508
+logwindow.geometry.y 138
 mainwin.geometry.h 855
 mainwin.geometry.maximized 1
 mainwin.geometry.w 1440

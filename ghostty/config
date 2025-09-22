@@ -11,7 +11,7 @@ font-feature = -dlig
 gtk-single-instance = false
 gtk-titlebar = false
 gtk-wide-tabs = false
-gtk-adwaita = false
+# gtk-adwaita = false
 confirm-close-surface = false
 
 cursor-style = bar
