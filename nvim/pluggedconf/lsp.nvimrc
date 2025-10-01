@@ -4,6 +4,17 @@
 lua << EOF
 -- Mappings.
 
+vim.diagnostic.config({
+  -- Use the default configuration
+  virtual_lines = true
+
+  -- Alternatively, customize specific options
+  -- virtual_lines = {
+  --  -- Only show virtual line diagnostics for the current cursor line
+  --  current_line = true,
+  -- },
+})
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -64,6 +75,7 @@ vim.lsp.config("lua_ls", {
     },
   },
 })
+vim.lsp.enable("lua_ls")
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 
@@ -79,9 +91,10 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-    vim.lsp.config("lsp", {
+    vim.lsp.config(lsp, {
         on_attach = on_attach,
     })
+    vim.lsp.enable(lsp)
 end
 
 -- LSP diagnostic
