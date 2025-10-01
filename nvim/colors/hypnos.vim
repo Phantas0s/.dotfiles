@@ -147,6 +147,8 @@ highlight NeomakeWarningSign ctermfg=yellow ctermbg=black
 highlight QuickScopePrimary ctermfg=red cterm=underline
 highlight QuickScopeSecondary ctermfg=yellow cterm=underline
 
+highlight netrwMarkFile ctermfg=red cterm=underline
+
 " NOT USED
 
 "highlight CTagsMember-i  no settings --

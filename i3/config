@@ -348,8 +348,8 @@ exec tuxedo-control-center
 # 1.term 
 # 2.vim (on a temp file) 
 # 3.translation CLI
-for_window [instance="ghostty_scratchpad"] move to scratchpad
-bindsym $mod+Shift+t [instance="ghostty_scratchpad"] scratchpad show
+for_window [instance="term_scratchpad"] move to scratchpad
+bindsym $mod+Shift+t [instance="term_scratchpad"] scratchpad show
 exec "$DOTFILES/bash/scripts/scratchpad.sh"
 
 # htop scratchpad
