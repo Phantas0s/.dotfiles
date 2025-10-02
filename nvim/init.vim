@@ -319,6 +319,7 @@ iabbrev anme name
 iabbrev tehn then
 iabbrev thansk thanks
 iabbrev waht what
+iabbrev isntead instead
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
