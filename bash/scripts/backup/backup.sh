@@ -54,7 +54,7 @@ function run() {
         echo "Copying $src to $dest from file $file"
         [ ! -d "$src" ] && echo "The directory $src does not exist -- NO BACKUP CREATED" && continue
 
-        rsync "${rsync_opts[@]}" "${src}/" "$dest" 2> /tmp/errors
+        rsync --exclude "lost+found" "${rsync_opts[@]}" "${src}/" "$dest" 2> /tmp/errors
     done < "$file"
 
     printf "ERRORS: \n"
