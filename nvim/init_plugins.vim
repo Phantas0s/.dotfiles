@@ -17,8 +17,8 @@ Plug 'tpope/vim-commentary' " keystroke to comment automatically
 Plug 'tpope/vim-dispatch' " Asynchronous make
 
 Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
-" Plug 'andymass/vim-matchup' " Match more stuff with % (html tag, LaTeX...)
 Plug 'editorconfig/editorconfig-vim'
+
 " Use gz to format title case
 Plug 'christoomey/vim-titlecase'
 
@@ -36,13 +36,6 @@ Plug 'honza/vim-snippets' " snippets
 Plug 'alx741/vinfo' " Open info documentation files
 
 " +-----------+
-" | Undo tree |
-" +-----------+
-
-Plug 'mbbill/undotree'
-" Plug 'simnalamburt/vim-mundo' " Undo tree display
-
-" +-----------+
 " | Outliners |
 " +-----------+
 
@@ -54,7 +47,6 @@ Plug 'liuchengxu/vista.vim' " Use LSP
 
 Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
 Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
-Plug 'wellle/tmux-complete.vim' " Omni-completion from tmux pane (CTRL-X_CTRL_U)
 
 " +--------------------+
 " | Project management |
@@ -74,7 +66,6 @@ Plug 'puremourning/vimspector' "Multi language debugger
 
 Plug 'tpope/vim-fugitive' "wrapper for git
 Plug 'mhinz/vim-signify' "  display git diff in the left gutter
-Plug 'rhysd/conflict-marker.vim' " Mark conflict
 
 " +---------------------+
 " | Syntax highlighting |
@@ -140,22 +131,10 @@ Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and co
 " Format CSV automatically
 Plug 'chrisbra/csv.vim'
 
-" +-----------+
-" | VimScript |
-" +-----------+
-
-Plug 'tpope/vim-scriptease' " Debug vimscripts
-
 " +------------+
 " | Treesitter |
 " +------------+
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-treesitter/playground'
-
-" +--------------+
-" | Intelligence |
-" +--------------+
-
-" Plug 'zbirenbaum/copilot.lua'
 
 call plug#end()
