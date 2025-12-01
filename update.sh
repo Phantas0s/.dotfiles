@@ -6,12 +6,6 @@ source "$DOTFILES/install_config"
 
 #---------------------------------------
 
-# backup zsh history file
-mkdir -p "$DOTFILES_CLOUD/zsh"
-cp "$ZDOTDIR/.zhistory" "$DOTFILES_CLOUD/zsh/.zhistory-$(date +%F)"
-
-#---------------------------------------
-
 dot_mes_warn "Activate sudo"
 sudo echo "Sudo activated!"
 
