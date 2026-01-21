@@ -98,10 +98,10 @@ TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Update Type=1
 
 [AlbumFolderView Sidebar]
-CurrentIndex=4569
-Expansion=0,3963,4135,4137,4150,4149,4148,3984,3975,3977,3976,3972,3981,3978,-3,1,27,938,4374,4569,4268,4353,4378,4365,2,4599,-2
+CurrentIndex=4648
+Expansion=0,4137,4150,4149,4148,3984,3975,3977,3976,3972,3981,3978,-3,1,27,938,4648,4649,4650,4374,4618,4623,4419,4353,4378,4365,2,4634,4633,4599,4598,4597,-2
 RestoreChecked=false
-Selection=4569
+Selection=4648
 SortColumn=0
 SortOrder=1
 
@@ -180,7 +180,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=68
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=66,67
+TagComboBox-Selection=21,67
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
@@ -1091,7 +1091,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwLl5eU=
+Database Encrypted Password=AwL4+Pg=
 Database Hostname=
 Database Name=/run/media/hypnos/photography/db/digikam/
 Database Name Face=/run/media/hypnos/photography/db/digikam/
@@ -1325,7 +1325,7 @@ AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
 Already Scanned Handling=0
 Face Already Scanned Handling=0
-Face Detection Accuracy=10
+Face Detection Accuracy=1000
 Face Detection Model=0
 Face Detection Size=3
 Face Recognition Accuracy=7
@@ -1337,7 +1337,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=24
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=66,67
+TagComboBox-Selection=21,67
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
@@ -1371,10 +1371,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=66
+TagComboBox-CurrentIndex=21
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=66
+TagComboBox-Selection=21
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1604,7 +1604,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=68
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=66,67
+TagComboBox-Selection=21,67
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
@@ -2131,7 +2131,7 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATQAAAAzvwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=4569
+InitialAlbumID=4648
 SplitterState=AAAA/wAAAAEAAAADAAABpAAABGQAAAE4Af////8AAAAAAQE=
 ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAARkAAAAhPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABGQAAABXAP///wAABGQAAAQ9AAAABAAAAAQAAAAIAAAACPwAAAAA
 
