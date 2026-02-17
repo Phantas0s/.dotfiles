@@ -1,5 +1,5 @@
 " source every plugin configs
-for file in split(glob($XDG_CONFIG_HOME . "/nvim/pluggedconf/md/*.nvimrc"), '\n')
+for file in split(glob($XDG_CONFIG_HOME . "/nvim/pluggedconf/markdown/*.nvimrc"), '\n')
     exe 'source' file
 endfor
 

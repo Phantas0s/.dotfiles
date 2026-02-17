@@ -55,7 +55,7 @@ let g:did_load_filetypes = 0
 let g:vimsyn_embed = 'l'
 
 " Add highlighting for the following languages in markdown
-let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'go', 'yaml']
+let g:markdown_fenced_languages = ['html', 'python', 'lua', 'vim', 'typescript', 'javascript', 'go', 'yaml', 'bash', 'sh', 'php']
 
 " }}}
 
