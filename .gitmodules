@@ -9,3 +9,76 @@
 	path = zsh/prompt
 	url = https://github.com/Phantas0s/purification
     branch = master
+
+[submodule "nvim/pack/external/opt/vim-surround"]
+	path = nvim/pack/external/opt/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "nvim/pack/external/opt/vim-abolish"]
+	path = nvim/pack/external/opt/vim-abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule "nvim/pack/external/opt/vim-repeat"]
+	path = nvim/pack/external/opt/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "nvim/pack/external/opt/vim-commentary"]
+	path = nvim/pack/external/opt/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "nvim/pack/external/opt/vim-dispatch"]
+	path = nvim/pack/external/opt/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "nvim/pack/external/opt/splitjoin.vim"]
+	path = nvim/pack/external/opt/splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim
+[submodule "nvim/pack/external/opt/vim-titlecase"]
+	path = nvim/pack/external/opt/vim-titlecase
+	url = https://github.com/christoomey/vim-titlecase
+[submodule "nvim/pack/external/opt/ultisnips"]
+	path = nvim/pack/external/opt/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "nvim/pack/external/opt/vim-snippets"]
+	path = nvim/pack/external/opt/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule "nvim/pack/external/opt/vinfo"]
+	path = nvim/pack/external/opt/vinfo
+	url = https://github.com/alx741/vinfo
+[submodule "nvim/pack/external/opt/vista.vim"]
+	path = nvim/pack/external/opt/vista.vim
+	url = https://github.com/liuchengxu/vista.vim
+[submodule "nvim/pack/external/opt/vim-tmux"]
+	path = nvim/pack/external/opt/vim-tmux
+	url = https://github.com/tmux-plugins/vim-tmux
+[submodule "nvim/pack/external/opt/vim-tmux-focus-events"]
+	path = nvim/pack/external/opt/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events
+[submodule "nvim/pack/external/opt/vim-tmux-navigator"]
+	path = nvim/pack/external/opt/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "nvim/pack/external/opt/vim-startify"]
+	path = nvim/pack/external/opt/vim-startify
+	url = https://github.com/mhinz/vim-startify
+[submodule "nvim/pack/external/opt/vim-fugitive"]
+	path = nvim/pack/external/opt/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "nvim/pack/external/opt/vim-signify"]
+	path = nvim/pack/external/opt/vim-signify
+	url = https://github.com/mhinz/vim-signify
+[submodule "nvim/pack/external/opt/nvim-lspconfig"]
+	path = nvim/pack/external/opt/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig
+[submodule "nvim/pack/external/opt/fzf.vim"]
+	path = nvim/pack/external/opt/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "nvim/pack/external/opt/tabular"]
+	path = nvim/pack/external/opt/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "nvim/pack/external/opt/csv.vim"]
+	path = nvim/pack/external/opt/csv.vim
+	url = https://github.com/chrisbra/csv.vim
+[submodule "nvim/pack/external/opt/vim-css-color"]
+	path = nvim/pack/external/opt/vim-css-color
+	url = https://github.com/ap/vim-css-color
+[submodule "nvim/pack/external/opt/vim-grammarous"]
+	path = nvim/pack/external/opt/vim-grammarous
+	url = https://github.com/rhysd/vim-grammarous
+[submodule "nvim/pack/external/opt/vim-wordy"]
+	path = nvim/pack/external/opt/vim-wordy
+	url = https://github.com/reedes/vim-wordy
