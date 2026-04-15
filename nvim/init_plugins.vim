@@ -4,136 +4,135 @@
 
 packadd cfilter
 
-call plug#begin("$VIMCONFIG/plugged")
+command! -nargs=1 PlugSource execute 'packadd!' split(<q-args>, '/')[1]
 
 " +---------+
 " | General |
 " +---------+
 
-Plug 'tpope/vim-surround' " surrounding text objects with paranthesis, quotes, html tags...
-Plug 'tpope/vim-abolish' " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
-Plug 'tpope/vim-repeat' " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
-Plug 'tpope/vim-commentary' " keystroke to comment automatically
-Plug 'tpope/vim-dispatch' " Asynchronous make
+" Format CSV automatically
+packadd! csv.vim
 
-Plug 'AndrewRadev/splitjoin.vim' " Split or join arrays in PHP / struct in Go / other things
+PlugSource tpope/vim-surround " surrounding text objects with paranthesis, quotes, html tags...
+packadd! vim-abolish " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
+packadd! vim-repeat " the . command can repeat whatever you want! See http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
+packadd! vim-commentary " keystroke to comment automatically
+packadd! vim-dispatch " Asynchronous make
 
-" Use gz to format title case
-Plug 'christoomey/vim-titlecase'
+packadd! splitjoin.vim " Split or join arrays in PHP / struct in Go / other things
 
 " +----------+
 " | Snippets |
 " +----------+
 
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets' " snippets
+packadd! ultisnips
+packadd! vim-snippets
 
 " +--------------------+
 " | Reading doc in Vim |
 " +--------------------+
 
-Plug 'alx741/vinfo' " Open info documentation files
+packadd! vinfo
 
 " +-----------+
 " | Outliners |
 " +-----------+
 
-Plug 'liuchengxu/vista.vim' " Use LSP
+packadd! vista.vim " Use LSP
 
 " +------+
 " | tmux |
 " +------+
 
-Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events' " syntax highlighting for tmux.conf + other cool options
-Plug 'christoomey/vim-tmux-navigator' " seemless navigation between vim windows / tmux pane
+packadd! vim-tmux
+packadd! vim-tmux-focus-events " syntax highlighting for tmux.conf + other cool options
+packadd! vim-tmux-navigator " seemless navigation between vim windows / tmux pane
 
 " +--------------------+
 " | Project management |
 " +--------------------+
 
-Plug 'mhinz/vim-startify' " startify for startup cow
+packadd! vim-startify " startify for startup cow
 
 " +----------+
 " | Debugger |
 " +----------+
 
-Plug 'puremourning/vimspector' "Multi language debugger
+" Plug 'puremourning/vimspector' "Multi language debugger
 
 " +-----+
 " | Git |
 " +-----+
 
-Plug 'tpope/vim-fugitive' "wrapper for git
-Plug 'mhinz/vim-signify' "  display git diff in the left gutter
+packadd! vim-fugitive "wrapper for git
+packadd! vim-signify "  display git diff in the left gutter
 
 " +---------------------+
 " | Syntax highlighting |
 " +---------------------+
 
-Plug 'mboughaba/i3config.vim' " i3 config
-Plug 'chr4/nginx.vim' " nginx
-Plug 'wgwoods/vim-systemd-syntax' " systemd
-Plug 'cespare/vim-toml' " toml
-Plug 'jparise/vim-graphql' " graphql
+" Plug 'mboughaba/i3config.vim' " i3 config
+" Plug 'chr4/nginx.vim' " nginx
+" Plug 'wgwoods/vim-systemd-syntax' " systemd
+" Plug 'cespare/vim-toml' " toml
+" Plug 'jparise/vim-graphql' " graphql
 
 " +-----+
 " | LSP |
 " +-----+
 
-Plug 'neovim/nvim-lspconfig'
+packadd! nvim-lspconfig
 
 " +-----+
 " | FZF |
 " +-----+
 
-Plug 'junegunn/fzf.vim'
+if executable('fzf')
+    packadd! fzf.vim
+endif
 
 " +---------+
 " | Writing |
 " +---------+
 
-Plug 'godlygeek/tabular' " Align stuff (useful for markdown tables for example)
-Plug 'rhysd/vim-grammarous', { 'for': 'markdown' } " Show grammar mistakes
-Plug 'reedes/vim-wordy' " Verify quality of writting (see :Wordy)
+packadd! tabular " Align stuff (useful for markdown tables for example)
+packadd! vim-grammarous " Show grammar mistakes
+packadd! vim-wordy " Verify quality of writting (see :Wordy)
 
 " +-----+
 " | PHP |
 " +-----+
 
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
+" Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 
 " +------+
 " | LISP |
 " +------+
 
-Plug 'guns/vim-sexp', { 'for': ['clojure', 'scheme'] }
-Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': ['clojure', 'scheme'] }
+" Plug 'guns/vim-sexp', { 'for': ['clojure', 'scheme'] }
+" Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': ['clojure', 'scheme'] }
 
 " +---------+
 " | Clojure |
 " +---------+
 
-Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
-Plug 'guns/vim-clojure-static', {'for': 'clojure'}
-Plug 'tpope/vim-fireplace', {'for': 'clojure'}
+" Plug 'guns/vim-clojure-highlight', {'for': 'clojure'}
+" Plug 'guns/vim-clojure-static', {'for': 'clojure'}
+" Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 
 " +-----+
 " | CSS |
 " +-----+
 
-Plug 'ap/vim-css-color' " Display the hexadecimal colors - useful for css and color config
+packadd! vim-css-color " Display the hexadecimal colors - useful for css and color config
 
 " +-----+
 " | CSV |
 " +-----+
 
-" Format CSV automatically
-Plug 'chrisbra/csv.vim'
 
 " +------------+
 " | Treesitter |
 " +------------+
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-treesitter/playground'
-
-call plug#end()

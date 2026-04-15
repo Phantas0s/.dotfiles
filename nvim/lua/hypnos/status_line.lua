@@ -16,6 +16,8 @@ function StatusLine()
     }
 end
 
+vim.o.statusline = StatusLine()
+
 function ModeColor(mode)
     if mode == "i" then
         vim.cmd("highlight ModeMsg ctermfg=red ctermbg=none cterm=bold")
@@ -25,8 +27,6 @@ function ModeColor(mode)
         vim.cmd("highlight ModeMsg ctermfg=yellow ctermbg=none cterm=bold")
     end
 end
-
-vim.o.statusline = StatusLine()
 
 vim.cmd([[
 augroup Mode

@@ -97,3 +97,32 @@ function! general#SynStack()
     echo synIDattr(id, "name")
   endfor
 endfunc
+
+" Plugin management
+
+function! general#InstallPlugin(name) abort
+    let plugin = split(a:name, "/")[1]
+    let target = expand('$VIMCONFIG/pack/external/opt/' .. plugin)
+
+    if isdirectory(target)
+        echo "Plugin already installed: " .. a:name
+        return
+    endif
+
+    cd $DOTFILES
+    let result = system('git submodule add https://github.com/' .. a:name .. ' ' .. 'nvim/pack/external/opt/' .. plugin)
+
+    if v:shell_error != 0
+        echoerr "Failed to install plugin: " .. result
+    else
+        echo "Plugin installed successfully: " .. a:name
+    endif
+    cd -
+endfunction
+
+function! general#UpdatePlugin() abort
+    cd $DOTFILES
+    execute '!git submodule update --remote --merge'
+    cd -
+endfunction
+

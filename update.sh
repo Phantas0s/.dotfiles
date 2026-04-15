@@ -23,7 +23,7 @@ sudo composer self-update
 #---------------------------------------
 
 dot_mes_update "Neovim plugins"
-nvim --noplugin +PlugUpdate +qa
+nvim +UpdatePlugin +qa
 
 #---------------------------------------
 

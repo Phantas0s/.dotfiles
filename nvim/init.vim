@@ -1,10 +1,16 @@
 if !1 | finish | endif
 
+" +---------+
+" | general |
+" +---------+ {{{
+
 " Declare group for autocmd for whole init.vim, and clear it
 " Otherwise every autocmd will be added to group each time vimrc sourced!
 augroup vimrc
     autocmd!
 augroup END
+
+" }}}
 
 " +------------+
 " | leader key |
@@ -37,6 +43,18 @@ lua require('hypnos/project').read_project_config()
 for file in split(glob('$VIMCONFIG/pluggedconf/*.nvimrc'), '\n')
     execute 'source' file
 endfor
+
+" }}}
+
+" +--------+
+" | basics |
+" +--------+ {{{
+
+" Syntax highlighting
+syntax on
+
+" Enable filetype, filetype plugins, and filetype indentation
+filetype plugin indent on
 
 " }}}
 
@@ -78,7 +96,7 @@ nnoremap <leader>lj :lnext<cr>
 nnoremap <leader>lk :lprevious<cr>
 
 " close the current buffer and switch to alternate buffer
-nnoremap <silent> <leader>dd <cmd>bp <bar> bd! #<cr>
+nnoremap <silent> <leader>dd <cmd>bprevious <bar> bdelete! #<cr>
 
 " open relative paths under cursor with xdg-open (example: './my/relative/file.pdf')
 nnoremap <silent> gX :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
@@ -200,6 +218,11 @@ command! CDC cd %:p:h
 " command! Gpopupblame call general#GitBlame()
 " command! CloseFloat call general#CloseFloat()
 
+command! -nargs=1 InstallPlugin call general#InstallPlugin(<q-args>)
+command! UpdatePlugin call general#UpdatePlugin()
+
+command! PlugList echo system('fd . --exact-depth 3 -t d $VIMCONFIG/pack')
+
 " }}}
 
 " +---------+
@@ -243,6 +266,9 @@ autocmd vimrc BufWritePost init.vim source $MYVIMRC
 " +--------------+
 " | highlighting |
 " +--------------+ {{{
+
+" disable treesitter for every buffer
+autocmd BufEnter * lua vim.treesitter.stop()
 
 " highlight the line which is longer than the defined margin (80 character)
 autocmd vimrc FileType php,js,vue,go,sh,md call matchadd('MaxLineChar', '\%80v', 10)
@@ -412,9 +438,10 @@ set number relativenumber
 " for vertical pane in git diff tool
 set diffopt+=vertical
 
-" to be able to use find in any projects
-" set path=.,**,,
-let &path=join(split(system('fd . --type d'), '\n'), ',')
+" to be able to use find in any project
+if executable('fd')
+    let &path=join(split(system('fd . --type d'), '\n'), ',')
+endif
 
 " Don't display preview window for omni-completion
 set completeopt-=preview

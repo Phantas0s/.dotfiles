@@ -15,6 +15,9 @@ endfor
 setlocal spell
 setlocal spelllang=en_us
 
+" Title Case CMOS (Chicago Manual Of Style)
+vnoremap <buffer> gz :<c-u>call markdown#TitleCase()<cr>
+
 " let g:markdown_folding=1
 " norm! zi
 
@@ -46,3 +49,4 @@ setlocal spelllang=en_us
 " onoremap <buffer> ic :<c-u>call <sid>ACodeBlock(v:true)<cr>
 " xnoremap <buffer> ac :<c-u>call <sid>ACodeBlock(v:false)<cr>
 " xnoremap <buffer> ic :<c-u>call <sid>ACodeBlock(v:true)<cr>
+
