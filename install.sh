@@ -78,8 +78,8 @@ dot_is_installed devdash && dot_install devdash
 dot_is_installed php && dot_install php
 dot_is_installed sxiv && dot_install sxiv
 dot_is_installed litecli && dot_install litecli
-dot_is_installed thunderbird && dot_install thunderbird
 dot_is_installed ghostty && dot_install ghostty
+dot_is_installed thunderbird && dot_install thunderbird
 
 dot_install gtk
 

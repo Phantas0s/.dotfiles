@@ -55,6 +55,9 @@ set $mod Mod4
 # start nextcloud client
 exec --no-startup-id nextcloud &
 
+# start protonmail bridge
+exec --no-startup-id protonmail-bridge &
+
 # start syncthing
 exec --no-startup-id syncthing &
 
@@ -259,6 +262,7 @@ assign [class="steam" instance="steamwebhelper"] → $games
 assign [class="Thunderbird" instance="Mail"] → $office
 assign [class="Thunderbird" instance="Msgcompose"] → $office
 assign [class="Nextcloud" instance="nextcloud"] → $office
+assign [class="Proton Mail Bridge" instance="protonmail-bridge"] → $office
 
 assign [class="Doublecmd" instance="doublecmd"] → $office
 assign [class="Joplin" instance="joplin"] → $office

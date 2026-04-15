@@ -104,6 +104,9 @@ ln -sf "$DOTFILES/nvim/spell" "$VIMCONFIG"
 rm -rf "$VIMCONFIG/syntax"
 ln -sf "$DOTFILES/nvim/syntax" "$VIMCONFIG"
 
+rm -rf "$VIMCONFIG/pack"
+ln -sf "$DOTFILES/nvim/pack" "$VIMCONFIG"
+
 # parsers for treesitter
 # ln -sf "$DOTFILES/nvim/parser" "$VIMCONFIG"
 

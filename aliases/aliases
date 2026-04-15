@@ -72,7 +72,7 @@ alias dust='du -sh * | sort -hr'
 # | ping |
 # +------+
 
-alias pg='ping 8.8.8.8'
+alias pg='ping thevaluable.dev'
 
 # +------+
 # | time |
