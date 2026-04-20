@@ -123,6 +123,7 @@ endfunction
 function! general#UpdatePlugin() abort
     cd $DOTFILES
     execute '!git submodule update --remote --merge'
+    execute '!git pull --recurse-submodules'
     cd -
 endfunction
 

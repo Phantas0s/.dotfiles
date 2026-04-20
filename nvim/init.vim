@@ -346,6 +346,8 @@ iabbrev tehn then
 iabbrev thansk thanks
 iabbrev waht what
 iabbrev isntead instead
+iabbrev funtion function
+iabbrev functino function
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')
