@@ -27,6 +27,7 @@ keybind = shift+ctrl+h=move_tab:-1
 keybind = shift+ctrl+l=move_tab:+1
 
 keybind = alt+ctrl+v=paste_from_clipboard
+keybind = ctrl+shift+r=prompt_tab_title
 
 font-family = "Inconsolata Nerd Font Mono"
 font-size = 13

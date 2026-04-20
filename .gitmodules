@@ -76,9 +76,9 @@
 [submodule "nvim/pack/external/opt/vim-css-color"]
 	path = nvim/pack/external/opt/vim-css-color
 	url = https://github.com/ap/vim-css-color
-[submodule "nvim/pack/external/opt/vim-grammarous"]
-	path = nvim/pack/external/opt/vim-grammarous
-	url = https://github.com/rhysd/vim-grammarous
 [submodule "nvim/pack/external/opt/vim-wordy"]
 	path = nvim/pack/external/opt/vim-wordy
 	url = https://github.com/reedes/vim-wordy
+[submodule "nvim/pack/internal/opt/vim-grammarous"]
+	path = nvim/pack/internal/opt/vim-grammarous
+	url = git@github.com:Phantas0s/vim-grammarous
