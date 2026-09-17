@@ -67,3 +67,31 @@ function! markdown#TitleCase() abort
   normal! gvp
   let @" = saved
 endfunction
+
+" Jump to the header from a markdown anchor
+function! markdown#JumpToAnchor() abort
+    " We only want what's inside the parentheses of the Markdown link
+    let anchor = matchstr(expand('<cWORD>'), '\v\(\zs#[a-z0-9-]+\ze\)')
+    " We allow any character between words (non greedy {-}), in case there is formatting
+    let header = substitute(substitute(anchor, '^#', '', ''), '-', '.{-}', 'g')
+    let pattern = '\v^#{1,6}\s*' .. header
+    echo pattern
+    " We only search in the directory of the current file
+    let files = split(glob(expand('%:p:h') .. '/*.md'), '\n')
+
+    for file in files
+        let lines = readfile(file)
+        for idx in range(len(lines))
+            if lines[idx] =~ pattern
+                execute 'edit ' .. file
+                call cursor(idx + 1, 1)
+                return
+            endif
+        endfor
+    endfor
+
+    echom "Header not found: " .. header
+endfunction
+
+" Map to a key, e.g., <Leader>j
+nnoremap <Leader>j :call JumpToMarkdownAnchor()<CR>

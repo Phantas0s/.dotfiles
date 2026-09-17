@@ -754,6 +754,10 @@ gitam() {
     LC_ALL=C GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
 }
 
+noscreen() {
+    xset -dpms && xset s off 
+}
+
 pom() {
     local -r HOURS=${1:?}
     local -r MINUTES=${2:-0}

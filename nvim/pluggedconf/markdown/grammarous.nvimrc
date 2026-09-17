@@ -13,3 +13,5 @@ autocmd FileType markdown nmap <buffer><localleader>gf <Plug>(grammarous-fixit)
 " <Plug>(grammarous-fixall)
 " <Plug>(grammarous-remove-error)
 " <Plug>(grammarous-disable-rule)
+
+let g:grammarous#java_cmd = '/usr/lib/jvm/java-17-openjdk/bin/java'

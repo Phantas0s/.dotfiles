@@ -17,6 +17,8 @@ setlocal spelllang=en_us
 
 " Title Case CMOS (Chicago Manual Of Style)
 vnoremap <buffer> gz :<c-u>call markdown#TitleCase()<cr>
+" Jump from an anchor to a header
+nnoremap <buffer> <leader>t <cmd>call markdown#JumpToAnchor()<cr>
 
 " let g:markdown_folding=1
 " norm! zi

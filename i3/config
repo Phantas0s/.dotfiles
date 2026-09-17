@@ -208,13 +208,13 @@ workspace_layout stacking
 # workspace #
 #############
 
-set $terms "1: terms"
-set $web "2: web"
-set $multimedia "3: multi"
-set $design "4: design"
-set $office "5: office"
-set $knowledge "6: knowledge"
-set $games "7: Games"
+set $terms "1:  terms"
+set $web "2:  web"
+set $multimedia "3:  multi"
+set $design "4:  design"
+set $office "5:  office"
+set $knowledge "6:  knowledge"
+set $games "7:  Games"
 
 # switch to workspace
 bindsym $mod+1 workspace $terms
@@ -255,6 +255,7 @@ assign [class="Slack" instance="slack"] → $web
 
 assign [class="mpv" instance="mpvk"] → $multimedia
 assign [class="Deadbeef" instance="deadbeef"] → $multimedia
+assign [class="foobar2000.exe" instance="foobar2000.exe"] → $multimedia
 
 assign [class="Lutris" instance="net.lutris.Lutris"] → $games
 assign [class="steam" instance="steamwebhelper"] → $games
@@ -348,6 +349,11 @@ for_window [instance="tuxedo-control-center"] move to scratchpad, sticky enable,
 bindsym $mod+Ctrl+n [instance="tuxedo-control-center"] scratchpad show
 exec tuxedo-control-center
 
+# nym
+for_window [class="Nym-vpn-app"] move to scratchpad, floating enable, sticky enable, resize set 800 600
+bindsym $mod+Ctrl+comma [class="Nym-vpn-app"] scratchpad show
+exec nym-vpn-app
+
 # Terminal scratchpad with tmux and three windows:
 # 1.term 
 # 2.vim (on a temp file) 
@@ -372,11 +378,12 @@ bindsym $mod+Shift+b [instance="bc_scratchpad"] scratchpad show
 exec urxvtc -name bc_scratchpad -e bc -l
 
 
-
 # start softwares and command lines in workspaces
 exec --no-startup-id joplin-desktop
 # exec --no-startup-id brave
 exec --no-startup-id i3-msg workspace "$knowledge; exec nohup freemind $CLOUD/knowledge_base/mindmeister.mm &> /dev/null & disown"
+
+exec --no-startup-id lxpolkit
 
 ##########
 # DESIGN #
@@ -394,6 +401,7 @@ client.placeholder      $red1 $red1 $white2 $red1 $red1
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {
+    font pango: Inconsolata Nerd Font 11
     status_command i3status --config $I3_CONFIG/i3status.conf
     # Disable all tray icons
     tray_output none

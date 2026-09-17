@@ -2,7 +2,7 @@ ape.write_apev2 1
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
 cli_add_to_specific_playlist 0
-deadbeef_version 1.10.0
+deadbeef_version 1.10.3
 filebrowser.autofilter 1
 filebrowser.bgcolor 
 filebrowser.bgcolor_selected 
@@ -10,9 +10,9 @@ filebrowser.bookmarks_file $HOME/.config/gtk-3.0/bookmarks
 filebrowser.coverart_files cover.jpg;folder.jpg;front.jpg
 filebrowser.coverart_scale 1
 filebrowser.coverart_size 24
-filebrowser.defaultpath /run/media/hypnos/Music
+filebrowser.defaultpath /run/media/hypnos/music
 filebrowser.enabled 1
-filebrowser.expanded_rows file:///run/media/hypnos/Music/Video%20Games file:///run/media/hypnos/Music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/Music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/Music/Video%20Games/Chiptunes file:///run/media/hypnos/Music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/Music/Artiste file:///run/media/hypnos/Music/Artiste/Electro file:///run/media/hypnos/Music/video_games/ost file:///run/media/hypnos/Music/Artiste/Electro/Minimal file:///run/media/hypnos/Music/artiste/pop-rock file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush file:///run/media/hypnos/Music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/Music/artiste/electro/minimal file:///run/media/hypnos/Music/artiste/electro/electronica file:///run/media/hypnos/Music/artiste/electro/electronica/rone file:///run/media/hypnos/Music/series/ost file:///run/media/hypnos/Music/manga file:///run/media/hypnos/Music/manga/samurai_champloo file:///run/media/hypnos/Music/manga/samurai_champloo/depature file:///run/media/hypnos/Music/artiste file:///run/media/hypnos/Music/artiste/classical file:///run/media/hypnos/Music/artiste/classical/_COMPILS file:///run/media/hypnos/music/artiste file:///run/media/hypnos/music/artiste/electro/minimal file:///run/media/hypnos/music/artiste/electro/minimal/extrawelt file:///run/media/hypnos/music/artiste/electro
+filebrowser.expanded_rows file:///run/media/hypnos/music/Video%20Games file:///run/media/hypnos/music/Artiste/Electro/Chill%20-%20Downtempo/Zymosis file:///run/media/hypnos/music/Video%20Games/OST/Unreal%20Tournament file:///run/media/hypnos/music/Video%20Games/Chiptunes file:///run/media/hypnos/music/Video%20Games/Chiptunes/dubmood file:///run/media/hypnos/music/Artiste file:///run/media/hypnos/music/Artiste/Electro file:///run/media/hypnos/music/video_games/ost file:///run/media/hypnos/music/Artiste/Electro/Minimal file:///run/media/hypnos/music/artiste/pop-rock file:///run/media/hypnos/music/artiste/pop-rock/kate_bush file:///run/media/hypnos/music/artiste/pop-rock/kate_bush/best_of file:///run/media/hypnos/music/artiste/electro/minimal file:///run/media/hypnos/music/artiste/electro/electronica file:///run/media/hypnos/music/artiste/electro/electronica/rone file:///run/media/hypnos/music/series/ost file:///run/media/hypnos/music/manga file:///run/media/hypnos/music/manga/samurai_champloo file:///run/media/hypnos/music/manga/samurai_champloo/depature file:///run/media/hypnos/music/artiste file:///run/media/hypnos/music/artiste/classical file:///run/media/hypnos/music/artiste/classical/_COMPILS file:///run/media/hypnos/music/artiste file:///run/media/hypnos/music/artiste/electro/minimal file:///run/media/hypnos/music/artiste/electro/minimal/extrawelt file:///run/media/hypnos/music/artiste/electro
 filebrowser.extra_bookmarks $HOME/.config/deadbeef/bookmarks
 filebrowser.fgcolor 
 filebrowser.fgcolor_selected 
@@ -37,27 +37,32 @@ filebrowser.treelines 1
 filechooser.lastdir file:///run/media/hypnos
 filechooser.playlist.lastdir file:///home/hypnos
 gtkui.color.tabstrip_selected_text 65535 65535 65535
-gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"88","align":"1","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"320","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"169","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
+gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"88","align":"1","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"208","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"320","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"352","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"227","align":"0","color_override":"0","color":"#ff000000"},{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"100","align":"0","color_override":"0","color":"#fff5f5f5"}]
 gtkui.columns.search [{"title":"Artist / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"}]
 gtkui.embolden_current_track 1
 gtkui.embolden_selected_tracks 0
 gtkui.eq.visible 0
-gtkui.font.tabstrip_text Open Sans 11
+gtkui.font.listview_column_text Open Sans 9
+gtkui.font.listview_group_text Open Sans 9
+gtkui.font.listview_text Open Sans 9
+gtkui.font.tabstrip_text Open Sans 9
 gtkui.hide_remove_from_disk 0
 gtkui.italic_current_track 0
 gtkui.layout.0.6.2 vsplitter locked=0 ratio=0.765840 pos=0 size2=0 {vsplitter locked=0 ratio=0.020384 pos=0 size2=0 {hsplitter locked=0 ratio=0.111458 pos=0 size2=0 {playtb {} hsplitter locked=0 ratio=0.888824 pos=0 size2=0 {waveform_seekbar {} volumebar {} } } hsplitter locked=0 ratio=0.205208 pos=0 size2=0 {vsplitter locked=0 ratio=0.550688 pos=0 size2=0 {filebrowser {} pltbrowser {} } playlist hideheaders=0 width=1520 {} } } hsplitter locked=0 ratio=0.847396 pos=0 size2=0 {musical_spectrum {} coverart {} } } 
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.665936 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.111458 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.888824 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.205208 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.550688 pos=0 size2=0","children":[{"type":"filebrowser"},{"type":"pltbrowser"}]},{"type":"playlist","legacy_params":" hideheaders=0 width=1520"}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.847396 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
-gtkui.log.autoopen 1
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.697332 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.036111 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.073958 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.893922 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.315625 pos=0 size2=0","children":[{"type":"medialibviewer"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.766798 pos=0 size2=0","children":[{"type":"playlist","legacy_params":" hideheaders=0 width=1003"},{"type":"pltbrowser"}]}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.793750 pos=0 size2=0","children":[{"type":"musical_spectrum"},{"type":"coverart","settings":{"mode":"selected"}}]}]}
+gtkui.log.autoopen 0
 gtkui.move_to_trash 1
 gtkui.override_bar_colors 1
-gtkui.override_listview_colors 0
-gtkui.override_tabstrip_colors 0
+gtkui.override_listview_colors 1
+gtkui.override_tabstrip_colors 1
 gtkui.playlist.group_by_tf 
+gtkui.pltbrowser.show_items_column 0
+gtkui.pltbrowser.show_playing_column 1
 gtkui.search.group_by_tf 
 gtkui.skip_deleted_songs 1
 gtkui.statusbar.visible 1
 gtkui.statusbar_seltime 0
-gtkui.tabscroll 0
+gtkui.tabscroll 220
 gtkui.tabstrip_embolden_playing 0
 gtkui.tabstrip_embolden_selected 0
 gtkui.tabstrip_italic_playing 0
@@ -101,13 +106,16 @@ hotkeys_created 1
 ignore_archives 0
 logwindow.geometry.h 300
 logwindow.geometry.w 400
-logwindow.geometry.x 508
-logwindow.geometry.y 138
+logwindow.geometry.x 488
+logwindow.geometry.y -82
 mainwin.geometry.h 855
 mainwin.geometry.maximized 1
 mainwin.geometry.w 1440
 mainwin.geometry.x 1920
 mainwin.geometry.y 322
+medialib.deadbeef.enabled 1
+medialib.deadbeef.paths ["/run/media/hypnos/music"]
+medialib.preset Folders
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -161,7 +169,7 @@ musical_spectrum.num_colors 6
 musical_spectrum.peak_delay 115
 musical_spectrum.peak_falloff 20
 musical_spectrum.pitch 440
-musical_spectrum.refresh_interval 25
+musical_spectrum.refresh_interval 30
 musical_spectrum.spacing 1
 musical_spectrum.transpose 0
 musical_spectrum.window 2
@@ -169,9 +177,9 @@ network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 1
 playback.volume -0.396825
-playback.volume.normalized 0.7687892
-playlist.current 0
-playlist.cursor.0 9
+playback.volume.normalized 0.1817866
+playlist.current 5
+playlist.cursor.0 -1
 playlist.cursor.1 -1
 playlist.cursor.10 1703
 playlist.cursor.11 1932
@@ -181,17 +189,17 @@ playlist.cursor.14 0
 playlist.cursor.15 92
 playlist.cursor.16 0
 playlist.cursor.17 0
-playlist.cursor.2 20
-playlist.cursor.3 764
-playlist.cursor.4 0
-playlist.cursor.5 171
-playlist.cursor.6 374
+playlist.cursor.2 62
+playlist.cursor.3 758
+playlist.cursor.4 1303
+playlist.cursor.5 1
+playlist.cursor.6 386
 playlist.cursor.7 37
 playlist.cursor.8 151
 playlist.cursor.9 2
-playlist.scroll.0 -1
+playlist.scroll.0 0
 playlist.scroll.1 0
-playlist.scroll.10 48608
+playlist.scroll.10 43869
 playlist.scroll.11 1856
 playlist.scroll.12 12380
 playlist.scroll.13 7055
@@ -199,12 +207,12 @@ playlist.scroll.14 0
 playlist.scroll.15 -92
 playlist.scroll.16 0
 playlist.scroll.17 0
-playlist.scroll.2 0
-playlist.scroll.3 -764
-playlist.scroll.4 474
-playlist.scroll.5 4613
-playlist.scroll.6 9788
-playlist.scroll.7 857
+playlist.scroll.2 -73
+playlist.scroll.3 20418
+playlist.scroll.4 29648
+playlist.scroll.5 0
+playlist.scroll.6 6609
+playlist.scroll.7 599
 playlist.scroll.8 0
 playlist.scroll.9 -1
 playlist.scroll.cursorfollowplayback 1
@@ -222,17 +230,14 @@ playlist.tab.00009 Jazz / Blues
 playlist.tab.00010 OST - Movies
 playlist.tab.00011 OST - Video Games
 playlist.tab.00012 Pop / Rock
-playlist.tab.00013 Rap / Hip Hop
-playlist.tab.00014 Tool 2024
-playlist.tab.00015 Trip Hop
 prefwin.geometry.h 571
 prefwin.geometry.w 768
-prefwin.geometry.x 114
-prefwin.geometry.y 71
+prefwin.geometry.x 606
+prefwin.geometry.y 181
 resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.playlist 5
+resume.position 0.0464399
+resume.track 5
 resume_last_session 0
 searchwin.geometry.h 300
 searchwin.geometry.w 450

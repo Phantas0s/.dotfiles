@@ -98,6 +98,7 @@ endif
 packadd! tabular " Align stuff (useful for markdown tables for example)
 packadd! vim-grammarous " Show grammar mistakes
 packadd! vim-wordy " Verify quality of writting (see :Wordy)
+packadd! ale
 
 " +-----+
 " | PHP |
