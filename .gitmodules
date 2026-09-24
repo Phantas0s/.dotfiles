@@ -85,3 +85,6 @@
 [submodule "nvim/pack/external/opt/ale"]
 	path = nvim/pack/external/opt/ale
 	url = https://github.com/dense-analysis/ale
+[submodule "nvim/pack/external/opt/diffview.nvim"]
+	path = nvim/pack/external/opt/diffview.nvim
+	url = https://github.com/sindrets/diffview.nvim

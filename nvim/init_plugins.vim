@@ -21,6 +21,9 @@ packadd! vim-dispatch " Asynchronous make
 
 packadd! splitjoin.vim " Split or join arrays in PHP / struct in Go / other things
 
+packadd! diffview.nvim " Diffs
+
+
 " +----------+
 " | Snippets |
 " +----------+
