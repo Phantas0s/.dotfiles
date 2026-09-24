@@ -223,6 +223,8 @@ command! UpdatePlugin call general#UpdatePlugin()
 
 command! PlugList echo system('fd . --exact-depth 3 -t d $VIMCONFIG/pack')
 
+command! Tree call general#DrawTree()
+
 " }}}
 
 " +---------+
@@ -348,6 +350,8 @@ iabbrev waht what
 iabbrev isntead instead
 iabbrev funtion function
 iabbrev functino function
+iabbrev expressino expression
+iabbrev creaet create
 
 " Date
 iabbrev <expr> date_ strftime('%Y-%m-%d')

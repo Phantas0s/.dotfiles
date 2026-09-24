@@ -82,3 +82,6 @@
 [submodule "nvim/pack/internal/opt/vim-grammarous"]
 	path = nvim/pack/internal/opt/vim-grammarous
 	url = git@github.com:Phantas0s/vim-grammarous
+[submodule "nvim/pack/external/opt/ale"]
+	path = nvim/pack/external/opt/ale
+	url = https://github.com/dense-analysis/ale
