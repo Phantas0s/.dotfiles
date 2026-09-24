@@ -102,10 +102,10 @@ TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 Update Type=1
 
 [AlbumFolderView Sidebar]
-CurrentIndex=4023
-Expansion=0,3963,4137,4150,4149,4148,3964,3984,3975,3977,3976,3972,3981,3978,4023,4024,3966,-2,1,27,938,4649,4650,4618,4623,4419,4353,4378,4365,2295,2323,1950,2280,2289,2294,2288,2287,2286,2285,2265,23,2,4665,4664,4660,-3
+CurrentIndex=4686
+Expansion=0,4137,4150,4149,4148,3984,3971,3975,3977,3976,3972,3981,3978,3970,4023,4024,3966,-2,1,938,4649,4650,4618,4623,4419,4353,4378,4365,2295,2323,1950,2280,2289,2294,2288,2287,2286,2285,2265,23,2,4686,4685,4684,4683,4682,4681,4680,4679,4678,4677,-3
 RestoreChecked=false
-Selection=4023
+Selection=4686
 SortColumn=0
 SortOrder=1
 
@@ -184,7 +184,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=68
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=38,67
+TagComboBox-Selection=73,67
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
@@ -1106,7 +1106,7 @@ tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwJJSUk=
+Database Encrypted Password=AwI/Pz8=
 Database Hostname=
 Database Name=/run/media/hypnos/photography/db/digikam/
 Database Name Face=/run/media/hypnos/photography/db/digikam/
@@ -1136,7 +1136,7 @@ Minimized=false
 RestoreSize=-1
 
 [Digikam Right Sidebar]
-ActiveTab=1
+ActiveTab=6
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
@@ -1352,7 +1352,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=24
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=38,67
+TagComboBox-Selection=73,67
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
@@ -1386,10 +1386,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=38
+TagComboBox-CurrentIndex=73
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=38
+TagComboBox-Selection=73
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1621,7 +1621,7 @@ TagComboBox-Checked=
 TagComboBox-CurrentIndex=68
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=38,67
+TagComboBox-Selection=73,67
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
@@ -2148,9 +2148,9 @@ State=AAAA/wAAAAD9AAAAAQAAAAIAAATQAAAAzvwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAG
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=4023
+InitialAlbumID=4686
 SplitterState=AAAA/wAAAAEAAAADAAABpAAABGQAAAE4Af////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAARkAAAAhPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIIAAAAAAAABGQAAABXAP///wAABGQAAARCAAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAbkAAAAhPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIIAAAAAAAABuQAAABXAP///wAABuQAAAUcAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [MaintenanceDlg Settings]
 AlbumComboBox-Checked=
@@ -2688,7 +2688,7 @@ CaseSensitive=0
 FaceTagsFilter Expanded=true
 LabelsFilter Expanded=true
 Matching Condition=0
-Search Text Filter Fields=127
+Search Text Filter Fields=255
 Show Untagged=false
 Show Without Face=false
 TagsFilter Expanded=true
@@ -2737,7 +2737,7 @@ CaseSensitive=0
 [TrashView]
 TrashViewColumn_0=100
 TrashViewColumn_1=100
-TrashViewColumn_2=100
+TrashViewColumn_2=1548
 
 [Versioning Settings]
 Auto-Save When Closing Editor=false
