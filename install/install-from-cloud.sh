@@ -33,10 +33,3 @@ if [ -n "$WALLPAPER_PATH" ]
 then
     ln -s "$WALLPAPER_PATH" ~/wallpapers
 fi
-
-if [ -n "$CLOUD" ];
-then
-    # vpn config
-    rm "$XDG_CONFIG_HOME/vpn/" &>/dev/null
-    ln -sf "$CLOUD/vpn" "$XDG_CONFIG_HOME/.vpn"
-fi
